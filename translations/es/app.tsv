@@ -471,8 +471,8 @@ openVoices	Voces abiertas (descargar una vez, luego sin conexión)
 openVoicesSub	Voces neuronales que funcionan en este dispositivo. Aún hay pocas voces infantiles; elige la que le guste.
 clients	Mis familias
 from	De
-lessonPages	Páginas de clase y terapia
-lessonPagesSub	Páginas añadidas por profesor o logopeda; abrir o rechazar
+lessonPages	Páginas que te han enviado
+lessonPagesSub	Páginas de alguien que trabaja con tu hijo o hija: ábrelas o recházalas
 noLessonPages	Aún no hay páginas.
 open	Abrir
 ownDevice	Niños en este dispositivo
@@ -486,7 +486,7 @@ goal.newWords	Palabras nuevas por semana
 goal.wordUse	Usos de una palabra por semana
 goalTarget	Objetivo
 goals	Objetivos
-goalsSub	Objetivos de la logopeda con progreso semanal
+goalsSub	Pequeños pasos que van practicando, semana a semana
 met	Logrado
 newGoal	Nuevo objetivo
 noGoals	Aún no hay objetivos. La logopeda puede añadir uno aquí.

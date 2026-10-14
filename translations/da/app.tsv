@@ -471,8 +471,8 @@ openVoices	Åbne stemmer (hent én gang, derefter offline)
 openVoicesSub	Neurale stemmer, der kører på denne enhed. Der findes endnu få børnestemmer; vælg den, barnet kan lide.
 clients	Mine klientfamilier
 from	Fra
-lessonPages	Lektionssider fra skole og terapi
-lessonPagesSub	Sider en lærer eller talepædagog tilføjede; åbn eller afvis
+lessonPages	Sider delt med jer
+lessonPagesSub	Sider fra én, der arbejder med jeres barn – åbn eller afvis
 noLessonPages	Ingen lektionssider endnu.
 open	Åbn
 ownDevice	Børn på denne enhed
@@ -486,7 +486,7 @@ goal.newWords	Nye ord pr. uge
 goal.wordUse	Brug af ét ord pr. uge
 goalTarget	Mål
 goals	Mål
-goalsSub	Mål fra talepædagogen med ugentlige fremskridt
+goalsSub	Små skridt, I øver jer på, uge for uge
 met	Nået
 newGoal	Nyt mål
 noGoals	Ingen mål endnu. En talepædagog kan tilføje et her.

@@ -471,8 +471,8 @@ openVoices	Open voices (download once, then offline)
 openVoicesSub	Neural voices that run on this device. Few child voices exist yet; choose the one the child likes.
 clients	My client families
 from	From
-lessonPages	Lesson pages from school and therapy
-lessonPagesSub	Pages a teacher or SLP added; open or reject
+lessonPages	Pages shared with you
+lessonPagesSub	Board pages from someone who works with your child; open or decline
 noLessonPages	No lesson pages yet.
 open	Open
 ownDevice	Children on this device
@@ -486,7 +486,7 @@ goal.newWords	New words per week
 goal.wordUse	Uses of one word per week
 goalTarget	Target
 goals	Goals
-goalsSub	SLP goals with weekly progress
+goalsSub	Small steps you're working on, week by week
 met	Met
 newGoal	New goal
 noGoals	No goals yet. An SLP can add one here.
