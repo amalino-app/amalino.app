@@ -21,7 +21,7 @@ footer.contact	Skriv til mig på {email}.
 footer.support	Støt Amalino
 footer.repo	[[Hjemmeside, vejledning og oversættelser på GitHub]]
 home.title	Amalino: gratis ASK-app til børn, der ikke taler endnu
-home.meta	Amalino er en gratis ASK-app til børn, der ikke taler endnu: tryk på et billede, og hør ordet. På dansk, engelsk, russisk, ukrainsk, arabisk og spansk. Ingen reklamer.
+home.meta	Amalino er en gratis ASK-app til børn, der ikke taler endnu: tryk på et billede, og hør ordet. På dansk, engelsk, russisk, ukrainsk, arabisk og spansk.
 home.h1	Ord til børn, der ikke taler, eller som ikke taler endnu
 home.lead	Amalino er en app til telefoner og tablets. Barnet trykker på billeder, og enheden siger ordene højt, på familiens eget sprog.
 home.story	Sidste år så jeg i et fly en dreng, der ikke kunne tale, som andre børn kunne, og jeg blev ved med at tænke på ham. De gode apps, der hjælper børn som ham, er dyre, mange virker kun på iPad, og få taler de sprog, familier bruger derhjemme. Så jeg laver Amalino.
@@ -44,7 +44,7 @@ home.helpBody	Hvert sprog i Amalino har brug for en, der taler det derhjemme, ti
 home.helpLink	Sådan hjælper du med at oversætte
 about.h1	Hvorfor jeg laver Amalino
 about.meta	Historien bag Amalino: én person, der laver en gratis ASK-app, som giver børn ord på de sprog, familier taler derhjemme. Altid gratis for børn og familier.
-about.title	Hvorfor jeg laver Amalino, en gratis kommunikationsapp til børn
+about.title	Hvorfor jeg laver Amalino, en gratis ASK-app til børn
 about.story	På en forretningsrejse sidste år så jeg en dreng i flyet, som ikke kunne stå eller tale, som andre børn kunne, og jeg blev ved med at tænke på ham bagefter. Jeg laver software og hardware til daglig, og jeg begyndte at se på de apps, der hjælper børn som ham med at kommunikere. De gode er dyre, mange virker kun på iPad, og få taler de sprog, familier faktisk bruger derhjemme. Så jeg laver Amalino: gratis og offline. Hvis dit barn bruger den, vil jeg meget gerne høre fra dig.
 about.p1	Nogle børn har meget på hjerte og ingen nem måde at sige det på. Nogle taler ikke endnu, nogle siger kun få ord, og nogle kommer måske aldrig til at tale ret meget. En app, der taler for dem, når de trykker på billeder, kan ændre deres dag: de kan bede om noget at drikke, sige nej, lave sjov eller fortælle, hvor det gør ondt.
 about.howTitle	Sådan bygger jeg den

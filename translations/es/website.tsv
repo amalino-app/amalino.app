@@ -21,7 +21,7 @@ footer.contact	Escríbeme a {email}.
 footer.support	Apoya a Amalino
 footer.repo	[[Web, manual y traducciones en GitHub]]
 home.title	Amalino: app de CAA gratuita para niños que aún no hablan
-home.meta	Amalino es una app de CAA gratuita para niños que aún no hablan: toca un pictograma y oye la palabra. En español, inglés, danés, ruso, ucraniano y árabe. Sin anuncios.
+home.meta	Amalino es una app de CAA gratuita para niños que aún no hablan: toca un pictograma y oye la palabra. En español, inglés, danés, ruso, ucraniano y árabe.
 home.h1	Palabras para niños que no hablan, o que todavía no hablan
 home.lead	Amalino es una app para móviles y tabletas. El niño toca imágenes y el dispositivo dice las palabras en voz alta, en el idioma de su familia.
 home.story	El año pasado, en un avión, vi a un niño que no podía hablar como los demás niños, y no dejé de pensar en él. Las buenas apps para niños como él son caras, muchas solo funcionan en iPad y pocas hablan los idiomas que las familias usan en casa. Así que estoy haciendo Amalino.
@@ -43,8 +43,8 @@ home.helpTitle	¿Hablas otro idioma?
 home.helpBody	Cada idioma de Amalino necesita a alguien que lo hable en casa para revisar las palabras. Si puedes ser tú, echa un vistazo.
 home.helpLink	Cómo ayudar a traducir
 about.h1	Por qué hago Amalino
-about.meta	La historia de Amalino: una persona que hace una app de CAA gratuita que da palabras a los niños en los idiomas de su familia. Siempre gratis para niños y familias.
-about.title	Por qué hago Amalino, una app de comunicación gratuita para niños
+about.meta	La historia de Amalino: una persona hace una app de CAA gratuita con palabras en los idiomas de cada familia. Siempre gratis para niños y familias.
+about.title	Por qué hago Amalino, una app de CAA gratuita para niños
 about.story	En un viaje de trabajo el año pasado vi en el avión a un niño que no podía estar de pie ni hablar como los demás niños, y después no dejé de pensar en él. Me dedico a crear software y hardware, y empecé a mirar las apps que ayudan a comunicarse a niños como él. Las buenas son caras, muchas solo funcionan en iPad y pocas hablan los idiomas que las familias usan de verdad en casa. Así que estoy haciendo Amalino: gratis y sin conexión. Si tu hijo lo usa, me encantará saber de ti.
 about.p1	Algunos niños tienen mucho que decir y ninguna forma fácil de decirlo. Unos todavía no hablan, otros dicen solo unas pocas palabras y otros quizá nunca hablen mucho. Una app que habla por ellos cuando tocan imágenes puede cambiarles el día: pueden pedir agua, decir que no, hacer una broma o contarte qué les duele.
 about.howTitle	Cómo lo hago

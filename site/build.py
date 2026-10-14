@@ -55,6 +55,11 @@ TEMPLATES = os.path.join(SRC, 'templates')
 STYLE = os.path.join(SRC, 'style.css')
 LOGO = os.path.join(SRC, 'amalino.svg')
 OG_IMAGE = os.path.join(SRC, 'og-image.png')  # 1200x630
+ICONS = os.path.join(SRC, 'icons')  # favicon.ico and PNGs made from the app icon
+# Copied into assets/ (favicon.ico goes to the site root, where browsers look for it).
+ICON_FILES = ('favicon-16.png', 'favicon-32.png', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png')
+THEME_COLORS = ('#F1F8F3', '#0E1712')  # the page background, light and dark (style.css --bg)
+TITLE_MAX, DESCRIPTION_MAX = 60, 155  # what search results show without cutting
 DEFAULT_OUT = os.path.join(SRC, 'dist')
 # The language a visitor chose in a language menu (localStorage, not a cookie).
 LANG_KEY = 'amalino.lang'
@@ -406,6 +411,55 @@ def json_ld(r, site, loc):
     return f'<script type="application/ld+json">\n{text}\n</script>\n'
 
 
+def org_json_ld(site, email):
+    """schema.org Organization, once (the English home page): name, address, logo and the public repository."""
+    data = {'@context': 'https://schema.org', '@type': 'Organization', 'name': 'Amalino', 'url': f'{site}/',
+            'logo': f'{site}/assets/icon-512.png', 'sameAs': [REPO_URL]}
+    if email:
+        data['email'] = email
+    text = json.dumps(data, ensure_ascii=False, indent=1).replace('</', '<\\/')
+    return f'<script type="application/ld+json">\n{text}\n</script>\n'
+
+
+def icon_links(root):
+    """Favicons, the home-screen icon, the web manifest and the browser bar colour (light and dark)."""
+    return (f'<link rel="icon" href="{root}favicon.ico" sizes="any">\n'
+            f'<link rel="icon" href="{root}assets/amalino.svg" type="image/svg+xml">\n'
+            f'<link rel="icon" href="{root}assets/favicon-32.png" type="image/png" sizes="32x32">\n'
+            f'<link rel="icon" href="{root}assets/favicon-16.png" type="image/png" sizes="16x16">\n'
+            f'<link rel="apple-touch-icon" href="{root}assets/apple-touch-icon.png">\n'
+            f'<link rel="manifest" href="{root}site.webmanifest">\n'
+            f'<meta name="theme-color" content="{THEME_COLORS[0]}" media="(prefers-color-scheme: light)">\n'
+            f'<meta name="theme-color" content="{THEME_COLORS[1]}" media="(prefers-color-scheme: dark)">')
+
+
+def web_manifest():
+    return json.dumps({
+        'name': 'Amalino', 'short_name': 'Amalino', 'start_url': './', 'display': 'browser',
+        'background_color': THEME_COLORS[0], 'theme_color': THEME_COLORS[0],
+        'icons': [{'src': 'assets/icon-192.png', 'sizes': '192x192', 'type': 'image/png'},
+                  {'src': 'assets/icon-512.png', 'sizes': '512x512', 'type': 'image/png'}],
+    }, indent=1) + '\n'
+
+
+def not_found_page(site):
+    """404.html (GitHub Pages serves it for any missing path): English, not indexed, a link to every language's
+    home. Root-relative links, since it answers at any depth."""
+    items = ''.join(f'<li><a href="/{loc}/" lang="{loc}" hreflang="{loc}" dir="{"rtl" if loc in RTL else "ltr"}">'
+                    f'<strong>{ENDONYMS[loc]}</strong></a></li>' for loc in LOCALES)
+    return ('<!doctype html>\n<html lang="en" dir="ltr">\n<head>\n<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+            '<meta name="robots" content="noindex">\n<meta name="color-scheme" content="light dark">\n'
+            '<title>Page not found · Amalino</title>\n'
+            '<meta name="description" content="This page doesn\'t exist. Choose a language to go to Amalino\'s home page.">\n'
+            f'{icon_links("/")}\n<link rel="stylesheet" href="/assets/style.css">\n</head>\n<body class="picker">\n'
+            '<main id="main" class="wrap">\n'
+            '  <img class="picker-logo" src="/assets/amalino.svg" alt="" width="88" height="88">\n'
+            '  <h1>This page doesn\'t exist</h1>\n'
+            '  <p class="choose">Choose a language to go to Amalino\'s home page:</p>\n'
+            f'  <ul class="picker-list">{items}</ul>\n</main>\n</body>\n</html>\n')
+
+
 def lastmod():
     """The sitemap date: the last commit of the site or the translations (today without git)."""
     try:
@@ -436,7 +490,9 @@ def redirect_script(root, target):
     picker back to the site root, `target` is the page's path below a language folder; the picker list
     stays for browsers without script."""
     langs = json.dumps(LOCALES)
-    return ('<script>(function(){var L=' + langs + ',p=null;try{p=localStorage.getItem("' + LANG_KEY + '")}catch(e){}'
+    # Crawlers stay on the picker (its links are the way in); people are sent on.
+    return ('<script>(function(){if(/bot|crawl|spider|slurp|preview|facebookexternalhit/i.test(navigator.userAgent))return;'
+            'var L=' + langs + ',p=null;try{p=localStorage.getItem("' + LANG_KEY + '")}catch(e){}'
             'if(L.indexOf(p)<0){p=null;var n=navigator.languages||[navigator.language||""];'
             'for(var i=0;i<n.length&&!p;i++){var c=String(n[i]).toLowerCase().split("-")[0];if(L.indexOf(c)>=0)p=c}}'
             'location.replace("' + root + '"+(p||"en")+"/' + target + '")})();</script>')
@@ -463,6 +519,10 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     shutil.copyfile(STYLE, os.path.join(out, 'assets', 'style.css'))
     shutil.copyfile(LOGO, os.path.join(out, 'assets', 'amalino.svg'))
     shutil.copyfile(OG_IMAGE, os.path.join(out, 'assets', 'og-image.png'))
+    for name in ICON_FILES:
+        shutil.copyfile(os.path.join(ICONS, name), os.path.join(out, 'assets', name))
+    shutil.copyfile(os.path.join(ICONS, 'favicon.ico'), os.path.join(out, 'favicon.ico'))
+    write(os.path.join(out, 'site.webmanifest'), web_manifest())
 
     status = {}
     for loc in LOCALES:
@@ -488,7 +548,10 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
             head = head_links(site, loc, page) + share_meta(r, site, loc, page, title, desc)
             if page == 'home':
                 head += json_ld(r, site, loc)
+                if loc == 'en' and site:
+                    head += org_json_ld(site, email)
             values = {
+                'icons': icon_links(root),
                 'lang': loc, 'dir': 'rtl' if loc in RTL else 'ltr', 'root': root, 'title': title,
                 'description': desc, 'head_links': head.rstrip('\n'),
                 'nav': ''.join(nav), 'lang_links': ''.join(langs), 'draft_banner': banner, 'content': content,
@@ -513,6 +576,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
         desc = r.plain('pick.trMeta' if sub else 'pick.meta', 'en')
         links = head_links(site, None, page) + share_meta(r, site, None, page, title, desc)
         values = {
+            'icons': icon_links(root),
             'root': root, 'title': title, 'description': desc,
             'head_links': links.rstrip('\n'), 'heading': 'Amalino' if not sub else r.plain('tr.h1', 'en'),
             'choose': choose, 'items': ''.join(items), 'redirect': redirect_script(root, target),
@@ -524,6 +588,8 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
         write(os.path.join(out, 'robots.txt'), f'User-agent: *\nAllow: /\n\nSitemap: {site}/sitemap.xml\n')
         # GitHub Pages serves the site at its custom domain from this file.
         write(os.path.join(out, 'CNAME'), re.match(r'^https://([^/]+)', site).group(1) + '\n')
+        # Root-relative links only work at the domain root, so the 404 page comes with a site URL.
+        write(os.path.join(out, '404.html'), not_found_page(site))
 
     referenced = set(re.findall(r'\{\{[ta]:([A-Za-z0-9_.\-]+)\}\}', ''.join(
         read(os.path.join(TEMPLATES, n)) for n in os.listdir(TEMPLATES) if n.endswith('.html'))))
@@ -774,6 +840,7 @@ def check_seo(out, files, site):
             errors.append(msg)
 
     pages = {f: seo(read(os.path.join(out, f))) for f in files}
+    organizations = {}  # file -> Organization JSON-LD blocks (one, on the English home page, with a site URL)
     seen = {}  # (language, 'title'|'description', text) -> file
     for f, h in pages.items():
         loc = f.split('/')[0] if f.split('/')[0] in LOCALES else None
@@ -793,17 +860,31 @@ def check_seo(out, files, site):
             expect(len(h.metas(key)) == 1, f'{f}: needs one {key}')
         expect(h.metas('og:locale') == [OG_LOCALES[loc or 'en']], f'{f}: wrong og:locale')
         expect(len(h.metas('og:locale:alternate')) == len(LOCALES) - 1, f'{f}: needs og:locale:alternate for the others')
+        expect(len(h.title.strip()) <= TITLE_MAX, f'{f}: <title> is {len(h.title.strip())} characters (max {TITLE_MAX})')
+        expect(len((desc or [''])[0]) <= DESCRIPTION_MAX,
+               f'{f}: meta description is {len((desc or [""])[0])} characters (max {DESCRIPTION_MAX})')
+        expect(len(h.metas('theme-color')) == 2, f'{f}: needs the light and dark theme-color')
+        rels = [l.get('rel') for l in h.links]
+        expect('apple-touch-icon' in rels and 'manifest' in rels and rels.count('icon') >= 3,
+               f'{f}: needs the favicons, apple-touch-icon and manifest links')
+        types = []
         for block in h.ld:
             try:
                 data = json.loads(block)
-                expect(data.get('@type') == 'SoftwareApplication' and data.get('name') == 'Amalino' and
-                       data.get('offers', {}).get('price') == '0', f'{f}: JSON-LD is not the Amalino app')
+                types.append(data.get('@type'))
+                if data.get('@type') == 'Organization':
+                    expect(data.get('name') == 'Amalino' and data.get('sameAs') == [REPO_URL],
+                           f'{f}: Organization JSON-LD is not Amalino')
+                else:
+                    expect(data.get('@type') == 'SoftwareApplication' and data.get('name') == 'Amalino' and
+                           data.get('offers', {}).get('price') == '0', f'{f}: JSON-LD is not the Amalino app')
                 expect(not {'aggregateRating', 'review', 'downloadUrl', 'installUrl'} & set(data),
                        f'{f}: JSON-LD claims ratings, reviews or store links')
             except ValueError as e:
                 errors.append(f'{f}: JSON-LD does not parse ({e})')
+        organizations[f] = types.count('Organization')
         if loc and f == os.path.join(loc, page_path('home')):
-            expect(len(h.ld) == 1, f'{f}: needs the SoftwareApplication JSON-LD')
+            expect(types.count('SoftwareApplication') == 1, f'{f}: needs the SoftwareApplication JSON-LD')
         if site:
             canon = h.canonical()
             expect(len(canon) == 1, f'{f}: needs one canonical link')
@@ -821,7 +902,31 @@ def check_seo(out, files, site):
             leftover = [u for u in re.findall(r'https?://[^"\s<>]+', head) if u != 'https://schema.org']
             expect(not leftover, f'{f}: absolute URL without a site URL: {leftover[:3]}')
 
+    expect(sum(organizations.values()) == (1 if site else 0) and
+           (not site or organizations.get(os.path.join('en', page_path('home'))) == 1),
+           f'Organization JSON-LD: needs exactly one, on en/{page_path("home")} (found {sum(organizations.values())})')
+    for name in ('favicon.ico', 'site.webmanifest') + tuple(f'assets/{n}' for n in ICON_FILES):
+        expect(os.path.isfile(os.path.join(out, name)), f'missing {name}')
+    for name, size in (('apple-touch-icon.png', 180), ('icon-192.png', 192), ('icon-512.png', 512),
+                       ('favicon-32.png', 32), ('favicon-16.png', 16)):
+        path = os.path.join(out, 'assets', name)
+        expect(not os.path.isfile(path) or png_size(path) == (size, size), f'assets/{name} is not {size}x{size}')
+    try:
+        manifest = json.loads(read(os.path.join(out, 'site.webmanifest')))
+        for icon in manifest.get('icons', []):
+            expect(os.path.isfile(os.path.join(out, icon['src'])), f'site.webmanifest: {icon["src"]} missing')
+    except (OSError, ValueError, KeyError) as e:
+        errors.append(f'site.webmanifest does not parse ({e})')
+
     if site:
+        nf = os.path.join(out, '404.html')
+        expect(os.path.isfile(nf), 'missing 404.html')
+        if os.path.isfile(nf):
+            page = read(nf)
+            expect('<meta name="robots" content="noindex">' in page, '404.html: needs noindex')
+            for loc in LOCALES:
+                expect(f'href="/{loc}/"' in page, f'404.html: no link to the {loc} home page')
+            expect(not external_refs(page, site), '404.html: external resource')
         cname = os.path.join(out, 'CNAME')
         expect(os.path.isfile(cname) and read(cname).strip() == re.match(r'^https://([^/]+)', site).group(1),
                'CNAME missing or not the site host')

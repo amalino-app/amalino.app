@@ -224,13 +224,58 @@ class BuiltSite(unittest.TestCase):
         for loc in bs.LOCALES:
             self.assertIn(self.strings['freeTitle'][loc], self.strings['about.meta'][loc], loc)
 
+    def test_seo_icons_manifest_404_and_limits(self):
+        import json
+        for out, site in ((self.with_email, 'https://example.org'), (self.without, '')):
+            self.assertTrue(os.path.isfile(os.path.join(out, 'favicon.ico')))
+            manifest = json.loads(read(out, 'site.webmanifest'))
+            self.assertEqual(manifest['name'], 'Amalino')
+            for icon in manifest['icons']:
+                self.assertTrue(os.path.isfile(os.path.join(out, icon['src'])), icon['src'])
+            self.assertEqual(bs.png_size(os.path.join(out, 'assets', 'apple-touch-icon.png')), (180, 180))
+            for loc in bs.LOCALES:
+                for page in bs.PAGES:
+                    page_html = read(out, loc, bs.page_path(page))
+                    h = bs.seo(page_html)
+                    self.assertLessEqual(len(h.title.strip()), bs.TITLE_MAX, f'{loc}/{page}')
+                    self.assertLessEqual(len(h.metas('description')[0]), bs.DESCRIPTION_MAX, f'{loc}/{page}')
+                    self.assertEqual(len(h.metas('theme-color')), 2)
+                    self.assertIn('rel="apple-touch-icon"', page_html)
+                    self.assertIn('rel="manifest"', page_html)
+            nf = os.path.join(out, '404.html')
+            if site:
+                page_html = read(out, '404.html')
+                self.assertIn('<meta name="robots" content="noindex">', page_html)
+                for loc in bs.LOCALES:
+                    self.assertIn(f'href="/{loc}/"', page_html)
+            else:
+                self.assertFalse(os.path.exists(nf), '404 needs the site root')
+
+    def test_picker_redirect_skips_crawlers(self):
+        # Crawlers stay on the picker and follow its links; there's no meta refresh.
+        for target in ('index.html', os.path.join('translate', 'index.html')):
+            page_html = read(self.with_email, target)
+            self.assertIn('navigator.userAgent', page_html)
+            self.assertNotIn('http-equiv="refresh"', page_html.lower())
+            for loc in bs.LOCALES:
+                self.assertIn(f'hreflang="{loc}"', page_html)
+
     def test_seo_json_ld_on_home(self):
         import json
         for out, site in ((self.with_email, 'https://example.org'), (self.without, '')):
             for loc in bs.LOCALES:
                 h = bs.seo(read(out, loc, 'index.html'))
-                self.assertEqual(len(h.ld), 1)
-                data = json.loads(h.ld[0])
+                blocks = [json.loads(b) for b in h.ld]
+                apps = [b for b in blocks if b['@type'] == 'SoftwareApplication']
+                orgs = [b for b in blocks if b['@type'] == 'Organization']
+                self.assertEqual(len(apps), 1)
+                # The Organization once: the English home page, only with a site URL.
+                self.assertEqual(len(orgs), 1 if (site and loc == 'en') else 0, loc)
+                if orgs:
+                    self.assertEqual(orgs[0]['url'], f'{site}/')
+                    self.assertEqual(orgs[0]['sameAs'], [bs.REPO_URL])
+                    self.assertNotIn('aggregateRating', orgs[0])
+                data = apps[0]
                 self.assertEqual(data['@type'], 'SoftwareApplication')
                 self.assertEqual(data['name'], 'Amalino')
                 self.assertEqual(data['operatingSystem'], 'iOS, Android')
