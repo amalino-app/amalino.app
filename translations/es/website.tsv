@@ -105,3 +105,16 @@ pr.notTitle	Lo que Amalino no es
 pr.notBody	Amalino ayuda a un niño a comunicarse. No diagnostica, vigila ni trata ninguna afección.
 pr.contactTitle	Preguntas
 pr.contact	Si tienes alguna pregunta sobre privacidad, escríbeme a {email}.
+nav.manual	Manual
+nav.manualEn	Manual (en inglés)
+man.suffix	Manual de Amalino
+man.edit	Editar esta página en GitHub
+man.navLabel	Páginas del manual
+man.contents	Contenido
+man.prev	Anterior
+man.next	Siguiente
+pr.webTitle	En este sitio web
+pr.webNoCookies	Este sitio no usa cookies ni scripts de analítica o seguimiento. Si eliges un idioma, tu navegador lo recuerda solo en tu dispositivo.
+pr.webHosts	El sitio está alojado en GitHub Pages y te llega a través de Cloudflare. Para entregar y proteger las páginas, tratan la dirección de internet (IP) de tu dispositivo. Consulta la [[declaración de privacidad de GitHub|github-privacy]] y la [[política de privacidad de Cloudflare|cloudflare-privacy]].
+pr.webStats	Solo veo el número total de visitas en las estadísticas de Cloudflare, nunca quién ha visitado el sitio.
+pr.webEmail	Los correos a {email} me llegan a través de Cloudflare Email Routing.

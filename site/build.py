@@ -89,6 +89,16 @@ MAX_SITE_BYTES = 600_000
 # The public repository of the website, manual and translations (owner decision 33, relaxed 2026-10-14). Pages
 # link to it with [[link text]] in a string; no other github.com link is allowed.
 REPO_URL = 'https://github.com/amalino-app/amalino.app'
+# Documents on other hosts a string may link to, by name: [[link text|name]] (the privacy page's website part,
+# owner 2026-10-14). Any other link to another host is an error.
+OUTSIDE_LINKS = {
+    'github-privacy': 'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement',
+    'cloudflare-privacy': 'https://www.cloudflare.com/privacypolicy/',
+}
+# The user manual: manual/<lang>/index.md and the pages its contents list links to, published at /<lang>/manual/.
+# A language without a manual folder links to the English manual.
+MANUAL = os.path.join(ROOT, 'manual')
+MANUAL_SOURCE = 'en'
 CODE_ON_GITHUB = (r'(?:\bcode|\bkode|код|código|الكود|الشيفرة)[^.!?]{0,40}github'
                   r'|github[^.!?]{0,40}(?:\bcode|\bkode|код|código|الكود|الشيفرة)')
 
@@ -280,12 +290,21 @@ class Renderer:
 
     def html_text(self, key, loc):
         s = html.escape(self.text(key, loc), quote=False)
+        # [[link text|name]] links to OUTSIDE_LINKS[name]; set aside so the RTL step below leaves the name alone.
+        outside = []
+
+        def keep(m):
+            if m.group(2) not in OUTSIDE_LINKS:
+                raise BuildError(f'{key}: unknown link {m.group(2)!r} (known: {", ".join(OUTSIDE_LINKS)})')
+            outside.append((m.group(1), OUTSIDE_LINKS[m.group(2)]))
+            return f'\x00{len(outside) - 1}\x00'
+        s = re.sub(r'\[\[([^\]|]+?)\|([a-z\-]+)\]\]', keep, s)
         if loc in RTL:
-            # Latin runs (names, "OK?") stay one left-to-right unit, so a trailing "?" or "." keeps its place.
-            s = re.sub(r'(?<![{A-Za-z0-9_])(?!email\})[A-Za-z](?:[A-Za-z0-9_\-]|\.(?=[A-Za-z0-9]))*'
-                       r'(?:\s+[A-Za-z](?:[A-Za-z0-9_\-]|\.(?=[A-Za-z0-9]))*)*\??',
-                       lambda m: f'<bdi dir="ltr">{m.group(0)}</bdi>', s)
+            s = isolate_latin(s)
+            outside = [(isolate_latin(t), u) for t, u in outside]
         s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
+        s = re.sub(r'\x00(\d+)\x00', lambda m: f'<a href="{outside[int(m.group(1))][1]}" rel="noopener">'
+                   f'{outside[int(m.group(1))][0]}</a>', s)
         s = re.sub(r'\[\[(.+?)\]\]', lambda m: f'<a href="{REPO_URL}" rel="noopener">{m.group(1)}</a>', s)
         if '{email}' in s:
             if not self.email:
@@ -295,7 +314,8 @@ class Renderer:
         return s
 
     def plain(self, key, loc):
-        s = self.text(key, loc).replace('**', '').replace('[[', '').replace(']]', '')
+        s = re.sub(r'\[\[([^\]|]+?)\|[a-z\-]+\]\]', r'\1', self.text(key, loc))
+        s = s.replace('**', '').replace('[[', '').replace(']]', '')
         if '{email}' in s:
             raise BuildError(f'{key} has {{email}} and cannot be used as plain text')
         return html.escape(s, quote=True)
@@ -307,7 +327,8 @@ class Renderer:
             return m.group(2) if flags[m.group(1)] else ''
         return re.sub(r'\{\{#(email|site|donate)\}\}(.*?)\{\{/\1\}\}', keep, tpl, flags=re.S)
 
-    def render(self, tpl, loc, values, page=None):
+    def render(self, tpl, loc, values, page=None, root=None):
+        """`root` leads back to the site root; without it, it comes from `page` (one of PAGES)."""
         tpl = self.sections(tpl)
 
         def sub(m):
@@ -319,7 +340,7 @@ class Renderer:
             if kind == 'link':
                 if name not in PAGES:
                     raise BuildError(f'unknown page {name!r}')
-                return rel_root(page) + f'{loc}/{page_path(name)}'
+                return (root if root is not None else rel_root(page)) + f'{loc}/{page_path(name)}'
             if name == 'donate' and name not in values:
                 return html.escape(self.donate, quote=True)
             if name not in values:
@@ -329,6 +350,14 @@ class Renderer:
         if '{{' in out:
             raise BuildError(f'unrendered template tag near {out[out.index("{{"):][:40]!r}')
         return out
+
+
+def isolate_latin(s):
+    """In right-to-left text, Latin runs (names, "OK?") stay one left-to-right unit, so a trailing "?" or "."
+    keeps its place."""
+    return re.sub(r'(?<![{A-Za-z0-9_])(?!email\})[A-Za-z](?:[A-Za-z0-9_\-]|\.(?=[A-Za-z0-9]))*'
+                  r'(?:\s+[A-Za-z](?:[A-Za-z0-9_\-]|\.(?=[A-Za-z0-9]))*)*\??',
+                  lambda m: f'<bdi dir="ltr">{m.group(0)}</bdi>', s)
 
 
 def read(path):
@@ -369,18 +398,19 @@ def head_links(site, loc, page):
     return '\n'.join(lines) + '\n'
 
 
-def share_meta(r, site, loc, page, title, desc):
+def share_meta(r, site, loc, page, title, desc, url=None, langs=None):
     """Open Graph and Twitter card tags. og:url and the image need absolute URLs, so they come only with a
-    site URL; without one the card still has a title, a description and the locales."""
+    site URL; without one the card still has a title, a description and the locales. `url` and `langs` (the
+    languages the page exists in) are for pages outside PAGES, such as the manual."""
     own = loc or 'en'
     tags = [('property', 'og:type', 'website'), ('property', 'og:site_name', 'Amalino'),
             ('property', 'og:title', title), ('property', 'og:description', desc),
             ('property', 'og:locale', OG_LOCALES[own])]
-    tags += [('property', 'og:locale:alternate', OG_LOCALES[o]) for o in LOCALES if o != own]
+    tags += [('property', 'og:locale:alternate', OG_LOCALES[o]) for o in (langs or LOCALES) if o != own]
     tags.append(('name', 'twitter:card', 'summary_large_image' if site else 'summary'))
     if site:
         image = html.escape(f'{site}/assets/og-image.png')
-        tags += [('property', 'og:url', html.escape(site_url(site, loc, page))), ('property', 'og:image', image),
+        tags += [('property', 'og:url', html.escape(url or site_url(site, loc, page))), ('property', 'og:image', image),
                  ('property', 'og:image:type', 'image/png'), ('property', 'og:image:width', '1200'),
                  ('property', 'og:image:height', '630'), ('property', 'og:image:alt', r.plain('og.imageAlt', own)),
                  ('name', 'twitter:image', image), ('name', 'twitter:image:alt', r.plain('og.imageAlt', own))]
@@ -461,23 +491,26 @@ def not_found_page(site):
 
 
 def lastmod():
-    """The sitemap date: the last commit of the site or the translations (today without git)."""
+    """The sitemap date: the last commit of the site, the manual or the translations (today without git)."""
     try:
-        out = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', 'site', 'translations'],
+        out = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', 'site', 'manual', 'translations'],
                              cwd=ROOT, capture_output=True, text=True, timeout=10).stdout.strip()
     except (OSError, subprocess.SubprocessError):
         out = ''
     return out if re.match(r'^\d{4}-\d{2}-\d{2}$', out) else datetime.date.today().isoformat()
 
 
-def sitemap(site, date):
-    """sitemap.xml: every language page and both pickers, each with its cluster's xhtml:link alternates."""
-    entries = [(loc, page) for page in PAGES for loc in LOCALES] + [(None, p) for p in ('home', 'translate')]
+def sitemap(site, date, extra=()):
+    """sitemap.xml: every language page and both pickers, each with its cluster's xhtml:link alternates, plus
+    `extra` [(url, [(hreflang, url)])] (the manual's pages)."""
+    entries = [(site_url(site, loc, page), alternates(site, page)) for page in PAGES for loc in LOCALES]
+    entries += [(site_url(site, None, p), alternates(site, p)) for p in ('home', 'translate')]
+    entries += list(extra)
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
-    for loc, page in entries:
-        lines.append(f'  <url>\n    <loc>{html.escape(site_url(site, loc, page))}</loc>\n    <lastmod>{date}</lastmod>')
-        for lang, url in alternates(site, page):
+    for loc, alts in entries:
+        lines.append(f'  <url>\n    <loc>{html.escape(loc)}</loc>\n    <lastmod>{date}</lastmod>')
+        for lang, url in alts:
             lines.append(f'    <xhtml:link rel="alternate" hreflang="{lang}" href="{html.escape(url)}"/>')
         lines.append('  </url>')
     lines.append('</urlset>')
@@ -504,6 +537,137 @@ REMEMBER_SCRIPT = ('<script>document.addEventListener("click",function(e){var a=
                    'a.getAttribute("data-lang"))}catch(x){}});</script>')
 
 
+# ---------------------------------------------------------------- the manual
+
+def md_inline(text, link):
+    """Inline Markdown: `code`, [text](href) (href through `link`), **bold** and *italic*; HTML escaped."""
+    parts = re.split(r'(`[^`]+`)', text)
+    out = []
+    for part in parts:
+        if part.startswith('`') and part.endswith('`') and len(part) > 1:
+            out.append(f'<code>{html.escape(part[1:-1], quote=False)}</code>')
+            continue
+        s = html.escape(part, quote=False)
+        s = re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)',
+                   lambda m: f'<a href="{html.escape(link(html.unescape(m.group(2))), quote=True)}">{m.group(1)}</a>', s)
+        s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
+        s = re.sub(r'(?<![*\w])\*(?!\s)(.+?)(?<!\s)\*(?![*\w])', r'<em>\1</em>', s)
+        out.append(s)
+    return ''.join(out)
+
+
+def slugify(text):
+    return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
+
+
+def md_to_html(md, link):
+    """A small Markdown subset for the manual: # headings, paragraphs, - and 1. lists, > notes, inline marks.
+    HTML comments are dropped; the first one may be <!-- description: ... -->. Returns (h1 text, description,
+    html)."""
+    m = re.match(r'\s*<!--\s*description:\s*(.*?)\s*-->', md, flags=re.S)
+    description = ' '.join(m.group(1).split()) if m else ''
+    md = re.sub(r'<!--.*?-->', '', md, flags=re.S)
+    title, out, para, items, kind, quote = '', [], [], [], None, []
+
+    def flush():
+        nonlocal para, items, kind, quote
+        if para:
+            out.append(f'<p>{md_inline(" ".join(para), link)}</p>')
+        if items:
+            tag = 'ol' if kind == 'ol' else 'ul'
+            out.append(f'<{tag}>' + ''.join(f'<li>{md_inline(i, link)}</li>' for i in items) + f'</{tag}>')
+        if quote:
+            out.append(f'<blockquote><p>{md_inline(" ".join(quote), link)}</p></blockquote>')
+        para, items, kind, quote = [], [], None, []
+
+    for line in md.splitlines():
+        line = line.rstrip()
+        h = re.match(r'^(#{1,4})\s+(.+)$', line)
+        li = re.match(r'^(?:(-)|\d+\.)\s+(.+)$', line)
+        if not line.strip():
+            flush()
+        elif h:
+            flush()
+            level, text = len(h.group(1)), h.group(2).strip()
+            if level == 1:
+                if title:
+                    raise BuildError('a manual page has more than one # heading')
+                title = text
+                out.append(f'<h1>{md_inline(text, link)}</h1>')
+            else:
+                out.append(f'<h{level} id="{slugify(text)}">{md_inline(text, link)}</h{level}>')
+        elif li:
+            new = 'ul' if li.group(1) else 'ol'
+            if para or quote or (items and kind != new):
+                flush()
+            kind = new
+            items.append(li.group(2))
+        elif line.startswith('>'):
+            if para or items:
+                flush()
+            quote.append(line[1:].strip())
+        elif items and line.startswith(('  ', '\t')):
+            items[-1] += ' ' + line.strip()
+        else:
+            if items or quote:
+                flush()
+            para.append(line.strip())
+    flush()
+    if not title:
+        raise BuildError('a manual page needs a # heading')
+    return re.sub(r'[*`]', '', re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', title)), description, '\n'.join(out)
+
+
+def manual_pages(loc):
+    """The manual's page names in a language, in the contents order: 'index', then the pages index.md lists."""
+    index = os.path.join(MANUAL, loc, 'index.md')
+    if not os.path.isfile(index):
+        return []
+    names = ['index'] + [n for n in dict.fromkeys(re.findall(r'\]\(([a-z0-9\-]+)\.md\)', read(index))) if n != 'index']
+    for n in names:
+        if not os.path.isfile(os.path.join(MANUAL, loc, f'{n}.md')):
+            raise BuildError(f'manual/{loc}/index.md links to {n}.md, which does not exist')
+    return names
+
+
+def manual_langs():
+    return [loc for loc in LOCALES if manual_pages(loc)]
+
+
+def manual_path(name):
+    return 'manual/index.html' if name == 'index' else f'manual/{name}/index.html'
+
+
+def manual_url(site, loc, name):
+    return f'{site}/{loc}/manual/' if name == 'index' else f'{site}/{loc}/manual/{name}/'
+
+
+def manual_alternates(site, name, langs):
+    """The manual page's language versions plus x-default (the source language's page)."""
+    have = [loc for loc in langs if name in manual_pages(loc)]
+    source = MANUAL_SOURCE if MANUAL_SOURCE in have else have[0]
+    return [(loc, manual_url(site, loc, name)) for loc in have] + [('x-default', manual_url(site, source, name))]
+
+
+def manual_link(loc, name, names):
+    """Resolves a link written in manual/<loc>/<name>.md to an href on the built page."""
+    up = '' if name == 'index' else '../'
+
+    def link(href):
+        m = re.fullmatch(r'([a-z0-9\-]+)\.md(#[a-z0-9\-]+)?', href)
+        if m:
+            if m.group(1) not in names:
+                raise BuildError(f'manual/{loc}/{name}.md: link to {href}, which is not in the contents')
+            target = 'index.html' if m.group(1) == 'index' else f'{m.group(1)}/index.html'
+            return (up + target if name != 'index' or m.group(1) != 'index' else 'index.html') + (m.group(2) or '')
+        if href.startswith('#') or re.match(r'^(https://|mailto:)', href):
+            return href
+        if href.startswith('../../') and not href.startswith('../../../'):
+            return f'{REPO_URL}/blob/main/{href[6:]}'
+        raise BuildError(f'manual/{loc}/{name}.md: link {href!r} (use another page\'s .md, ../../FILE or https://)')
+    return link
+
+
 def build(out, email='', site='', strings=None, quiet=False, donate=''):
     """Builds the site into `out` (replacing it). Returns a summary dict used by --check and tests."""
     strings = strings if strings is not None else load_strings()
@@ -524,6 +688,32 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     shutil.copyfile(os.path.join(ICONS, 'favicon.ico'), os.path.join(out, 'favicon.ico'))
     write(os.path.join(out, 'site.webmanifest'), web_manifest())
 
+    langs_m = manual_langs()
+
+    def manual_target(loc):
+        """(language, label key) of the manual a page in `loc` links to: its own, else the source language's."""
+        if loc in langs_m:
+            return loc, 'nav.manual'
+        return (MANUAL_SOURCE if MANUAL_SOURCE in langs_m else langs_m[0]), 'nav.manualEn'
+
+    def manual_anchor(loc, root, current=False):
+        if not langs_m:
+            return ''
+        target, key = manual_target(loc)
+        attrs = '' if target == loc else f' hreflang="{target}"'
+        cur = ' aria-current="page"' if current else ''
+        return f'<a href="{root}{target}/{manual_path("index")}"{attrs}{cur}>{r.html_text(key, loc)}</a>'
+
+    def site_nav(loc, root, current=None):
+        """The header menu; `current` is a page id or 'manual'."""
+        items = []
+        for p in PAGES:
+            cur = ' aria-current="page"' if p == current else ''
+            items.append(f'<li><a href="{root}{loc}/{page_path(p)}"{cur}>{r.html_text(PAGES[p][2], loc)}</a></li>')
+            if p == 'about' and langs_m:
+                items.append(f'<li>{manual_anchor(loc, root, current == "manual")}</li>')
+        return ''.join(items)
+
     status = {}
     for loc in LOCALES:
         checked = len(reviewed[loc] & set(strings))
@@ -533,10 +723,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                   f'</p></div></div>') if draft else ''
         for page, (tpl_name, _sub, nav_key, title_key, desc_key) in PAGES.items():
             root = rel_root(page)
-            nav = []
-            for p in PAGES:
-                cur = ' aria-current="page"' if p == page else ''
-                nav.append(f'<li><a href="{root}{loc}/{page_path(p)}"{cur}>{r.html_text(PAGES[p][2], loc)}</a></li>')
+            nav = [site_nav(loc, root, page)]
             langs = []
             for other in LOCALES:
                 cur = ' aria-current="true"' if other == loc else ''
@@ -556,9 +743,72 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                 'description': desc, 'head_links': head.rstrip('\n'),
                 'nav': ''.join(nav), 'lang_links': ''.join(langs), 'draft_banner': banner, 'content': content,
                 'lang_current': f'<span lang="{loc}" dir="{"rtl" if loc in RTL else "ltr"}">{ENDONYMS[loc]}</span>',
-                'remember_script': REMEMBER_SCRIPT,
+                'remember_script': REMEMBER_SCRIPT, 'manual_footer': manual_anchor(loc, root),
             }
             write(os.path.join(out, loc, page_path(page)), r.render(layout, loc, values, page))
+
+    # The manual: /<lang>/manual/ and /<lang>/manual/<page>/ for each language that has one.
+    manual_entries = []
+    for loc in langs_m:
+        names = manual_pages(loc)
+        pages = []
+        for name in names:
+            heading, desc, body = md_to_html(read(os.path.join(MANUAL, loc, f'{name}.md')), manual_link(loc, name, names))
+            if not desc:
+                raise BuildError(f'manual/{loc}/{name}.md needs <!-- description: ... --> on its first line')
+            pages.append((name, heading, desc, body))
+        for i, (name, heading, desc, body) in enumerate(pages):
+            root = '../../' if name == 'index' else '../../../'
+            here = '' if name == 'index' else '../'
+
+            def href(n):
+                return here + ('index.html' if n == 'index' else f'{n}/index.html')
+            steps = []
+            if i > 0:
+                steps.append(f'<a class="prev" href="{href(pages[i - 1][0])}" rel="prev">← {r.html_text("man.prev", loc)}: '
+                             f'{html.escape(pages[i - 1][1])}</a>')
+            if i + 1 < len(pages):
+                steps.append(f'<a class="next" href="{href(pages[i + 1][0])}" rel="next">{r.html_text("man.next", loc)}: '
+                             f'{html.escape(pages[i + 1][1])} →</a>')
+            here_mark = ' aria-current="page"'
+            toc = ''.join(f'<li><a href="{href(n)}"{here_mark if n == name else ""}>{html.escape(h)}</a></li>'
+                          for n, h, _d, _b in pages)
+            edit = f'{REPO_URL}/edit/main/manual/{loc}/{name}.md'
+            content = (f'<article class="wrap prose manual">\n{body}\n'
+                       f'<p class="manual-edit"><a href="{edit}" rel="noopener">{r.html_text("man.edit", loc)}</a></p>\n'
+                       + (f'<nav class="manual-steps" aria-label="{r.plain("man.navLabel", loc)}">{"".join(steps)}</nav>\n'
+                          if steps else '')
+                       + f'<nav class="manual-toc" aria-label="{r.plain("man.navLabel", loc)}">'
+                       f'<h2>{r.html_text("man.contents", loc)}</h2><ol>{toc}</ol></nav>\n</article>')
+            title = heading if name == 'index' else f'{heading} · {r.plain("man.suffix", loc)}'
+            title = html.escape(title, quote=True)
+            desc = html.escape(desc, quote=True)
+            alts = manual_alternates(site, name, langs_m) if site else []
+            url = manual_url(site, loc, name) if site else None
+            head = ''
+            if site:
+                head = f'<link rel="canonical" href="{html.escape(url)}">\n' + ''.join(
+                    f'<link rel="alternate" hreflang="{lang}" href="{html.escape(u)}">\n' for lang, u in alts)
+                manual_entries.append((url, alts))
+            head += share_meta(r, site, loc, None, title, desc, url=url, langs=[l for l, _u in alts if l != 'x-default'] or [loc])
+            langs = []
+            for other in LOCALES:
+                cur = ' aria-current="true"' if other == loc else ''
+                d = 'rtl' if other in RTL else 'ltr'
+                target = (f'{root}{other}/{manual_path(name)}' if other in langs_m and name in manual_pages(other)
+                          else f'{root}{other}/{page_path("home")}')
+                langs.append(f'<li><a href="{target}" lang="{other}" hreflang="{other}" '
+                             f'dir="{d}" data-lang="{other}"{cur}>{ENDONYMS[other]}</a></li>')
+            values = {
+                'icons': icon_links(root),
+                'lang': loc, 'dir': 'rtl' if loc in RTL else 'ltr', 'root': root, 'title': title,
+                'description': desc, 'head_links': head.rstrip('\n'),
+                'nav': site_nav(loc, root, 'manual'), 'lang_links': ''.join(langs), 'draft_banner': '',
+                'content': content,
+                'lang_current': f'<span lang="{loc}" dir="{"rtl" if loc in RTL else "ltr"}">{ENDONYMS[loc]}</span>',
+                'remember_script': REMEMBER_SCRIPT, 'manual_footer': manual_anchor(loc, root),
+            }
+            write(os.path.join(out, loc, manual_path(name)), r.render(layout, loc, values, root=root))
 
     # Static language pickers: / and /translate/ (the app links {site}/{lang}/translate/).
     for sub, label_key in PICKERS:
@@ -584,7 +834,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
         write(os.path.join(out, target), r.render(picker, 'en', values))
 
     if site:
-        write(os.path.join(out, 'sitemap.xml'), sitemap(site, lastmod()))
+        write(os.path.join(out, 'sitemap.xml'), sitemap(site, lastmod(), manual_entries))
         write(os.path.join(out, 'robots.txt'), f'User-agent: *\nAllow: /\n\nSitemap: {site}/sitemap.xml\n')
         # GitHub Pages serves the site at its custom domain from this file.
         write(os.path.join(out, 'CNAME'), re.match(r'^https://([^/]+)', site).group(1) + '\n')
@@ -595,14 +845,15 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
         read(os.path.join(TEMPLATES, n)) for n in os.listdir(TEMPLATES) if n.endswith('.html'))))
     unused = sorted(set(strings) - r.used - referenced)
     if not quiet:
-        print(f'Built {len(LOCALES)} languages x {len(PAGES)} pages + 2 pickers into {os.path.relpath(out, ROOT)}'
+        print(f'Built {len(LOCALES)} languages x {len(PAGES)} pages + 2 pickers + the manual '
+              f'({", ".join(f"{l} {len(manual_pages(l))} pages" for l in langs_m) or "none"}) into {os.path.relpath(out, ROOT)}'
               f' (e-mail {"set" if email else "empty"}, site {"set" if site else "empty"},'
               f' donation link {"set" if donate else "empty"})')
         print('Native review (web:<key> in translations/<lang>/reviewed.txt): ' +
               ', '.join(f'{loc} {status[loc]}' for loc in LOCALES))
         if unused:
             print('Unused string keys: ' + ', '.join(unused))
-    return {'status': status, 'unused': unused}
+    return {'status': status, 'unused': unused, 'manual': {l: manual_pages(l) for l in langs_m}}
 
 
 # ---------------------------------------------------------------- checks
@@ -751,6 +1002,9 @@ def check(out, strings, email, site='', donate=''):
             errors.append(msg)
 
     files = [os.path.join(loc, page_path(p)) for loc in LOCALES for p in PAGES] + ['index.html', 'translate/index.html']
+    langs_m = manual_langs()
+    manual_files = {os.path.join(loc, manual_path(n)): (loc, n) for loc in langs_m for n in manual_pages(loc)}
+    files += list(manual_files)
     for f in files + ['assets/style.css', 'assets/amalino.svg']:
         expect(os.path.isfile(os.path.join(out, f)), f'missing {f}')
     if errors:
@@ -769,13 +1023,25 @@ def check(out, strings, email, site='', donate=''):
         for url in external_refs(page, site):
             errors.append(f'{f}: external resource {url} (self-hosted only)')
         for ref in re.findall(r'href="([^"]*github\.com[^"]*)"', page):
-            expect(ref.startswith(REPO_URL), f'{f}: GitHub link {ref} (only {REPO_URL})')
+            expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values(), f'{f}: GitHub link {ref} (only {REPO_URL})')
+        for ref in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"', page):
+            expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values() or (site and ref.startswith(site + '/'))
+                   or (donate and ref == html.escape(donate, quote=True)),
+                   f'{f}: link to another site {ref} (add it to OUTSIDE_LINKS if it belongs)')
         if loc:
             expect(f'<p class="footer-repo"><a href="{REPO_URL}"' in page, f'{f}: footer link to the repository missing')
-        for leftover in ('{{', '{email}', '**', '{app:', '[[', ']]'):
+            if langs_m:
+                expect('<p class="footer-manual"><a href="' in page, f'{f}: footer link to the manual missing')
+        for leftover in ('{{', '{email}', '**', '{app:', '[[', ']]', '\x00'):
             expect(leftover not in page, f'{f}: leftover {leftover!r}')
-        # Owner decision 31: no cookies. The language choice is in localStorage only.
-        expect('cookie' not in page.lower(), f'{f}: mentions cookies in its markup or script')
+        # Owner decision 31: no cookies. The language choice is in localStorage only. (The privacy page may say so.)
+        scripts = ' '.join(re.findall(r'<script\b[^>]*>(.*?)</script>', page, flags=re.S)).lower()
+        expect('cookie' not in scripts, f'{f}: a script uses cookies')
+        if f in manual_files:
+            m_loc, m_name = manual_files[f]
+            expect(f'href="{REPO_URL}/edit/main/manual/{m_loc}/{m_name}.md"' in page, f'{f}: "edit this page" link missing')
+            expect('aria-current="page"' in page.split('<nav class="site-nav"')[1].split('</nav>')[0],
+                   f'{f}: the header menu should mark the manual')
         if loc:
             menu = re.search(r'<details class="lang-menu">(.*?)</details>', page, flags=re.S)
             expect(menu, f'{f}: needs the header language menu')
@@ -809,7 +1075,8 @@ def check(out, strings, email, site='', donate=''):
                 for url in external_refs(read(os.path.join(root, n)), site):
                     errors.append(f'{os.path.relpath(os.path.join(root, n), out)}: external resource {url}')
 
-    errors += check_seo(out, files, site)
+    manual_alts = {f: [l for l in langs_m if n in manual_pages(l)] for f, (_l, n) in manual_files.items()}
+    errors += check_seo(out, files, site, manual_alts)
 
     for loc in LOCALES:
         promise = strings['freeTitle'][loc]
@@ -830,9 +1097,10 @@ def check(out, strings, email, site='', donate=''):
     return errors
 
 
-def check_seo(out, files, site):
+def check_seo(out, files, site, page_langs=None):
     """Titles, descriptions, hreflang, canonical, share cards, JSON-LD, headings, alt text, page weight and
-    (with a site URL) sitemap.xml and robots.txt. Without a site URL nothing absolute may be in a <head>."""
+    (with a site URL) sitemap.xml and robots.txt. Without a site URL nothing absolute may be in a <head>.
+    `page_langs` names the languages of pages that don't exist in every language (the manual)."""
     errors = []
 
     def expect(cond, msg):
@@ -859,7 +1127,8 @@ def check_seo(out, files, site):
         for key in ('og:title', 'og:description', 'og:type', 'og:locale', 'twitter:card'):
             expect(len(h.metas(key)) == 1, f'{f}: needs one {key}')
         expect(h.metas('og:locale') == [OG_LOCALES[loc or 'en']], f'{f}: wrong og:locale')
-        expect(len(h.metas('og:locale:alternate')) == len(LOCALES) - 1, f'{f}: needs og:locale:alternate for the others')
+        langs = (page_langs or {}).get(f, LOCALES)
+        expect(len(h.metas('og:locale:alternate')) == len(langs) - 1, f'{f}: needs og:locale:alternate for the others')
         expect(len(h.title.strip()) <= TITLE_MAX, f'{f}: <title> is {len(h.title.strip())} characters (max {TITLE_MAX})')
         expect(len((desc or [''])[0]) <= DESCRIPTION_MAX,
                f'{f}: meta description is {len((desc or [""])[0])} characters (max {DESCRIPTION_MAX})')
@@ -889,7 +1158,7 @@ def check_seo(out, files, site):
             canon = h.canonical()
             expect(len(canon) == 1, f'{f}: needs one canonical link')
             alts = dict(h.alternates())
-            expect(sorted(alts) == sorted(LOCALES + ['x-default']), f'{f}: hreflang needs {LOCALES} and x-default')
+            expect(sorted(alts) == sorted(list(langs) + ['x-default']), f'{f}: hreflang needs {langs} and x-default')
             expect(canon and canon[0] in alts.values(), f'{f}: canonical is not one of its alternates')
             for key in ('og:url', 'og:image'):
                 expect(len(h.metas(key)) == 1, f'{f}: needs {key}')
@@ -946,7 +1215,7 @@ def check_seo(out, files, site):
                        f'{f}: {other} does not link back')
                 if lang != 'x-default':
                     expect(page_lang(read(os.path.join(out, other))) == lang, f'{f}: {url} is not in {lang}')
-        errors += check_sitemap(out, site, set(by_url))
+        errors += check_sitemap(out, site, set(by_url), {u: dict(pages[f].alternates()) for u, f in by_url.items()})
     else:
         for name in ('sitemap.xml', 'robots.txt', 'CNAME'):
             expect(not os.path.exists(os.path.join(out, name)), f'{name} without a site URL')
@@ -969,7 +1238,7 @@ def png_size(path):
     return int.from_bytes(head[16:20], 'big'), int.from_bytes(head[20:24], 'big')
 
 
-def check_sitemap(out, site, page_urls):
+def check_sitemap(out, site, page_urls, page_alts=None):
     """sitemap.xml parses, lists exactly the built pages with lastmod and their alternates; robots.txt names it."""
     import xml.etree.ElementTree as ET
     errors = []
@@ -988,7 +1257,9 @@ def check_sitemap(out, site, page_urls):
         if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', url.findtext('s:lastmod', '', ns)):
             errors.append(f'sitemap.xml: {loc} has no lastmod')
         alts = {l.get('hreflang'): l.get('href') for l in url.findall('x:link', ns)}
-        if sorted(alts) != sorted(LOCALES + ['x-default']) or loc not in alts.values():
+        want = (page_alts or {}).get(loc)
+        if (want is not None and alts != want) or (want is None and sorted(alts) != sorted(LOCALES + ['x-default'])) \
+                or loc not in alts.values():
             errors.append(f'sitemap.xml: {loc} alternates incomplete')
     if sorted(locs) != sorted(page_urls):
         errors.append(f'sitemap.xml: lists {len(locs)} pages, the site has {len(page_urls)}')

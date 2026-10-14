@@ -105,3 +105,16 @@ pr.notTitle	Чим Amalino не є
 pr.notBody	Amalino допомагає дитині спілкуватися. Він не ставить діагнозів, не відстежує й не лікує жодних станів.
 pr.contactTitle	Запитання
 pr.contact	Якщо у вас є запитання про приватність, напишіть мені: {email}.
+nav.manual	Посібник
+nav.manualEn	Посібник (англійською)
+man.suffix	Посібник Amalino
+man.edit	Виправити цю сторінку на GitHub
+man.navLabel	Сторінки посібника
+man.contents	Зміст
+man.prev	Назад
+man.next	Далі
+pr.webTitle	На цьому сайті
+pr.webNoCookies	Сайт не встановлює файли cookie і не використовує скриптів аналітики чи стеження. Якщо ви обираєте мову, браузер запам'ятовує її лише на вашому пристрої.
+pr.webHosts	Сайт розміщено на GitHub Pages, і він доходить до вас через Cloudflare. Щоб доставляти й захищати сторінки, вони обробляють інтернет-адресу (IP) вашого пристрою. Див. [[заяву про конфіденційність GitHub|github-privacy]] і [[політику конфіденційності Cloudflare|cloudflare-privacy]].
+pr.webStats	Я бачу лише загальну кількість відвідувань у статистиці Cloudflare, але ніколи не бачу, хто заходив.
+pr.webEmail	Листи на {email} надходять до мене через Cloudflare Email Routing.

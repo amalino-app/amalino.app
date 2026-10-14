@@ -157,16 +157,21 @@ class BuiltSite(unittest.TestCase):
 
     def all_pages(self, out):
         return [os.path.join(loc, bs.page_path(p)) for loc in bs.LOCALES for p in bs.PAGES] + \
-            ['index.html', os.path.join('translate', 'index.html')]
+            ['index.html', os.path.join('translate', 'index.html')] + self.manual_files()
+
+    def manual_files(self):
+        return [os.path.join(loc, bs.manual_path(n)) for loc in bs.manual_langs() for n in bs.manual_pages(loc)]
 
     def test_seo_hreflang_complete_and_reciprocal(self):
         site = 'https://example.org'
         heads = {f: bs.seo(read(self.with_email, f)) for f in self.all_pages(self.with_email)}
         by_url = {h.canonical()[0]: f for f, h in heads.items()}
         self.assertEqual(len(by_url), len(heads))
+        manual = set(self.manual_files())
         for f, h in heads.items():
             alts = dict(h.alternates())
-            self.assertEqual(sorted(alts), sorted(bs.LOCALES + ['x-default']), f)
+            langs = bs.manual_langs() if f in manual else bs.LOCALES
+            self.assertEqual(sorted(alts), sorted(langs + ['x-default']), f)
             self.assertIn(h.canonical()[0], alts.values(), f)
             for lang, url in alts.items():
                 self.assertTrue(url.startswith(site + '/'), (f, url))
@@ -186,10 +191,12 @@ class BuiltSite(unittest.TestCase):
         locs = {u.findtext('s:loc', '', ns) for u in urls}
         want = {bs.seo(read(self.with_email, f)).canonical()[0] for f in self.all_pages(self.with_email)}
         self.assertEqual(locs, want)
-        self.assertEqual(len(urls), len(bs.LOCALES) * len(bs.PAGES) + 2)
+        self.assertEqual(len(urls), len(bs.LOCALES) * len(bs.PAGES) + 2 + len(self.manual_files()))
         for u in urls:
             self.assertRegex(u.findtext('s:lastmod', '', ns), r'^\d{4}-\d{2}-\d{2}$')
-            self.assertEqual(len(u.findall('x:link', ns)), len(bs.LOCALES) + 1)
+            # A manual page lists only the languages it exists in (plus x-default).
+            langs = len(bs.manual_langs()) if '/manual/' in u.findtext('s:loc', '', ns) else len(bs.LOCALES)
+            self.assertEqual(len(u.findall('x:link', ns)), langs + 1)
         self.assertIn('Sitemap: https://example.org/sitemap.xml', read(self.with_email, 'robots.txt'))
         errors = bs.check_sitemap(self.with_email, 'https://example.org', want | {'https://example.org/extra/'})
         self.assertTrue(any('lists' in e for e in errors), errors)
@@ -475,7 +482,10 @@ class BuiltSite(unittest.TestCase):
             self.assertIn(app['naturalVoicesHeading'][loc], text, loc)
             self.assertIn(bs.visible_text(self.strings['pr.draft'][loc]), text)
             self.assertNotIn('{app:', read(self.without, loc, 'privacy', 'index.html'))
-        self.assertNotIn('cookie', read(self.without, 'en', 'privacy', 'index.html').lower())
+        # No cookies (decision 31): no script sets one; the privacy page says so in words.
+        page = read(self.without, 'en', 'privacy', 'index.html')
+        self.assertNotIn('cookie', ' '.join(re.findall(r'<script\b[^>]*>(.*?)</script>', page, flags=re.S)).lower())
+        self.assertIn(self.strings['pr.webNoCookies']['en'], bs.visible_text(page))
 
     def test_arabic_latin_runs_are_isolated(self):
         html = read(self.without, 'ar', 'translate', 'index.html')
@@ -512,6 +522,126 @@ class Inputs(unittest.TestCase):
         self.assertEqual(bs.clean_email('not an address'), '')
         self.assertEqual(bs.clean_site('https://amalino.app/'), 'https://amalino.app')
         self.assertEqual(bs.clean_site('http://amalino.app'), '')
+
+
+class Manual(unittest.TestCase):
+    """The user manual (manual/<lang>/*.md) on the site, and the privacy page's website part."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        cls.strings = bs.load_strings()
+        cls.out = os.path.join(cls.tmp.name, 'site')
+        cls.plain = os.path.join(cls.tmp.name, 'plain')
+        with redirect_stdout(io.StringIO()):
+            cls.summary = bs.build(cls.out, EMAIL, 'https://example.org', cls.strings)
+            bs.build(cls.plain, '', '', cls.strings)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def test_english_manual_is_built_in_contents_order(self):
+        names = bs.manual_pages('en')
+        self.assertEqual(names[0], 'index')
+        self.assertGreaterEqual(len(names), 13)
+        self.assertEqual(self.summary['manual'], {'en': names})
+        for n in names:
+            self.assertTrue(os.path.isfile(os.path.join(self.out, 'en', bs.manual_path(n))), n)
+        self.assertEqual(bs.check(self.out, self.strings, EMAIL, 'https://example.org'), [])
+        self.assertEqual(bs.check(self.plain, self.strings, '', ''), [])
+
+    def test_manual_page_has_edit_link_steps_contents_and_marked_menu(self):
+        names = bs.manual_pages('en')
+        page = read(self.out, 'en', bs.manual_path('scenes'))
+        self.assertIn(f'href="{bs.REPO_URL}/edit/main/manual/en/scenes.md"', page)
+        i = names.index('scenes')
+        self.assertIn(f'href="../{names[i - 1]}/index.html" rel="prev"', page)
+        self.assertIn(f'href="../{names[i + 1]}/index.html" rel="next"', page)
+        toc = re.search(r'<nav class="manual-toc".*?</nav>', page, flags=re.S).group(0)
+        self.assertEqual(toc.count('<li>'), len(names))
+        menu = re.search(r'<nav class="site-nav".*?</nav>', page, flags=re.S).group(0)
+        self.assertIn('manual/index.html" aria-current="page"', menu)
+        self.assertIn('<title>Scenes · Amalino manual</title>', page)
+        self.assertNotIn('rel="prev"', read(self.out, 'en', bs.manual_path('index')))
+
+    def test_manual_links_resolve_and_contributing_goes_to_the_repository(self):
+        index = read(self.out, 'en', bs.manual_path('index'))
+        self.assertIn('href="getting-started/index.html"', index)
+        self.assertIn(f'href="{bs.REPO_URL}/blob/main/CONTRIBUTING.md"', index)
+        board = read(self.out, 'en', bs.manual_path('the-board'))
+        self.assertIn('href="../quick-phrases/index.html"', board)
+        self.assertNotIn('.md"', board.replace(f'{bs.REPO_URL}/edit/main/manual/en/the-board.md"', ''))
+        self.assertNotIn('screenshot:', board, 'HTML comments are not published')
+
+    def test_other_languages_link_to_the_english_manual(self):
+        for loc in bs.LOCALES:
+            page = read(self.out, loc, 'index.html')
+            label = self.strings['nav.manual' if loc == 'en' else 'nav.manualEn'][loc]
+            want = '../en/manual/index.html"' + ('' if loc == 'en' else ' hreflang="en"')
+            self.assertIn(want, page, loc)
+            self.assertIn(label, page, loc)
+            self.assertIn('<p class="footer-manual"><a href="../en/manual/index.html"', page, loc)
+        # The manual page's own language menu: languages without a manual go to their home page.
+        page = read(self.out, 'en', bs.manual_path('voices'))
+        self.assertIn('href="../../../da/index.html" lang="da"', page)
+
+    def test_manual_seo_only_its_own_languages(self):
+        h = bs.seo(read(self.out, 'en', bs.manual_path('keyboard')))
+        self.assertEqual(h.canonical(), ['https://example.org/en/manual/keyboard/'])
+        self.assertEqual(dict(h.alternates()), {'en': 'https://example.org/en/manual/keyboard/',
+                                                'x-default': 'https://example.org/en/manual/keyboard/'})
+        self.assertEqual(h.metas('og:locale:alternate'), [])
+        self.assertLessEqual(len(h.metas('description')[0]), bs.DESCRIPTION_MAX)
+        self.assertIn('https://example.org/en/manual/keyboard/', read(self.out, 'sitemap.xml'))
+
+    def test_manual_text_follows_the_public_text_rules(self):
+        for n in bs.manual_pages('en'):
+            self.assertEqual(bs.forbidden_found(read(self.out, 'en', bs.manual_path(n)), 'en'), [], n)
+
+    def test_markdown_subset(self):
+        md = ('<!-- description: A page. -->\n# Title with **bold**\n\nText with *it*, `code` and a [link](b.md).\n'
+              '<!-- screenshot: x -->\n\n## Part two\n\n- one\n- two\n  continued\n\n1. first\n2. second\n\n'
+              '> **Tip:** wait.\n')
+        title, desc, body = bs.md_to_html(md, lambda h: 'B/' if h == 'b.md' else h)
+        self.assertEqual((title, desc), ('Title with bold', 'A page.'))
+        self.assertIn('<h1>Title with <strong>bold</strong></h1>', body)
+        self.assertIn('<p>Text with <em>it</em>, <code>code</code> and a <a href="B/">link</a>.</p>', body)
+        self.assertIn('<h2 id="part-two">Part two</h2>', body)
+        self.assertIn('<ul><li>one</li><li>two continued</li></ul>', body)
+        self.assertIn('<ol><li>first</li><li>second</li></ol>', body)
+        self.assertIn('<blockquote><p><strong>Tip:</strong> wait.</p></blockquote>', body)
+        self.assertNotIn('screenshot', body)
+        self.assertIn('&lt;b&gt;', bs.md_to_html('# T\n\n<b>x</b>\n', str)[2])
+        with self.assertRaises(bs.BuildError):
+            bs.md_to_html('no heading\n', str)
+
+    def test_manual_rejects_unknown_links(self):
+        link = bs.manual_link('en', 'scenes', ['index', 'scenes', 'editing'])
+        self.assertEqual(link('editing.md'), '../editing/index.html')
+        self.assertEqual(link('index.md'), '../index.html')
+        self.assertEqual(link('editing.md#undo'), '../editing/index.html#undo')
+        for bad in ('missing.md', '../other.md', 'file.txt', '../../../x.md'):
+            with self.assertRaises(bs.BuildError, msg=bad):
+                link(bad)
+
+    def test_privacy_page_website_part(self):
+        for loc in bs.LOCALES:
+            page = read(self.out, loc, 'privacy', 'index.html')
+            for url in bs.OUTSIDE_LINKS.values():
+                self.assertIn(f'href="{url}"', page, loc)
+            text = bs.visible_text(page)
+            self.assertIn('GitHub Pages', text, loc)
+            self.assertIn('Cloudflare', text, loc)
+        self.assertNotIn('Email Routing', bs.visible_text(read(self.plain, 'en', 'privacy', 'index.html')))
+        self.assertIn('Email Routing', bs.visible_text(read(self.out, 'en', 'privacy', 'index.html')))
+
+    def test_outside_link_must_be_known(self):
+        strings = dict(self.strings)
+        strings['pr.webHosts'] = dict(strings['pr.webHosts'], en='See [[this|somewhere]].')
+        with self.assertRaisesRegex(bs.BuildError, "unknown link 'somewhere'"):
+            bs.Renderer(strings, EMAIL, '').html_text('pr.webHosts', 'en')
+        self.assertNotIn('[[', bs.Renderer(self.strings, EMAIL, '').plain('pr.webHosts', 'en'))
 
 
 if __name__ == '__main__':

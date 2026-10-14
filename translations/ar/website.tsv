@@ -105,3 +105,16 @@ pr.notTitle	ما ليس Amalino
 pr.notBody	يساعد Amalino الطفل على التواصل. وهو لا يشخّص أي حالة ولا يراقبها ولا يعالجها.
 pr.contactTitle	أسئلة
 pr.contact	إن كان لديك سؤال عن الخصوصية، فراسلني على {email}.
+nav.manual	الدليل
+nav.manualEn	الدليل (بالإنجليزية)
+man.suffix	دليل Amalino
+man.edit	عدّل هذه الصفحة على GitHub
+man.navLabel	صفحات الدليل
+man.contents	المحتويات
+man.prev	السابق
+man.next	التالي
+pr.webTitle	على هذا الموقع
+pr.webNoCookies	لا يضع هذا الموقع ملفات تعريف الارتباط (cookies) ولا يستخدم أي نصوص برمجية للتحليلات أو التتبع. إذا اخترت لغة، يتذكرها متصفحك على جهازك فقط.
+pr.webHosts	الموقع مستضاف على GitHub Pages ويصل إليك عبر Cloudflare. لإيصال الصفحات وحمايتها، تعالج هاتان الخدمتان عنوان الإنترنت (IP) لجهازك. راجع [[بيان الخصوصية لدى GitHub|github-privacy]] و[[سياسة الخصوصية لدى Cloudflare|cloudflare-privacy]].
+pr.webStats	لا أرى إلا العدد الإجمالي للزيارات في إحصاءات Cloudflare، ولا أعرف أبدًا من زار الموقع.
+pr.webEmail	تصلني الرسائل المرسلة إلى {email} عبر Cloudflare Email Routing.
