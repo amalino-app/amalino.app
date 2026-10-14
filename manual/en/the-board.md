@@ -49,9 +49,9 @@ That's why:
 
 ## The lock
 
-The lock at the top right opens the grown-up controls. Hold it for 3 seconds, then answer a short sum (or enter your PIN, if you set one). A quick tap does nothing, so the child can't open it by accident.
+The lock at the top right opens the grown-up controls. Hold it for 3 seconds, then answer a short sum on the number keys (or enter your PIN, if you set one). A quick tap does nothing, so the child can't open it by accident.
 
-To keep the child inside the app, see **Keep the child in the app** in [Settings](settings.md).
+To keep the child inside the app, see **Lock and keep in the app** in [Settings](settings.md).
 
 ## Warnings on the board
 

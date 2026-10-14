@@ -43,6 +43,6 @@ Show grandparents, babysitters and friends how the child uses the app; a two-min
 
 **Why so few pictures of things?** About 25 words make up most of a toddler's talk, and about 200 core words cover most everyday speech. Keeping them in fixed places builds the child's motor memory.
 
-You'll find these answers, with the research, under **Why this helps** in the grown-up controls.
+You'll find these answers, with the research, under **Daily coaching → Why this helps** in the grown-up controls.
 
 Next: [Privacy](privacy.md).

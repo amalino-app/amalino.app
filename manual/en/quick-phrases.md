@@ -46,9 +46,9 @@ The main board keeps one place free for Favourites too, marked "Kept free for �
 
 On small phones, the ★ button may show the star without the word. It does the same thing.
 
-## Hiding the phrase row
+## Hiding the family phrases
 
-If the child is distracted by the row, you can turn it off in **Settings → Display, hearing and sensory → Show quick phrases**. Think twice: stop and help me are often the most important words a child has.
+If the child is distracted by the row, turn off **Show your phrases and More** in **Quick phrases**. Your two phrases and **More** disappear, but **stop** and **help me** always stay on the board, in the same places: they're often the most important words a child has. **★ Favourites** stays too.
 
 > **Tip:** Model "stop" and "help me" in calm moments too, not only when things go wrong.
 

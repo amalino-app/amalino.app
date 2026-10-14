@@ -47,7 +47,7 @@ The buttons at the top of the scene editor:
 
 On small screens these buttons wrap onto two or three rows.
 
-If **AI helpers** are on, the camera menu also offers **Suggest hotspots**: Amalino looks at the photo on the device and proposes areas for you to accept. On Android this uses Google ML Kit on the device; the photo never leaves it.
+The camera menu also offers **Suggest hotspots**: Amalino looks at the photo on the device and proposes areas for you to accept. On Android this uses Google ML Kit on the device; the photo never leaves it.
 
 Tap **Done** in the top bar when you've finished.
 

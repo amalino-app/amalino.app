@@ -1,4 +1,4 @@
-<!-- description: How Amalino organises words: core words in fixed places, folders, board sizes, vocabulary levels, and revealing hidden words over time. -->
+<!-- description: How Amalino organises words: core words in fixed places, folders, board sizes, vocabulary levels, and showing hidden words over time. -->
 # Words and folders
 
 Amalino starts with a full vocabulary in six languages: about 2,600 words. Not all of them are shown at once. This page explains how the words are organised and how to show more as the child grows.
@@ -8,6 +8,8 @@ Amalino starts with a full vocabulary in six languages: about 2,600 words. Not a
 The **main board** holds the core words: small, everyday words like "I", "want", "more", "go", "not", "help" and "like". A few hundred core words make up most of what people say every day, so the child can say a lot with them.
 
 **Folders** hold the rest: food, places, people, feelings, toys and more. A folder button has a folded corner and opens a page of related words.
+
+After the child taps a word in a folder, Amalino goes back to where they came from, ready for the next word: "I want", then **Food**, "apple", and the main words are there again for "please". For folders where the child picks several words in a row, like colours, turn off **Go back after a word** for that folder (see [Editing and moving buttons](editing.md)). **Favourites** starts with it off.
 
 ## Board size
 
@@ -28,36 +30,28 @@ Every word has its own place, and it keeps it. When a word is hidden, its place 
 
 ## Vocabulary level
 
-**Settings → Display, hearing and sensory → Vocabulary level** decides how many words appear in the folders:
+**Settings → Board layout → Vocabulary level** decides how many words appear in the folders:
 
 - **Level 1**: about 400 words, core words and first words in folders
 - **Level 2**: about 1,500 words, with more folders
 - **Level 3**: all words (about 2,600)
 
-A level only shows or hides words in folders. Core words on the main board follow **Reveal words** (below).
+A level only shows or hides words in folders. Words on the main board are shown one by one (below).
 
-## Showing, dimming and hiding words
+## Showing and hiding words
 
-Each button can be:
+Each word is either **shown** to the child or **hidden**. A hidden word's place looks empty to the child, and nothing else moves.
 
-- **Visible**: shown normally.
-- **Dimmed**: shown faintly. It still works. Useful for words you're starting to model.
-- **Hidden**: its place looks empty to the child.
+To see and change them, open the grown-up controls and choose **Edit this board**. Hidden words appear in their places with a dark veil and a crossed-out eye. Tap one, and in its editor turn on **Shown to the child**, then tap **Done**. This works the same inside folders.
 
-To change many words at once, open the grown-up controls and choose **Reveal words**. It shows the current board with a count of visible, dimmed and hidden words. Tap words to select them, then tap **Visible**, **Dimmed** or **Hidden**.
-
-**Suggested next words** offers a few words to show next; tap **Reveal** to show them all.
-
-To change one word, edit its button and choose **Shown to the child**. See [Editing and moving buttons](editing.md).
-
-> **Tip:** Reveal a new word only after you've modelled it many times. In **Modelling mode** you see the hidden words too, dimmed, so you can keep modelling them.
+> **Tip:** Show a new word only after you've modelled it many times. Keep modelling hidden words too: say them and point to their place, so the child already knows where they'll appear.
 
 ## Finding a word
 
-Can't remember where a word is? In the grown-up controls, choose **Show me where** and type the word. Amalino shows the path to it, button by button, so you can tap it yourself while you talk.
+Can't remember where a word is? In **Modelling mode**, tap **Show me where** and type the word. Amalino shows the path to it, button by button, so you can tap it yourself while you talk.
 
 ## Your own words
 
-You can add words, change pictures, record your own voice for a word, and make new folders. See [Editing and moving buttons](editing.md).
+You can add words, change pictures, record your own voice for a word, and make new folders or add the built-in ones. See [Editing and moving buttons](editing.md).
 
 Next: [Quick phrases and More](quick-phrases.md).

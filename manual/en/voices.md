@@ -15,7 +15,7 @@ Tap a voice to hear it, then tap **Use**.
 
 ## One voice or one per language
 
-Each language has its own voice. If a voice speaks several of the child's languages, setup offers **Use … for all languages** to keep one voice for everything. Otherwise, sentences that mix languages switch voice.
+Each language has its own voice. If a voice speaks several of the child's languages, setup and **Speech and voices** offer **Use … for all languages** to keep one voice for everything. Otherwise, sentences that mix languages switch voice.
 
 ## Downloads
 
@@ -27,13 +27,13 @@ To free space, remove a voice from the device; the words use the device's voice 
 
 - **Speaking speed**: slower or faster.
 - **Voice age (natural voices)**: **Adult**, **Older child** or **Young child**, with a **Strength** slider. It raises the pitch and changes the voice's character. It will sound like a small adult more than a real child; try what the child likes.
-- **Pitch**: for the device's own voices.
+- **Pitch**: only for the device's own voices, so it appears only while one of them is speaking. Natural voices use **Voice age** instead.
 - **Volume**.
 - **Lower other sound when your child speaks**: music and other apps get quieter **While speaking** or **While Amalino is open**, so the words are easier to hear.
 
 ## Saved speech
 
-To speak at once, Amalino prepares the board's words with the chosen voices and keeps them on the device. This happens in the background while the board isn't in use. **Saved speech** shows the progress and the space used. If words ever sound wrong, **Rebuild** prepares them again.
+You'll find this under **Advanced** at the end of **Speech and voices**. To speak at once, Amalino prepares the board's words with the chosen voices and keeps them on the device. This happens in the background while the board isn't in use. **Saved speech** shows the progress and the space used. If words ever sound wrong, **Rebuild** prepares them again.
 
 ## The child's name
 

@@ -33,7 +33,7 @@ They are made on the device; nothing is sent anywhere.
 
 Some families turn suggestions off while a child practises spelling: **Settings → Keyboard → Word suggestions**.
 
-If **Sentence from first letters** is on in **AI helpers**, typing first letters like "iwgp" can offer "I want to go to the park" in a free slot. The child picks it or ignores it.
+If **Sentence from first letters** is on (in **Settings → Keyboard**), typing first letters like "iwgp" can offer "I want to go to the park" in a free slot. The child picks it or ignores it.
 
 ## Letter order
 

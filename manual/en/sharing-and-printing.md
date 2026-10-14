@@ -11,6 +11,8 @@ Open the grown-up controls and choose **History and backups**.
 - **Back up now** makes one straight away.
 - **Export backup** makes a password-protected file for a new device or a reinstall. Choose a password you'll remember, and keep the file somewhere other than the device: a computer, a cloud drive or an email to yourself.
 
+If there's no copy outside the device, or the last one is more than a month old, the grown-up controls show a gentle reminder with **Make a copy now** (never in the first two weeks of a new profile). **Not now** hides it for two weeks.
+
 ## Moving to a new device
 
 1. On the old device: **Settings → History and backups → Export backup**, and choose a password.
@@ -22,7 +24,7 @@ To restore on a device that's already set up, use **Restore from a file** in **H
 
 ## Sharing boards with other AAC apps
 
-**Share boards (Open Board Format)** moves boards to and from other AAC apps that use the open board format:
+**Share boards (Open Board Format)**, in the **Data** group of the grown-up controls, moves boards to and from other AAC apps that use the open board format:
 
 - **Export all boards (.obz)** or **Export this board**.
 - **Import boards (.obz / .obf)**, for example from Cboard. Imported boards are added as folders. Amalino tells you how many buttons it linked to words it knows.

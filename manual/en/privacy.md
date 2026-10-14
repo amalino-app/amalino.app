@@ -6,7 +6,7 @@ Amalino is built so the child's words stay with the child. There are no ads, no 
 ## What stays on the device
 
 - The child's boards, words, photos and recordings.
-- What the child says, and the usage logs behind **Progress** and the **Weekly summary**.
+- What the child says, and the usage logs behind **Progress** and its **This week** summary.
 - The child's name.
 
 They're stored only on the device, encrypted. The daily automatic backup stays on the device too. A backup you export is a file protected by your password; where you keep it is up to you.

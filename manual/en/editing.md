@@ -5,20 +5,20 @@ Every family's words are different. You can change any word, picture or voice, a
 
 ## Opening the grown-up controls
 
-At the top right of the board, **hold the lock for 3 seconds**, then answer the short sum (or enter your PIN). The grown-up controls open. They lock again by themselves after 5 minutes, or straight away when you tap **Lock**.
+At the top right of the board, **hold the lock for 3 seconds**, then answer the short sum (or enter your PIN) on the number keys that appear. The grown-up controls open. They lock again by themselves after 5 minutes, or straight away when you tap **Lock**.
 
-You can change the hold time, the PIN and the automatic lock under **Edit lock**. See [Settings](settings.md).
+You can change the hold time, the PIN and the automatic lock under **Lock and keep in the app**. See [Settings](settings.md).
 
 ## Editing the board
 
 Choose **Edit this board**. The board shows a line at the top: "Editing: tap a cell to change it. Words never move by themselves." The top bar now has **Undo**, **Redo** and **Done**.
 
 - Tap a button to edit it.
-- Tap an empty cell to **Add a word** there.
+- Tap an empty cell and choose **Add a word** or **Add a folder**.
 - Open folders and edit their buttons the same way.
 - Tap **Done** when you've finished.
 
-Changes are saved as you make them.
+Hidden words show in their places with a dark veil and a crossed-out eye, so you always see the whole board while editing.
 
 <!-- screenshot: the button editor -->
 
@@ -30,17 +30,24 @@ Changes are saved as you make them.
 - **Voice**: **Record voice** records the word in your own voice; **Listen** plays it back; **Remove recording** goes back to the app's voice.
 - **Spoken as**: if the voice says a word wrongly, type how it sounds, for example "Shawn" for Sean.
 - **Use my recording in sentences too**: normally your recording plays when the button is tapped by itself, and the app's voice says the word inside sentences. Turn this on for sounds, songs or words the voice can't say.
-- **Shown to the child**: **Visible**, **Dimmed** or **Hidden**. See [Words and folders](words-and-folders.md).
+- **Shown to the child**: on, the child sees and uses the word; off, its place looks empty to the child and nothing moves. See [Words and folders](words-and-folders.md).
 - **Button style**: the **Word-type colour**, **Colour as border only**, **Show the word**, **Label above the picture** and **Text size**. **Use this style for the whole page** applies it to every button on the page.
 - **Word type**: decides the button's colour (for example, actions are green and describing words blue).
 
-Tap the **close** button to finish. Your changes are already saved.
+For a **new** word or folder, tap **Add** at the bottom to put it on the board. It stays off until the button has a name or a picture. The **✕** cancels: nothing is added, and a photo or recording you made for it is thrown away.
+
+When you edit an **existing** button, your changes apply as you make them; tap **Done** (or the **✕**) to close.
 
 ## Folders
 
-- **Make it open a folder**: turns the button into a folder button. Choose an existing folder or **New folder**.
+To add a folder, tap an empty cell in edit mode and choose **Add a folder**. **Which folder?** lists the child's folders with their pictures, including the built-in ones (Food, Feelings, Places…), and **New folder** at the top. Choose one, check the name and picture, and tap **Add**.
+
+A folder button's editor also has:
+
+- **Make it open a folder**: turns a word button into a folder button. Choose a folder or **New folder**.
 - **Change folder**: points a folder button at a different folder.
 - **Open this folder**: closes the editor and opens the folder, so you can edit what's inside.
+- **Go back after a word**: on, the child returns to where they came from after tapping a word in this folder, ready for the next word. Turn it off for folders where the child picks several words in a row. It applies to the folder wherever it's opened from. **Favourites** starts with it off.
 
 ## Moving a button
 
