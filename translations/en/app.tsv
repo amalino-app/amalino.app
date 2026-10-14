@@ -291,14 +291,10 @@ aiCloudSub	Better drafts for scenes, boards and translations. Needs sync and you
 aiCloudTools	Use cloud helpers
 aiContext	Suggest pages for the moment
 aiContextSub	Lunch at noon, the park when you are there. A card the child can ignore.
-aiHelpers	AI helpers
-aiHelpersSub	All off by default; the child always chooses
-aiKeyboard	Word predictions on the keyboard
-aiMaster	AI helpers on
-aiMasterSub	Off switches every AI feature off, on this device and in the cloud.
+aiHelpers	Suggestions
+aiHelpersSub	Help that suggests words. It never speaks for your child.
 aiNextWord	Highlight likely next words
 aiNextWordSub	Gently outlines 2–3 buttons. Buttons never move. Learns only on this device.
-aiOnDevice	On this device
 aiPhrase	Sentence from first letters
 aiPhraseSub	Type "iwgp" to be offered "I want to go to the park". The child picks or ignores.
 allTips	Coming up
@@ -510,7 +506,6 @@ addPlaceRuleSub	Saves where you are now (stays on this device)
 addTimeRule	Suggest a page at a time of day
 calendarKeyword	Word in the event title (e.g. doctor)
 contextBoards	Pages for the moment
-contextOff	Turn on "Suggest pages for the moment" in AI helpers to use these rules.
 noLocation	Location is not available
 tip.context	A suggestion is only a doorway: model the words on the page when it opens.
 useCalendar	Use the calendar
@@ -572,7 +567,6 @@ gazeCalibrated	Calibrated. Calibrate again if the device or the seat moved.
 gazeCalibrateHint	Watch the animal!
 gazeCalibrationPoor	The camera could not follow the eyes well enough. Try more light, a steadier device, or head tracking instead.
 pointerHelp	Works with any device that moves the pointer, e.g. Tobii or Windows Eye Control (with the Windows app), or a head mouse. Clicks and taps still work.
-aiOff	AI helpers are switched off (Settings > AI helpers).
 draftMissing	Draft missing words (to review)
 draftedCount	{n} drafts added for review
 noFreeCell	There is no empty cell in Favourites or on the main board. Hide or remove a word there first: words never move to make room.
@@ -995,3 +989,12 @@ kbNumbers	Numbers and marks
 kbLetters	Letters
 tip.keyboard	Model typing too: type a word slowly while you say it, then tap Speak.
 gridLongWords	Some long words won't fit in full at this size in portrait. Landscape shows them all.
+advanced	Advanced
+diagnostics	Diagnostics
+boardLayout	Board layout
+boardLayoutSub	Grid size, orientation, vocabulary level, space between buttons
+boardLayoutNote	These change where words are. Your child finds words by their place, so change them rarely.
+lockAndKeep	Lock and keep in the app
+modellingShowMeWhere	Its bar has "Show me where" to find any word.
+searchSettings	Search settings
+searchNoResults	Nothing found for "{q}".

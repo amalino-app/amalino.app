@@ -291,14 +291,10 @@ aiCloudSub	Bedre udkast til scener, tavler og oversættelser. Kræver synkronise
 aiCloudTools	Brug cloud-hjælpere
 aiContext	Foreslå sider til situationen
 aiContextSub	Frokost ved middagstid, parken når I er der. Et kort, barnet kan ignorere.
-aiHelpers	AI-hjælpere
-aiHelpersSub	Alle slået fra fra start; barnet vælger altid
-aiKeyboard	Ordforslag på tastaturet
-aiMaster	AI-hjælpere til
-aiMasterSub	Fra slår alle AI-funktioner fra, på enheden og i skyen.
+aiHelpers	Forslag
+aiHelpersSub	Hjælp, der foreslår ord. Den taler aldrig for dit barn.
 aiNextWord	Fremhæv sandsynlige næste ord
 aiNextWordSub	Markerer blidt 2–3 knapper. Knapper flytter sig aldrig. Lærer kun på denne enhed.
-aiOnDevice	På denne enhed
 aiPhrase	Sætning fra forbogstaver
 aiPhraseSub	Skriv "jvgt" for at få tilbudt "jeg vil gå til…". Barnet vælger eller ignorerer.
 allTips	Kommer snart
@@ -510,7 +506,6 @@ addPlaceRuleSub	Gemmer hvor du er nu (bliver på enheden)
 addTimeRule	Foreslå en side på et tidspunkt
 calendarKeyword	Ord i begivenhedens titel (fx læge)
 contextBoards	Sider til situationen
-contextOff	Slå "Foreslå sider til situationen" til under AI-hjælpere for at bruge reglerne.
 noLocation	Placering er ikke tilgængelig
 tip.context	Et forslag er kun en dør: vis ordene på siden, når den åbner.
 useCalendar	Brug kalenderen
@@ -572,7 +567,6 @@ gazeCalibrated	Kalibreret. Kalibrér igen, hvis enheden eller stolen er flyttet.
 gazeCalibrateHint	Kig på dyret!
 gazeCalibrationPoor	Kameraet kunne ikke følge øjnene godt nok. Prøv mere lys, en mere stabil enhed eller hovedstyring i stedet.
 pointerHelp	Virker med enhver enhed, der flytter markøren, fx Tobii eller Windows Øjenstyring (med Windows-appen) eller en hovedmus. Klik og tryk virker stadig.
-aiOff	AI-hjælpere er slået fra (Indstillinger > AI-hjælpere).
 draftMissing	Lav udkast til manglende ord (til gennemsyn)
 draftedCount	{n} udkast tilføjet til gennemsyn
 noFreeCell	Der er ingen tom plads i Favoritter eller på hovedtavlen. Skjul eller fjern først et ord der: ord flyttes aldrig for at give plads.
@@ -995,3 +989,12 @@ kbNumbers	Tal og tegn
 kbLetters	Bogstaver
 tip.keyboard	Vis også skrivning: skriv et ord langsomt, mens du siger det, og tryk så på Sig det.
 gridLongWords	Nogle lange ord vises ikke helt i denne størrelse i stående retning. Liggende viser dem alle.
+advanced	Avanceret
+diagnostics	Fejlfinding
+boardLayout	Tavlens opbygning
+boardLayoutSub	Gitterstørrelse, retning, ordforrådsniveau, afstand mellem knapper
+boardLayoutNote	Disse ændrer, hvor ordene står. Barnet finder ordene ud fra deres plads, så skift dem sjældent.
+lockAndKeep	Lås og hold barnet i appen
+modellingShowMeWhere	Dens bjælke har »Vis mig hvor«, som finder ethvert ord.
+searchSettings	Søg i indstillinger
+searchNoResults	Intet fundet for »{q}«.

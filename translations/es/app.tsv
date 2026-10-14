@@ -291,14 +291,10 @@ aiCloudSub	Mejores borradores de escenas, tableros y traducciones. Requiere sinc
 aiCloudTools	Usar ayudas en la nube
 aiContext	Sugerir páginas según el momento
 aiContextSub	Comida a mediodía, el parque cuando estáis allí. Una tarjeta que puede ignorar.
-aiHelpers	Ayudas de IA
-aiHelpersSub	Todo desactivado al principio; el niño siempre elige
-aiKeyboard	Predicción de palabras en el teclado
-aiMaster	Ayudas de IA activadas
-aiMasterSub	Desactivar apaga todas las funciones de IA, en el dispositivo y en la nube.
+aiHelpers	Sugerencias
+aiHelpersSub	Ayudas que sugieren palabras. Nunca hablan por tu hijo.
 aiNextWord	Resaltar posibles siguientes palabras
 aiNextWordSub	Resalta suavemente 2–3 botones. Los botones nunca se mueven. Aprende solo en este dispositivo.
-aiOnDevice	En este dispositivo
 aiPhrase	Frase con las iniciales
 aiPhraseSub	Escribe las iniciales y se ofrecen frases enteras. El niño elige o ignora.
 allTips	Próximamente
@@ -510,7 +506,6 @@ addPlaceRuleSub	Guarda dónde estás ahora (se queda en el dispositivo)
 addTimeRule	Sugerir una página a una hora
 calendarKeyword	Palabra del título (p. ej. médico)
 contextBoards	Páginas según el momento
-contextOff	Activa "Sugerir páginas según el momento" en Ayudas de IA.
 noLocation	Ubicación no disponible
 tip.context	Una sugerencia es solo una puerta: modela las palabras cuando se abra.
 useCalendar	Usar el calendario
@@ -572,7 +567,6 @@ gazeCalibrated	Calibrado. Vuelve a calibrar si se movió el dispositivo o el asi
 gazeCalibrateHint	¡Mira al animal!
 gazeCalibrationPoor	La cámara no pudo seguir bien los ojos. Prueba con más luz, un dispositivo más estable o el control con la cabeza.
 pointerHelp	Funciona con cualquier dispositivo que mueva el puntero, como Tobii o el Control ocular de Windows (con la app de Windows) o un ratón de cabeza. Los clics y toques siguen funcionando.
-aiOff	Los asistentes de IA están desactivados (Ajustes > Asistentes de IA).
 draftMissing	Borradores de palabras que faltan (para revisar)
 draftedCount	{n} borradores añadidos para revisar
 noFreeCell	No hay ninguna celda vacía en Favoritos ni en el tablero principal. Oculta o quita antes una palabra allí: las palabras nunca se mueven para hacer sitio.
@@ -995,3 +989,12 @@ kbNumbers	Números y signos
 kbLetters	Letras
 tip.keyboard	Muestra también cómo se escribe: escribe una palabra despacio mientras la dices y luego toca Decir.
 gridLongWords	Algunas palabras largas no caben enteras con este tamaño en vertical. En horizontal se ven todas.
+advanced	Avanzado
+diagnostics	Diagnóstico
+boardLayout	Distribución del tablero
+boardLayoutSub	Tamaño de la cuadrícula, orientación, nivel de vocabulario, espacio entre botones
+boardLayoutNote	Estos ajustes cambian dónde están las palabras. Tu hijo encuentra las palabras por su lugar, así que cámbialos pocas veces.
+lockAndKeep	Bloqueo y mantener en la app
+modellingShowMeWhere	En su barra está «Muéstrame dónde», para encontrar cualquier palabra.
+searchSettings	Buscar en los ajustes
+searchNoResults	No se ha encontrado nada para «{q}».
