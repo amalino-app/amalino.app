@@ -32,7 +32,7 @@ notPractised	not practiced
 logModelTaps	Log adult modeling separately
 modellingMode	Modeling mode
 modellingOn	Modeling: you are showing, the child is watching
-tip.reveal	Reveal a new word only after you have modeled it many times. Keep modeling hidden words too — they are dimmed for you.
+tip.reveal	Show a new word only after you've modeled it many times. In edit mode hidden words have a crossed-out eye — keep modeling them too.
 modelTaps	Adult modeling taps
 tip.access	Try one access method for at least two weeks with lots of modeling before judging it.
 tip.ai	Suggestions should never replace modeling. Keep modeling words yourself even with highlights on.
@@ -40,3 +40,4 @@ wotwSub	Up to 3 words the adults model this week (highlighted only in modeling m
 sum.model	Adults modeled on this device {n} times.
 sum.next	Next week, try modeling "{word}" in new combinations.
 dailyTipSub	A short modeling idea each day. Asks for notifications only when you turn it on.
+kbSuggestionsSub	You can turn this off while your child practices spelling, so they work out each word themselves.

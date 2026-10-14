@@ -52,7 +52,6 @@ deleteHotspotAsk	Delete this hotspot? Its word and recording go with it.
 deleteQuickPhraseAsk	Delete the quick phrase "{text}"?
 deleteCoreWarning	This is a core word. Hiding keeps its place for later; deleting leaves an empty cell.
 deleteLast	Delete last word
-dimmed	Dimmed
 displaySensory	Display, hearing and sensory
 done	Done
 draft	draft
@@ -79,7 +78,6 @@ followSystem	Follow this device's setting
 gridSize	Grid size
 gridSizeCurrent	{n} buttons
 gridSuggestion	Suggested: {n} buttons. All core words are included; less frequent ones start hidden and keep their place.
-hidden	Hidden
 hideInstead	Hide instead
 historyBackups	History and backups
 historyBackupsSub	Undo any change; restore a backup
@@ -130,6 +128,10 @@ mythBusterSub	Short answers to common worries, with the research
 mythIntro	Parents often worry about AAC (tools that help children communicate, like this app). Here is what the research says.
 needsReviewCount	{n} words need review
 newFolder	New folder
+addFolder	Add a folder
+pickFolderTitle	Which folder?
+folderGoBack	Go back after a word
+folderGoBackSub	After a word in this folder, the child is taken back to where they came from, ready for the next word. Turn it off to pick several words here in a row.
 newPin	New PIN (4–8 digits)
 next	Next
 noMinimumAge	Any age is fine. Even toddlers can start.
@@ -175,7 +177,7 @@ removeRecording	Remove recording
 removeRecordingAsk	Remove the recording of this word? The voice says it instead.
 repeatIgnore	Ignore repeated taps within
 repeatPassword	Repeat password
-replanBody	Changing the grid size moves words to new places. The child's motor memory has to be relearned. Only do this with your SLP.
+replanBody	Changing the grid size moves words to new places, and your child has to learn where they are all over again. If your child has a speech therapist, talk it through with them first.
 replanTitle	Re-plan motor layout?
 replanWarning	Words keep their region, but positions change. A backup is made first.
 restore	Restore
@@ -183,11 +185,6 @@ restoreBody	All boards, recordings and logs on this device will be replaced. A b
 restoreHere	Go back to here
 restoreQ	Restore this backup?
 restored	Backup restored
-reveal	Reveal
-revealCounts	Visible {visible} · dimmed {dimmed} · hidden {hidden}
-revealNextSet	Suggested next words
-revealWords	Reveal words
-revealWordsSub	Show more words as the child learns; nothing moves
 save	Save
 searchSymbols	Search pictures (e.g. sad, dog)
 sectionBoards	Boards and words
@@ -222,7 +219,7 @@ theme.dark	Dark
 theme.highContrast	High contrast
 theme.standard	Standard
 theme.teen	Teen (no childish look)
-tip.about	Show other adults the app in person: a 2-minute demo at school helps more than any leaflet.
+tip.about	Show the app to the other adults in your child's life — grandparents, nursery, school. Two minutes in person help more than any leaflet.
 tip.display	Change one thing at a time and watch the child for a few days before changing more.
 tip.editor	When you add a word, use it on this device yourself at least three times today.
 tip.history	Mistakes are fine. Anything you change can be undone here.
@@ -234,7 +231,7 @@ tip.myth	Share this page with grandparents and teachers, so every adult uses the
 tip.print	Keep a laminated core board in the bath and in the car; model on paper exactly like on this device.
 tip.profiles	Each child gets their own boards and words; set them up with the adults who know the child best.
 tip.quick	Model "stop" and "help me" in calm moments too, not only when things go wrong.
-tip.reveal	Reveal a new word only after you have modelled it many times. Keep modelling hidden words too — they are dimmed for you.
+tip.reveal	Show a new word only after you've modelled it many times. In edit mode hidden words have a crossed-out eye — keep modelling them too.
 tip.speech	Let the child hear a voice that fits them. Ask the child which voice they like.
 tip.touch	Watch how the child taps for a day. Increase hold time only if many taps are accidental.
 translationReview	Translation review
@@ -247,7 +244,6 @@ typeAWord	Type a word
 typeToSearch	Type to search
 undo	Undo
 visibility	Shown to the child
-visible	Visible
 voice	Voice
 voiceFor	Voice for {language}
 volume	Volume
@@ -352,8 +348,8 @@ importObz	Import boards (.obz / .obf)
 importObzSub	From Cboard and other apps; added as folders
 imported	Imported. {matched} of {total} buttons were linked to known words.
 invite.parent	Invite another parent
-invite.slp	Invite the SLP
-invite.teacher	Invite a teacher
+invite.slp	Invite your child's speech therapist
+invite.teacher	Invite your child's teacher
 inviteCode	Invitation code
 join	Join
 keyboard	Keyboard
@@ -430,7 +426,7 @@ syncState.needsKey	Signed in — set up the family group
 syncState.off	Sync is off (everything stays on this device)
 syncState.ready	Sync is on
 syncState.signedOut	Sign in to turn on sync
-syncSub	Same boards on home, school and phone; remote editing
+syncSub	The same boards on every device — at home, at school, on a phone — and you can edit them from anywhere.
 syncTitle	Sync and sharing
 timeOfDay	Time of day
 tip.access	Try one access method for at least two weeks with lots of modelling before judging it.
@@ -489,7 +485,7 @@ goals	Goals
 goalsSub	Small steps you're working on, week by week
 met	Met
 newGoal	New goal
-noGoals	No goals yet. An SLP can add one here.
+noGoals	No goals yet. Add one here, or ask your child's speech therapist to add one.
 share	Share
 shareExamples	Share example sentences
 shareExamplesSub	Off unless you pick sentences here (up to 5). Nothing else the child said is shared.
@@ -544,7 +540,7 @@ libraryWithdraw	Withdraw
 libraryWithdrawAsk	Withdraw "{title}" from the library? Others can no longer find or add it.
 libraryEmpty	No boards here yet.
 librarySignIn	Sign in under Sync to share or report boards.
-slpReviewed	SLP reviewed
+slpReviewed	Checked by a speech therapist
 libraryStatus	Status
 libraryStatus.pending	waiting for review
 libraryStatus.approved	shared
@@ -774,6 +770,7 @@ dismiss	Dismiss
 earlyReminder	{name} has used the simple board for 2 weeks. Consider showing more words.
 earlyReminder.anon	Your child has used the simple board for 2 weeks. Consider showing more words.
 showMoreWords	Show more words
+hiddenWordsHint	Words with a crossed-out eye are hidden. Tap one to show it.
 notNow	Not now
 spokenAs	Spoken as
 hearIt	Hear it
@@ -981,7 +978,7 @@ check.quickRow	Choose the two phrases {name} needs most
 check.quickRow.anon	Choose the two phrases your child needs most
 kbSettings	Keyboard
 kbSuggestions	Word suggestions
-kbSuggestionsSub	Some therapists turn this off while a child practises spelling.
+kbSuggestionsSub	You can turn this off while your child practises spelling, so they work out each word themselves.
 kbLearn	Learn from what {name} types
 kbLearn.anon	Learn from what your child types
 kbLayout	Layout

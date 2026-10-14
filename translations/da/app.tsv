@@ -52,7 +52,6 @@ deleteHotspotAsk	Slet dette hotspot? Ordet og optagelsen forsvinder med det.
 deleteQuickPhraseAsk	Slet den hurtige sætning »{text}«?
 deleteCoreWarning	Dette er et kerneord. Skjul beholder pladsen til senere; slet efterlader en tom plads.
 deleteLast	Slet sidste ord
-dimmed	Dæmpet
 displaySensory	Visning, hørelse og sanser
 done	Færdig
 draft	kladde
@@ -79,7 +78,6 @@ followSystem	Følg enhedens indstilling
 gridSize	Gitterstørrelse
 gridSizeCurrent	{n} knapper
 gridSuggestion	Forslag: {n} knapper. Alle kerneord er med; de mindre hyppige er skjult fra start og beholder deres plads.
-hidden	Skjult
 hideInstead	Skjul i stedet
 historyBackups	Historik og sikkerhedskopier
 historyBackupsSub	Fortryd enhver ændring; gendan en sikkerhedskopi
@@ -130,6 +128,10 @@ mythBusterSub	Korte svar på almindelige bekymringer, med forskningen
 mythIntro	Forældre er ofte bekymrede for AAC (hjælpemidler, der hjælper børn med at kommunikere, som denne app). Her er, hvad forskningen siger.
 needsReviewCount	{n} ord skal gennemgås
 newFolder	Ny mappe
+addFolder	Tilføj en mappe
+pickFolderTitle	Hvilken mappe?
+folderGoBack	Gå tilbage efter et ord
+folderGoBackSub	Efter et ord i mappen kommer barnet tilbage, hvor det kom fra, klar til næste ord. Slå det fra, så barnet kan vælge flere ord her i træk.
 newPin	Ny PIN (4–8 cifre)
 next	Næste
 noMinimumAge	Alle aldre er fine. Selv småbørn kan begynde.
@@ -175,7 +177,7 @@ removeRecording	Fjern optagelse
 removeRecordingAsk	Fjern optagelsen af dette ord? Stemmen siger det i stedet.
 repeatIgnore	Ignorér gentagne tryk inden for
 repeatPassword	Gentag adgangskode
-replanBody	Ændring af gitterstørrelsen flytter ord til nye steder. Barnets motoriske hukommelse skal læres igen. Gør det kun sammen med jeres talepædagog.
+replanBody	Når du ændrer gitterets størrelse, flytter ordene til nye pladser, og barnet skal lære dem forfra. Har barnet en talepædagog, så tal med talepædagogen først.
 replanTitle	Planlæg motorisk layout igen?
 replanWarning	Ord beholder deres område, men placeringen ændres. Der tages først en sikkerhedskopi.
 restore	Gendan
@@ -183,11 +185,6 @@ restoreBody	Alle tavler, optagelser og log på enheden erstattes. Der tages før
 restoreHere	Gå tilbage hertil
 restoreQ	Gendan denne sikkerhedskopi?
 restored	Sikkerhedskopi gendannet
-reveal	Vis
-revealCounts	Synlige {visible} · dæmpede {dimmed} · skjulte {hidden}
-revealNextSet	Foreslåede næste ord
-revealWords	Vis ord
-revealWordsSub	Vis flere ord efterhånden som barnet lærer; intet flytter sig
 save	Gem
 searchSymbols	Søg billeder (fx trist, hund)
 sectionBoards	Tavler og ord
@@ -222,7 +219,7 @@ theme.dark	Mørk
 theme.highContrast	Høj kontrast
 theme.standard	Standard
 theme.teen	Teenager (ikke barnligt)
-tip.about	Vis andre voksne appen personligt: en demo på 2 minutter i skolen hjælper mere end en folder.
+tip.about	Vis appen til de andre voksne omkring barnet – bedsteforældre, børnehave, skole. To minutter ansigt til ansigt hjælper mere end nogen folder.
 tip.display	Ændr én ting ad gangen og se barnet an i et par dage, før du ændrer mere.
 tip.editor	Når du tilføjer et ord, så brug det selv på enheden mindst tre gange i dag.
 tip.history	Fejl er helt i orden. Alt, du ændrer, kan fortrydes her.
@@ -234,7 +231,7 @@ tip.myth	Del denne side med bedsteforældre og lærere, så alle voksne bruger a
 tip.print	Hav en lamineret kernetavle i badet og i bilen; vis på papir præcis som på enheden.
 tip.profiles	Hvert barn får sine egne tavler og ord; opsæt dem sammen med de voksne, der kender barnet bedst.
 tip.quick	Vis "stop" og "hjælp mig" også i rolige stunder, ikke kun når noget går galt.
-tip.reveal	Vis først et nyt ord, når du har vist det mange gange. Bliv ved med at vise skjulte ord — de er dæmpede for dig.
+tip.reveal	Vis først et nyt ord for barnet, når du selv har vist det mange gange. I redigering har skjulte ord et overstreget øje – bliv ved med at vise dem også.
 tip.speech	Lad barnet høre en stemme, der passer til dem. Spørg barnet, hvilken stemme det kan lide.
 tip.touch	Se hvordan barnet trykker i en dag. Øg kun holdetiden, hvis mange tryk er utilsigtede.
 translationReview	Gennemgang af oversættelser
@@ -247,7 +244,6 @@ typeAWord	Skriv et ord
 typeToSearch	Skriv for at søge
 undo	Fortryd
 visibility	Vist for barnet
-visible	Synlig
 voice	Stemme
 voiceFor	Stemme til {language}
 volume	Lydstyrke
@@ -352,8 +348,8 @@ importObz	Importér tavler (.obz / .obf)
 importObzSub	Fra Cboard og andre apps; tilføjes som mapper
 imported	Importeret. {matched} af {total} knapper blev koblet til kendte ord.
 invite.parent	Invitér en anden forælder
-invite.slp	Invitér talepædagogen
-invite.teacher	Invitér en lærer
+invite.slp	Invitér barnets talepædagog
+invite.teacher	Invitér barnets lærer
 inviteCode	Invitationskode
 join	Deltag
 keyboard	Tastatur
@@ -430,7 +426,7 @@ syncState.needsKey	Logget ind — opsæt familiegruppen
 syncState.off	Synkronisering er slået fra (alt bliver på enheden)
 syncState.ready	Synkronisering er slået til
 syncState.signedOut	Log ind for at slå synkronisering til
-syncSub	Samme tavler hjemme, i skolen og på telefonen; fjernredigering
+syncSub	De samme tavler på alle enheder – derhjemme, i skolen og på telefonen – og du kan rette dem, hvor du end er.
 syncTitle	Synkronisering og deling
 timeOfDay	Tidspunkt på dagen
 tip.access	Prøv en adgangsmetode i mindst to uger med masser af modellering, før du vurderer den.
@@ -489,7 +485,7 @@ goals	Mål
 goalsSub	Små skridt, I øver jer på, uge for uge
 met	Nået
 newGoal	Nyt mål
-noGoals	Ingen mål endnu. En talepædagog kan tilføje et her.
+noGoals	Ingen mål endnu. Tilføj et her, eller bed barnets talepædagog om at gøre det.
 share	Del
 shareExamples	Del eksempelsætninger
 shareExamplesSub	Fra, medmindre du vælger sætninger her (op til 5). Intet andet, barnet sagde, deles.
@@ -544,7 +540,7 @@ libraryWithdraw	Træk tilbage
 libraryWithdrawAsk	Træk »{title}« tilbage fra biblioteket? Andre kan ikke længere finde eller tilføje den.
 libraryEmpty	Ingen tavler her endnu.
 librarySignIn	Log ind under Synkronisering for at dele eller anmelde tavler.
-slpReviewed	Tjekket af talepædagog
+slpReviewed	Tjekket af en talepædagog
 libraryStatus	Status
 libraryStatus.pending	afventer gennemsyn
 libraryStatus.approved	delt
@@ -774,6 +770,7 @@ dismiss	Afvis
 earlyReminder	{name} har brugt den enkle tavle i 2 uger. Overvej at vise flere ord.
 earlyReminder.anon	Dit barn har brugt den enkle tavle i 2 uger. Overvej at vise flere ord.
 showMoreWords	Vis flere ord
+hiddenWordsHint	Ord med et overstreget øje er skjult. Tryk på et af dem for at vise det.
 notNow	Ikke nu
 spokenAs	Udtales som
 hearIt	Hør det
@@ -981,7 +978,7 @@ check.quickRow	Vælg de to sætninger, {name} har mest brug for
 check.quickRow.anon	Vælg de to sætninger, dit barn har mest brug for
 kbSettings	Tastatur
 kbSuggestions	Ordforslag
-kbSuggestionsSub	Nogle terapeuter slår dette fra, mens et barn øver stavning.
+kbSuggestionsSub	Du kan slå det fra, mens barnet øver sig i at stave, så det selv finder ud af hvert ord.
 kbLearn	Lær af det, {name} skriver
 kbLearn.anon	Lær af det, dit barn skriver
 kbLayout	Layout

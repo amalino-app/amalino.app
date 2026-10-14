@@ -52,7 +52,6 @@ deleteHotspotAsk	¿Eliminar este punto? Se borran también su palabra y su graba
 deleteQuickPhraseAsk	¿Eliminar la frase rápida «{text}»?
 deleteCoreWarning	Es una palabra básica. Ocultarla conserva su sitio; eliminarla deja una casilla vacía.
 deleteLast	Borrar la última palabra
-dimmed	Atenuado
 displaySensory	Pantalla, audición y sensorial
 done	Hecho
 draft	borrador
@@ -79,7 +78,6 @@ followSystem	Según el ajuste del dispositivo
 gridSize	Tamaño de la cuadrícula
 gridSizeCurrent	{n} botones
 gridSuggestion	Sugerido: {n} botones. Están todas las palabras básicas; las menos frecuentes empiezan ocultas y mantienen su sitio.
-hidden	Oculto
 hideInstead	Ocultar en su lugar
 historyBackups	Historial y copias
 historyBackupsSub	Deshacer cambios; restaurar una copia
@@ -130,6 +128,10 @@ mythBusterSub	Respuestas breves a dudas frecuentes, con la investigación
 mythIntro	A menudo a las familias les preocupa la CAA (herramientas que ayudan a los niños a comunicarse, como esta app). Esto dice la investigación.
 needsReviewCount	{n} palabras por revisar
 newFolder	Carpeta nueva
+addFolder	Añadir una carpeta
+pickFolderTitle	¿Qué carpeta?
+folderGoBack	Volver después de cada palabra
+folderGoBackSub	Tras elegir una palabra de esta carpeta, el niño vuelve a donde estaba y puede seguir con la frase. Desactívalo para elegir varias palabras seguidas aquí.
 newPin	PIN nuevo (4–8 cifras)
 next	Siguiente
 noMinimumAge	Cualquier edad vale. Incluso los más pequeños pueden empezar.
@@ -175,7 +177,7 @@ removeRecording	Quitar grabación
 removeRecordingAsk	¿Quitar la grabación de esta palabra? La dirá la voz en su lugar.
 repeatIgnore	Ignorar toques repetidos durante
 repeatPassword	Repite la contraseña
-replanBody	Cambiar el tamaño mueve las palabras a otros sitios y la memoria motora se tiene que reaprender. Hazlo solo con tu logopeda.
+replanBody	Cambiar el tamaño de la cuadrícula mueve las palabras de sitio y tu hijo tendrá que volver a aprender dónde está cada una. Si tu hijo va a logopedia, coméntalo antes con su logopeda.
 replanTitle	¿Replanificar la disposición motora?
 replanWarning	Las palabras siguen en su zona, pero cambian de posición. Antes se hace una copia.
 restore	Restaurar
@@ -183,11 +185,6 @@ restoreBody	Se sustituirán todos los tableros, grabaciones y registros. Antes s
 restoreHere	Volver aquí
 restoreQ	¿Restaurar esta copia?
 restored	Copia restaurada
-reveal	Mostrar
-revealCounts	Visibles {visible} · atenuadas {dimmed} · ocultas {hidden}
-revealNextSet	Siguientes palabras sugeridas
-revealWords	Mostrar palabras
-revealWordsSub	Muestra más palabras según aprende; nada se mueve
 save	Guardar
 searchSymbols	Buscar imágenes (p. ej. triste, perro)
 sectionBoards	Tableros y palabras
@@ -222,7 +219,7 @@ theme.dark	Oscuro
 theme.highContrast	Alto contraste
 theme.standard	Estándar
 theme.teen	Adolescente (sin aspecto infantil)
-tip.about	Enseña la app a otros adultos en persona: una demo de 2 minutos en el colegio ayuda más que un folleto.
+tip.about	Enseña la app a los demás adultos de la vida de tu hijo: abuelos, guardería, colegio. Dos minutos en persona ayudan más que cualquier folleto.
 tip.display	Cambia una cosa cada vez y observa al niño unos días antes de cambiar más.
 tip.editor	Cuando añadas una palabra, úsala tú en el dispositivo al menos tres veces hoy.
 tip.history	Equivocarse no pasa nada. Aquí puedes deshacer cualquier cambio.
@@ -234,7 +231,7 @@ tip.myth	Comparte esta página con los abuelos y los profesores, para que todos 
 tip.print	Ten un tablero plastificado en el baño y en el coche; modela en papel igual que en el dispositivo.
 tip.profiles	Cada niño tiene sus tableros y palabras; prepáralos con los adultos que mejor lo conocen.
 tip.quick	Modela "para" y "ayúdame" también en momentos tranquilos, no solo cuando algo va mal.
-tip.reveal	Muestra una palabra nueva solo después de modelarla muchas veces. Sigue modelando las ocultas también.
+tip.reveal	Muestra una palabra nueva solo después de haberla modelado muchas veces. En el modo de edición, las palabras ocultas llevan un ojo tachado: sigue modelándolas también.
 tip.speech	Que el niño oiga una voz que le encaje. Pregúntale cuál le gusta.
 tip.touch	Observa un día cómo toca. Aumenta el tiempo de pulsación solo si hay muchos toques accidentales.
 translationReview	Revisión de traducciones
@@ -247,7 +244,6 @@ typeAWord	Escribe una palabra
 typeToSearch	Escribe para buscar
 undo	Deshacer
 visibility	Visible para el niño
-visible	Visible
 voice	Voz
 voiceFor	Voz para {language}
 volume	Volumen
@@ -352,8 +348,8 @@ importObz	Importar tableros (.obz / .obf)
 importObzSub	De Cboard y otras apps; se añaden como carpetas
 imported	Importado. {matched} de {total} botones enlazados a palabras conocidas.
 invite.parent	Invitar a otro progenitor
-invite.slp	Invitar a la logopeda
-invite.teacher	Invitar a un profesor
+invite.slp	Invitar a la logopeda de tu hijo
+invite.teacher	Invitar al maestro de tu hijo
 inviteCode	Código de invitación
 join	Unirse
 keyboard	Teclado
@@ -430,7 +426,7 @@ syncState.needsKey	Sesión iniciada — configura el grupo
 syncState.off	Sincronización desactivada (todo en este dispositivo)
 syncState.ready	Sincronización activada
 syncState.signedOut	Inicia sesión para activar la sincronización
-syncSub	Los mismos tableros en casa, colegio y móvil; edición remota
+syncSub	Los mismos tableros en todos los dispositivos (en casa, en el colegio, en el móvil) y puedes editarlos desde cualquier sitio.
 syncTitle	Sincronización y compartir
 timeOfDay	Momento del día
 tip.access	Prueba un modo de acceso al menos dos semanas con mucho modelado antes de juzgarlo.
@@ -489,7 +485,7 @@ goals	Objetivos
 goalsSub	Pequeños pasos que van practicando, semana a semana
 met	Logrado
 newGoal	Nuevo objetivo
-noGoals	Aún no hay objetivos. La logopeda puede añadir uno aquí.
+noGoals	Todavía no hay objetivos. Añade uno aquí o pídele a la logopeda de tu hijo que lo haga.
 share	Compartir
 shareExamples	Compartir frases de ejemplo
 shareExamplesSub	Desactivado salvo que elijas frases aquí (hasta 5). No se comparte nada más de lo que dijo.
@@ -774,6 +770,7 @@ dismiss	Descartar
 earlyReminder	{name} lleva 2 semanas con el tablero sencillo. Piensa en mostrar más palabras.
 earlyReminder.anon	Tu hijo o hija lleva 2 semanas con el tablero sencillo. Piensa en mostrar más palabras.
 showMoreWords	Mostrar más palabras
+hiddenWordsHint	Las palabras con un ojo tachado están ocultas. Toca una para mostrarla.
 notNow	Ahora no
 spokenAs	Se pronuncia
 hearIt	Escuchar
@@ -981,7 +978,7 @@ check.quickRow	Elegir las dos frases que {name} más necesita
 check.quickRow.anon	Elegir las dos frases que tu hijo o hija más necesita
 kbSettings	Teclado
 kbSuggestions	Sugerencias de palabras
-kbSuggestionsSub	Algunos terapeutas lo desactivan mientras el niño practica la ortografía.
+kbSuggestionsSub	Puedes desactivarlo mientras tu hijo practica la ortografía, para que descubra cada palabra por sí mismo.
 kbLearn	Aprender de lo que escribe {name}
 kbLearn.anon	Aprender de lo que escribe tu hijo o hija
 kbLayout	Distribución
