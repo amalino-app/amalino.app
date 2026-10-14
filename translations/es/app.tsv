@@ -22,6 +22,9 @@ allSet	¡Todo listo!
 back	Atrás
 backupAuto	También se hace una copia automática cada día.
 backupNow	Hacer copia ahora
+backupReminderNever	Todavía no hay ninguna copia fuera de este dispositivo. Si se pierde o se rompe, los tableros y las palabras se pierden con él.
+backupReminderDays	La última copia fuera de este dispositivo tiene {n} días.
+backupReminderMake	Hacer una copia ahora
 backupPassword	Contraseña de la copia
 backups	Copias de seguridad
 borderOnly	Color solo en el borde
@@ -110,7 +113,6 @@ modellingModeHow	Toca palabras mientras hablas, para enseñarle a {name} cómo s
 modellingModeHow.anon	Toca palabras mientras hablas, para enseñarle a tu hijo o hija cómo se hace.
 modellingModeSub	Tus toques no cuentan como palabras del niño.
 modellingOn	Modelado: tú muestras, el niño mira
-muteUiSounds	Silenciar sonidos de la interfaz
 myth.age.a	No. No hay edad mínima. Usar pronto imágenes, gestos y habla juntos favorece el desarrollo.
 myth.age.q	¿Es demasiado pequeño?
 myth.core.a	Unas 25 palabras forman casi todo el habla de un niño pequeño, y unas 200 palabras básicas cubren casi todo el habla diaria. Tenerlas siempre en el mismo sitio crea memoria motora.
@@ -199,7 +201,8 @@ showLabels	Mostrar palabras bajo las imágenes
 showMeWhere	Muéstrame dónde
 showMeWhereSub	Busca una palabra y mira el camino
 showMessageBar	Mostrar la barra de mensaje
-showQuickPhrases	Mostrar frases rápidas
+showQuickPhrases	Mostrar tus frases y «Más»
+showQuickPhrasesSub	«Para» y «ayúdame» siempre se quedan en el tablero.
 speakEachWord	Decir cada palabra al tocarla
 speakEachWordSub	No: las palabras solo van al mensaje hasta tocarlo
 speakMessage	Decir el mensaje
@@ -465,13 +468,11 @@ cameraUnavailable	Cámara no disponible
 dwellTime	Tiempo de espera para elegir
 openVoices	Voces abiertas (descargar una vez, luego sin conexión)
 openVoicesSub	Voces neuronales que funcionan en este dispositivo. Aún hay pocas voces infantiles; elige la que le guste.
-clients	Mis familias
 from	De
 lessonPages	Páginas que te han enviado
 lessonPagesSub	Páginas de alguien que trabaja con tu hijo o hija: ábrelas o recházalas
 noLessonPages	Aún no hay páginas.
 open	Abrir
-ownDevice	Niños en este dispositivo
 role	Rol
 tip.clients	Mantén las palabras de cada familia en su idioma y rutinas; los tableros son del niño.
 tip.lessons	Antes de usar una página en clase, modela sus palabras en casa una vez.
@@ -590,7 +591,6 @@ scenePolygon	Dibujar una forma
 teenPack	Palabras y aspecto para adolescentes
 teenPackSub	Frases sociales, bromas y jerga, y un estilo adulto sin aspecto de dibujos.
 keystrokeSavings	Teclas ahorradas
-clientWeek	últimos 7 días: {words} palabras, {combinations} combinaciones
 webEditorTitle	Amalino — editor de tableros
 webNoHousehold	Esta cuenta aún no está en un grupo familiar.
 webApprove	Pide a un dispositivo de la familia que apruebe «{device}» y pulsa Cargar.

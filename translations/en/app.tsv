@@ -22,6 +22,9 @@ allSet	All set!
 back	Back
 backupAuto	A backup is also made automatically every day.
 backupNow	Back up now
+backupReminderNever	No copy outside this device yet. If the device is lost or broken, the boards and words go with it.
+backupReminderDays	The last copy outside this device is {n} days old.
+backupReminderMake	Make a copy now
 backupPassword	Backup password
 backups	Backups
 borderOnly	Colour as border only
@@ -110,7 +113,6 @@ modellingModeHow	Tap words while you talk, to show {name} how.
 modellingModeHow.anon	Tap words while you talk, to show your child how.
 modellingModeSub	Your taps don't count as the child's words.
 modellingOn	Modelling: you are showing, the child is watching
-muteUiSounds	Mute interface sounds
 myth.age.a	No. There is no minimum age. Early use of pictures, gestures and speech together supports development.
 myth.age.q	Is my child too young?
 myth.core.a	About 25 words make up most of a toddler's talk, and about 200 core words cover most everyday speech. Keeping them in fixed places builds motor memory.
@@ -199,7 +201,8 @@ showLabels	Show words under pictures
 showMeWhere	Show me where
 showMeWhereSub	Find any word and see the path to it
 showMessageBar	Show the message bar
-showQuickPhrases	Show quick phrases
+showQuickPhrases	Show your phrases and More
+showQuickPhrasesSub	"Stop" and "help me" always stay on the board.
 speakEachWord	Speak each word when tapped
 speakEachWordSub	Off: words only go into the message until it is tapped
 speakMessage	Speak message
@@ -465,13 +468,11 @@ cameraUnavailable	Camera not available
 dwellTime	Rest time to select
 openVoices	Open voices (download once, then offline)
 openVoicesSub	Neural voices that run on this device. Few child voices exist yet; choose the one the child likes.
-clients	My client families
 from	From
 lessonPages	Pages shared with you
 lessonPagesSub	Board pages from someone who works with your child; open or decline
 noLessonPages	No lesson pages yet.
 open	Open
-ownDevice	Children on this device
 role	Role
 tip.clients	Keep each family's words in their own home language and routines; the boards belong to the child.
 tip.lessons	Before a lesson page is used in class, model its words at home once.
@@ -590,7 +591,6 @@ scenePolygon	Draw a shape
 teenPack	Teen words and look
 teenPackSub	Social phrases, jokes and slang, and a grown-up style without cartoon looks.
 keystrokeSavings	Keys saved
-clientWeek	last 7 days: {words} words, {combinations} combinations
 webEditorTitle	Amalino — board editor
 webNoHousehold	This account is not in a family group yet.
 webApprove	Ask a family device to approve “{device}”, then press Load.

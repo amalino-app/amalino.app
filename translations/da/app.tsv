@@ -22,6 +22,9 @@ allSet	Klar!
 back	Tilbage
 backupAuto	Der tages også automatisk en sikkerhedskopi hver dag.
 backupNow	Sikkerhedskopiér nu
+backupReminderNever	Der er endnu ingen kopi uden for denne enhed. Hvis den bliver væk eller går i stykker, forsvinder tavlerne og ordene med den.
+backupReminderDays	Den seneste kopi uden for denne enhed er {n} dage gammel.
+backupReminderMake	Lav en kopi nu
 backupPassword	Adgangskode til sikkerhedskopi
 backups	Sikkerhedskopier
 borderOnly	Farve kun som kant
@@ -110,7 +113,6 @@ modellingModeHow	Tryk på ord, mens du taler, for at vise {name} hvordan.
 modellingModeHow.anon	Tryk på ord, mens du taler, for at vise dit barn hvordan.
 modellingModeSub	Dine tryk tæller ikke som barnets ord.
 modellingOn	Modellering: du viser, barnet kigger
-muteUiSounds	Slå lyde i brugerfladen fra
 myth.age.a	Nej. Der er ingen minimumsalder. Tidlig brug af billeder, tegn og tale sammen støtter udviklingen.
 myth.age.q	Er mit barn for ungt?
 myth.core.a	Omkring 25 ord udgør det meste af et småbarns tale, og omkring 200 kerneord dækker det meste af hverdagssproget. Faste pladser bygger motorisk hukommelse.
@@ -199,7 +201,8 @@ showLabels	Vis ord under billeder
 showMeWhere	Vis mig hvor
 showMeWhereSub	Find et ord og se vejen dertil
 showMessageBar	Vis beskedlinjen
-showQuickPhrases	Vis hurtige sætninger
+showQuickPhrases	Vis jeres sætninger og Mere
+showQuickPhrasesSub	»Stop« og »hjælp mig« bliver altid på tavlen.
 speakEachWord	Sig hvert ord ved tryk
 speakEachWordSub	Fra: ord kommer kun i beskeden, indtil der trykkes på den
 speakMessage	Læs beskeden op
@@ -465,13 +468,11 @@ cameraUnavailable	Kamera ikke tilgængeligt
 dwellTime	Hviletid for at vælge
 openVoices	Åbne stemmer (hent én gang, derefter offline)
 openVoicesSub	Neurale stemmer, der kører på denne enhed. Der findes endnu få børnestemmer; vælg den, barnet kan lide.
-clients	Mine klientfamilier
 from	Fra
 lessonPages	Sider delt med jer
 lessonPagesSub	Sider fra én, der arbejder med jeres barn – åbn eller afvis
 noLessonPages	Ingen lektionssider endnu.
 open	Åbn
-ownDevice	Børn på denne enhed
 role	Rolle
 tip.clients	Hold hver families ord på deres eget hjemmesprog og rutiner; tavlerne tilhører barnet.
 tip.lessons	Vis ordene fra en lektionsside derhjemme én gang, før den bruges i klassen.
@@ -590,7 +591,6 @@ scenePolygon	Tegn en form
 teenPack	Teenageord og -udseende
 teenPackSub	Sociale vendinger, jokes og slang og et voksent udtryk uden tegneseriestil.
 keystrokeSavings	Taster sparet
-clientWeek	sidste 7 dage: {words} ord, {combinations} kombinationer
 webEditorTitle	Amalino — tavleredigering
 webNoHousehold	Denne konto er endnu ikke i en familiegruppe.
 webApprove	Bed en familieenhed om at godkende “{device}”, og tryk så Hent.

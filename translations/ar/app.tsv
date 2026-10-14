@@ -22,6 +22,9 @@ allSet	كل شيء جاهز!
 back	رجوع
 backupAuto	تُنشأ نسخة احتياطية تلقائيًا كل يوم أيضًا.
 backupNow	نسخ احتياطي الآن
+backupReminderNever	لا توجد نسخة خارج هذا الجهاز بعد. إذا ضاع الجهاز أو تعطّل، تضيع معه اللوحات والكلمات.
+backupReminderDays	آخر نسخة خارج هذا الجهاز عمرها {n} يومًا.
+backupReminderMake	إنشاء نسخة الآن
 backupPassword	كلمة مرور النسخة الاحتياطية
 backups	النسخ الاحتياطية
 borderOnly	اللون كإطار فقط
@@ -110,7 +113,6 @@ modellingModeHow	انقر الكلمات وأنت تتكلم لتُري {name} �
 modellingModeHow.anon	انقر الكلمات وأنت تتكلم لتُري طفلك كيف يكون ذلك.
 modellingModeSub	نقراتك لا تُحسب كلمات للطفل.
 modellingOn	النمذجة: أنت تُري والطفل يشاهد
-muteUiSounds	كتم أصوات الواجهة
 myth.age.a	لا. لا يوجد عمر أدنى، والاستخدام المبكر للصور والإشارات والكلام معًا يدعم النمو.
 myth.age.q	هل طفلي صغير جدًا؟
 myth.core.a	نحو 25 كلمة تشكل معظم كلام الطفل الصغير، ونحو 200 كلمة أساسية تغطي معظم الكلام اليومي. تثبيت أماكنها يبني الذاكرة الحركية.
@@ -199,7 +201,8 @@ showLabels	إظهار الكلمات تحت الصور
 showMeWhere	أرني أين
 showMeWhereSub	ابحث عن أي كلمة وشاهد الطريق إليها
 showMessageBar	إظهار شريط الرسالة
-showQuickPhrases	إظهار العبارات السريعة
+showQuickPhrases	إظهار عباراتك وزر «المزيد»
+showQuickPhrasesSub	يبقى «توقف» و«ساعدني» دائمًا على اللوحة.
 speakEachWord	نطق كل كلمة عند النقر
 speakEachWordSub	عند الإيقاف: تُضاف الكلمات إلى الرسالة فقط حتى يُنقر عليها
 speakMessage	نطق الرسالة
@@ -465,13 +468,11 @@ cameraUnavailable	الكاميرا غير متاحة
 dwellTime	مدة الثبات للاختيار
 openVoices	أصوات مفتوحة (تنزيل مرة ثم دون اتصال)
 openVoicesSub	أصوات عصبية تعمل على هذا الجهاز. أصوات الأطفال قليلة بعد؛ اختر ما يحبه الطفل.
-clients	عائلات عملائي
 from	من
 lessonPages	صفحات أُرسلت إليك
 lessonPagesSub	صفحات من شخص يعمل مع طفلك: افتحها أو ارفضها
 noLessonPages	لا صفحات دروس بعد.
 open	فتح
-ownDevice	الأطفال على هذا الجهاز
 role	الدور
 tip.clients	احفظ كلمات كل أسرة بلغتها وروتينها؛ اللوحات ملك للطفل.
 tip.lessons	قبل استخدام صفحة الدرس في الصف، كن قدوة في كلماتها في البيت مرة.
@@ -590,7 +591,6 @@ scenePolygon	ارسم شكلًا
 teenPack	كلمات ومظهر للمراهقين
 teenPackSub	عبارات اجتماعية ونكات وكلمات عامية، ومظهر ناضج بلا رسوم كرتونية.
 keystrokeSavings	نقرات مُوفَّرة
-clientWeek	آخر 7 أيام: {words} كلمة، {combinations} تركيب
 webEditorTitle	Amalino — محرر اللوحات
 webNoHousehold	هذا الحساب ليس في مجموعة عائلية بعد.
 webApprove	اطلب من جهاز العائلة الموافقة على «{device}» ثم اضغط تحميل.
