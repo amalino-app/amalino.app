@@ -1,0 +1,42 @@
+# key	text
+# US English: only the keys whose text differs from translations/en/app.tsv (UK spelling there).
+# Licence: CC BY-SA 4.0.
+about	About and licenses
+aboutSub	Privacy, symbol licenses, feedback
+borderOnly	Color as border only
+colour	Color
+colourCoding	Word-type colors
+favourites	Favorites
+fiveFavourites	5 favorite things
+fiveFavouritesSub	Things the child loves (bubbles, a cartoon, grandma). They go in a Favorites folder.
+pickCellFavouritesInstead	Put it in Favorites instead
+pickCellFavouritesNote	Kept free for ★ Favorites
+licences	Licenses
+palette.calm	Calm colors
+palette.colorBlindSafe	Color-blind safe
+palette.none	No colors
+readyBody	The app will create a full core vocabulary with folders, your favorites and quick phrases.
+wordTypeColour	Word-type color
+libraryConsent	The library downloads boards that other families and therapists shared. Nothing about your child is sent. If you share a board, only the board itself and the title and description you write are uploaded, under the CC BY-SA 4.0 license.
+libraryAdd	Add to Favorites
+aiListenSub	While you switch the microphone on (top bar), this device listens to what you say and highlights words that could answer. Speech is recognized on this device; audio is never saved or sent.
+aiListenModel	Download the speech recognizer (~{mb} MB, once)
+aiListenModelReady	Speech recognizer installed (works offline)
+noFreeCell	There is no empty cell in Favorites or on the main board. Hide or remove a word there first: words never move to make room.
+symbolSetLicence	“{set}” is shared under: {licence}. Use it as the license allows.
+nonCommercialNote	Non-commercial license: fine for your family, school or therapy, but not for selling materials.
+onlineLicencesNote	Pictures come from many symbol sets, each with its own license. The set is named under each picture, and all sets you use are listed in About and licenses. Sets marked NC are non-commercial: fine for your family, school or therapy, but not for selling materials.
+onlineSymbolsNote	Pictures from globalsymbols.com, which also has ARASAAC. Each set keeps its own license (see About); NC means non-commercial use only.
+practice	Practice with the child
+notPractised	not practiced
+logModelTaps	Log adult modeling separately
+modellingMode	Modeling mode
+modellingOn	Modeling: you are showing, the child is watching
+tip.reveal	Reveal a new word only after you have modeled it many times. Keep modeling hidden words too — they are dimmed for you.
+modelTaps	Adult modeling taps
+tip.access	Try one access method for at least two weeks with lots of modeling before judging it.
+tip.ai	Suggestions should never replace modeling. Keep modeling words yourself even with highlights on.
+wotwSub	Up to 3 words the adults model this week (highlighted only in modeling mode)
+sum.model	Adults modeled on this device {n} times.
+sum.next	Next week, try modeling "{word}" in new combinations.
+dailyTipSub	A short modeling idea each day. Asks for notifications only when you turn it on.

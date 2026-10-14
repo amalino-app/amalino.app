@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head><meta charset="utf-8"><title>Guard fixture</title>
+<!-- T-101b and decision 31: the guard must report these. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+<script src="//cdn.example.com/app.js"></script>
+<style>@import url("https://fonts.example.com/a.css"); body { background: url(https://example.com/bg.png); }</style>
+</head>
+<body>
+<!-- T-101b: report "switch access", "eye gaze" and "GitHub"; let "switch on" through. -->
+<p>Amalino supports switch access and eye gaze.</p>
+<p>The code is on GitHub.</p>
+<p>Switch on the voice download in Settings, or switch languages with one tap.</p>
+<!-- A link to another site is fine: only loaded resources count. -->
+<p><a href="https://arasaac.org">ARASAAC</a> <img src="assets/amalino.svg" alt=""></p>
+</body>
+</html>

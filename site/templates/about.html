@@ -1,0 +1,27 @@
+<article class="wrap prose">
+  <h1>{{t:about.h1}}</h1>
+  <p class="lead">{{t:about.story}}</p>
+  <p>{{t:about.p1}}</p>
+  <h2>{{t:about.howTitle}}</h2>
+  <ul class="how">
+    <li>{{t:about.how1}}</li>
+    <li>{{t:about.how2}}</li>
+    <li>{{t:about.how3}}</li>
+    <li>{{t:about.how4}}</li>
+    <li>{{t:about.how5}}</li>
+  </ul>
+  <section class="card promise-card">
+    <h2>{{t:freeTitle}}</h2>
+    <p>{{t:about.freeBody}}</p>
+  </section>
+  {{#donate}}<section class="card support-card" id="support">
+    <h2>{{t:support.title}}</h2>
+    <p>{{t:support.body}}</p>
+    <p><a class="button" href="{{v:donate}}" rel="noopener">{{t:support.link}}</a></p>
+  </section>{{/donate}}
+  <h2>{{t:about.thanksTitle}}</h2>
+  <p>{{t:about.thanks}}</p>
+  <p>{{t:about.repo}}</p>
+  {{#email}}<h2>{{t:about.contactTitle}}</h2>
+  <p>{{t:about.contact}}</p>{{/email}}
+</article>

@@ -1,0 +1,36 @@
+<section class="hero">
+  <div class="wrap">
+    <h1>{{t:home.h1}}</h1>
+    <p class="lead">{{t:home.lead}}</p>
+    <p class="promise-badge">{{t:free}}</p>
+  </div>
+</section>
+<div class="wrap">
+  <section class="story">
+    <p>{{t:home.story}}</p>
+    <p class="more"><a href="{{link:about}}">{{t:about.h1}}</a></p>
+  </section>
+  <section class="card status">
+    <p>{{t:home.status}}</p>
+    {{#email}}<p>{{t:home.statusEmail}}</p>{{/email}}
+  </section>
+  <section>
+    <h2>{{t:home.featuresTitle}}</h2>
+    <ul class="features">
+      <li><h3>{{t:home.f1.title}}</h3><p>{{t:home.f1.body}}</p></li>
+      <li><h3>{{t:home.f2.title}}</h3><p>{{t:home.f2.body}}</p></li>
+      <li><h3>{{t:home.f3.title}}</h3><p>{{t:home.f3.body}}</p></li>
+      <li><h3>{{t:home.f4.title}}</h3><p>{{t:home.f4.body}}</p></li>
+    </ul>
+    <p class="muted">{{t:home.platforms}}</p>
+  </section>
+  <section class="myth">
+    <h2>{{t:home.mythTitle}}</h2>
+    <p>{{t:home.mythBody}}</p>
+  </section>
+  <section class="card help">
+    <h2>{{t:home.helpTitle}}</h2>
+    <p>{{t:home.helpBody}}</p>
+    <p><a class="button" href="{{link:translate}}">{{t:home.helpLink}}</a></p>
+  </section>
+</div>

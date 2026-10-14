@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{v:lang}}" dir="{{v:dir}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{{v:title}}</title>
+<meta name="description" content="{{v:description}}">
+{{v:head_links}}
+<link rel="icon" href="{{v:root}}assets/amalino.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{v:root}}assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">{{t:skip}}</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="{{link:home}}"><img src="{{v:root}}assets/amalino.svg" alt="" width="40" height="40"><span>Amalino</span></a>
+    <nav class="site-nav" aria-label="{{a:nav.label}}">
+      <ul>{{v:nav}}</ul>
+    </nav>
+    <details class="lang-menu">
+      <summary aria-label="{{a:lang.label}}">{{v:lang_current}}</summary>
+      <ul>{{v:lang_links}}</ul>
+    </details>
+  </div>
+</header>
+{{v:draft_banner}}
+<main id="main">
+{{v:content}}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-promise">{{t:free}}</p>
+    {{#email}}<p>{{t:footer.contact}}</p>{{/email}}
+    <p class="footer-repo">{{t:footer.repo}}</p>
+    {{#donate}}<p class="footer-support"><a href="{{v:donate}}" rel="noopener">{{t:footer.support}}</a></p>{{/donate}}
+    <nav class="langs" aria-label="{{a:lang.label}}">
+      <p class="langs-title">{{t:lang.label}}</p>
+      <ul>{{v:lang_links}}</ul>
+    </nav>
+  </div>
+</footer>
+{{v:remember_script}}
+</body>
+</html>

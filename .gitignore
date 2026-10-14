@@ -1,0 +1,8 @@
+site/dist/
+__pycache__/
+*.pyc
+.DS_Store
+CLAUDE.md
+**/CLAUDE.md
+CLAUDE.local.md
+.claude/

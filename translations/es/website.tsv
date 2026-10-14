@@ -1,0 +1,107 @@
+# key	text
+# The website (amalino.app) in es. English (translations/en/website.tsv) is the source; keep every
+# {placeholder}, {app:...} and **bold** as it is in English. Licence: CC BY-SA 4.0.
+nav.home	Inicio
+nav.about	Acerca de
+nav.translate	Ayuda a traducir
+nav.privacy	Privacidad
+nav.label	Menú principal
+lang.label	Idioma
+skip	Ir al contenido
+draftBanner	Esta página es un borrador de traducción. Todavía no la ha revisado una persona nativa.
+pick.choose	Elige tu idioma
+pick.title	Amalino: app de CAA gratuita para niños · Elige tu idioma
+pick.meta	Amalino es una app de CAA gratuita para niños que aún no hablan, en inglés, danés, ruso, ucraniano, árabe y español. Elige tu idioma.
+pick.trTitle	Ayuda a traducir Amalino · Elige tu idioma
+pick.trMeta	Ayuda a traducir Amalino, una app de comunicación gratuita para niños: elige tu idioma para revisar una traducción o ayudar a añadir una nueva.
+og.imageAlt	El logotipo de Amalino: dos bocadillos de diálogo en un tallo junto al nombre Amalino
+free	Siempre gratis para niños y familias.
+freeTitle	Siempre gratis para niños y familias
+footer.contact	Escríbeme a {email}.
+footer.support	Apoya a Amalino
+footer.repo	[[Web, manual y traducciones en GitHub]]
+home.title	Amalino: app de CAA gratuita para niños que aún no hablan
+home.meta	Amalino es una app de CAA gratuita para niños que aún no hablan: toca un pictograma y oye la palabra. En español, inglés, danés, ruso, ucraniano y árabe. Sin anuncios.
+home.h1	Palabras para niños que no hablan, o que todavía no hablan
+home.lead	Amalino es una app para móviles y tabletas. El niño toca imágenes y el dispositivo dice las palabras en voz alta, en el idioma de su familia.
+home.story	El año pasado, en un avión, vi a un niño que no podía hablar como los demás niños, y no dejé de pensar en él. Las buenas apps para niños como él son caras, muchas solo funcionan en iPad y pocas hablan los idiomas que las familias usan en casa. Así que estoy haciendo Amalino.
+home.status	Amalino todavía no está en las tiendas de apps. Ahora lo estoy probando en móviles y tabletas reales, y pronto lo probarán las primeras familias.
+home.statusEmail	¿Quieres saber cuándo estará listo? Escríbeme a {email}.
+home.featuresTitle	Qué lo hace diferente
+home.f1.title	Las palabras no cambian de sitio
+home.f1.body	Las palabras que más necesita un niño están siempre en el mismo sitio, así su mano aprende el camino, como la tuya en un teclado. Empieza con pocos botones grandes y muestra más a medida que tu hijo crece. Nada se mueve.
+home.f2.title	Los idiomas de tu familia
+home.f2.body	Inglés, danés, ruso, ucraniano, árabe y español, y cambias de uno a otro con un toque. También puedes grabar palabras con tu propia voz, para que suene a casa.
+home.f3.title	Ayuda para los adultos
+home.f3.body	Los niños aprenden a hablar con imágenes igual que aprenden a hablar con palabras: mirándonos. Amalino te enseña dónde está cada palabra y te da consejos breves, para que tú también hables con las imágenes.
+home.f4.title	Privado y sin conexión
+home.f4.body	Sin cuenta, sin anuncios, sin rastreo. Amalino funciona sin internet, y lo que dice tu hijo se queda en tu dispositivo.
+home.mythTitle	¿Impedirá que mi hijo aprenda a hablar?
+home.mythBody	No. Las investigaciones muestran que comunicarse con imágenes no frena el habla, e incluso puede ayudar. Es un puente hacia el habla, no un sustituto. No hay edad mínima, y el niño no tiene que estar "preparado" antes.
+home.platforms	Para móviles y tabletas Android, y para iPhone y iPad.
+home.helpTitle	¿Hablas otro idioma?
+home.helpBody	Cada idioma de Amalino necesita a alguien que lo hable en casa para revisar las palabras. Si puedes ser tú, echa un vistazo.
+home.helpLink	Cómo ayudar a traducir
+about.h1	Por qué hago Amalino
+about.meta	La historia de Amalino: una persona que hace una app de CAA gratuita que da palabras a los niños en los idiomas de su familia. Siempre gratis para niños y familias.
+about.title	Por qué hago Amalino, una app de comunicación gratuita para niños
+about.story	En un viaje de trabajo el año pasado vi en el avión a un niño que no podía estar de pie ni hablar como los demás niños, y después no dejé de pensar en él. Me dedico a crear software y hardware, y empecé a mirar las apps que ayudan a comunicarse a niños como él. Las buenas son caras, muchas solo funcionan en iPad y pocas hablan los idiomas que las familias usan de verdad en casa. Así que estoy haciendo Amalino: gratis y sin conexión. Si tu hijo lo usa, me encantará saber de ti.
+about.p1	Algunos niños tienen mucho que decir y ninguna forma fácil de decirlo. Unos todavía no hablan, otros dicen solo unas pocas palabras y otros quizá nunca hablen mucho. Una app que habla por ellos cuando tocan imágenes puede cambiarles el día: pueden pedir agua, decir que no, hacer una broma o contarte qué les duele.
+about.howTitle	Cómo lo hago
+about.how1	**Primero, la investigación.** Las palabras básicas salen de estudios sobre lo que de verdad dicen los niños pequeños. Unas 200 cubren la mayor parte del habla diaria, y se quedan en su sitio en la pantalla para que la mano del niño aprenda el camino.
+about.how2	**Probado a mano.** Pruebo cada cambio en un iPad, una tableta Android y un móvil Android antiguo, para asegurarme de que sigue siendo rápido. Nada está terminado hasta que funciona en un dispositivo real.
+about.how3	**Revisado por hablantes nativos.** El danés, el ruso, el ucraniano, el árabe y el español se redactan con ayuda de traducción por IA y los revisan hablantes nativos. Hasta que un hablante nativo revisa un idioma, su texto aparece marcado como borrador.
+about.how4	**Privado desde el principio.** Sin cuenta, sin anuncios, sin analíticas. La app funciona sin conexión, y todo lo que necesita internet pregunta antes.
+about.how5	**Los adultos también aprenden.** Los niños aprenden a hablar con imágenes viendo a los adultos usarlas. Por eso Amalino enseña a los padres dónde está cada palabra y les da consejos breves y amables, sin que nadie sienta que lo está haciendo mal.
+about.freeBody	Amalino es gratis para niños y familias, y seguirá siéndolo. No tiene anuncios, ni ahora ni más adelante.
+about.thanksTitle	Gracias
+about.thanks	Las imágenes de Amalino son pictogramas de ARASAAC. Son propiedad del Gobierno de Aragón, las creó Sergio Palao para ARASAAC (arasaac.org) y se comparten con una licencia Creative Commons (BY-NC-SA). Algunas imágenes vienen de Mulberry Symbols y OpenMoji. Gracias a todas las personas que comparten así su trabajo, y a cada madre, padre y hablante nativo que me dice qué corregir.
+about.repo	La web, el manual de uso y las traducciones de la app están [[en GitHub]], donde cualquiera puede proponer una corrección.
+support.title	Apoya a Amalino
+support.body	Amalino seguirá siendo gratis para niños y familias, siempre. Si quieres ayudar, una pequeña aportación paga lo que lo mantiene en marcha: los servidores, las cuentas de desarrollador de las tiendas de apps y las voces. Gracias. Significa mucho para mí.
+support.link	Hacer una donación
+about.contactTitle	Escríbeme
+about.contact	¿Preguntas, ideas o algo que no funciona? Escríbeme a {email}. Me encantará saber de ti.
+tr.h1	Ayuda a traducir Amalino
+tr.meta	Cómo ayudar a traducir Amalino: revisa un idioma que la app ya tiene o ayuda a añadir el tuyo. Solo hace falta una hoja de cálculo y un correo.
+tr.title	Ayuda a traducir Amalino a tu idioma
+tr.intro	Un niño debería poder hablar en el idioma que oye en casa. Por eso cada palabra de Amalino la revisa alguien que habla el idioma, no solo una herramienta de traducción. No hace falta ser traductor ni instalar nada: basta con una hoja de cálculo y un poco de tiempo.
+tr.write	Escríbeme a {email} y cuéntame qué idioma hablas.
+tr.stepsLabel	Cómo funciona
+tr.improveTitle	Mejora un idioma que Amalino ya tiene
+tr.improveIntro	Amalino habla inglés, danés, ruso, ucraniano, árabe y español. Salvo el inglés, el texto es un primer borrador y necesita a un hablante nativo.
+tr.improve1	Te envío una hoja de revisión para tu idioma. Cada fila tiene el inglés, el borrador en tu idioma y, en las palabras, la imagen.
+tr.improve2	Si una fila está bien, escribe "yes" en la columna "OK?". Si no, escribe una palabra o frase mejor en la columna "Correction". Si no estás seguro, déjala vacía.
+tr.improve3	Devuélveme la hoja. Paso tus correcciones a la app y marco el texto como revisado.
+tr.improveNote	No hace falta hacerlo todo de una vez. Las pantallas de configuración y las primeras palabras son lo más importante, así que van primero. Algunos idiomas tienen unas pocas preguntas más, por ejemplo sobre las terminaciones de las palabras para niños y niñas.
+tr.improveGithub	¿Usas GitHub? Entonces también puedes [[corregir una traducción allí]]: cada idioma tiene su propio archivo y reviso cada cambio antes de que entre en la app. Pronto habrá también un formulario web sencillo para traductores.
+tr.addTitle	Añade tu idioma
+tr.addIntro	Si tu idioma todavía no está en Amalino, puedes ayudar a incorporarlo.
+tr.add1	Te envío una hoja de traducción: el texto en inglés de la app, con una columna vacía para tus palabras. Primero van las pantallas de configuración y las primeras palabras de un niño.
+tr.add2	Rellena lo que puedas. Incluso la primera hoja ya es una gran ayuda.
+tr.add3	Devuélvemela. Guardo tus palabras como borrador para tu idioma.
+tr.addHonest	Para ser sincero, añadir un idioma a la app lleva tiempo. Hace falta una voz que hable bien el idioma y otra persona que revise las palabras. Hasta entonces, tu trabajo queda guardado, y será el comienzo de tu idioma en Amalino.
+tr.addMeanwhile	Mientras tanto, las familias pueden crear tableros en cualquier idioma grabando cada palabra con su propia voz.
+tr.addGithub	En GitHub también puedes [[empezar tu idioma]] copiando el archivo en inglés. Lo reviso todo antes de que entre en la app.
+tr.thanks	Gracias. Cada palabra que revisas ayuda a un niño a decir lo que quiere decir.
+pr.meta	Cómo trata Amalino los datos de tu hijo: sin cuenta, sin anuncios, sin rastreo, y todo se queda en tu dispositivo.
+pr.title	Privacidad en Amalino: sin cuenta y sin anuncios
+pr.draft	Esto es un borrador. Un abogado lo revisará antes de que se publique Amalino.
+pr.intro	Amalino está hecho para niños, así que guarda lo mínimo posible, y lo guarda en tu dispositivo. Esto es lo que significa, en palabras sencillas.
+pr.appTitle	En la app
+pr.noAccount	Amalino funciona sin cuenta y sin internet.
+pr.onDevice	Todo lo que guarda la app (tableros, las palabras que ha usado tu hijo, grabaciones de voces de la familia y fotos que añadas) se queda en tu dispositivo, cifrado.
+pr.noAds	No hay anuncios, ni analíticas, ni rastreo.
+pr.internet	Amalino solo usa internet si activas una función opcional y aceptas antes:
+pr.dlPictures	"{app:arasaacFull}" y "{app:moreSymbolSets}": las imágenes vienen de ARASAAC (arasaac.org) y Global Symbols (globalsymbols.com). Solo se intercambian la lista de palabras, las imágenes que eliges y las palabras que buscas; no se envía nada sobre tu hijo.
+pr.dlVoices	"{app:naturalVoicesHeading}" y el reconocimiento de voz para "{app:aiListen}": los archivos vienen de GitHub (github.com), donde se guardan los archivos de voz. Solo se descargan los archivos; no se envía nada sobre tu hijo.
+pr.dlNote	Como cualquier sitio web, los sitios de arriba pueden ver la dirección de internet (IP) de tu dispositivo cuando se conecta a ellos.
+pr.later	"{app:syncTitle}" y "{app:aiCloud}", que llegarán más adelante: sincronizar tus propios dispositivos (con cifrado de extremo a extremo) y asistentes de IA para adultos. Cada una pregunta por separado, y puedes volver a desactivarla.
+pr.context	"{app:aiContext}" puede leer la hora, tu calendario o tu ubicación. Cada una es un ajuste aparte, desactivado al principio, y los datos solo se usan en tu dispositivo. En Android, el sistema pide permiso para leer y escribir en el calendario a la vez, pero Amalino solo lee los eventos. Nunca los añade, cambia ni borra.
+pr.camera	"{app:suggestHotspots}" en una escena analiza la foto en tu dispositivo. En iPhone y iPad usa el framework Vision de Apple. En Android usa Google ML Kit: las imágenes nunca salen del dispositivo, pero ML Kit envía a Google métricas anónimas de rendimiento y uso de esta función (según las condiciones de Google ML Kit; no se puede desactivar). Está desactivada hasta que la elijas. Si activas "{app:aiCloud}", primero se envía una copia más pequeña de la foto a ese asistente.
+pr.translate	"{app:offlineTranslation|label}" de las palabras de los botones (un asistente de IA, desactivado al principio) puede funcionar en tu dispositivo. En Android puedes descargar una vez de Google el modelo de traducción de ML Kit para un idioma (unos 30 MB, después de aceptar). Después, la traducción funciona sin conexión y no se envía ninguna palabra de la app; se aplican las métricas de uso anónimas de ML Kit indicadas arriba. En iPhone y iPad usa los idiomas instalados en los ajustes de Traducir de Apple.
+pr.backup	"{app:exportBackup}" crea una copia protegida con contraseña, y puedes borrar todo desinstalando la app.
+pr.notTitle	Lo que Amalino no es
+pr.notBody	Amalino ayuda a un niño a comunicarse. No diagnostica, vigila ni trata ninguna afección.
+pr.contactTitle	Preguntas
+pr.contact	Si tienes alguna pregunta sobre privacidad, escríbeme a {email}.

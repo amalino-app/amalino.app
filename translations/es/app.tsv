@@ -1,0 +1,1000 @@
+# key	text
+# The Amalino app's screens in es. English (translations/en/app.tsv) is the source; keep every
+# {placeholder} as it is in English. Licence: CC BY-SA 4.0.
+about	Acerca de y licencias
+aboutBody	CAA gratuita para niños. Funciona sin conexión; tus datos se quedan en este dispositivo.
+aboutChild	Sobre el niño o la niña
+aboutSub	Privacidad, licencias de símbolos, opiniones
+access.head	Movimiento de cabeza (cámara)
+access.headSub	Funciona mejor con buena luz y el dispositivo en un soporte. Las imágenes de la cámara se quedan en el dispositivo.
+access.switch	Pulsadores (barrido)
+access.switchSub	Botones grandes que el niño pulsa (con la mano, la cabeza o el pie) mientras la app resalta las opciones una a una. Normalmente un terapeuta ocupacional ayuda a elegir y configurar el pulsador.
+access.touch	Tocando la pantalla
+activateOnRelease	Activar al levantar el dedo
+activateOnReleaseSub	Permite deslizar primero hasta el botón correcto
+add	Añadir
+addChild	Añadir niño o niña
+addWord	Añadir una palabra
+adultCheck	Solo para adultos
+adultTools	Herramientas para adultos
+allReviewed	Todas las palabras están revisadas.
+allSet	¡Todo listo!
+back	Atrás
+backupAuto	También se hace una copia automática cada día.
+backupNow	Hacer copia ahora
+backupPassword	Contraseña de la copia
+backups	Copias de seguridad
+borderOnly	Color solo en el borde
+borderOnlySub	Aspecto más tranquilo; los símbolos destacan más
+buttonStyle	Estilo del botón
+cancel	Cancelar
+cellGap	Espacio entre botones
+changeFolder	Cambiar carpeta
+changePin	Cambiar PIN
+childAge	Edad
+childName	Nombre del niño o la niña
+choosePhoto	Elegir foto
+chooseSymbol	Elegir pictograma
+clear	Borrar
+clearAfterSpeak	Borrar el mensaje después de decirlo
+clearSelection	Quitar selección
+close	Cerrar
+colour	Color
+colourCoding	Colores por tipo de palabra
+confirm	Confirmar
+createBoards	Crear tableros
+cutOut	Tarjetas recortables
+delete	Eliminar
+deleteButton	¿Eliminar este botón?
+deleteButtonBody	Puedes deshacerlo en Historial.
+deleteContextRuleAsk	¿Eliminar esta regla? {board} ya no se sugerirá con ella.
+deleteHotspotAsk	¿Eliminar este punto? Se borran también su palabra y su grabación.
+deleteQuickPhraseAsk	¿Eliminar la frase rápida «{text}»?
+deleteCoreWarning	Es una palabra básica. Ocultarla conserva su sitio; eliminarla deja una casilla vacía.
+deleteLast	Borrar la última palabra
+dimmed	Atenuado
+displaySensory	Pantalla, audición y sensorial
+done	Hecho
+draft	borrador
+earlyMode	Modo inicial
+earlyModeSub	Muy sencillo: botones grandes que hablan al momento, sin barra de mensaje. Todo el vocabulario sigue ahí.
+edit	Editar
+editBoard	Editar este tablero
+editBoardSub	Toca una casilla para cambiar palabras, imágenes o grabaciones
+editButton	Editar botón
+editHistory	Historial de cambios
+editLock	Bloqueo de edición
+editingHint	Edición: toca una casilla para cambiarla. Las palabras nunca se mueven solas.
+enterPin	Introduce el PIN
+exportBackup	Exportar copia
+exportBackupSub	Archivo con contraseña para un dispositivo nuevo o una reinstalación
+favouriteName	¿Cómo se llama?
+favourites	Favoritos
+feedback	Opiniones
+feedbackAskCoordinator	Pregunta a quien te dio la app cómo enviar opiniones.
+firstTip	Primer consejo: hoy en la merienda, toca "más" en el dispositivo cada vez que digas "más". No hace falta pedirle que te imite.
+fiveFavourites	5 cosas favoritas
+fiveFavouritesSub	Cosas que le encantan (pompas, unos dibujos, la abuela). Van a una carpeta de Favoritos.
+followSystem	Según el ajuste del dispositivo
+gridSize	Tamaño de la cuadrícula
+gridSizeCurrent	{n} botones
+gridSuggestion	Sugerido: {n} botones. Están todas las palabras básicas; las menos frecuentes empiezan ocultas y mantienen su sitio.
+hidden	Oculto
+hideInstead	Ocultar en su lugar
+historyBackups	Historial y copias
+historyBackupsSub	Deshacer cambios; restaurar una copia
+holdForAdult	Adultos: mantén pulsado {seconds} segundos
+holdSeconds	Tiempo de pulsación para abrir
+holdTime	Tiempo de pulsación
+home	Inicio
+homeLanguageFirst	Primero el idioma de casa: las palabras están en el mismo sitio en todos los idiomas.
+homeLanguages	Otros idiomas en casa o en el colegio
+howToModel	Cómo modelarlo
+importBackup	Restaurar desde un archivo
+includeFolders	Incluir carpetas
+labelOnTop	Texto encima de la imagen
+languages	Idiomas
+languagesSub	Idiomas de casa y revisión de traducciones
+latency	Tiempo de toque a voz
+licences	Licencias
+listen	Escuchar
+loadingVoices	Cargando voces…
+lockChallenge	Suma sencilla (predeterminado)
+lockNow	Bloquear
+lockPin	Código PIN
+logModelTaps	Registrar el modelado adulto aparte
+logModelTapsSub	Cuenta cuánto modelan los adultos; nunca se mezcla con las palabras del niño
+makeFolder	Hacer que abra una carpeta
+messageBar	Barra de mensaje
+micPermission	Permite el micrófono para grabar palabras.
+modellingMode	Modo modelado
+modellingModeHow	Toca palabras mientras hablas, para enseñarle a {name} cómo se hace.
+modellingModeHow.anon	Toca palabras mientras hablas, para enseñarle a tu hijo o hija cómo se hace.
+modellingModeSub	Tus toques no cuentan como palabras del niño.
+modellingOn	Modelado: tú muestras, el niño mira
+muteUiSounds	Silenciar sonidos de la interfaz
+myth.age.a	No. No hay edad mínima. Usar pronto imágenes, gestos y habla juntos favorece el desarrollo.
+myth.age.q	¿Es demasiado pequeño?
+myth.core.a	Unas 25 palabras forman casi todo el habla de un niño pequeño, y unas 200 palabras básicas cubren casi todo el habla diaria. Tenerlas siempre en el mismo sitio crea memoria motora.
+myth.core.q	¿Por qué hay pocas imágenes de cosas?
+myth.home.a	Las familias cuyo dispositivo no funcionaba en su idioma lo usaban mucho menos. Usa todos los idiomas de tu familia.
+myth.home.q	¿Usamos solo el idioma del colegio?
+myth.modelling.a	Los niños aprenden a usar una app de comunicación viendo a los adultos usarla. Toca las palabras mientras hablas, cada día, sin pedirle que te copie.
+myth.modelling.q	¿Cómo lo aprenderá?
+myth.ready.a	No hace falta ninguna prueba previa. Una app de comunicación funciona mejor si los adultos la mantienen sencilla, siempre disponible, y la usan ellos mismos.
+myth.ready.q	¿Tiene que estar "preparado" primero?
+myth.speech.a	No. La investigación muestra que las herramientas de comunicación como esta app no frenan el habla, e incluso pueden ayudar. Son un puente hacia el habla, no un sustituto.
+myth.speech.q	¿Esto impedirá que mi hijo aprenda a hablar?
+mythBuster	Por qué ayuda
+mythBusterSub	Respuestas breves a dudas frecuentes, con la investigación
+mythIntro	A menudo a las familias les preocupa la CAA (herramientas que ayudan a los niños a comunicarse, como esta app). Esto dice la investigación.
+needsReviewCount	{n} palabras por revisar
+newFolder	Carpeta nueva
+newPin	PIN nuevo (4–8 cifras)
+next	Siguiente
+noMinimumAge	Cualquier edad vale. Incluso los más pequeños pueden empezar.
+noSymbols	No se encontraron imágenes
+noTranslation	Aún sin traducción
+noVoiceFor	No hay voz sin conexión para {language}
+noVoiceHelp	Instala una en los ajustes de texto a voz del dispositivo o graba las palabras con tu voz.
+off	No
+ok	Aceptar
+on	Sí
+opensFolder	Abre la carpeta
+palette.calm	Colores tranquilos
+palette.colorBlindSafe	Aptos para daltonismo
+palette.fitzgerald	Estándar (clave Fitzgerald)
+palette.none	Sin colores
+paperA4	Papel A4
+passwordsDiffer	Las contraseñas no coinciden
+pitch	Tono
+practice	Practica con el niño
+preciseTouch	Toca objetivos pequeños con facilidad
+preciseTouchSub	Desactívalo para empezar con botones más grandes
+primaryLanguage	Idioma principal
+printBoards	Imprimir tableros
+printBoardsSub	Copia en papel para el baño, la piscina o si se rompe el dispositivo
+printOrSave	Imprimir o guardar PDF
+privacy	Privacidad
+privacyLocal	Tableros, grabaciones y registros se guardan solo en este dispositivo, cifrados.
+privacyNoAds	Sin anuncios, sin rastreo, sin cuenta.
+privacyStorage	Historial local de cambios: {ops} entradas
+profiles	Niños
+quickPhrase	Frase rápida
+quickPhrases	Frases rápidas
+quickPhrasesSub	Hasta {max} frases, siempre a un toque.
+qpUrgent	Urgente
+readyBody	La app creará un vocabulario básico completo con carpetas, favoritos y frases rápidas.
+readyTitle	Listo para crear los tableros de {name}
+readyTitle.anon	Listo para crear los tableros de tu hijo o hija
+recordVoice	Grabar voz
+redo	Rehacer
+reduceMotion	Reducir movimiento
+relockAfter	Volver a bloquear tras
+removeRecording	Quitar grabación
+removeRecordingAsk	¿Quitar la grabación de esta palabra? La dirá la voz en su lugar.
+repeatIgnore	Ignorar toques repetidos durante
+repeatPassword	Repite la contraseña
+replanBody	Cambiar el tamaño mueve las palabras a otros sitios y la memoria motora se tiene que reaprender. Hazlo solo con tu logopeda.
+replanTitle	¿Replanificar la disposición motora?
+replanWarning	Las palabras siguen en su zona, pero cambian de posición. Antes se hace una copia.
+restore	Restaurar
+restoreBody	Se sustituirán todos los tableros, grabaciones y registros. Antes se hace una copia del estado actual.
+restoreHere	Volver aquí
+restoreQ	¿Restaurar esta copia?
+restored	Copia restaurada
+reveal	Mostrar
+revealCounts	Visibles {visible} · atenuadas {dimmed} · ocultas {hidden}
+revealNextSet	Siguientes palabras sugeridas
+revealWords	Mostrar palabras
+revealWordsSub	Muestra más palabras según aprende; nada se mueve
+save	Guardar
+searchSymbols	Buscar imágenes (p. ej. triste, perro)
+sectionBoards	Tableros y palabras
+sectionData	Datos
+sectionSettings	Ajustes
+sectionTogether	Usarlo juntos
+sendFeedback	Enviar opinión
+setPin	Poner un PIN
+setPrimary	Idioma principal
+showLabel	Mostrar la palabra
+showLabels	Mostrar palabras bajo las imágenes
+showMeWhere	Muéstrame dónde
+showMeWhereSub	Busca una palabra y mira el camino
+showMessageBar	Mostrar la barra de mensaje
+showQuickPhrases	Mostrar frases rápidas
+speakEachWord	Decir cada palabra al tocarla
+speakEachWordSub	No: las palabras solo van al mensaje hasta tocarlo
+speakMessage	Decir el mensaje
+preparingSpeech	Preparando…
+speechRate	Velocidad de habla
+speechVoice	Voz y voces
+startTalking	Empezar a hablar
+stepOf	Paso {n} de {total}
+stopGuide	Dejar de guiar
+stopRecording	Parar
+takePhoto	Hacer foto
+targetEnlargement	Zona de toque mayor
+textSize	Tamaño del texto
+theme	Aspecto
+theme.calm	Tranquilo
+theme.dark	Oscuro
+theme.highContrast	Alto contraste
+theme.standard	Estándar
+theme.teen	Adolescente (sin aspecto infantil)
+tip.about	Enseña la app a otros adultos en persona: una demo de 2 minutos en el colegio ayuda más que un folleto.
+tip.display	Cambia una cosa cada vez y observa al niño unos días antes de cambiar más.
+tip.editor	Cuando añadas una palabra, úsala tú en el dispositivo al menos tres veces hoy.
+tip.history	Equivocarse no pasa nada. Aquí puedes deshacer cualquier cambio.
+tip.home	Modela una palabra en cada comida y juego. Dila y tócala a la vez.
+tip.languages	Habla tu idioma de casa con el niño. Cambia el tablero con un toque y modela en ese idioma.
+tip.lock	Deja el dispositivo con el niño todo el día; el bloqueo protege los tableros, no su voz.
+tip.message	Espera. Después de modelar, haz una pausa de 10 segundos con cara de espera; dale tiempo para responder.
+tip.myth	Comparte esta página con los abuelos y los profesores, para que todos los adultos usen la app de la misma forma con tu hijo.
+tip.print	Ten un tablero plastificado en el baño y en el coche; modela en papel igual que en el dispositivo.
+tip.profiles	Cada niño tiene sus tableros y palabras; prepáralos con los adultos que mejor lo conocen.
+tip.quick	Modela "para" y "ayúdame" también en momentos tranquilos, no solo cuando algo va mal.
+tip.reveal	Muestra una palabra nueva solo después de modelarla muchas veces. Sigue modelando las ocultas también.
+tip.speech	Que el niño oiga una voz que le encaje. Pregúntale cuál le gusta.
+tip.touch	Observa un día cómo toca. Aumenta el tiempo de pulsación solo si hay muchos toques accidentales.
+translationReview	Revisión de traducciones
+tremor.firstLanding	Donde toca el dedo primero
+tremor.longestDwell	Donde el dedo se queda más tiempo
+tremor.off	No
+tremorFilter	Filtro de temblor
+tryAgain	Inténtalo de nuevo
+typeAWord	Escribe una palabra
+typeToSearch	Escribe para buscar
+undo	Deshacer
+visibility	Visible para el niño
+visible	Visible
+voice	Voz
+voiceFor	Voz para {language}
+volume	Volumen
+waterproof	Para plastificar
+waterproofSub	Solo la página básica, bordes marcados, margen amplio
+welcomeBody	La configuración tarda unos 5 minutos. Todo se queda en este dispositivo. Puedes cambiarlo todo después.
+welcomeTitle	Bienvenida
+whichLanguages	¿Qué idiomas?
+wordLabel	Palabra ({language})
+wordNotFound	"{word}" aún no está en los tableros
+wordType	Tipo de palabra
+wordTypeColour	Color por tipo
+wrongPin	PIN incorrecto
+acceptDownload	Aceptar y descargar
+arasaacInstalled	Descargado. Las imágenes se guardan sin conexión al elegirlas.
+arasaacLicence	ARASAAC es gratuito solo para uso no comercial. La lista de palabras se descarga de api.arasaac.org; las imágenes solo al elegirlas. No se envía nada sobre el niño.
+arasaacSub	Opcional: buscar en todo ARASAAC (unas 13.000 imágenes); las imágenes se descargan al elegirlas
+arasaacFull	Todas las imágenes de ARASAAC
+arasaacIncluded	ARASAAC (incluido)
+arasaacIncludedSub	{n} imágenes para las palabras incluidas · CC BY-NC-SA, gratis para uso no comercial
+arasaacRemoveAsk	¿Quitar todas las imágenes de ARASAAC de este dispositivo? También se borran las que ya elegiste. Las imágenes incluidas se quedan.
+useNewPictures	Usar las imágenes nuevas en los tableros del niño
+useNewPicturesSub	Las palabras incluidas que aún tienen su imagen original reciben la nueva. Tus imágenes y fotos se conservan.
+newPicturesDone	{n} botones actualizados. Puedes deshacerlo en el historial.
+download	Descargar
+downloadFailed	Error de descarga
+ownPhotos	Tus propias fotos
+ownPhotosSub	Usa una foto en cualquier botón desde el editor
+remove	Quitar
+symbolSets	Conjuntos de símbolos
+symbolSetsSub	Mulberry, OpenMoji, ARASAAC, tus fotos
+tip.symbols	Las fotos reales ayudan más al principio; los símbolos construyen lenguaje. Usa ambos y mantén la misma imagen para cada palabra.
+accept	Aceptar
+accessMethod	Cómo elige el niño
+addHotspot	Añadir un punto
+addSelected	Añadir seleccionados
+agree	Acepto
+aiCloud	Ayudas en la nube para adultos
+aiCloudConsent	Al usar una ayuda en la nube, la foto, el tema o las palabras que elijas se envían a nuestro servidor y a un servicio de IA para hacer un borrador. No se envía nada de lo que dice el niño. Puedes desactivarlo cuando quieras.
+aiCloudConsentTitle	¿Permitir ayudas en la nube?
+aiCloudSub	Mejores borradores de escenas, tableros y traducciones. Requiere sincronización y tu consentimiento.
+aiCloudTools	Usar ayudas en la nube
+aiContext	Sugerir páginas según el momento
+aiContextSub	Comida a mediodía, el parque cuando estáis allí. Una tarjeta que puede ignorar.
+aiHelpers	Ayudas de IA
+aiHelpersSub	Todo desactivado al principio; el niño siempre elige
+aiKeyboard	Predicción de palabras en el teclado
+aiMaster	Ayudas de IA activadas
+aiMasterSub	Desactivar apaga todas las funciones de IA, en el dispositivo y en la nube.
+aiNextWord	Resaltar posibles siguientes palabras
+aiNextWordSub	Resalta suavemente 2–3 botones. Los botones nunca se mueven. Aprende solo en este dispositivo.
+aiOnDevice	En este dispositivo
+aiPhrase	Frase con las iniciales
+aiPhraseSub	Escribe las iniciales y se ofrecen frases enteras. El niño elige o ignora.
+allTips	Próximamente
+approve	Aprobar
+approveDevices	Dispositivos esperando
+auditoryCues	Decir cada opción en voz baja
+auditoryCuesSub	Ayuda a quien no ve bien el resaltado
+backToBoard	Volver al tablero
+boardBuilder	Crear una página temática
+boardBuilderSub	"Un tablero para un cumpleaños" en segundos
+boardFor	Una página sobre…
+boardForHint	p. ej. cumpleaños, médico, zoo
+check	Comprobar
+childDevice	Este es el dispositivo del niño
+childDeviceSub	Los cambios que mueven palabras básicas esperan tu OK aquí
+cloudFailed	La ayuda en la nube no respondió
+coaching	Consejos diarios
+coachingSub	Un consejo de 60 segundos al día y la palabra de la semana
+combinations	Combinaciones de palabras
+createHousehold	Crear un grupo familiar
+createHouseholdSub	Este dispositivo crea la clave secreta; el servidor nunca la ve
+dailyReminder	Recordatorio diario
+days	{n} días
+daysUsed	Días de uso
+devicesAndPeople	Dispositivos y personas
+dragToAddHotspot	Arrastra un recuadro en la foto para añadir un punto que habla
+editHotspot	Editar punto
+email	Correo
+emailCode	Código del correo
+exportAllBoards	Exportar todos los tableros (.obz)
+exportCsv	Exportar registro (CSV)
+exportPdf	Informe de progreso (PDF)
+exportStudy	Resumen para estudio (sin palabras)
+exportThisBoard	Exportar este tablero
+ga.android.1	Abre Ajustes > Seguridad > Fijar aplicaciones y actívalo.
+ga.android.2	Activa "Pedir PIN antes de desfijar".
+ga.android.3	Abre Amalino, luego Recientes y toca el icono > Fijar.
+ga.android.4	Para salir, mantén Atrás y Recientes a la vez y escribe el PIN.
+ga.androidTitle	Android: fijar la app
+ga.ios.1	Abre Ajustes > Accesibilidad > Acceso guiado y actívalo.
+ga.ios.2	Pon un código en Ajustes de código.
+ga.ios.3	Abre Amalino, pulsa tres veces el botón lateral (o de inicio) y toca Iniciar.
+ga.ios.4	Para salir, pulsa tres veces otra vez y escribe el código.
+ga.iosTitle	iPad / iPhone: Acceso guiado
+ga.samsung	Tabletas Samsung: "Samsung Kids" y "Fijar ventanas" funcionan igual.
+guidedAccess	Mantener al niño en la app
+headHelp	El seguimiento de cabeza usa solo la cámara frontal de este dispositivo. Configúralo con el niño sentado cómodo frente al dispositivo.
+heldEdits	{n} cambios de disposición esperan tu OK
+importObz	Importar tableros (.obz / .obf)
+importObzSub	De Cboard y otras apps; se añaden como carpetas
+imported	Importado. {matched} de {total} botones enlazados a palabras conocidas.
+invite.parent	Invitar a otro progenitor
+invite.slp	Invitar a la logopeda
+invite.teacher	Invitar a un profesor
+inviteCode	Código de invitación
+join	Unirse
+keyboard	Teclado
+lastSync	Última sincronización
+madeByCloud	ayuda en la nube
+madeOnDevice	hecho en este dispositivo
+makeDraft	Crear borrador
+metric	Medida
+mlu	Palabras por frase
+modelTaps	Toques de modelado adulto
+needsReview	por revisar
+newHotspot	Punto nuevo
+newSceneCamera	Escena nueva con la cámara
+newSceneGallery	Escena nueva desde fotos
+newWords	Palabras nuevas
+newWordsPerMonth	Palabras nuevas por mes
+noSuggestions	No hay sugerencias para esta foto. Arrastra recuadros para añadir puntos tú.
+noTopicPack	No hay página lista para este tema en el dispositivo. Prueba otra palabra o permite las ayudas en la nube.
+notApprovedYet	Aún no aprobado. Apruébalo desde un dispositivo del grupo.
+openBoardFormat	Compartir tableros (Open Board Format)
+openBoardFormatSub	Mover tableros desde y hacia otras apps de CAA
+ownSentences	Frases propias
+password	Contraseña
+pressSwitch	Pulsa el pulsador ahora…
+progress	Progreso
+progressSub	Palabras nuevas, combinaciones, más usadas
+quickAdd	Añadir rápido
+recentUtterances	Frases recientes
+reject	Rechazar
+rejectHeldAsk	¿Rechazar {n} cambios de disposición de otro dispositivo? Se descartan y no se aplican aquí.
+rejectLessonPageAsk	¿Rechazar «{title}»? Se quitan la página y los botones que la abren.
+reminder	Recordatorio
+reminderTime	Hora del recordatorio
+reviewBeforeSaving	revisa cada palabra antes de guardar
+saveAsFolder	Guardar como carpeta
+scan.block	Bloques, luego filas, luego botones
+scan.linear	Un botón cada vez
+scan.oneSwitch	Un pulsador (avanza solo)
+scan.rowColumn	Filas, luego botones
+scan.twoSwitch	Dos pulsadores (mover y elegir)
+scanLoops	Vueltas antes de empezar de nuevo
+scanSpeed	Velocidad de barrido
+scene	Escena
+sceneName	¿Qué lugar o momento es?
+sceneEmptyHint	Arrastra un cuadro sobre la foto para crear una zona que hable. Para una forma irregular, toca Dibujar una forma más abajo.
+pickCellTitle	¿Dónde debería ir?
+pickCellPutHere	Ponlo aquí
+pickCellFavouritesInstead	Ponlo en Favoritos en su lugar
+pickCellBoardFull	Este tablero está lleno.
+pickCellChooseAnother	Elegir otro tablero
+pickCellFavouritesNote	Reservada para ★ Favoritos
+pickCellHiddenWord	Palabra oculta: '{word}', aparece en el nivel {level}
+sceneMove	Mover…
+openThisFolder	Abrir esta carpeta
+discardSceneQuestion	¿Descartar esta escena? Se eliminará la foto.
+sceneWordOnTap	Palabra al tocar
+sceneWordsAlways	Palabras siempre visibles
+showThisCode	Enseña este código en un dispositivo del grupo
+signIn	Iniciar sesión
+space	espacio
+suggestFailed	No se pudieron sugerir puntos
+suggestHotspots	Sugerir puntos
+suggestionUse	Sugerencias usadas
+switchAny	Tecla del pulsador
+switchHelp	Los pulsadores Bluetooth y USB funcionan como teclados. Empareja el pulsador en los ajustes del dispositivo y púlsalo aquí.
+switchMove	Pulsador "mover"
+switchScanning	Barrido con pulsador
+switchSelect	Pulsador "elegir"
+syncE2e	Cifrado de extremo a extremo: el servidor solo guarda datos que no puede leer.
+syncNotConfigured	La sincronización no está configurada en esta versión.
+syncNow	Sincronizar ahora
+syncState.error	Problema de sincronización
+syncState.needsKey	Sesión iniciada — configura el grupo
+syncState.off	Sincronización desactivada (todo en este dispositivo)
+syncState.ready	Sincronización activada
+syncState.signedOut	Inicia sesión para activar la sincronización
+syncSub	Los mismos tableros en casa, colegio y móvil; edición remota
+syncTitle	Sincronización y compartir
+timeOfDay	Momento del día
+tip.access	Prueba un modo de acceso al menos dos semanas con mucho modelado antes de juzgarlo.
+tip.ai	Las sugerencias nunca sustituyen al modelado. Sigue modelando tú aunque haya resaltado.
+tip.builder	Antes del evento, mirad juntos la página nueva y modela dos o tres palabras.
+tip.coaching	Lee el consejo de hoy y pruébalo una vez. Los pasos pequeños y diarios funcionan mejor.
+tip.guided	Bloquear la app mantiene la voz disponible; nunca dejes al niño sin su tablero.
+tip.obf	Al importar un tablero, comprueba que las palabras estén donde el niño ya las conoce.
+tip.progress	Usa los números para elegir qué modelar después, no para evaluar al niño.
+tip.sync	Acordad quién cambia el tablero y avisaos. Las sorpresas en la posición confunden al niño.
+todayTip	Consejo del día ({day} de {total})
+topWords	Palabras más usadas
+touchAccess	Toque y acceso
+touchTuning	Ajuste del toque
+turnOffSync	Desactivar y borrar datos del servidor
+turnOffSyncSub	Los tableros se quedan en este dispositivo
+turnOffAndDelete	Desactivar y borrar
+turnOffSyncAsk	¿Desactivar la sincronización y borrar los datos del grupo familiar en el servidor? Los tableros se quedan en este dispositivo. No se puede deshacer.
+turnOnSync	Activar sincronización
+usePassword	Usar contraseña
+value	Valor
+waitingForApproval	Esperando aprobación. Código: {code}
+warn.batteryCritical	Batería muy baja — carga ahora
+warn.batteryLow	Batería baja
+warn.muted	Sonido apagado — no se oye al niño
+warn.volumeLow	Volumen bajo
+wordOfWeek	Palabra de la semana
+wordsSaid	Palabras dichas
+wotwNone	Aún sin elegir
+wotwSub	Hasta 3 palabras que los adultos modelan esta semana (resaltadas solo en modo modelado)
+blinkSelect	Elegir con un parpadeo largo
+blinkSelectSub	Cierra los dos ojos medio segundo; los parpadeos normales no cuentan
+calibrate	Calibrar el movimiento de la cabeza
+calibrateHint	Sigue la estrella con la cabeza
+cameraUnavailable	Cámara no disponible
+dwellTime	Tiempo de espera para elegir
+openVoices	Voces abiertas (descargar una vez, luego sin conexión)
+openVoicesSub	Voces neuronales que funcionan en este dispositivo. Aún hay pocas voces infantiles; elige la que le guste.
+clients	Mis familias
+from	De
+lessonPages	Páginas de clase y terapia
+lessonPagesSub	Páginas añadidas por profesor o logopeda; abrir o rechazar
+noLessonPages	Aún no hay páginas.
+open	Abrir
+ownDevice	Niños en este dispositivo
+role	Rol
+tip.clients	Mantén las palabras de cada familia en su idioma y rutinas; los tableros son del niño.
+tip.lessons	Antes de usar una página en clase, modela sus palabras en casa una vez.
+goal.combinations	Combinaciones por semana
+goal.daysUsed	Días de uso por semana
+goal.mlu	Media de palabras por frase
+goal.newWords	Palabras nuevas por semana
+goal.wordUse	Usos de una palabra por semana
+goalTarget	Objetivo
+goals	Objetivos
+goalsSub	Objetivos de la logopeda con progreso semanal
+met	Logrado
+newGoal	Nuevo objetivo
+noGoals	Aún no hay objetivos. La logopeda puede añadir uno aquí.
+share	Compartir
+shareExamples	Compartir frases de ejemplo
+shareExamplesSub	Desactivado salvo que elijas frases aquí (hasta 5). No se comparte nada más de lo que dijo.
+sum.combos	El niño hizo {n} frases de dos o más palabras (unas {mlu} palabras por frase).
+sum.days	{name} usó la app {n} días esta semana.
+sum.days.anon	Tu hijo o hija usó la app {n} días esta semana.
+sum.model	Los adultos modelaron en el dispositivo {n} veces.
+sum.newList	Palabras nuevas: {list}.
+sum.next	La próxima semana, prueba a modelar "{word}" en nuevas combinaciones.
+sum.words	Se dijeron {n} palabras, {new} por primera vez.
+thisWeek	Esta semana
+tip.goals	Elige un objetivo cada vez y modela la habilidad muchas veces al día.
+tip.summary	Comparte el resumen con todos los que hablan con el niño y elegid una palabra para modelar.
+week	Semana
+weeklySummary	Resumen semanal
+writeWithCloud	Reescribir con la ayuda en la nube (solo datos agregados)
+addCalendarRule	Sugerir una página para un evento
+addMealRules	Añadir sugerencias en las comidas (página Comida)
+addPlaceRule	Sugerir una página en este lugar
+addPlaceRuleSub	Guarda dónde estás ahora (se queda en el dispositivo)
+addTimeRule	Sugerir una página a una hora
+calendarKeyword	Palabra del título (p. ej. médico)
+contextBoards	Páginas según el momento
+contextOff	Activa "Sugerir páginas según el momento" en Ayudas de IA.
+noLocation	Ubicación no disponible
+tip.context	Una sugerencia es solo una puerta: modela las palabras cuando se abra.
+useCalendar	Usar el calendario
+useCalendarSub	Lee los títulos de hoy solo en este dispositivo
+useLocation	Usar la ubicación
+useLocationSub	Comprueba los lugares guardados solo aquí; nunca se sube
+grammarHelper	Formas de palabras
+grammarHelperSub	Mantén pulsada una palabra para elegir: perros, fui, más grande…
+allow	Permitir
+search	Buscar
+library	Biblioteca de tableros
+librarySub	Tableros compartidos por familias y terapeutas
+libraryConsent	La biblioteca descarga tableros que otras familias y terapeutas han compartido. No se envía nada sobre tu hijo. Si compartes un tablero, solo se sube el tablero y el título y la descripción que escribas, con la licencia CC BY-SA 4.0.
+libraryNotConfigured	La biblioteca necesita un servidor; esta versión no tiene ninguno.
+libraryBrowse	Explorar
+libraryMine	Mis tableros compartidos
+libraryShare	Compartir un tablero
+libraryShareNote	Elige carpetas para compartir. Quita antes nombres, fotos de personas y todo lo privado: otras familias lo verán.
+libraryTitle	Título
+libraryDescription	¿Para qué sirve? (opcional)
+librarySubmitted	¡Gracias! Un moderador revisará el tablero antes de que otros puedan verlo.
+libraryRejected	No se pudo compartir el tablero
+libraryReport	Denunciar
+libraryReportReason	¿Qué problema tiene este tablero?
+libraryReported	Gracias, un moderador lo revisará.
+libraryAdd	Añadir a favoritos
+libraryWithdraw	Retirar
+libraryWithdrawAsk	¿Retirar «{title}» de la biblioteca? Los demás ya no podrán encontrarlo ni añadirlo.
+libraryEmpty	Aún no hay tableros.
+librarySignIn	Inicia sesión en Sincronización para compartir o denunciar tableros.
+slpReviewed	Revisado por logopeda
+libraryStatus	Estado
+libraryStatus.pending	pendiente de revisión
+libraryStatus.approved	compartido
+libraryStatus.rejected	no aceptado
+libraryStatus.hidden	oculto tras denuncias
+tip.library	Un tablero compartido es un punto de partida: no muevas nada del tablero principal y añade las palabras donde tu hijo ya las usa.
+personalVoice	Voz personal
+personalVoiceSub	Usa una voz personal creada en Ajustes (Accesibilidad > Voz personal).
+personalVoiceReady	Voz personal permitida ({count} encontradas). Elígela en la lista de arriba.
+personalVoiceDenied	La voz personal no está permitida. Puedes cambiarlo en Ajustes > Accesibilidad > Voz personal (Permitir que las apps soliciten su uso).
+personalVoiceUnsupported	La voz personal necesita iOS 17 o posterior en un dispositivo compatible.
+personalVoiceAndroid	Android no tiene voz personal. Para conservar la voz de un familiar, graba palabras en el editor de botones (Grabar): las grabaciones suenan en lugar de la voz sintética.
+aiListen	Escuchar al interlocutor
+aiListenSub	Mientras enciendes el micrófono (barra superior), el dispositivo escucha lo que dices y resalta palabras para responder. El habla se reconoce en este dispositivo; el audio nunca se guarda ni se envía.
+aiListenModel	Descargar el reconocimiento de voz (~{mb} MB, una vez)
+aiListenModelReady	Reconocimiento de voz instalado (funciona sin conexión)
+aiListenModelRemoveAsk	¿Quitar el reconocimiento de voz de este dispositivo? Escuchar al interlocutor no funcionará hasta que lo vuelvas a descargar ({mb} MB).
+listeningOn	Escuchando: toca para parar
+heardPartner	Oído: «{text}»
+access.gaze	Mirada (cámara)
+access.gazeSub	Mira una imagen para elegirla. Solo para imágenes grandes (hasta 16 en pantalla).
+access.pointer	Seguidor ocular o ratón de cabeza
+access.pointerSub	Para dispositivos que mueven el puntero (Tobii, Control ocular de Windows): deja el puntero sobre una imagen para elegirla.
+gazeHelp	Coloca el dispositivo fijo a la altura de los ojos, a un brazo de distancia, con luz en la cara del niño. Calibra primero: el niño mira un animal que va a nueve lugares.
+gazeGridTooBig	La mirada necesita imágenes grandes: elige una cuadrícula de 16 celdas o menos (Ajustes > Tamaño de cuadrícula).
+gazeNeedsCalibration	Aún sin calibrar.
+gazeCalibrated	Calibrado. Vuelve a calibrar si se movió el dispositivo o el asiento.
+gazeCalibrateHint	¡Mira al animal!
+gazeCalibrationPoor	La cámara no pudo seguir bien los ojos. Prueba con más luz, un dispositivo más estable o el control con la cabeza.
+pointerHelp	Funciona con cualquier dispositivo que mueva el puntero, como Tobii o el Control ocular de Windows (con la app de Windows) o un ratón de cabeza. Los clics y toques siguen funcionando.
+aiOff	Los asistentes de IA están desactivados (Ajustes > Asistentes de IA).
+draftMissing	Borradores de palabras que faltan (para revisar)
+draftedCount	{n} borradores añadidos para revisar
+noFreeCell	No hay ninguna celda vacía en Favoritos ni en el tablero principal. Oculta o quita antes una palabra allí: las palabras nunca se mueven para hacer sitio.
+moreSymbolSets	Más conjuntos de símbolos (en línea)
+symbolDownloadConsent	Buscar en otros conjuntos usa internet: solo se envían tus palabras de búsqueda, nada sobre tu hijo. Las imágenes que elijas se guardan en este dispositivo.
+symbolSetLicence	«{set}» se comparte bajo: {licence}. Úsalo como permite la licencia.
+nonCommercialNote	Licencia no comercial: vale para tu familia, escuela o terapia, pero no para vender materiales.
+onlineLicencesNote	Las imágenes proceden de muchos conjuntos de símbolos, cada uno con su propia licencia. El conjunto aparece bajo cada imagen y todos los que uses figuran en Acerca de y licencias. Los conjuntos marcados NC son no comerciales: valen para tu familia, escuela o terapia, pero no para vender materiales.
+onlineSymbolsNote	Imágenes de globalsymbols.com, que también incluye ARASAAC. Cada conjunto tiene su propia licencia (ver Acerca de); NC significa solo uso no comercial.
+onlineEmpty	No hay imágenes para «{q}». Prueba otra palabra.
+onlineError	No se puede conectar con {source}. Revisa la conexión a internet.
+onlineHint	Escribe al menos 3 letras o pulsa buscar.
+styleWholePage	Usar este estilo en toda la página
+sceneOutlines	Mostrar contornos
+scenePolygon	Dibujar una forma
+teenPack	Palabras y aspecto para adolescentes
+teenPackSub	Frases sociales, bromas y jerga, y un estilo adulto sin aspecto de dibujos.
+keystrokeSavings	Teclas ahorradas
+clientWeek	últimos 7 días: {words} palabras, {combinations} combinaciones
+webEditorTitle	Amalino — editor de tableros
+webNoHousehold	Esta cuenta aún no está en un grupo familiar.
+webApprove	Pide a un dispositivo de la familia que apruebe «{device}» y pulsa Cargar.
+webLoad	Cargar tableros
+webNotApproved	Aún no aprobado
+webSaveSync	Guardar y sincronizar
+mlkitNotice	En Android se usa Google ML Kit en el dispositivo: las imágenes de la cámara nunca salen del dispositivo, pero ML Kit envía a Google métricas anónimas de uso y rendimiento. (iPhone y iPad usan Apple Vision.)
+offlineTranslation	Traducción sin conexión: {language}
+offlineTranslationReady	Listo: las palabras que faltan se traducen en el dispositivo (para revisar).
+offlineTranslationDownload	Descarga el idioma una vez (unos 30 MB) para traducir sin internet.
+offlineTranslationSettings	Instala este idioma en Ajustes > Apps > Traducir para traducir en el dispositivo.
+offlineTranslationUnsupported	No disponible en este dispositivo.
+offlineTranslationConsent	Se descargará una vez el modelo de traducción de Google para este idioma. No se envía ninguna palabra de la app; después la traducción funciona sin conexión.
+vocabLevel	Nivel de vocabulario
+levelN	Nivel {n}
+vocabLevel1	Unas 400 palabras: palabras básicas y primeras palabras de las carpetas
+vocabLevel2	Unas 1.500 palabras, con más carpetas
+vocabLevel3	Todas las palabras (unas 2.600)
+vocabLevelNote	Un nivel solo muestra u oculta palabras en las carpetas; las palabras nunca se mueven, así el niño conserva sus patrones motores. Las palabras básicas siguen el ajuste de revelado progresivo.
+downloaded	Descargado
+useVoice	Usar
+removeVoiceModel	Quitar {name} (libera {mb} MB)
+removeVoiceModelAsk	¿Quitar {name} de este dispositivo? También se borran sus palabras guardadas. Las palabras usarán la voz del dispositivo hasta que la vuelvas a descargar ({mb} MB).
+soundCheck	Prueba de sonido
+soundCheckIntro	La misma frase, generada limpia en un ordenador, reproducida de distintas formas. Si oyes ruido solo con el reproductor de Amalino, la causa es el reproductor; si también con el del dispositivo, es la grabación.
+soundCheckBuffer	Búfer del reproductor de Amalino
+soundCheckBufferSub	Más pequeño suena antes; más grande protege mejor contra chasquidos.
+soundCheckUnderLoad	Reproducir con el dispositivo ocupado
+soundCheckUnderLoadSub	Mantiene ocupado el procesador unos segundos, como cuando la app prepara palabras en segundo plano.
+soundCheckAmalino	Reproductor de Amalino
+soundCheckSystem	Reproductor del dispositivo
+soundCheck.int8	Voz natural, tal como la genera la app
+soundCheck.fp32voc	Voz natural, etapa de sonido de alta precisión
+soundCheck.sample_32k	Muestra de la configuración, versión actual
+soundCheck.sample_hq	Muestra de la configuración, nueva calidad más alta
+soundCheck.saved_wav	Voz natural, como se guarda, sin comprimir
+soundCheck.saved_opus	Voz natural, como se guarda, comprimida (Opus)
+savedSpeech	Voz guardada
+savedSpeechSub	Palabras ya creadas con las voces elegidas y guardadas en este dispositivo, para que un toque hable al instante. Se crean en segundo plano mientras no se usa el tablero.
+savedSpeechSize	Espacio usado: {mb} MB
+savedSpeechBuilding	Preparando palabras: {done} de {total}
+savedSpeechReady	Palabras listas: {total}
+savedSpeechRebuild	Reconstruir
+savedSpeechRebuildAsk	¿Borrar la voz guardada y crearla de nuevo? Las palabras se generan al momento hasta que vuelvan a estar listas. Solo hace falta si las palabras suenan mal.
+liveSteps	Detalle de la voz natural en frases nuevas: {n} de {max} (menor mientras el dispositivo va lento)
+startSetup	Empezar
+appLanguage	Idioma de la app
+appLanguageHint	Elegirás los idiomas que habla tu hijo en un paso posterior.
+learnMore	Saber más
+alreadyUse	Ya uso Amalino
+alreadyBody	Para un segundo dispositivo, uno nuevo o una reinstalación.
+restoreBackup	Restaurar un archivo de copia
+restoreHowTo	En el dispositivo anterior: Ajustes → Historial y copias → Exportar copia, y elige una contraseña. Envía el archivo a este dispositivo por AirDrop, Quick Share, correo, una nube o un cable USB. Luego toca Elegir archivo.
+chooseFile	Elegir archivo
+joinFamily	Unirse a una familia en otro dispositivo
+deviceKeyBackup	Es una copia automática que solo se abre en el dispositivo que la hizo. En el dispositivo anterior, usa Exportar copia con contraseña.
+childNameHelp	Se muestra y se dice en la app, por ejemplo «Me llamo {name}». Se queda en este dispositivo.
+childNameHelp.anon	Se muestra y se dice en la app, por ejemplo en «Me llamo…». Se queda en este dispositivo.
+ageBandTitle	¿Qué edad tiene {name}?
+ageBandTitle.anon	¿Qué edad tiene tu hijo o hija?
+band.under3	Menos de 3
+band.age3to5	3–5
+band.age6to9	6–9
+band.age10to13	10–13
+band.age14plus	14 o más
+ageUse	Lo usamos para sugerir un tamaño y aspecto inicial del tablero. Puedes cambiarlo después.
+needAge	Elige una franja de edad para continuar.
+commTitle	¿Cómo se comunica {name} hoy?
+commTitle.anon	¿Cómo se comunica tu hijo o hija hoy?
+comm.none	Aún sin palabras
+comm.single	Algunas palabras sueltas o signos
+comm.phrases	Frases cortas
+comm.reads	Lee o deletrea algunas palabras
+comm.unsure	No lo sé
+mainLanguageHint	El idioma que tu hijo usará más.
+draftsLine	Las palabras en {list} son borradores hasta que las revise un hablante nativo. Para corregir una: abre los ajustes, elige Editar tablero y toca la palabra.
+lang.en	inglés
+lang.da	danés
+lang.ru	ruso
+lang.uk	ucraniano
+lang.ar	árabe
+lang.es	español
+motorPlanNote	Todos los idiomas usan las mismas posiciones de botones, así que tu hijo puede cambiar de idioma sin volver a aprender el tablero. Cambia con un toque en el tablero.
+notListed	Mi idioma no está en la lista
+notListedBody	Aun así puedes crear tableros en cualquier idioma: graba cada palabra con tu voz y el tablero reproducirá tus grabaciones.
+wordFormsTitle	¿Qué formas de las palabras debe usar la app para {name}?
+wordFormsTitle.anon	¿Qué formas de las palabras debe usar la app para tu hijo o hija?
+forms.boy	Formas de niño
+forms.girl	Formas de niña
+wordFormsHint	Por ejemplo, «cansado / cansada». Puedes cambiarlo cuando quieras en Ajustes.
+needForms	Elige una opción para continuar.
+naturalVoicesSame	La misma descarga, nada más.
+voiceForLang	Voz en {lang}
+inUseNow	En uso ahora
+voiceAllLanguages	Todos los idiomas
+voicesOneLanguage	Voces para un solo idioma
+voice.female	voz femenina
+voice.male	voz masculina
+useForToo	Usar {voice} también en {lang}
+recommended	Recomendado
+voicePickHint	Toca para escuchar cada voz y elige la que le vaya a {name}.
+voicePickHint.anon	Toca para escuchar cada voz y elige la que le vaya a tu hijo o hija.
+moreVoices	Más voces
+recommendFor	En {lang}, recomendamos {voice}.
+useForAll	Usar {voice} en todos los idiomas
+voiceLanguageOnly	Solo en {lang} · {mb} MB
+mobileDataAsk	Es una descarga de {mb} MB y el dispositivo usa datos móviles. ¿Descargar ahora?
+downloadNow	Descargar ahora
+waitForWifi	Esperar al wifi
+notEnoughSpace	No hay espacio suficiente: la descarga necesita unos {mb} MB por un momento. Libera espacio e inténtalo de nuevo.
+stillTesting	Nuevo, aún en pruebas
+setUpLater	Puedes configurarlo después, en Ajustes → Toque y acceso.
+touchTitle	¿Cómo toca {name} la pantalla?
+touchTitle.anon	¿Cómo toca la pantalla tu hijo o hija?
+touch.easy	Toca cosas pequeñas con facilidad
+touch.bigger	Necesita botones más grandes
+touch.shaky	Los toques tiemblan, o el dedo se desliza o se apoya en la pantalla
+tryItNow	Pruébalo ahora (opcional)
+tryItHint	Deja que tu hijo toque unas cuantas veces.
+makeEasier	Hacerlo más fácil
+touchMore	Tiempo de pulsación y otros ajustes táctiles: Ajustes → Toque y acceso.
+favCount	{n} de 5 añadidos
+favUpTo	Añade hasta 5. Puedes añadir más después.
+favPhotoHint	Las fotos van mejor para personas y los juguetes del niño.
+favNameTitle	¿Cómo lo llama {name}?
+favNameTitle.anon	¿Cómo lo llama tu hijo o hija?
+recordInstead	¿No sale bien? Grábalo
+grownupTitle	Controles para adultos
+grownupBody	Para abrir los ajustes, mantén pulsado el candado arriba del tablero {s} segundos y luego {answer}.
+answerSum	responde una suma corta
+answerPin	introduce tu PIN
+practiceTitle	Pruébalo: mantén pulsado el candado y luego {answer}
+practiceDone	Hecho. Así se abren los ajustes.
+longerHold	Pulsación más larga (5 segundos), para niños que exploran la pantalla
+skip	Omitir
+notPractised	sin practicar
+previewTitle	Esto es lo que verá {name}.
+previewTitle.anon	Esto es lo que verá tu hijo o hija.
+grid.20	botones grandes, más fáciles de tocar
+grid.36	medianos, un buen comienzo para la mayoría de los pequeños
+grid.60	más pequeños, más palabras en una página
+grid.84	pequeños, para usuarios con soltura
+moreSizes	Más tamaños
+gridKeep	Intenta mantener el mismo tamaño; el tablero crece mostrando más palabras, no cambiando de tamaño.
+levelDesc1	Nivel 1: unas 400 palabras, primeras palabras
+levelDesc2	Nivel 2: unas 1400 palabras, para formar frases
+levelDesc3	Nivel 3: unas 2600 palabras, para usuarios con soltura
+earlyOffer	Inicio sencillo: 4 imágenes grandes. Algunos niños empiezan así; a otros les va mejor el tablero completo.
+earlyHidden	El tablero completo se puede activar después.
+change	Cambiar
+sum.name	Nombre
+sum.age	Edad
+sum.comm	Se comunica
+sum.languages	Idiomas
+sum.mainLanguage	{lang} (principal)
+sum.forms	Formas de las palabras
+sum.access	Elige botones con
+sum.touch	Toque
+sum.lock	Bloqueo para adultos
+whySuggested	Sugerido porque {name} tiene {band}.
+whySuggested.anon	Sugerido porque tu hijo o hija tiene {band}.
+whyBigger	Sugerido porque {name} tiene {band} y necesita botones más grandes.
+whyBigger.anon	Sugerido porque tu hijo o hija tiene {band} y necesita botones más grandes.
+lockCardTitle	Cómo abrir los controles para adultos
+lockCardBody	Arriba del tablero: mantén pulsado el candado {s} segundos y luego {answer}.
+readResearch	Leer la investigación
+lockDeviceToApp	Bloquear el dispositivo en la app
+dailyTip	Consejo diario
+dailyTipSub	Una idea breve para modelar cada día. Solo pide notificaciones cuando lo activas.
+finishSetup	Terminar la configuración
+finishSetupSub	Extras opcionales, cuando tengas tiempo.
+check.tryTouch	Probar los ajustes táctiles con {name}
+check.tryTouch.anon	Probar los ajustes táctiles con tu hijo o hija
+check.pinAnyway	Usar un PIN en lugar de la suma
+check.moreVoices	Voces para los otros idiomas
+dismiss	Descartar
+earlyReminder	{name} lleva 2 semanas con el tablero sencillo. Piensa en mostrar más palabras.
+earlyReminder.anon	Tu hijo o hija lleva 2 semanas con el tablero sencillo. Piensa en mostrar más palabras.
+showMoreWords	Mostrar más palabras
+notNow	Ahora no
+spokenAs	Se pronuncia
+hearIt	Escuchar
+soundsWrong	¿Suena mal?
+noVoiceYet	Este dispositivo aún no tiene voz en {lang}.
+langWord	Palabra en {lang}
+langWordEmptyHint	Si lo dejas vacío, se usa la palabra en {lang}.
+draftWord	Traducción en borrador: revísala
+spokenAsHint	Escribe cómo suena si la voz lo dice mal (por ejemplo, «Shon» para Sean).
+recInSentences	Usar mi grabación también en frases
+recInSentencesSub	Tu grabación suena cuando se toca el botón solo. En frases, la voz de la app lo dice usando «Se pronuncia». Actívalo para que tu grabación suene también en frases, para sonidos, canciones o palabras que la voz no puede decir.
+holdTimeExplain	El dedo debe quedarse en un botón este tiempo antes de que hable. Ayuda cuando la mano roza la pantalla, pero un toque rápido no funcionará.
+holdTimeFormsHint	Con un tiempo de pulsación, usa el botón de formas para cambiar la forma de una palabra.
+palmRejection	Ignorar la mano apoyada
+palmRejectionSub	La palma o la mano apoyada en la pantalla no pulsa botones; el siguiente toque funciona.
+pinAgain	Escribe el PIN otra vez
+pinMismatch	Los dos PIN no coinciden. Inténtalo de nuevo.
+pinDeviceWide	El PIN es de este dispositivo: el mismo PIN abre los ajustes para todos los niños aquí.
+pinNeedsScreenLock	Para usar un PIN, primero activa el bloqueo de pantalla del dispositivo. Mientras tanto, la suma corta protege los ajustes.
+pinAnyway	Usar un PIN de todos modos
+recoveryCodeTitle	Anota este código de recuperación
+recoveryCodeBody	Si olvidas el PIN, este código te permite poner uno nuevo. Solo se muestra ahora. Guárdalo en un lugar seguro, lejos del dispositivo.
+recoveryLast4	Para comprobar que lo guardaste, escribe sus 4 últimos caracteres
+recoveryLast4Wrong	No coincide. Mira el código otra vez.
+forgotPin	¿Olvidaste el PIN?
+forgotPinReason	Confirma que eres tú para poner un nuevo PIN en los ajustes.
+enterRecoveryCode	Escribe el código de recuperación que anotaste
+recoveryCodeWrong	Ese código de recuperación no es correcto.
+switchToSum	Cambiar a la suma corta
+switchToSumBody	Este dispositivo no tiene bloqueo de pantalla ni código de recuperación, así que el PIN no se puede restablecer. Los ajustes se protegerán con una suma corta.
+olderChildHint	Los niños mayores pueden resolver la suma. Un PIN es más seguro.
+naturalVoicesName	voces naturales (las 10)
+naturalVoicesSub	Las voces naturales comparten una descarga de unos {mb} MB; las voces ligeras son más pequeñas. Pulsa reproducir para escuchar una voz antes.
+chooseVoiceTitle	Elige una voz
+chooseVoiceSub	Así sonará {name}. Puedes cambiarla después.
+chooseVoiceSub.anon	Así sonará tu hijo o hija. Puedes cambiarla después.
+systemVoice	La voz del dispositivo
+voiceAge	Edad de la voz (voces naturales)
+voiceAgeSub	Hace que una voz descargada suene más joven subiendo el tono y el timbre. Sonará más a un adulto pequeño que a un niño de verdad; prueba lo que le guste al niño.
+voiceAgeAdult	Adulto
+voiceAgeOlder	Niño mayor
+voiceAgeYoung	Niño pequeño
+voiceAgeStrength	Intensidad
+pitchSystemOnly	Para las voces del dispositivo. Las voces naturales usan Edad de la voz.
+listenSentence	Hola, me llamo {name}. Quiero jugar.
+listenSentence.anon	Hola. Quiero jugar.
+wordFormsManual	Formas de la palabra (opcional)
+wordFormsManualHint	Separadas por comas, p. ej.: ratones, ratón
+beta	beta
+betaLanguageSub	Palabras aún no revisadas por un hablante nativo
+betaLanguagesNote	Beta: las palabras de este idioma son borradores hasta que un hablante nativo las revise. Puedes corregir cualquier palabra.
+notListedHelpEmail	Si puedes ayudar a traducir Amalino a tu idioma, escríbenos a {email}.
+notListedHelpSite	Cómo ayudar a traducir: {site}
+comingLater	Llegará en una versión posterior
+comingLaterHeading	Llegará en una versión posterior
+needThisTellUs	¿{name} necesita alguna de estas opciones? Escríbenos a {email}.
+needThisTellUs.anon	¿Tu hijo o hija necesita alguna de estas opciones? Escríbenos a {email}.
+accessComingLaterNote	Este perfil se configuró con una forma de elegir que llegará en una versión posterior. Hasta entonces se usa tocar la pantalla.
+pinRecoveryNote	Este dispositivo no tiene bloqueo de pantalla, así que primero anotarás un código de recuperación. Abre los ajustes si se olvida el PIN.
+tip.myth.title	Para toda la familia
+tipTitle	Por qué importa
+howAccessName	¿Cómo elegirá {name} los botones?
+howAccessName.anon	¿Cómo elegirá los botones tu hijo o hija?
+tryItHide	Ocultar
+voiceDownloadPaused	Descarga en pausa, toca para reintentar
+downloadOnMobileData	Descargar ahora con datos móviles ({mb} MB)
+englishSpelling	Ortografía inglesa
+englishSpellingSub	Para este dispositivo: las palabras en inglés de los tableros y de la aplicación. Las palabras que escribiste tú se quedan como las escribiste.
+englishUk	Británica (colour, mum)
+englishUs	Estadounidense (color, mom)
+listAnd	{list} y {last}
+profileNoName	Tu hijo o hija
+nameButtonNeedsName	Este botón muestra el nombre de tu hijo o hija. Añade un nombre para usarlo.
+addName	Añadir nombre
+nameStepTitle	Cómo se dice el nombre de {name}
+nameInLang	Nombre en {lang}
+nameSameScriptHint	Si {name} tiene otro nombre en {lang} (p. ej., una forma corta), escríbelo aquí.
+nameOtherScriptHelp	Escribe el nombre de {name} como se escribe en {lang}. Si lo dejas vacío, se usa "{name}".
+backToSummary	Volver al resumen
+settingsChildName	Nombre de {name}
+settingsChildName.anon	Nombre de tu hijo o hija
+removeNameTitle	¿Quitar el nombre de {name}?
+removeNameBody	El tablero no dirá "Me llamo…".
+removeName	Quitar
+sum.childName	Nombre de {name}
+sum.nameNotAdded	Sin añadir
+check.addName	Añade el nombre de tu hijo o hija para que pueda decir "Me llamo…"
+tip.childName	Di el nombre como lo dice tu familia y modela "Me llamo…" cuando conozcáis a alguien.
+usingDeviceVoiceUntil	Se usa la voz del dispositivo hasta que {voice} se descargue.
+check.hearNameOne	Escucha cómo dice {voice} el nombre de {name} en {lang}
+check.hearNameMany	Escucha cómo suena el nombre de {name} en {langs}
+naturalVoicesHeading	Voces naturales
+naturalVoicesDownload	Una descarga de unos {mb} MB incluye todas las voces e idiomas. Funciona sin conexión una vez descargada.
+nameRecheckHear	Escuchar el nombre de {name} con {voice}
+nameRecheckWaiting.f	{voice} se está descargando. Cuando esté lista, podrás escuchar cómo dice el nombre de {name}.
+nameRecheckWaiting.m	{voice} se está descargando. Cuando esté listo, podrás escuchar cómo dice el nombre de {name}.
+nameRecheckWaiting.n	{voice} se está descargando. Cuando esté lista, podrás escuchar cómo dice esta voz el nombre de {name}.
+voiceChosen	Elegida
+naturalVoicesDownloading	Descargando voces naturales · {p} %
+voiceDownloadingOne	Descargando {voice} · {p} %
+voiceWaitingForWifi	Esperando al wifi
+voiceReadyLine	Lista
+saveNameTitle	¿Guardar los cambios en el nombre de {name}?
+discard	Descartar
+keepEditing	Seguir editando
+keepName	Mantener el nombre
+boardLanguage	Idioma del tablero: {lang}
+voiceName.F1	Ella
+voiceName.F2	Mila
+voiceName.F3	Nora
+voiceName.F4	Sofi
+voiceName.F5	Ida
+voiceName.M1	Leo
+voiceName.M2	Theo
+voiceName.M3	Adam
+voiceName.M4	Omar
+voiceName.M5	Ben
+voiceName.talesyntese	Rasmus
+voiceName.davefx	Pablo
+voiceName.alba	Fiona
+voiceName.claude	Claude
+voiceName.denis	Денис
+highlightSpeaking	Resaltar al hablar
+highlightSpeakingSub	Un tono suave en el botón mientras suena su palabra. La pulsación siempre se ve.
+playing	Reproduciendo…
+playingStop	Reproduciendo, toca para parar
+practiceCountedOne	1 toque contado
+practiceCounted	{n} toques contados
+practiceIgnoredOne	1 ignorado
+practiceIgnored	{n} ignorados
+practiceSep	 · 
+practiceWhyRepeat	demasiado rápido
+practiceWhyShort	demasiado corto
+practiceWhyPalm	mano o palma en la pantalla
+practiceWhyFinger	otro dedo ya estaba en la pantalla
+practiceMissedOne	1 fallido (entre botones)
+practiceMissed	{n} fallidos (entre botones)
+practiceBiggerHint	Muchos toques cayeron entre los botones. Subir «Zona de toque mayor», más arriba, puede ayudar.
+practiceBiggerHintSetup	Muchos toques cayeron entre los botones. Puede ayudar «Zona de toque mayor» en Ajustes → Toque y acceso → Ajuste del toque.
+sceneCropTitle	Recortar la foto
+sceneCropHint	Arrastra las esquinas para que lo que vais a nombrar llene la foto. La vista del niño no hace zoom.
+sceneCropDone	Recortar
+sceneCropWhole	Usar la foto entera
+sceneChangeCrop	Cambiar el recorte
+sceneOutsideCropOne	1 zona está fuera del recorte.
+sceneOutsideCrop	{n} zonas están fuera del recorte.
+sceneTouchAreas	Mostrar zonas de toque
+showOnBoard	Muéstramelo en el tablero
+mixedVoicesHint	Las frases mixtas cambiarán de voz. Usa {voice} en todos los idiomas para mantener una sola voz.
+deviceVoicesHeading	Voces del dispositivo
+moreNaturalVoices	Más voces naturales…
+mayNeedInternet	Puede necesitar internet
+sentenceCleared	Frase borrada
+stopAddingChildAsk	¿Dejar de añadir a este niño o niña? Lo que has introducido no se guarda.
+stopAddingChild	Salir
+replaceRecordingAsk	¿Reemplazar la grabación?
+replaceRecording	Reemplazar
+undoChangesAsk	¿Deshacer {n} cambios?
+lowerOthers	Bajar otros sonidos cuando {name} habla
+lowerOthers.anon	Bajar otros sonidos cuando habla tu hijo o hija
+lowerOthersSub	La música y el sonido de otras apps bajan, para que las palabras se oigan mejor.
+lowerOthersOff	No
+lowerOthersSpeaking	Mientras habla
+lowerOthersOpen	Mientras Amalino está abierto
+boardOrientation	Orientación del tablero en este teléfono
+boardOrientationSub	El tablero, el teclado y las escenas se quedan en esta orientación. Las pantallas para adultos siguen girando.
+orientPortrait	Vertical
+orientLandscape	Horizontal
+gridTooSmall	Demasiado pequeño en esta pantalla para {n} botones. En esta pantalla caben hasta {max}.
+gridTooBig	Este tablero tiene {n} botones, pero en esta pantalla caben {max}. Las palabras estarán en otros sitios que en el otro dispositivo de {name}.
+gridTooBig.anon	Este tablero tiene {n} botones, pero en esta pantalla caben {max}. Las palabras estarán en otros sitios que en el otro dispositivo de tu hijo o hija.
+gridUseN	Usar {n} botones
+gapLimit	Hasta {gap} en esta pantalla: con más espacio, los {n} botones quedarían por debajo de 44 pt.
+savedSpeechVoiceBuilding.one	Preparando {voice}: {done} de {n} palabra
+savedSpeechVoiceBuilding.two	
+savedSpeechVoiceBuilding.few	
+savedSpeechVoiceBuilding.many	
+savedSpeechVoiceBuilding.zero	
+savedSpeechVoiceBuilding.other	Preparando {voice}: {done} de {n} palabras
+orientAskLandscape	En horizontal, en esta pantalla caben {max} botones; el tablero de {name} tiene {n}. Las palabras cambiarán de sitio y {name} tendrá que aprenderlas de nuevo.
+orientAskLandscape.anon	En horizontal, en esta pantalla caben {max} botones; el tablero de tu hijo o hija tiene {n}. Las palabras cambiarán de sitio y tendrá que aprenderlas de nuevo.
+orientAskPortrait	En vertical, en esta pantalla caben {max} botones; el tablero de {name} tiene {n}. Las palabras cambiarán de sitio y {name} tendrá que aprenderlas de nuevo.
+orientAskPortrait.anon	En vertical, en esta pantalla caben {max} botones; el tablero de tu hijo o hija tiene {n}. Las palabras cambiarán de sitio y tendrá que aprenderlas de nuevo.
+orientKeepPortrait	Mantener vertical
+orientKeepLandscape	Mantener horizontal
+orientUseLandscape	Usar horizontal con {n} botones
+orientUsePortrait	Usar vertical con {n} botones
+barDelete	Borrar
+barForms	Formas
+barClear	Limpiar
+quickMore	Más
+quickPageFull	La página de frases está llena. Puedes quitar una o crear un tablero de frases para más.
+makePhraseBoard	Crear un tablero de frases
+phraseBoardTitle	Frases
+qpOnBoard	En el tablero
+qpOnBoardSub	Dos frases junto a «para» y «ayúdame» en el tablero, siempre en el mismo sitio. Todas las frases están también en la página Más.
+qpPick1	Primera frase
+qpPick2	Segunda frase
+qpNone	Vacío
+qpPage	Página de frases
+qpPageSub	La página Más: hasta {max} frases, cada una en su sitio. Una frase borrada deja su sitio vacío; nada se mueve.
+qpPlace	Sitio en la página
+qpFixed	Siempre en este sitio y en el tablero, para llegar a ella desde cualquier pantalla.
+check.quickRow	Elegir las dos frases que {name} más necesita
+check.quickRow.anon	Elegir las dos frases que tu hijo o hija más necesita
+kbSettings	Teclado
+kbSuggestions	Sugerencias de palabras
+kbSuggestionsSub	Algunos terapeutas lo desactivan mientras el niño practica la ortografía.
+kbLearn	Aprender de lo que escribe {name}
+kbLearn.anon	Aprender de lo que escribe tu hijo o hija
+kbLayout	Distribución
+kbLayoutStandard	Estándar
+kbLayoutAbc	Orden alfabético
+kbKeySize	Tamaño de las teclas en este teléfono
+kbKeySizeAuto	Automático
+kbKeySizeAutoSub	Según los ajustes de toque
+kbKeySizeStandard	Estándar
+kbKeySizeLarger	Teclas más grandes
+kbSpeak	Decir
+kbClose	Cerrar el teclado
+kbNumbers	Números y signos
+kbLetters	Letras
+tip.keyboard	Muestra también cómo se escribe: escribe una palabra despacio mientras la dices y luego toca Decir.
+gridLongWords	Algunas palabras largas no caben enteras con este tamaño en vertical. En horizontal se ven todas.

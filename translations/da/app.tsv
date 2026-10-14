@@ -1,0 +1,1000 @@
+# key	text
+# The Amalino app's screens in da. English (translations/en/app.tsv) is the source; keep every
+# {placeholder} as it is in English. Licence: CC BY-SA 4.0.
+about	Om og licenser
+aboutBody	Gratis AAC til børn. Virker offline; dine data bliver på enheden.
+aboutChild	Om barnet
+aboutSub	Privatliv, symbollicenser, feedback
+access.head	Hovedbevægelse (kamera)
+access.headSub	Virker bedst med godt lys og enheden i en holder. Kamerabilleder bliver på enheden.
+access.switch	Kontakter (scanning)
+access.switchSub	Store knapper, som barnet trykker på (med hånd, hoved eller fod), mens appen fremhæver valgene ét ad gangen. En ergoterapeut hjælper som regel med at vælge og sætte en kontakt op.
+access.touch	Berøre skærmen
+activateOnRelease	Aktivér når fingeren løftes
+activateOnReleaseSub	Barnet kan glide hen til den rigtige knap først
+add	Tilføj
+addChild	Tilføj et barn
+addWord	Tilføj et ord
+adultCheck	Kun for voksne
+adultTools	Voksenværktøjer
+allReviewed	Alle ord er gennemgået.
+allSet	Klar!
+back	Tilbage
+backupAuto	Der tages også automatisk en sikkerhedskopi hver dag.
+backupNow	Sikkerhedskopiér nu
+backupPassword	Adgangskode til sikkerhedskopi
+backups	Sikkerhedskopier
+borderOnly	Farve kun som kant
+borderOnlySub	Roligere udseende; symbolerne træder mere frem
+buttonStyle	Knapstil
+cancel	Annullér
+cellGap	Afstand mellem knapper
+changeFolder	Skift mappe
+changePin	Skift PIN
+childAge	Alder
+childName	Barnets navn
+choosePhoto	Vælg foto
+chooseSymbol	Vælg billede
+clear	Ryd
+clearAfterSpeak	Ryd beskeden efter oplæsning
+clearSelection	Ryd markering
+close	Luk
+colour	Farve
+colourCoding	Ordklassefarver
+confirm	Bekræft
+createBoards	Opret tavler
+cutOut	Klippekort
+delete	Slet
+deleteButton	Slet denne knap?
+deleteButtonBody	Du kan fortryde det under Historik.
+deleteContextRuleAsk	Slet denne regel? {board} bliver ikke længere foreslået af den.
+deleteHotspotAsk	Slet dette hotspot? Ordet og optagelsen forsvinder med det.
+deleteQuickPhraseAsk	Slet den hurtige sætning »{text}«?
+deleteCoreWarning	Dette er et kerneord. Skjul beholder pladsen til senere; slet efterlader en tom plads.
+deleteLast	Slet sidste ord
+dimmed	Dæmpet
+displaySensory	Visning, hørelse og sanser
+done	Færdig
+draft	kladde
+earlyMode	Tidlig tilstand
+earlyModeSub	Meget enkel: store knapper der taler med det samme, ingen beskedlinje. Hele ordforrådet er der stadig.
+edit	Redigér
+editBoard	Redigér denne tavle
+editBoardSub	Tryk på en celle for at ændre ord, billeder eller optagelser
+editButton	Redigér knap
+editHistory	Redigeringshistorik
+editLock	Redigeringslås
+editingHint	Redigering: tryk på en celle for at ændre den. Ord flytter sig aldrig af sig selv.
+enterPin	Indtast PIN
+exportBackup	Eksportér sikkerhedskopi
+exportBackupSub	Adgangskodebeskyttet fil til en ny enhed eller en geninstallation
+favouriteName	Hvad hedder det?
+favourites	Favoritter
+feedback	Feedback
+feedbackAskCoordinator	Spørg den, der gav dig appen, hvordan du sender feedback.
+firstTip	Første tip: ved dagens mellemmåltid, peg på "mere" på enheden, hver gang du siger "mere". Barnet behøver ikke gøre det efter.
+fiveFavourites	5 yndlingsting
+fiveFavouritesSub	Ting barnet elsker (sæbebobler, en tegnefilm, mormor). De kommer i en Favoritter-mappe.
+followSystem	Følg enhedens indstilling
+gridSize	Gitterstørrelse
+gridSizeCurrent	{n} knapper
+gridSuggestion	Forslag: {n} knapper. Alle kerneord er med; de mindre hyppige er skjult fra start og beholder deres plads.
+hidden	Skjult
+hideInstead	Skjul i stedet
+historyBackups	Historik og sikkerhedskopier
+historyBackupsSub	Fortryd enhver ændring; gendan en sikkerhedskopi
+holdForAdult	Voksne: hold i {seconds} sekunder
+holdSeconds	Holdetid for at åbne
+holdTime	Holdetid
+home	Hjem
+homeLanguageFirst	Hjemmesproget først: tavlen viser de samme ord de samme steder på alle sprog.
+homeLanguages	Andre sprog hjemme eller i skolen
+howToModel	Sådan kan du vise det
+importBackup	Gendan fra en fil
+includeFolders	Medtag mapper
+labelOnTop	Tekst over billedet
+languages	Sprog
+languagesSub	Hjemmesprog og gennemgang af oversættelser
+latency	Tid fra tryk til tale
+licences	Licenser
+listen	Lyt
+loadingVoices	Indlæser stemmer…
+lockChallenge	Lille regnestykke (standard)
+lockNow	Lås
+lockPin	PIN-kode
+logModelTaps	Registrér voksnes modellering separat
+logModelTapsSub	Tæller hvor ofte voksne viser; blandes aldrig med barnets ord
+makeFolder	Lad den åbne en mappe
+messageBar	Beskedlinje
+micPermission	Giv adgang til mikrofonen for at optage ord.
+modellingMode	Modelleringstilstand
+modellingModeHow	Tryk på ord, mens du taler, for at vise {name} hvordan.
+modellingModeHow.anon	Tryk på ord, mens du taler, for at vise dit barn hvordan.
+modellingModeSub	Dine tryk tæller ikke som barnets ord.
+modellingOn	Modellering: du viser, barnet kigger
+muteUiSounds	Slå lyde i brugerfladen fra
+myth.age.a	Nej. Der er ingen minimumsalder. Tidlig brug af billeder, tegn og tale sammen støtter udviklingen.
+myth.age.q	Er mit barn for ungt?
+myth.core.a	Omkring 25 ord udgør det meste af et småbarns tale, og omkring 200 kerneord dækker det meste af hverdagssproget. Faste pladser bygger motorisk hukommelse.
+myth.core.q	Hvorfor så få billeder af ting?
+myth.home.a	Familier hvis enhed ikke virkede på deres hjemmesprog, brugte den meget mindre. Brug alle de sprog, familien taler.
+myth.home.q	Skal vi kun bruge skolesproget?
+myth.modelling.a	Børn lærer at bruge en kommunikationsapp ved at se voksne bruge den. Tryk på ordene, mens du taler, hver dag, uden at bede barnet gøre efter.
+myth.modelling.q	Hvordan lærer mit barn det?
+myth.ready.a	Der kræves ingen test af parathed. En kommunikationsapp virker bedst, når voksne holder den enkel, altid tilgængelig og selv bruger den.
+myth.ready.q	Skal mit barn være "klar" først?
+myth.speech.a	Nej. Forskning viser, at redskaber til kommunikation som denne app ikke holder talen tilbage og endda kan hjælpe. De er en bro til tale, ikke en erstatning.
+myth.speech.q	Vil det forhindre mit barn i at lære at tale?
+mythBuster	Hvorfor det hjælper
+mythBusterSub	Korte svar på almindelige bekymringer, med forskningen
+mythIntro	Forældre er ofte bekymrede for AAC (hjælpemidler, der hjælper børn med at kommunikere, som denne app). Her er, hvad forskningen siger.
+needsReviewCount	{n} ord skal gennemgås
+newFolder	Ny mappe
+newPin	Ny PIN (4–8 cifre)
+next	Næste
+noMinimumAge	Alle aldre er fine. Selv småbørn kan begynde.
+noSymbols	Ingen billeder fundet
+noTranslation	Ingen oversættelse endnu
+noVoiceFor	Ingen offline-stemme til {language}
+noVoiceHelp	Installér en under enhedens tekst-til-tale-indstillinger, eller optag ord med din egen stemme.
+off	Fra
+ok	OK
+on	Til
+opensFolder	Åbner mappe
+palette.calm	Rolige farver
+palette.colorBlindSafe	Farveblind-venlige
+palette.fitzgerald	Standard (Fitzgerald-nøgle)
+palette.none	Ingen farver
+paperA4	Papirstørrelse A4
+passwordsDiffer	Adgangskoderne er forskellige
+pitch	Tonehøjde
+practice	Øv med barnet
+preciseTouch	Rammer let små mål
+preciseTouchSub	Slå fra for at starte med større knapper
+primaryLanguage	Hovedsprog
+printBoards	Udskriv tavler
+printBoardsSub	Papirbackup til badetid, svømmehallen eller en ødelagt enhed
+printOrSave	Udskriv eller gem PDF
+privacy	Privatliv
+privacyLocal	Tavler, optagelser og log gemmes kun på denne enhed, krypteret.
+privacyNoAds	Ingen reklamer, ingen sporing, ingen konto nødvendig.
+privacyStorage	Lokal redigeringshistorik: {ops} poster
+profiles	Børn
+quickPhrase	Hurtig sætning
+quickPhrases	Hurtige sætninger
+quickPhrasesSub	Op til {max} sætninger, altid ét tryk væk.
+qpUrgent	Haster
+readyBody	Appen laver et fuldt kerneordforråd med mapper, dine favoritter og hurtige sætninger.
+readyTitle	Klar til at lave {name}s tavler
+readyTitle.anon	Klar til at lave dit barns tavler
+recordVoice	Optag stemme
+redo	Gentag
+reduceMotion	Reducér bevægelse
+relockAfter	Lås igen efter
+removeRecording	Fjern optagelse
+removeRecordingAsk	Fjern optagelsen af dette ord? Stemmen siger det i stedet.
+repeatIgnore	Ignorér gentagne tryk inden for
+repeatPassword	Gentag adgangskode
+replanBody	Ændring af gitterstørrelsen flytter ord til nye steder. Barnets motoriske hukommelse skal læres igen. Gør det kun sammen med jeres talepædagog.
+replanTitle	Planlæg motorisk layout igen?
+replanWarning	Ord beholder deres område, men placeringen ændres. Der tages først en sikkerhedskopi.
+restore	Gendan
+restoreBody	Alle tavler, optagelser og log på enheden erstattes. Der tages først en sikkerhedskopi af den nuværende tilstand.
+restoreHere	Gå tilbage hertil
+restoreQ	Gendan denne sikkerhedskopi?
+restored	Sikkerhedskopi gendannet
+reveal	Vis
+revealCounts	Synlige {visible} · dæmpede {dimmed} · skjulte {hidden}
+revealNextSet	Foreslåede næste ord
+revealWords	Vis ord
+revealWordsSub	Vis flere ord efterhånden som barnet lærer; intet flytter sig
+save	Gem
+searchSymbols	Søg billeder (fx trist, hund)
+sectionBoards	Tavler og ord
+sectionData	Data
+sectionSettings	Indstillinger
+sectionTogether	Sammen
+sendFeedback	Send feedback
+setPin	Vælg en PIN
+setPrimary	Hovedsprog
+showLabel	Vis ordet
+showLabels	Vis ord under billeder
+showMeWhere	Vis mig hvor
+showMeWhereSub	Find et ord og se vejen dertil
+showMessageBar	Vis beskedlinjen
+showQuickPhrases	Vis hurtige sætninger
+speakEachWord	Sig hvert ord ved tryk
+speakEachWordSub	Fra: ord kommer kun i beskeden, indtil der trykkes på den
+speakMessage	Læs beskeden op
+preparingSpeech	Forbereder…
+speechRate	Talehastighed
+speechVoice	Tale og stemmer
+startTalking	Begynd at tale
+stepOf	Trin {n} af {total}
+stopGuide	Stop vejledning
+stopRecording	Stop
+takePhoto	Tag foto
+targetEnlargement	Større berøringsområde
+textSize	Tekststørrelse
+theme	Udseende
+theme.calm	Rolig
+theme.dark	Mørk
+theme.highContrast	Høj kontrast
+theme.standard	Standard
+theme.teen	Teenager (ikke barnligt)
+tip.about	Vis andre voksne appen personligt: en demo på 2 minutter i skolen hjælper mere end en folder.
+tip.display	Ændr én ting ad gangen og se barnet an i et par dage, før du ændrer mere.
+tip.editor	Når du tilføjer et ord, så brug det selv på enheden mindst tre gange i dag.
+tip.history	Fejl er helt i orden. Alt, du ændrer, kan fortrydes her.
+tip.home	Vis ét ord ved hvert måltid og hver legestund. Sig det og tryk på det samtidig.
+tip.languages	Tal dit hjemmesprog med barnet. Skift tavlen til det med ét tryk, og vis i det sprog.
+tip.lock	Lad enheden være hos barnet hele dagen; låsen beskytter tavlerne, ikke stemmen.
+tip.message	Vent. Efter du har vist, hold en pause på 10 sekunder og se forventningsfuld ud; giv barnet tid til at svare.
+tip.myth	Del denne side med bedsteforældre og lærere, så alle voksne bruger appen på samme måde med dit barn.
+tip.print	Hav en lamineret kernetavle i badet og i bilen; vis på papir præcis som på enheden.
+tip.profiles	Hvert barn får sine egne tavler og ord; opsæt dem sammen med de voksne, der kender barnet bedst.
+tip.quick	Vis "stop" og "hjælp mig" også i rolige stunder, ikke kun når noget går galt.
+tip.reveal	Vis først et nyt ord, når du har vist det mange gange. Bliv ved med at vise skjulte ord — de er dæmpede for dig.
+tip.speech	Lad barnet høre en stemme, der passer til dem. Spørg barnet, hvilken stemme det kan lide.
+tip.touch	Se hvordan barnet trykker i en dag. Øg kun holdetiden, hvis mange tryk er utilsigtede.
+translationReview	Gennemgang af oversættelser
+tremor.firstLanding	Hvor fingeren lander først
+tremor.longestDwell	Hvor fingeren hviler længst
+tremor.off	Fra
+tremorFilter	Rystelsesfilter
+tryAgain	Prøv igen
+typeAWord	Skriv et ord
+typeToSearch	Skriv for at søge
+undo	Fortryd
+visibility	Vist for barnet
+visible	Synlig
+voice	Stemme
+voiceFor	Stemme til {language}
+volume	Lydstyrke
+waterproof	Til laminering
+waterproofSub	Kun kerneside, tydelige kanter, bred margen
+welcomeBody	Opsætningen tager cirka 5 minutter. Alt bliver på denne enhed. Du kan ændre alt senere.
+welcomeTitle	Velkommen
+whichLanguages	Hvilke sprog?
+wordLabel	Ord ({language})
+wordNotFound	"{word}" er ikke på tavlerne endnu
+wordType	Ordklasse
+wordTypeColour	Ordklassefarve
+wrongPin	Forkert PIN
+acceptDownload	Acceptér og download
+arasaacInstalled	Downloadet. Billeder gemmes offline, når du vælger dem.
+arasaacLicence	ARASAAC er kun gratis til ikke-kommerciel brug. Ordlisten hentes fra api.arasaac.org; billeder hentes kun, når du vælger dem. Intet om barnet sendes.
+arasaacSub	Valgfrit: søg i hele ARASAAC (ca. 13.000 billeder); billeder hentes, når du vælger dem
+arasaacFull	Alle ARASAAC-billeder
+arasaacIncluded	ARASAAC (inkluderet)
+arasaacIncludedSub	{n} billeder til de indbyggede ord · CC BY-NC-SA, gratis til ikke-kommerciel brug
+arasaacRemoveAsk	Fjern alle ARASAAC-billeder fra denne enhed? Billeder, du allerede har valgt derfra, forsvinder også. De inkluderede billeder bliver.
+useNewPictures	Brug de nye billeder på barnets tavler
+useNewPicturesSub	Indbyggede ord, der stadig har det oprindelige billede, får det nye. Dine egne billeder og fotos bevares.
+newPicturesDone	{n} knapper opdateret. Du kan fortryde det under Historik.
+download	Download
+downloadFailed	Download mislykkedes
+ownPhotos	Dine egne fotos
+ownPhotosSub	Brug et foto på enhver knap via knapeditoren
+remove	Fjern
+symbolSets	Symbolsæt
+symbolSetsSub	Mulberry, OpenMoji, ARASAAC, dine fotos
+tip.symbols	Rigtige fotos hjælper begyndere mest; symboler hjælper sproget. Brug begge, og behold samme billede til et ord.
+accept	Acceptér
+accessMethod	Sådan vælger barnet
+addHotspot	Tilføj et hotspot
+addSelected	Tilføj valgte
+agree	Jeg accepterer
+aiCloud	Cloud-hjælpere til voksne
+aiCloudConsent	Når du bruger en cloud-hjælper, sendes det foto, emne eller de ord, du vælger, til vores server og en AI-tjeneste for at lave et udkast. Intet af det, barnet siger, sendes. Du kan slå det fra når som helst.
+aiCloudConsentTitle	Tillad cloud-hjælpere?
+aiCloudSub	Bedre udkast til scener, tavler og oversættelser. Kræver synkronisering og dit samtykke.
+aiCloudTools	Brug cloud-hjælpere
+aiContext	Foreslå sider til situationen
+aiContextSub	Frokost ved middagstid, parken når I er der. Et kort, barnet kan ignorere.
+aiHelpers	AI-hjælpere
+aiHelpersSub	Alle slået fra fra start; barnet vælger altid
+aiKeyboard	Ordforslag på tastaturet
+aiMaster	AI-hjælpere til
+aiMasterSub	Fra slår alle AI-funktioner fra, på enheden og i skyen.
+aiNextWord	Fremhæv sandsynlige næste ord
+aiNextWordSub	Markerer blidt 2–3 knapper. Knapper flytter sig aldrig. Lærer kun på denne enhed.
+aiOnDevice	På denne enhed
+aiPhrase	Sætning fra forbogstaver
+aiPhraseSub	Skriv "jvgt" for at få tilbudt "jeg vil gå til…". Barnet vælger eller ignorerer.
+allTips	Kommer snart
+approve	Godkend
+approveDevices	Enheder der venter
+auditoryCues	Sig hvert punkt stille
+auditoryCuesSub	Hjælper børn, der ikke kan se markeringen godt
+backToBoard	Tilbage til tavlen
+boardBuilder	Lav en emneside
+boardBuilderSub	"En tavle til en fødselsdag" på sekunder
+boardFor	En side om…
+boardForHint	fx fødselsdag, læge, zoo
+check	Tjek
+childDevice	Dette er barnets enhed
+childDeviceSub	Ændringer der flytter kerneord venter på dit OK her
+cloudFailed	Cloud-hjælperen svarede ikke
+coaching	Daglig vejledning
+coachingSub	Ét tip på 60 sekunder om dagen og ugens ord
+combinations	Ordkombinationer
+createHousehold	Start en familiegruppe
+createHouseholdSub	Denne enhed laver den hemmelige nøgle; serveren ser den aldrig
+dailyReminder	Daglig påmindelse
+days	{n} dage
+daysUsed	Dage i brug
+devicesAndPeople	Enheder og personer
+dragToAddHotspot	Træk en boks på fotoet for at tilføje et talende hotspot
+editHotspot	Redigér hotspot
+email	E-mail
+emailCode	Kode fra e-mailen
+exportAllBoards	Eksportér alle tavler (.obz)
+exportCsv	Eksportér brugslog (CSV)
+exportPdf	Eksportér fremskridtsrapport (PDF)
+exportStudy	Eksportér undersøgelsesoversigt (uden ord)
+exportThisBoard	Eksportér denne tavle
+ga.android.1	Åbn Indstillinger > Sikkerhed > Fastgørelse af app, og slå det til.
+ga.android.2	Slå "Bed om PIN før frigørelse" til.
+ga.android.3	Åbn Amalino, åbn Seneste apps og tryk på app-ikonet > Fastgør.
+ga.android.4	For at forlade, hold Tilbage og Seneste apps samtidig, og indtast PIN.
+ga.androidTitle	Android: fastgør appen
+ga.ios.1	Åbn Indstillinger > Tilgængelighed > Guidet adgang, og slå det til.
+ga.ios.2	Vælg en kode under Kodeindstillinger.
+ga.ios.3	Åbn Amalino og tryk tre gange på side- (eller Hjem-)knappen, og tryk Start.
+ga.ios.4	For at forlade, tryk tre gange igen og indtast koden.
+ga.iosTitle	iPad / iPhone: Guidet adgang
+ga.samsung	Samsung-tablets: "Samsung Kids" og "Fastgør vinduer" virker på samme måde.
+guidedAccess	Hold barnet i appen
+headHelp	Hovedsporing bruger kun frontkameraet på denne enhed. Opsæt det med barnet siddende godt foran enheden.
+heldEdits	{n} layoutændringer venter på dit OK
+importObz	Importér tavler (.obz / .obf)
+importObzSub	Fra Cboard og andre apps; tilføjes som mapper
+imported	Importeret. {matched} af {total} knapper blev koblet til kendte ord.
+invite.parent	Invitér en anden forælder
+invite.slp	Invitér talepædagogen
+invite.teacher	Invitér en lærer
+inviteCode	Invitationskode
+join	Deltag
+keyboard	Tastatur
+lastSync	Seneste synkronisering
+madeByCloud	cloud-hjælper
+madeOnDevice	lavet på denne enhed
+makeDraft	Lav udkast
+metric	Mål
+mlu	Ord pr. sætning
+modelTaps	Voksnes modelleringstryk
+needsReview	skal gennemgås
+newHotspot	Nyt hotspot
+newSceneCamera	Ny scene fra kamera
+newSceneGallery	Ny scene fra fotos
+newWords	Nye ord
+newWordsPerMonth	Nye ord pr. måned
+noSuggestions	Ingen forslag til dette foto. Træk bokse for selv at tilføje hotspots.
+noTopicPack	Ingen færdig side til dette emne på enheden. Prøv et andet ord eller tillad cloud-hjælpere.
+notApprovedYet	Ikke godkendt endnu. Godkend enheden fra en enhed, der allerede er i gruppen.
+openBoardFormat	Del tavler (Open Board Format)
+openBoardFormatSub	Flyt tavler til og fra andre AAC-apps
+ownSentences	Egne sætninger
+password	Adgangskode
+pressSwitch	Tryk på kontakten nu…
+progress	Fremskridt
+progressSub	Nye ord, kombinationer, mest brugte ord
+quickAdd	Hurtig tilføjelse
+recentUtterances	Seneste sætninger
+reject	Afvis
+rejectHeldAsk	Afvis {n} layoutændringer fra en anden enhed? De bliver kasseret og ikke brugt her.
+rejectLessonPageAsk	Afvis »{title}«? Siden og knapperne, der åbner den, fjernes.
+reminder	Påmindelse
+reminderTime	Tidspunkt for påmindelse
+reviewBeforeSaving	tjek hvert ord før du gemmer
+saveAsFolder	Gem som mappe
+scan.block	Blokke, så rækker, så knapper
+scan.linear	Én knap ad gangen
+scan.oneSwitch	Én kontakt (flytter automatisk)
+scan.rowColumn	Rækker, så knapper
+scan.twoSwitch	To kontakter (flyt og vælg)
+scanLoops	Runder før start forfra
+scanSpeed	Scanningshastighed
+scene	Scene
+sceneName	Hvilket sted eller øjeblik er det?
+sceneEmptyHint	Træk en boks på billedet for at lave et område, der taler. For en uregelmæssig form, tryk på Tegn en form nedenfor.
+pickCellTitle	Hvor skal det være?
+pickCellPutHere	Sæt den her
+pickCellFavouritesInstead	Sæt den i Favoritter i stedet
+pickCellBoardFull	Denne tavle er fuld.
+pickCellChooseAnother	Vælg en anden tavle
+pickCellFavouritesNote	Holdt ledig til ★ Favoritter
+pickCellHiddenWord	Skjult ord: '{word}', vises fra niveau {level}
+sceneMove	Flyt…
+openThisFolder	Åbn denne mappe
+discardSceneQuestion	Kassér denne scene? Billedet bliver slettet.
+sceneWordOnTap	Ord ved tryk
+sceneWordsAlways	Ord vist altid
+showThisCode	Vis denne kode på en enhed, der allerede er i gruppen
+signIn	Log ind
+space	mellemrum
+suggestFailed	Kunne ikke foreslå hotspots
+suggestHotspots	Foreslå hotspots
+suggestionUse	Brugte forslag
+switchAny	Kontaktens tast
+switchHelp	Bluetooth- og USB-kontakter fungerer som tastaturer. Par kontakten i enhedens indstillinger og tryk på den her.
+switchMove	"Flyt"-kontakt
+switchScanning	Kontaktscanning
+switchSelect	"Vælg"-kontakt
+syncE2e	End-to-end-krypteret: serveren gemmer kun data, den ikke kan læse.
+syncNotConfigured	Synkronisering er ikke sat op i denne version af appen.
+syncNow	Synkronisér nu
+syncState.error	Synkroniseringsproblem
+syncState.needsKey	Logget ind — opsæt familiegruppen
+syncState.off	Synkronisering er slået fra (alt bliver på enheden)
+syncState.ready	Synkronisering er slået til
+syncState.signedOut	Log ind for at slå synkronisering til
+syncSub	Samme tavler hjemme, i skolen og på telefonen; fjernredigering
+syncTitle	Synkronisering og deling
+timeOfDay	Tidspunkt på dagen
+tip.access	Prøv en adgangsmetode i mindst to uger med masser af modellering, før du vurderer den.
+tip.ai	Forslag må aldrig erstatte modellering. Bliv ved med selv at vise ord, også med markeringer slået til.
+tip.builder	Kig den nye side igennem sammen før begivenheden, og vis to eller tre af ordene.
+tip.coaching	Læs dagens tip, og prøv det én gang. Små daglige skridt virker bedst.
+tip.guided	Låsning af appen holder stemmen tilgængelig; lås aldrig barnet ude fra tavlen.
+tip.obf	Når du importerer en tavle, så tjek at ordene er de steder, barnet allerede kender.
+tip.progress	Brug tallene til at vælge, hvad du skal vise næste gang, ikke til at teste barnet.
+tip.sync	Aftal, hvem der ændrer tavlen, og fortæl hinanden det. Overraskelser i ordenes placering forvirrer barnet.
+todayTip	Dagens tip ({day} af {total})
+topWords	Mest brugte ord
+touchAccess	Berøring og adgang
+touchTuning	Berøringsjustering
+turnOffSync	Slå synkronisering fra og slet serverdata
+turnOffSyncSub	Tavlerne bliver på denne enhed
+turnOffAndDelete	Slå fra og slet
+turnOffSyncAsk	Slå synkronisering fra og slet familiegruppens data på serveren? Tavlerne bliver på denne enhed. Det kan ikke fortrydes.
+turnOnSync	Slå synkronisering til
+usePassword	Brug en adgangskode i stedet
+value	Værdi
+waitingForApproval	Venter på godkendelse. Kode: {code}
+warn.batteryCritical	Batteriet er meget lavt — oplad nu
+warn.batteryLow	Lavt batteri
+warn.muted	Lyden er slået fra — barnet kan ikke høres
+warn.volumeLow	Lydstyrken er lav
+wordOfWeek	Ugens ord
+wordsSaid	Sagte ord
+wotwNone	Ikke valgt endnu
+wotwSub	Op til 3 ord de voksne viser denne uge (fremhævet kun i modelleringstilstand)
+blinkSelect	Vælg med et langt blink
+blinkSelectSub	Luk begge øjne i et halvt sekund; normale blink ignoreres
+calibrate	Kalibrér hovedbevægelse
+calibrateHint	Følg stjernen med hovedet
+cameraUnavailable	Kamera ikke tilgængeligt
+dwellTime	Hviletid for at vælge
+openVoices	Åbne stemmer (hent én gang, derefter offline)
+openVoicesSub	Neurale stemmer, der kører på denne enhed. Der findes endnu få børnestemmer; vælg den, barnet kan lide.
+clients	Mine klientfamilier
+from	Fra
+lessonPages	Lektionssider fra skole og terapi
+lessonPagesSub	Sider en lærer eller talepædagog tilføjede; åbn eller afvis
+noLessonPages	Ingen lektionssider endnu.
+open	Åbn
+ownDevice	Børn på denne enhed
+role	Rolle
+tip.clients	Hold hver families ord på deres eget hjemmesprog og rutiner; tavlerne tilhører barnet.
+tip.lessons	Vis ordene fra en lektionsside derhjemme én gang, før den bruges i klassen.
+goal.combinations	Ordkombinationer pr. uge
+goal.daysUsed	Dage i brug pr. uge
+goal.mlu	Gennemsnitligt antal ord pr. sætning
+goal.newWords	Nye ord pr. uge
+goal.wordUse	Brug af ét ord pr. uge
+goalTarget	Mål
+goals	Mål
+goalsSub	Mål fra talepædagogen med ugentlige fremskridt
+met	Nået
+newGoal	Nyt mål
+noGoals	Ingen mål endnu. En talepædagog kan tilføje et her.
+share	Del
+shareExamples	Del eksempelsætninger
+shareExamplesSub	Fra, medmindre du vælger sætninger her (op til 5). Intet andet, barnet sagde, deles.
+sum.combos	Barnet lavede {n} sætninger med to eller flere ord (ca. {mlu} ord pr. sætning).
+sum.days	{name} brugte appen {n} dage i denne uge.
+sum.days.anon	Dit barn brugte appen {n} dage i denne uge.
+sum.model	Voksne viste på enheden {n} gange.
+sum.newList	Nye ord: {list}.
+sum.next	I næste uge kan I prøve at vise "{word}" i nye kombinationer.
+sum.words	Der blev sagt {n} ord, heraf {new} for første gang.
+thisWeek	Denne uge
+tip.goals	Vælg ét mål ad gangen og vis færdigheden mange gange om dagen.
+tip.summary	Del oversigten med alle, der taler med barnet, og vælg ét ord at vise sammen.
+week	Uge
+weeklySummary	Ugentlig oversigt
+writeWithCloud	Omskriv med cloud-hjælperen (kun samlede tal)
+addCalendarRule	Foreslå en side til en kalenderbegivenhed
+addMealRules	Tilføj forslag ved måltider (Mad-siden)
+addPlaceRule	Foreslå en side på dette sted
+addPlaceRuleSub	Gemmer hvor du er nu (bliver på enheden)
+addTimeRule	Foreslå en side på et tidspunkt
+calendarKeyword	Ord i begivenhedens titel (fx læge)
+contextBoards	Sider til situationen
+contextOff	Slå "Foreslå sider til situationen" til under AI-hjælpere for at bruge reglerne.
+noLocation	Placering er ikke tilgængelig
+tip.context	Et forslag er kun en dør: vis ordene på siden, når den åbner.
+useCalendar	Brug kalenderen
+useCalendarSub	Læser kun dagens begivenheder på denne enhed
+useLocation	Brug placering
+useLocationSub	Tjekker gemte steder kun på enheden; uploades aldrig
+grammarHelper	Ordformer
+grammarHelperSub	Hold en knap inde for at vælge hunde, gik, større…
+allow	Tillad
+search	Søg
+library	Tavlebibliotek
+librarySub	Tavler delt af familier og terapeuter
+libraryConsent	Biblioteket henter tavler, som andre familier og terapeuter har delt. Intet om dit barn bliver sendt. Hvis du deler en tavle, uploades kun selve tavlen og den titel og beskrivelse, du skriver, under licensen CC BY-SA 4.0.
+libraryNotConfigured	Tavlebiblioteket kræver en server; denne version har ingen.
+libraryBrowse	Gennemse
+libraryMine	Mine delte tavler
+libraryShare	Del en tavle
+libraryShareNote	Vælg mapper at dele. Fjern først navne, billeder af personer og alt privat: andre familier kan se det.
+libraryTitle	Titel
+libraryDescription	Hvad bruges den til? (valgfrit)
+librarySubmitted	Tak! En moderator tjekker tavlen, før andre kan se den.
+libraryRejected	Tavlen kunne ikke deles
+libraryReport	Anmeld
+libraryReportReason	Hvad er der galt med tavlen?
+libraryReported	Tak, en moderator kigger på det.
+libraryAdd	Føj til favoritter
+libraryWithdraw	Træk tilbage
+libraryWithdrawAsk	Træk »{title}« tilbage fra biblioteket? Andre kan ikke længere finde eller tilføje den.
+libraryEmpty	Ingen tavler her endnu.
+librarySignIn	Log ind under Synkronisering for at dele eller anmelde tavler.
+slpReviewed	Tjekket af talepædagog
+libraryStatus	Status
+libraryStatus.pending	afventer gennemsyn
+libraryStatus.approved	delt
+libraryStatus.rejected	ikke godkendt
+libraryStatus.hidden	skjult efter anmeldelser
+tip.library	En delt tavle er et udgangspunkt: flyt intet på barnets kernetavle, og tilføj ordene steder, barnet allerede bruger.
+personalVoice	Personlig stemme
+personalVoiceSub	Brug en personlig stemme lavet under Indstillinger (Tilgængelighed > Personlig stemme).
+personalVoiceReady	Personlig stemme tilladt ({count} fundet). Vælg den i stemmelisten ovenfor.
+personalVoiceDenied	Personlig stemme er ikke tilladt. Du kan ændre det under Indstillinger > Tilgængelighed > Personlig stemme (Tillad apps at anmode om brug).
+personalVoiceUnsupported	Personlig stemme kræver iOS 17 eller nyere på en understøttet enhed.
+personalVoiceAndroid	Android har ingen personlig stemme. Vil du bevare et familiemedlems stemme, så optag ord i knapredigering (Optag): optagelser afspilles i stedet for computerstemmen.
+aiListen	Lyt med
+aiListenSub	Når du tænder mikrofonen (øverste linje), lytter enheden til det, du siger, og fremhæver ord, der kan svare. Talen genkendes på enheden; lyd gemmes og sendes aldrig.
+aiListenModel	Hent talegenkendelsen (~{mb} MB, én gang)
+aiListenModelReady	Talegenkendelse installeret (virker offline)
+aiListenModelRemoveAsk	Fjern talegenkendelsen fra denne enhed? Lyt med virker ikke, før du henter den igen ({mb} MB).
+listeningOn	Lytter – tryk for at stoppe
+heardPartner	Hørte: “{text}”
+access.gaze	Øjenstyring (kamera)
+access.gazeSub	Kig på et billede for at vælge det. Kun til store billeder (op til 16 på skærmen).
+access.pointer	Øjenstyring eller hovedmus
+access.pointerSub	Til enheder, der flytter markøren (Tobii, Windows Øjenstyring): hold markøren på et billede for at vælge det.
+gazeHelp	Stil enheden stabilt i øjenhøjde, ca. en armslængde væk, med lys på barnets ansigt. Kalibrér først: barnet følger et dyr til ni steder.
+gazeGridTooBig	Øjenstyring kræver store billeder: vælg et gitter med højst 16 felter (Indstillinger > Gitterstørrelse).
+gazeNeedsCalibration	Ikke kalibreret endnu.
+gazeCalibrated	Kalibreret. Kalibrér igen, hvis enheden eller stolen er flyttet.
+gazeCalibrateHint	Kig på dyret!
+gazeCalibrationPoor	Kameraet kunne ikke følge øjnene godt nok. Prøv mere lys, en mere stabil enhed eller hovedstyring i stedet.
+pointerHelp	Virker med enhver enhed, der flytter markøren, fx Tobii eller Windows Øjenstyring (med Windows-appen) eller en hovedmus. Klik og tryk virker stadig.
+aiOff	AI-hjælpere er slået fra (Indstillinger > AI-hjælpere).
+draftMissing	Lav udkast til manglende ord (til gennemsyn)
+draftedCount	{n} udkast tilføjet til gennemsyn
+noFreeCell	Der er ingen tom plads i Favoritter eller på hovedtavlen. Skjul eller fjern først et ord der: ord flyttes aldrig for at give plads.
+moreSymbolSets	Flere symbolsæt (online)
+symbolDownloadConsent	Søgning i andre symbolsæt bruger internettet: kun dine søgeord sendes, intet om dit barn. Billeder, du vælger, gemmes på enheden.
+symbolSetLicence	“{set}” deles under: {licence}. Brug det, som licensen tillader.
+nonCommercialNote	Ikke-kommerciel licens: fint til familie, skole eller terapi, men ikke til salg af materialer.
+onlineLicencesNote	Billederne kommer fra mange symbolsæt med hver sin licens. Sættet står under hvert billede, og alle sæt, du bruger, er listet under Om og licenser. Sæt mærket NC er ikke-kommercielle: fint til familie, skole eller terapi, men ikke til salg af materialer.
+onlineSymbolsNote	Billeder fra globalsymbols.com, som også har ARASAAC. Hvert sæt har sin egen licens (se Om); NC betyder kun ikke-kommerciel brug.
+onlineEmpty	Ingen billeder fundet for “{q}”. Prøv et andet ord.
+onlineError	Kan ikke nå {source}. Tjek internetforbindelsen.
+onlineHint	Skriv mindst 3 bogstaver, eller tryk søg.
+styleWholePage	Brug denne stil på hele siden
+sceneOutlines	Vis rammer
+scenePolygon	Tegn en form
+teenPack	Teenageord og -udseende
+teenPackSub	Sociale vendinger, jokes og slang og et voksent udtryk uden tegneseriestil.
+keystrokeSavings	Taster sparet
+clientWeek	sidste 7 dage: {words} ord, {combinations} kombinationer
+webEditorTitle	Amalino — tavleredigering
+webNoHousehold	Denne konto er endnu ikke i en familiegruppe.
+webApprove	Bed en familieenhed om at godkende “{device}”, og tryk så Hent.
+webLoad	Hent tavler
+webNotApproved	Ikke godkendt endnu
+webSaveSync	Gem og synkronisér
+mlkitNotice	På Android bruges Google ML Kit på enheden: kamerabilleder forlader aldrig enheden, men ML Kit sender anonyme brugs- og ydelsesdata til Google. (iPhone og iPad bruger Apple Vision.)
+offlineTranslation	Offline-oversættelse: {language}
+offlineTranslationReady	Klar: manglende ord laves som udkast på enheden (til gennemsyn).
+offlineTranslationDownload	Hent sproget én gang (ca. 30 MB) for at lave udkast uden internet.
+offlineTranslationSettings	Installér sproget under Indstillinger > Apps > Oversæt for at oversætte på enheden.
+offlineTranslationUnsupported	Ikke tilgængelig på denne enhed.
+offlineTranslationConsent	Dette henter Googles oversættelsesmodel for sproget én gang. Ingen ord fra appen sendes; derefter virker oversættelse offline.
+vocabLevel	Ordforrådsniveau
+levelN	Niveau {n}
+vocabLevel1	Ca. 400 ord: kerneord og de første ord i mapperne
+vocabLevel2	Ca. 1.500 ord med flere mapper
+vocabLevel3	Alle ord (ca. 2.600)
+vocabLevelNote	Et niveau viser eller skjuler kun ord i mapperne; ord flytter sig aldrig, så barnet beholder sine bevægemønstre. Kerneord følger indstillingen for gradvis visning.
+downloaded	Hentet
+useVoice	Brug
+removeVoiceModel	Fjern {name} (frigør {mb} MB)
+removeVoiceModelAsk	Fjern {name} fra denne enhed? De gemte ord forsvinder også. Ordene bruger enhedens stemme, indtil du henter den igen ({mb} MB).
+soundCheck	Lydtjek
+soundCheckIntro	Den samme sætning, lavet rent på en computer, afspillet på forskellige måder. Hører du skratten kun med Amalinos afspiller, er det afspilleren; hører du det også med enhedens egen afspiller, er det optagelsen.
+soundCheckBuffer	Amalino-afspillerens buffer
+soundCheckBufferSub	Mindre giver lyd hurtigere; større beskytter bedre mod knas.
+soundCheckUnderLoad	Afspil mens enheden har travlt
+soundCheckUnderLoadSub	Holder processoren travl i nogle sekunder, som når appen forbereder ord i baggrunden.
+soundCheckAmalino	Amalino-afspiller
+soundCheckSystem	Enhedens afspiller
+soundCheck.int8	Naturlig stemme, som appen laver den
+soundCheck.fp32voc	Naturlig stemme, lydtrin i høj præcision
+soundCheck.sample_32k	Prøve fra opsætning, nuværende version
+soundCheck.sample_hq	Prøve fra opsætning, ny højere kvalitet
+soundCheck.saved_wav	Naturlig stemme, som gemt, ukomprimeret
+soundCheck.saved_opus	Naturlig stemme, som gemt, komprimeret (Opus)
+savedSpeech	Gemt tale
+savedSpeechSub	Ord, der allerede er lavet med de valgte stemmer og gemt på denne enhed, så et tryk taler med det samme. De laves i baggrunden, når tavlen ikke er i brug.
+savedSpeechSize	Pladsforbrug: {mb} MB
+savedSpeechBuilding	Forbereder ord: {done} af {total}
+savedSpeechReady	Ord klar: {total}
+savedSpeechRebuild	Byg igen
+savedSpeechRebuildAsk	Slet den gemte tale og lav den igen? Ord tales direkte, indtil de er klar igen. Kun nødvendigt, hvis ord lyder forkert.
+liveSteps	Detaljer i naturlig stemme for nye sætninger: {n} af {max} (lavere mens enheden er langsom)
+startSetup	Start opsætning
+appLanguage	Appens sprog
+appLanguageHint	Du vælger de sprog, dit barn taler, i et senere trin.
+learnMore	Læs mere
+alreadyUse	Jeg bruger allerede Amalino
+alreadyBody	Til en ekstra enhed, en ny enhed eller en geninstallation.
+restoreBackup	Gendan en backupfil
+restoreHowTo	På den gamle enhed: Indstillinger → Historik og backup → Eksportér backup, og vælg en adgangskode. Send filen til denne enhed med AirDrop, Quick Share, e-mail, en skytjeneste eller et USB-kabel. Tryk så på Vælg fil.
+chooseFile	Vælg fil
+joinFamily	Deltag i en familie på en anden enhed
+deviceKeyBackup	Det er en automatisk backup, som kun kan åbnes på den enhed, der lavede den. Brug Eksportér backup med adgangskode på den gamle enhed.
+childNameHelp	Vises og siges i appen, fx "Jeg hedder {name}". Bliver på denne enhed.
+childNameHelp.anon	Vises og siges i appen, fx i "Jeg hedder …". Bliver på denne enhed.
+ageBandTitle	Hvor gammel er {name}?
+ageBandTitle.anon	Hvor gammelt er dit barn?
+band.under3	Under 3
+band.age3to5	3–5
+band.age6to9	6–9
+band.age10to13	10–13
+band.age14plus	14 og ældre
+ageUse	Vi bruger det til at foreslå en tavlestørrelse og et udseende at starte med. Du kan ændre det senere.
+needAge	Vælg en aldersgruppe for at fortsætte.
+commTitle	Hvordan kommunikerer {name} i dag?
+commTitle.anon	Hvordan kommunikerer dit barn i dag?
+comm.none	Ingen ord endnu
+comm.single	Enkelte ord eller tegn
+comm.phrases	Korte sætninger
+comm.reads	Læser eller staver nogle ord
+comm.unsure	Ved ikke
+mainLanguageHint	Det sprog, dit barn vil bruge mest.
+draftsLine	Ord på {list} er udkast, indtil en modersmålstaler har tjekket dem. Ret et ord: åbn voksenindstillinger, vælg Redigér tavle, og tryk på ordet.
+lang.en	engelsk
+lang.da	dansk
+lang.ru	russisk
+lang.uk	ukrainsk
+lang.ar	arabisk
+lang.es	spansk
+motorPlanNote	Alle sprog bruger de samme knappladser, så dit barn kan skifte sprog uden at lære tavlen igen. Skift med ét tryk på tavlen.
+notListed	Mit sprog er ikke på listen
+notListedBody	Du kan stadig lave tavler på alle sprog: optag hvert ord med din egen stemme, så afspiller tavlen dine optagelser.
+wordFormsTitle	Hvilke ordformer skal appen bruge for {name}?
+wordFormsTitle.anon	Hvilke ordformer skal appen bruge for dit barn?
+forms.boy	Drengeformer
+forms.girl	Pigeformer
+wordFormsHint	For eksempel "cansado / cansada". Du kan ændre det når som helst i Indstillinger.
+needForms	Vælg en for at fortsætte.
+naturalVoicesSame	Samme download, intet ekstra.
+voiceForLang	Stemme på {lang}
+inUseNow	I brug nu
+voiceAllLanguages	Alle sprog
+voicesOneLanguage	Stemmer til ét sprog
+voice.female	kvindestemme
+voice.male	mandestemme
+useForToo	Brug også {voice} på {lang}
+recommended	Anbefalet
+voicePickHint	Tryk for at høre hver stemme, og vælg den, der passer til {name}.
+voicePickHint.anon	Tryk for at høre hver stemme, og vælg den, der passer til dit barn.
+moreVoices	Flere stemmer
+recommendFor	På {lang} anbefaler vi {voice}.
+useForAll	Brug {voice} til alle sprog
+voiceLanguageOnly	Kun {lang} · {mb} MB
+mobileDataAsk	Dette er en download på {mb} MB, og enheden bruger mobildata. Hent nu?
+downloadNow	Hent nu
+waitForWifi	Vent på Wi-Fi
+notEnoughSpace	Ikke nok ledig plads: downloaden kræver kortvarigt cirka {mb} MB. Frigør plads og prøv igen.
+stillTesting	Nyt, testes stadig
+setUpLater	Du kan sætte det op efter opsætningen under Indstillinger → Berøring og adgang.
+touchTitle	Hvordan rører {name} skærmen?
+touchTitle.anon	Hvordan rører dit barn skærmen?
+touch.easy	Rammer små ting let
+touch.bigger	Har brug for større knapper
+touch.shaky	Trykkene er rystede, eller fingeren glider eller hviler på skærmen
+tryItNow	Prøv det nu (valgfrit)
+tryItHint	Lad dit barn trykke et par gange.
+makeEasier	Gør det nemmere
+touchMore	Holdetid og andre berøringsindstillinger: Indstillinger → Berøring og adgang.
+favCount	{n} af 5 tilføjet
+favUpTo	Tilføj op til 5. Du kan tilføje flere senere.
+favPhotoHint	Fotos virker bedst til personer og barnets eget legetøj.
+favNameTitle	Hvad kalder {name} det?
+favNameTitle.anon	Hvad kalder dit barn det?
+recordInstead	Kan det ikke blive rigtigt? Optag det i stedet
+grownupTitle	Voksenkontrol
+grownupBody	For at åbne indstillinger skal du holde låsen øverst på tavlen i {s} sekunder og derefter {answer}.
+answerSum	løse et kort regnestykke
+answerPin	indtaste din PIN
+practiceTitle	Prøv det: Du skal holde låsen og derefter {answer}
+practiceDone	Sådan. Sådan åbner du indstillinger.
+longerHold	Længere hold (5 sekunder) til børn, der udforsker skærmen
+skip	Spring over
+notPractised	ikke øvet
+previewTitle	Sådan ser det ud for {name}.
+previewTitle.anon	Sådan ser det ud for dit barn.
+grid.20	store knapper, nemmere at ramme
+grid.36	mellem, en god start for de fleste små børn
+grid.60	mindre, flere ord på én side
+grid.84	små, til sikre brugere
+moreSizes	Flere størrelser
+gridKeep	Prøv at beholde samme størrelse; tavlen vokser ved at vise flere ord, ikke ved at skifte størrelse.
+levelDesc1	Niveau 1: cirka 400 ord, de første ord
+levelDesc2	Niveau 2: cirka 1.400 ord, sætninger
+levelDesc3	Niveau 3: cirka 2.600 ord, til sikre brugere
+earlyOffer	Enkel start: 4 store billeder. Nogle børn starter sådan; andre klarer sig bedre med hele tavlen.
+earlyHidden	Hele tavlen kan slås til senere.
+change	Skift
+sum.name	Navn
+sum.age	Alder
+sum.comm	Kommunikerer
+sum.languages	Sprog
+sum.mainLanguage	{lang} (hovedsprog)
+sum.forms	Ordformer
+sum.access	Vælger knapper med
+sum.touch	Berøring
+sum.lock	Voksenlås
+whySuggested	Foreslået, fordi {name} er {band}.
+whySuggested.anon	Foreslået, fordi dit barn er {band}.
+whyBigger	Foreslået, fordi {name} er {band} og har brug for større knapper.
+whyBigger.anon	Foreslået, fordi dit barn er {band} og har brug for større knapper.
+lockCardTitle	Sådan åbner du voksenkontrol
+lockCardBody	Øverst på tavlen: hold låsen i {s} sekunder og derefter {answer}.
+readResearch	Læs forskningen
+lockDeviceToApp	Lås enheden til appen
+dailyTip	Dagens tip
+dailyTipSub	En kort idé til at vise ord hver dag. Spørger først om notifikationer, når du slår det til.
+finishSetup	Gør opsætningen færdig
+finishSetupSub	Valgfrie ekstra ting, når du har tid.
+check.tryTouch	Prøv berøringsindstillingerne med {name}
+check.tryTouch.anon	Prøv berøringsindstillingerne med dit barn
+check.pinAnyway	Brug en PIN i stedet for regnestykket
+check.moreVoices	Stemmer til de andre sprog
+dismiss	Afvis
+earlyReminder	{name} har brugt den enkle tavle i 2 uger. Overvej at vise flere ord.
+earlyReminder.anon	Dit barn har brugt den enkle tavle i 2 uger. Overvej at vise flere ord.
+showMoreWords	Vis flere ord
+notNow	Ikke nu
+spokenAs	Udtales som
+hearIt	Hør det
+soundsWrong	Lyder det forkert?
+noVoiceYet	Der er endnu ingen stemme på {lang} på denne enhed.
+langWord	Ord på {lang}
+langWordEmptyHint	Hvis feltet er tomt, bruges ordet på {lang}.
+draftWord	Kladde til oversættelse: tjek den gerne
+spokenAsHint	Skriv hvordan det lyder, hvis stemmen siger det forkert (fx "Shawn" for Sean).
+recInSentences	Brug min optagelse i sætninger også
+recInSentencesSub	Din optagelse afspilles, når knappen trykkes alene. I sætninger siger appens stemme ordet ud fra "Udtales som". Slå til for også at afspille optagelsen i sætninger, til lyde, sange eller ord stemmen ikke kan sige.
+holdTimeExplain	Fingeren skal blive på en knap så længe, før den taler. Hjælper når hånden strejfer skærmen, men et hurtigt tryk virker ikke.
+holdTimeFormsHint	Med en holdetid skal du bruge knappen til ordformer for at ændre et ords form.
+palmRejection	Ignorer en hvilende hånd
+palmRejectionSub	En håndflade eller en hånd, der hviler på skærmen, trykker ikke på knapper; næste tryk virker.
+pinAgain	Skriv PIN-koden igen
+pinMismatch	De to PIN-koder er forskellige. Prøv igen.
+pinDeviceWide	PIN-koden gælder denne enhed: den samme PIN åbner voksenindstillinger for alle børn her.
+pinNeedsScreenLock	For at bruge en PIN skal du først slå skærmlås til på enheden. Indtil da beskytter det korte regnestykke indstillingerne.
+pinAnyway	Brug en PIN alligevel
+recoveryCodeTitle	Skriv denne gendannelseskode ned
+recoveryCodeBody	Hvis du glemmer PIN-koden, kan du med denne kode vælge en ny. Den vises kun nu. Gem den et sikkert sted, væk fra enheden.
+recoveryLast4	Skriv de sidste 4 tegn for at vise, at du har gemt den
+recoveryLast4Wrong	Det passer ikke. Se på koden igen.
+forgotPin	Glemt PIN?
+forgotPinReason	Bekræft at det er dig for at vælge en ny PIN til voksenindstillinger.
+enterRecoveryCode	Skriv den gendannelseskode, du skrev ned
+recoveryCodeWrong	Den gendannelseskode er ikke rigtig.
+switchToSum	Skift til det korte regnestykke
+switchToSumBody	Enheden har ingen skærmlås og ingen gendannelseskode, så PIN-koden kan ikke nulstilles. Indstillingerne beskyttes i stedet af et kort regnestykke.
+olderChildHint	Ældre børn kan løse regnestykket. En PIN er mere sikker.
+naturalVoicesName	naturlige stemmer (alle 10)
+naturalVoicesSub	De naturlige stemmer deler én download på ca. {mb} MB; de lette stemmer er mindre. Tryk på afspil for at høre en stemme først.
+chooseVoiceTitle	Vælg en stemme
+chooseVoiceSub	Sådan kommer {name} til at lyde. Du kan ændre det senere.
+chooseVoiceSub.anon	Sådan kommer dit barn til at lyde. Du kan ændre det senere.
+systemVoice	Enhedens egen stemme
+voiceAge	Stemmens alder (naturlige stemmer)
+voiceAgeSub	Får en hentet stemme til at lyde yngre ved at hæve tonehøjde og stemmepræg. Den lyder mere som en lille voksen end et rigtigt barn; prøv, hvad barnet kan lide.
+voiceAgeAdult	Voksen
+voiceAgeOlder	Større barn
+voiceAgeYoung	Mindre barn
+voiceAgeStrength	Styrke
+pitchSystemOnly	Til enhedens egne stemmer. Naturlige stemmer bruger Stemmens alder.
+listenSentence	Hej, jeg hedder {name}. Jeg vil gerne lege.
+listenSentence.anon	Hej. Jeg vil gerne lege.
+wordFormsManual	Bøjninger (valgfrit)
+wordFormsManualHint	Adskil med komma, fx mus, musen
+beta	beta
+betaLanguageSub	Ordene er endnu ikke tjekket af en modersmålstaler
+betaLanguagesNote	Beta: ordene på dette sprog er udkast, indtil en modersmålstaler har tjekket dem. Du kan rette alle ord.
+notListedHelpEmail	Hvis du kan hjælpe med at oversætte Amalino til dit sprog, så skriv til os på {email}.
+notListedHelpSite	Sådan hjælper du med at oversætte: {site}
+comingLater	Kommer i en senere version
+comingLaterHeading	Kommer i en senere version
+needThisTellUs	Har {name} brug for en af dem? Skriv til os på {email}.
+needThisTellUs.anon	Har dit barn brug for en af dem? Skriv til os på {email}.
+accessComingLaterNote	Denne profil blev sat op til en måde at vælge på, som kommer i en senere version. Indtil da bruges berøring af skærmen.
+pinRecoveryNote	Enheden har ingen skærmlås, så du skriver først en gendannelseskode ned. Den åbner indstillingerne, hvis PIN'en bliver glemt.
+tip.myth.title	For hele familien
+tipTitle	Derfor er det vigtigt
+howAccessName	Hvordan vælger {name} knapper?
+howAccessName.anon	Hvordan vælger dit barn knapper?
+tryItHide	Skjul
+voiceDownloadPaused	Hentningen er sat på pause, tryk for at prøve igen
+downloadOnMobileData	Hent nu over mobildata ({mb} MB)
+englishSpelling	Engelsk stavning
+englishSpellingSub	For denne enhed: de engelske ord på tavlerne og i appen. Ord, du selv har skrevet, forbliver, som du skrev dem.
+englishUk	Britisk (colour, mum)
+englishUs	Amerikansk (color, mom)
+listAnd	{list} og {last}
+profileNoName	Dit barn
+nameButtonNeedsName	Denne knap viser dit barns navn. Tilføj et navn for at bruge den.
+addName	Tilføj navn
+nameStepTitle	Sådan siges {name}s navn
+nameInLang	Navn på {lang}
+nameSameScriptHint	Hvis {name} hedder noget andet på {lang} (fx en kort form), så skriv det her.
+nameOtherScriptHelp	Skriv det, som {name}s navn staves på {lang}. Hvis feltet er tomt, bruges "{name}".
+backToSummary	Tilbage til oversigten
+settingsChildName	{name}s navn
+settingsChildName.anon	Dit barns navn
+removeNameTitle	Fjern {name}s navn?
+removeNameBody	Tavlen siger ikke længere "Jeg hedder …".
+removeName	Fjern
+sum.childName	{name}s navn
+sum.nameNotAdded	Ikke tilføjet
+check.addName	Tilføj dit barns navn, så barnet kan sige "Jeg hedder …"
+tip.childName	Sig navnet, som jeres familie siger det, og vis "Jeg hedder …", når I møder nogen nye.
+usingDeviceVoiceUntil	Bruger enhedens stemme, indtil {voice} er hentet.
+check.hearNameOne	Hør, hvordan {voice} siger {name}s navn på {lang}
+check.hearNameMany	Hør, hvordan {name}s navn lyder på {langs}
+naturalVoicesHeading	Naturlige stemmer
+naturalVoicesDownload	Én download på cirka {mb} MB dækker alle stemmer og sprog. Virker offline, når den er hentet.
+nameRecheckHear	Hør {name}s navn med {voice}
+nameRecheckWaiting.f	{voice} hentes. Du kan høre, hvordan hun siger {name}s navn, når den er klar.
+nameRecheckWaiting.m	{voice} hentes. Du kan høre, hvordan han siger {name}s navn, når den er klar.
+nameRecheckWaiting.n	{voice} hentes. Du kan høre, hvordan stemmen siger {name}s navn, når den er klar.
+voiceChosen	Valgt
+naturalVoicesDownloading	Henter naturlige stemmer · {p} %
+voiceDownloadingOne	Henter {voice} · {p} %
+voiceWaitingForWifi	Venter på Wi-Fi
+voiceReadyLine	Klar
+saveNameTitle	Gem ændringerne af {name}s navn?
+discard	Kassér
+keepEditing	Fortsæt med at redigere
+keepName	Behold navnet
+boardLanguage	Tavlens sprog: {lang}
+voiceName.F1	Ella
+voiceName.F2	Mila
+voiceName.F3	Nora
+voiceName.F4	Sofi
+voiceName.F5	Ida
+voiceName.M1	Leo
+voiceName.M2	Theo
+voiceName.M3	Adam
+voiceName.M4	Omar
+voiceName.M5	Ben
+voiceName.talesyntese	Rasmus
+voiceName.davefx	Pablo
+voiceName.alba	Fiona
+voiceName.claude	Claude
+voiceName.denis	Денис
+highlightSpeaking	Fremhæv under tale
+highlightSpeakingSub	En blød nuance på knappen, mens dens ord siges. Trykket vises altid.
+playing	Afspiller…
+playingStop	Afspiller, tryk for at stoppe
+practiceCountedOne	1 tryk talt med
+practiceCounted	{n} tryk talt med
+practiceIgnoredOne	1 ignoreret
+practiceIgnored	{n} ignoreret
+practiceSep	 · 
+practiceWhyRepeat	for hurtigt
+practiceWhyShort	for kort
+practiceWhyPalm	hånd eller håndflade på skærmen
+practiceWhyFinger	en anden finger var allerede på skærmen
+practiceMissedOne	1 ramte ved siden af (mellem knapperne)
+practiceMissed	{n} ramte ved siden af (mellem knapperne)
+practiceBiggerHint	Mange tryk ramte mellem knapperne. Det kan hjælpe at skrue op for “Større berøringsområde” ovenfor.
+practiceBiggerHintSetup	Mange tryk ramte mellem knapperne. “Større berøringsområde” under Indstillinger → Berøring og adgang → Berøringsjustering kan hjælpe.
+sceneCropTitle	Beskær billedet
+sceneCropHint	Træk i hjørnerne, så de ting, I vil tale om, fylder billedet. Barnets visning kan ikke zoome.
+sceneCropDone	Beskær
+sceneCropWhole	Brug hele billedet
+sceneChangeCrop	Skift beskæring
+sceneOutsideCropOne	1 område er uden for beskæringen.
+sceneOutsideCrop	{n} områder er uden for beskæringen.
+sceneTouchAreas	Vis berøringsområder
+showOnBoard	Vis mig det på tavlen
+mixedVoicesHint	Blandede sætninger skifter stemme. Brug {voice} til alle sprog for at beholde én stemme.
+deviceVoicesHeading	Enhedens stemmer
+moreNaturalVoices	Flere naturlige stemmer…
+mayNeedInternet	Kan kræve internet
+sentenceCleared	Sætningen er ryddet
+stopAddingChildAsk	Stop med at tilføje dette barn? Det, du har indtastet, bliver ikke gemt.
+stopAddingChild	Stop
+replaceRecordingAsk	Erstat optagelsen?
+replaceRecording	Erstat
+undoChangesAsk	Fortryd {n} ændringer?
+lowerOthers	Skru ned for anden lyd, når {name} taler
+lowerOthers.anon	Skru ned for anden lyd, når dit barn taler
+lowerOthersSub	Musik og lyd fra andre apps bliver svagere, så ordene er lettere at høre.
+lowerOthersOff	Fra
+lowerOthersSpeaking	Mens der tales
+lowerOthersOpen	Mens Amalino er åben
+boardOrientation	Tavlens retning på denne telefon
+boardOrientationSub	Tavlen, tastaturet og scenerne bliver i denne retning. Skærme for voksne drejer stadig.
+orientPortrait	Stående
+orientLandscape	Liggende
+gridTooSmall	For lille på denne skærm til {n} knapper. Denne skærm har plads til op til {max}.
+gridTooBig	Denne tavle har {n} knapper, men denne skærm har plads til {max}. Ordene kommer til at stå andre steder end på {name}s anden enhed.
+gridTooBig.anon	Denne tavle har {n} knapper, men denne skærm har plads til {max}. Ordene kommer til at stå andre steder end på dit barns anden enhed.
+gridUseN	Brug {n} knapper
+gapLimit	Højst {gap} på denne skærm: mere afstand ville gøre de {n} knapper mindre end 44 pt.
+savedSpeechVoiceBuilding.one	Forbereder {voice}: {done} af {n} ord
+savedSpeechVoiceBuilding.two	
+savedSpeechVoiceBuilding.few	
+savedSpeechVoiceBuilding.many	
+savedSpeechVoiceBuilding.zero	
+savedSpeechVoiceBuilding.other	Forbereder {voice}: {done} af {n} ord
+orientAskLandscape	Liggende har denne skærm plads til {max} knapper; {name}s tavle har {n}. Ordene flytter til andre steder, og {name} skal lære dem igen.
+orientAskLandscape.anon	Liggende har denne skærm plads til {max} knapper; dit barns tavle har {n}. Ordene flytter til andre steder, og dit barn skal lære dem igen.
+orientAskPortrait	Stående har denne skærm plads til {max} knapper; {name}s tavle har {n}. Ordene flytter til andre steder, og {name} skal lære dem igen.
+orientAskPortrait.anon	Stående har denne skærm plads til {max} knapper; dit barns tavle har {n}. Ordene flytter til andre steder, og dit barn skal lære dem igen.
+orientKeepPortrait	Behold stående
+orientKeepLandscape	Behold liggende
+orientUseLandscape	Brug liggende med {n} knapper
+orientUsePortrait	Brug stående med {n} knapper
+barDelete	Slet
+barForms	Former
+barClear	Ryd
+quickMore	Mere
+quickPageFull	Sætningssiden er fuld. Du kan fjerne en, eller lave en sætningstavle til flere.
+makePhraseBoard	Lav en sætningstavle
+phraseBoardTitle	Sætninger
+qpOnBoard	På tavlen
+qpOnBoardSub	To sætninger ved siden af »stop« og »hjælp mig« på tavlen, altid samme sted. Alle sætninger er også på siden Mere.
+qpPick1	Første sætning
+qpPick2	Anden sætning
+qpNone	Tom
+qpPage	Sætningsside
+qpPageSub	Siden Mere: op til {max} sætninger, hver på sin plads. En slettet sætning efterlader en tom plads; intet flytter sig.
+qpPlace	Plads på siden
+qpFixed	Altid på denne plads og på tavlen, så den kan nås fra alle skærme.
+check.quickRow	Vælg de to sætninger, {name} har mest brug for
+check.quickRow.anon	Vælg de to sætninger, dit barn har mest brug for
+kbSettings	Tastatur
+kbSuggestions	Ordforslag
+kbSuggestionsSub	Nogle terapeuter slår dette fra, mens et barn øver stavning.
+kbLearn	Lær af det, {name} skriver
+kbLearn.anon	Lær af det, dit barn skriver
+kbLayout	Layout
+kbLayoutStandard	Standard
+kbLayoutAbc	Alfabetisk
+kbKeySize	Taststørrelse på denne telefon
+kbKeySizeAuto	Automatisk
+kbKeySizeAutoSub	Følger indstillingerne for berøring
+kbKeySizeStandard	Standard
+kbKeySizeLarger	Større taster
+kbSpeak	Sig det
+kbClose	Luk tastaturet
+kbNumbers	Tal og tegn
+kbLetters	Bogstaver
+tip.keyboard	Vis også skrivning: skriv et ord langsomt, mens du siger det, og tryk så på Sig det.
+gridLongWords	Nogle lange ord vises ikke helt i denne størrelse i stående retning. Liggende viser dem alle.

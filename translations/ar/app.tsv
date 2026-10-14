@@ -1,0 +1,1000 @@
+# key	text
+# The Amalino app's screens in ar. English (translations/en/app.tsv) is the source; keep every
+# {placeholder} as it is in English. Licence: CC BY-SA 4.0.
+about	حول التطبيق والتراخيص
+aboutBody	تطبيق تواصل بديل مجاني للأطفال. يعمل دون إنترنت وتبقى بياناتك على هذا الجهاز.
+aboutChild	عن الطفل
+aboutSub	الخصوصية وتراخيص الرموز والملاحظات
+access.head	حركة الرأس (الكاميرا)
+access.headSub	يعمل أفضل مع إضاءة جيدة والجهاز على حامل. تبقى صور الكاميرا على الجهاز.
+access.switch	مفاتيح (المسح)
+access.switchSub	أزرار كبيرة يضغطها الطفل (باليد أو الرأس أو القدم) بينما يبرز التطبيق الخيارات واحدًا تلو الآخر. عادةً يساعد أخصائي العلاج الوظيفي في اختيار المفتاح وإعداده.
+access.touch	لمس الشاشة
+activateOnRelease	التفعيل عند رفع الإصبع
+activateOnReleaseSub	يتيح للطفل تحريك إصبعه إلى الزر الصحيح أولًا
+add	إضافة
+addChild	إضافة طفل
+addWord	إضافة كلمة
+adultCheck	للبالغين فقط
+adultTools	أدوات البالغين
+allReviewed	تمت مراجعة كل الكلمات.
+allSet	كل شيء جاهز!
+back	رجوع
+backupAuto	تُنشأ نسخة احتياطية تلقائيًا كل يوم أيضًا.
+backupNow	نسخ احتياطي الآن
+backupPassword	كلمة مرور النسخة الاحتياطية
+backups	النسخ الاحتياطية
+borderOnly	اللون كإطار فقط
+borderOnlySub	مظهر أهدأ وتبرز الرموز أكثر
+buttonStyle	نمط الزر
+cancel	إلغاء
+cellGap	المسافة بين الأزرار
+changeFolder	تغيير المجلد
+changePin	تغيير الرمز السري
+childAge	العمر
+childName	اسم الطفل
+choosePhoto	اختيار صورة
+chooseSymbol	اختيار صورة رمزية
+clear	مسح
+clearAfterSpeak	مسح الرسالة بعد نطقها
+clearSelection	إلغاء التحديد
+close	إغلاق
+colour	ألوان
+colourCoding	ألوان أنواع الكلمات
+confirm	تأكيد
+createBoards	إنشاء اللوحات
+cutOut	بطاقات للقص
+delete	حذف
+deleteButton	حذف هذا الزر؟
+deleteButtonBody	يمكنك التراجع عن ذلك من السجل.
+deleteContextRuleAsk	حذف هذه القاعدة؟ لن تُقترح «{board}» بسببها بعد الآن.
+deleteHotspotAsk	حذف هذه النقطة؟ ستُحذف كلمتها وتسجيلها معها.
+deleteQuickPhraseAsk	حذف العبارة السريعة «{text}»؟
+deleteCoreWarning	هذه كلمة أساسية. الإخفاء يحفظ مكانها لاحقًا، والحذف يترك خانة فارغة.
+deleteLast	حذف آخر كلمة
+dimmed	باهت
+displaySensory	العرض والسمع والحواس
+done	تم
+draft	مسودة
+earlyMode	الوضع المبكر
+earlyModeSub	بسيط جدًا: أزرار كبيرة تتكلم فورًا دون شريط رسالة، ويبقى كل المفردات متاحًا.
+edit	تعديل
+editBoard	تعديل هذه اللوحة
+editBoardSub	انقر على أي خانة لتغيير الكلمات أو الصور أو التسجيلات
+editButton	تعديل الزر
+editHistory	سجل التعديلات
+editLock	قفل التعديل
+editingHint	وضع التعديل: انقر على خانة لتغييرها. الكلمات لا تتحرك من تلقاء نفسها.
+enterPin	أدخل الرمز السري
+exportBackup	تصدير نسخة احتياطية
+exportBackupSub	ملف محمي بكلمة مرور لجهاز جديد أو لإعادة التثبيت
+favouriteName	ما اسمه؟
+favourites	المفضلة
+feedback	الملاحظات
+feedbackAskCoordinator	اسأل الشخص الذي أعطاك التطبيق عن طريقة إرسال الملاحظات.
+firstTip	النصيحة الأولى: أثناء وجبة خفيفة اليوم، أشر إلى "المزيد" على الجهاز كلما قلت "المزيد". لا داعي لأن تطلب من الطفل تقليدك.
+fiveFavourites	5 أشياء مفضلة
+fiveFavouritesSub	أشياء يحبها الطفل (فقاعات، رسوم متحركة، الجدة). توضع في مجلد المفضلة.
+followSystem	اتباع إعداد الجهاز
+gridSize	حجم الشبكة
+gridSizeCurrent	{n} زرًا
+gridSuggestion	المقترح: {n} زرًا. كل الكلمات الأساسية موجودة، والأقل استخدامًا تبدأ مخفية وتحتفظ بمكانها.
+hidden	مخفي
+hideInstead	إخفاء بدلًا من ذلك
+historyBackups	السجل والنسخ الاحتياطية
+historyBackupsSub	التراجع عن أي تغيير واستعادة نسخة
+holdForAdult	للبالغين: اضغط مطولًا {seconds} ثوانٍ
+holdSeconds	مدة الضغط للفتح
+holdTime	مدة الضغط
+home	الرئيسية
+homeLanguageFirst	لغة البيت أولًا: تبقى الكلمات في الأماكن نفسها في كل اللغات.
+homeLanguages	لغات أخرى في البيت أو المدرسة
+howToModel	كيف تكون قدوة في ذلك
+importBackup	استعادة من ملف
+includeFolders	تضمين المجلدات
+labelOnTop	النص فوق الصورة
+languages	اللغات
+languagesSub	لغات البيت ومراجعة الترجمات
+latency	الوقت من النقر إلى النطق
+licences	التراخيص
+listen	استماع
+loadingVoices	جارٍ تحميل الأصوات…
+lockChallenge	عملية جمع بسيطة (افتراضي)
+lockNow	قفل
+lockPin	رمز سري
+logModelTaps	تسجيل نمذجة البالغ بشكل منفصل
+logModelTapsSub	يحصي عدد مرات النمذجة ولا يُخلط بكلمات الطفل أبدًا
+makeFolder	جعله يفتح مجلدًا
+messageBar	شريط الرسالة
+micPermission	اسمح باستخدام الميكروفون لتسجيل الكلمات.
+modellingMode	وضع النمذجة
+modellingModeHow	انقر الكلمات وأنت تتكلم لتُري {name} كيف يكون ذلك.
+modellingModeHow.anon	انقر الكلمات وأنت تتكلم لتُري طفلك كيف يكون ذلك.
+modellingModeSub	نقراتك لا تُحسب كلمات للطفل.
+modellingOn	النمذجة: أنت تُري والطفل يشاهد
+muteUiSounds	كتم أصوات الواجهة
+myth.age.a	لا. لا يوجد عمر أدنى، والاستخدام المبكر للصور والإشارات والكلام معًا يدعم النمو.
+myth.age.q	هل طفلي صغير جدًا؟
+myth.core.a	نحو 25 كلمة تشكل معظم كلام الطفل الصغير، ونحو 200 كلمة أساسية تغطي معظم الكلام اليومي. تثبيت أماكنها يبني الذاكرة الحركية.
+myth.core.q	لماذا صور الأشياء قليلة؟
+myth.home.a	الأسر التي لم يعمل جهازها بلغة البيت استخدمته أقل بكثير. استخدم كل اللغات التي تتحدثها أسرتك.
+myth.home.q	هل نستخدم لغة المدرسة فقط؟
+myth.modelling.a	يتعلم الأطفال استخدام تطبيق التواصل حين يرون البالغين يستخدمونه. انقر الكلمات وأنت تتكلم كل يوم دون أن تطلب من الطفل التقليد.
+myth.modelling.q	كيف سيتعلمه طفلي؟
+myth.ready.a	لا حاجة لاختبار الجاهزية. يعمل تطبيق التواصل أفضل حين يبقيه البالغون بسيطًا ومتاحًا دائمًا ويستخدمونه بأنفسهم.
+myth.ready.q	هل يجب أن يكون طفلي "جاهزًا" أولًا؟
+myth.speech.a	لا. تُظهر الأبحاث أن أدوات التواصل مثل هذا التطبيق لا تعيق الكلام، بل قد تساعد عليه. إنها جسر إلى الكلام وليست بديلًا عنه.
+myth.speech.q	هل سيمنع هذا طفلي من تعلّم الكلام؟
+mythBuster	لماذا يساعد هذا
+mythBusterSub	إجابات قصيرة عن المخاوف الشائعة مع الأبحاث
+mythIntro	يقلق الآباء غالبًا من التواصل البديل (أدوات تساعد الأطفال على التواصل، مثل هذا التطبيق). إليك ما تقوله الأبحاث.
+needsReviewCount	{n} كلمة تحتاج مراجعة
+newFolder	مجلد جديد
+newPin	رمز سري جديد (4–8 أرقام)
+next	التالي
+noMinimumAge	أي عمر مناسب. حتى الأطفال الصغار جدًا يمكنهم البدء.
+noSymbols	لم يتم العثور على صور
+noTranslation	لا توجد ترجمة بعد
+noVoiceFor	لا يوجد صوت دون اتصال للغة {language}
+noVoiceHelp	ثبّت صوتًا من إعدادات تحويل النص إلى كلام في الجهاز، أو سجّل الكلمات بصوتك.
+off	إيقاف
+ok	موافق
+on	تشغيل
+opensFolder	يفتح المجلد
+palette.calm	ألوان هادئة
+palette.colorBlindSafe	مناسبة لعمى الألوان
+palette.fitzgerald	قياسي (مفتاح فيتزجيرالد)
+palette.none	بلا ألوان
+paperA4	حجم الورق A4
+passwordsDiffer	كلمتا المرور مختلفتان
+pitch	طبقة الصوت
+practice	تدرّب مع الطفل
+preciseTouch	يلمس الأهداف الصغيرة بسهولة
+preciseTouchSub	أوقفه للبدء بأزرار أكبر
+primaryLanguage	اللغة الرئيسية
+printBoards	طباعة اللوحات
+printBoardsSub	نسخة ورقية لوقت الاستحمام أو المسبح أو عند تعطل الجهاز
+printOrSave	طباعة أو حفظ PDF
+privacy	الخصوصية
+privacyLocal	تُخزَّن اللوحات والتسجيلات والسجلات على هذا الجهاز فقط وبشكل مشفر.
+privacyNoAds	لا إعلانات ولا تتبع ولا حاجة إلى حساب.
+privacyStorage	سجل التعديلات المحلي: {ops} إدخالًا
+profiles	الأطفال
+quickPhrase	عبارة سريعة
+quickPhrases	العبارات السريعة
+quickPhrasesSub	حتى {max} عبارات، دائمًا بنقرة واحدة.
+qpUrgent	عاجل
+readyBody	سينشئ التطبيق مفردات أساسية كاملة مع المجلدات والمفضلة والعبارات السريعة.
+readyTitle	جاهز لإنشاء لوحات {name}
+readyTitle.anon	جاهز لإنشاء لوحات طفلك
+recordVoice	تسجيل الصوت
+redo	إعادة
+reduceMotion	تقليل الحركة
+relockAfter	القفل مجددًا بعد
+removeRecording	إزالة التسجيل
+removeRecordingAsk	إزالة تسجيل هذه الكلمة؟ سينطقها الصوت بدلًا منه.
+repeatIgnore	تجاهل النقرات المتكررة خلال
+repeatPassword	أعد كتابة كلمة المرور
+replanBody	تغيير حجم الشبكة ينقل الكلمات إلى أماكن جديدة ويجب إعادة تعلم الذاكرة الحركية. افعل ذلك فقط مع أخصائي النطق.
+replanTitle	إعادة تخطيط الترتيب الحركي؟
+replanWarning	تبقى الكلمات في منطقتها لكن مواقعها تتغير. تُنشأ نسخة احتياطية أولًا.
+restore	استعادة
+restoreBody	سيتم استبدال كل اللوحات والتسجيلات والسجلات على هذا الجهاز، وتُنشأ نسخة من الوضع الحالي أولًا.
+restoreHere	العودة إلى هنا
+restoreQ	استعادة هذه النسخة؟
+restored	تمت الاستعادة
+reveal	إظهار
+revealCounts	ظاهرة {visible} · باهتة {dimmed} · مخفية {hidden}
+revealNextSet	الكلمات المقترحة التالية
+revealWords	إظهار الكلمات
+revealWordsSub	أظهر كلمات أكثر كلما تعلم الطفل، ولا يتحرك شيء
+save	حفظ
+searchSymbols	ابحث عن صور (مثل حزين، كلب)
+sectionBoards	اللوحات والكلمات
+sectionData	البيانات
+sectionSettings	الإعدادات
+sectionTogether	الاستخدام معًا
+sendFeedback	إرسال ملاحظات
+setPin	تعيين رمز سري
+setPrimary	اللغة الرئيسية
+showLabel	إظهار الكلمة
+showLabels	إظهار الكلمات تحت الصور
+showMeWhere	أرني أين
+showMeWhereSub	ابحث عن أي كلمة وشاهد الطريق إليها
+showMessageBar	إظهار شريط الرسالة
+showQuickPhrases	إظهار العبارات السريعة
+speakEachWord	نطق كل كلمة عند النقر
+speakEachWordSub	عند الإيقاف: تُضاف الكلمات إلى الرسالة فقط حتى يُنقر عليها
+speakMessage	نطق الرسالة
+preparingSpeech	جارٍ التحضير…
+speechRate	سرعة الكلام
+speechVoice	الكلام والأصوات
+startTalking	ابدأ الكلام
+stepOf	الخطوة {n} من {total}
+stopGuide	إيقاف الإرشاد
+stopRecording	إيقاف
+takePhoto	التقاط صورة
+targetEnlargement	مساحة لمس أكبر
+textSize	حجم النص
+theme	المظهر
+theme.calm	هادئ
+theme.dark	داكن
+theme.highContrast	تباين عالٍ
+theme.standard	قياسي
+theme.teen	للمراهقين (دون مظهر طفولي)
+tip.about	اعرض التطبيق على البالغين الآخرين بنفسك: عرض لدقيقتين في المدرسة أنفع من أي نشرة.
+tip.display	غيّر شيئًا واحدًا في كل مرة وراقب الطفل بضعة أيام قبل تغيير المزيد.
+tip.editor	عندما تضيف كلمة، استخدمها بنفسك على الجهاز ثلاث مرات على الأقل اليوم.
+tip.history	الأخطاء لا بأس بها، ويمكن التراجع عن أي تغيير هنا.
+tip.home	كن قدوة بكلمة واحدة في كل وجبة ووقت لعب. قلها وانقرها في الوقت نفسه.
+tip.languages	تحدث بلغة البيت مع الطفل. بدّل اللوحة إليها بنقرة وكن قدوة بها.
+tip.lock	اترك الجهاز مع الطفل طوال اليوم؛ القفل يحمي اللوحات لا الصوت.
+tip.message	انتظر. بعد النمذجة توقف 10 ثوانٍ وانظر بترقب، وامنح الطفل وقتًا للرد.
+tip.myth	شارك هذه الصفحة مع الأجداد والمعلمين، ليستخدم كل البالغين التطبيق بالطريقة نفسها مع طفلك.
+tip.print	احتفظ بلوحة أساسية مغلفة في الحمام والسيارة، وكن قدوة على الورق كما على الجهاز تمامًا.
+tip.profiles	لكل طفل لوحاته وكلماته؛ أعدّها مع البالغين الذين يعرفون الطفل أكثر.
+tip.quick	كن قدوة في "توقف" و"ساعدني" في اللحظات الهادئة أيضًا، لا عند المشكلات فقط.
+tip.reveal	أظهر كلمة جديدة فقط بعد أن تكون قدوة بها مرات كثيرة، واستمر في نمذجة الكلمات المخفية أيضًا.
+tip.speech	دع الطفل يسمع صوتًا يناسبه، واسأله أي صوت يحب.
+tip.touch	راقب طريقة نقر الطفل يومًا كاملًا، ولا تزد مدة الضغط إلا إذا كانت نقرات كثيرة عرضية.
+translationReview	مراجعة الترجمات
+tremor.firstLanding	حيث يلمس الإصبع أولًا
+tremor.longestDwell	حيث يبقى الإصبع أطول مدة
+tremor.off	إيقاف
+tremorFilter	مرشح الرعشة
+tryAgain	حاول مرة أخرى
+typeAWord	اكتب كلمة
+typeToSearch	اكتب للبحث
+undo	تراجع
+visibility	الظهور للطفل
+visible	ظاهر
+voice	الصوت
+voiceFor	صوت للغة {language}
+volume	مستوى الصوت
+waterproof	مناسب للتغليف
+waterproofSub	الصفحة الأساسية فقط بإطارات واضحة وهامش عريض
+welcomeBody	يستغرق الإعداد نحو 5 دقائق، ويبقى كل شيء على هذا الجهاز، ويمكنك تغيير أي شيء لاحقًا.
+welcomeTitle	مرحبًا
+whichLanguages	أي لغات؟
+wordLabel	الكلمة ({language})
+wordNotFound	"{word}" غير موجودة في اللوحات بعد
+wordType	نوع الكلمة
+wordTypeColour	لون نوع الكلمة
+wrongPin	رمز سري خاطئ
+acceptDownload	قبول وتنزيل
+arasaacInstalled	تم التنزيل. تُحفظ الصور دون اتصال عند اختيارها.
+arasaacLicence	ARASAAC مجاني للاستخدام غير التجاري فقط. تُنزَّل قائمة الكلمات من api.arasaac.org، والصور فقط عند اختيارها، ولا يُرسل أي شيء عن الطفل.
+arasaacSub	اختياري: البحث في كل ARASAAC (نحو 13000 صورة)؛ تُنزَّل الصور عند اختيارها
+arasaacFull	كل صور ARASAAC
+arasaacIncluded	ARASAAC (مضمَّن)
+arasaacIncludedSub	{n} صورة للكلمات المضمَّنة · CC BY-NC-SA، مجانية للاستخدام غير التجاري
+arasaacRemoveAsk	إزالة كل صور ARASAAC من هذا الجهاز؟ ستُحذف أيضًا الصور التي اخترتها منها. تبقى الصور المضمَّنة.
+useNewPictures	استخدام الصور الجديدة في لوحات الطفل
+useNewPicturesSub	الكلمات المضمَّنة التي ما زالت بصورتها الأصلية تحصل على الصورة الجديدة. تبقى صورك وصورك الفوتوغرافية كما هي.
+newPicturesDone	تم تحديث {n} زرًا. يمكنك التراجع من السجل.
+download	تنزيل
+downloadFailed	فشل التنزيل
+ownPhotos	صورك الخاصة
+ownPhotosSub	استخدم صورة على أي زر من محرر الأزرار
+remove	إزالة
+symbolSets	مجموعات الرموز
+symbolSetsSub	Mulberry وOpenMoji وARASAAC وصورك
+tip.symbols	الصور الحقيقية تساعد المبتدئين أكثر، والرموز تبني اللغة. استخدم الاثنين وحافظ على الصورة نفسها للكلمة.
+accept	قبول
+accessMethod	طريقة اختيار الطفل
+addHotspot	إضافة نقطة
+addSelected	إضافة المحدد
+agree	أوافق
+aiCloud	مساعدات سحابية للبالغين
+aiCloudConsent	عند استخدام مساعد سحابي تُرسل الصورة أو الموضوع أو الكلمات التي تختارها إلى خادمنا وإلى خدمة ذكاء اصطناعي لعمل مسودة. لا يُرسل أي شيء يقوله الطفل. يمكنك الإيقاف في أي وقت.
+aiCloudConsentTitle	السماح بالمساعدات السحابية؟
+aiCloudSub	مسودات أفضل للمشاهد واللوحات والترجمات. تحتاج إلى المزامنة وموافقتك.
+aiCloudTools	استخدام المساعدات السحابية
+aiContext	اقتراح صفحات حسب الموقف
+aiContextSub	الغداء عند الظهر والحديقة حين تكونان هناك؛ بطاقة يمكن للطفل تجاهلها.
+aiHelpers	مساعدات الذكاء الاصطناعي
+aiHelpersSub	كلها متوقفة افتراضيًا والطفل يختار دائمًا
+aiKeyboard	اقتراح الكلمات على لوحة المفاتيح
+aiMaster	تشغيل مساعدات الذكاء الاصطناعي
+aiMasterSub	الإيقاف يعطّل كل ميزات الذكاء الاصطناعي على الجهاز وفي السحابة.
+aiNextWord	تمييز الكلمات التالية المحتملة
+aiNextWordSub	يحدد برفق 2–3 أزرار. لا تتحرك الأزرار أبدًا ويتعلم على هذا الجهاز فقط.
+aiOnDevice	على هذا الجهاز
+aiPhrase	جملة من الحروف الأولى
+aiPhraseSub	اكتب الحروف الأولى لتظهر جمل كاملة، والطفل يختار أو يتجاهل.
+allTips	القادم
+approve	موافقة
+approveDevices	أجهزة بانتظار الانضمام
+auditoryCues	نطق كل عنصر بهدوء
+auditoryCuesSub	يساعد الأطفال الذين لا يرون التمييز جيدًا
+backToBoard	العودة إلى اللوحة
+boardBuilder	إنشاء صفحة موضوع
+boardBuilderSub	"لوحة لحفلة عيد ميلاد" في ثوانٍ
+boardFor	صفحة عن…
+boardForHint	مثل: عيد ميلاد، الطبيب، حديقة الحيوان
+check	تحقق
+childDevice	هذا جهاز الطفل
+childDeviceSub	التعديلات التي تنقل الكلمات الأساسية تنتظر موافقتك هنا
+cloudFailed	لم يستجب المساعد السحابي
+coaching	إرشاد يومي
+coachingSub	نصيحة من 60 ثانية يوميًا وكلمة الأسبوع
+combinations	تراكيب الكلمات
+createHousehold	إنشاء مجموعة عائلية
+createHouseholdSub	هذا الجهاز ينشئ المفتاح السري ولا يراه الخادم أبدًا
+dailyReminder	تذكير يومي
+days	{n} يومًا
+daysUsed	أيام الاستخدام
+devicesAndPeople	الأجهزة والأشخاص
+dragToAddHotspot	اسحب مربعًا على الصورة لإضافة نقطة ناطقة
+editHotspot	تعديل النقطة
+email	البريد الإلكتروني
+emailCode	الرمز من البريد
+exportAllBoards	تصدير كل اللوحات (.obz)
+exportCsv	تصدير سجل الاستخدام (CSV)
+exportPdf	تقرير التقدم (PDF)
+exportStudy	ملخص للدراسة (بلا كلمات)
+exportThisBoard	تصدير هذه اللوحة
+ga.android.1	افتح الإعدادات > الأمان > تثبيت التطبيق وفعّله.
+ga.android.2	فعّل "طلب الرمز قبل إلغاء التثبيت".
+ga.android.3	افتح Amalino ثم التطبيقات الأخيرة وانقر الأيقونة > تثبيت.
+ga.android.4	للخروج، اضغط مطولًا على رجوع والتطبيقات الأخيرة معًا ثم أدخل الرمز.
+ga.androidTitle	أندرويد: تثبيت التطبيق
+ga.ios.1	افتح الإعدادات > تسهيلات الاستخدام > الوصول الموجّه وفعّله.
+ga.ios.2	عيّن رمزًا من إعدادات رمز الدخول.
+ga.ios.3	افتح Amalino واضغط زر الجانب (أو الرئيسية) ثلاث مرات ثم ابدأ.
+ga.ios.4	للخروج اضغط ثلاث مرات مجددًا وأدخل الرمز.
+ga.iosTitle	آيباد / آيفون: الوصول الموجّه
+ga.samsung	أجهزة سامسونج: "Samsung Kids" و"تثبيت النوافذ" تعمل بالطريقة نفسها.
+guidedAccess	إبقاء الطفل داخل التطبيق
+headHelp	تتبع الرأس يستخدم الكاميرا الأمامية على هذا الجهاز فقط. أعدّه والطفل جالس براحة أمام الجهاز.
+heldEdits	{n} تغييرات في الترتيب تنتظر موافقتك
+importObz	استيراد لوحات (.obz / .obf)
+importObzSub	من Cboard وتطبيقات أخرى؛ تُضاف كمجلدات
+imported	تم الاستيراد. ربط {matched} من {total} زرًا بكلمات معروفة.
+invite.parent	دعوة والد آخر
+invite.slp	دعوة أخصائي النطق
+invite.teacher	دعوة معلم
+inviteCode	رمز الدعوة
+join	انضمام
+keyboard	لوحة المفاتيح
+lastSync	آخر مزامنة
+madeByCloud	مساعد سحابي
+madeOnDevice	أُنشئ على هذا الجهاز
+makeDraft	إنشاء مسودة
+metric	المقياس
+mlu	كلمات في الجملة
+modelTaps	نقرات النمذجة للبالغين
+needsReview	تحتاج مراجعة
+newHotspot	نقطة جديدة
+newSceneCamera	مشهد جديد من الكاميرا
+newSceneGallery	مشهد جديد من الصور
+newWords	كلمات جديدة
+newWordsPerMonth	كلمات جديدة شهريًا
+noSuggestions	لا اقتراحات لهذه الصورة. اسحب مربعات لإضافة النقاط بنفسك.
+noTopicPack	لا توجد صفحة جاهزة لهذا الموضوع على الجهاز. جرّب كلمة أخرى أو اسمح بالمساعدات السحابية.
+notApprovedYet	لم تتم الموافقة بعد. وافق من جهاز موجود في المجموعة.
+openBoardFormat	مشاركة اللوحات (Open Board Format)
+openBoardFormatSub	نقل اللوحات من وإلى تطبيقات تواصل أخرى
+ownSentences	جمل خاصة
+password	كلمة المرور
+pressSwitch	اضغط المفتاح الآن…
+progress	التقدم
+progressSub	كلمات جديدة وتراكيب والأكثر استخدامًا
+quickAdd	إضافة سريعة
+recentUtterances	الجمل الأخيرة
+reject	رفض
+rejectHeldAsk	رفض {n} تغييرات في الترتيب من جهاز آخر؟ ستُتجاهل ولن تُطبَّق هنا.
+rejectLessonPageAsk	رفض «{title}»؟ ستُزال الصفحة والأزرار التي تفتحها.
+reminder	تذكير
+reminderTime	وقت التذكير
+reviewBeforeSaving	راجع كل كلمة قبل الحفظ
+saveAsFolder	حفظ كمجلد
+scan.block	مجموعات ثم صفوف ثم أزرار
+scan.linear	زر واحد في كل مرة
+scan.oneSwitch	مفتاح واحد (يتحرك تلقائيًا)
+scan.rowColumn	صفوف ثم أزرار
+scan.twoSwitch	مفتاحان (تحريك واختيار)
+scanLoops	الجولات قبل البدء من جديد
+scanSpeed	سرعة المسح
+scene	مشهد
+sceneName	ما هذا المكان أو اللحظة؟
+sceneEmptyHint	اسحب مربعًا على الصورة لإنشاء منطقة تتحدث. لشكل غير منتظم، اضغط على ارسم شكلًا أدناه.
+pickCellTitle	أين يجب أن يكون؟
+pickCellPutHere	ضعه هنا
+pickCellFavouritesInstead	ضعه في المفضلة بدلًا من ذلك
+pickCellBoardFull	هذه اللوحة ممتلئة.
+pickCellChooseAnother	اختر لوحة أخرى
+pickCellFavouritesNote	محجوزة فارغة لـ ★ المفضلة
+pickCellHiddenWord	كلمة مخفية: '{word}'، تظهر عند المستوى {level}
+sceneMove	نقل…
+openThisFolder	افتح هذا المجلد
+discardSceneQuestion	تجاهل هذا المشهد؟ سيتم حذف الصورة.
+sceneWordOnTap	الكلمة عند اللمس
+sceneWordsAlways	إظهار الكلمات دائمًا
+showThisCode	اعرض هذا الرمز على جهاز موجود في المجموعة
+signIn	تسجيل الدخول
+space	مسافة
+suggestFailed	تعذر اقتراح النقاط
+suggestHotspots	اقتراح نقاط
+suggestionUse	الاقتراحات المستخدمة
+switchAny	مفتاح المفتاح
+switchHelp	مفاتيح بلوتوث وUSB تعمل كلوحة مفاتيح. اقرن المفتاح من إعدادات الجهاز ثم اضغطه هنا.
+switchMove	مفتاح "تحريك"
+switchScanning	المسح بالمفاتيح
+switchSelect	مفتاح "اختيار"
+syncE2e	تشفير كامل: الخادم يخزن بيانات لا يستطيع قراءتها فقط.
+syncNotConfigured	المزامنة غير مُعدة في هذا الإصدار.
+syncNow	مزامنة الآن
+syncState.error	مشكلة في المزامنة
+syncState.needsKey	تم الدخول — أعدّ المجموعة العائلية
+syncState.off	المزامنة متوقفة (كل شيء على هذا الجهاز)
+syncState.ready	المزامنة مفعلة
+syncState.signedOut	سجّل الدخول لتفعيل المزامنة
+syncSub	اللوحات نفسها في البيت والمدرسة والهاتف؛ تعديل عن بُعد
+syncTitle	المزامنة والمشاركة
+timeOfDay	وقت اليوم
+tip.access	جرّب طريقة وصول واحدة أسبوعين على الأقل مع نمذجة كثيرة قبل الحكم عليها.
+tip.ai	الاقتراحات لا تحل محل النمذجة. استمر في نمذجة الكلمات بنفسك حتى مع التمييز.
+tip.builder	قبل المناسبة استعرضا الصفحة الجديدة معًا وكن قدوة في كلمتين أو ثلاث.
+tip.coaching	اقرأ نصيحة اليوم وجرّبها مرة واحدة؛ الخطوات اليومية الصغيرة هي الأفضل.
+tip.guided	قفل التطبيق يبقي الصوت متاحًا؛ لا تمنع الطفل من اللوحة أبدًا.
+tip.obf	عند استيراد لوحة تحقق أن الكلمات في أماكن يعرفها الطفل.
+tip.progress	استخدم الأرقام لاختيار ما تنمذجه لاحقًا لا لاختبار الطفل.
+tip.sync	اتفقوا على من يغيّر اللوحة وأخبروا بعضكم؛ مفاجآت أماكن الكلمات تربك الطفل.
+todayTip	نصيحة اليوم ({day} من {total})
+topWords	الكلمات الأكثر استخدامًا
+touchAccess	اللمس والوصول
+touchTuning	ضبط اللمس
+turnOffSync	إيقاف المزامنة وحذف بيانات الخادم
+turnOffSyncSub	تبقى اللوحات على هذا الجهاز
+turnOffAndDelete	إيقاف وحذف
+turnOffSyncAsk	إيقاف المزامنة وحذف بيانات المجموعة العائلية على الخادم؟ تبقى اللوحات على هذا الجهاز. لا يمكن التراجع عن ذلك.
+turnOnSync	تفعيل المزامنة
+usePassword	استخدام كلمة مرور بدلًا من ذلك
+value	القيمة
+waitingForApproval	بانتظار الموافقة. الرمز: {code}
+warn.batteryCritical	البطارية منخفضة جدًا — اشحن الآن
+warn.batteryLow	البطارية منخفضة
+warn.muted	الصوت مغلق — لا يمكن سماع الطفل
+warn.volumeLow	الصوت منخفض
+wordOfWeek	كلمة الأسبوع
+wordsSaid	كلمات قيلت
+wotwNone	لم تُختر بعد
+wotwSub	حتى 3 كلمات ينمذجها البالغون هذا الأسبوع (تُميّز في وضع النمذجة فقط)
+blinkSelect	الاختيار برمشة طويلة
+blinkSelectSub	أغمض العينين نصف ثانية؛ الرمشات العادية تُتجاهل
+calibrate	معايرة حركة الرأس
+calibrateHint	تابع النجمة برأسك
+cameraUnavailable	الكاميرا غير متاحة
+dwellTime	مدة الثبات للاختيار
+openVoices	أصوات مفتوحة (تنزيل مرة ثم دون اتصال)
+openVoicesSub	أصوات عصبية تعمل على هذا الجهاز. أصوات الأطفال قليلة بعد؛ اختر ما يحبه الطفل.
+clients	عائلات عملائي
+from	من
+lessonPages	صفحات الدروس من المدرسة والعلاج
+lessonPagesSub	صفحات أضافها معلم أو أخصائي؛ افتح أو ارفض
+noLessonPages	لا صفحات دروس بعد.
+open	فتح
+ownDevice	الأطفال على هذا الجهاز
+role	الدور
+tip.clients	احفظ كلمات كل أسرة بلغتها وروتينها؛ اللوحات ملك للطفل.
+tip.lessons	قبل استخدام صفحة الدرس في الصف، كن قدوة في كلماتها في البيت مرة.
+goal.combinations	تراكيب كلمات أسبوعيًا
+goal.daysUsed	أيام الاستخدام أسبوعيًا
+goal.mlu	متوسط الكلمات في الجملة
+goal.newWords	كلمات جديدة أسبوعيًا
+goal.wordUse	استخدام كلمة واحدة أسبوعيًا
+goalTarget	الهدف
+goals	الأهداف
+goalsSub	أهداف الأخصائي مع التقدم الأسبوعي
+met	تحقق
+newGoal	هدف جديد
+noGoals	لا أهداف بعد. يمكن للأخصائي إضافة هدف هنا.
+share	مشاركة
+shareExamples	مشاركة جمل أمثلة
+shareExamplesSub	متوقف ما لم تختر جملًا هنا (حتى 5). لا يُشارك أي شيء آخر قاله الطفل.
+sum.combos	كوّن الطفل {n} جملة من كلمتين أو أكثر (نحو {mlu} كلمات في الجملة).
+sum.days	استخدم {name} التطبيق {n} أيام هذا الأسبوع.
+sum.days.anon	استخدم طفلك التطبيق {n} أيام هذا الأسبوع.
+sum.model	نمذج البالغون على الجهاز {n} مرة.
+sum.newList	كلمات جديدة: {list}.
+sum.next	الأسبوع القادم جرّب نمذجة "{word}" في تراكيب جديدة.
+sum.words	قيلت {n} كلمة، منها {new} لأول مرة.
+thisWeek	هذا الأسبوع
+tip.goals	اختر هدفًا واحدًا في كل مرة وكن قدوة في المهارة مرات كثيرة يوميًا.
+tip.summary	شارك الملخص مع كل من يتحدث مع الطفل واختاروا كلمة واحدة لتنمذجوها معًا.
+week	الأسبوع
+weeklySummary	الملخص الأسبوعي
+writeWithCloud	إعادة الصياغة بالمساعد السحابي (بيانات إجمالية فقط)
+addCalendarRule	اقتراح صفحة لحدث في التقويم
+addMealRules	إضافة اقتراحات أوقات الوجبات (صفحة الطعام)
+addPlaceRule	اقتراح صفحة في هذا المكان
+addPlaceRuleSub	يحفظ مكانك الحالي (يبقى على الجهاز)
+addTimeRule	اقتراح صفحة في وقت محدد
+calendarKeyword	كلمة في عنوان الحدث (مثل طبيب)
+contextBoards	صفحات حسب الموقف
+contextOff	فعّل "اقتراح صفحات حسب الموقف" في مساعدات الذكاء الاصطناعي.
+noLocation	الموقع غير متاح
+tip.context	الاقتراح مجرد باب: كن قدوة في كلمات الصفحة عند فتحها.
+useCalendar	استخدام التقويم
+useCalendarSub	يقرأ عناوين أحداث اليوم على هذا الجهاز فقط
+useLocation	استخدام الموقع
+useLocationSub	يتحقق من الأماكن المحفوظة على الجهاز فقط ولا يُرفع أبدًا
+grammarHelper	صيغ الكلمات
+grammarHelperSub	اضغط مطولًا على كلمة لاختيار: كلاب، ذهب، أكبر…
+allow	السماح
+search	بحث
+library	مكتبة اللوحات
+librarySub	لوحات يشاركها الأهل والمعالجون
+libraryConsent	تنزّل المكتبة لوحات شاركها أهل ومعالجون آخرون. لا يُرسل أي شيء عن طفلك. إذا شاركت لوحة، تُرفع اللوحة نفسها والعنوان والوصف اللذان تكتبهما فقط، بترخيص CC BY-SA 4.0.
+libraryNotConfigured	تحتاج المكتبة إلى خادم؛ لا يوجد خادم في هذا الإصدار.
+libraryBrowse	تصفح
+libraryMine	لوحاتي المشتركة
+libraryShare	مشاركة لوحة
+libraryShareNote	اختر المجلدات للمشاركة. احذف أولاً الأسماء وصور الأشخاص وكل ما هو خاص: ستراها عائلات أخرى.
+libraryTitle	العنوان
+libraryDescription	ما الغرض منها؟ (اختياري)
+librarySubmitted	شكرًا! سيراجع مشرف اللوحة قبل أن يراها الآخرون.
+libraryRejected	تعذّرت مشاركة اللوحة
+libraryReport	إبلاغ
+libraryReportReason	ما المشكلة في هذه اللوحة؟
+libraryReported	شكرًا، سيطّلع عليها مشرف.
+libraryAdd	إضافة إلى المفضلة
+libraryWithdraw	سحب
+libraryWithdrawAsk	سحب «{title}» من المكتبة؟ لن يتمكن الآخرون من العثور عليها أو إضافتها بعد الآن.
+libraryEmpty	لا توجد لوحات هنا بعد.
+librarySignIn	سجّل الدخول من قسم المزامنة لمشاركة اللوحات أو الإبلاغ عنها.
+slpReviewed	راجعه أخصائي نطق
+libraryStatus	الحالة
+libraryStatus.pending	بانتظار المراجعة
+libraryStatus.approved	منشورة
+libraryStatus.rejected	غير مقبولة
+libraryStatus.hidden	مخفية بعد بلاغات
+tip.library	اللوحة المشتركة نقطة بداية: لا تحرّك شيئًا في اللوحة الأساسية للطفل، وأضف الكلمات في الأماكن التي يستخدمها طفلك بالفعل.
+personalVoice	الصوت الشخصي
+personalVoiceSub	استخدم صوتًا شخصيًا أنشأته في الإعدادات (تسهيلات الاستخدام > الصوت الشخصي).
+personalVoiceReady	تم السماح بالصوت الشخصي (عددها {count}). اختره من قائمة الأصوات أعلاه.
+personalVoiceDenied	الصوت الشخصي غير مسموح. يمكنك تغيير ذلك من الإعدادات > تسهيلات الاستخدام > الصوت الشخصي (السماح للتطبيقات بطلب الاستخدام).
+personalVoiceUnsupported	يتطلب الصوت الشخصي iOS 17 أو أحدث على جهاز مدعوم.
+personalVoiceAndroid	لا يوجد صوت شخصي في أندرويد. للاحتفاظ بصوت أحد أفراد العائلة، سجّل الكلمات في محرر الأزرار (تسجيل): تُشغَّل التسجيلات بدل الصوت الآلي.
+aiListen	الاستماع إلى المحاور
+aiListenSub	عند تشغيل الميكروفون (الشريط العلوي) يستمع الجهاز لما تقوله ويبرز كلمات للإجابة. يتم التعرّف على الكلام على الجهاز؛ لا يُحفظ الصوت ولا يُرسل أبدًا.
+aiListenModel	تنزيل أداة التعرّف على الكلام (~{mb} ميغابايت، مرة واحدة)
+aiListenModelReady	أداة التعرّف على الكلام مثبّتة (تعمل دون إنترنت)
+aiListenModelRemoveAsk	إزالة أداة التعرّف على الكلام من هذا الجهاز؟ يتوقف الاستماع إلى المحاور إلى أن تنزّلها مجددًا ({mb} ميغابايت).
+listeningOn	أستمع – اضغط للإيقاف
+heardPartner	سُمِع: «{text}»
+access.gaze	التحكم بالنظر (الكاميرا)
+access.gazeSub	انظر إلى صورة لاختيارها. للصور الكبيرة فقط (حتى 16 على الشاشة).
+access.pointer	متتبع العين أو فأرة الرأس
+access.pointerSub	للأجهزة التي تحرّك المؤشر (Tobii، التحكم بالعين في Windows): أبقِ المؤشر على الصورة لاختيارها.
+gazeHelp	ثبّت الجهاز بمستوى العين على بُعد ذراع تقريبًا مع إضاءة على وجه الطفل. قم بالمعايرة أولًا: يتابع الطفل حيوانًا يتنقل إلى تسعة أماكن.
+gazeGridTooBig	يحتاج التحكم بالنظر إلى صور كبيرة: اختر شبكة من 16 خانة أو أقل (الإعدادات > حجم الشبكة).
+gazeNeedsCalibration	لم تتم المعايرة بعد.
+gazeCalibrated	تمت المعايرة. أعد المعايرة إذا تحرّك الجهاز أو المقعد.
+gazeCalibrateHint	انظر إلى الحيوان!
+gazeCalibrationPoor	لم تتمكن الكاميرا من متابعة العينين بدقة كافية. جرّب إضاءة أكثر أو تثبيت الجهاز أو التحكم بالرأس بدلًا من ذلك.
+pointerHelp	يعمل مع أي جهاز يحرّك المؤشر، مثل Tobii أو التحكم بالعين في Windows (مع تطبيق Windows) أو فأرة الرأس. النقر واللمس يعملان أيضًا.
+aiOff	مساعدات الذكاء الاصطناعي متوقفة (الإعدادات > مساعدات الذكاء الاصطناعي).
+draftMissing	مسودات للكلمات الناقصة (للمراجعة)
+draftedCount	أُضيفت {n} مسودات للمراجعة
+noFreeCell	لا توجد خانة فارغة في المفضلة أو في اللوحة الرئيسية. أخفِ كلمة أو احذفها هناك أولًا: لا تُنقل الكلمات أبدًا لإفساح المجال.
+moreSymbolSets	مجموعات رموز أخرى (عبر الإنترنت)
+symbolDownloadConsent	البحث في مجموعات رموز أخرى يستخدم الإنترنت: تُرسل كلمات البحث فقط ولا شيء عن طفلك. تُحفظ الصور التي تختارها على الجهاز.
+symbolSetLicence	«{set}» متاحة بموجب: {licence}. استخدمها وفق ما يسمح به الترخيص.
+nonCommercialNote	ترخيص غير تجاري: مناسب للعائلة أو المدرسة أو العلاج، لكن ليس لبيع المواد.
+onlineLicencesNote	تأتي الصور من مجموعات رموز كثيرة، لكل منها ترخيصها الخاص. يظهر اسم المجموعة تحت كل صورة، وكل المجموعات المستخدمة مدرجة في «حول التطبيق والتراخيص». المجموعات المعلَّمة بـ NC غير تجارية: مناسبة للعائلة أو المدرسة أو العلاج، لكن ليس لبيع المواد.
+onlineSymbolsNote	صور من globalsymbols.com، وفيه أيضًا ARASAAC. لكل مجموعة ترخيصها (انظر «حول»)؛ ‏NC تعني للاستخدام غير التجاري فقط.
+onlineEmpty	لا توجد صور لـ «{q}». جرّب كلمة أخرى.
+onlineError	تعذّر الوصول إلى {source}. تحقّق من الاتصال بالإنترنت.
+onlineHint	اكتب 3 أحرف على الأقل، أو اضغط بحث.
+styleWholePage	استخدم هذا النمط للصفحة كلها
+sceneOutlines	إظهار الحدود
+scenePolygon	ارسم شكلًا
+teenPack	كلمات ومظهر للمراهقين
+teenPackSub	عبارات اجتماعية ونكات وكلمات عامية، ومظهر ناضج بلا رسوم كرتونية.
+keystrokeSavings	نقرات مُوفَّرة
+clientWeek	آخر 7 أيام: {words} كلمة، {combinations} تركيب
+webEditorTitle	Amalino — محرر اللوحات
+webNoHousehold	هذا الحساب ليس في مجموعة عائلية بعد.
+webApprove	اطلب من جهاز العائلة الموافقة على «{device}» ثم اضغط تحميل.
+webLoad	تحميل اللوحات
+webNotApproved	لم تتم الموافقة بعد
+webSaveSync	حفظ ومزامنة
+mlkitNotice	على أندرويد يُستخدم Google ML Kit على الجهاز: لا تغادر صور الكاميرا الجهاز، لكن ML Kit يرسل إلى Google بيانات استخدام وأداء مجهولة. (يستخدم iPhone وiPad تقنية Apple Vision.)
+offlineTranslation	ترجمة دون إنترنت: {language}
+offlineTranslationReady	جاهزة: تُترجم الكلمات الناقصة على الجهاز (للمراجعة).
+offlineTranslationDownload	نزّل اللغة مرة واحدة (نحو 30 ميغابايت) لترجمة الكلمات الناقصة دون إنترنت.
+offlineTranslationSettings	ثبّت هذه اللغة من الإعدادات > التطبيقات > الترجمة للترجمة على الجهاز.
+offlineTranslationUnsupported	غير متاحة على هذا الجهاز.
+offlineTranslationConsent	سيُنزَّل نموذج الترجمة من Google لهذه اللغة مرة واحدة. لا تُرسل أي كلمات من التطبيق؛ بعدها تعمل الترجمة دون إنترنت.
+vocabLevel	مستوى المفردات
+levelN	المستوى {n}
+vocabLevel1	نحو 400 كلمة: الكلمات الأساسية وأولى كلمات المجلدات
+vocabLevel2	نحو 1500 كلمة ومجلدات أكثر
+vocabLevel3	كل الكلمات (نحو 2600)
+vocabLevelNote	المستوى يُظهر الكلمات في المجلدات أو يخفيها فقط؛ لا تتحرك الكلمات أبدًا فيحتفظ الطفل بأنماط حركته. الكلمات الأساسية تتبع إعداد الإظهار التدريجي.
+downloaded	تم التنزيل
+useVoice	استخدم
+removeVoiceModel	إزالة {name} (يحرّر {mb} ميغابايت)
+removeVoiceModelAsk	إزالة {name} من هذا الجهاز؟ ستُحذف الكلمات المحفوظة أيضًا. ستُنطق الكلمات بصوت الجهاز إلى أن تنزّله مجددًا ({mb} ميغابايت).
+soundCheck	فحص الصوت
+soundCheckIntro	الجملة نفسها، مُولَّدة بنقاء على حاسوب، تُشغَّل بطرق مختلفة. إن سمعت خشخشة مع مشغّل Amalino فقط فالسبب المشغّل؛ وإن سمعتها أيضًا مع مشغّل الجهاز فالسبب التسجيل.
+soundCheckBuffer	مخزن مشغّل Amalino المؤقت
+soundCheckBufferSub	الأصغر يبدأ الصوت أسرع؛ والأكبر أكثر أمانًا من الطقطقة.
+soundCheckUnderLoad	شغّل أثناء انشغال الجهاز
+soundCheckUnderLoadSub	يُشغل المعالج لبضع ثوانٍ، كما يحدث حين يجهّز التطبيق الكلمات في الخلفية.
+soundCheckAmalino	مشغّل Amalino
+soundCheckSystem	مشغّل الجهاز
+soundCheck.int8	الصوت الطبيعي كما يولّده التطبيق
+soundCheck.fp32voc	الصوت الطبيعي بمرحلة صوت عالية الدقة
+soundCheck.sample_32k	عيّنة الإعداد، النسخة الحالية
+soundCheck.sample_hq	عيّنة الإعداد، جودة أعلى جديدة
+soundCheck.saved_wav	الصوت الطبيعي كما يُحفظ، بلا ضغط
+soundCheck.saved_opus	الصوت الطبيعي كما يُحفظ، مضغوطًا (Opus)
+savedSpeech	الكلام المحفوظ
+savedSpeechSub	كلمات صُنعت مسبقًا بالأصوات المختارة ومحفوظة على هذا الجهاز، لكي تُنطق فور النقر. تُصنع في الخلفية حين لا تُستخدم اللوحة.
+savedSpeechSize	المساحة المستخدمة: {mb} ميغابايت
+savedSpeechBuilding	تحضير الكلمات: {done} من {total}
+savedSpeechReady	الكلمات الجاهزة: {total}
+savedSpeechRebuild	إعادة البناء
+savedSpeechRebuildAsk	حذف الكلام المحفوظ وصنعه من جديد؟ تُنطق الكلمات مباشرة إلى أن تجهز مرة أخرى. لا حاجة لذلك إلا إذا بدت الكلمات خاطئة.
+liveSteps	دقة الصوت الطبيعي للجمل الجديدة: {n} من {max} (أقل أثناء بطء الجهاز)
+startSetup	ابدأ الإعداد
+appLanguage	لغة التطبيق
+appLanguageHint	ستختار اللغات التي يتحدثها طفلك في خطوة لاحقة.
+learnMore	اعرف المزيد
+alreadyUse	أستخدم Amalino بالفعل
+alreadyBody	لجهاز ثانٍ أو جهاز جديد أو إعادة تثبيت.
+restoreBackup	استعادة ملف نسخة احتياطية
+restoreHowTo	على الجهاز القديم: الإعدادات ← السجل والنسخ ← تصدير نسخة، واختر كلمة مرور. أرسل الملف إلى هذا الجهاز عبر AirDrop أو Quick Share أو البريد أو التخزين السحابي أو كابل USB. ثم اضغط «اختيار ملف».
+chooseFile	اختيار ملف
+joinFamily	الانضمام إلى عائلة على جهاز آخر
+deviceKeyBackup	هذه نسخة تلقائية لا تُفتح إلا على الجهاز الذي أنشأها. استخدم «تصدير نسخة» بكلمة مرور على الجهاز القديم.
+childNameHelp	يظهر ويُنطق في التطبيق، مثل «اسمي {name}». يبقى على هذا الجهاز.
+childNameHelp.anon	يظهر ويُنطق في التطبيق، مثل «اسمي…». يبقى على هذا الجهاز.
+ageBandTitle	كم عمر {name}؟
+ageBandTitle.anon	كم عمر طفلك؟
+band.under3	أقل من 3
+band.age3to5	3–5
+band.age6to9	6–9
+band.age10to13	10–13
+band.age14plus	14 فأكثر
+ageUse	نستخدم هذا لاقتراح حجم ومظهر اللوحة في البداية. يمكنك تغييره لاحقًا.
+needAge	اختر الفئة العمرية للمتابعة.
+commTitle	كيف يتواصل {name} اليوم؟
+commTitle.anon	كيف يتواصل طفلك اليوم؟
+comm.none	لا كلمات بعد
+comm.single	بعض الكلمات المفردة أو الإشارات
+comm.phrases	عبارات قصيرة
+comm.reads	يقرأ أو يتهجى بعض الكلمات
+comm.unsure	لست متأكدًا
+mainLanguageHint	اللغة التي سيستخدمها طفلك أكثر.
+draftsLine	لغات كلماتها مسودات حتى يراجعها متحدث أصلي: {list}. لتصحيح كلمة: افتح إعدادات الكبار، واختر «تعديل اللوحة»، ثم اضغط الكلمة.
+lang.en	الإنجليزية
+lang.da	الدنماركية
+lang.ru	الروسية
+lang.uk	الأوكرانية
+lang.ar	العربية
+lang.es	الإسبانية
+motorPlanNote	كل اللغات تستخدم مواضع الأزرار نفسها، فيستطيع طفلك تبديل اللغة دون إعادة تعلّم اللوحة. التبديل بلمسة واحدة على اللوحة.
+notListed	لغتي غير موجودة في القائمة
+notListedBody	لا يزال بإمكانك إنشاء لوحات بأي لغة: سجّل كل كلمة بصوتك، وستشغّل اللوحة تسجيلاتك.
+wordFormsTitle	ما صيغ الكلمات التي يستخدمها التطبيق لـ {name}؟
+wordFormsTitle.anon	ما صيغ الكلمات التي يستخدمها التطبيق لطفلك؟
+forms.boy	صيغ المذكر
+forms.girl	صيغ المؤنث
+wordFormsHint	مثل «متعب / متعبة». يمكنك تغيير هذا في أي وقت من الإعدادات.
+needForms	اختر إجابة واحدة للمتابعة.
+naturalVoicesSame	التنزيل نفسه، دون أي إضافة.
+voiceForLang	صوت اللغة {lang}
+inUseNow	قيد الاستخدام الآن
+voiceAllLanguages	كل اللغات
+voicesOneLanguage	أصوات للغة واحدة
+voice.female	صوت أنثوي
+voice.male	صوت ذكوري
+useForToo	استخدم صوت {voice} للغة {lang} أيضًا
+recommended	مُوصى به
+voicePickHint	اضغط لسماع كل صوت، واختر ما يناسب {name}.
+voicePickHint.anon	اضغط لسماع كل صوت، واختر ما يناسب طفلك.
+moreVoices	أصوات أخرى
+recommendFor	للغة {lang} نوصي بصوت {voice}.
+useForAll	استخدم صوت {voice} لكل اللغات
+voiceLanguageOnly	{lang} فقط · {mb} ميغابايت
+mobileDataAsk	هذا تنزيل بحجم {mb} ميغابايت والجهاز على بيانات الجوال. هل تنزّل الآن؟
+downloadNow	نزّل الآن
+waitForWifi	انتظر Wi-Fi
+notEnoughSpace	لا توجد مساحة كافية: يحتاج التنزيل مؤقتًا إلى نحو {mb} ميغابايت. أفرغ بعض المساحة وحاول مجددًا.
+stillTesting	جديد، ما زال قيد الاختبار
+setUpLater	يمكنك إعداد ذلك لاحقًا من الإعدادات ← اللمس والوصول.
+touchTitle	كيف يلمس {name} الشاشة؟
+touchTitle.anon	كيف يلمس طفلك الشاشة؟
+touch.easy	يضغط على الأشياء الصغيرة بسهولة
+touch.bigger	يحتاج إلى أزرار أكبر
+touch.shaky	اللمسات مرتجفة، أو ينزلق الإصبع أو يستقر على الشاشة
+tryItNow	جرّبه الآن (اختياري)
+tryItHint	دع طفلك يضغط بضع مرات.
+makeEasier	اجعله أسهل
+touchMore	مدة الضغط وإعدادات اللمس الأخرى: الإعدادات ← اللمس والوصول.
+favCount	أُضيف {n} من 5
+favUpTo	أضف حتى 5. يمكنك إضافة المزيد لاحقًا.
+favPhotoHint	الصور أفضل للأشخاص ولألعاب الطفل الخاصة.
+favNameTitle	ماذا يسمّيه {name}؟
+favNameTitle.anon	ماذا يسمّيه طفلك؟
+recordInstead	لا يُنطق جيدًا؟ سجّله بدلًا من ذلك
+grownupTitle	تحكم الكبار
+grownupBody	لفتح الإعدادات، اضغط مطولًا على القفل أعلى اللوحة لمدة {s} ثوانٍ، ثم {answer}.
+answerSum	أجب عن عملية جمع قصيرة
+answerPin	أدخل رقمك السري
+practiceTitle	جرّب: اضغط مطولًا على القفل، ثم {answer}
+practiceDone	تم. هكذا تفتح الإعدادات.
+longerHold	ضغط أطول (5 ثوانٍ) للأطفال الذين يستكشفون الشاشة
+skip	تخطَّ
+notPractised	لم تُجرَّب
+previewTitle	هذا ما سيراه {name}.
+previewTitle.anon	هذا ما سيراه طفلك.
+grid.20	أزرار كبيرة، أسهل في الضغط
+grid.36	متوسطة، بداية جيدة لمعظم الأطفال الصغار
+grid.60	أصغر، كلمات أكثر في صفحة واحدة
+grid.84	صغيرة، للمستخدمين المتمكنين
+moreSizes	أحجام أخرى
+gridKeep	حاول الإبقاء على الحجم نفسه؛ تنمو اللوحة بإظهار كلمات أكثر لا بتغيير الحجم.
+levelDesc1	المستوى 1: نحو 400 كلمة، الكلمات الأولى
+levelDesc2	المستوى 2: نحو 1400 كلمة، بناء الجمل
+levelDesc3	المستوى 3: نحو 2600 كلمة، للمستخدمين المتمكنين
+earlyOffer	بداية بسيطة: 4 صور كبيرة. يبدأ بعض الأطفال بهذه الطريقة، وينجح آخرون أكثر مع اللوحة الكاملة.
+earlyHidden	يمكن تشغيل اللوحة الكاملة لاحقًا.
+change	تغيير
+sum.name	الاسم
+sum.age	العمر
+sum.comm	يتواصل
+sum.languages	اللغات
+sum.mainLanguage	{lang} (الرئيسية)
+sum.forms	صيغ الكلمات
+sum.access	يختار الأزرار بـ
+sum.touch	اللمس
+sum.lock	قفل الكبار
+whySuggested	مُقترح لأن عمر {name} هو {band}.
+whySuggested.anon	مُقترح لأن عمر طفلك هو {band}.
+whyBigger	مُقترح لأن عمر {name} هو {band} ويحتاج إلى أزرار أكبر.
+whyBigger.anon	مُقترح لأن عمر طفلك هو {band} ويحتاج إلى أزرار أكبر.
+lockCardTitle	كيف تفتح تحكم الكبار
+lockCardBody	أعلى اللوحة: اضغط مطولًا على القفل لمدة {s} ثوانٍ، ثم {answer}.
+readResearch	اقرأ الأبحاث
+lockDeviceToApp	قفل الجهاز على التطبيق
+dailyTip	نصيحة يومية
+dailyTipSub	فكرة قصيرة للنمذجة كل يوم. يطلب إذن الإشعارات فقط عند تشغيله.
+finishSetup	أكمل الإعداد
+finishSetupSub	إضافات اختيارية متى توفّر لك الوقت.
+check.tryTouch	جرّب إعدادات اللمس مع {name}
+check.tryTouch.anon	جرّب إعدادات اللمس مع طفلك
+check.pinAnyway	استخدم رقمًا سريًا بدل الجمع
+check.moreVoices	أصوات للغات الأخرى
+dismiss	إخفاء
+earlyReminder	استخدم {name} اللوحة البسيطة لمدة أسبوعين. فكّر في إظهار كلمات أكثر.
+earlyReminder.anon	استخدم طفلك اللوحة البسيطة لمدة أسبوعين. فكّر في إظهار كلمات أكثر.
+showMoreWords	أظهر كلمات أكثر
+notNow	ليس الآن
+spokenAs	يُنطق هكذا
+hearIt	استمع
+soundsWrong	هل يبدو النطق خطأ؟
+noVoiceYet	لا يوجد بعد صوت باللغة {lang} على هذا الجهاز.
+langWord	الكلمة باللغة {lang}
+langWordEmptyHint	إن تركته فارغًا، تُستخدم الكلمة باللغة {lang}.
+draftWord	ترجمة مسودة: يُرجى التحقق منها
+spokenAsHint	اكتب كيف يُنطق إن نطقه الصوت خطأ (مثلًا «شون» بدل Sean).
+recInSentences	استخدم تسجيلي في الجمل أيضًا
+recInSentencesSub	يُشغَّل تسجيلك عند الضغط على الزر وحده. في الجمل يقول صوت التطبيق الكلمة حسب «يُنطق هكذا». فعّل هذا لتشغيل تسجيلك في الجمل أيضًا، للأصوات أو الأغاني أو الكلمات التي لا يستطيع الصوت قولها.
+holdTimeExplain	يجب أن يبقى الإصبع على الزر هذه المدة قبل أن يتكلم. يفيد عندما تلمس اليد الشاشة عرضًا، لكن اللمسة السريعة لن تعمل.
+holdTimeFormsHint	مع مدة الضغط، استخدم زر صيغ الكلمات لتغيير صيغة الكلمة.
+palmRejection	تجاهل اليد المستريحة
+palmRejectionSub	راحة اليد أو اليد المستريحة على الشاشة لا تضغط الأزرار؛ واللمسة التالية تعمل.
+pinAgain	اكتب الرقم السري مرة أخرى
+pinMismatch	الرقمان مختلفان. حاول مرة أخرى.
+pinDeviceWide	الرقم السري لهذا الجهاز: الرقم نفسه يفتح إعدادات الكبار لكل الأطفال هنا.
+pinNeedsScreenLock	لاستخدام رقم سري، فعّل أولًا قفل الشاشة على الجهاز. حتى ذلك الحين يحمي الإعدادات سؤال الجمع القصير.
+pinAnyway	استخدم رقمًا سريًا على أي حال
+recoveryCodeTitle	اكتب رمز الاسترداد هذا
+recoveryCodeBody	إن نسيت الرقم السري، يتيح لك هذا الرمز تعيين رقم جديد. يظهر الآن فقط. احفظه في مكان آمن بعيدًا عن الجهاز.
+recoveryLast4	للتأكد من حفظه، اكتب آخر 4 أحرف منه
+recoveryLast4Wrong	غير مطابق. انظر إلى الرمز مرة أخرى.
+forgotPin	نسيت الرقم السري؟
+forgotPinReason	أكّد هويتك لتعيين رقم سري جديد لإعدادات الكبار.
+enterRecoveryCode	اكتب رمز الاسترداد الذي دوّنته
+recoveryCodeWrong	رمز الاسترداد غير صحيح.
+switchToSum	التبديل إلى سؤال الجمع القصير
+switchToSumBody	لا يوجد قفل شاشة ولا رمز استرداد على هذا الجهاز، لذا لا يمكن إعادة تعيين الرقم السري. ستحمي الإعدادات بدلًا من ذلك عملية جمع قصيرة.
+olderChildHint	يستطيع الأطفال الأكبر حل سؤال الجمع. الرقم السري أكثر أمانًا.
+naturalVoicesName	الأصوات الطبيعية (العشرة كلها)
+naturalVoicesSub	الأصوات الطبيعية تُنزَّل معًا بحجم نحو {mb} ميغابايت؛ الأصوات الخفيفة أصغر. اضغط تشغيل لتسمع الصوت أولًا.
+chooseVoiceTitle	اختر صوتًا
+chooseVoiceSub	هكذا سيبدو صوت {name}. يمكنك تغييره لاحقًا.
+chooseVoiceSub.anon	هكذا سيبدو صوت طفلك. يمكنك تغييره لاحقًا.
+systemVoice	صوت الجهاز
+voiceAge	عمر الصوت (الأصوات الطبيعية)
+voiceAgeSub	يجعل الصوت المنزَّل يبدو أصغر سنًا برفع طبقته وطابعه. سيبدو كشخص بالغ صغير أكثر من طفل حقيقي؛ جرّب ما يحبه الطفل.
+voiceAgeAdult	بالغ
+voiceAgeOlder	طفل أكبر
+voiceAgeYoung	طفل صغير
+voiceAgeStrength	الشدة
+pitchSystemOnly	لأصوات الجهاز. الأصوات الطبيعية تستخدم «عمر الصوت».
+listenSentence	مرحبًا، اسمي {name}. أريد أن ألعب.
+listenSentence.anon	مرحبًا. أريد أن ألعب.
+wordFormsManual	صيغ الكلمة (اختياري)
+wordFormsManualHint	افصل بفواصل، مثل: فئران، فأر
+beta	تجريبي
+betaLanguageSub	لم يراجع الكلماتِ متحدثٌ أصلي بعد
+betaLanguagesNote	تجريبي: كلمات هذه اللغة مسودة حتى يراجعها متحدث أصلي. يمكنك تصحيح أي كلمة.
+notListedHelpEmail	إن كنت تستطيع المساعدة في ترجمة Amalino إلى لغتك، فراسلنا على {email}.
+notListedHelpSite	كيف تساعد في الترجمة: {site}
+comingLater	قادم في إصدار لاحق
+comingLaterHeading	قادم في إصدار لاحق
+needThisTellUs	هل يحتاج {name} إلى أيٍّ من هذه؟ أخبرنا على {email}.
+needThisTellUs.anon	هل يحتاج طفلك إلى أيٍّ من هذه؟ أخبرنا على {email}.
+accessComingLaterNote	أُعدّ هذا الملف لطريقة اختيار ستأتي في إصدار لاحق. حتى ذلك الحين يُستخدم لمس الشاشة.
+pinRecoveryNote	لا يوجد قفل شاشة على هذا الجهاز، لذا ستكتب أولًا رمز استرداد. يفتح الإعدادات إذا نُسي الرقم السري.
+tip.myth.title	للعائلة كلها
+tipTitle	لماذا هذا مهم
+howAccessName	كيف سيختار {name} الأزرار؟
+howAccessName.anon	كيف سيختار طفلك الأزرار؟
+tryItHide	إخفاء
+voiceDownloadPaused	توقف التنزيل مؤقتًا، اضغط لإعادة المحاولة
+downloadOnMobileData	نزّل الآن عبر بيانات الجوال ({mb} ميغابايت)
+englishSpelling	التهجئة الإنجليزية
+englishSpellingSub	لهذا الجهاز: الكلمات الإنجليزية في اللوحات وفي التطبيق. الكلمات التي كتبتها بنفسك تبقى كما كتبتها.
+englishUk	البريطانية (colour, mum)
+englishUs	الأمريكية (color, mom)
+listAnd	{list} و{last}
+profileNoName	طفلك
+nameButtonNeedsName	يعرض هذا الزر اسم طفلك. أضف اسمًا لاستخدامه.
+addName	إضافة اسم
+nameStepTitle	كيف يُنطق اسم {name}
+nameInLang	الاسم باللغة {lang}
+nameSameScriptHint	إذا كان لـ{name} اسم آخر باللغة {lang} (مثل اسم مختصر)، فاكتبه هنا.
+nameOtherScriptHelp	اكتب اسم {name} كما يُكتب باللغة {lang}. إذا تُرك الحقل فارغًا، يُستخدم "{name}".
+backToSummary	العودة إلى الملخص
+settingsChildName	اسم {name}
+settingsChildName.anon	اسم طفلك
+removeNameTitle	إزالة اسم {name}؟
+removeNameBody	لن تقول اللوحة "اسمي…".
+removeName	إزالة
+sum.childName	اسم {name}
+sum.nameNotAdded	لم يُضف
+check.addName	أضف اسم طفلك ليتمكن من قول "اسمي…"
+tip.childName	قل الاسم كما تقوله عائلتك، وقدّم نموذجًا لعبارة "اسمي…" عندما تقابلون شخصًا جديدًا.
+usingDeviceVoiceUntil	يُستخدم صوت الجهاز إلى أن يكتمل تنزيل {voice}.
+check.hearNameOne	استمع إلى طريقة نطق {voice} لاسم {name} باللغة {lang}
+check.hearNameMany	استمع إلى نطق اسم {name} باللغات: {langs}
+naturalVoicesHeading	الأصوات الطبيعية
+naturalVoicesDownload	تنزيل واحد بحجم {mb} ميغابايت تقريبًا يشمل كل الأصوات واللغات. يعمل دون إنترنت بعد التنزيل.
+nameRecheckHear	استمع إلى اسم {name} بصوت {voice}
+nameRecheckWaiting.f	يجري تنزيل {voice}. يمكنك سماع طريقة نطقها لاسم {name} عندما يصبح جاهزًا.
+nameRecheckWaiting.m	يجري تنزيل {voice}. يمكنك سماع طريقة نطقه لاسم {name} عندما يصبح جاهزًا.
+nameRecheckWaiting.n	يجري تنزيل {voice}. يمكنك سماع طريقة نطق هذا الصوت لاسم {name} عندما يصبح جاهزًا.
+voiceChosen	مُختار
+naturalVoicesDownloading	جارٍ تنزيل الأصوات الطبيعية · {p}%
+voiceDownloadingOne	جارٍ تنزيل {voice} · {p}%
+voiceWaitingForWifi	بانتظار Wi-Fi
+voiceReadyLine	جاهز
+saveNameTitle	حفظ التغييرات على اسم {name}؟
+discard	تجاهل
+keepEditing	متابعة التعديل
+keepName	الإبقاء على الاسم
+boardLanguage	لغة اللوحة: {lang}
+voiceName.F1	إيلا
+voiceName.F2	ميلا
+voiceName.F3	نورا
+voiceName.F4	صوفي
+voiceName.F5	إيدا
+voiceName.M1	ليو
+voiceName.M2	ثيو
+voiceName.M3	آدم
+voiceName.M4	عمر
+voiceName.M5	بن
+voiceName.talesyntese	راسموس
+voiceName.davefx	بابلو
+voiceName.alba	فيونا
+voiceName.claude	كلود
+voiceName.denis	دينيس
+highlightSpeaking	تمييز أثناء النطق
+highlightSpeakingSub	تظليل خفيف على الزر أثناء نطق كلمته. يظهر الضغط دائمًا.
+playing	جارٍ التشغيل…
+playingStop	جارٍ التشغيل، انقر للإيقاف
+practiceCountedOne	اللمسات المحتسبة: 1
+practiceCounted	اللمسات المحتسبة: {n}
+practiceIgnoredOne	المتجاهَلة: 1
+practiceIgnored	المتجاهَلة: {n}
+practiceSep	 · 
+practiceWhyRepeat	سريعة جدًا
+practiceWhyShort	قصيرة جدًا
+practiceWhyPalm	يد أو راحة يد على الشاشة
+practiceWhyFinger	كان إصبع آخر على الشاشة
+practiceMissedOne	بين الأزرار: 1
+practiceMissed	بين الأزرار: {n}
+practiceBiggerHint	وقعت لمسات كثيرة بين الأزرار. قد يساعد رفع «مساحة لمس أكبر» في الأعلى.
+practiceBiggerHintSetup	وقعت لمسات كثيرة بين الأزرار. قد يساعد «مساحة لمس أكبر» في الإعدادات ← اللمس والوصول ← ضبط اللمس.
+sceneCropTitle	قص الصورة
+sceneCropHint	اسحب الزوايا حتى تملأ الأشياء التي ستتحدث عنها الصورة. لا يمكن تكبير الصورة في عرض الطفل.
+sceneCropDone	قص
+sceneCropWhole	استخدم الصورة كاملة
+sceneChangeCrop	تغيير القص
+sceneOutsideCropOne	منطقة واحدة خارج القص.
+sceneOutsideCrop	مناطق خارج القص: {n}.
+sceneTouchAreas	إظهار مساحات اللمس
+showOnBoard	أرني على اللوحة
+mixedVoicesHint	في الجمل المختلطة يتغيّر الصوت. استخدم {voice} لكل اللغات ليبقى صوت واحد.
+deviceVoicesHeading	أصوات الجهاز
+moreNaturalVoices	المزيد من الأصوات الطبيعية…
+mayNeedInternet	قد يحتاج إلى الإنترنت
+sentenceCleared	تم مسح الجملة
+stopAddingChildAsk	إيقاف إضافة هذا الطفل؟ لن يُحفظ ما أدخلته.
+stopAddingChild	إيقاف
+replaceRecordingAsk	استبدال التسجيل؟
+replaceRecording	استبدال
+undoChangesAsk	التراجع عن {n} تغييرات؟
+lowerOthers	خفض الأصوات الأخرى عند كلام {name}
+lowerOthers.anon	خفض الأصوات الأخرى عند كلام طفلك
+lowerOthersSub	يصبح صوت الموسيقى والتطبيقات الأخرى أخفض، لتُسمع الكلمات بسهولة أكبر.
+lowerOthersOff	إيقاف
+lowerOthersSpeaking	أثناء الكلام
+lowerOthersOpen	ما دام Amalino مفتوحًا
+boardOrientation	اتجاه اللوحة على هذا الهاتف
+boardOrientationSub	تبقى اللوحة ولوحة المفاتيح والمشاهد بهذا الاتجاه. أما شاشات الكبار فتدور كالمعتاد.
+orientPortrait	عمودي
+orientLandscape	أفقي
+gridTooSmall	هذه الشاشة صغيرة جدًا لـ {n} زرًا. تتسع هذه الشاشة لـ {max} على الأكثر.
+gridTooBig	في هذه اللوحة {n} زرًا، لكن هذه الشاشة تتسع لـ {max}. ستكون الكلمات في أماكن مختلفة عنها على جهاز {name} الآخر.
+gridTooBig.anon	في هذه اللوحة {n} زرًا، لكن هذه الشاشة تتسع لـ {max}. ستكون الكلمات في أماكن مختلفة عنها على جهاز طفلك الآخر.
+gridUseN	استخدام الحجم {n}
+gapLimit	حتى {gap} على هذه الشاشة: مسافة أكبر ستجعل الأزرار ({n}) أصغر من 44 نقطة.
+savedSpeechVoiceBuilding.one	تحضير {voice}: {done} من {n} كلمة
+savedSpeechVoiceBuilding.two	تحضير {voice}: {done} من كلمتين
+savedSpeechVoiceBuilding.few	تحضير {voice}: {done} من {n} كلمات
+savedSpeechVoiceBuilding.many	تحضير {voice}: {done} من {n} كلمة
+savedSpeechVoiceBuilding.zero	تحضير {voice}: {done} من {n} كلمة
+savedSpeechVoiceBuilding.other	تحضير {voice}: {done} من {n} كلمة
+orientAskLandscape	في الوضع الأفقي تتسع هذه الشاشة لـ {max} من الأزرار، ولوحة {name} فيها {n}. ستنتقل الكلمات إلى أماكن أخرى، وسيحتاج {name} إلى تعلمها من جديد.
+orientAskLandscape.anon	في الوضع الأفقي تتسع هذه الشاشة لـ {max} من الأزرار، ولوحة طفلك فيها {n}. ستنتقل الكلمات إلى أماكن أخرى، وسيحتاج طفلك إلى تعلمها من جديد.
+orientAskPortrait	في الوضع العمودي تتسع هذه الشاشة لـ {max} من الأزرار، ولوحة {name} فيها {n}. ستنتقل الكلمات إلى أماكن أخرى، وسيحتاج {name} إلى تعلمها من جديد.
+orientAskPortrait.anon	في الوضع العمودي تتسع هذه الشاشة لـ {max} من الأزرار، ولوحة طفلك فيها {n}. ستنتقل الكلمات إلى أماكن أخرى، وسيحتاج طفلك إلى تعلمها من جديد.
+orientKeepPortrait	الإبقاء على الوضع العمودي
+orientKeepLandscape	الإبقاء على الوضع الأفقي
+orientUseLandscape	الوضع الأفقي بحجم {n}
+orientUsePortrait	الوضع العمودي بحجم {n}
+barDelete	حذف
+barForms	الصيغ
+barClear	مسح الكل
+quickMore	المزيد
+quickPageFull	صفحة العبارات ممتلئة. يمكنك حذف واحدة، أو إنشاء لوحة عبارات لمزيد منها.
+makePhraseBoard	إنشاء لوحة عبارات
+phraseBoardTitle	عبارات
+qpOnBoard	على اللوحة
+qpOnBoardSub	عبارتان بجانب «توقف» و«ساعدني» على اللوحة، دائمًا في المكان نفسه. كل العبارات موجودة أيضًا في صفحة «المزيد».
+qpPick1	العبارة الأولى
+qpPick2	العبارة الثانية
+qpNone	فارغ
+qpPage	صفحة العبارات
+qpPageSub	صفحة «المزيد»: حتى {max} عبارة، لكل منها مكانها. العبارة المحذوفة تترك مكانها فارغًا؛ لا شيء يتحرك.
+qpPlace	المكان في الصفحة
+qpFixed	دائمًا في هذا المكان وعلى اللوحة، ليمكن الوصول إليها من كل شاشة.
+check.quickRow	اختر العبارتين اللتين يحتاجهما {name} أكثر
+check.quickRow.anon	اختر العبارتين اللتين يحتاجهما طفلك أكثر
+kbSettings	لوحة المفاتيح
+kbSuggestions	اقتراحات الكلمات
+kbSuggestionsSub	يوقف بعض المعالجين هذا الخيار أثناء تدرّب الطفل على التهجئة.
+kbLearn	التعلّم مما يكتبه {name}
+kbLearn.anon	التعلّم مما يكتبه طفلك
+kbLayout	الترتيب
+kbLayoutStandard	القياسي
+kbLayoutAbc	بالترتيب الأبجدي
+kbKeySize	حجم المفاتيح في هذا الهاتف
+kbKeySizeAuto	تلقائي
+kbKeySizeAutoSub	يتبع إعدادات اللمس
+kbKeySizeStandard	قياسي
+kbKeySizeLarger	مفاتيح أكبر
+kbSpeak	تكلّم
+kbClose	إغلاق لوحة المفاتيح
+kbNumbers	الأرقام والعلامات
+kbLetters	الحروف
+tip.keyboard	اعرض الكتابة أيضًا: اكتب كلمة ببطء وأنت تنطقها، ثم انقر «تكلّم».
+gridLongWords	بعض الكلمات الطويلة لا تظهر كاملة بهذا الحجم في الوضع العمودي. يُظهرها الوضع الأفقي كلها.

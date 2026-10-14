@@ -1,0 +1,24 @@
+name: Check
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Translations (keys, placeholders, empty texts)
+        run: python3 scripts/check_translations.py
+      - name: Script tests
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Website tests
+        run: python3 -m unittest discover -s site -p 'test_*.py'
+      - name: Website builds and passes its checks
+        run: python3 site/build.py --site https://amalino.app --contact-email hello@amalino.app --check

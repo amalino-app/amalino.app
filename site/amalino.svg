@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Amalino app icon (direction C1). Glyph centred at 0.94 scale. -->
+  <rect width="1024" height="1024" fill="#17573A"/>
+  <g transform="translate(512 512) scale(0.94) translate(-525 -578)">
+    <line x1="512" y1="650" x2="512" y2="885" stroke="#F1F8F3" stroke-width="72" stroke-linecap="round"/>
+    <circle cx="340" cy="450" r="135" fill="#F1F8F3"/><polygon points="450,505 492,662 362,570" fill="#F1F8F3"/>
+    <circle cx="690" cy="400" r="155" fill="#BFE6CC"/><polygon points="668,540 532,662 560,470" fill="#BFE6CC"/>
+  </g>
+</svg>
