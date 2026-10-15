@@ -13,7 +13,15 @@ Can't remember where something is? Tap **Search settings** at the top and type a
 
 ### Modelling mode
 
-Tap words while you talk, to show the child how. Your taps don't count as the child's words. A line at the top says "Modelling: you are showing, the child is watching". In that line, **Show me where** finds a word for you: type it, and Amalino shows the path to it, button by button. Tap **Done** to leave. See [Tips for families](tips-for-families.md).
+**Edit** changes the board. **Modelling** is talking with your child on it: you tap words while you talk, to show how. Your taps speak and count as yours, never as the child's words.
+
+The quickest way in: while the grown-up controls are open, tap **Model** on the board's top bar (on a phone, the icon with the mortarboard). This menu entry does the same. A line at the top says "Modelling: you are showing, the child is watching". In that line, **Show me where** finds a word for you: type it, and Amalino shows the path to it, button by button.
+
+- **Hidden words** appear faded, with a small crossed-out eye, in the places where they'll appear for the child. Tap them like any word, so your child hears and sees them long before they get them. The child still sees an empty space.
+- **Show to your child**: hold a hidden word for a moment and choose **Show to your child** when you think they're ready. **Undo** puts it back.
+- **It ends by itself** two minutes after your last tap, and whenever the grown-up lock closes, so your child is never left in modelling mode. To end it yourself, tap **Done** or **Model** again.
+
+See [Tips for families](tips-for-families.md).
 
 **Log adult modelling separately** sits next to it: it counts how often adults model, never mixed into the child's words.
 

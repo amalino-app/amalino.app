@@ -9,7 +9,7 @@ Children learn to use a talking app the way they learn to talk: by seeing and he
 
 - Model a word or two at a time; you don't have to tap every word you say.
 - Don't ask the child to copy you, and don't quiz them ("Show me *cup*"). Just use it.
-- Use **Modelling mode** (in the grown-up controls) so your taps aren't counted as the child's words, and so you can see hidden words too.
+- Tap **Model** on the top bar (with the grown-up controls open) so your taps aren't counted as the child's words. Hidden words show faded then, so you can model them before your child has them. It switches itself off two minutes after your last tap.
 
 ## Start small
 

@@ -44,7 +44,7 @@ Each word is either **shown** to the child or **hidden**. A hidden word's place 
 
 To see and change them, open the grown-up controls and choose **Edit this board**. Hidden words appear in their places with a dark veil and a crossed-out eye. Tap one, and in its editor turn on **Shown to the child**, then tap **Done**. This works the same inside folders.
 
-> **Tip:** Show a new word only after you've modelled it many times. Keep modelling hidden words too: say them and point to their place, so the child already knows where they'll appear.
+> **Tip:** Show a new word only after you've modelled it many times. In modelling mode hidden words show faded in their places: tap them while you talk, and when your child is ready, hold one and choose **Show to your child**. See [Settings: Modelling mode](settings.md).
 
 ## Finding a word
 
