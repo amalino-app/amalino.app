@@ -1001,3 +1001,5 @@ searchNoResults	Nothing found for "{q}".
 modelShort	Model
 showToChild	Show to your child
 modelHiddenLabel	{word}, hidden from your child
+replanMovedToFavourites	Buttons you added that didn't fit on this board: {n}. They're in Favourites now.
+replanParked	Buttons you added that had no room anywhere: {n}. They're kept and come back when the board is bigger.

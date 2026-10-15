@@ -1001,3 +1001,5 @@ searchNoResults	Intet fundet for »{q}«.
 modelShort	Modellér
 showToChild	Vis for dit barn
 modelHiddenLabel	{word}, skjult for dit barn
+replanMovedToFavourites	Knapper, du selv har tilføjet, og som ikke var plads til: {n}. De ligger nu i Favoritter.
+replanParked	Knapper, du selv har tilføjet, og som der ikke var plads til nogen steder: {n}. De bliver gemt og kommer igen, når tavlen bliver større.

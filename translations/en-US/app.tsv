@@ -41,3 +41,4 @@ sum.model	Adults modeled on this device {n} times.
 sum.next	Next week, try modeling "{word}" in new combinations.
 dailyTipSub	A short modeling idea each day. Asks for notifications only when you turn it on.
 kbSuggestionsSub	You can turn this off while your child practices spelling, so they work out each word themselves.
+replanMovedToFavourites	Buttons you added that didn't fit on this board: {n}. They're in Favorites now.

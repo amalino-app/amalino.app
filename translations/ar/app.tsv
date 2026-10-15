@@ -1001,3 +1001,5 @@ searchNoResults	لم يُعثر على شيء لـ«{q}».
 modelShort	نمذجة
 showToChild	أظهِرها لطفلك
 modelHiddenLabel	{word}، مخفية عن طفلك
+replanMovedToFavourites	الأزرار التي أضفتها ولم تتّسع لها هذه اللوحة: {n}. أصبحت الآن في المفضّلة.
+replanParked	الأزرار التي أضفتها ولم يتّسع لها أي مكان: {n}. إنها محفوظة وستعود عندما تكبر اللوحة.

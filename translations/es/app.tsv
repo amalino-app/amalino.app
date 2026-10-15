@@ -1001,3 +1001,5 @@ searchNoResults	No se ha encontrado nada para «{q}».
 modelShort	Modelar
 showToChild	Mostrar a tu hijo o hija
 modelHiddenLabel	{word}, oculta para tu hijo o hija
+replanMovedToFavourites	Botones que añadiste y que no cabían en este tablero: {n}. Ahora están en Favoritos.
+replanParked	Botones que añadiste y que no cabían en ningún sitio: {n}. Se guardan y volverán cuando el tablero sea más grande.
