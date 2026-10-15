@@ -111,7 +111,7 @@ micPermission	Permite el micrófono para grabar palabras.
 modellingMode	Modo modelado
 modellingModeHow	Toca palabras mientras hablas, para enseñarle a {name} cómo se hace.
 modellingModeHow.anon	Toca palabras mientras hablas, para enseñarle a tu hijo o hija cómo se hace.
-modellingModeSub	Tus toques no cuentan como palabras del niño.
+modellingModeSub	Editar cambia el tablero. Modelar es hablar con tu hijo o hija en él: tus toques suenan, cuentan como tuyos y también puedes usar las palabras ocultas.
 modellingOn	Modelado: tú muestras, el niño mira
 myth.age.a	No. No hay edad mínima. Usar pronto imágenes, gestos y habla juntos favorece el desarrollo.
 myth.age.q	¿Es demasiado pequeño?
@@ -234,7 +234,7 @@ tip.myth	Comparte esta página con los abuelos y los profesores, para que todos 
 tip.print	Ten un tablero plastificado en el baño y en el coche; modela en papel igual que en el dispositivo.
 tip.profiles	Cada niño tiene sus tableros y palabras; prepáralos con los adultos que mejor lo conocen.
 tip.quick	Modela "para" y "ayúdame" también en momentos tranquilos, no solo cuando algo va mal.
-tip.reveal	Muestra una palabra nueva solo después de haberla modelado muchas veces. En el modo de edición, las palabras ocultas llevan un ojo tachado: sigue modelándolas también.
+tip.reveal	Muestra una palabra nueva solo cuando ya la hayas modelado muchas veces. En el modo modelado las palabras ocultas se ven atenuadas: modélalas y mantén pulsada una para mostrársela a tu hijo o hija.
 tip.speech	Que el niño oiga una voz que le encaje. Pregúntale cuál le gusta.
 tip.touch	Observa un día cómo toca. Aumenta el tiempo de pulsación solo si hay muchos toques accidentales.
 translationReview	Revisión de traducciones
@@ -998,3 +998,6 @@ lockAndKeep	Bloqueo y mantener en la app
 modellingShowMeWhere	En su barra está «Muéstrame dónde», para encontrar cualquier palabra.
 searchSettings	Buscar en los ajustes
 searchNoResults	No se ha encontrado nada para «{q}».
+modelShort	Modelar
+showToChild	Mostrar a tu hijo o hija
+modelHiddenLabel	{word}, oculta para tu hijo o hija

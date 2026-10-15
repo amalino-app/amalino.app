@@ -111,7 +111,7 @@ micPermission	Allow the microphone to record words.
 modellingMode	Modelling mode
 modellingModeHow	Tap words while you talk, to show {name} how.
 modellingModeHow.anon	Tap words while you talk, to show your child how.
-modellingModeSub	Your taps don't count as the child's words.
+modellingModeSub	Edit changes the board. Model is talking with your child on it: your taps speak, count as yours, and you can use hidden words too.
 modellingOn	Modelling: you are showing, the child is watching
 myth.age.a	No. There is no minimum age. Early use of pictures, gestures and speech together supports development.
 myth.age.q	Is my child too young?
@@ -234,7 +234,7 @@ tip.myth	Share this page with grandparents and teachers, so every adult uses the
 tip.print	Keep a laminated core board in the bath and in the car; model on paper exactly like on this device.
 tip.profiles	Each child gets their own boards and words; set them up with the adults who know the child best.
 tip.quick	Model "stop" and "help me" in calm moments too, not only when things go wrong.
-tip.reveal	Show a new word only after you've modelled it many times. In edit mode hidden words have a crossed-out eye — keep modelling them too.
+tip.reveal	Show a new word only after you've modelled it many times. In modelling mode hidden words show faded: model them, and hold one to show it to your child.
 tip.speech	Let the child hear a voice that fits them. Ask the child which voice they like.
 tip.touch	Watch how the child taps for a day. Increase hold time only if many taps are accidental.
 translationReview	Translation review
@@ -998,3 +998,6 @@ lockAndKeep	Lock and keep in the app
 modellingShowMeWhere	Its bar has "Show me where" to find any word.
 searchSettings	Search settings
 searchNoResults	Nothing found for "{q}".
+modelShort	Model
+showToChild	Show to your child
+modelHiddenLabel	{word}, hidden from your child

@@ -111,7 +111,7 @@ micPermission	Giv adgang til mikrofonen for at optage ord.
 modellingMode	Modelleringstilstand
 modellingModeHow	Tryk på ord, mens du taler, for at vise {name} hvordan.
 modellingModeHow.anon	Tryk på ord, mens du taler, for at vise dit barn hvordan.
-modellingModeSub	Dine tryk tæller ikke som barnets ord.
+modellingModeSub	Redigering ændrer tavlen. Model er at tale med dit barn på den: dine tryk siges højt, tæller som dine, og du kan også bruge skjulte ord.
 modellingOn	Modellering: du viser, barnet kigger
 myth.age.a	Nej. Der er ingen minimumsalder. Tidlig brug af billeder, tegn og tale sammen støtter udviklingen.
 myth.age.q	Er mit barn for ungt?
@@ -234,7 +234,7 @@ tip.myth	Del denne side med bedsteforældre og lærere, så alle voksne bruger a
 tip.print	Hav en lamineret kernetavle i badet og i bilen; vis på papir præcis som på enheden.
 tip.profiles	Hvert barn får sine egne tavler og ord; opsæt dem sammen med de voksne, der kender barnet bedst.
 tip.quick	Vis "stop" og "hjælp mig" også i rolige stunder, ikke kun når noget går galt.
-tip.reveal	Vis først et nyt ord for barnet, når du selv har vist det mange gange. I redigering har skjulte ord et overstreget øje – bliv ved med at vise dem også.
+tip.reveal	Vis først et nyt ord for barnet, når du selv har vist det mange gange. Når du modellerer, ses skjulte ord svagt: vis dem, og hold på et for at vise det for dit barn.
 tip.speech	Lad barnet høre en stemme, der passer til dem. Spørg barnet, hvilken stemme det kan lide.
 tip.touch	Se hvordan barnet trykker i en dag. Øg kun holdetiden, hvis mange tryk er utilsigtede.
 translationReview	Gennemgang af oversættelser
@@ -998,3 +998,6 @@ lockAndKeep	Lås og hold barnet i appen
 modellingShowMeWhere	Dens bjælke har »Vis mig hvor«, som finder ethvert ord.
 searchSettings	Søg i indstillinger
 searchNoResults	Intet fundet for »{q}«.
+modelShort	Modellér
+showToChild	Vis for dit barn
+modelHiddenLabel	{word}, skjult for dit barn

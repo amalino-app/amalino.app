@@ -32,7 +32,7 @@ notPractised	not practiced
 logModelTaps	Log adult modeling separately
 modellingMode	Modeling mode
 modellingOn	Modeling: you are showing, the child is watching
-tip.reveal	Show a new word only after you've modeled it many times. In edit mode hidden words have a crossed-out eye — keep modeling them too.
+tip.reveal	Show a new word only after you've modeled it many times. In modeling mode hidden words show faded: model them, and hold one to show it to your child.
 modelTaps	Adult modeling taps
 tip.access	Try one access method for at least two weeks with lots of modeling before judging it.
 tip.ai	Suggestions should never replace modeling. Keep modeling words yourself even with highlights on.
