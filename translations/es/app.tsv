@@ -256,6 +256,9 @@ welcomeBody	La configuración tarda unos 5 minutos. Todo se queda en este dispos
 welcomeTitle	Bienvenida
 whichLanguages	¿Qué idiomas?
 wordLabel	Palabra ({language})
+translateWord	Traducir
+translatedCheck	Traducido en este dispositivo. Revísalo, por favor.
+otherLanguageEmpty	Opcional. Si lo dejas vacío, el botón muestra la palabra escrita arriba.
 wordNotFound	"{word}" aún no está en los tableros
 wordType	Tipo de palabra
 wordTypeColour	Color por tipo

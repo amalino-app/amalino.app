@@ -256,6 +256,9 @@ welcomeBody	Opsætningen tager cirka 5 minutter. Alt bliver på denne enhed. Du 
 welcomeTitle	Velkommen
 whichLanguages	Hvilke sprog?
 wordLabel	Ord ({language})
+translateWord	Oversæt
+translatedCheck	Oversat på denne enhed. Tjek det gerne.
+otherLanguageEmpty	Valgfrit. Er feltet tomt, viser knappen ordet, som det er skrevet ovenfor.
 wordNotFound	"{word}" er ikke på tavlerne endnu
 wordType	Ordklasse
 wordTypeColour	Ordklassefarve

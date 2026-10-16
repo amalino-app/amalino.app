@@ -256,6 +256,9 @@ welcomeBody	Налаштування триває близько 5 хвилин.
 welcomeTitle	Ласкаво просимо
 whichLanguages	Які мови?
 wordLabel	Слово ({language})
+translateWord	Перекласти
+translatedCheck	Перекладено на цьому пристрої — перевірте, будь ласка.
+otherLanguageEmpty	Необов’язково. Якщо поле порожнє, на кнопці буде слово, написане вище.
 wordNotFound	Слова «{word}» ще немає на дошках
 wordType	Частина мови
 wordTypeColour	Колір частини мови

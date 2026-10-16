@@ -256,6 +256,9 @@ welcomeBody	Setup takes about 5 minutes. Everything stays on this device. You ca
 welcomeTitle	Welcome
 whichLanguages	Which languages?
 wordLabel	Word ({language})
+translateWord	Translate
+translatedCheck	Translated on this device. Please check it.
+otherLanguageEmpty	Optional. If empty, the button shows the word as written above.
 wordNotFound	"{word}" is not on the boards yet
 wordType	Word type
 wordTypeColour	Word-type colour

@@ -256,6 +256,9 @@ welcomeBody	يستغرق الإعداد نحو 5 دقائق، ويبقى كل ش
 welcomeTitle	مرحبًا
 whichLanguages	أي لغات؟
 wordLabel	الكلمة ({language})
+translateWord	ترجمة
+translatedCheck	تُرجمت على هذا الجهاز. يُرجى التحقق منها.
+otherLanguageEmpty	اختياري. إذا تُرك فارغًا، يعرض الزر الكلمة كما كُتبت في الأعلى.
 wordNotFound	"{word}" غير موجودة في اللوحات بعد
 wordType	نوع الكلمة
 wordTypeColour	لون نوع الكلمة

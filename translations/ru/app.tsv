@@ -256,6 +256,9 @@ welcomeBody	Настройка займёт около 5 минут. Всё ос
 welcomeTitle	Добро пожаловать
 whichLanguages	Какие языки?
 wordLabel	Слово ({language})
+translateWord	Перевести
+translatedCheck	Переведено на этом устройстве — проверьте, пожалуйста.
+otherLanguageEmpty	Необязательно. Если поле пустое, на кнопке будет слово, написанное выше.
 wordNotFound	Слова «{word}» пока нет на досках
 wordType	Часть речи
 wordTypeColour	Цвет части речи
