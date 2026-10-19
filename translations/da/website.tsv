@@ -11,7 +11,7 @@ skip	Spring til indhold
 draftBanner	Siden er en foreløbig oversættelse og er endnu ikke læst igennem af en, der har dansk som modersmål.
 pick.choose	Vælg dit sprog
 pick.title	Amalino: gratis ASK-app til børn · Vælg dit sprog
-pick.meta	Amalino er en gratis ASK-app til børn, der ikke taler endnu – på dansk, engelsk, russisk, ukrainsk, arabisk og spansk. Vælg dit sprog.
+pick.meta	Amalino er en gratis ASK-app til børn, der ikke taler endnu – på dansk, engelsk, russisk, ukrainsk, arabisk, spansk og litauisk. Vælg dit sprog.
 pick.trTitle	Hjælp med at oversætte Amalino · Vælg dit sprog
 pick.trMeta	Hjælp med at oversætte Amalino, en gratis kommunikationsapp til børn. Vælg dit sprog, og tjek en oversættelse, eller hjælp med at få et nyt sprog med.
 og.imageAlt	Amalinos logo: to talebobler på én stilk ved siden af navnet Amalino
@@ -21,7 +21,7 @@ footer.contact	Skriv til mig på {email}.
 footer.support	Støt Amalino
 footer.repo	[[Hjemmeside, vejledning og oversættelser på GitHub]]
 home.title	Amalino: gratis ASK-app til børn, der ikke taler endnu
-home.meta	Amalino er en gratis ASK-app til børn, der ikke taler endnu: Tryk på et billede, og hør ordet. På dansk, engelsk, russisk, ukrainsk, arabisk og spansk.
+home.meta	Gratis ASK-app til børn, der ikke taler endnu: Tryk på et billede, og hør ordet. På dansk, engelsk, russisk, ukrainsk, arabisk, spansk og litauisk.
 home.h1	Ord til børn, der ikke taler – eller ikke taler endnu
 home.lead	Amalino er en app til telefon og tablet. Barnet trykker på billeder, og så siger appen ordene højt – på det sprog, I taler derhjemme.
 home.story	Sidste år sad jeg i et fly og så en dreng, der ikke kunne tale, som andre børn kan. Jeg kunne ikke slippe tanken om ham. De gode apps, der hjælper børn som ham, er dyre, mange findes kun til iPad, og kun få taler de sprog, familierne bruger derhjemme. Derfor laver jeg Amalino.
@@ -31,7 +31,7 @@ home.featuresTitle	Det særlige ved Amalino
 home.f1.title	Hvert ord har sin faste plads
 home.f1.body	De ord, barnet har mest brug for, står altid samme sted, så hånden lærer vejen – ligesom din hånd kender tastaturet. Begynd med få, store knapper, og vis flere, efterhånden som barnet vokser. Intet flytter rundt.
 home.f2.title	Familiens egne sprog
-home.f2.body	Dansk, engelsk, russisk, ukrainsk, arabisk og spansk – og du skifter med ét tryk. Du kan også optage ord med din egen stemme, så det lyder, som det gør derhjemme.
+home.f2.body	Dansk, engelsk, russisk, ukrainsk, arabisk, spansk og litauisk – og du skifter med ét tryk. Ti naturlige stemmer taler dem alle: Det er én download, og bagefter virker de uden internet. Du kan også optage ord med din egen stemme, så det lyder, som det gør derhjemme.
 home.f3.title	Hjælp til de voksne
 home.f3.body	Børn lærer at tale med billeder, ligesom de lærer at tale med ord: ved at se os gøre det. Amalino viser dig, hvor hvert ord ligger, og giver korte tips, så du også selv kan tale med billederne.
 home.f4.title	Privat og offline
@@ -39,6 +39,8 @@ home.f4.body	Ingen konto, ingen reklamer, ingen sporing. Amalino virker uden int
 home.mythTitle	Kan det forhindre mit barn i at lære at tale?
 home.mythBody	Nej. Forskningen viser, at det ikke holder talen tilbage at tale med billeder – det kan endda hjælpe. Det er en bro til talen, ikke en erstatning. Der er ingen nedre aldersgrænse, og barnet behøver ikke først at være »klar«.
 home.platforms	Til Android-telefoner og -tablets samt iPhone og iPad.
+home.preview	Bortset fra engelsk er sprogene i appen en prøveversion, så ordene kan stadig blive ændret.
+home.previewEmail	Skriv til mig på {email}, hvis du finder et forkert ord.
 home.helpTitle	Taler du et andet sprog?
 home.helpBody	Hvert sprog i Amalino skal tjekkes af en, der taler det derhjemme. Kunne det være dig? Så læs mere her.
 home.helpLink	Sådan kan du hjælpe med oversættelsen
@@ -50,12 +52,12 @@ about.p1	Nogle børn har masser på hjerte, men ingen nem måde at sige det på.
 about.howTitle	Sådan arbejder jeg
 about.how1	**Forskning først.** Kerneordene bygger på undersøgelser af, hvad små børn faktisk siger. Omkring 200 af dem dækker det meste af hverdagens snak, og de har fast plads på skærmen, så barnets hånd lærer vejen.
 about.how2	**Afprøvet med egne hænder.** Jeg afprøver hver ændring på en iPad, en Android-tablet og en ældre Android-telefon for at sikre, at appen stadig er hurtig. Intet er færdigt, før det virker på en rigtig enhed.
-about.how3	**Læst igennem af folk med sproget som modersmål.** Dansk, russisk, ukrainsk, arabisk og spansk oversættes først med hjælp fra AI og tjekkes derefter af folk, der har sproget som modersmål. Indtil det er sket, er teksten på det sprog markeret som udkast.
+about.how3	**Læst igennem af folk med sproget som modersmål.** Dansk, russisk, ukrainsk, arabisk, spansk og litauisk oversættes først med hjælp fra AI og tjekkes derefter af folk, der har sproget som modersmål. Indtil det er sket, står sproget som prøveversion i appen.
 about.how4	**Privat fra start.** Ingen konto, ingen reklamer, ingen brugsstatistik. Appen virker offline, og før noget bruger internettet, bliver du spurgt.
 about.how5	**De voksne lærer også.** Børn lærer at tale med billeder ved at se voksne bruge dem. Derfor viser Amalino forældre, hvor hvert ord ligger, og giver korte, venlige tips – uden at nogen skal føle, at de gør det forkert.
 about.freeBody	Amalino er gratis for børn og familier, og sådan bliver det ved med at være. Der er ingen reklamer – hverken nu eller senere.
 about.thanksTitle	Tak
-about.thanks	Billederne i Amalino er ARASAAC-piktogrammer. De tilhører Aragoniens regering, er lavet af Sergio Palao til ARASAAC (arasaac.org) og deles under en Creative Commons-licens (BY-NC-SA). Enkelte billeder kommer fra Mulberry Symbols og OpenMoji. Tak til alle, der deler deres arbejde på den måde, og til alle de forældre og modersmålstalere, der fortæller mig, hvad der skal rettes.
+about.thanks	Billederne i Amalino er ARASAAC-piktogrammer. De tilhører Aragoniens regering, er lavet af Sergio Palao til ARASAAC (arasaac.org) og deles under en Creative Commons-licens (BY-NC-SA). Enkelte billeder kommer fra Mulberry Symbols og OpenMoji. De naturlige stemmer kommer fra Supertonic 3, som deles under en åben licens (OpenRAIL-M). Tak til alle, der deler deres arbejde på den måde, og til alle de forældre og modersmålstalere, der fortæller mig, hvad der skal rettes.
 about.repo	Hjemmesiden, brugervejledningen og appens oversættelser ligger [[på GitHub]], hvor alle kan foreslå rettelser.
 support.title	Støt Amalino
 support.body	Amalino er og bliver altid gratis for børn og familier. Har du lyst til at hjælpe, går et lille bidrag til det, der holder Amalino kørende: servere, udviklerkonti til app-butikkerne og stemmerne. Tak – det betyder meget for mig.
@@ -69,7 +71,7 @@ tr.intro	Et barn skal kunne tale på det sprog, det hører derhjemme. Derfor bli
 tr.write	Skriv til mig på {email}, og fortæl, hvilket sprog du taler.
 tr.stepsLabel	Sådan foregår det
 tr.improveTitle	Forbedr et sprog, Amalino allerede har
-tr.improveIntro	Amalino taler dansk, engelsk, russisk, ukrainsk, arabisk og spansk. Bortset fra engelsk er teksterne et første udkast, som skal læses igennem af en, der har sproget som modersmål.
+tr.improveIntro	Amalino taler dansk, engelsk, russisk, ukrainsk, arabisk, spansk og litauisk. Bortset fra engelsk er teksterne et første udkast – i appen står de som prøveversion – og de skal læses igennem af en, der har sproget som modersmål.
 tr.improve1	Jeg sender dig et regneark til gennemlæsning på dit sprog. I hver række står den engelske tekst, udkastet på dit sprog og – når det drejer sig om et ord – billedet.
 tr.improve2	Er rækken rigtig, så skriv »yes« i kolonnen »OK?«. Er den ikke, så skriv et bedre ord eller en bedre sætning i kolonnen »Correction«. Lad feltet stå tomt, hvis du er i tvivl.
 tr.improve3	Send regnearket tilbage. Så lægger jeg dine rettelser ind i appen og markerer teksten som tjekket.
@@ -84,23 +86,24 @@ tr.addHonest	Ærligt talt tager det tid at få et nyt sprog ind i appen. Der ska
 tr.addMeanwhile	Indtil da kan familier stadig lave tavler på alle sprog ved at optage hvert ord med deres egen stemme.
 tr.addGithub	På GitHub kan du også [[starte dit sprog]] ved at kopiere den engelske fil. Jeg tjekker alt, før det kommer med i appen.
 tr.thanks	Tak. Hvert ord, du tjekker, hjælper et barn med at sige det, det gerne vil.
-pr.meta	Sådan behandler Amalino dit barns data: ingen konto, ingen reklamer, ingen sporing – og alt bliver på din enhed.
+pr.meta	Sådan behandler Amalino dit barns data: ingen konto, ingen reklamer, ingen sporing – og alt gemmes på din enhed.
 pr.title	Privatliv i Amalino: ingen konto og ingen reklamer
 pr.draft	Dette er et udkast. En jurist gennemgår teksten, før Amalino udkommer.
 pr.intro	Amalino er lavet til børn, så appen gemmer så lidt som muligt, og det gemmes på din enhed. Her kan du læse, hvad det betyder, sagt helt enkelt.
 pr.appTitle	I appen
 pr.noAccount	Amalino virker uden konto og uden internet.
-pr.onDevice	Alt, hvad appen gemmer (tavler, de ord, dit barn har brugt, optagelser af familiens stemmer og billeder, du selv tilføjer), bliver krypteret på din enhed.
+pr.onDevice	Alt, hvad appen gemmer (tavler, de ord, dit barn har brugt, optagelser af familiens stemmer og billeder, du selv tilføjer), ligger krypteret på din enhed. Det bliver aldrig sendt til mig.
+pr.osBackup	Sikkerhedskopier: Tager du backup af din iPhone eller iPad til iCloud eller en computer, kommer Amalinos data med i den backup, ligesom data fra alle andre apps. På Android kopieres Amalinos data ikke til din Google-backup eller over på en ny telefon. Den automatiske daglige backup i appen bliver på enheden og kan kun åbnes dér. Skifter du til en ny enhed, så brug »{app:exportBackup}«.
 pr.noAds	Der er ingen reklamer, ingen brugsstatistik og ingen sporing.
 pr.internet	Amalino bruger kun internettet, hvis du slår en valgfri funktion til og først har givet lov:
 pr.dlPictures	»{app:arasaacFull}« og »{app:moreSymbolSets}«: Billederne kommer fra ARASAAC (arasaac.org) og Global Symbols (globalsymbols.com). Kun ordlisten, de billeder, du vælger, og de ord, du søger efter, sendes frem og tilbage. Der sendes intet om dit barn.
-pr.dlVoices	»{app:naturalVoicesHeading}« og talegenkendelsen til »{app:aiListen}«: Filerne hentes fra GitHub (github.com), hvor stemmefilerne ligger. Der hentes kun filer, og der sendes intet om dit barn.
+pr.dlVoices	»{app:naturalVoicesHeading}« (én download på ca. 130 MB til alle sprog) og talegenkendelsen til »{app:aiListen}«: Filerne hentes fra GitHub (github.com), hvor stemmefilerne ligger – enten fra Amalinos egen kopi (github.com/amalino-app/voices) eller fra den oprindelige udgivelse. Der hentes kun filer, og der sendes intet om dit barn.
 pr.dlNote	Som alle andre hjemmesider kan stederne ovenfor se din enheds internetadresse (IP-adresse), når den forbinder til dem.
 pr.later	»{app:syncTitle}« og »{app:aiCloud}«, som kommer senere: synkronisering mellem dine egne enheder (end-to-end-krypteret) og AI-hjælpere til voksne. Hver funktion beder om lov for sig, og du kan slå den fra igen.
-pr.context	»{app:aiContext}« kan læse klokkeslættet, din kalender eller din placering. Hver af dem er en særskilt indstilling, der er slået fra fra start, og dataene bruges kun på din enhed. På Android beder systemet om adgang til at læse og skrive i kalenderen på én gang, men Amalino læser kun aftaler. Appen opretter, ændrer eller sletter dem aldrig.
-pr.camera	»{app:suggestHotspots}« i en scene analyserer billedet på din enhed. På iPhone og iPad bruges Apples Vision-framework. På Android bruges Google ML Kit: Billederne forlader aldrig enheden, men ML Kit sender anonyme målinger af ydeevne og brug af denne funktion til Google (det fremgår af Googles vilkår for ML Kit, og det kan ikke slås fra). Funktionen er slået fra, indtil du vælger den. Slår du »{app:aiCloud}« til, sendes en mindre kopi af billedet først til den hjælper.
-pr.translate	»{app:offlineTranslation|label}« af ordene på knapperne (en AI-hjælper, der er slået fra fra start) kan køre på din enhed. På Android kan du én gang hente Googles ML Kit-oversættelsesmodel for et sprog fra Google (ca. 30 MB, når du har sagt ja). Derefter virker oversættelsen offline, og der sendes ingen ord fra appen; ML Kits anonyme brugsmålinger gælder som beskrevet ovenfor. På iPhone og iPad bruges de sprog, der er installeret i indstillingerne for Apples Oversæt.
-pr.backup	»{app:exportBackup}« laver en kopi, der er beskyttet med en adgangskode, og du kan slette alt ved at afinstallere appen.
+pr.context	»{app:aiContext}« bruger kun klokkeslættet – for eksempel madsiden ved frokosttid. Funktionen bruger hverken din kalender eller din placering, og Amalino beder ikke om adgang til dem.
+pr.camera	»{app:suggestHotspots}« i en scene analyserer billedet på din enhed. På iPhone og iPad bruges Apples Vision-framework. På Android bruges Google ML Kit: Billederne forlader aldrig enheden, men ML Kit sender anonyme målinger af ydeevne og brug af denne funktion til Google (det fremgår af Googles vilkår for ML Kit, og det kan ikke slås fra). Funktionen kører kun, når du selv vælger den.
+pr.translate	Når du retter et ord, kan knappen »{app:translateWord}« udfylde det samme ord på dit barns andre sprog. Med »{app:offlineTranslation|label}«, som du sætter op én gang for hvert sprog i sprogindstillingerne, sker det på din enhed. På Android henter du én gang Googles ML Kit-oversættelsesmodel for sproget fra Google (ca. 30 MB, når du har sagt ja). Derefter virker oversættelsen offline, og der sendes ingen ord fra appen; ML Kits anonyme brugsmålinger gælder som beskrevet ovenfor. På iPhone og iPad (iOS 26 eller nyere) bruges de sprog, du har hentet i indstillingerne for Apples Oversæt.
+pr.backup	»{app:exportBackup}« laver en kopi, der er beskyttet med en adgangskode, og som du selv bestemmer, hvor du gemmer. Du kan slette alt ved at afinstallere appen.
 pr.notTitle	Hvad Amalino ikke er
 pr.notBody	Amalino hjælper et barn med at kommunikere. Appen stiller ikke diagnoser og overvåger eller behandler ikke nogen tilstand.
 pr.contactTitle	Spørgsmål
