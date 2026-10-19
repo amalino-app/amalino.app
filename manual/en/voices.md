@@ -5,22 +5,22 @@ The voice is the child's voice. Let the child hear a few and choose the one they
 
 ## Kinds of voices
 
-- **Natural voices**: ten voices (Ella, Mila, Nora, Sofi, Ida, Leo, Theo, Adam, Omar and Ben) that sound the most human. They speak all six of Amalino's languages. One download covers all of them, and they work offline afterwards.
-- **This device's own voice**: the voices that come with the phone or tablet. No download.
-- **Personal Voice** (iPhone and iPad, iOS 17 or newer): a voice you made in the device's settings under **Accessibility → Personal Voice**. Amalino asks for permission to use it.
-- **Your recordings**: record any word in your own voice in the button editor. See [Editing and moving buttons](editing.md).
+- **Natural voices**: ten voices (Ella, Mila, Nora, Sofi, Ida, Leo, Theo, Adam, Omar and Ben) that sound the most human. Each of them speaks all seven of Amalino's languages. One download covers all of them, and they work offline afterwards.
+- **This device's own voice**: the voices that come with the phone or tablet. No download. Some may need the internet; Amalino says so under the voice.
+- **Personal Voice** (iPhone and iPad, iOS 17 or newer): a voice you made in the device's settings under **Accessibility → Personal Voice**. Amalino asks for permission to use it. Android has no Personal Voice: to keep a family member's voice, record words instead.
+- **Your recordings**: record any word in your own voice in the button editor. Recordings play instead of the app's voice. See [Editing and moving buttons](editing.md).
 
 Tap a voice to hear it, then tap **Use**.
 
 ## One voice or one per language
 
-Each language has its own voice. If a voice speaks several of the child's languages, setup and **Speech and voices** offer **Use … for all languages** to keep one voice for everything. Otherwise, sentences that mix languages switch voice.
+Each language has its own voice setting. Because every natural voice speaks all of the child's languages, you can tap **Use … for all languages** to keep one voice for everything. Otherwise, sentences that mix languages switch voice.
 
 ## Downloads
 
-The natural voices are one larger download. Amalino tells you the size first. On mobile data it asks before downloading; choose **Wait for Wi-Fi** to download later. Until a voice has downloaded, the device's own voice speaks.
+The natural voices are one download of about 129 MB. Amalino tells you the size first. On mobile data it asks before downloading; choose **Wait for Wi-Fi** to download later. Until the download has finished, the device's own voice speaks.
 
-To free space, remove a voice from the device; the words use the device's voice until you download it again.
+To free space, remove the natural voices from the device; the words use the device's voice until you download them again.
 
 ## How the voice sounds
 
@@ -36,7 +36,7 @@ You'll find this under **Advanced** at the end of **Speech and voices**. To spea
 
 ## The child's name
 
-In the grown-up controls, choose the child's name (for example **Jev's name**):
+In the grown-up settings, choose the child's name (for example **Jev's name**):
 
 - write the name the way it's written in each language, or a short form;
 - hear how each voice says it;
@@ -46,7 +46,7 @@ If a word is still wrong, record it in your own voice instead.
 
 ## No voice for a language
 
-If no offline voice exists for a language on the device, install one in the device's text-to-speech settings, or record the words yourself.
+If a language has no voice yet, download the natural voices. Or install a voice in the device's text-to-speech settings, or record the words yourself.
 
 > **Tip:** Ask the child which voice they like. A voice that fits them makes them want to use it.
 

@@ -13,7 +13,7 @@ You don't need to read it all at once. Start with **Getting started**, then come
 4. [Quick phrases and More](quick-phrases.md): stop, help me, the family's own phrases and the Favourites folder.
 5. [The keyboard](keyboard.md): typing, word suggestions and key sizes.
 6. [Scenes](scenes.md): photos with areas that speak.
-7. [Editing and moving buttons](editing.md): grown-up controls, changing a button, undo.
+7. [Editing and moving buttons](editing.md): grown-up settings, changing a button, translating, undo.
 8. [Settings, screen by screen](settings.md): what each setting does.
 9. [Voices](voices.md): choosing how the child sounds.
 10. [Sharing and printing](sharing-and-printing.md): backups, a new device, other apps and paper boards.

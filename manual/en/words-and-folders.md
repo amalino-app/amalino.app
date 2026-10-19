@@ -1,7 +1,7 @@
 <!-- description: How Amalino organises words: core words in fixed places, folders, board sizes, vocabulary levels, and showing hidden words over time. -->
 # Words and folders
 
-Amalino starts with a full vocabulary in six languages: about 2,600 words. Not all of them are shown at once. This page explains how the words are organised and how to show more as the child grows.
+Amalino starts with a full vocabulary in seven languages: about 2,500 words. Not all of them are shown at once. This page explains how the words are organised and how to show more as the child grows.
 
 ## Core words and folders
 
@@ -33,8 +33,8 @@ Every word has its own place, and it keeps it. When a word is hidden, its place 
 **Settings → Board layout → Vocabulary level** decides how many words appear in the folders:
 
 - **Level 1**: about 400 words, core words and first words in folders
-- **Level 2**: about 1,500 words, with more folders
-- **Level 3**: all words (about 2,600)
+- **Level 2**: about 1,300 words, with more folders
+- **Level 3**: all words (about 2,500)
 
 A level only shows or hides words in folders. Words on the main board are shown one by one (below).
 
@@ -42,7 +42,7 @@ A level only shows or hides words in folders. Words on the main board are shown 
 
 Each word is either **shown** to the child or **hidden**. A hidden word's place looks empty to the child, and nothing else moves.
 
-To see and change them, open the grown-up controls and choose **Edit this board**. Hidden words appear in their places with a dark veil and a crossed-out eye. Tap one, and in its editor turn on **Shown to the child**, then tap **Done**. This works the same inside folders.
+To see and change them, open the grown-up settings and choose **Edit this board**. Hidden words appear in their places with a dark veil and a crossed-out eye. Tap one, and in its editor turn on **Shown to the child**, then tap **Done**. This works the same inside folders.
 
 > **Tip:** Show a new word only after you've modelled it many times. In modelling mode hidden words show faded in their places: tap them while you talk, and when your child is ready, hold one and choose **Show to your child**. See [Settings: Modelling mode](settings.md).
 

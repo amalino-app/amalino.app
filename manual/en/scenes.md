@@ -3,18 +3,16 @@
 
 A **scene** is a photo with areas that speak: the playground with the swing and the slide, the kitchen table, grandma's garden. The child taps the swing and hears "swing". Scenes work well for young children and for talking about real places and moments.
 
-<!-- screenshot: a scene in the child's view with a word shown above an area -->
-
 ## Making a new scene
 
-1. Open the grown-up controls and choose **Edit this board**.
+1. Open the grown-up settings and choose **Edit this board**.
 2. In the **Editing** line under the top bar, tap the **camera** icon at its end.
 3. Choose **New scene from camera** to take a photo now, or **New scene from photos** to use one you have.
 4. **Crop the photo**: drag the corners so the things you'll talk about fill the picture, then tap **Crop**. Or tap **Use the whole photo**. The child's view doesn't zoom, so a tight crop makes the areas bigger.
 5. Type a name in **What is this place or moment?**, for example "Playground".
 6. Choose **where the scene's button goes** (see below).
 
-The scene then opens, ready for you to draw its areas. Grown-up controls stay open for the whole flow.
+The scene then opens, ready for you to draw its areas. The grown-up settings stay open for the whole flow.
 
 ## Where the button goes
 
@@ -30,7 +28,7 @@ Amalino never puts a new button anywhere on its own. **Where should it go?** sho
 
 ## Drawing areas that speak
 
-When a scene has no areas yet, a card on the photo says what to do.
+In the app, an area that speaks is called a **talking spot**. When a scene has no areas yet, a card on the photo says what to do.
 
 - **A box**: drag a box over the thing with one finger. Type the word (or record it), then tap **Save**.
 - **An odd shape**: tap **Draw a shape**, tap the corners around the thing one by one, then tap **Done**. A shape needs at least three corners.
@@ -47,7 +45,7 @@ The buttons at the top of the scene editor:
 
 On small screens these buttons wrap onto two or three rows.
 
-The camera menu also offers **Suggest hotspots**: Amalino looks at the photo on the device and proposes areas for you to accept. On Android this uses Google ML Kit on the device; the photo never leaves it.
+While a scene is open, the camera menu also offers **Suggest talking spots**: Amalino looks at the photo on the device and proposes areas. Untick the ones you don't want and tap **Add selected**. On Android this uses Google ML Kit, and on iPhone and iPad Apple Vision, both on the device: the photo never leaves it. See [Privacy](privacy.md).
 
 Tap **Done** in the top bar when you've finished.
 

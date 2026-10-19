@@ -3,8 +3,6 @@
 
 Some things need to be said fast, without building a sentence. The **phrase row** at the bottom of the board keeps them one tap away, on every page.
 
-<!-- screenshot: the phrase row -->
-
 ## The phrase row
 
 From left to right:
@@ -22,7 +20,7 @@ A tap on a phrase says it straight away. It doesn't go into the message bar.
 
 ## Choosing the two family phrases
 
-Open the grown-up controls and choose **Quick phrases**. Under **On the board**, pick the **First phrase** and the **Second phrase** for the slots next to stop and help me. Choose the two the child needs most, for example "I need a break" and "I don't like it".
+Open the grown-up settings and choose **Quick phrases**. Under **On the board**, pick the **First phrase** and the **Second phrase** for the slots next to stop and help me. Choose the two the child needs most, for example "I need a break" and "I don't like it".
 
 ## The More page
 

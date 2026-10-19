@@ -9,7 +9,7 @@ Children learn to use a talking app the way they learn to talk: by seeing and he
 
 - Model a word or two at a time; you don't have to tap every word you say.
 - Don't ask the child to copy you, and don't quiz them ("Show me *cup*"). Just use it.
-- Tap **Model** on the top bar (with the grown-up controls open) so your taps aren't counted as the child's words. Hidden words show faded then, so you can model them before your child has them. It switches itself off two minutes after your last tap.
+- Tap **Model** on the top bar (with the grown-up settings open) so your taps aren't counted as the child's words. Hidden words show faded then, so you can model them before your child has them. It switches itself off two minutes after your last tap.
 
 ## Start small
 
@@ -43,6 +43,6 @@ Show grandparents, babysitters and friends how the child uses the app; a two-min
 
 **Why so few pictures of things?** About 25 words make up most of a toddler's talk, and about 200 core words cover most everyday speech. Keeping them in fixed places builds the child's motor memory.
 
-You'll find these answers, with the research, under **Daily coaching → Why this helps** in the grown-up controls.
+You'll find these answers, with the research, under **Daily coaching → Why this helps** in the grown-up settings.
 
 Next: [Privacy](privacy.md).

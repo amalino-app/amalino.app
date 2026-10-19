@@ -3,8 +3,6 @@
 
 Children who know some letters can type words that aren't on the board. The keyboard sits in the same place as the board, so switching between them is one tap.
 
-<!-- screenshot: the keyboard with the suggestion row -->
-
 ## Opening and closing it
 
 Tap the **keyboard** button in the top bar. To go back to the pictures, tap the same button again (it now shows a grid) or the **close** key at the bottom left of the keyboard.
@@ -15,7 +13,7 @@ Tap the **keyboard** button in the top bar. To go back to the pictures, tap the 
 - **Space** finishes the word.
 - **Backspace** deletes a letter. Hold it to keep deleting.
 - **Speak** says the whole message.
-- **123** opens the numbers and marks, including the language's own (¿ ¡ in Spanish, « » in Danish, Russian and Ukrainian, ؟ ، in Arabic). **ABC** goes back to the letters.
+- **123** opens the numbers and marks, including the language's own (¿ ¡ in Spanish, « » in Danish, Russian and Ukrainian, „ “ in Lithuanian, ؟ ، in Arabic). **ABC** goes back to the letters.
 
 The message bar's **Delete** and **Clear** work as on the board.
 
