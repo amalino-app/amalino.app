@@ -84,7 +84,12 @@ PICKERS = (('', 'home.h1'), ('translate', 'nav.translate'))
 
 # Page weight (decision 31 keeps everything self-hosted; this keeps it small): per HTML page and the whole site.
 MAX_PAGE_BYTES = 40_000
-MAX_SITE_BYTES = 600_000
+MAX_SITE_BYTES = 700_000  # 600 KB for six languages, raised with the seventh (Lithuanian)
+# The manual's screenshots (manual/<lang>/img/*.png, published at /<lang>/manual/img/) are counted on their own:
+# each one and all of them together. MAX_SITE_BYTES covers everything else.
+MAX_IMAGE_BYTES = 150_000
+MAX_MANUAL_IMAGE_BYTES = 3_000_000
+MANUAL_IMAGE = re.compile(r'^!\[([^\]]+)\]\((img/[a-z0-9\-]+\.png)\)$')
 
 # The public repository of the website, manual and translations (owner decision 33, relaxed 2026-10-14). Pages
 # link to it with [[link text]] in a string; no other github.com link is allowed.
@@ -566,8 +571,9 @@ def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
 
-def md_to_html(md, link):
-    """A small Markdown subset for the manual: # headings, paragraphs, - and 1. lists, > notes, inline marks.
+def md_to_html(md, link, image=None):
+    """A small Markdown subset for the manual: # headings, paragraphs, - and 1. lists, > notes, inline marks,
+    and a screenshot on a line of its own: ![alt text](img/name.png), drawn by image(src, alt) (alt is required).
     HTML comments are dropped; the first one may be <!-- description: ... -->. Returns (h1 text, description,
     html)."""
     m = re.match(r'\s*<!--\s*description:\s*(.*?)\s*-->', md, flags=re.S)
@@ -590,8 +596,14 @@ def md_to_html(md, link):
         line = line.rstrip()
         h = re.match(r'^(#{1,4})\s+(.+)$', line)
         li = re.match(r'^(?:(-)|\d+\.)\s+(.+)$', line)
+        img = MANUAL_IMAGE.match(line.strip())
         if not line.strip():
             flush()
+        elif img:
+            flush()
+            if image is None:
+                raise BuildError(f'a manual image is not allowed here: {line.strip()}')
+            out.append(image(img.group(2), ' '.join(img.group(1).split())))
         elif h:
             flush()
             level, text = len(h.group(1)), h.group(2).strip()
@@ -634,6 +646,21 @@ def manual_pages(loc):
         if not os.path.isfile(os.path.join(MANUAL, loc, f'{n}.md')):
             raise BuildError(f'manual/{loc}/index.md links to {n}.md, which does not exist')
     return names
+
+
+def manual_image(loc, name):
+    """The screenshot drawer for a manual page: a figure with the image's own size, lazily loaded; '-phone'
+    pictures get the narrower phone frame. The file must be in manual/<loc>/img/."""
+    def draw(src, alt):
+        path = os.path.join(MANUAL, loc, src)
+        size = png_size(path) if os.path.isfile(path) else None
+        if not size:
+            raise BuildError(f'manual/{loc}/{name}.md: {src} is not a PNG in manual/{loc}/img/')
+        here = '' if name == 'index' else '../'
+        kind = 'shot phone' if src.endswith('-phone.png') else 'shot'
+        return (f'<figure class="{kind}"><img src="{here}{src}" alt="{html.escape(alt, quote=True)}" '
+                f'width="{size[0]}" height="{size[1]}" loading="lazy" decoding="async"></figure>')
+    return draw
 
 
 def manual_langs():
@@ -757,9 +784,16 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     manual_entries = []
     for loc in langs_m:
         names = manual_pages(loc)
+        shots = os.path.join(MANUAL, loc, 'img')
+        if os.path.isdir(shots):
+            os.makedirs(os.path.join(out, loc, 'manual', 'img'), exist_ok=True)
+            for n in sorted(os.listdir(shots)):
+                if n.endswith('.png'):
+                    shutil.copyfile(os.path.join(shots, n), os.path.join(out, loc, 'manual', 'img', n))
         pages = []
         for name in names:
-            heading, desc, body = md_to_html(read(os.path.join(MANUAL, loc, f'{name}.md')), manual_link(loc, name, names))
+            heading, desc, body = md_to_html(read(os.path.join(MANUAL, loc, f'{name}.md')), manual_link(loc, name, names),
+                                             manual_image(loc, name))
             if not desc:
                 raise BuildError(f'manual/{loc}/{name}.md needs <!-- description: ... --> on its first line')
             pages.append((name, heading, desc, body))
@@ -1230,8 +1264,16 @@ def check_seo(out, files, site, page_langs=None):
     expect(os.path.isfile(og), 'missing assets/og-image.png')
     if os.path.isfile(og):
         expect(png_size(og) == (1200, 630), f'assets/og-image.png is not a 1200x630 PNG ({png_size(og)})')
-    total = sum(os.path.getsize(os.path.join(d, n)) for d, _ds, ns in os.walk(out) for n in ns)
+    def shot(d):
+        return os.path.basename(d) == 'img' and os.path.basename(os.path.dirname(d)) == 'manual'
+    total = sum(os.path.getsize(os.path.join(d, n)) for d, _ds, ns in os.walk(out) if not shot(d) for n in ns)
     expect(total <= MAX_SITE_BYTES, f'site is {total} bytes, over {MAX_SITE_BYTES}')
+    shots = [os.path.join(d, n) for d, _ds, ns in os.walk(out) if shot(d) for n in ns]
+    for p in shots:
+        expect(p.endswith('.png') and os.path.getsize(p) <= MAX_IMAGE_BYTES,
+               f'{os.path.relpath(p, out)}: a manual image must be a PNG of at most {MAX_IMAGE_BYTES} bytes')
+    images = sum(os.path.getsize(p) for p in shots)
+    expect(images <= MAX_MANUAL_IMAGE_BYTES, f'manual images are {images} bytes, over {MAX_MANUAL_IMAGE_BYTES}')
     return errors
 
 

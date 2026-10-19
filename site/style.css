@@ -178,6 +178,10 @@ bdi a, bdi { overflow-wrap: anywhere; }
 /* The manual */
 .manual blockquote { margin: 1.2em 0; padding: 12px 16px; background: var(--card); border-inline-start: 4px solid var(--border); border-radius: 8px; }
 .manual blockquote p { margin: 0; }
+.manual .shot { margin: 1.5em 0; }
+.manual .shot img { display: block; max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 12px; }
+.manual .shot:not(.phone) img { width: 560px; }
+.manual .shot.phone img { width: 300px; }
 .manual code { background: var(--card); padding: 0 4px; border-radius: 4px; }
 .manual-edit { margin-block-start: 2em; color: var(--muted); }
 .manual-steps { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-block: 1.5em; }

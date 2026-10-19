@@ -1,5 +1,6 @@
 """Tests for build.py (the guards, the owner's text rules, SEO basics, the language redirect and menu).
 Run from the repository root: python3 -m unittest discover -s site -p 'test_*.py'"""
+import html
 import io
 import os
 import re
@@ -621,6 +622,27 @@ class Manual(unittest.TestCase):
         self.assertIn('&lt;b&gt;', bs.md_to_html('# T\n\n<b>x</b>\n', str)[2])
         with self.assertRaises(bs.BuildError):
             bs.md_to_html('no heading\n', str)
+
+    def test_markdown_screenshots(self):
+        md = '# T\n\nText.\n![The board, with "I want"](img/board-phone.png)\nMore.\n'
+        body = bs.md_to_html(md, str, lambda src, alt: f'<IMG {src} | {alt}>')[2]
+        self.assertIn('<p>Text.</p>\n<IMG img/board-phone.png | The board, with "I want">\n<p>More.</p>', body)
+        with self.assertRaises(bs.BuildError):
+            bs.md_to_html(md, str)  # no image drawer: images are only for manual pages
+        self.assertNotIn('<IMG', bs.md_to_html('# T\n\n![](img/x.png)\n', str, lambda s, a: '<IMG>')[2], 'alt is required')
+
+    def test_manual_screenshots_are_built_with_size_and_alt(self):
+        folder = os.path.join(bs.MANUAL, 'en')
+        for n in sorted(os.listdir(folder)):
+            if not n.endswith('.md'):
+                continue
+            name = n[:-3]
+            for alt, src in re.findall(r'^!\[([^\]]+)\]\((img/[^)]+)\)$', read(folder, n), flags=re.M):
+                page = read(self.out, 'en', bs.manual_path(name))
+                w, h = bs.png_size(os.path.join(folder, src))
+                prefix = '' if name == 'index' else '../'
+                self.assertIn(f'<img src="{prefix}{src}" alt="{html.escape(alt, quote=True)}" width="{w}" height="{h}"', page)
+                self.assertTrue(os.path.isfile(os.path.join(self.out, 'en', 'manual', src)), src)
 
     def test_manual_rejects_unknown_links(self):
         link = bs.manual_link('en', 'scenes', ['index', 'scenes', 'editing'])

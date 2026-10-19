@@ -35,6 +35,10 @@ python3 scripts/check_translations.py
 
 Open `site/dist/index.html` in a browser; links work from the file system too.
 
+The manual's pictures (`manual/en/img/`) are drawn from the app on a computer, not a device: the app's
+`test/tool/manual_screenshots_test.dart`, then reduced to small PNGs. A page shows one with
+`![what the picture shows](img/name.png)` on a line of its own.
+
 ## Licence
 
 The text, translations and manual are under [CC BY-SA 4.0](LICENSE).
