@@ -1,0 +1,123 @@
+# key	text
+# The website (amalino.app) in lt. English (translations/en/website.tsv) is the source; keep every
+# {placeholder}, {app:...} and **bold** as it is in English. Licence: CC BY-SA 4.0.
+nav.home	Pradžia
+nav.about	Apie
+nav.translate	Padėkite išversti
+nav.privacy	Privatumas
+nav.label	Pagrindinis meniu
+lang.label	Kalba
+skip	Pereiti prie turinio
+draftBanner	Šis puslapis išverstas tik juodraščiu: jo dar nepatikrino žmogus, kuriam lietuvių kalba gimtoji.
+pick.choose	Pasirinkite kalbą
+pick.title	Amalino: nemokama AAK programėlė vaikams · Pasirinkite kalbą
+pick.meta	Amalino – nemokama alternatyviosios komunikacijos (AAK) programėlė dar nekalbantiems vaikams. Septynios kalbos, tarp jų ir lietuvių. Pasirinkite kalbą.
+pick.trTitle	Padėkite išversti Amalino · Pasirinkite kalbą
+pick.trMeta	Padėkite išversti Amalino, nemokamą bendravimo programėlę vaikams: pasirinkite kalbą ir patikrinkite vertimą arba padėkite pridėti naują kalbą.
+og.imageAlt	Amalino logotipas: du kalbos debesėliai ant vieno koto šalia pavadinimo Amalino
+free	Vaikams ir šeimoms – visada nemokamai.
+freeTitle	Vaikams ir šeimoms – visada nemokamai
+footer.contact	Rašykite man: {email}.
+footer.support	Paremkite Amalino
+footer.repo	[[Svetainė, vadovas ir vertimai – GitHub]]
+home.title	Amalino: nemokama AAK programėlė dar nekalbantiems vaikams
+home.meta	Nemokama AAK programėlė dar nekalbantiems vaikams: bakstelėjus paveikslėlį, pasigirsta žodis. Septyniomis kalbomis, tarp jų – lietuvių.
+home.h1	Žodžiai vaikams, kurie nekalba arba dar nekalba
+home.lead	Amalino – programėlė telefonams ir planšetėms. Vaikas bakstelėja paveikslėlius, o įrenginys garsiai ištaria žodžius ta kalba, kuria kalbama šeimoje.
+home.story	Pernai lėktuve pamačiau berniuką, kuris negalėjo kalbėti taip, kaip kiti vaikai, ir vis negalėjau jo pamiršti. Geros programėlės, padedančios tokiems vaikams, yra brangios, daugelis veikia tik iPad, o vos kelios moka kalbas, kuriomis šeimos kalbasi namuose. Todėl kuriu Amalino.
+home.status	Amalino programėlių parduotuvėse dar nėra. Dabar ją bandau tikruose telefonuose ir planšetėse, o netrukus ją išbandys pirmosios šeimos.
+home.statusEmail	Norite sužinoti, kai ji bus paruošta? Parašykite man: {email}.
+home.featuresTitle	Kuo ji kitokia
+home.f1.title	Žodžiai lieka savo vietose
+home.f1.body	Žodžiai, kurių vaikui reikia dažniausiai, visada būna toje pačioje vietoje, todėl ranka išmoksta kelią – kaip jūsų pirštai klaviatūroje. Pradėkite nuo kelių didelių mygtukų ir rodykite daugiau, kai vaikas auga. Niekas nesikilnoja iš vietos.
+home.f2.title	Jūsų šeimos kalbos
+home.f2.body	Lietuvių, anglų, danų, rusų, ukrainiečių, arabų ir ispanų – kalbą pakeisite vienu bakstelėjimu. Visomis jomis kalba dešimt natūralių balsų: atsisiunčiate vieną kartą, o paskui jie veikia be interneto. Žodžius galite įrašyti ir savo balsu, kad skambėtų kaip namie.
+home.f3.title	Pagalba suaugusiesiems
+home.f3.body	Vaikai mokosi kalbėti paveikslėliais taip pat, kaip mokosi kalbėti žodžiais: stebėdami mus. Amalino parodo, kur yra kiekvienas žodis, ir duoda trumpų patarimų, kad ir jūs galėtumėte kalbėti paveikslėliais.
+home.f4.title	Privatu ir be interneto
+home.f4.body	Jokios paskyros, jokių reklamų, jokio sekimo. Amalino veikia be interneto, o tai, ką sako jūsų vaikas, lieka jūsų įrenginyje.
+home.mythTitle	Ar dėl to mano vaikas neišmoks kalbėti?
+home.mythBody	Ne. Tyrimai rodo, kad kalbėjimas paveikslėliais kalbos raidos nestabdo, o gal net jai padeda. Tai tiltas į kalbėjimą, o ne jo pakaitalas. Jokio mažiausio amžiaus nėra, ir vaikas neturi pirma būti „pasiruošęs“.
+home.platforms	Android telefonams ir planšetėms, taip pat iPhone ir iPad.
+home.preview	Visos kalbos, išskyrus anglų, kol kas yra bandomosios versijos: žodžiai dar gali keistis.
+home.previewEmail	Pastebėjote netinkamą žodį? Parašykite man: {email}.
+home.helpTitle	Kalbate kita kalba?
+home.helpBody	Kiekvienos Amalino kalbos žodžius turi patikrinti žmogus, kuris ta kalba kalba namuose. Jei galėtumėte tai būti jūs, pažiūrėkite, kaip padėti.
+home.helpLink	Kaip padėti išversti
+about.h1	Kodėl kuriu Amalino
+about.meta	Amalino istorija: vienas žmogus kuria nemokamą AAK programėlę, kuri suteikia vaikams žodžių jų šeimos kalbomis. Vaikams ir šeimoms – visada nemokamai.
+about.title	Kodėl kuriu Amalino – nemokamą AAK programėlę vaikams
+about.story	Pernai per komandiruotę lėktuve pamačiau berniuką, kuris negalėjo nei stovėti, nei kalbėti taip, kaip kiti vaikai, ir dar ilgai apie jį galvojau. Iš profesijos kuriu programinę ir aparatinę įrangą, tad ėmiau domėtis programėlėmis, kurios padeda tokiems vaikams bendrauti. Geros yra brangios, daugelis veikia tik iPad, o vos kelios moka kalbas, kuriomis šeimos iš tikrųjų kalbasi namuose. Todėl kuriu Amalino: nemokamą ir veikiančią be interneto. Jei jūsų vaikas ja naudojasi, labai norėčiau apie tai išgirsti.
+about.p1	Kai kurie vaikai turi daug ką pasakyti, bet neturi lengvo būdo tai padaryti. Vieni dar nekalba, kiti ištaria tik kelis žodžius, o kai kurie galbūt niekada daug ir nekalbės. Programėlė, kuri prabyla už juos, kai jie bakstelėja paveikslėlius, gali pakeisti jų dieną: jie gali paprašyti atsigerti, pasakyti „ne“, pajuokauti ar parodyti, kur skauda.
+about.howTitle	Kaip ją kuriu
+about.how1	**Pirmiausia – tyrimai.** Pagrindiniai žodžiai paimti iš tyrimų apie tai, ką maži vaikai iš tikrųjų sako. Maždaug 200 tokių žodžių sudaro didžiąją dalį kasdienės kalbos, ir jie visada lieka savo vietoje ekrane, kad vaiko ranka išmoktų kelią.
+about.how2	**Išbandyta rankomis.** Kiekvieną pakeitimą išbandau iPad, Android planšetėje ir senesniame Android telefone, kad programėlė išliktų greita. Niekas nelaikoma baigtu, kol neveikia tikrame įrenginyje.
+about.how3	**Tikrina gimtakalbiai.** Danų, rusų, ukrainiečių, arabų, ispanų ir lietuvių tekstus pirmiausia parengiu padedamas dirbtinio intelekto vertimo, o paskui juos tikrina žmonės, kuriems ta kalba gimtoji. Kol kalbos nepatikrino gimtakalbis, programėlėje ji pažymėta kaip bandomoji versija.
+about.how4	**Privatumas nuo pat pradžių.** Jokios paskyros, jokių reklamų, jokios analitikos. Programėlė veikia be interneto, o viskas, kam reikia interneto, pirmiausia paklausia jūsų.
+about.how5	**Mokosi ir suaugusieji.** Vaikai mokosi kalbėti paveikslėliais matydami, kaip jais naudojasi suaugusieji. Todėl Amalino parodo tėvams, kur yra kiekvienas žodis, ir duoda trumpų, draugiškų patarimų, niekam nesukeldama jausmo, kad jis daro ką nors ne taip.
+about.freeBody	Amalino vaikams ir šeimoms yra nemokama ir tokia liks. Reklamų joje nėra – nei dabar, nei ateityje.
+about.thanksTitle	Ačiū
+about.thanks	Amalino paveikslėliai – tai ARASAAC piktogramos. Jos priklauso Aragono vyriausybei, jas ARASAAC projektui (arasaac.org) sukūrė Sergio Palao, ir jos platinamos pagal Creative Commons licenciją (BY-NC-SA). Keli paveikslėliai paimti iš Mulberry Symbols ir OpenMoji. Natūralūs balsai – tai Supertonic 3, platinami pagal atvirą licenciją (OpenRAIL-M). Ačiū visiems, kurie taip dalijasi savo darbu, ir kiekvienam tėčiui, mamai ar gimtakalbiui, kuris man pasako, ką reikia pataisyti.
+about.repo	Svetainė, naudotojo vadovas ir programėlės vertimai [[paskelbti GitHub]], kur kiekvienas gali pasiūlyti pataisymą.
+support.title	Paremkite Amalino
+support.body	Amalino vaikams ir šeimoms visada liks nemokama. Jei norite padėti, nedidelė dovana padengia tai, kas leidžia projektui gyvuoti: serverius, kūrėjo paskyras programėlių parduotuvėse ir balsus. Ačiū – man tai labai daug reiškia.
+support.link	Paaukoti
+about.contactTitle	Parašykite man
+about.contact	Turite klausimų, idėjų ar kažkas neveikia? Parašykite man: {email}. Labai laukiu jūsų žinučių.
+tr.h1	Padėkite išversti Amalino
+tr.meta	Kaip padėti išversti Amalino: patikrinkite kalbą, kurią programėlė jau turi, arba padėkite pridėti savąją. Užtenka skaičiuoklės ir el. laiško.
+tr.title	Padėkite išversti Amalino į savo kalbą
+tr.intro	Vaikas turėtų galėti kalbėti ta kalba, kurią girdi namuose. Todėl kiekvieną Amalino žodį tikrina žmogus, kuris ta kalba kalba, o ne vien vertimo įrankis. Nereikia būti vertėju ar ką nors diegti: užtenka skaičiuoklės ir šiek tiek laiko.
+tr.write	Parašykite man adresu {email} ir nurodykite, kokia kalba kalbate.
+tr.stepsLabel	Kaip tai vyksta
+tr.improveTitle	Patobulinkite kalbą, kurią Amalino jau turi
+tr.improveIntro	Amalino kalba anglų, danų, rusų, ukrainiečių, arabų, ispanų ir lietuvių kalbomis. Visų kalbų, išskyrus anglų, tekstai kol kas yra pirmasis juodraštis (programėlėje jie pažymėti kaip bandomoji versija), ir juos turi peržiūrėti gimtakalbis.
+tr.improve1	Atsiųsiu jums jūsų kalbos peržiūros skaičiuoklę. Kiekvienoje eilutėje yra tekstas anglų kalba, juodraštis jūsų kalba, o prie žodžių – ir paveikslėlis.
+tr.improve2	Jei eilutė teisinga, stulpelyje „OK?“ parašykite „yes“. Jei ne, stulpelyje „Correction“ įrašykite geresnį žodį ar sakinį. Jei abejojate, palikite tuščią.
+tr.improve3	Atsiųskite skaičiuoklę atgal. Jūsų pataisymus perkelsiu į programėlę ir tekstą pažymėsiu kaip patikrintą.
+tr.improveNote	Nebūtina visko padaryti iš karto. Svarbiausi yra pradinio nustatymo ekranai ir pirmieji žodžiai, todėl jie eina pirmi. Kai kurioms kalboms būna keli papildomi klausimai, pavyzdžiui, apie žodžių galūnes berniukams ir mergaitėms.
+tr.improveGithub	Naudojatės GitHub? Tada vertimą galite [[pataisyti ir ten]]: kiekviena kalba turi savo failą, o kiekvieną pakeitimą patikrinu, prieš jam patenkant į programėlę. Netrukus bus ir paprasta internetinė forma vertėjams.
+tr.addTitle	Pridėkite savo kalbą
+tr.addIntro	Jei jūsų kalbos Amalino dar nėra, galite padėti ją pridėti.
+tr.add1	Atsiųsiu jums vertimo skaičiuoklę: programėlės tekstą anglų kalba su tuščiu stulpeliu jūsų žodžiams. Pirmiausia – pradinio nustatymo ekranai ir pirmieji vaiko žodžiai.
+tr.add2	Užpildykite, ką galite. Net pirmas puslapis – tikra pagalba.
+tr.add3	Atsiųskite ją atgal. Jūsų žodžius išsaugosiu kaip jūsų kalbos juodraštį.
+tr.addHonest	Atvirai pasakius, naujos kalbos pridėjimas užtrunka. Reikia balso, kuris gerai kalbėtų ta kalba, ir antro žmogaus, kuris patikrintų žodžius. Iki tol jūsų darbas saugiai lauks, ir nuo jo prasidės jūsų kalba Amalino programėlėje.
+tr.addMeanwhile	Kol kas šeimos gali kurti lentas bet kuria kalba, įrašydamos kiekvieną žodį savo balsu.
+tr.addGithub	GitHub taip pat galite [[pradėti savo kalbą]] nukopijuodami anglišką failą. Viską patikrinu, prieš patenkant į programėlę.
+tr.thanks	Ačiū. Kiekvienas jūsų patikrintas žodis padeda vaikui pasakyti tai, ką jis nori pasakyti.
+pr.meta	Kaip Amalino tvarko jūsų vaiko duomenis: jokios paskyros, reklamų ar sekimo, o viskas saugoma jūsų įrenginyje.
+pr.title	Privatumas Amalino: be paskyros ir be reklamų
+pr.draft	Tai juodraštis. Prieš išleidžiant Amalino, jį patikrins teisininkas.
+pr.intro	Amalino sukurta vaikams, todėl saugo kuo mažiau ir tik jūsų įrenginyje. Štai ką tai reiškia, paprastais žodžiais.
+pr.appTitle	Programėlėje
+pr.noAccount	Amalino veikia be paskyros ir be interneto.
+pr.onDevice	Viskas, ką programėlė saugo (lentos, jūsų vaiko vartoti žodžiai, šeimos narių balsų įrašai ir jūsų pridėtos nuotraukos), laikoma jūsų įrenginyje užšifruota. Man tai niekada nesiunčiama.
+pr.osBackup	Atsarginės kopijos. Jei iPhone ar iPad atsargines kopijas darote iCloud ar kompiuteryje, Amalino duomenys į jas patenka, kaip ir bet kurios kitos programėlės duomenys. Android įrenginiuose Amalino duomenys nekopijuojami nei į jūsų Google atsarginę kopiją, nei į naują telefoną. Automatinė kasdienė atsarginė kopija programėlėje lieka įrenginyje ir atsidaro tik jame. Norėdami pereiti į naują įrenginį, naudokite „{app:exportBackup}“.
+pr.noAds	Jokių reklamų, analitikos ar sekimo.
+pr.internet	Amalino naudojasi internetu tik tada, kai įjungiate papildomą funkciją ir prieš tai su tuo sutinkate:
+pr.dlPictures	„{app:arasaacFull}“ ir „{app:moreSymbolSets}“: paveikslėliai gaunami iš ARASAAC (arasaac.org) ir Global Symbols (globalsymbols.com). Perduodamas tik žodžių sąrašas, jūsų pasirinkti paveikslėliai ir paieškos žodžiai; apie jūsų vaiką nesiunčiama nieko.
+pr.dlVoices	„{app:naturalVoicesHeading}“ (vienas maždaug 130 MB atsisiuntimas visoms kalboms) ir kalbos atpažinimas funkcijai „{app:aiListen}“: failai atsisiunčiami iš GitHub (github.com), kur laikomi balsų failai – iš paties Amalino kopijos (github.com/amalino-app/voices) arba iš originalaus leidimo. Atsisiunčiami tik failai; apie jūsų vaiką nesiunčiama nieko.
+pr.dlNote	Kaip ir bet kuri svetainė, minėtos svetainės gali matyti jūsų įrenginio interneto (IP) adresą, kai įrenginys prie jų jungiasi.
+pr.later	„{app:syncTitle}“ ir „{app:aiCloud}“, kurie atsiras vėliau: jūsų pačių įrenginių sinchronizavimas (su ištisiniu šifravimu) ir dirbtinio intelekto pagalbininkai suaugusiesiems. Kiekviena funkcija atskirai paklaus jūsų sutikimo, ir bet kada galėsite ją vėl išjungti.
+pr.context	Funkcija „{app:aiContext}“ remiasi tik paros laiku: pavyzdžiui, per pietus ji pasiūlo maisto puslapį. Ji nenaudoja nei jūsų kalendoriaus, nei buvimo vietos, ir Amalino prieigos prie jų neprašo.
+pr.camera	Funkcija „{app:suggestHotspots}“ scenoje analizuoja nuotrauką jūsų įrenginyje. Įrenginiuose iPhone ir iPad naudojama Apple Vision sistema. Android įrenginiuose naudojamas Google ML Kit: paveikslėliai niekada nepalieka įrenginio, tačiau ML Kit siunčia Google anoniminius šios funkcijos veikimo ir naudojimo rodiklius (taip numatyta Google ML Kit sąlygose; to išjungti negalima). Funkcija veikia tik tada, kai ją pasirenkate patys.
+pr.translate	Kai redaguojate žodį, mygtukas „{app:translateWord}“ gali įrašyti tą patį žodį kitomis jūsų vaiko kalbomis. Su funkcija „{app:offlineTranslation|label}“, kurią kiekvienai kalbai vieną kartą nustatote kalbų nustatymuose, tai vyksta jūsų įrenginyje. Android įrenginyje vieną kartą iš Google atsisiunčiate tos kalbos ML Kit vertimo modelį (apie 30 MB, kai sutinkate). Po to vertimas veikia be interneto, ir jokie programėlės žodžiai nesiunčiami; ML Kit anoniminiai naudojimo rodikliai taikomi, kaip aprašyta aukščiau. Įrenginiuose iPhone ir iPad (iOS 26 ar naujesnės versijos) naudojamos kalbos, kurias atsisiunčiate Apple programėlės Translate nustatymuose.
+pr.backup	„{app:exportBackup}“ sukuria slaptažodžiu apsaugotą kopiją, kurią galite laikyti kur tik norite. Viską ištrinti galite tiesiog pašalinę programėlę.
+pr.notTitle	Kas Amalino nėra
+pr.notBody	Amalino padeda vaikui bendrauti. Ji nediagnozuoja, nestebi ir negydo jokių sutrikimų.
+pr.contactTitle	Klausimai
+pr.contact	Jei turite klausimų apie privatumą, parašykite man: {email}.
+nav.manual	Vadovas
+nav.manualEn	Vadovas (anglų kalba)
+man.suffix	Amalino vadovas
+man.edit	Redaguoti šį puslapį GitHub
+man.navLabel	Vadovo puslapiai
+man.contents	Turinys
+man.prev	Ankstesnis
+man.next	Kitas
+pr.webTitle	Šioje svetainėje
+pr.webNoCookies	Ši svetainė nenaudoja slapukų, analitikos ar sekimo scenarijų. Jei pasirenkate kalbą, ją įsimena tik jūsų naršyklė jūsų įrenginyje.
+pr.webHosts	Svetainė talpinama GitHub Pages, o jus pasiekia per Cloudflare. Kad pristatytų ir apsaugotų puslapius, šios paslaugos apdoroja jūsų įrenginio interneto (IP) adresą. Žr. [[GitHub privatumo pareiškimą|github-privacy]] ir [[Cloudflare privatumo politiką|cloudflare-privacy]].
+pr.webStats	Cloudflare statistikoje matau tik bendrą apsilankymų skaičių, bet niekada – kas apsilankė.
+pr.webEmail	El. laiškai adresu {email} mane pasiekia per Cloudflare Email Routing.

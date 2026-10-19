@@ -16,7 +16,7 @@ The app itself is not in this repository.
 
 ## Languages
 
-English, Danish, Russian, Ukrainian, Arabic and Spanish, plus US English spelling (`translations/en-US/`).
+English, Danish, Russian, Ukrainian, Arabic, Spanish and Lithuanian, plus US English spelling (`translations/en-US/`).
 English is the source text; the other languages are drafts until a native speaker has checked them.
 
 ## How to help

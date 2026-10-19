@@ -8,7 +8,7 @@
 Sources: translations/<lang>/website.tsv (key, text; English is the source), site/templates/*.html,
 site/style.css, site/amalino.svg and site/og-image.png (1200x630).
 Output (default site/dist/): {lang}/index.html, {lang}/about/, {lang}/translate/, {lang}/privacy/
-for the six app languages, plus a root index.html and translate/index.html that send the visitor to their
+for the seven app languages, plus a root index.html and translate/index.html that send the visitor to their
 language (the browser's languages, or the one they chose before; a few lines of inline script, no cookies)
 and list the languages for browsers without script, assets/ (style, logo, share image) and, with a site
 URL, sitemap.xml, robots.txt and the CNAME file GitHub Pages reads. Every page has a language menu in its
@@ -27,7 +27,7 @@ on home and about, e-mail text appears only when set, the translate page has bot
 relative link resolves, and nothing is loaded from another host (owner decision 31: no web fonts, scripts,
 styles or images from elsewhere; only <a href> links may leave the site). It also checks the SEO basics: a unique <title> and meta description per page and language, one h1 with
 headings in order, alt on every image, page weight, Open Graph/Twitter tags, the SoftwareApplication JSON-LD on
-home, and with a site URL the canonical and hreflang links (6 languages + x-default, reciprocal), og:url/og:image,
+home, and with a site URL the canonical and hreflang links (7 languages + x-default, reciprocal), og:url/og:image,
 sitemap.xml and robots.txt; without one, nothing absolute in a <head> and no sitemap or robots.txt.
 It prints the per-language native-review status (web:<key> lines in
 translations/<lang>/reviewed.txt) without blocking.
@@ -64,11 +64,11 @@ DEFAULT_OUT = os.path.join(SRC, 'dist')
 # The language a visitor chose in a language menu (localStorage, not a cookie).
 LANG_KEY = 'amalino.lang'
 
-LOCALES = ['en', 'da', 'ru', 'uk', 'ar', 'es']
+LOCALES = ['en', 'da', 'ru', 'uk', 'ar', 'es', 'lt']
 RTL = {'ar'}
 # Open Graph locales (language_TERRITORY, as Facebook lists them).
-OG_LOCALES = {'en': 'en_US', 'da': 'da_DK', 'ru': 'ru_RU', 'uk': 'uk_UA', 'ar': 'ar_AR', 'es': 'es_ES'}
-ENDONYMS = {'en': 'English', 'da': 'Dansk', 'ru': 'Русский', 'uk': 'Українська', 'ar': 'العربية', 'es': 'Español'}
+OG_LOCALES = {'en': 'en_US', 'da': 'da_DK', 'ru': 'ru_RU', 'uk': 'uk_UA', 'ar': 'ar_AR', 'es': 'es_ES', 'lt': 'lt_LT'}
+ENDONYMS = {'en': 'English', 'da': 'Dansk', 'ru': 'Русский', 'uk': 'Українська', 'ar': 'العربية', 'es': 'Español', 'lt': 'Lietuvių'}
 
 # page id -> (template, path below the language folder, nav label key, title key, description key)
 PAGES = {
@@ -99,8 +99,9 @@ OUTSIDE_LINKS = {
 # A language without a manual folder links to the English manual.
 MANUAL = os.path.join(ROOT, 'manual')
 MANUAL_SOURCE = 'en'
-CODE_ON_GITHUB = (r'(?:\bcode|\bkode|код|código|الكود|الشيفرة)[^.!?]{0,40}github'
-                  r'|github[^.!?]{0,40}(?:\bcode|\bkode|код|código|الكود|الشيفرة)')
+# Lithuanian kodas/kodo/kodą… as whole words, so "kodėl" (why) passes.
+CODE_ON_GITHUB = (r'(?:\bcode|\bkode|код|código|الكود|الشيفرة|\bkod(?:as|o|ą|ui|e)\b)[^.!?]{0,40}github'
+                  r'|github[^.!?]{0,40}(?:\bcode|\bkode|код|código|الكود|الشيفرة|\bkod(?:as|o|ą|ui|e)\b)')
 
 # Forbidden on every public page (owner decisions 4 and 8; plan DEC-010, DEC-011, DEC-017,
 # INTEGRATION-019). Case-insensitive regular expressions matched on the visible text (tags stripped,
@@ -135,6 +136,10 @@ FORBIDDEN = {
            r'organizaci', r'clínica', r'institución', r'guardería',
            r'pulsador', r'barrido', r'conmutador', r'movimiento\w* de (la )?cabeza', r'mirada',
            r'seguimiento ocular', r'puntero', r'código abierto', r'código fuente'],
+    'lt': [r'mokykl', r'mokytoj', r'pedagog', r'terapi', r'terapeut', r'specialist', r'logoped', r'organizacij', r'klinik',
+           r'įstaig', r'darželi',
+           r'jungikl', r'skenavim', r'galvos judes', r'galvos valdym', r'akių sekim', r'žvilgsn', r'žymekl',
+           r'atvir\w* (pradin\w* )?kod', r'pradin\w* kod', r'išeities kod'],
 }
 
 
@@ -149,6 +154,7 @@ ALLOWED_PRIVACY = {
     'uk': 'github (github.com), де зберігаються файли голосів',
     'ar': 'github (github.com)، حيث تُحفظ ملفات الأصوات',
     'es': 'github (github.com), donde se guardan los archivos de voz',
+    'lt': 'github (github.com), kur laikomi balsų failai',
 }
 
 # Self-hosted only (owner decision 31): no fonts, scripts, styles, images or frames from other hosts.
@@ -419,7 +425,7 @@ def share_meta(r, site, loc, page, title, desc, url=None, langs=None):
 
 
 def json_ld(r, site, loc):
-    """schema.org SoftwareApplication for a home page. Only what is true today: free, two platforms, six
+    """schema.org SoftwareApplication for a home page. Only what is true today: free, two platforms, seven
     languages. No rating, no review, no store link and no download URL until they exist; no author name
     (the site tells the story in the first person without one)."""
     data = {

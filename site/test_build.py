@@ -391,7 +391,7 @@ class BuiltSite(unittest.TestCase):
 
     def test_draft_banner_on_unreviewed_languages_only(self):
         self.assertNotIn('draft-banner', read(self.without, 'en', 'index.html'))
-        for loc in ('da', 'ru', 'uk', 'ar', 'es'):
+        for loc in ('da', 'ru', 'uk', 'ar', 'es', 'lt'):
             self.assertIn('draft-banner', read(self.without, loc, 'index.html'))
 
     def test_privacy_page_is_a_draft_with_the_ml_kit_line(self):
@@ -435,7 +435,8 @@ class BuiltSite(unittest.TestCase):
                                 ('<p>созданное вместе с семьями и специалистами</p>', 'ru'),
                                 ('<p>створений разом із родинами й фахівцями</p>', 'uk'),
                                 ('<p>بالتعاون مع العائلات والمعالجين</p>', 'ar'),
-                                ('<p>creado junto con familias y terapeutas</p>', 'es')):
+                                ('<p>creado junto con familias y terapeutas</p>', 'es'),
+                                ('<p>sukurta kartu su šeimomis ir specialistais</p>', 'lt')):
             for page in (None, 'about', 'privacy'):
                 self.assertTrue(bs.forbidden_found(html_text, lang, page), (html_text, page))
 
@@ -455,7 +456,12 @@ class BuiltSite(unittest.TestCase):
             self.assertEqual(bs.forbidden_found(f'<p>{text}</p>', 'en', 'translate'), [], text)
         for text, lang in (('Our code is on GitHub.', 'en'), ('The source code is on GitHub too.', 'en'), ('Amalino is open source.', 'en'),
                            ('GitHub has all the code.', 'en'), ('Код приложения лежит на GitHub.', 'ru'), ('El código está en GitHub.', 'es'),
-                           ('Koden ligger på GitHub.', 'da'), ('الكود على GitHub.', 'ar')):
+                           ('Koden ligger på GitHub.', 'da'), ('الكود على GitHub.', 'ar'),
+                           ('Programėlės kodas yra GitHub.', 'lt'), ('Amalino turi atvirąjį kodą.', 'lt')):
+            self.assertTrue(bs.forbidden_found(f'<p>{text}</p>', lang, 'about'), text)
+        for text in ('Kodėl GitHub?', 'Klauskite, kodėl vertimai yra GitHub.'):
+            self.assertEqual(bs.forbidden_found(f'<p>{text}</p>', 'lt', 'about'), [], text)
+        for text, lang in ():
             self.assertTrue(bs.forbidden_found(f'<p>{text}</p>', lang, 'about'), text)
 
     def test_decision33_only_the_repository_link_on_github(self):
