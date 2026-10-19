@@ -4,7 +4,10 @@
   * each line is key<TAB>text (or a # comment),
   * every key exists in the English file and appears once,
   * the {placeholders} are the same as in English (a language may repeat one or use it once),
-  * no empty text, except plural rows English doesn't use (keys ending in .zero/.one/.two/.few/.many/.other).
+  * no empty text, except plural rows (keys ending in .zero/.one/.two/.few/.many, never .other): the app
+    falls back to <key>.other when a language leaves a form empty,
+  * a plural form other than .other may leave out placeholders (Arabic "يوم واحد", English "once") and may
+    use {n}; it may not bring in a placeholder its English family doesn't have.
 
 translations/en-US/app.tsv (US spelling) is checked against translations/en/app.tsv the same way.
 Run from the repository root: python3 scripts/check_translations.py   (exit code 1 on problems)
@@ -16,7 +19,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS = os.path.join(ROOT, 'translations')
 PLACEHOLDER = re.compile(r'\{[A-Za-z0-9_:|.\-]+\}')
-PLURAL = re.compile(r'\.(zero|one|two|few|many|other)$')
+PLURAL = re.compile(r'\.(zero|one|two|few|many|other)(\.anon)?$')  # sum.days.one.anon: a plural row of the .anon text
 
 
 def read(path, problems):
@@ -40,6 +43,17 @@ def placeholders(text):
     return sorted(set(PLACEHOLDER.findall(text)))
 
 
+def family(english, key):
+    """The placeholders of every English form of the plural [key], plus {n} (always passed)."""
+    def base(k):
+        return PLURAL.sub(lambda m: m.group(2) or '', k)
+    found = {'{n}'}
+    for k, (_, text) in english.items():
+        if PLURAL.search(k) and base(k) == base(key):
+            found.update(placeholders(text))
+    return found
+
+
 def check_file(path, english, problems):
     rel = os.path.relpath(path, ROOT)
     for key, (n, text) in read(path, problems).items():
@@ -47,9 +61,16 @@ def check_file(path, english, problems):
             problems.append(f'{rel}:{n}: {key} is not in the English file')
             continue
         ref = english[key][1]
+        form = PLURAL.search(key)
+        minor = form is not None and form.group(1) != 'other'
         if not text.strip():
-            if not (PLURAL.search(key) and not ref.strip()) and ref.strip():
+            if ref.strip() and not minor:
                 problems.append(f'{rel}:{n}: {key} is empty')
+            continue
+        if minor:
+            extra = sorted(set(placeholders(text)) - family(english, key))
+            if extra:
+                problems.append(f'{rel}:{n}: {key} has {extra}, which its English forms don\'t have')
             continue
         if ref.strip() and placeholders(text) != placeholders(ref):
             problems.append(f'{rel}:{n}: {key} has {placeholders(text)}, English has {placeholders(ref)}')

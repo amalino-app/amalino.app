@@ -34,6 +34,20 @@ class CheckTranslations(unittest.TestCase):
         self.assertNotIn('n.two', text)
         self.assertNotIn('ru/', text)
 
+    def test_plural_forms(self):
+        with tempfile.TemporaryDirectory() as d:
+            write(d, 'en', [('d.one', 'Once.'), ('d.few', ''), ('d.other', '{n} times for {name}.')])
+            write(d, 'en', [('t', 'Text')], 'website.tsv')
+            write(d, 'ar', [('d.one', 'مرة واحدة {n}'), ('d.few', ''), ('d.other', 'مرات: {n}')])
+            write(d, 'lt', [('d.one', ''), ('d.few', '{n} kartai {who}'), ('d.other', '')])
+            problems = ct.check(d)
+        text = '\n'.join(problems)
+        self.assertNotIn('ar/app.tsv:2', text)
+        self.assertIn("ar/app.tsv:4: d.other has ['{n}'], English has", text)
+        self.assertNotIn('lt/app.tsv:2', text)
+        self.assertIn("lt/app.tsv:3: d.few has ['{who}']", text)
+        self.assertIn('lt/app.tsv:4: d.other is empty', text)
+
 
 if __name__ == '__main__':
     unittest.main()
