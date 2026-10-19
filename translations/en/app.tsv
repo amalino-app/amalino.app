@@ -2,7 +2,7 @@
 # The Amalino app's screens in en. English (translations/en/app.tsv) is the source; keep every
 # {placeholder} as it is in English. Licence: CC BY-SA 4.0.
 about	About and licences
-aboutBody	Free AAC for children. Works offline; your data stays on this device.
+aboutBody	A free talking app for children who use pictures to communicate. Works offline, with no account. Your data is kept on this device and never sent to us.
 aboutChild	About the child
 aboutSub	Privacy, symbol licences, feedback
 access.head	Head movement (camera)
@@ -15,15 +15,19 @@ activateOnReleaseSub	Lets the child slide to the right button first
 add	Add
 addChild	Add a child
 addWord	Add a word
-adultCheck	Adults only
-adultTools	Adult tools
+adultCheck	For grown-ups
+adultTools	Grown-up tools
 allReviewed	All words are reviewed.
 allSet	All set!
 back	Back
-backupAuto	A backup is also made automatically every day.
+backupAuto	A backup is also made every day. It stays on this device and opens only here; for a new device, use Export backup.
 backupNow	Back up now
 backupReminderNever	No copy outside this device yet. If the device is lost or broken, the boards and words go with it.
-backupReminderDays	The last copy outside this device is {n} days old.
+backupReminderDays.one	The last copy outside this device is {n} day old.
+backupReminderDays.two	
+backupReminderDays.few	
+backupReminderDays.many	
+backupReminderDays.other	The last copy outside this device is {n} days old.
 backupReminderMake	Make a copy now
 backupPassword	Backup password
 backups	Backups
@@ -51,14 +55,14 @@ delete	Delete
 deleteButton	Delete this button?
 deleteButtonBody	You can undo this in History.
 deleteContextRuleAsk	Delete this rule? {board} won't be suggested by it any more.
-deleteHotspotAsk	Delete this hotspot? Its word and recording go with it.
+deleteHotspotAsk	Delete this talking spot? Its word and recording go with it.
 deleteQuickPhraseAsk	Delete the quick phrase "{text}"?
 deleteCoreWarning	This is a core word. Hiding keeps its place for later; deleting leaves an empty cell.
 deleteLast	Delete last word
 displaySensory	Display, hearing and sensory
 done	Done
 draft	draft
-earlyMode	Early mode
+earlyMode	Simple start
 earlyModeSub	Very simple: big buttons that speak at once, no message bar. The full vocabulary stays underneath.
 edit	Edit
 editBoard	Edit this board
@@ -84,7 +88,11 @@ gridSuggestion	Suggested: {n} buttons. All core words are included; less frequen
 hideInstead	Hide instead
 historyBackups	History and backups
 historyBackupsSub	Undo any change; restore a backup
-holdForAdult	Adults: hold for {seconds} seconds
+holdForAdult.one	Grown-ups: hold for {seconds} second
+holdForAdult.two	
+holdForAdult.few	
+holdForAdult.many	
+holdForAdult.other	Grown-ups: hold for {seconds} seconds
 holdSeconds	Hold time to open
 holdTime	Hold time
 home	Home
@@ -102,7 +110,7 @@ listen	Listen
 loadingVoices	Loading voices…
 lockChallenge	Simple sum (default)
 lockNow	Lock
-lockPin	PIN code
+lockPin	PIN
 logModelTaps	Log adult modelling separately
 logModelTapsSub	Counts how often adults model; never mixed into the child's words
 makeFolder	Make it open a folder
@@ -111,7 +119,7 @@ micPermission	Allow the microphone to record words.
 modellingMode	Modelling mode
 modellingModeHow	Tap words while you talk, to show {name} how.
 modellingModeHow.anon	Tap words while you talk, to show your child how.
-modellingModeSub	Edit changes the board. Model is talking with your child on it: your taps speak, count as yours, and you can use hidden words too.
+modellingModeSub	Edit changes the board. Model is for talking with your child using the board: your taps speak, count as yours, and you can use hidden words too.
 modellingOn	Modelling: you are showing, the child is watching
 myth.age.a	No. There is no minimum age. Early use of pictures, gestures and speech together supports development.
 myth.age.q	Is my child too young?
@@ -128,7 +136,12 @@ myth.speech.q	Will this stop my child from learning to talk?
 mythBuster	Why this helps
 mythBusterSub	Short answers to common worries, with the research
 mythIntro	Parents often worry about AAC (tools that help children communicate, like this app). Here is what the research says.
-needsReviewCount	{n} words need review
+needsReviewCount.zero	
+needsReviewCount.one	{n} word needs review
+needsReviewCount.two	
+needsReviewCount.few	
+needsReviewCount.many	
+needsReviewCount.other	{n} words need review
 newFolder	New folder
 addFolder	Add a folder
 pickFolderTitle	Which folder?
@@ -153,16 +166,20 @@ paperA4	Paper size A4
 passwordsDiffer	Passwords differ
 pitch	Pitch
 practice	Practise with the child
-preciseTouch	Touches small targets easily
+preciseTouch	Taps small things easily
 preciseTouchSub	Turn off to start with bigger buttons
 primaryLanguage	Main language
 printBoards	Print boards
 printBoardsSub	Paper backup for bath time, the pool or a broken device
 printOrSave	Print or save PDF
 privacy	Privacy
-privacyLocal	Boards, recordings and logs are stored only on this device, encrypted.
+privacyLocal	Boards, recordings and logs are stored encrypted on this device.
 privacyNoAds	No ads, no tracking, no account needed.
-privacyStorage	Local edit history: {ops} entries
+privacyStorage.one	Local edit history: {ops} entry
+privacyStorage.two	
+privacyStorage.few	
+privacyStorage.many	
+privacyStorage.other	Local edit history: {ops} entries
 profiles	Children
 quickPhrase	Quick phrase
 quickPhrases	Quick phrases
@@ -180,7 +197,7 @@ removeRecordingAsk	Remove the recording of this word? The voice says it instead.
 repeatIgnore	Ignore repeated taps within
 repeatPassword	Repeat password
 replanBody	Changing the grid size moves words to new places, and your child has to learn where they are all over again. If your child has a speech therapist, talk it through with them first.
-replanTitle	Re-plan motor layout?
+replanTitle	Rearrange the board for this size?
 replanWarning	Words keep their region, but positions change. A backup is made first.
 restore	Restore
 restoreBody	All boards, recordings and logs on this device will be replaced. A backup of the current state is made first.
@@ -252,7 +269,7 @@ voiceFor	Voice for {language}
 volume	Volume
 waterproof	Laminate-friendly
 waterproofSub	Core page only, strong borders, wide margin
-welcomeBody	Setup takes about 5 minutes. Everything stays on this device. You can change anything later.
+welcomeBody	Setup takes about 5 minutes. Everything is saved on this device, and nothing is sent to us. You can change anything later.
 welcomeTitle	Welcome
 whichLanguages	Which languages?
 wordLabel	Word ({language})
@@ -269,11 +286,19 @@ arasaacLicence	ARASAAC is free for non-commercial use only. Its word list is dow
 arasaacSub	Optional: search all of ARASAAC (about 13,000 pictures); pictures download when you choose them
 arasaacFull	All ARASAAC pictures
 arasaacIncluded	ARASAAC (included)
-arasaacIncludedSub	{n} pictures for the built-in words · CC BY-NC-SA, free for non-commercial use
+arasaacIncludedSub.one	
+arasaacIncludedSub.few	
+arasaacIncludedSub.many	
+arasaacIncludedSub.other	{n} pictures for the built-in words · CC BY-NC-SA, free for non-commercial use
 arasaacRemoveAsk	Remove all ARASAAC pictures from this device? Pictures you already chose from it go too. The included pictures stay.
 useNewPictures	Use the new pictures on this child's boards
 useNewPicturesSub	Built-in words that still have their original picture get the new one. Your own pictures and photos are kept.
-newPicturesDone	{n} buttons updated. You can undo this in History.
+newPicturesDone.zero	
+newPicturesDone.one	{n} button updated. You can undo this in History.
+newPicturesDone.two	
+newPicturesDone.few	
+newPicturesDone.many	
+newPicturesDone.other	{n} buttons updated. You can undo this in History.
 download	Download
 downloadFailed	Download failed
 ownPhotos	Your own photos
@@ -284,16 +309,16 @@ symbolSetsSub	ARASAAC, Mulberry, OpenMoji, your photos
 tip.symbols	Real photos help beginners most; symbols help build language. Use both, and keep the same picture for a word.
 accept	Accept
 accessMethod	How the child chooses
-addHotspot	Add a hotspot
+addHotspot	Add a talking spot
 addSelected	Add selected
 agree	I agree
-aiCloud	Cloud helpers for adults
+aiCloud	Cloud helpers for grown-ups
 aiCloudConsent	When you use a cloud helper, the photo, topic or words you choose are sent to our server and to an AI service to make a draft. Nothing the child says is sent. You can switch this off at any time.
 aiCloudConsentTitle	Allow cloud helpers?
 aiCloudSub	Better drafts for scenes, boards and translations. Needs sync and your consent.
 aiCloudTools	Use cloud helpers
-aiContext	Suggest pages for the moment
-aiContextSub	Lunch at noon, the park when you are there. A card the child can ignore.
+aiContext	Suggest a page by time and place
+aiContextSub	Food at lunchtime, or any page at a time you choose. A card the child can ignore.
 aiHelpers	Suggestions
 aiHelpersSub	Help that suggests words. It never speaks for your child.
 aiNextWord	Highlight likely next words
@@ -307,7 +332,7 @@ auditoryCues	Speak each item quietly
 auditoryCuesSub	Helps children who cannot see the highlight well
 backToBoard	Back to the board
 boardBuilder	Make a topic page
-boardBuilderSub	"A board for a birthday party" in seconds
+boardBuilderSub	"A page for a birthday party" in seconds
 boardFor	A page about…
 boardForHint	e.g. birthday party, doctor, zoo
 check	Check
@@ -320,17 +345,21 @@ combinations	Word combinations
 createHousehold	Start a family group
 createHouseholdSub	This device creates the secret key; the server never sees it
 dailyReminder	Daily reminder
-days	{n} days
+days.one	{n} day
+days.two	
+days.few	
+days.many	
+days.other	{n} days
 daysUsed	Days used
 devicesAndPeople	Devices and people
-dragToAddHotspot	Drag a box on the photo to add a talking hotspot
-editHotspot	Edit hotspot
+dragToAddHotspot	Drag a box on the photo to add a talking spot
+editHotspot	Edit talking spot
 email	Email
 emailCode	Code from the email
 exportAllBoards	Export all boards (.obz)
 exportCsv	Export usage log (CSV)
 exportPdf	Export progress report (PDF)
-exportStudy	Export study summary (no words)
+exportStudy	Export summary for a research study (no words)
 exportThisBoard	Export this board
 ga.android.1	Open Settings > Security > App pinning (or Screen pinning) and turn it on.
 ga.android.2	Turn on "Ask for PIN before unpinning".
@@ -345,10 +374,15 @@ ga.iosTitle	iPad / iPhone: Guided Access
 ga.samsung	Samsung tablets: "Samsung Kids" and "Pin windows" work the same way.
 guidedAccess	Keep the child in the app
 headHelp	Head tracking uses the front camera on this device only. Set it up with the child sitting comfortably in front of the device.
-heldEdits	{n} layout changes are waiting for your OK
+heldEdits.one	{n} layout change is waiting for your OK
+heldEdits.two	
+heldEdits.few	
+heldEdits.many	
+heldEdits.other	{n} layout changes are waiting for your OK
 importObz	Import boards (.obz / .obf)
 importObzSub	From Cboard and other apps; added as folders
-imported	Imported. {matched} of {total} buttons were linked to known words.
+imported.one	Imported. {matched} of {total} button was linked to a known word.
+imported.other	Imported. {matched} of {total} buttons were linked to known words.
 invite.parent	Invite another parent
 invite.slp	Invite your child's speech therapist
 invite.teacher	Invite your child's teacher
@@ -363,12 +397,12 @@ metric	Measure
 mlu	Words per sentence
 modelTaps	Adult modelling taps
 needsReview	needs review
-newHotspot	New hotspot
+newHotspot	New talking spot
 newSceneCamera	New scene from camera
 newSceneGallery	New scene from photos
 newWords	New words
 newWordsPerMonth	New words per month
-noSuggestions	No suggestions for this photo. Drag boxes to add hotspots yourself.
+noSuggestions	No suggestions for this photo. Drag boxes to add talking spots yourself.
 noTopicPack	No ready page for this topic on the device. Try another word, or allow cloud helpers.
 notApprovedYet	Not approved yet. Approve this device from a device already in the group.
 openBoardFormat	Share boards (Open Board Format)
@@ -381,7 +415,11 @@ progressSub	New words, combinations, most-used words
 quickAdd	Quick add
 recentUtterances	Recent sentences
 reject	Reject
-rejectHeldAsk	Reject {n} layout changes from another device? They are thrown away and not applied here.
+rejectHeldAsk.one	Reject {n} layout change from another device? It is thrown away and not applied here.
+rejectHeldAsk.two	
+rejectHeldAsk.few	
+rejectHeldAsk.many	
+rejectHeldAsk.other	Reject {n} layout changes from another device? They are thrown away and not applied here.
 rejectLessonPageAsk	Reject "{title}"? The page and the buttons that open it are removed.
 reminder	Reminder
 reminderTime	Reminder time
@@ -412,10 +450,10 @@ sceneWordsAlways	Words always shown
 showThisCode	Show this code on a device already in the group
 signIn	Sign in
 space	space
-suggestFailed	Could not suggest hotspots
-suggestHotspots	Suggest hotspots
+suggestFailed	Could not suggest talking spots
+suggestHotspots	Suggest talking spots
 suggestionUse	Suggestions used
-switchAny	Switch key
+switchAny	Key the switch sends
 switchHelp	Bluetooth and USB switches act like keyboards. Pair the switch in this device's settings, then press it here to learn its key.
 switchMove	"Move" switch
 switchScanning	Switch scanning
@@ -465,12 +503,12 @@ calibrate	Calibrate head movement
 calibrateHint	Follow the star with your head
 cameraUnavailable	Camera not available
 dwellTime	Rest time to select
-openVoices	Open voices (download once, then offline)
-openVoicesSub	Neural voices that run on this device. Few child voices exist yet; choose the one the child likes.
+openVoices	Free voices (download once, then offline)
+openVoicesSub	Natural-sounding voices that run on this device. There are few child voices so far; choose the one your child likes.
 from	From
 lessonPages	Pages shared with you
 lessonPagesSub	Board pages from someone who works with your child; open or decline
-noLessonPages	No lesson pages yet.
+noLessonPages	No shared pages yet.
 open	Open
 role	Role
 tip.clients	Keep each family's words in their own home language and routines; the boards belong to the child.
@@ -483,38 +521,50 @@ goal.wordUse	Uses of one word per week
 goalTarget	Target
 goals	Goals
 goalsSub	Small steps you're working on, week by week
-met	Met
+met	Reached
 newGoal	New goal
 noGoals	No goals yet. Add one here, or ask your child's speech therapist to add one.
 share	Share
 shareExamples	Share example sentences
 shareExamplesSub	Off unless you pick sentences here (up to 5). Nothing else the child said is shared.
-sum.combos	The child built {n} sentences of two or more words (about {mlu} words per sentence).
-sum.days	{name} used the app on {n} days this week.
-sum.days.anon	Your child used the app on {n} days this week.
-sum.model	Adults modelled on this device {n} times.
+sum.combos.zero	
+sum.combos.one	The child built {n} sentence of two or more words (about {mlu} words per sentence).
+sum.combos.two	
+sum.combos.few	
+sum.combos.many	
+sum.combos.other	The child built {n} sentences of two or more words (about {mlu} words per sentence).
+sum.days.one	{name} used the app on {n} day this week.
+sum.days.two	{name} used the app on {n} days this week.
+sum.days.few	{name} used the app on {n} days this week.
+sum.days.many	{name} used the app on {n} days this week.
+sum.days.other	{name} used the app on {n} days this week.
+sum.days.one.anon	Your child used the app on {n} day this week.
+sum.days.two.anon	Your child used the app on {n} days this week.
+sum.days.few.anon	Your child used the app on {n} days this week.
+sum.days.many.anon	Your child used the app on {n} days this week.
+sum.days.other.anon	Your child used the app on {n} days this week.
+sum.model.one	Adults modelled on this device once.
+sum.model.few	
+sum.model.many	
+sum.model.other	Adults modelled on this device {n} times.
 sum.newList	New words: {list}.
 sum.next	Next week, try modelling "{word}" in new combinations.
-sum.words	{n} words were said, {new} of them for the first time.
+sum.words.zero	
+sum.words.one	{n} word was said ({new} for the first time).
+sum.words.two	
+sum.words.few	
+sum.words.many	
+sum.words.other	{n} words were said, {new} of them for the first time.
 thisWeek	This week
 tip.goals	Choose one goal at a time and model the target skill many times a day.
 tip.summary	Share the summary with everyone who talks with the child and pick one word to model together.
 week	Week
 weeklySummary	Weekly summary
 writeWithCloud	Rewrite with the cloud helper (aggregates only)
-addCalendarRule	Suggest a page for a calendar event
 addMealRules	Add meal-time suggestions (Food page)
-addPlaceRule	Suggest a page at this place
-addPlaceRuleSub	Saves where you are now (stays on this device)
 addTimeRule	Suggest a page at a time of day
-calendarKeyword	Word in the event title (e.g. doctor)
-contextBoards	Pages for the moment
-noLocation	Location is not available
+contextBoards	Pages for times and places
 tip.context	A suggestion is only a doorway: model the words on the page when it opens.
-useCalendar	Use the calendar
-useCalendarSub	Reads today's event titles on this device only
-useLocation	Use location
-useLocationSub	Checks saved places on this device only; never uploaded
 grammarHelper	Word forms
 grammarHelperSub	Hold a word to choose dogs, went, bigger…
 allow	Allow
@@ -552,7 +602,7 @@ personalVoiceReady	Personal Voice allowed ({count} found). Choose it in the voic
 personalVoiceDenied	Personal Voice is not allowed. You can change this in Settings > Accessibility > Personal Voice (Allow Apps to Request to Use).
 personalVoiceUnsupported	Personal Voice needs iOS 17 or newer on a supported device.
 personalVoiceAndroid	Android has no Personal Voice. To keep a family member's voice, record words in the button editor (Record): recordings play instead of the computer voice.
-aiListen	Partner listening
+aiListen	Listen to what I say
 aiListenSub	While you switch the microphone on (top bar), this device listens to what you say and highlights words that could answer. Speech is recognised on this device; audio is never saved or sent.
 aiListenModel	Download the speech recogniser (~{mb} MB, once)
 aiListenModelReady	Speech recogniser installed (works offline)
@@ -571,7 +621,12 @@ gazeCalibrateHint	Watch the animal!
 gazeCalibrationPoor	The camera could not follow the eyes well enough. Try more light, a steadier device, or head tracking instead.
 pointerHelp	Works with any device that moves the pointer, e.g. Tobii or Windows Eye Control (with the Windows app), or a head mouse. Clicks and taps still work.
 draftMissing	Draft missing words (to review)
-draftedCount	{n} drafts added for review
+draftedCount.zero	
+draftedCount.one	{n} draft added for review
+draftedCount.two	
+draftedCount.few	
+draftedCount.many	
+draftedCount.other	{n} drafts added for review
 noFreeCell	There is no empty cell in Favourites or on the main board. Hide or remove a word there first: words never move to make room.
 moreSymbolSets	More symbol sets (online)
 symbolDownloadConsent	Searching other symbol sets uses the internet: only your search words are sent, nothing about your child. Pictures you choose are saved on this device.
@@ -581,7 +636,7 @@ onlineLicencesNote	Pictures come from many symbol sets, each with its own licenc
 onlineSymbolsNote	Pictures from globalsymbols.com, which also has ARASAAC. Each set keeps its own licence (see About); NC means non-commercial use only.
 onlineEmpty	No pictures found for “{q}”. Try another word.
 onlineError	Can't reach {source}. Check the internet connection.
-onlineHint	Type at least 3 letters, or press search.
+onlineHint	Type at least 3 letters, or tap Search.
 styleWholePage	Use this style for the whole page
 sceneOutlines	Show outlines
 scenePolygon	Draw a shape
@@ -596,17 +651,26 @@ webNotApproved	Not approved yet
 webSaveSync	Save & sync
 mlkitNotice	On Android this uses Google ML Kit on the device: camera pictures never leave this device, but ML Kit sends Google anonymous usage and performance metrics. (iPhone and iPad use Apple Vision.)
 offlineTranslation	Offline translation: {language}
-offlineTranslationReady	Ready: missing words are drafted on this device (to review).
-offlineTranslationDownload	Download the language once (about 30 MB) to draft missing words without the internet.
-offlineTranslationSettings	Install this language in Settings > Apps > Translate to translate on this device.
+offlineTranslationReady	Ready on this device. Translate works without the internet when you edit a word.
+offlineTranslationDownload	Not set up yet. Download it once (about 30 MB per language, from Google).
+offlineTranslationSettings	On iPhone and iPad the languages come from Apple: open Settings > Apps > Translate > Downloaded Languages, download {language} and {from}, then come back here.
 offlineTranslationUnsupported	Not available on this device.
 offlineTranslationConsent	This downloads Google's translation model for this language once. No words from the app are sent; afterwards translation works offline.
+offlineTranslationHeader	Translate without the internet
+offlineTranslationAbout	When you add or change a word, the Translate button fills in the same word in the child's other languages, as a draft for you to check. Set up each language once; after that it works without the internet.
+offlineTranslationChecking	Checking…
+offlineTranslationDownloading	Downloading {language}… This can take a few minutes; you can leave this screen.
+offlineTranslationDone	{language} is ready. Translate now works without the internet when you edit a word.
+offlineTranslationFailed	The download didn't finish. Check the internet connection and try again.
+offlineTranslationNotReady	The download finished, but the language isn't ready yet. Try again in a minute.
+offlineTranslationUnsupportedIos	Not available on this device: iPhone and iPad need iOS 26 or later for this.
+checkAgain	Check again
 vocabLevel	Vocabulary level
 levelN	Level {n}
 vocabLevel1	About 400 words: core words and first words in folders
-vocabLevel2	About 1,500 words, with more folders
-vocabLevel3	All words (about 2,600)
-vocabLevelNote	A level only shows or hides words in folders; words never move, so the child keeps their motor patterns. Core words follow the reveal setting.
+vocabLevel2	About 1,300 words, with more folders
+vocabLevel3	All words (about 2,500)
+vocabLevelNote	A level only shows or hides words in folders. Words never move, so your child's hands keep finding them. Core words follow the reveal setting.
 downloaded	Downloaded
 useVoice	Use
 removeVoiceModel	Remove {name} (frees {mb} MB)
@@ -640,7 +704,7 @@ learnMore	Learn more
 alreadyUse	I already use Amalino
 alreadyBody	For a second device, a new device or a reinstall.
 restoreBackup	Restore a backup file
-restoreHowTo	On the old device: Settings → History and backups → Export backup, and choose a password. Send the file to this device with AirDrop, Quick Share, e-mail, a cloud drive or a USB cable. Then tap Choose file.
+restoreHowTo	On the old device: Settings → History and backups → Export backup, and choose a password. Send the file to this device with AirDrop, Quick Share, email, a cloud drive or a USB cable. Then tap Choose file.
 chooseFile	Choose file
 joinFamily	Join a family on another device
 deviceKeyBackup	This is an automatic backup that only opens on the device that made it. On the old device, use Export backup with a password.
@@ -649,6 +713,7 @@ childNameHelp.anon	Shown and spoken in the app, for example in "My name is…". 
 ageBandTitle	How old is {name}?
 ageBandTitle.anon	How old is your child?
 band.under3	Under 3
+band.under3.inline	under 3
 band.age3to5	3–5
 band.age6to9	6–9
 band.age10to13	10–13
@@ -663,13 +728,14 @@ comm.phrases	Short phrases
 comm.reads	Reads or spells some words
 comm.unsure	Not sure
 mainLanguageHint	The language your child will use most.
-draftsLine	{list} words are drafts until a native speaker checks them. To fix a word: open grown-up settings, choose Edit board, and tap the word.
+draftsLine	{list} words are drafts until a native speaker checks them. To fix a word: open grown-up settings, choose Edit this board, and tap the word.
 lang.en	English
 lang.da	Danish
 lang.ru	Russian
 lang.uk	Ukrainian
 lang.ar	Arabic
 lang.es	Spanish
+lang.lt	Lithuanian
 motorPlanNote	Every language uses the same button positions, so your child can switch languages without relearning the board. Switch with one tap on the board.
 notListed	My language isn't listed
 notListedBody	You can still make boards in any language: record each word with your own voice, and the board plays your recordings.
@@ -677,7 +743,7 @@ wordFormsTitle	Which word forms should the app use for {name}?
 wordFormsTitle.anon	Which word forms should the app use for your child?
 forms.boy	Boy forms
 forms.girl	Girl forms
-wordFormsHint	For example "устал / устала". You can change this anytime in Settings.
+wordFormsHint	For example "tired" said as a boy or as a girl in Russian ("устал / устала"). You can change this anytime in Settings.
 needForms	Choose one to continue.
 naturalVoicesSame	Same download, nothing extra.
 voiceForLang	{lang} voice
@@ -713,8 +779,12 @@ favPhotoHint	Photos work best for people and the child's own toys.
 favNameTitle	What does {name} call it?
 favNameTitle.anon	What does your child call it?
 recordInstead	Can't get it right? Record it instead
-grownupTitle	Grown-up controls
-grownupBody	To open settings, hold the lock at the top of the board for {s} seconds, then {answer}.
+grownupTitle	Grown-up settings
+grownupBody.one	To open settings, hold the lock at the top of the board for {s} second, then {answer}.
+grownupBody.two	
+grownupBody.few	
+grownupBody.many	
+grownupBody.other	To open settings, hold the lock at the top of the board for {s} seconds, then {answer}.
 answerSum	answer a short sum
 answerPin	enter your PIN
 practiceTitle	Try it: hold the lock, then {answer}
@@ -731,10 +801,10 @@ grid.84	small, for confident users
 moreSizes	More sizes
 gridKeep	Try to keep the same size; the board grows by showing more words, not by changing size.
 levelDesc1	Level 1: about 400 words, first words
-levelDesc2	Level 2: about 1,400 words, building sentences
-levelDesc3	Level 3: about 2,600 words, for confident users
+levelDesc2	Level 2: about 1,300 words, building sentences
+levelDesc3	Level 3: about 2,500 words, for confident users
 earlyOffer	Simple start: 4 big pictures. Some children start this way; others do better with the full board.
-earlyHidden	The full board can be turned on later.
+earlyHidden	You can switch to the full board later.
 change	Change
 sum.name	Name
 sum.age	Age
@@ -749,8 +819,12 @@ whySuggested	Suggested because {name} is {band}.
 whySuggested.anon	Suggested because your child is {band}.
 whyBigger	Suggested because {name} is {band} and needs bigger buttons.
 whyBigger.anon	Suggested because your child is {band} and needs bigger buttons.
-lockCardTitle	How to open grown-up controls
-lockCardBody	At the top of the board: hold the lock for {s} seconds, then {answer}.
+lockCardTitle	How to open grown-up settings
+lockCardBody.one	At the top of the board: hold the lock for {s} second, then {answer}.
+lockCardBody.two	
+lockCardBody.few	
+lockCardBody.many	
+lockCardBody.other	At the top of the board: hold the lock for {s} seconds, then {answer}.
 readResearch	Read the research
 lockDeviceToApp	Lock this device to the app
 dailyTip	Daily tip
@@ -798,7 +872,7 @@ switchToSum	Switch to the short sum
 switchToSumBody	This device has no screen lock and no recovery code, so the PIN cannot be reset. Settings will be protected by a short sum instead.
 olderChildHint	Older children can solve the sum. A PIN is safer.
 naturalVoicesName	natural voices (all 10)
-naturalVoicesSub	The natural voices share one download of about {mb} MB. Press play to hear a voice first.
+naturalVoicesSub	The natural voices share one download of about {mb} MB. Tap play to hear a voice first.
 chooseVoiceTitle	Choose a voice
 chooseVoiceSub	This is how {name} will sound. You can change it later.
 chooseVoiceSub.anon	This is how your child will sound. You can change it later.
@@ -917,7 +991,11 @@ stopAddingChildAsk	Stop adding this child? What you entered is not kept.
 stopAddingChild	Stop
 replaceRecordingAsk	Replace the recording?
 replaceRecording	Replace
-undoChangesAsk	Undo {n} changes?
+undoChangesAsk.one	Undo {n} change?
+undoChangesAsk.two	
+undoChangesAsk.few	
+undoChangesAsk.many	
+undoChangesAsk.other	Undo {n} changes?
 lowerOthers	Lower other sound when {name} speaks
 lowerOthers.anon	Lower other sound when your child speaks
 lowerOthersSub	Music and other apps' sound get quieter, so the words are easier to hear.
@@ -928,11 +1006,22 @@ boardOrientation	Board orientation on this phone
 boardOrientationSub	The board, the keyboard and scenes stay this way round. Grown-up screens still turn.
 orientPortrait	Portrait
 orientLandscape	Landscape
-gridTooSmall	Too small on this screen for {n} buttons. This screen fits up to {max}.
-gridTooBig	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on {name}'s other device.
-gridTooBig.anon	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on your child's other device.
-gridUseN	Use {n} buttons
-gapLimit	Up to {gap} on this screen: more space would make the {n} buttons smaller than 44 pt.
+gridTooSmall.few	
+gridTooSmall.many	
+gridTooSmall.other	Too small on this screen for {n} buttons. This screen fits up to {max}.
+gridTooBig.one	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on {name}'s other device.
+gridTooBig.few	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on {name}'s other device.
+gridTooBig.many	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on {name}'s other device.
+gridTooBig.other	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on {name}'s other device.
+gridTooBig.one.anon	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on your child's other device.
+gridTooBig.few.anon	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on your child's other device.
+gridTooBig.many.anon	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on your child's other device.
+gridTooBig.other.anon	This board has {n} buttons, but this screen fits {max}. Words will be in different places than on your child's other device.
+gridUseN.one	
+gridUseN.few	
+gridUseN.many	
+gridUseN.other	Use {n} buttons
+gapLimit	Up to {gap} on this screen: more space would make the {n} buttons too small to tap easily.
 savedSpeechVoiceBuilding.one	Preparing {voice}: {done} of {n} word
 savedSpeechVoiceBuilding.two	
 savedSpeechVoiceBuilding.few	
@@ -945,8 +1034,14 @@ orientAskPortrait	In portrait this screen fits {max} buttons; {name}'s board has
 orientAskPortrait.anon	In portrait this screen fits {max} buttons; your child's board has {n}. Words will move to different places, and your child will need to learn them again.
 orientKeepPortrait	Keep portrait
 orientKeepLandscape	Keep landscape
-orientUseLandscape	Use landscape with {n} buttons
-orientUsePortrait	Use portrait with {n} buttons
+orientUseLandscape.one	
+orientUseLandscape.few	
+orientUseLandscape.many	
+orientUseLandscape.other	Use landscape with {n} buttons
+orientUsePortrait.one	
+orientUsePortrait.few	
+orientUsePortrait.many	
+orientUsePortrait.other	Use portrait with {n} buttons
 barDelete	Delete
 barForms	Forms
 barClear	Clear
@@ -980,7 +1075,7 @@ kbKeySizeStandard	Standard
 kbKeySizeLarger	Larger keys
 kbSpeak	Speak
 kbClose	Close the keyboard
-kbNumbers	Numbers and marks
+kbNumbers	Numbers and symbols
 kbLetters	Letters
 tip.keyboard	Model typing too: type a word slowly while you say it, then tap Speak.
 gridLongWords	Some long words won't fit in full at this size in portrait. Landscape shows them all.
@@ -998,3 +1093,16 @@ showToChild	Show to your child
 modelHiddenLabel	{word}, hidden from your child
 replanMovedToFavourites	Buttons you added that didn't fit on this board: {n}. They're in Favourites now.
 replanParked	Buttons you added that had no room anywhere: {n}. They're kept and come back when the board is bigger.
+privacyOsBackup.ios	If you back up this iPhone or iPad to iCloud or a computer, Amalino's data is part of that backup.
+privacyOsBackup.android	Amalino's data isn't copied to your Google backup or to another device. To move to a new device, use Export backup.
+privacyPolicy	Privacy policy
+dataRecoveryTitle	This device can't open the saved boards
+dataRecoveryBody	The boards and words saved here are locked with a key that never leaves this device, and that key is missing or doesn't match. This can happen after moving the app to a new device or restoring a system backup. Nothing has been deleted: the old data is kept aside on this device.
+dataRecoveryAsk	If you have a backup file you exported with a password, restore it now. Otherwise, start fresh.
+dataRecoveryRestore	Restore from a backup file
+dataRecoveryFresh	Start fresh
+startupFailedTitle	Amalino couldn't start
+startupFailedBody	Close the app completely and open it again. If this keeps happening, restart the device. Your boards have not been deleted.
+languagePreview	Preview
+languagePreviewNote	Words may still change. Tell us about a wrong word.
+languagePreviewNoteEmail	Words may still change. Tell us about a wrong word: {email}.

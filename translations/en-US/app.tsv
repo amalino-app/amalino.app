@@ -37,8 +37,21 @@ modelTaps	Adult modeling taps
 tip.access	Try one access method for at least two weeks with lots of modeling before judging it.
 tip.ai	Suggestions should never replace modeling. Keep modeling words yourself even with highlights on.
 wotwSub	Up to 3 words the adults model this week (highlighted only in modeling mode)
-sum.model	Adults modeled on this device {n} times.
+sum.model.one	Adults modeled on this device once.
+sum.model.other	Adults modeled on this device {n} times.
 sum.next	Next week, try modeling "{word}" in new combinations.
 dailyTipSub	A short modeling idea each day. Asks for notifications only when you turn it on.
 kbSuggestionsSub	You can turn this off while your child practices spelling, so they work out each word themselves.
 replanMovedToFavourites	Buttons you added that didn't fit on this board: {n}. They're in Favorites now.
+answerSum	answer a simple math problem
+lockChallenge	Simple math problem (default)
+check.pinAnyway	Use a PIN instead of the math problem
+olderChildHint	Older children can solve the math problem. A PIN is safer.
+pinNeedsScreenLock	To use a PIN, first set a screen lock on this device. Until then, the math problem protects settings.
+switchToSum	Switch to the math problem
+switchToSumBody	This device has no screen lock and no recovery code, so the PIN cannot be reset. Settings will be protected by a math problem instead.
+downloadOnMobileData	Download now on cellular data ({mb} MB)
+mobileDataAsk	This is a {mb} MB download and this device is on cellular data. Download now?
+deleteContextRuleAsk	Delete this rule? {board} won't be suggested by it anymore.
+tip.about	Show the app to the other adults in your child's life — grandparents, daycare, school. Two minutes in person help more than any flyer.
+boardOrientationSub	The board, the keyboard and scenes stay this way around. Grown-up screens still turn.
