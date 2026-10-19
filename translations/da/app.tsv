@@ -683,7 +683,6 @@ naturalVoicesSame	Samme download, intet ekstra.
 voiceForLang	Stemme på {lang}
 inUseNow	I brug nu
 voiceAllLanguages	Alle sprog
-voicesOneLanguage	Stemmer til ét sprog
 voice.female	kvindestemme
 voice.male	mandestemme
 useForToo	Brug også {voice} på {lang}
@@ -693,7 +692,6 @@ voicePickHint.anon	Tryk for at høre hver stemme, og vælg den, der passer til d
 moreVoices	Flere stemmer
 recommendFor	På {lang} anbefaler vi {voice}.
 useForAll	Brug {voice} til alle sprog
-voiceLanguageOnly	Kun {lang} · {mb} MB
 mobileDataAsk	Dette er en download på {mb} MB, og enheden bruger mobildata. Hent nu?
 downloadNow	Hent nu
 waitForWifi	Vent på Wi-Fi
@@ -800,7 +798,7 @@ switchToSum	Skift til det korte regnestykke
 switchToSumBody	Enheden har ingen skærmlås og ingen gendannelseskode, så PIN-koden kan ikke nulstilles. Indstillingerne beskyttes i stedet af et kort regnestykke.
 olderChildHint	Ældre børn kan løse regnestykket. En PIN er mere sikker.
 naturalVoicesName	naturlige stemmer (alle 10)
-naturalVoicesSub	De naturlige stemmer deler én download på ca. {mb} MB; de lette stemmer er mindre. Tryk på afspil for at høre en stemme først.
+naturalVoicesSub	De naturlige stemmer deler én download på ca. {mb} MB. Tryk på afspil for at høre en stemme først.
 chooseVoiceTitle	Vælg en stemme
 chooseVoiceSub	Sådan kommer {name} til at lyde. Du kan ændre det senere.
 chooseVoiceSub.anon	Sådan kommer dit barn til at lyde. Du kan ændre det senere.
@@ -867,7 +865,6 @@ nameRecheckWaiting.m	{voice} hentes. Du kan høre, hvordan han siger {name}s nav
 nameRecheckWaiting.n	{voice} hentes. Du kan høre, hvordan stemmen siger {name}s navn, når den er klar.
 voiceChosen	Valgt
 naturalVoicesDownloading	Henter naturlige stemmer · {p} %
-voiceDownloadingOne	Henter {voice} · {p} %
 voiceWaitingForWifi	Venter på Wi-Fi
 voiceReadyLine	Klar
 saveNameTitle	Gem ændringerne af {name}s navn?
@@ -885,11 +882,6 @@ voiceName.M2	Theo
 voiceName.M3	Adam
 voiceName.M4	Omar
 voiceName.M5	Ben
-voiceName.talesyntese	Rasmus
-voiceName.davefx	Pablo
-voiceName.alba	Fiona
-voiceName.claude	Claude
-voiceName.denis	Денис
 highlightSpeaking	Fremhæv under tale
 highlightSpeakingSub	En blød nuance på knappen, mens dens ord siges. Trykket vises altid.
 playing	Afspiller…

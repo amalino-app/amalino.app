@@ -683,7 +683,6 @@ naturalVoicesSame	La misma descarga, nada más.
 voiceForLang	Voz en {lang}
 inUseNow	En uso ahora
 voiceAllLanguages	Todos los idiomas
-voicesOneLanguage	Voces para un solo idioma
 voice.female	voz femenina
 voice.male	voz masculina
 useForToo	Usar {voice} también en {lang}
@@ -693,7 +692,6 @@ voicePickHint.anon	Toca para escuchar cada voz y elige la que le vaya a tu hijo 
 moreVoices	Más voces
 recommendFor	En {lang}, recomendamos {voice}.
 useForAll	Usar {voice} en todos los idiomas
-voiceLanguageOnly	Solo en {lang} · {mb} MB
 mobileDataAsk	Es una descarga de {mb} MB y el dispositivo usa datos móviles. ¿Descargar ahora?
 downloadNow	Descargar ahora
 waitForWifi	Esperar al wifi
@@ -800,7 +798,7 @@ switchToSum	Cambiar a la suma corta
 switchToSumBody	Este dispositivo no tiene bloqueo de pantalla ni código de recuperación, así que el PIN no se puede restablecer. Los ajustes se protegerán con una suma corta.
 olderChildHint	Los niños mayores pueden resolver la suma. Un PIN es más seguro.
 naturalVoicesName	voces naturales (las 10)
-naturalVoicesSub	Las voces naturales comparten una descarga de unos {mb} MB; las voces ligeras son más pequeñas. Pulsa reproducir para escuchar una voz antes.
+naturalVoicesSub	Las voces naturales comparten una descarga de unos {mb} MB. Pulsa reproducir para escuchar una voz antes.
 chooseVoiceTitle	Elige una voz
 chooseVoiceSub	Así sonará {name}. Puedes cambiarla después.
 chooseVoiceSub.anon	Así sonará tu hijo o hija. Puedes cambiarla después.
@@ -867,7 +865,6 @@ nameRecheckWaiting.m	{voice} se está descargando. Cuando esté listo, podrás e
 nameRecheckWaiting.n	{voice} se está descargando. Cuando esté lista, podrás escuchar cómo dice esta voz el nombre de {name}.
 voiceChosen	Elegida
 naturalVoicesDownloading	Descargando voces naturales · {p} %
-voiceDownloadingOne	Descargando {voice} · {p} %
 voiceWaitingForWifi	Esperando al wifi
 voiceReadyLine	Lista
 saveNameTitle	¿Guardar los cambios en el nombre de {name}?
@@ -885,11 +882,6 @@ voiceName.M2	Theo
 voiceName.M3	Adam
 voiceName.M4	Omar
 voiceName.M5	Ben
-voiceName.talesyntese	Rasmus
-voiceName.davefx	Pablo
-voiceName.alba	Fiona
-voiceName.claude	Claude
-voiceName.denis	Денис
 highlightSpeaking	Resaltar al hablar
 highlightSpeakingSub	Un tono suave en el botón mientras suena su palabra. La pulsación siempre se ve.
 playing	Reproduciendo…

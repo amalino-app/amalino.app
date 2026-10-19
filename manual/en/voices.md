@@ -5,8 +5,7 @@ The voice is the child's voice. Let the child hear a few and choose the one they
 
 ## Kinds of voices
 
-- **Natural voices**: ten voices (Ella, Mila, Nora, Sofi, Ida, Leo, Theo, Adam, Omar and Ben) that sound the most human. One download covers all of them in every language, and they work offline afterwards.
-- **Voices for one language**: lighter voices, each a smaller download for a single language.
+- **Natural voices**: ten voices (Ella, Mila, Nora, Sofi, Ida, Leo, Theo, Adam, Omar and Ben) that sound the most human. They speak all six of Amalino's languages. One download covers all of them, and they work offline afterwards.
 - **This device's own voice**: the voices that come with the phone or tablet. No download.
 - **Personal Voice** (iPhone and iPad, iOS 17 or newer): a voice you made in the device's settings under **Accessibility → Personal Voice**. Amalino asks for permission to use it.
 - **Your recordings**: record any word in your own voice in the button editor. See [Editing and moving buttons](editing.md).

@@ -683,7 +683,6 @@ naturalVoicesSame	Та же загрузка, ничего дополнител�
 voiceForLang	Голос: {lang}
 inUseNow	Используется сейчас
 voiceAllLanguages	Все языки
-voicesOneLanguage	Голоса для одного языка
 voice.female	женский голос
 voice.male	мужской голос
 useForToo	Использовать голос {voice} и для языка «{lang}»
@@ -693,7 +692,6 @@ voicePickHint.anon	Нажмите, чтобы послушать каждый г
 moreVoices	Ещё голоса
 recommendFor	Для языка «{lang}» рекомендуем голос {voice}.
 useForAll	Использовать голос {voice} для всех языков
-voiceLanguageOnly	Только {lang} · {mb} МБ
 mobileDataAsk	Это загрузка {mb} МБ, а устройство в мобильной сети. Загрузить сейчас?
 downloadNow	Загрузить сейчас
 waitForWifi	Подождать Wi-Fi
@@ -800,7 +798,7 @@ switchToSum	Перейти на простой пример
 switchToSumBody	На устройстве нет блокировки экрана и кода восстановления, поэтому PIN нельзя сбросить. Вместо него настройки будет защищать простой пример.
 olderChildHint	Старшие дети могут решить пример. PIN надёжнее.
 naturalVoicesName	естественные голоса (все 10)
-naturalVoicesSub	Естественные голоса загружаются вместе, около {mb} МБ; лёгкие голоса меньше. Нажмите «воспроизвести», чтобы сначала послушать.
+naturalVoicesSub	Естественные голоса загружаются вместе, около {mb} МБ. Нажмите «воспроизвести», чтобы сначала послушать.
 chooseVoiceTitle	Выберите голос
 chooseVoiceSub	Так будет звучать {name}. Это можно изменить позже.
 chooseVoiceSub.anon	Так будет звучать ваш ребёнок. Это можно изменить позже.
@@ -867,7 +865,6 @@ nameRecheckWaiting.m	{voice} загружается. Когда загрузка
 nameRecheckWaiting.n	{voice} загружается. Когда загрузка закончится, можно послушать, как этот голос произносит имя {name}.
 voiceChosen	Выбран
 naturalVoicesDownloading	Загрузка естественных голосов · {p}%
-voiceDownloadingOne	Загрузка: {voice} · {p}%
 voiceWaitingForWifi	Ждёт Wi-Fi
 voiceReadyLine	Готово
 saveNameTitle	Сохранить изменения имени «{name}»?
@@ -885,11 +882,6 @@ voiceName.M2	Тео
 voiceName.M3	Адам
 voiceName.M4	Омар
 voiceName.M5	Бен
-voiceName.talesyntese	Расмус
-voiceName.davefx	Пабло
-voiceName.alba	Фиона
-voiceName.claude	Клод
-voiceName.denis	Денис
 highlightSpeaking	Подсветка во время речи
 highlightSpeakingSub	Мягкая подсветка кнопки, пока звучит её слово. Нажатие видно всегда.
 playing	Воспроизведение…

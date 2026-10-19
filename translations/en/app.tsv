@@ -683,7 +683,6 @@ naturalVoicesSame	Same download, nothing extra.
 voiceForLang	{lang} voice
 inUseNow	In use now
 voiceAllLanguages	All languages
-voicesOneLanguage	Voices for one language
 voice.female	female voice
 voice.male	male voice
 useForToo	Use {voice} for {lang} too
@@ -693,7 +692,6 @@ voicePickHint.anon	Tap to hear each voice, and pick the one that suits your chil
 moreVoices	More voices
 recommendFor	For {lang}, we recommend {voice}.
 useForAll	Use {voice} for all languages
-voiceLanguageOnly	{lang} only · {mb} MB
 mobileDataAsk	This is a {mb} MB download and this device is on mobile data. Download now?
 downloadNow	Download now
 waitForWifi	Wait for Wi-Fi
@@ -800,7 +798,7 @@ switchToSum	Switch to the short sum
 switchToSumBody	This device has no screen lock and no recovery code, so the PIN cannot be reset. Settings will be protected by a short sum instead.
 olderChildHint	Older children can solve the sum. A PIN is safer.
 naturalVoicesName	natural voices (all 10)
-naturalVoicesSub	The natural voices share one download of about {mb} MB; the light voices are smaller. Press play to hear a voice first.
+naturalVoicesSub	The natural voices share one download of about {mb} MB. Press play to hear a voice first.
 chooseVoiceTitle	Choose a voice
 chooseVoiceSub	This is how {name} will sound. You can change it later.
 chooseVoiceSub.anon	This is how your child will sound. You can change it later.
@@ -867,7 +865,6 @@ nameRecheckWaiting.m	{voice} is downloading. You can check how he says {name}'s 
 nameRecheckWaiting.n	{voice} is downloading. You can check how it says {name}'s name when it's ready.
 voiceChosen	Chosen
 naturalVoicesDownloading	Downloading natural voices · {p}%
-voiceDownloadingOne	Downloading {voice} · {p}%
 voiceWaitingForWifi	Waiting for Wi-Fi
 voiceReadyLine	Ready
 saveNameTitle	Save changes to {name}'s name?
@@ -885,11 +882,6 @@ voiceName.M2	Theo
 voiceName.M3	Adam
 voiceName.M4	Omar
 voiceName.M5	Ben
-voiceName.talesyntese	Rasmus
-voiceName.davefx	Pablo
-voiceName.alba	Fiona
-voiceName.claude	Claude
-voiceName.denis	Денис
 highlightSpeaking	Highlight while speaking
 highlightSpeakingSub	A soft tint on the button while its word plays. The press always shows.
 playing	Playing…

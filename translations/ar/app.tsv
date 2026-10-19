@@ -683,7 +683,6 @@ naturalVoicesSame	التنزيل نفسه، دون أي إضافة.
 voiceForLang	صوت اللغة {lang}
 inUseNow	قيد الاستخدام الآن
 voiceAllLanguages	كل اللغات
-voicesOneLanguage	أصوات للغة واحدة
 voice.female	صوت أنثوي
 voice.male	صوت ذكوري
 useForToo	استخدم صوت {voice} للغة {lang} أيضًا
@@ -693,7 +692,6 @@ voicePickHint.anon	اضغط لسماع كل صوت، واختر ما يناسب 
 moreVoices	أصوات أخرى
 recommendFor	للغة {lang} نوصي بصوت {voice}.
 useForAll	استخدم صوت {voice} لكل اللغات
-voiceLanguageOnly	{lang} فقط · {mb} ميغابايت
 mobileDataAsk	هذا تنزيل بحجم {mb} ميغابايت والجهاز على بيانات الجوال. هل تنزّل الآن؟
 downloadNow	نزّل الآن
 waitForWifi	انتظر Wi-Fi
@@ -800,7 +798,7 @@ switchToSum	التبديل إلى سؤال الجمع القصير
 switchToSumBody	لا يوجد قفل شاشة ولا رمز استرداد على هذا الجهاز، لذا لا يمكن إعادة تعيين الرقم السري. ستحمي الإعدادات بدلًا من ذلك عملية جمع قصيرة.
 olderChildHint	يستطيع الأطفال الأكبر حل سؤال الجمع. الرقم السري أكثر أمانًا.
 naturalVoicesName	الأصوات الطبيعية (العشرة كلها)
-naturalVoicesSub	الأصوات الطبيعية تُنزَّل معًا بحجم نحو {mb} ميغابايت؛ الأصوات الخفيفة أصغر. اضغط تشغيل لتسمع الصوت أولًا.
+naturalVoicesSub	الأصوات الطبيعية تُنزَّل معًا بحجم نحو {mb} ميغابايت. اضغط تشغيل لتسمع الصوت أولًا.
 chooseVoiceTitle	اختر صوتًا
 chooseVoiceSub	هكذا سيبدو صوت {name}. يمكنك تغييره لاحقًا.
 chooseVoiceSub.anon	هكذا سيبدو صوت طفلك. يمكنك تغييره لاحقًا.
@@ -867,7 +865,6 @@ nameRecheckWaiting.m	يجري تنزيل {voice}. يمكنك سماع طريقة
 nameRecheckWaiting.n	يجري تنزيل {voice}. يمكنك سماع طريقة نطق هذا الصوت لاسم {name} عندما يصبح جاهزًا.
 voiceChosen	مُختار
 naturalVoicesDownloading	جارٍ تنزيل الأصوات الطبيعية · {p}%
-voiceDownloadingOne	جارٍ تنزيل {voice} · {p}%
 voiceWaitingForWifi	بانتظار Wi-Fi
 voiceReadyLine	جاهز
 saveNameTitle	حفظ التغييرات على اسم {name}؟
@@ -885,11 +882,6 @@ voiceName.M2	ثيو
 voiceName.M3	آدم
 voiceName.M4	عمر
 voiceName.M5	بن
-voiceName.talesyntese	راسموس
-voiceName.davefx	بابلو
-voiceName.alba	فيونا
-voiceName.claude	كلود
-voiceName.denis	دينيس
 highlightSpeaking	تمييز أثناء النطق
 highlightSpeakingSub	تظليل خفيف على الزر أثناء نطق كلمته. يظهر الضغط دائمًا.
 playing	جارٍ التشغيل…

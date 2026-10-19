@@ -15,7 +15,7 @@ They're stored only on the device, encrypted. The daily automatic backup stays o
 
 Some things are downloaded once, when you ask for them, and then work offline:
 
-- **Voices**: the natural voices and the voices for one language. Amalino tells you the size first, and asks before using mobile data.
+- **Voices**: the natural voices, one download for every language. Amalino tells you the size first, and asks before using mobile data.
 - **The speech recogniser** for **Partner listening**.
 - **Pictures**: if you search all of ARASAAC or other symbol sets online, only your search words are sent, nothing about the child. Pictures you choose are saved on the device.
 - **Offline translation**, where the device supports it: the language is downloaded once. No words from the app are sent.
