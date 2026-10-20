@@ -207,7 +207,7 @@ class BuiltSite(unittest.TestCase):
             titles, descs = set(), set()
             for page, (_t, _s, _n, title_key, desc_key) in bs.PAGES.items():
                 h = bs.seo(read(self.without, loc, bs.page_path(page)))
-                self.assertEqual(h.title, bs.html.unescape(bs.Renderer(self.strings, '', '').plain(title_key, loc)))
+                self.assertEqual(h.title, bs.rtl_lead(bs.html.unescape(bs.Renderer(self.strings, '', '').plain(title_key, loc)), loc))
                 titles.add(h.title)
                 descs.add(h.metas('description')[0])
                 self.assertIn('Amalino', h.title, (loc, page))
@@ -226,7 +226,7 @@ class BuiltSite(unittest.TestCase):
         self.assertTrue(any('da/privacy' in e and 'same title' in e for e in bs.check(out, dup, '')))
 
     def test_seo_keywords_and_free_promise_in_meta(self):
-        self.assertIn('AAC app', self.strings['home.title']['en'])
+        self.assertIn('talking app (AAC)', self.strings['home.title']['en'])
         for lang in ('English', 'Danish', 'Russian', 'Ukrainian', 'Arabic', 'Spanish'):
             self.assertIn(lang, self.strings['home.meta']['en'])
         for loc in bs.LOCALES:
@@ -289,7 +289,7 @@ class BuiltSite(unittest.TestCase):
                 self.assertEqual(data['operatingSystem'], 'iOS, Android')
                 self.assertEqual(data['offers'], {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR'})
                 self.assertEqual(data['inLanguage'], bs.LOCALES)
-                self.assertEqual(data['description'], self.strings['home.meta'][loc])
+                self.assertEqual(data['description'], bs.typography(self.strings['home.meta'][loc], loc))
                 for claim in ('aggregateRating', 'review', 'downloadUrl', 'installUrl', 'author'):
                     self.assertNotIn(claim, data)
                 if site:
@@ -398,7 +398,7 @@ class BuiltSite(unittest.TestCase):
     def test_privacy_page_is_a_draft_with_the_ml_kit_line(self):
         html = read(self.without, 'en', 'privacy', 'index.html')
         self.assertIn(self.strings['pr.draft']['en'], html)
-        self.assertIn('ML Kit sends Google anonymous performance and usage metrics', html)
+        self.assertIn('ML Kit sends Google anonymous information about how the feature performs and is used', html)
         self.assertNotIn('For schools', html)
 
     def test_decision31_nothing_loaded_from_other_hosts(self):
@@ -445,7 +445,7 @@ class BuiltSite(unittest.TestCase):
         self.assertTrue(self.strings['about.p4']['en'].endswith("If your child uses Amalino, I'd really love to hear from you."))
 
     def test_decision32_no_therapist_exception(self):
-        self.assertIn("That's why I'm building Amalino. A free, offline communication app", self.strings['about.p3']['en'])
+        self.assertIn("That's why I'm making Amalino: a free communication app that works without the internet", self.strings['about.p3']['en'])
         for html_text, lang in (('<p>Amalino: free, offline, and built with families and therapists.</p>', 'en'),
                                 ('<p>Ask your therapist.</p>', 'en'),
                                 ('<p>Built with families and specialists.</p>', 'en'),
@@ -514,6 +514,30 @@ class BuiltSite(unittest.TestCase):
     def test_arabic_latin_runs_are_isolated(self):
         html = read(self.without, 'ar', 'translate', 'index.html')
         self.assertIn('<bdi dir="ltr">OK?</bdi>', html)
+        # Review T1: a whole Latin run is one isolate, with "/" and "." inside and a number after a word.
+        self.assertEqual(bs.isolate_latin('من github.com/amalino-app/voices أو'),
+                         'من <bdi dir="ltr">github.com/amalino-app/voices</bdi> أو')
+        self.assertEqual(bs.isolate_latin('(iOS 26 أو أحدث)'), '(<bdi dir="ltr">iOS 26</bdi> أو أحدث)')
+        self.assertEqual(bs.isolate_latin('أصوات Supertonic 3، و'), 'أصوات <bdi dir="ltr">Supertonic 3</bdi>، و')
+        self.assertIn('<bdi dir="ltr">github.com/amalino-app/voices</bdi>', read(self.without, 'ar', 'privacy', 'index.html'))
+        # Review T2: an Arabic title that starts with a Latin word starts with a right-to-left mark.
+        self.assertEqual(bs.rtl_lead('Amalino: تطبيق', 'ar'), '\u200fAmalino: تطبيق')
+        self.assertEqual(bs.rtl_lead('Amalino: app', 'en'), 'Amalino: app')
+
+    def test_typography_and_english_only_links(self):
+        # Review T6: no line break inside "129 MB", "iOS 26", before a dash, after a one-letter Russian word.
+        nb = '\u00a0'
+        self.assertEqual(bs.typography('about 129 MB, iOS 26', 'en'), f'about 129{nb}MB, iOS{nb}26')
+        self.assertEqual(bs.typography('Amalino — это я и ты', 'ru'), f'Amalino{nb}— это я{nb}и{nb}ты')
+        self.assertEqual(bs.typography('t. y. 30 MB', 'lt'), f't.{nb}y. 30{nb}MB')
+        # Review T5: the English pages are UK English.
+        self.assertIn('<meta property="og:locale" content="en_GB">', read(self.without, 'en', 'index.html'))
+        # Review T9: links to the English-only privacy documents say so.
+        for loc in bs.LOCALES:
+            page = read(self.without, loc, 'privacy', 'index.html')
+            self.assertIn(f'href="{bs.OUTSIDE_LINKS["github-privacy"]}" hreflang="en"', page)
+            if loc != 'en' and 'link.inEnglish' in self.strings:
+                self.assertIn('</a> ' + self.strings['link.inEnglish'][loc], page, loc)
 
 
 class Inputs(unittest.TestCase):
@@ -546,6 +570,9 @@ class Inputs(unittest.TestCase):
         self.assertEqual(bs.clean_email('not an address'), '')
         self.assertEqual(bs.clean_site('https://amalino.app/'), 'https://amalino.app')
         self.assertEqual(bs.clean_site('http://amalino.app'), '')
+        # A local preview may use http://localhost, so it gets canonical, hreflang, sitemap and robots.txt too.
+        self.assertEqual(bs.clean_site('http://localhost:8765/'), 'http://localhost:8765')
+        self.assertEqual(bs.clean_site('http://localhost.evil.org'), '')
 
 
 class Manual(unittest.TestCase):

@@ -14,8 +14,8 @@ and list the languages for browsers without script, assets/ (style, logo, share 
 URL, sitemap.xml, robots.txt and the CNAME file GitHub Pages reads. Every page has a language menu in its
 header. Links are relative and name index.html, so the build also works from file://.
 
-The contact e-mail and site URL come from --contact-email/--site-url or the environment
-(OVK_CONTACT_EMAIL, OVK_SITE_URL), with the app's rules: an e-mail needs an
+The contact email and site URL come from --contact-email/--site-url or the environment
+(OVK_CONTACT_EMAIL, OVK_SITE_URL), with the app's rules: an email needs an
 "@" and no spaces, a site URL must be https://; anything else counts as empty. The donation link comes from
 --donate-url or OVK_DONATE_URL (https:// only; website only, never in the app): the about page's "Support
 Amalino" section and the footer link. Template blocks {{#email}}...{{/email}}, {{#site}}...{{/site}} and
@@ -23,7 +23,7 @@ Amalino" section and the footer link. Template blocks {{#email}}...{{/email}}, {
 
 --check validates the built site: every page exists with the right lang/dir, no forbidden term
 (organisations, untested access methods, open source/GitHub) appears in any page, the free promise is
-on home and about, e-mail text appears only when set, the translate page has both cases, and every
+on home and about, email text appears only when set, the translate page has both cases, and every
 relative link resolves, and nothing is loaded from another host (owner decision 31: no web fonts, scripts,
 styles or images from elsewhere; only <a href> links may leave the site). It also checks the SEO basics: a unique <title> and meta description per page and language, one h1 with
 headings in order, alt on every image, page weight, Open Graph/Twitter tags, the SoftwareApplication JSON-LD on
@@ -67,7 +67,8 @@ LANG_KEY = 'amalino.lang'
 LOCALES = ['en', 'da', 'ru', 'uk', 'ar', 'es', 'lt']
 RTL = {'ar'}
 # Open Graph locales (language_TERRITORY, as Facebook lists them).
-OG_LOCALES = {'en': 'en_US', 'da': 'da_DK', 'ru': 'ru_RU', 'uk': 'uk_UA', 'ar': 'ar_AR', 'es': 'es_ES', 'lt': 'lt_LT'}
+# English is written with UK spelling (licence, colour), so its locale is en_GB.
+OG_LOCALES = {'en': 'en_GB', 'da': 'da_DK', 'ru': 'ru_RU', 'uk': 'uk_UA', 'ar': 'ar_AR', 'es': 'es_ES', 'lt': 'lt_LT'}
 ENDONYMS = {'en': 'English', 'da': 'Dansk', 'ru': 'Русский', 'uk': 'Українська', 'ar': 'العربية', 'es': 'Español', 'lt': 'Lietuvių'}
 
 # page id -> (template, path below the language folder, nav label key, title key, description key)
@@ -150,19 +151,11 @@ FORBIDDEN = {
 }
 
 
-# The privacy page names GitHub (github.com) as the host the voice files download from, in exactly this phrase
-# per language (owner decisions 30 and 33). Since 2026-10-14 GitHub may be named anywhere, but the app's code is
+# The privacy page names GitHub (github.com) as the host the voice files download from (owner decisions 30 and 33),
+# as "GitHub (github.com)" in every language. Since 2026-10-14 GitHub may be named anywhere, but the app's code is
 # never presented as being on GitHub or as open source. Lower case; matched on the visible text of the privacy pages only.
 # There is no exception for therapists or specialists any more (owner decision 32).
-ALLOWED_PRIVACY = {
-    'en': 'github (github.com), where the voice files are kept',
-    'da': 'github (github.com), hvor stemmefilerne ligger',
-    'ru': 'github (github.com), где хранятся файлы голосов',
-    'uk': 'github (github.com), де зберігаються файли голосів',
-    'ar': 'github (github.com)، حيث تُحفظ ملفات الأصوات',
-    'es': 'github (github.com), donde se guardan los archivos de voz',
-    'lt': 'github (github.com), kur laikomi balsų failai',
-}
+ALLOWED_PRIVACY = {loc: 'github (github.com)' for loc in ('en', 'da', 'ru', 'uk', 'ar', 'es', 'lt')}
 
 # Self-hosted only (owner decision 31): no fonts, scripts, styles, images or frames from other hosts.
 # Only <a href> may point elsewhere (mailto and the configured site), plus canonical/hreflang <link>s
@@ -255,9 +248,16 @@ def clean_donate(value):
 
 
 def clean_site(value):
+    """https://host, or http://localhost[:port] / http://127.0.0.1[:port] for a local preview (so the preview
+    has the canonical, hreflang, sitemap and robots.txt too); anything else is empty."""
     u = (value or '').strip().rstrip('/')
-    m = re.match(r'^https://([^/\s]+)(/\S*)?$', u)
+    m = re.match(r'^https://([^/\s]+)(/\S*)?$', u) or re.match(r'^http://(localhost|127\.0\.0\.1)(:\d+)?$', u)
     return u if m else ''
+
+
+def local_site(site):
+    """A local preview URL (http://localhost...): no CNAME file for it."""
+    return site.startswith('http://')
 
 
 # ---------------------------------------------------------------- rendering
@@ -285,7 +285,7 @@ class Renderer:
         if key not in self.strings:
             raise BuildError(f'unknown string key {key!r}')
         self.used.add(key)
-        return self.app_labels(self.strings[key][loc], key, loc)
+        return typography(self.app_labels(self.strings[key][loc], key, loc), loc)
 
     def app_labels(self, text, key, loc):
         """{app:key} -> the app's label in this language; {app:key|label} -> its part before the first ':'."""
@@ -311,17 +311,23 @@ class Renderer:
                 raise BuildError(f'{key}: unknown link {m.group(2)!r} (known: {", ".join(OUTSIDE_LINKS)})')
             outside.append((m.group(1), OUTSIDE_LINKS[m.group(2)]))
             return f'\x00{len(outside) - 1}\x00'
+        # The documents OUTSIDE_LINKS names are in English only: hreflang="en", and on other languages' pages
+        # the label "(in English)" in the page's language after the link (string link.inEnglish).
+        in_english = ''
+        if loc != 'en' and 'link.inEnglish' in self.strings:
+            self.used.add('link.inEnglish')
+            in_english = ' ' + html.escape(self.strings['link.inEnglish'][loc], quote=False)
         s = re.sub(r'\[\[([^\]|]+?)\|([a-z\-]+)\]\]', keep, s)
         if loc in RTL:
             s = isolate_latin(s)
             outside = [(isolate_latin(t), u) for t, u in outside]
         s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
-        s = re.sub(r'\x00(\d+)\x00', lambda m: f'<a href="{outside[int(m.group(1))][1]}" rel="noopener">'
-                   f'{outside[int(m.group(1))][0]}</a>', s)
+        s = re.sub(r'\x00(\d+)\x00', lambda m: f'<a href="{outside[int(m.group(1))][1]}" hreflang="en" rel="noopener">'
+                   f'{outside[int(m.group(1))][0]}</a>{in_english}', s)
         s = re.sub(r'\[\[(.+?)\]\]', lambda m: f'<a href="{REPO_URL}" rel="noopener">{m.group(1)}</a>', s)
         if '{email}' in s:
             if not self.email:
-                raise BuildError(f'{key} needs the e-mail; put it inside {{{{#email}}}}...{{{{/email}}}}')
+                raise BuildError(f'{key} needs the email; put it inside {{{{#email}}}}...{{{{/email}}}}')
             e = html.escape(self.email)
             s = s.replace('{email}', f'<bdi dir="ltr"><a href="mailto:{e}">{e}</a></bdi>')
         return s
@@ -365,12 +371,39 @@ class Renderer:
         return out
 
 
+# One Latin word in right-to-left text: letters, digits, _ and -, joined by "." or "/" (github.com/amalino-app/voices).
+_LATIN_WORD = r'[A-Za-z](?:[A-Za-z0-9_\-]|[./](?=[A-Za-z0-9]))*'
+
+
 def isolate_latin(s):
-    """In right-to-left text, Latin runs (names, "OK?") stay one left-to-right unit, so a trailing "?" or "."
-    keeps its place."""
-    return re.sub(r'(?<![{A-Za-z0-9_])(?!email\})[A-Za-z](?:[A-Za-z0-9_\-]|\.(?=[A-Za-z0-9]))*'
-                  r'(?:\s+[A-Za-z](?:[A-Za-z0-9_\-]|\.(?=[A-Za-z0-9]))*)*\??',
+    """In right-to-left text, a whole Latin run stays ONE left-to-right unit (localization review T1): words
+    joined by spaces, "." or "/", and numbers that follow a Latin word ("iOS 26", "Supertonic 3"), so a URL
+    or "iOS 26" doesn't come out reversed, and a trailing "?" keeps its place ("OK?")."""
+    return re.sub(r'(?<![{&A-Za-z0-9_])(?!email\})' + _LATIN_WORD +
+                  r'(?:\s+(?:' + _LATIN_WORD + r'|\d+(?:[.,]\d+)*(?![\w])))*\??',
                   lambda m: f'<bdi dir="ltr">{m.group(0)}</bdi>', s)
+
+
+NBSP = '\u00a0'
+
+
+def typography(s, loc):
+    """Non-breaking spaces (localization review T6), so a line never breaks inside "129 MB", "iOS 26" or
+    before a dash, nor (Russian, Ukrainian) after a one-letter word, nor inside Lithuanian "t. y."."""
+    s = re.sub(r'(\d) (?=(?:MB|GB|KB|МБ|ГБ|КБ|mm|мм|ميغابايت|%)(?!\w))', r'\1' + NBSP, s)
+    s = re.sub(r'\b(iOS|Android|Supertonic) (?=\d)', r'\1' + NBSP, s)
+    s = re.sub(r' (?=[—–] )', NBSP, s)
+    if loc in ('ru', 'uk'):
+        s = re.sub(r'(?<![\w\-{])([А-Яа-яЁёІіЇїЄєҐґ]) (?=\S)', r'\1' + NBSP, s)
+    if loc == 'lt':
+        s = s.replace('t. y.', 't.' + NBSP + 'y.')
+    return s
+
+
+def rtl_lead(text, loc):
+    """An Arabic <title> or description that starts with a Latin word ("Amalino: ...") gets a right-to-left mark
+    first, so tabs and link previews show it right to left (review T2)."""
+    return '\u200f' + text if loc in RTL and re.match(r'[A-Za-z]', text) else text
 
 
 def read(path):
@@ -768,7 +801,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                 langs.append(f'<li><a href="{root}{other}/{page_path(page)}" lang="{other}" hreflang="{other}" '
                              f'dir="{d}" data-lang="{other}"{cur}>{ENDONYMS[other]}</a></li>')
             content = r.render(read(os.path.join(TEMPLATES, tpl_name)), loc, {}, page)
-            title, desc = r.plain(title_key, loc), r.plain(desc_key, loc)
+            title, desc = rtl_lead(r.plain(title_key, loc), loc), rtl_lead(r.plain(desc_key, loc), loc)
             head = head_links(site, loc, page) + share_meta(r, site, loc, page, title, desc)
             if page == 'home':
                 head += json_ld(r, site, loc)
@@ -880,8 +913,9 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     if site:
         write(os.path.join(out, 'sitemap.xml'), sitemap(site, lastmod(), manual_entries))
         write(os.path.join(out, 'robots.txt'), f'User-agent: *\nAllow: /\n\nSitemap: {site}/sitemap.xml\n')
-        # GitHub Pages serves the site at its custom domain from this file.
-        write(os.path.join(out, 'CNAME'), re.match(r'^https://([^/]+)', site).group(1) + '\n')
+        # GitHub Pages serves the site at its custom domain from this file (not for a local preview).
+        if not local_site(site):
+            write(os.path.join(out, 'CNAME'), re.match(r'^https://([^/]+)', site).group(1) + '\n')
         # Root-relative links only work at the domain root, so the 404 page comes with a site URL.
         write(os.path.join(out, '404.html'), not_found_page(site))
 
@@ -891,7 +925,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     if not quiet:
         print(f'Built {len(LOCALES)} languages x {len(PAGES)} pages + 2 pickers + the manual '
               f'({", ".join(f"{l} {len(manual_pages(l))} pages" for l in langs_m) or "none"}) into {os.path.relpath(out, ROOT)}'
-              f' (e-mail {"set" if email else "empty"}, site {"set" if site else "empty"},'
+              f' (email {"set" if email else "empty"}, site {"set" if site else "empty"},'
               f' donation link {"set" if donate else "empty"})')
         print('Native review (web:<key> in translations/<lang>/reviewed.txt): ' +
               ', '.join(f'{loc} {status[loc]}' for loc in LOCALES))
@@ -1096,7 +1130,7 @@ def check(out, strings, email, site='', donate=''):
         else:
             expect('location.replace(' in page and LANG_KEY in page, f'{f}: the picker needs its language redirect')
         if not email:
-            expect('mailto:' not in page, f'{f}: mailto link while the e-mail is empty')
+            expect('mailto:' not in page, f'{f}: mailto link while the email is empty')
         if loc and donate:
             link = f'<a href="{html.escape(donate, quote=True)}" rel="noopener">'
             expect(f'<p class="footer-support">{link}' in page, f'{f}: footer support link missing')
@@ -1137,7 +1171,7 @@ def check(out, strings, email, site='', donate=''):
         if email:
             for p in ('translate', 'privacy', 'about'):
                 expect(f'mailto:{email}' in read(os.path.join(out, loc, page_path(p))),
-                       f'{loc}/{page_path(p)}: e-mail missing')
+                       f'{loc}/{page_path(p)}: email missing')
     return errors
 
 
@@ -1241,8 +1275,11 @@ def check_seo(out, files, site, page_langs=None):
                 expect(f'href="/{loc}/"' in page, f'404.html: no link to the {loc} home page')
             expect(not external_refs(page, site), '404.html: external resource')
         cname = os.path.join(out, 'CNAME')
-        expect(os.path.isfile(cname) and read(cname).strip() == re.match(r'^https://([^/]+)', site).group(1),
-               'CNAME missing or not the site host')
+        if local_site(site):
+            expect(not os.path.exists(cname), 'CNAME for a local preview')
+        else:
+            expect(os.path.isfile(cname) and read(cname).strip() == re.match(r'^https://([^/]+)', site).group(1),
+                   'CNAME missing or not the site host')
         # Reciprocity: every page a page names as an alternate exists, names it back, and has that language.
         by_url = {}
         for f, h in pages.items():
@@ -1371,9 +1408,9 @@ def main(argv=None):
     if args.donate_url.strip() and not donate:
         print('warning: --donate-url/OVK_DONATE_URL is not an https:// URL; left out', file=sys.stderr)
     if args.contact_email.strip() and not email:
-        print('warning: --contact-email/OVK_CONTACT_EMAIL is not an e-mail address; left out', file=sys.stderr)
+        print('warning: --contact-email/OVK_CONTACT_EMAIL is not an email address; left out', file=sys.stderr)
     if args.site_url.strip() and not site:
-        print('warning: --site-url/OVK_SITE_URL is not an https:// URL; left out', file=sys.stderr)
+        print('warning: --site-url/OVK_SITE_URL is not an https:// URL (or http://localhost); left out', file=sys.stderr)
     try:
         strings = load_strings()
         build(args.out, email, site, strings, donate=donate)
