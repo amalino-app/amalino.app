@@ -31,7 +31,7 @@ If the child already uses Amalino on another device, tap **I already use Amalino
 
 ### Languages
 
-![The Which languages? step on a tablet: English as the main language, Danish ticked as another language, and the other six languages, each with a Preview tag](img/setup-languages-tablet.png)
+![The Which languages? step on a tablet: the main language, with English chosen and the other six languages each marked Preview](img/setup-languages-tablet.png)
 
 Choose the **Main language**, the one the child will use most, and tick any other languages the child hears every day. Amalino has seven: English, Danish, Russian, Ukrainian, Arabic, Spanish and Lithuanian.
 
