@@ -3,7 +3,7 @@
 
 Lenta – tai ekranas, kuriuo vaikas naudojasi visą dieną. Suaugusiųjų nustatymai užrakinti, todėl vaikas gali drąsiai ją tyrinėti.
 
-![Vaiko lenta planšetėje: viršutinė juosta su vardu Sam, mygtukais EN ir DA, klaviatūros mygtuku ir spynele; tuščia sakinio juosta su mygtukais „{app:barDelete}“, „{app:barForms}“ ir „{app:barClear}“; 36 spalvoti žodžių mygtukai; frazių eilutė su ★ „{app:favourites}“, „stop“, „padėk man“, dviem frazėmis ir „{app:quickMore}“](img/board-1x.webp)
+![Vaiko lenta planšetėje: viršutinė juosta su vardu Sam, mygtukais LT ir EN, klaviatūros mygtuku ir spynele; tuščia sakinio juosta su mygtukais „{app:barDelete}“, „{app:barForms}“ ir „{app:barClear}“; 36 spalvoti žodžių mygtukai; frazių eilutė su ★ „{app:favourites}“, „stop“, „padėk man“, dviem frazėmis ir „{app:quickMore}“](img/board-1x.webp)
 
 ## Ekrano dalys
 
@@ -26,7 +26,7 @@ Kaip tai veikia, galite pakeisti skiltyje **{app:sectionSettings}** → **{app:m
 
 ## Žodžio formos
 
-![Žodžio formų meniu virš lentos planšetėje: po „aš noriu“ – formos „noriu“, „nori“, „norėjau“ ir „norėsiu“ dideliais mygtukais](img/word-forms-1x.webp)
+![Žodžio formų meniu virš lentos planšetėje: po „aš noriu“ – formos „noriu“, „norėjau“, „nori“, „norime“, „norėjo“, „norėsiu“, „norės“ ir „norėti“ dideliais mygtukais](img/word-forms-1x.webp)
 
 Žodžiai kaitomi: „šuo“ ir „šunys“, „eiti“ ir „ėjo“, „didelis“ ir „didesnis“. Žodžio formų meniu kitas žodžio formas parodo dideliais mygtukais. Bakstelėjus formą, ji įdedama į sakinį ir ištariama. Pirma visada rodoma pagrindinė žodžio forma, todėl vaikas visada gali prie jos grįžti.
 
@@ -46,7 +46,7 @@ Kai kurie mygtukai atidaro aplanką su susijusiais žodžiais, pavyzdžiui, „M
 
 Aplanko viduje viršutinėje juostoje rodoma rodyklė **{app:back}** ir mygtukas **{app:home}**. Mygtukas **{app:home}** visada grąžina į pagrindinę lentą.
 
-![Aplankas „Maistas“ planšetėje: viršutinėje juostoje „{app:back}“ ir „{app:home}“, mygtukai „atgal“, „vaisiai“, „daržovės“, „saldumynai“, „virtuvė ir namai“, toliau maisto žodžiai nuo obuolio iki pupelių](img/folder-1x.webp)
+![Aplankas „Maistas“ planšetėje: viršutinėje juostoje „{app:back}“ ir „{app:home}“, mygtukai „atgal“, „vaisiai“, „daržovės“, „saldumynai“, „virtuvė“ ir „namo“, toliau maisto žodžiai nuo obuolio iki pupelių](img/folder-1x.webp)
 
 ## Kalbos perjungimas
 

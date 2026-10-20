@@ -7,7 +7,7 @@ Cada familia tiene sus propias palabras. Puedes cambiar cualquier palabra, image
 
 Arriba a la derecha del tablero, **mantén pulsado el candado durante 3 segundos** y luego resuelve la suma sencilla (o escribe tu PIN) con las teclas numéricas que aparecen. Se abren los controles para adultos. Se vuelven a bloquear solos al cabo de 5 minutos, o al momento si tocas **{app:lockNow}**.
 
-![La comprobación para adultos sobre el tablero, en una tableta: {app:adultCheck}, la suma 16 + 3 = ?, las teclas numéricas, {app:ok} y {app:cancel}](img/gate-1x.webp)
+![La comprobación para adultos sobre el tablero, en una tableta: {app:adultCheck}, la suma 11 + 7 = ?, las teclas numéricas, {app:ok} y {app:cancel}](img/gate-1x.webp)
 
 El tiempo de pulsación, el PIN y el bloqueo automático se cambian en **{app:lockAndKeep}**. Lo explico en [Ajustes](settings.md).
 
@@ -15,7 +15,7 @@ El tiempo de pulsación, el PIN y el bloqueo automático se cambian en **{app:lo
 
 Elige **{app:editBoard}**. En la parte superior del tablero aparece una línea: *{app:editingHint}* La barra superior muestra ahora **{app:undo}**, **{app:redo}** y **{app:done}**.
 
-![El tablero en modo edición, en una tableta: la línea «{app:editingHint}», {app:undo}, {app:redo} y {app:done} en la barra superior, y una palabra oculta sombreada en oscuro y con un ojo tachado](img/edit-mode-1x.webp)
+![El tablero en modo edición, en una tableta: la línea «{app:editingHint}», {app:undo}, {app:redo} y {app:done} en la barra superior, y dos palabras ocultas, una de ellas «a», sombreadas en oscuro y con un ojo tachado](img/edit-mode-1x.webp)
 
 - Toca un botón para editarlo.
 - Toca una casilla vacía y elige **{app:addWord}** o **{app:addFolder}**.
@@ -26,7 +26,7 @@ Las palabras ocultas se ven en su sitio, sombreadas en oscuro y con un ojo tacha
 
 ## El editor de botones
 
-![El editor de botones de «quiero» en una tableta: la palabra en inglés y en danés, {app:wordFormsManual}, los botones de imagen y de foto, {app:recordVoice}, {app:spokenAs}, {app:visibility} y el estilo del botón](img/editor-1x.webp)
+![El editor de botones de «quiero» en una tableta: la palabra en español y en inglés, {app:wordFormsManual}, los botones de imagen y de foto, {app:recordVoice}, {app:spokenAs}, {app:visibility} y el estilo del botón](img/editor-1x.webp)
 
 - **Palabra**: la palabra del botón, en el idioma que tiene el tablero en ese momento.
 - **Los demás idiomas del niño**: debajo, un campo para cada uno de los otros idiomas del niño, por ejemplo **{app:wordLabel|language=danés}**. Son opcionales: si un campo se deja vacío, el botón muestra la palabra escrita arriba.
@@ -46,7 +46,7 @@ Cuando editas un botón **que ya existe**, los cambios se aplican sobre la march
 
 ## Traducir palabras
 
-![La parte superior del editor de botones de «quiero» en una tableta: la palabra en inglés y el campo del danés vacío, con {app:translateWord} al final y la nota «{app:otherLanguageEmpty}»](img/editor-translate-1x.webp)
+![La parte superior del editor de botones de «quiero» en una tableta: la palabra en español y el campo del inglés vacío, con {app:translateWord} al final y la nota «{app:otherLanguageEmpty}»](img/editor-translate-1x.webp)
 
 **{app:translateWord}** funciona en el propio dispositivo, sin internet, una vez configurado el idioma. Se configura una sola vez para cada idioma: en los controles para adultos, abre **{app:languages}** (en **{app:sectionBoards}**) y luego **{app:offlineTranslationHeader}**:
 
@@ -55,7 +55,7 @@ Cuando editas un botón **que ya existe**, los cambios se aplican sobre la march
 
 Cada idioma indica si ya está listo. Si el dispositivo no puede hacerlo, aparece **{app:offlineTranslationUnsupported}**
 
-![{app:offlineTranslationHeader} en {app:languages}: qué hace {app:translateWord}, y el danés marcado con «{app:offlineTranslationReady}»](img/offline-translate-1x.webp)
+![{app:offlineTranslationHeader} en {app:languages}: qué hace {app:translateWord}, y el inglés marcado con «{app:offlineTranslationReady}»](img/offline-translate-1x.webp)
 
 ## Carpetas
 

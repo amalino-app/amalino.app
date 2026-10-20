@@ -7,7 +7,7 @@ Børn, der kender nogle bogstaver, kan skrive ord, som ikke står på tavlen. Ta
 
 Tryk på **tastaturknappen** i den øverste bjælke. Vil du tilbage til billederne, så tryk på den samme knap igen (nu viser den et gitter) eller på **lukketasten** nederst til venstre på tastaturet.
 
-![Tastaturet på en tablet: »i want to p« i beskedlinjen, bogstavtasterne med 123, mellemrum, slet og {app:kbSpeak} og sætningsrækken nedenunder](img/keyboard-1x.webp)
+![Tastaturet på en tablet: »jeg vil s« i beskedlinjen, bogstavtasterne med 123, mellemrum, slet og {app:kbSpeak} og sætningsrækken nedenunder](img/keyboard-1x.webp)
 
 ## Sådan skriver barnet
 

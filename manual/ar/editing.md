@@ -7,7 +7,7 @@
 
 في أعلى اللوحة، **اضغط مطولًا على القفل 3 ثوانٍ**، ثم أجب عن عملية الجمع البسيطة (أو أدخل رقمك السري) بأزرار الأرقام التي تظهر. فتُفتح إعدادات الكبار. وهي تُقفل من تلقاء نفسها بعد 5 دقائق، أو فورًا حين تضغط **{app:lockNow}**.
 
-![شاشة التحقق من الكبار فوق اللوحة على جهاز لوحي: {app:adultCheck}، وعملية الجمع 16 + 3 = ؟، وأزرار الأرقام، و{app:ok} و{app:cancel}](img/gate-1x.webp)
+![شاشة التحقق من الكبار فوق اللوحة على جهاز لوحي: {app:adultCheck}، وعملية الجمع 11 + 4 = ؟، وأزرار الأرقام، و{app:ok} و{app:cancel}](img/gate-1x.webp)
 
 يمكنك تغيير مدة الضغط والرقم السري والقفل التلقائي في **{app:lockAndKeep}**. راجع [الإعدادات](settings.md).
 
@@ -26,7 +26,7 @@
 
 ## محرّر الزر
 
-![محرّر الزر لكلمة «أريد» على جهاز لوحي: الكلمة بالإنجليزية وبالدنماركية، و{app:wordFormsManual}، وأزرار الصورة الرمزية والصورة الفوتوغرافية، و{app:recordVoice}، و{app:spokenAs}، و{app:visibility}، ونمط الزر](img/editor-1x.webp)
+![محرّر الزر لكلمة «أريد» على جهاز لوحي: الكلمة بالعربية وبالإنجليزية، و{app:wordFormsManual}، وأزرار الصورة الرمزية والصورة الفوتوغرافية، و{app:recordVoice}، و{app:spokenAs}، و{app:visibility}، ونمط الزر](img/editor-1x.webp)
 
 - **الكلمة**: الكلمة المكتوبة على الزر، بلغة اللوحة الحالية.
 - **لغات الطفل الأخرى**: تحت الكلمة، حقل لكل لغة أخرى من لغات الطفل، مثل **{app:wordLabel|language=الدنماركية}**. هذه الحقول اختيارية: والحقل الفارغ يعرض الكلمة كما كُتبت في الأعلى.
@@ -46,7 +46,7 @@
 
 ## ترجمة الكلمات
 
-![أعلى محرّر الزر لكلمة «أريد» على جهاز لوحي: الكلمة بالإنجليزية، وحقل الدنماركية فارغًا وفي آخره زر {app:translateWord}، والملاحظة «{app:otherLanguageEmpty}»](img/editor-translate-1x.webp)
+![أعلى محرّر الزر لكلمة «أريد» على جهاز لوحي: الكلمة بالعربية، وحقل الإنجليزية فارغًا وفي آخره زر {app:translateWord}، والملاحظة «{app:otherLanguageEmpty}»](img/editor-translate-1x.webp)
 
 يعمل الزر **{app:translateWord}** على الجهاز، دون إنترنت، بعد إعداد اللغة. أعِدّ ذلك مرة واحدة لكل لغة: في إعدادات الكبار، افتح **{app:languages}** (ضمن **{app:sectionBoards}**)، ثم **{app:offlineTranslationHeader}**:
 
@@ -55,7 +55,7 @@
 
 تُظهر كل لغة هل هي جاهزة. وحيث لا يستطيع الجهاز ذلك، تظهر عبارة **{app:offlineTranslationUnsupported}**
 
-![{app:offlineTranslationHeader} في شاشة {app:languages}: شرح ما يفعله زر {app:translateWord}، والدنماركية وعليها «{app:offlineTranslationReady}»](img/offline-translate-1x.webp)
+![{app:offlineTranslationHeader} في شاشة {app:languages}: شرح ما يفعله زر {app:translateWord}، والإنجليزية وعليها «{app:offlineTranslationReady}»](img/offline-translate-1x.webp)
 
 ## المجلدات
 

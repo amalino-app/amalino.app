@@ -15,7 +15,7 @@ Amalino працює на iPhone, iPad, а також на телефонах і
 
 ### {app:welcomeTitle}
 
-![Крок «{app:welcomeTitle}» на планшеті: логотип Amalino, кнопки «{app:appLanguage}» (вибрано англійську), примітка «{app:myth.speech.q}» і кнопка «{app:startSetup}»](img/setup-welcome-1x.webp)
+![Крок «{app:welcomeTitle}» на планшеті: логотип Amalino, кнопки «{app:appLanguage}» (вибрано українську), примітка «{app:myth.speech.q}» і кнопка «{app:startSetup}»](img/setup-welcome-1x.webp)
 
 У пункті **{app:appLanguage}** виберіть мову екранів для дорослих. Мови дитини ви виберете на одному з наступних кроків.
 
@@ -31,7 +31,7 @@ Amalino працює на iPhone, iPad, а також на телефонах і
 
 ### Мови
 
-![Крок «{app:whichLanguages}» на планшеті: основна мова (вибрано англійську), а решта шість мов позначені «{app:languagePreview}»](img/setup-languages-1x.webp)
+![Крок «{app:whichLanguages}» на планшеті: основна мова (вибрано українську), і всі мови, крім англійської, позначені «{app:languagePreview}»](img/setup-languages-1x.webp)
 
 У пункті **{app:primaryLanguage}** виберіть мову, якою дитина користуватиметься найчастіше, і позначте інші мови, які дитина щодня чує. В Amalino їх сім: англійська, данська, українська, російська, арабська, іспанська та литовська.
 
@@ -45,7 +45,7 @@ Amalino працює на iPhone, iPad, а також на телефонах і
 
 ### Голос
 
-![Крок «{app:chooseVoiceTitle}» на планшеті: природний голос Ella, рекомендований і вибраний, завантажується (40 %), а поки що звучить «{app:systemVoice}»](img/setup-voice-1x.webp)
+![Крок «{app:chooseVoiceTitle}» на планшеті: природний голос Лео, рекомендований і вибраний, завантажується (40 %), а поки що звучить «{app:systemVoice}»](img/setup-voice-1x.webp)
 
 Виберіть, як звучатиме дитина кожною мовою. Натисніть на голос, щоб його послухати.
 

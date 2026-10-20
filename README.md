@@ -40,12 +40,14 @@ After a change in `translations/` (or a merged Weblate pull request), `python3 s
 
 Open `site/dist/index.html` in a browser; links work from the file system too.
 
-The manual's pictures (`manual/en/img/`) are drawn from the app on a computer, not a device: the app's
-`test/tool/manual_screenshots_test.dart` (an iPad, 820 x 1180, drawn at 2x), then saved as full-colour WebP at
-2x (`name-2x.webp`) and half that size (`name-1x.webp`), lossless or quality 85, whichever is smaller. A page
-shows one with `![what the picture shows](img/name-1x.webp)` on a line of its own; the build adds the 2x
-picture for sharp screens. Limits: 250 KB per file, 4 MB for all of them. A translated manual without its own
-`img/` folder shows the English pictures (with its own alt text).
+The manual's pictures (`manual/<lang>/img/`, in the language of the page) are drawn from the app on a computer,
+not a device: the app's `test/tool/manual_screenshots_test.dart` (an iPad, 820 x 1180, drawn at 2x; another
+language with `--dart-define=MANUAL_LANG=da`), then `tool/manual_webp.py` saves them as full-colour WebP at 2x
+(`name-2x.webp`) and half that size (`name-1x.webp`), lossless or quality 85, whichever is smaller, and crops
+the ones that show part of a screen. A page shows one with `![what the picture shows](img/name-1x.webp)` on a
+line of its own; the build adds the 2x picture for sharp screens. Limits: 250 KB per file, 4 MB for one
+language's pictures. A translated manual without its own `img/` folder would show the English pictures (with its
+own alt text); every translated manual now has its own.
 
 In the manual's Markdown, `{app:key}` is the app's own label in the page's language (`{app:key|label}`: the part
 before the first ":"; `{app:key|name=Sam}` fills the string's `{name}`), and `[text](site:privacy)` links to a

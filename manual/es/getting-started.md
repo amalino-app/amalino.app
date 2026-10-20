@@ -15,7 +15,7 @@ La configuración lleva unos cinco minutos. Todo lo que escribes se queda en el 
 
 ### Bienvenida
 
-![El paso de bienvenida en una tableta: el logotipo de Amalino, los botones de {app:appLanguage} (con el inglés elegido), la nota «{app:myth.speech.q}» y {app:startSetup}](img/setup-welcome-1x.webp)
+![El paso de bienvenida en una tableta: el logotipo de Amalino, los botones de {app:appLanguage} (con el español elegido), la nota «{app:myth.speech.q}» y {app:startSetup}](img/setup-welcome-1x.webp)
 
 Elige el **{app:appLanguage}**: el idioma de las pantallas para adultos. Los idiomas del niño los eliges en un paso posterior.
 
@@ -31,7 +31,7 @@ Si el niño ya usa Amalino en otro dispositivo, toca **{app:alreadyUse}** y desp
 
 ### Idiomas
 
-![El paso «{app:whichLanguages}» en una tableta: el idioma principal, con el inglés elegido, y los otros seis idiomas marcados con {app:languagePreview}](img/setup-languages-1x.webp)
+![El paso «{app:whichLanguages}» en una tableta: el idioma principal, con el español elegido, y todos los idiomas salvo el inglés marcados con {app:languagePreview}](img/setup-languages-1x.webp)
 
 Elige el **{app:primaryLanguage}**, el que más va a usar el niño, y marca los demás idiomas que oye cada día. Amalino tiene siete: inglés, danés, ruso, ucraniano, árabe, español y lituano.
 
@@ -45,7 +45,7 @@ Si tu idioma no está, toca **{app:notListed}**. Aun así puedes crear tableros:
 
 ### Voz
 
-![El paso «{app:chooseVoiceTitle}» en una tableta: la voz natural Ella, recomendada y elegida, descargándose al 40 %, y {app:systemVoice} en uso mientras tanto](img/setup-voice-1x.webp)
+![El paso «{app:chooseVoiceTitle}» en una tableta: la voz natural Leo, recomendada y elegida, descargándose al 40 %, y {app:systemVoice} en uso mientras tanto](img/setup-voice-1x.webp)
 
 Elige cómo sonará el niño en cada idioma. Toca una voz para oírla.
 

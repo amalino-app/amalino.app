@@ -95,11 +95,12 @@ MAX_SITE_BYTES = 700_000  # 600 KB for six languages, raised with the seventh (L
 MAX_MANUAL_PAGE_BYTES = 60_000
 MAX_MANUAL_HTML_BYTES = 450_000
 # The manual's screenshots (manual/<lang>/img/NAME-1x.webp and NAME-2x.webp, published at /<lang>/manual/img/)
-# are counted on their own: each file and all of them together. MAX_SITE_BYTES covers everything else. They are
-# self-hosted like everything else (decision 31); full-colour WebP at 1x and 2x (owner 2026-10-20, sharp on
-# Retina screens) replaced the 128-colour PNGs and their 150 KB / 3 MB limits.
+# are counted on their own: each file, and all of one language's together (each translated manual has its own
+# screenshots in its language, owner 2026-10-20). MAX_SITE_BYTES covers everything else. They are self-hosted
+# like everything else (decision 31); full-colour WebP at 1x and 2x (owner 2026-10-20, sharp on Retina screens)
+# replaced the 128-colour PNGs and their 150 KB / 3 MB limits.
 MAX_IMAGE_BYTES = 250_000
-MAX_MANUAL_IMAGE_BYTES = 4_000_000
+MAX_MANUAL_IMAGE_BYTES = 4_000_000  # per language
 MANUAL_IMAGE = re.compile(r'^!\[([^\]]+)\]\((img/[a-z0-9\-]+-1x\.webp)\)$')
 
 # The public repository of the website, manual and translations (owner decision 33, relaxed 2026-10-14). Pages
@@ -1378,8 +1379,12 @@ def check_seo(out, files, site, page_langs=None):
     for p in shots:
         expect(p.endswith('.webp') and os.path.getsize(p) <= MAX_IMAGE_BYTES,
                f'{os.path.relpath(p, out)}: a manual image must be a WebP of at most {MAX_IMAGE_BYTES} bytes')
-    images = sum(os.path.getsize(p) for p in shots)
-    expect(images <= MAX_MANUAL_IMAGE_BYTES, f'manual images are {images} bytes, over {MAX_MANUAL_IMAGE_BYTES}')
+    images = {}
+    for p in shots:
+        lang = os.path.relpath(p, out).split(os.sep)[0]
+        images[lang] = images.get(lang, 0) + os.path.getsize(p)
+    for lang, size in sorted(images.items()):
+        expect(size <= MAX_MANUAL_IMAGE_BYTES, f'{lang}/manual: the images are {size} bytes, over {MAX_MANUAL_IMAGE_BYTES}')
     return errors
 
 

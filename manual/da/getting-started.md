@@ -15,7 +15,7 @@ Opsætningen tager omkring fem minutter. Alt, hvad du skriver, bliver på enhede
 
 ### {app:welcomeTitle}
 
-![Trinnet {app:welcomeTitle} på en tablet: Amalinos logo, knapperne til {app:appLanguage} (English er valgt), spørgsmålet »{app:myth.speech.q}« og {app:startSetup}](img/setup-welcome-1x.webp)
+![Trinnet {app:welcomeTitle} på en tablet: Amalinos logo, knapperne til {app:appLanguage} (Dansk er valgt), spørgsmålet »{app:myth.speech.q}« og {app:startSetup}](img/setup-welcome-1x.webp)
 
 Vælg **{app:appLanguage}**: det sprog, de voksnes skærme vises på. Barnets sprog vælger du i et senere trin.
 
@@ -31,7 +31,7 @@ Bruger barnet allerede Amalino på en anden enhed, så tryk på **{app:alreadyUs
 
 ### Sprog
 
-![Trinnet {app:whichLanguages} på en tablet: hovedsproget, hvor English er valgt, og de seks andre sprog, der hver er mærket {app:languagePreview}](img/setup-languages-1x.webp)
+![Trinnet {app:whichLanguages} på en tablet: hovedsproget, hvor Dansk er valgt, og alle sprog undtagen English mærket {app:languagePreview}](img/setup-languages-1x.webp)
 
 Vælg **{app:primaryLanguage}** – det sprog, barnet kommer til at bruge mest – og sæt flueben ved de andre sprog, barnet hører hver dag. Amalino har syv sprog: engelsk, dansk, russisk, ukrainsk, arabisk, spansk og litauisk.
 

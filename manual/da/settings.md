@@ -15,7 +15,7 @@ Kan du ikke huske, hvor noget er? Tryk på **{app:searchSettings}** øverst, og 
 
 ### {app:modellingMode}
 
-![Tavlen i modelleringstilstand på en tablet: linjen »{app:modellingOn}« med {app:showMeWhere} og {app:done}, »I want« i beskedlinjen og det skjulte ord »to«, der ses svagt](img/modelling-1x.webp)
+![Tavlen i modelleringstilstand på en tablet: linjen »{app:modellingOn}« med {app:showMeWhere} og {app:done}, »jeg vil have« i beskedlinjen og det skjulte ord »til«, der ses svagt](img/modelling-1x.webp)
 
 **{app:edit}** ændrer tavlen. **{app:modelShort}** er til at tale med dit barn ved hjælp af tavlen: Du trykker på ord, mens du taler, for at vise, hvordan man gør. Dine tryk bliver sagt højt og tæller som dine – aldrig som barnets ord.
 
@@ -55,7 +55,7 @@ Brug tallene til at vælge, hvad I skal modellere næste gang – ikke til at te
 - **{app:symbolSets}**: de medfølgende ARASAAC-billeder, de ældre Mulberry-billeder, som nogle tavler stadig bruger, dine egne fotos og en valgfri søgning i alle ARASAAC-billeder (omkring 13.000), som henter et billede, når du vælger det. »**{app:useNewPictures}**« skifter til de nyere billeder for de indbyggede ord, der stadig har deres oprindelige billede. Dine egne billeder og fotos bliver bevaret. ARASAAC er gratis til ikke-kommerciel brug.
 - **{app:printBoards}**: Læs mere under [Deling og udskrift](sharing-and-printing.md).
 
-![{app:languages} på en tablet: engelsk som hovedsprog, dansk med flueben, de andre sprog hver mærket {app:languagePreview} med »{app:betaLanguageSub}«, linjen om at melde et forkert ord og {app:primaryLanguage}](img/languages-1x.webp)
+![{app:languages} på en tablet: English med flueben, dansk som hovedsprog, de andre sprog hver mærket {app:languagePreview} med »{app:betaLanguageSub}«, linjen om at melde et forkert ord og {app:primaryLanguage}](img/languages-1x.webp)
 
 ## {app:sectionSettings}
 
@@ -121,7 +121,7 @@ Hjælp, der foreslår ord. Den taler aldrig for dit barn, og det er altid barnet
 - **{app:contextBoards}**: foreslår en side på et bestemt tidspunkt af dagen, for eksempel madsiden ved frokosttid. Funktionen bruger kun klokkeslættet, aldrig din placering eller din kalender. Et kort på tavlen tilbyder siden; ét tryk åbner den, og barnet kan lade være. Slå **{app:aiContext}** til på funktionens skærm, og tryk derefter på **{app:addMealRules}** eller **{app:addTimeRule}** for at vælge en side og et tidspunkt.
 - **{app:aiListen}**: Når du slår mikrofonen til i den øverste bjælke, lytter enheden til det, du siger, og fremhæver ord, barnet kan bruge til at svare. Talen bliver genkendt på enheden; lyden bliver aldrig gemt eller sendt. Funktionen kræver, at talegenkendelsen bliver hentet én gang.
 
-![{app:contextBoards} på en tablet: {app:aiContext} er slået til, madsiden til morgenmad 07.00–08.30, frokost 11.30–13.00 og aftensmad 17.30–19.00 og {app:addTimeRule}](img/context-1x.webp)
+![{app:contextBoards} på en tablet: {app:aiContext} er slået til, siden mad tre gange om dagen, 07:00–08:30, 11:30–13:00 og 17:30–19:00, og {app:addTimeRule}](img/context-1x.webp)
 
 ### {app:lockAndKeep}
 

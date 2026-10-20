@@ -3,7 +3,7 @@
 
 Tavlen er den skærm, barnet bruger hele dagen. Voksenindstillingerne er låst inde, så barnet frit kan gå på opdagelse.
 
-![Barnets tavle på en tablet: den øverste bjælke med Sams navn, knapperne EN og DA, tastaturet og låsen; den tomme beskedlinje med {app:barDelete}, {app:barForms} og {app:barClear}; 36 farvede ordknapper; og sætningsrækken med ★ {app:favourites}, stop, hjælp mig, to sætninger og {app:quickMore}](img/board-1x.webp)
+![Barnets tavle på en tablet: den øverste bjælke med Sams navn, knapperne DA og EN, tastaturet og låsen; den tomme beskedlinje med {app:barDelete}, {app:barForms} og {app:barClear}; 36 farvede ordknapper; og sætningsrækken med ★ {app:favourites}, stop, hjælp mig, to sætninger og {app:quickMore}](img/board-1x.webp)
 
 ## Skærmens dele
 
@@ -26,7 +26,7 @@ Du kan ændre, hvordan det fungerer, under **{app:sectionSettings}** → **{app:
 
 ## Ordformer
 
-![Menuen med ordformer over tavlen på en tablet: efter »I want« vises formerne want, wants, wanting og wanted som store knapper](img/word-forms-1x.webp)
+![Menuen med ordformer over tavlen på en tablet: efter »jeg vil have« vises formerne vil have og ville have som store knapper](img/word-forms-1x.webp)
 
 Ord ændrer sig: »hund« og »hunde«, »gå« og »gik«, »stor« og »større«. Menuen med ordformer viser et ords andre former som store knapper. Et tryk på en form lægger den i beskeden og siger den. Grundformen står altid først, så barnet altid kan vende tilbage til den.
 

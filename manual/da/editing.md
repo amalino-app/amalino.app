@@ -7,7 +7,7 @@ Alle familier har deres egne ord. Du kan ændre alle ord, billeder og stemmer, t
 
 Øverst til højre på tavlen skal du **holde fingeren på låsen i 3 sekunder** og derefter løse det lille regnestykke (eller indtaste din pinkode) med de taltaster, der dukker op. Så åbner voksenindstillingerne. De låser sig selv igen efter 5 minutter – eller med det samme, når du trykker på **{app:lockNow}**.
 
-![Voksenkontrollen over tavlen på en tablet: {app:adultCheck}, regnestykket 16 + 3 = ?, taltaster, {app:ok} og {app:cancel}](img/gate-1x.webp)
+![Voksenkontrollen over tavlen på en tablet: {app:adultCheck}, regnestykket 21 + 4 = ?, taltaster, {app:ok} og {app:cancel}](img/gate-1x.webp)
 
 Du kan ændre, hvor længe man skal holde, pinkoden og den automatiske lås under **{app:lockAndKeep}**. Læs mere under [Indstillinger](settings.md).
 
@@ -15,7 +15,7 @@ Du kan ændre, hvor længe man skal holde, pinkoden og den automatiske lås unde
 
 Vælg **{app:editBoard}**. Øverst på tavlen står der nu: »{app:editingHint}« I den øverste bjælke er der nu **{app:undo}**, **{app:redo}** og **{app:done}**.
 
-![Tavlen i redigeringstilstand på en tablet: linjen »{app:editingHint}«, {app:undo}, {app:redo} og {app:done} i den øverste bjælke og det skjulte ord »to«, mørkt skraveret og med et overstreget øje](img/edit-mode-1x.webp)
+![Tavlen i redigeringstilstand på en tablet: linjen »{app:editingHint}«, {app:undo}, {app:redo} og {app:done} i den øverste bjælke og det skjulte ord »til«, mørkt skraveret og med et overstreget øje](img/edit-mode-1x.webp)
 
 - Tryk på en knap for at redigere den.
 - Tryk på et tomt felt, og vælg **{app:addWord}** eller **{app:addFolder}**.
@@ -26,7 +26,7 @@ Skjulte ord står på deres pladser, mørkt skraverede og med et overstreget øj
 
 ## Redigering af en knap
 
-![Redigering af knappen »want« på en tablet: det engelske og det danske ord, {app:wordFormsManual}, knapper til billede og foto, {app:recordVoice}, {app:spokenAs}, {app:visibility} og knappens stil](img/editor-1x.webp)
+![Redigering af knappen »vil have« på en tablet: det danske og det engelske ord, {app:wordFormsManual}, knapper til billede og foto, {app:recordVoice}, {app:spokenAs}, {app:visibility} og knappens stil](img/editor-1x.webp)
 
 - **Ordet**: ordet på knappen på tavlens nuværende sprog.
 - **Barnets andre sprog**: Under ordet er der et felt til hvert af barnets andre sprog, for eksempel **{app:wordLabel|language=engelsk}**. De er valgfrie: Er et felt tomt, viser knappen ordet, som det er skrevet ovenfor.
@@ -46,7 +46,7 @@ Når du redigerer en knap, der **allerede findes**, gælder dine ændringer med 
 
 ## Oversæt ord
 
-![Øverst i redigeringen af knappen »want« på en tablet: det engelske ord og det tomme danske felt med {app:translateWord} for enden og teksten »{app:otherLanguageEmpty}«](img/editor-translate-1x.webp)
+![Øverst i redigeringen af knappen »vil have« på en tablet: det danske ord og det tomme engelske felt med {app:translateWord} for enden og teksten »{app:otherLanguageEmpty}«](img/editor-translate-1x.webp)
 
 **{app:translateWord}** virker på enheden uden internet, når sproget først er sat op. Det gør du én gang for hvert sprog: Åbn **{app:languages}** (under **{app:sectionBoards}**) i voksenindstillingerne, og derefter **{app:offlineTranslationHeader}**:
 
@@ -55,7 +55,7 @@ Når du redigerer en knap, der **allerede findes**, gælder dine ændringer med 
 
 Ud for hvert sprog står der, om det er klar. Kan enheden ikke oversætte, står der **{app:offlineTranslationUnsupported}**
 
-![{app:offlineTranslationHeader} under {app:languages}: hvad {app:translateWord} gør, og dansk, mærket »{app:offlineTranslationReady}«](img/offline-translate-1x.webp)
+![{app:offlineTranslationHeader} under {app:languages}: hvad {app:translateWord} gør, og engelsk, mærket »{app:offlineTranslationReady}«](img/offline-translate-1x.webp)
 
 ## Mapper
 

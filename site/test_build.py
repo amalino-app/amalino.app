@@ -676,13 +676,29 @@ class Manual(unittest.TestCase):
                                  re.findall(r'\]\(([a-z\-]+\.md|site:[a-z]+|\.\./\.\./[A-Z]+\.md)',
                                             read(bs.MANUAL, 'en', f'{n}.md')), f'{loc} {n}: links')
 
-    def test_translated_manual_uses_the_app_labels_and_english_screenshots(self):
+    def test_translated_manuals_have_their_own_screenshots(self):
+        # Owner 2026-10-20: the screenshots are in the language of the page, all 29 of them, at 1x and 2x;
+        # none falls back to the English ones.
+        en = sorted(n for n in os.listdir(os.path.join(bs.MANUAL, 'en', 'img')) if n.endswith('.webp'))
+        self.assertEqual(len(en), 2 * 29)
+        for loc in ('da', 'ru', 'uk', 'ar', 'es', 'lt'):
+            mine = sorted(n for n in os.listdir(os.path.join(bs.MANUAL, loc, 'img')) if n.endswith('.webp'))
+            self.assertEqual(mine, en, loc)
+            self.assertEqual(sorted(n for n in os.listdir(os.path.join(self.out, loc, 'manual', 'img'))), en, loc)
+            total = sum(os.path.getsize(os.path.join(bs.MANUAL, loc, 'img', n)) for n in mine)
+            self.assertLessEqual(total, bs.MAX_MANUAL_IMAGE_BYTES, loc)
+            for n in bs.manual_pages(loc):
+                page = read(self.out, loc, bs.manual_path(n))
+                self.assertNotIn('/en/manual/img/', page, f'{loc} {n}')
+                for src in re.findall(r'<img src="([^"]+)"', page):
+                    self.assertTrue(src.startswith(('img/', '../img/')) or src.endswith('/assets/amalino.svg'),
+                                    f'{loc} {n}: {src}')
+
+    def test_translated_manual_uses_the_app_labels(self):
         app = bs.load_app_strings()
         for loc in [l for l in bs.manual_langs() if l != 'en']:
-            self.assertFalse(os.path.isdir(os.path.join(self.out, loc, 'manual', 'img')) and
-                             not os.path.isdir(os.path.join(bs.MANUAL, loc, 'img')), loc)
             page = read(self.out, loc, bs.manual_path('sharing-and-printing'))
-            self.assertIn('src="../../../en/manual/img/backup-1x.webp"', page, loc)
+            self.assertIn('src="../img/backup-1x.webp"', page, loc)
             self.assertIn(html.escape(app['historyBackups'][loc], quote=False), page, loc)
             self.assertNotIn('{app:', page)
             # Not native-checked yet: the draft banner (reviewed.txt manual:<page> lines remove it).

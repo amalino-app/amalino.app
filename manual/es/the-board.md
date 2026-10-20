@@ -3,7 +3,7 @@
 
 El tablero es la pantalla que el niño usa todo el día. Los controles para adultos están bloqueados, así que puede explorarlo con total libertad.
 
-![El tablero del niño en una tableta: la barra superior con el nombre de Sam, los botones EN y DA, el botón del teclado y el candado; la barra de mensaje vacía con {app:barDelete}, {app:barForms} y {app:barClear}; 36 botones de palabras de colores; y la fila de frases con ★ {app:favourites}, «para», «ayúdame», dos frases y {app:quickMore}](img/board-1x.webp)
+![El tablero del niño en una tableta: la barra superior con el nombre de Sam, los botones ES y EN, el botón del teclado y el candado; la barra de mensaje vacía con {app:barDelete}, {app:barForms} y {app:barClear}; 36 botones de palabras de colores; y la fila de frases con ★ {app:favourites}, «para», «ayúdame», dos frases y {app:quickMore}](img/board-1x.webp)
 
 ## Las partes de la pantalla
 
@@ -26,7 +26,7 @@ Puedes cambiar cómo funciona en **{app:sectionSettings}** → **{app:messageBar
 
 ## Formas de las palabras
 
-![El menú de formas de las palabras sobre el tablero, en una tableta: después de «yo quiero», las demás formas de la palabra como botones grandes](img/word-forms-1x.webp)
+![El menú de formas de las palabras sobre el tablero, en una tableta: después de «yo quiero», las formas quiero, quise, quieres, quiere, queremos, quieren, quiso, queriendo y querer como botones grandes](img/word-forms-1x.webp)
 
 Las palabras cambian: «perro» y «perros», «ir» y «fui», «rojo» y «roja». El menú de formas muestra las otras formas de una palabra como botones grandes. Al tocar una forma, se añade al mensaje y se dice. La palabra tal cual siempre aparece la primera, para que el niño siempre pueda volver a ella.
 
@@ -46,7 +46,7 @@ Algunos botones abren una carpeta de palabras relacionadas, como Comida, Lugares
 
 Dentro de una carpeta, la barra superior muestra una flecha de **{app:back}** y un botón de **{app:home}**. El botón de inicio siempre vuelve al tablero principal.
 
-![La carpeta Comida en una tableta: {app:back} e {app:home} en la barra superior, botones para volver, fruta, verduras, snacks y dulces, cocina y casa, y después palabras de comida, de «manzana» a «alubia»](img/folder-1x.webp)
+![La carpeta Comida en una tableta: {app:back} e {app:home} en la barra superior, botones para volver, fruta, verduras, snacks y dulces, cocina e inicio, y después palabras de comida, de «manzana» a «alubia»](img/folder-1x.webp)
 
 ## Cambiar de idioma
 

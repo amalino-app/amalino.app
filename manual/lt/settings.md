@@ -55,7 +55,7 @@ Skaičiais remkitės rinkdamiesi, ką modeliuoti toliau, o ne tikrindami vaiką.
 - **{app:symbolSets}**: įtraukti ARASAAC paveikslėliai, senesni Mulberry paveikslėliai, kuriuos dar naudoja kai kurios lentos, jūsų nuotraukos ir pasirenkama paieška visoje ARASAAC kolekcijoje (apie 13 000 paveikslėlių), kai paveikslėlis atsisiunčiamas jį pasirinkus. Funkcija „**{app:useNewPictures}**“ integruotiems žodžiams, kurie dar turi pradinį paveikslėlį, pritaiko naujesnius paveikslėlius. Jūsų paveikslėliai ir nuotraukos išsaugomi. ARASAAC nemokama naudoti nekomerciniais tikslais.
 - **{app:printBoards}**: žr. [Dalijimasis ir spausdinimas](sharing-and-printing.md).
 
-![Kalbų nustatymai planšetėje: anglų – pagrindinė kalba, pažymėta danų, kitos kalbos pažymėtos „{app:languagePreview}“ su užrašu „{app:betaLanguageSub}“, eilutė, kaip pranešti apie netinkamą žodį, ir „{app:primaryLanguage}“](img/languages-1x.webp)
+![Kalbų nustatymai planšetėje: pažymėta anglų, lietuvių – pagrindinė kalba, visos kalbos, išskyrus anglų, pažymėtos „{app:languagePreview}“ su užrašu „{app:betaLanguageSub}“, eilutė, kaip pranešti apie netinkamą žodį, ir „{app:primaryLanguage}“](img/languages-1x.webp)
 
 ## {app:sectionSettings}
 
@@ -121,7 +121,7 @@ Pagalba, kuri siūlo žodžius. Ji niekada nekalba už vaiką, o rinktis visada 
 - **{app:contextBoards}**: tam tikru paros laiku pasiūlo puslapį, pavyzdžiui, per pietus – puslapį „Maistas“. Remiasi tik paros laiku, niekada – jūsų buvimo vieta ar kalendoriumi. Lentoje pasirodo kortelė su siūlomu puslapiu; vienu bakstelėjimu jis atidaromas, o vaikas kortelės gali nepaisyti. To nustatymo ekrane įjunkite **{app:aiContext}**, tada bakstelėkite **{app:addMealRules}** arba **{app:addTimeRule}** ir pasirinkite puslapį bei laiką.
 - **{app:aiListen}**: kai viršutinėje juostoje įjungiate mikrofoną, įrenginys klausosi, ką sakote, ir paryškina žodžius, kuriais vaikas galėtų atsakyti. Kalba atpažįstama įrenginyje; garsas niekada neįrašomas ir niekur nesiunčiamas. Reikia vieną kartą atsisiųsti kalbos atpažinimą.
 
-![Nustatymas „{app:contextBoards}“ planšetėje: įjungta „{app:aiContext}“, puslapis „Maistas“ per pusryčius 07:00–08:30, pietus 11:30–13:00 ir vakarienę 17:30–19:00 bei „{app:addTimeRule}“](img/context-1x.webp)
+![Nustatymas „{app:contextBoards}“ planšetėje: įjungta „{app:aiContext}“, puslapis „maistas“ tris kartus per dieną: 07:00–08:30, 11:30–13:00 ir 17:30–19:00, bei „{app:addTimeRule}“](img/context-1x.webp)
 
 ### {app:lockAndKeep}
 

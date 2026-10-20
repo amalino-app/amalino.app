@@ -15,7 +15,7 @@ Sąranka užtrunka apie penkias minutes. Viskas, ką įvedate, lieka įrenginyje
 
 ### {app:welcomeTitle}
 
-![Žingsnis „{app:welcomeTitle}“ planšetėje: Amalino logotipas, programėlės kalbos mygtukai (pasirinkta anglų), užrašas „{app:myth.speech.q}“ ir mygtukas „{app:startSetup}“](img/setup-welcome-1x.webp)
+![Žingsnis „{app:welcomeTitle}“ planšetėje: Amalino logotipas, programėlės kalbos mygtukai (pasirinkta lietuvių), užrašas „{app:myth.speech.q}“ ir mygtukas „{app:startSetup}“](img/setup-welcome-1x.webp)
 
 Skiltyje **{app:appLanguage}** pasirinkite, kokia kalba bus rodomi suaugusiesiems skirti ekranai. Vaiko kalbas pasirinksite vėlesniame žingsnyje.
 
@@ -31,7 +31,7 @@ Jei vaikas jau naudojasi Amalino kitame įrenginyje, bakstelėkite **{app:alread
 
 ### {app:whichLanguages}
 
-![Žingsnis „{app:whichLanguages}“ planšetėje: pagrindinė kalba (pasirinkta anglų) ir kitos šešios kalbos, kurių kiekviena pažymėta „{app:languagePreview}“](img/setup-languages-1x.webp)
+![Žingsnis „{app:whichLanguages}“ planšetėje: pagrindinė kalba (pasirinkta lietuvių), o visos kalbos, išskyrus anglų, pažymėtos „{app:languagePreview}“](img/setup-languages-1x.webp)
 
 Skiltyje **{app:primaryLanguage}** pasirinkite kalbą, kuria vaikas kalbės dažniausiai, ir pažymėkite kitas kalbas, kurias vaikas girdi kiekvieną dieną. Amalino turi septynias kalbas: anglų, danų, rusų, ukrainiečių, arabų, ispanų ir lietuvių.
 
@@ -45,7 +45,7 @@ Jei jūsų kalbos sąraše nėra, bakstelėkite **{app:notListed}**. Lentas vis 
 
 ### {app:chooseVoiceTitle}
 
-![Žingsnis „{app:chooseVoiceTitle}“ planšetėje: rekomenduojamas ir pasirinktas natūralus balsas Ella atsisiunčiamas (40 %), o kol kas naudojamas „{app:systemVoice}“](img/setup-voice-1x.webp)
+![Žingsnis „{app:chooseVoiceTitle}“ planšetėje: rekomenduojamas ir pasirinktas natūralus balsas Leo atsisiunčiamas (40 %), o kol kas naudojamas „{app:systemVoice}“](img/setup-voice-1x.webp)
 
 Pasirinkite, kaip vaikas skambės kiekviena kalba. Bakstelėkite balsą, kad jį išgirstumėte.
 

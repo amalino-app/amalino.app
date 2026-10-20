@@ -15,7 +15,7 @@
 
 ### الترحيب
 
-![خطوة الترحيب على جهاز لوحي: شعار Amalino، وأزرار {app:appLanguage} والإنجليزية مختارة، والسؤال «{app:myth.speech.q}»، وزر {app:startSetup}](img/setup-welcome-1x.webp)
+![خطوة الترحيب على جهاز لوحي: شعار Amalino، وأزرار {app:appLanguage} والعربية مختارة، والسؤال «{app:myth.speech.q}»، وزر {app:startSetup}](img/setup-welcome-1x.webp)
 
 اختر **{app:appLanguage}**، أي لغة شاشات الكبار. أما لغات الطفل فتختارها في خطوة لاحقة.
 
@@ -31,7 +31,7 @@
 
 ### اللغات
 
-![خطوة «{app:whichLanguages}» على جهاز لوحي: اللغة الرئيسية والإنجليزية مختارة، واللغات الست الأخرى على كل منها علامة {app:languagePreview}](img/setup-languages-1x.webp)
+![خطوة «{app:whichLanguages}» على جهاز لوحي: اللغة الرئيسية والعربية مختارة، وعلامة {app:languagePreview} على كل اللغات ما عدا الإنجليزية](img/setup-languages-1x.webp)
 
 اختر **{app:setPrimary}**، أي اللغة التي سيستخدمها الطفل أكثر من غيرها، وحدّد كل لغة أخرى يسمعها الطفل كل يوم. في Amalino سبع لغات: الإنجليزية والدنماركية والروسية والأوكرانية والعربية والإسبانية والليتوانية.
 
@@ -45,7 +45,7 @@
 
 ### الصوت
 
-![خطوة «{app:chooseVoiceTitle}» على جهاز لوحي: الصوت الطبيعي {app:voiceName.F1} مقترح ومختار، وتنزيله جارٍ وقد اكتمل 40%، و{app:systemVoice} مستخدم في الأثناء](img/setup-voice-1x.webp)
+![خطوة «{app:chooseVoiceTitle}» على جهاز لوحي: الصوت الطبيعي {app:voiceName.M1} مقترح ومختار، وتنزيله جارٍ وقد اكتمل 40%، و{app:systemVoice} مستخدم في الأثناء](img/setup-voice-1x.webp)
 
 اختر الصوت الذي سيتكلم به الطفل في كل لغة. اضغط صوتًا لتسمعه.
 

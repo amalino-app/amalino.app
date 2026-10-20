@@ -7,7 +7,7 @@ Vaikai, kurie jau pažįsta kai kurias raides, gali parašyti žodžius, kurių 
 
 Viršutinėje juostoje bakstelėkite **klaviatūros** mygtuką. Norėdami grįžti prie paveikslėlių, dar kartą bakstelėkite tą patį mygtuką (dabar jame pavaizduotas tinklelis) arba **uždarymo** klavišą apatiniame kairiajame klaviatūros kampe.
 
-![Klaviatūra planšetėje: sakinio juostoje „noriu eiti į p“, raidžių klavišai su 123, tarpu, trynimu ir „{app:kbSpeak}“, o apačioje – frazių eilutė](img/keyboard-1x.webp)
+![Klaviatūra planšetėje: sakinio juostoje „aš noriu v“, raidžių klavišai su 123, tarpu, trynimu ir „{app:kbSpeak}“, o apačioje – frazių eilutė](img/keyboard-1x.webp)
 
 ## Rašymas
 

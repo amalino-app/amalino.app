@@ -7,7 +7,7 @@ Kiekvienos šeimos žodžiai skirtingi. Galite pakeisti bet kurį žodį, paveik
 
 Viršutiniame dešiniajame lentos kampe **3 sekundes palaikykite nuspaudę spynelę**, tada pasirodžiusiais skaičių klavišais išspręskite paprastą skaičiavimo užduotį (arba įveskite PIN kodą). Atsidarys suaugusiųjų nustatymai. Po 5 minučių jie vėl užsirakina patys, o bakstelėjus **{app:lockNow}** – iš karto.
 
-![Suaugusiųjų patikra virš lentos planšetėje: „{app:adultCheck}“, užduotis 16 + 3 = ?, skaičių klavišai, „{app:ok}“ ir „{app:cancel}“](img/gate-1x.webp)
+![Suaugusiųjų patikra virš lentos planšetėje: „{app:adultCheck}“, užduotis 23 + 10 = ?, skaičių klavišai, „{app:ok}“ ir „{app:cancel}“](img/gate-1x.webp)
 
 Laikymo trukmę, PIN kodą ir automatinį užrakinimą galite pakeisti skiltyje **{app:lockAndKeep}**. Žr. [Nustatymai](settings.md).
 
@@ -15,7 +15,7 @@ Laikymo trukmę, PIN kodą ir automatinį užrakinimą galite pakeisti skiltyje 
 
 Pasirinkite **{app:editBoard}**. Lentos viršuje pasirodo eilutė: „{app:editingHint}“ Viršutinėje juostoje dabar yra mygtukai **{app:undo}**, **{app:redo}** ir **{app:done}**.
 
-![Lenta redagavimo režimu planšetėje: eilutė „{app:editingHint}“, viršutinėje juostoje „{app:undo}“, „{app:redo}“ ir „{app:done}“, o paslėptas žodis „į“ patamsintas ir su perbraukta akimi](img/edit-mode-1x.webp)
+![Lenta redagavimo režimu planšetėje: eilutė „{app:editingHint}“, viršutinėje juostoje „{app:undo}“, „{app:redo}“ ir „{app:done}“, o paslėpti žodžiai, tarp jų „į“, patamsinti ir su perbraukta akimi](img/edit-mode-1x.webp)
 
 - Bakstelėkite mygtuką, kad jį redaguotumėte.
 - Bakstelėkite tuščią langelį ir pasirinkite **{app:addWord}** arba **{app:addFolder}**.
@@ -26,7 +26,7 @@ Paslėpti žodžiai rodomi savo vietose, patamsinti ir su perbrauktos akies žen
 
 ## Mygtuko redagavimo langas
 
-![Žodžio „noriu“ redagavimo langas planšetėje: žodis anglų ir danų kalbomis, „{app:grammarHelper}“, paveikslėlio ir nuotraukos mygtukai, „{app:recordVoice}“, „{app:spokenAs}“, „{app:visibility}“ ir mygtuko stilius](img/editor-1x.webp)
+![Žodžio „noriu“ redagavimo langas planšetėje: žodis lietuvių ir anglų kalbomis, „{app:grammarHelper}“, paveikslėlio ir nuotraukos mygtukai, „{app:recordVoice}“, „{app:spokenAs}“, „{app:visibility}“ ir mygtuko stilius](img/editor-1x.webp)
 
 - **Žodis**: mygtuko žodis ta kalba, kuria dabar rodoma lenta.
 - **Kitos vaiko kalbos**: po juo – po laukelį kiekvienai kitai vaiko kalbai, pavyzdžiui, **{app:wordLabel|language=danų}**. Jie nebūtini: jei laukelis tuščias, rodomas aukščiau įrašytas žodis.
@@ -46,7 +46,7 @@ Kai redaguojate **esamą** mygtuką, pakeitimai pritaikomi iš karto; norėdami 
 
 ## Žodžių vertimas
 
-![Žodžio „noriu“ redagavimo lango viršus planšetėje: angliškas žodis, tuščias danų kalbos laukelis su mygtuku „{app:translateWord}“ gale ir pastaba „{app:otherLanguageEmpty}“](img/editor-translate-1x.webp)
+![Žodžio „noriu“ redagavimo lango viršus planšetėje: lietuviškas žodis, tuščias anglų kalbos laukelis su mygtuku „{app:translateWord}“ gale ir pastaba „{app:otherLanguageEmpty}“](img/editor-translate-1x.webp)
 
 Kai kalba nustatyta, mygtukas **{app:translateWord}** veikia įrenginyje, be interneto. Kiekvieną kalbą reikia nustatyti vieną kartą: suaugusiųjų nustatymuose atidarykite **{app:languages}** (skiltyje **{app:sectionBoards}**), tada **{app:offlineTranslationHeader}**:
 
@@ -55,7 +55,7 @@ Kai kalba nustatyta, mygtukas **{app:translateWord}** veikia įrenginyje, be int
 
 Prie kiekvienos kalbos parodoma, ar ji paruošta. Jei įrenginys to padaryti negali, rodoma **{app:offlineTranslationUnsupported}**
 
-![Skiltis „{app:offlineTranslationHeader}“ kalbų nustatymuose: kas yra „{app:translateWord}“, o danų kalba pažymėta „{app:offlineTranslationReady}“](img/offline-translate-1x.webp)
+![Skiltis „{app:offlineTranslationHeader}“ kalbų nustatymuose: kas yra „{app:translateWord}“, o anglų kalba pažymėta „{app:offlineTranslationReady}“](img/offline-translate-1x.webp)
 
 ## Aplankai
 

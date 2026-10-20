@@ -7,7 +7,7 @@ Los niños que ya conocen algunas letras pueden escribir palabras que no están 
 
 Toca el botón del **teclado** en la barra superior. Para volver a los pictogramas, toca otra vez ese mismo botón (que ahora muestra una cuadrícula) o la tecla de **cerrar**, abajo a la izquierda del teclado.
 
-![El teclado en una tableta: «i want to p» en la barra de mensaje, las teclas de letras con 123, la barra espaciadora, la tecla de borrar y {app:kbSpeak}, y debajo la fila de frases](img/keyboard-1x.webp)
+![El teclado en una tableta: «yo quiero j» en la barra de mensaje, las teclas de letras con 123, la barra espaciadora, la tecla de borrar y {app:kbSpeak}, y debajo la fila de frases](img/keyboard-1x.webp)
 
 ## Escribir
 

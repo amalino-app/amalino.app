@@ -15,7 +15,7 @@ La mayoría de las pantallas tienen un consejo breve, **{app:tipTitle}**.
 
 ### {app:modellingMode}
 
-![El tablero en modo modelado, en una tableta: la línea «{app:modellingOn}» con {app:showMeWhere} y {app:done}, «yo quiero» en la barra de mensaje y una palabra oculta que se ve atenuada](img/modelling-1x.webp)
+![El tablero en modo modelado, en una tableta: la línea «{app:modellingOn}» con {app:showMeWhere} y {app:done}, «yo quiero» en la barra de mensaje y la palabra oculta «a», atenuada](img/modelling-1x.webp)
 
 **{app:edit}** sirve para cambiar el tablero. **{app:modelShort}** sirve para hablar con el niño usando el tablero: tocas palabras mientras hablas, para enseñarle cómo se hace. Tus toques suenan y cuentan como tuyos, nunca como palabras del niño.
 
@@ -55,7 +55,7 @@ Usa las cifras para decidir qué modelar a continuación, no para examinar al ni
 - **{app:symbolSets}**: los pictogramas de ARASAAC incluidos, los pictogramas antiguos de Mulberry que aún usan algunos tableros, tus propias fotos y una búsqueda opcional en todos los pictogramas de ARASAAC (unos 13 000), que descarga cada pictograma cuando lo eliges. «**{app:useNewPictures}**» cambia a los pictogramas más nuevos las palabras incluidas que aún tienen su imagen original. Tus propias imágenes y fotos se conservan. ARASAAC es gratuito para uso no comercial.
 - **{app:printBoards}**: lo explico en [Compartir e imprimir](sharing-and-printing.md).
 
-![{app:languages} en una tableta: el inglés como idioma principal, el danés marcado, los demás idiomas con {app:languagePreview} y «{app:betaLanguageSub}», la línea para avisar de una palabra incorrecta, y {app:primaryLanguage}](img/languages-1x.webp)
+![{app:languages} en una tableta: el inglés marcado, el español como idioma principal, todos los idiomas salvo el inglés con {app:languagePreview} y «{app:betaLanguageSub}», la línea para avisar de una palabra incorrecta, y {app:primaryLanguage}](img/languages-1x.webp)
 
 ## {app:sectionSettings}
 
@@ -121,7 +121,7 @@ Ayudas que sugieren palabras. Nunca hablan por el niño, y es siempre el niño q
 - **{app:contextBoards}**: sugiere una página a una hora del día, por ejemplo la página Comida a la hora de comer. Solo tiene en cuenta la hora del día, nunca tu ubicación ni tu calendario. Una tarjeta en el tablero ofrece la página; con un toque se abre, y el niño puede no hacerle caso. En su pantalla, activa **{app:aiContext}** y toca **{app:addMealRules}** o **{app:addTimeRule}** para elegir una página y una hora.
 - **{app:aiListen}**: cuando activas el micrófono de la barra superior, el dispositivo escucha lo que dices y resalta palabras que el niño podría usar para responder. El habla se reconoce en el dispositivo; el audio nunca se guarda ni se envía. Necesita descargar una sola vez el reconocimiento de voz.
 
-![{app:contextBoards} en una tableta: {app:aiContext} activado, la página Comida en el desayuno de 07:00 a 08:30, en la comida de 11:30 a 13:00 y en la cena de 17:30 a 19:00, y {app:addTimeRule}](img/context-1x.webp)
+![{app:contextBoards} en una tableta: {app:aiContext} activado, la página Comida tres veces al día, de 07:00 a 08:30, de 11:30 a 13:00 y de 17:30 a 19:00, y {app:addTimeRule}](img/context-1x.webp)
 
 ### {app:lockAndKeep}
 
