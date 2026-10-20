@@ -50,8 +50,6 @@ Inside a folder, the top bar shows a **back** arrow and a **home** button. Home 
 
 If the child uses more than one language, the top bar shows a button for each one (EN, DA, ES, РУС, УКР, عربي, LT). One tap switches the whole board. Every word stays in the same place in every language.
 
-![The same board on a phone, with the language menu (EN) in the top bar](img/board-phone.png)
-
 On smaller screens there is one language button instead; it opens a short list.
 
 ## Why buttons never move

@@ -5,7 +5,7 @@ The child's boards are precious: months of words, photos and recordings. Here's 
 
 ## Backups
 
-![History and backups on a phone: Undo, then Back up now, Export backup and Restore from a file, and the edit history with Go back to here](img/backup-phone.png)
+![History and backups on a tablet: Undo and Redo, then Back up now, Export backup and Restore from a file, and the edit history with Go back to here](img/backup-tablet.png)
 
 Open the grown-up settings and choose **History and backups**.
 

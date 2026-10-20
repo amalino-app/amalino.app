@@ -3,7 +3,7 @@
 
 Hold the lock at the top of the board for 3 seconds and answer the sum on the number keys to open the grown-up settings. They're in four groups: **Using it together**, **Boards and words**, **Settings** and **Data**. This page goes through them in the order you see them.
 
-![The grown-up settings on a phone: a modelling tip, Search settings, Finish setting up, and the Using it together group with Modelling mode](img/settings-phone.png)
+![The grown-up tools on a tablet: a modelling tip, Search settings, Finish setting up, the Using it together group with Modelling mode, Daily coaching, Progress and Goals, then Boards and words](img/settings-tablet.png)
 
 Most screens have a short tip, **Why this matters**.
 
@@ -23,6 +23,10 @@ The quickest way in: while the grown-up settings are open, tap **Model** on the 
 
 - **Hidden words** appear faded, with a small crossed-out eye, in the places where they'll appear for the child. Tap them like any word, so your child hears and sees them long before they get them. The child still sees an empty space.
 - **Show to your child**: hold a hidden word for a moment and choose **Show to your child** when you think they're ready. **Undo** puts it back.
+- **Hide, or a whole folder**: hold a word your child sees to get **Hide from your child**. Hold a folder button to show or hide the whole folder at once; a quick tap still opens it.
+
+![Holding the Food folder in modelling mode on a tablet: a menu at the bottom with Hide the whole folder, "Your child won't see food. The words inside stay as they are.", and Cancel](img/modelling-hold-tablet.png)
+
 - **It ends by itself** two minutes after your last tap, and whenever the grown-up lock closes, so your child is never left in modelling mode. To end it yourself, tap **Done** or **Model** again.
 
 See [Tips for families](tips-for-families.md).
