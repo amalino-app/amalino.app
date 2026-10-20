@@ -15,7 +15,7 @@ Viršutinėje juostoje bakstelėkite **klaviatūros** mygtuką. Norėdami grįž
 - **Tarpas** užbaigia žodį.
 - **Trynimo klavišas** ištrina raidę. Palaikius jį nuspaustą, trinama toliau.
 - Mygtukas **{app:kbSpeak}** ištaria visą sakinį.
-- **123** atidaro skaičius ir skyrybos ženklus, tarp jų ir kiekvienos kalbos savitus ženklus (ispanų ¿ ¡, danų, rusų ir ukrainiečių « », lietuvių „ “, arabų ؟ ،). **ABC** grąžina prie raidžių.
+- **123** atidaro skaičius ir skyrybos ženklus, tarp jų ir kiekvienos kalbos savitus ženklus (ispanų ¿ ¡, danų » «, rusų ir ukrainiečių « », lietuvių „ “, arabų ؟ ،). **ABC** grąžina prie raidžių.
 
 Sakinio juostos mygtukai **{app:barDelete}** ir **{app:barClear}** veikia taip pat kaip lentoje.
 

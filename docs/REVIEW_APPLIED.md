@@ -45,10 +45,13 @@ word list and the chosen pictures, Global Symbols receives the search words.
 | syncTitle | uk | Синхронізація і доступ | Синхронізація і спільний доступ |
 
 Not changed in the app (noted for the owner): `languagePreviewNote` and `needThisTellUs` say "Tell us" (the review
-accepts "us" in app strings; the manual quotes them as they are); `restoreHowTo` says "Settings → History and
-backups → Export backup" (in the app, History and backups is in the Data group); `theme.teen` "Teen (no childish
-look)" (the review suggests "a more grown-up look"; it's an app label, so the manual keeps it); the Danish keyboard
-offers « » while Danish usually writes » « (the manual describes what the app does).
+accepts "us" in app strings; the manual quotes them as they are).
+
+Done later in the app (2026-10-20): `restoreHowTo` now says Grown-up tools → Data → History and backups → Export
+backup in all 7 languages; `theme.teen` is "Teen (a more grown-up look)" in English and the same positive wording in
+the other 6 languages (drafts for the native check), and the English manual uses it; the Danish 123 keyboard page has
+» « in Danish order (» starts a word, « attaches to it) and every keyboard has the straight ", and the keyboard page
+of every manual says so.
 
 ## Technical items
 
@@ -61,7 +64,7 @@ offers « » while Danish usually writes » « (the manual describes what the ap
 | T5 | og:locale | done: en_GB |
 | T6 | non-breaking spaces | done: a typography pass per language in the build (number + MB/GB/МБ/ميغابايت/%/mm, iOS/Android/Supertonic + number, before a spaced dash, after one-letter ru/uk words, lt "t. y.") |
 | T7 | robots.txt and sitemap.xml | already built with a site URL (all language pages, pickers and manual pages with alternates); now in the local preview too |
-| T8 | "(in English)" on manual links | already in all 6 languages (`nav.manualEn`, nav and footer, with hreflang="en"). Skipped: the localized manual landing pages and the "only in English" banner (the owner decided the manual is not translated in this task) |
+| T8 | "(in English)" on manual links | already in all 6 languages (`nav.manualEn`, nav and footer, with hreflang="en"). Skipped: the localized manual landing pages and the "only in English" banner (the owner decided the manual is not translated in this task). Done later: the manual is translated and each language has its own landing page (manual/<lang>/index.md) |
 | T9 | English-only outside links | done: hreflang="en" on the GitHub and Cloudflare privacy links, and "(in English)" after them in each language (`link.inEnglish`) |
 | T10 | uk: Ukrainian before Russian in running-text lists | done by the uk text pass where the text lists languages; the language menu keeps the global order |
 
@@ -115,7 +118,7 @@ offers « » while Danish usually writes » « (the manual describes what the ap
 | Editing | 3 shaded dark, 5 recording in sentences, 7 Add greyed out, 8 the Languages path (Boards and words) | done |
 | Settings | 1 four groups + what "Settings →" means, 2 alt "grown-up settings", 5 graduation-cap icon, 6 "appear on their own board", 7 Hide heading, 10 English spelling, 11 quoted long UI name, 16 Speak each word, 17 Listen to what I say, 19 Diagnostics without "we" | done |
 | Settings | 3 Why this matters / Why this helps | kept: two different app strings (`tipTitle`, `mythBuster`) |
-| Settings | 13 Teen (no childish look) | kept: exact app label (`theme.teen`); noted for the owner |
+| Settings | 13 Teen (no childish look) | done later: the app label is now "Teen (a more grown-up look)" (2026-10-20) |
 | Settings | 14 Fitzgerald key gloss | skipped: optional |
 | Voices | 2 iOS 17 or later, 4 129 MB (already), 5 voice age, 7 Sam's name, 8 the name | done |
 | Sharing and printing | 4 the History and backups path (Data), 5 plainer restore, 8 a word for each print option | done (A4 only: the app has no Letter size) |
@@ -787,3 +790,7 @@ page); 5. Words and folders, Editing and moving buttons; 6. Quick phrases, Voice
 Keyboard; 7. last, Settings, screen by screen (wait until the app's own strings are checked). Translators copy UI
 names from the app's translation files, never translate them afresh. Also suggested: a short localized
 `/<lang>/manual/` landing page and an "only in English for now" banner on English manual pages.
+
+Done since: the manual is translated into all 6 languages (drafts for the native check, a draft note on each page
+until `manual:<page>` is in reviewed.txt), and each language has its own `/<lang>/manual/` landing page
+(manual/<lang>/index.md), so the English-only banner isn't needed.

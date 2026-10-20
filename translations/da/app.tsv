@@ -62,7 +62,7 @@ deleteLast	Slet sidste ord
 displaySensory	Visning, lyd og sanser
 done	Færdig
 draft	udkast
-earlyMode	Begyndertilstand
+earlyMode	Enkel start
 earlyModeSub	Meget enkel: store knapper der taler med det samme, ingen beskedlinje. Hele ordforrådet er der stadig.
 edit	Redigér
 editBoard	Redigér denne tavle
@@ -93,7 +93,7 @@ holdForAdult.two
 holdForAdult.few	
 holdForAdult.many	
 holdForAdult.other	Voksne: hold fingeren nede i {seconds} sekunder
-holdSeconds	Hold nede i
+holdSeconds	Holdetid for låsen
 holdTime	Holdetid
 home	Hjem
 homeLanguageFirst	Hjemmesproget først: tavlen viser de samme ord de samme steder på alle sprog.
@@ -238,7 +238,7 @@ theme.calm	Rolig
 theme.dark	Mørk
 theme.highContrast	Høj kontrast
 theme.standard	Standard
-theme.teen	Teenager (ikke barnligt)
+theme.teen	Teenager (et mere voksent udtryk)
 tip.about	Vis appen til de andre voksne omkring barnet – bedsteforældre, børnehave, skole. To minutter ansigt til ansigt hjælper mere end nogen folder.
 tip.display	Ændr én ting ad gangen og se barnet an i et par dage, før du ændrer mere.
 tip.editor	Når du tilføjer et ord, så brug det selv på enheden mindst tre gange i dag.
@@ -748,7 +748,7 @@ wordFormsHint	På dansk ændrer ordene sig ikke efter, om barnet er en dreng ell
 needForms	Vælg én for at fortsætte.
 naturalVoicesSame	Samme download, intet ekstra.
 voiceForLang	Stemme på {lang}
-inUseNow	I brug nu
+inUseNow	Bruges nu
 voiceAllLanguages	Alle sprog
 voice.female	kvindestemme
 voice.male	mandestemme
@@ -806,7 +806,7 @@ levelDesc2	Niveau 2: cirka 1.300 ord, til at bygge sætninger
 levelDesc3	Niveau 3: cirka 2.500 ord, til sikre brugere
 earlyOffer	Enkel start: 4 store billeder. Nogle børn starter sådan; andre klarer sig bedre med hele tavlen.
 earlyHidden	Hele tavlen kan slås til senere.
-change	Skift
+change	Ret
 sum.name	Navn
 sum.age	Alder
 sum.comm	Kommunikerer
@@ -1093,10 +1093,10 @@ modelShort	Modellér
 showToChild	Vis for dit barn
 modelHiddenLabel	{word}, skjult for dit barn
 showWholeFolder	Vis hele mappen
-showWholeFolderSub	{folder} og alle ordene i den, også i mapperne inde i den
+showWholeFolderSub	Mappen »{folder}« og alle ordene i den, også i mapperne inde i den
 hideFromChild	Skjul for dit barn
 hideWholeFolder	Skjul hele mappen
-hideWholeFolderSub	{folder} bliver skjult for dit barn. Ordene i mappen bliver, som de er.
+hideWholeFolderSub	Dit barn kan ikke se mappen »{folder}«. Ordene i den bliver, som de er.
 showAllInFolder	Vis alle ord i denne mappe
 showFolderAgain	Vis mappen igen
 showFolderAgainSub	{folder}, med ordene vist og skjult, som de var, før du skjulte den

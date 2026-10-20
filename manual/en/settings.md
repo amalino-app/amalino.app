@@ -87,7 +87,7 @@ How the board reacts to touch. Change one thing at a time and watch the child fo
 
 How the board looks. Everything here is safe to try: nothing moves.
 
-- **Look**: **Standard**, **Calm**, **Dark**, **High contrast**, or **Teen (no childish look)**.
+- **Look**: **Standard**, **Calm**, **Dark**, **High contrast**, or **Teen (a more grown-up look)**.
 - **Word-type colours**: **Standard (Fitzgerald key)**, **Calm colours**, **Colour-blind safe** or **No colours**. **Colour as border only** gives a calmer look.
 - **Show words under pictures**, **Label above the picture** and **Text size**.
 - **Reduce motion**: follows the device's setting, or always on or off.

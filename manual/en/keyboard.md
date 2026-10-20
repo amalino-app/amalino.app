@@ -15,7 +15,7 @@ Tap the **keyboard** button in the top bar. To go back to the pictures, tap the 
 - **Space** finishes the word.
 - **Backspace** deletes a letter. Hold it to keep deleting.
 - **Speak** says the whole message.
-- **123** opens numbers and punctuation, including each language's own marks (¿ ¡ in Spanish, « » in Danish, Russian and Ukrainian, „ “ in Lithuanian, ؟ ، in Arabic). **ABC** goes back to the letters.
+- **123** opens numbers and punctuation, including each language's own marks (¿ ¡ in Spanish, » « in Danish, « » in Russian and Ukrainian, „ “ in Lithuanian, ؟ ، in Arabic). **ABC** goes back to the letters.
 
 The message bar's **Delete** and **Clear** work as on the board.
 

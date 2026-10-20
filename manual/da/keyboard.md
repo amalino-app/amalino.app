@@ -15,7 +15,7 @@ Tryk på **tastaturknappen** i den øverste bjælke. Vil du tilbage til billeder
 - Tasten **{app:space}** afslutter ordet.
 - **Slettetasten** sletter et bogstav. Hold den nede for at blive ved med at slette.
 - **{app:kbSpeak}** siger hele beskeden.
-- **123** åbner tal og tegnsætning, også de tegn, der hører til hvert sprog (¿ ¡ på spansk, « » på dansk, russisk og ukrainsk, „ “ på litauisk, ؟ ، på arabisk). **ABC** går tilbage til bogstaverne.
+- **123** åbner tal og tegnsætning, også de tegn, der hører til hvert sprog (¿ ¡ på spansk, » « på dansk, « » på russisk og ukrainsk, „ “ på litauisk, ؟ ، på arabisk). På dansk står » først, fordi vi citerer »sådan her«, og det lige anførselstegn " findes på alle sprog. **ABC** går tilbage til bogstaverne.
 
 Beskedlinjens **{app:barDelete}** og **{app:barClear}** virker som på tavlen.
 

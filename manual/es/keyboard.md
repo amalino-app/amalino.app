@@ -15,7 +15,7 @@ Toca el botón del **teclado** en la barra superior. Para volver a los pictogram
 - La tecla de **espacio** termina la palabra.
 - La tecla de **retroceso** borra una letra. Si la mantienes pulsada, sigue borrando.
 - **{app:kbSpeak}** pronuncia el mensaje entero.
-- **123** abre los números y los signos de puntuación, también los propios de cada idioma (¿ ¡ en español, « » en danés, ruso y ucraniano, „ “ en lituano, ؟ ، en árabe). **ABC** vuelve a las letras.
+- **123** abre los números y los signos de puntuación, también los propios de cada idioma (¿ ¡ en español, » « en danés, « » en ruso y ucraniano, „ “ en lituano, ؟ ، en árabe). **ABC** vuelve a las letras.
 
 Los botones **{app:barDelete}** y **{app:barClear}** de la barra de mensaje funcionan igual que en el tablero.
 

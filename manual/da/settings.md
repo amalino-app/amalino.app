@@ -25,7 +25,7 @@ Den hurtigste vej ind: Mens voksenindstillingerne er åbne, trykker du på **{ap
 - **{app:showToChild}**: Hold fingeren på et skjult ord et øjeblik, og vælg **{app:showToChild}**, når du synes, barnet er klar. **{app:undo}** sætter det tilbage.
 - **Skjul et ord eller en hel mappe**: Hold fingeren på et ord, barnet kan se, og vælg **{app:hideFromChild}**. Hold fingeren på en mappeknap for at vise eller skjule hele mappen på én gang; et hurtigt tryk åbner stadig mappen.
 
-![Fingeren holdes på mappen mad i modelleringstilstand på en tablet: en menu nederst med {app:hideWholeFolder}, »{app:hideWholeFolderSub|folder=mad}« og {app:cancel}](img/modelling-hold-1x.webp)
+![Fingeren holdes på mappen mad i modelleringstilstand på en tablet: en menu nederst med {app:hideWholeFolder}, ({app:hideWholeFolderSub|folder=mad}) og {app:cancel}](img/modelling-hold-1x.webp)
 
 - **Den slutter af sig selv** to minutter efter dit sidste tryk, og hver gang voksenlåsen lukker, så dit barn aldrig bliver efterladt i modelleringstilstand. Vil du selv afslutte, så tryk på **{app:done}** eller på **{app:modelShort}** igen.
 
@@ -126,7 +126,7 @@ Hjælp, der foreslår ord. Den taler aldrig for dit barn, og det er altid barnet
 ### {app:lockAndKeep}
 
 - **{app:editLock}**: **{app:lockChallenge}** eller **{app:lockPin}** (4–8 cifre) – begge skrives med taltaster på skærmen. Pinkoden gælder enheden: Den samme pinkode åbner voksenindstillingerne for alle børn på enheden. Har enheden ingen skærmlås, viser Amalino først en **gendannelseskode**, som du skal skrive ned og gemme et andet sted end ved enheden. Glemmer du pinkoden, så tryk på **{app:forgotPin}**, og brug skærmlåsen eller gendannelseskoden til at vælge en ny.
-- **{app:holdSeconds}**: hvor længe låsen skal holdes nede.
+- **{app:holdSeconds}**: hvor mange sekunder du skal holde låsen nede, før indstillingerne åbner.
 - **{app:relockAfter}**: hvor hurtigt voksenindstillingerne låser sig selv.
 - **{app:guidedAccess}**: en trin-for-trin-vejledning til **Guidet adgang** på iPad og iPhone og **Fastgørelse af app** på Android (på Samsung-tablets også Samsung Kids). Barnet kan stadig tale – det kan bare ikke forlade appen.
 
