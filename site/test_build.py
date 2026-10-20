@@ -422,13 +422,15 @@ class BuiltSite(unittest.TestCase):
     def test_decision27_story_on_about_and_short_form_on_home(self):
         for loc in bs.LOCALES:
             about = bs.visible_text(bs.main_part(read(self.without, loc, 'about', 'index.html')))
-            self.assertIn(bs.visible_text(self.strings['about.story'][loc]), about)
+            for key in ('about.story', 'about.p1', 'about.p2', 'about.p3', 'about.p4'):
+                self.assertIn(bs.visible_text(self.strings[key][loc]), about)
             home = bs.visible_text(bs.main_part(read(self.without, loc, 'index.html')))
             self.assertIn(bs.visible_text(self.strings['home.story'][loc]), home)
-        self.assertTrue(self.strings['about.story']['en'].startswith('On a business trip last year, I saw a boy'))
+        self.assertTrue(self.strings['about.story']['en'].startswith("I've always believed that technology is at its best"))
+        self.assertTrue(self.strings['about.p4']['en'].endswith("If your child uses Amalino, I'd really love to hear from you."))
 
     def test_decision32_no_therapist_exception(self):
-        self.assertIn("So I'm making Amalino: free and offline. If your child uses it", self.strings['about.story']['en'])
+        self.assertIn("That's why I'm building Amalino. A free, offline communication app", self.strings['about.p3']['en'])
         for html_text, lang in (('<p>Amalino: free, offline, and built with families and therapists.</p>', 'en'),
                                 ('<p>Ask your therapist.</p>', 'en'),
                                 ('<p>Built with families and specialists.</p>', 'en'),
