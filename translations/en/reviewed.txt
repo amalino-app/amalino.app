@@ -1,1 +1,1 @@
-# Keys a native speaker has approved (app keys, web:<key> for the website). Maintained by the owner.
+# Keys a native speaker has approved (app keys, web:<key> for the website, manual:<page> for a manual page). Maintained by the owner.

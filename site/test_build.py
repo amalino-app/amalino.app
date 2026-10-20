@@ -596,7 +596,7 @@ class Manual(unittest.TestCase):
         names = bs.manual_pages('en')
         self.assertEqual(names[0], 'index')
         self.assertGreaterEqual(len(names), 13)
-        self.assertEqual(self.summary['manual'], {'en': names})
+        self.assertEqual(self.summary['manual']['en'], names)
         for n in names:
             self.assertTrue(os.path.isfile(os.path.join(self.out, 'en', bs.manual_path(n))), n)
         self.assertEqual(bs.check(self.out, self.strings, EMAIL, 'https://example.org'), [])
@@ -625,30 +625,111 @@ class Manual(unittest.TestCase):
         self.assertNotIn('.md"', board.replace(f'{bs.REPO_URL}/edit/main/manual/en/the-board.md"', ''))
         self.assertNotIn('screenshot:', board, 'HTML comments are not published')
 
-    def test_other_languages_link_to_the_english_manual(self):
+    def test_each_language_links_to_its_own_manual_or_the_english_one(self):
+        langs = bs.manual_langs()
         for loc in bs.LOCALES:
             page = read(self.out, loc, 'index.html')
-            label = self.strings['nav.manual' if loc == 'en' else 'nav.manualEn'][loc]
-            want = '../en/manual/index.html"' + ('' if loc == 'en' else ' hreflang="en"')
+            own = loc in langs
+            label = self.strings['nav.manual' if own else 'nav.manualEn'][loc]
+            target = loc if own else 'en'
+            want = f'../{target}/manual/index.html"' + ('' if own else ' hreflang="en"')
             self.assertIn(want, page, loc)
-            self.assertIn(label, page, loc)
-            self.assertIn('<p class="footer-manual"><a href="../en/manual/index.html"', page, loc)
-        # The manual page's own language menu: languages without a manual go to their home page.
+            self.assertIn(f'>{label}</a>', page, loc)
+            if own and loc != 'en':
+                self.assertNotIn(self.strings['nav.manualEn'][loc], page, loc)
+            self.assertIn(f'<p class="footer-manual"><a href="../{target}/manual/index.html"', page, loc)
+        # The manual page's own language menu: a language with that page goes to it, others to their home page.
         page = read(self.out, 'en', bs.manual_path('voices'))
-        self.assertIn('href="../../../da/index.html" lang="da"', page)
+        for loc in bs.LOCALES:
+            want = f'../../../{loc}/manual/voices/index.html' if loc in langs else f'../../../{loc}/index.html'
+            self.assertIn(f'href="{want}" lang="{loc}"', page, loc)
 
-    def test_manual_seo_only_its_own_languages(self):
-        h = bs.seo(read(self.out, 'en', bs.manual_path('keyboard')))
-        self.assertEqual(h.canonical(), ['https://example.org/en/manual/keyboard/'])
-        self.assertEqual(dict(h.alternates()), {'en': 'https://example.org/en/manual/keyboard/',
-                                                'x-default': 'https://example.org/en/manual/keyboard/'})
-        self.assertEqual(h.metas('og:locale:alternate'), [])
-        self.assertLessEqual(len(h.metas('description')[0]), bs.DESCRIPTION_MAX)
-        self.assertIn('https://example.org/en/manual/keyboard/', read(self.out, 'sitemap.xml'))
+    def test_manual_seo_lists_the_languages_it_exists_in(self):
+        langs = bs.manual_langs()
+        for loc in langs:
+            h = bs.seo(read(self.out, loc, bs.manual_path('keyboard')))
+            self.assertEqual(h.canonical(), [f'https://example.org/{loc}/manual/keyboard/'])
+            want = {l: f'https://example.org/{l}/manual/keyboard/' for l in langs}
+            want['x-default'] = 'https://example.org/en/manual/keyboard/'
+            self.assertEqual(dict(h.alternates()), want, loc)
+            self.assertEqual(len(h.metas('og:locale:alternate')), len(langs) - 1)
+            self.assertEqual(h.metas('og:locale'), [bs.OG_LOCALES[loc]])
+            self.assertLessEqual(len(h.metas('description')[0]), bs.DESCRIPTION_MAX)
+            self.assertIn(f'https://example.org/{loc}/manual/keyboard/', read(self.out, 'sitemap.xml'))
 
     def test_manual_text_follows_the_public_text_rules(self):
-        for n in bs.manual_pages('en'):
-            self.assertEqual(bs.forbidden_found(read(self.out, 'en', bs.manual_path(n)), 'en'), [], n)
+        for loc in bs.manual_langs():
+            for n in bs.manual_pages(loc):
+                self.assertEqual(bs.forbidden_found(read(self.out, loc, bs.manual_path(n)), loc), [], f'{loc} {n}')
+
+    def test_translated_manuals_have_every_english_page(self):
+        # da, ru, uk, ar, es, lt (owner 2026-10-20): the same pages in the same order, the same screenshots.
+        en = bs.manual_pages('en')
+        for loc in ('da', 'ru', 'uk', 'ar', 'es', 'lt'):
+            self.assertEqual(bs.manual_pages(loc), en, loc)
+            for n in en:
+                src = read(bs.MANUAL, loc, f'{n}.md')
+                self.assertEqual(re.findall(r'^!\[[^\]]+\]\((img/[^)]+)\)$', src, flags=re.M),
+                                 re.findall(r'^!\[[^\]]+\]\((img/[^)]+)\)$', read(bs.MANUAL, 'en', f'{n}.md'), flags=re.M),
+                                 f'{loc} {n}: screenshots')
+                self.assertEqual(re.findall(r'\]\(([a-z\-]+\.md|site:[a-z]+|\.\./\.\./[A-Z]+\.md)', src),
+                                 re.findall(r'\]\(([a-z\-]+\.md|site:[a-z]+|\.\./\.\./[A-Z]+\.md)',
+                                            read(bs.MANUAL, 'en', f'{n}.md')), f'{loc} {n}: links')
+
+    def test_translated_manual_uses_the_app_labels_and_english_screenshots(self):
+        app = bs.load_app_strings()
+        for loc in [l for l in bs.manual_langs() if l != 'en']:
+            self.assertFalse(os.path.isdir(os.path.join(self.out, loc, 'manual', 'img')) and
+                             not os.path.isdir(os.path.join(bs.MANUAL, loc, 'img')), loc)
+            page = read(self.out, loc, bs.manual_path('sharing-and-printing'))
+            self.assertIn('src="../../../en/manual/img/backup-1x.webp"', page, loc)
+            self.assertIn(html.escape(app['historyBackups'][loc], quote=False), page, loc)
+            self.assertNotIn('{app:', page)
+            # Not native-checked yet: the draft banner (reviewed.txt manual:<page> lines remove it).
+            self.assertIn('class="draft-banner"', page, loc)
+            self.assertNotIn(self.strings['nav.manualEn'][loc], page, loc)
+        self.assertNotIn('class="draft-banner"', read(self.out, 'en', bs.manual_path('sharing-and-printing')))
+
+    def test_manual_review_marks_from_reviewed_txt(self):
+        with tempfile.TemporaryDirectory() as d:
+            os.makedirs(os.path.join(d, 'da'))
+            with open(os.path.join(d, 'da', 'reviewed.txt'), 'w', encoding='utf-8') as f:
+                f.write('# x\nweb:home.h1\nmanual:voices\nundo\n')
+            self.assertEqual(bs.load_reviewed(d)['da'], {'home.h1'})
+            self.assertEqual(bs.load_reviewed(d, prefix='manual:')['da'], {'voices'})
+
+    def test_arabic_manual_is_right_to_left_with_latin_isolated(self):
+        if 'ar' not in bs.manual_langs():
+            self.skipTest('no Arabic manual')
+        page = read(self.out, 'ar', bs.manual_path('getting-started'))
+        self.assertIn('<html lang="ar" dir="rtl">', page)
+        self.assertIn('<bdi dir="ltr">Wi-Fi</bdi>', page)
+        self.assertNotIn('<bdi dir="ltr">' + 'sharing', page, 'hrefs are never isolated')
+
+    def test_markdown_right_to_left_and_site_links(self):
+        md = '# عنوان\n\nافتح **Wi-Fi** على iOS 17 ثم [الصفحة](b.md) و`Settings → Apps`.\n'
+        body = bs.md_to_html(md, lambda h: 'B/' if h == 'b.md' else h, rtl=True)[2]
+        self.assertIn('افتح <strong><bdi dir="ltr">Wi-Fi</bdi></strong> على <bdi dir="ltr">iOS 17</bdi>', body)
+        self.assertIn('<a href="B/">الصفحة</a>', body)
+        self.assertIn('<bdi dir="ltr"><code>Settings → Apps</code></bdi>', body)
+        self.assertNotIn('<bdi', bs.md_to_html(md, str)[2], 'left-to-right pages are not touched')
+        link = bs.manual_link('ru', 'privacy', ['index', 'privacy'])
+        self.assertEqual(link('site:privacy'), '../../../ru/privacy/index.html')
+        self.assertEqual(bs.manual_link('ru', 'index', ['index'])('site:about'), '../../ru/about/index.html')
+        with self.assertRaises(bs.BuildError):
+            link('site:nowhere')
+        self.assertEqual(bs.slugify('Данные и **резервные** копии'), 'данные-и-резервные-копии')
+        self.assertEqual(bs.slugify('Lock and keep in the app'), 'lock-and-keep-in-the-app')
+
+    def test_app_labels_in_the_manual(self):
+        r = bs.Renderer(self.strings, '', '')
+        app = bs.load_app_strings()
+        self.assertEqual(r.app_labels('**{app:done}**', 'm', 'ru'), f'**{app["done"]["ru"]}**')
+        self.assertEqual(r.app_labels('{app:settingsChildName|name=Sam}', 'm', 'en'),
+                         app['settingsChildName']['en'].replace('{name}', 'Sam'))
+        for bad in ('{app:nope}', '{app:settingsChildName}', '{app:done|name=Sam}'):
+            with self.assertRaises(bs.BuildError, msg=bad):
+                r.app_labels(bad, 'm', 'en')
 
     def test_markdown_subset(self):
         md = ('<!-- description: A page. -->\n# Title with **bold**\n\nText with *it*, `code` and a [link](b.md).\n'

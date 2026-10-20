@@ -24,7 +24,10 @@ the forms it doesn't use empty.
 
 The manual is in `manual/<language>/`, one page per topic. Open a page, press the pencil (Edit), fix it, and
 propose the change. To translate the manual into your language, copy `manual/en/` to a new folder and translate
-page by page.
+page by page. Write every button, menu and setting the page names as `{app:key}` (the key of that text in
+`translations/<language>/app.tsv`, for example `**{app:historyBackups}**`): the site then shows the app's own
+words, so the manual and the app never disagree. A translated page shows a "draft translation" note until a native
+speaker has checked it.
 
 ## 3. Everyone else
 

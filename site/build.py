@@ -30,12 +30,15 @@ headings in order, alt on every image, page weight, Open Graph/Twitter tags, the
 home, and with a site URL the canonical and hreflang links (7 languages + x-default, reciprocal), og:url/og:image,
 sitemap.xml and robots.txt; without one, nothing absolute in a <head> and no sitemap or robots.txt.
 It prints the per-language native-review status (web:<key> lines in
-translations/<lang>/reviewed.txt) without blocking.
+translations/<lang>/reviewed.txt for the website, manual:<page> lines for the manual) without blocking; a
+translated manual page that isn't listed there shows the draft banner.
 
 Template syntax: {{t:key}} text (HTML-escaped; **bold**; {email} becomes a mailto link isolated as
 LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value, {{link:page}} a relative
 link to a page in the same language. In strings, {app:key} is the app's own label from
-translations/<lang>/app.tsv ({app:key|label}: the part before the first ":").
+translations/<lang>/app.tsv ({app:key|label}: the part before the first ":"). The manual's Markdown
+(manual/<lang>/*.md) uses the same {app:key} for every button, menu and setting it names, so a translated manual
+always shows the app's own words.
 """
 import argparse
 import datetime
@@ -86,6 +89,11 @@ PICKERS = (('', 'home.h1'), ('translate', 'nav.translate'))
 # Page weight (decision 31 keeps everything self-hosted; this keeps it small): per HTML page and the whole site.
 MAX_PAGE_BYTES = 40_000
 MAX_SITE_BYTES = 700_000  # 600 KB for six languages, raised with the seventh (Lithuanian)
+# The manual's HTML pages are counted on their own, per language (they are long text pages; MAX_SITE_BYTES covers
+# the website and the shared assets). A manual page may be longer than a website page: Cyrillic and Arabic take two
+# bytes a letter, and the longest page (Settings) is about 23 KB in English.
+MAX_MANUAL_PAGE_BYTES = 60_000
+MAX_MANUAL_HTML_BYTES = 450_000
 # The manual's screenshots (manual/<lang>/img/NAME-1x.webp and NAME-2x.webp, published at /<lang>/manual/img/)
 # are counted on their own: each file and all of them together. MAX_SITE_BYTES covers everything else. They are
 # self-hosted like everything else (decision 31); full-colour WebP at 1x and 2x (owner 2026-10-20, sharp on
@@ -221,8 +229,9 @@ def load_app_strings(folder=TRANSLATIONS):
     return {k: v for k, v in rows.items() if len(v) == len(LOCALES)}
 
 
-def load_reviewed(folder=TRANSLATIONS):
-    """{locale: set(web keys)} from the web:<key> lines of translations/<lang>/reviewed.txt."""
+def load_reviewed(folder=TRANSLATIONS, prefix='web:'):
+    """{locale: set(web keys)} from the web:<key> lines of translations/<lang>/reviewed.txt
+    (prefix 'manual:': the manual pages a native speaker has checked)."""
     done = {loc: set() for loc in LOCALES}
     for loc in LOCALES:
         path = os.path.join(folder, loc, 'reviewed.txt')
@@ -231,8 +240,8 @@ def load_reviewed(folder=TRANSLATIONS):
         with open(path, encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
-                if line.startswith('web:'):
-                    done[loc].add(line[4:])
+                if line.startswith(prefix):
+                    done[loc].add(line[len(prefix):])
     return done
 
 
@@ -288,7 +297,8 @@ class Renderer:
         return typography(self.app_labels(self.strings[key][loc], key, loc), loc)
 
     def app_labels(self, text, key, loc):
-        """{app:key} -> the app's label in this language; {app:key|label} -> its part before the first ':'."""
+        """{app:key} -> the app's label in this language; {app:key|label} -> its part before the first ':';
+        {app:key|name=Sam} fills the app string's {name} placeholder (the manual's example child)."""
         def label(m):
             name, mod = m.group(1), m.group(2)
             if name not in self.app:
@@ -296,10 +306,16 @@ class Renderer:
             value = self.app[name][loc]
             if mod == 'label':
                 value = value.split(':')[0]
+            elif mod:
+                for pair in mod.split('|'):
+                    k, _eq, v = pair.partition('=')
+                    if not _eq or '{' + k + '}' not in value:
+                        raise BuildError(f'{key}: {{app:{name}|{mod}}}: app string {name} has no {{{k}}}')
+                    value = value.replace('{' + k + '}', v)
             if '{' in value:
-                raise BuildError(f'{key}: app string {name} has a placeholder; use |label')
+                raise BuildError(f'{key}: app string {name} has a placeholder; use |label or |name=value')
             return value.strip()
-        return re.sub(r'\{app:([A-Za-z0-9_.\-]+)(?:\|(label))?\}', label, text)
+        return re.sub(r'\{app:([A-Za-z0-9_.\-]+)(?:\|(label|[a-z]+=[^|{}]+(?:\|[a-z]+=[^|{}]+)*))?\}', label, text)
 
     def html_text(self, key, loc):
         s = html.escape(self.text(key, loc), quote=False)
@@ -585,17 +601,29 @@ REMEMBER_SCRIPT = ('<script>document.addEventListener("click",function(e){var a=
 
 # ---------------------------------------------------------------- the manual
 
-def md_inline(text, link):
-    """Inline Markdown: `code`, [text](href) (href through `link`), **bold** and *italic*; HTML escaped."""
+def md_inline(text, link, rtl=False):
+    """Inline Markdown: `code`, [text](href) (href through `link`), **bold** and *italic*; HTML escaped. In
+    right-to-left text (rtl) every Latin run is one left-to-right isolate (isolate_latin), and code is too."""
     parts = re.split(r'(`[^`]+`)', text)
     out = []
     for part in parts:
         if part.startswith('`') and part.endswith('`') and len(part) > 1:
-            out.append(f'<code>{html.escape(part[1:-1], quote=False)}</code>')
+            code = f'<code>{html.escape(part[1:-1], quote=False)}</code>'
+            out.append(f'<bdi dir="ltr">{code}</bdi>' if rtl and re.search(r'[A-Za-z]', part) else code)
             continue
         s = html.escape(part, quote=False)
-        s = re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)',
-                   lambda m: f'<a href="{html.escape(link(html.unescape(m.group(2))), quote=True)}">{m.group(1)}</a>', s)
+        # Links are set aside first, so the right-to-left step never touches an href.
+        links = []
+
+        def keep(m):
+            links.append((m.group(1), link(html.unescape(m.group(2)))))
+            return f'\x00{len(links) - 1}\x00'
+        s = re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)', keep, s)
+        if rtl:
+            s = isolate_latin(s)
+            links = [(isolate_latin(t), h) for t, h in links]
+        s = re.sub(r'\x00(\d+)\x00', lambda m: f'<a href="{html.escape(links[int(m.group(1))][1], quote=True)}">'
+                   f'{links[int(m.group(1))][0]}</a>', s)
         s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
         s = re.sub(r'(?<![*\w])\*(?!\s)(.+?)(?<!\s)\*(?![*\w])', r'<em>\1</em>', s)
         out.append(s)
@@ -603,14 +631,16 @@ def md_inline(text, link):
 
 
 def slugify(text):
-    return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
+    """A heading's id: lower-case letters and digits of any script, joined by "-" (Cyrillic and Arabic headings
+    keep their own letters)."""
+    return re.sub(r'[\W_]+', '-', re.sub(r'[*`]', '', text).lower()).strip('-')
 
 
-def md_to_html(md, link, image=None):
+def md_to_html(md, link, image=None, rtl=False):
     """A small Markdown subset for the manual: # headings, paragraphs, - and 1. lists, > notes, inline marks,
     and a screenshot on a line of its own: ![alt text](img/name-1x.webp), drawn by image(src, alt) (alt is required).
     HTML comments are dropped; the first one may be <!-- description: ... -->. Returns (h1 text, description,
-    html)."""
+    html). rtl: the page is right to left (see md_inline)."""
     m = re.match(r'\s*<!--\s*description:\s*(.*?)\s*-->', md, flags=re.S)
     description = ' '.join(m.group(1).split()) if m else ''
     md = re.sub(r'<!--.*?-->', '', md, flags=re.S)
@@ -619,12 +649,12 @@ def md_to_html(md, link, image=None):
     def flush():
         nonlocal para, items, kind, quote
         if para:
-            out.append(f'<p>{md_inline(" ".join(para), link)}</p>')
+            out.append(f'<p>{md_inline(" ".join(para), link, rtl)}</p>')
         if items:
             tag = 'ol' if kind == 'ol' else 'ul'
-            out.append(f'<{tag}>' + ''.join(f'<li>{md_inline(i, link)}</li>' for i in items) + f'</{tag}>')
+            out.append(f'<{tag}>' + ''.join(f'<li>{md_inline(i, link, rtl)}</li>' for i in items) + f'</{tag}>')
         if quote:
-            out.append(f'<blockquote><p>{md_inline(" ".join(quote), link)}</p></blockquote>')
+            out.append(f'<blockquote><p>{md_inline(" ".join(quote), link, rtl)}</p></blockquote>')
         para, items, kind, quote = [], [], None, []
 
     for line in md.splitlines():
@@ -646,9 +676,9 @@ def md_to_html(md, link, image=None):
                 if title:
                     raise BuildError('a manual page has more than one # heading')
                 title = text
-                out.append(f'<h1>{md_inline(text, link)}</h1>')
+                out.append(f'<h1>{md_inline(text, link, rtl)}</h1>')
             else:
-                out.append(f'<h{level} id="{slugify(text)}">{md_inline(text, link)}</h{level}>')
+                out.append(f'<h{level} id="{slugify(text)}">{md_inline(text, link, rtl)}</h{level}>')
         elif li:
             new = 'ul' if li.group(1) else 'ol'
             if para or quote or (items and kind != new):
@@ -685,15 +715,20 @@ def manual_pages(loc):
 
 def manual_image(loc, name):
     """The screenshot drawer for a manual page: a figure with the 1x picture's size, its 2x twin in srcset,
-    lazily loaded. Both NAME-1x.webp and NAME-2x.webp (twice the size) must be in manual/<loc>/img/."""
+    lazily loaded. Both NAME-1x.webp and NAME-2x.webp (twice the size) must be in manual/<loc>/img/, or, for a
+    translated manual without its own screenshots yet, in the source language's manual/en/img/ (the page then
+    shows the English screenshots from /en/manual/img/; the alt text is the translation's)."""
     def draw(src, alt):
         src2 = src[:-len('-1x.webp')] + '-2x.webp'
-        size, size2 = (webp_size(os.path.join(MANUAL, loc, s)) for s in (src, src2))
+        own = loc if os.path.isfile(os.path.join(MANUAL, loc, src)) or loc == MANUAL_SOURCE else MANUAL_SOURCE
+        size, size2 = (webp_size(os.path.join(MANUAL, own, s)) for s in (src, src2))
         if not size:
             raise BuildError(f'manual/{loc}/{name}.md: {src} is not a WebP in manual/{loc}/img/')
         if size2 != (size[0] * 2, size[1] * 2):
             raise BuildError(f'manual/{loc}/{name}.md: {src2} must be a WebP twice the size of {src}')
         here = '' if name == 'index' else '../'
+        if own != loc:
+            here += f'../../{own}/manual/'
         return (f'<figure class="shot"><img src="{here}{src}" srcset="{here}{src} 1x, {here}{src2} 2x" '
                 f'alt="{html.escape(alt, quote=True)}" width="{size[0]}" height="{size[1]}" loading="lazy" '
                 f'decoding="async"></figure>')
@@ -730,11 +765,16 @@ def manual_link(loc, name, names):
                 raise BuildError(f'manual/{loc}/{name}.md: link to {href}, which is not in the contents')
             target = 'index.html' if m.group(1) == 'index' else f'{m.group(1)}/index.html'
             return (up + target if name != 'index' or m.group(1) != 'index' else 'index.html') + (m.group(2) or '')
+        site_page = re.fullmatch(r'site:([a-z]+)', href)
+        if site_page:  # a website page in the same language: [the privacy page](site:privacy)
+            if site_page.group(1) not in PAGES:
+                raise BuildError(f'manual/{loc}/{name}.md: link {href!r} (known: {", ".join("site:" + p for p in PAGES)})')
+            return ('../../' if name == 'index' else '../../../') + f'{loc}/{page_path(site_page.group(1))}'
         if href.startswith('#') or re.match(r'^(https://|mailto:)', href):
             return href
         if href.startswith('../../') and not href.startswith('../../../'):
             return f'{REPO_URL}/blob/main/{href[6:]}'
-        raise BuildError(f'manual/{loc}/{name}.md: link {href!r} (use another page\'s .md, ../../FILE or https://)')
+        raise BuildError(f'manual/{loc}/{name}.md: link {href!r} (use another page\'s .md, site:PAGE, ../../FILE or https://)')
     return link
 
 
@@ -742,6 +782,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     """Builds the site into `out` (replacing it). Returns a summary dict used by --check and tests."""
     strings = strings if strings is not None else load_strings()
     reviewed = load_reviewed()
+    reviewed_manual = load_reviewed(prefix='manual:')
     r = Renderer(strings, email, site, donate=donate)
     r.used.add('og.imageAlt')  # the share image's alt text; on the pages only with a site URL (og:image is absolute)
     layout = read(os.path.join(TEMPLATES, 'layout.html'))
@@ -829,8 +870,10 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                     shutil.copyfile(os.path.join(shots, n), os.path.join(out, loc, 'manual', 'img', n))
         pages = []
         for name in names:
-            heading, desc, body = md_to_html(read(os.path.join(MANUAL, loc, f'{name}.md')), manual_link(loc, name, names),
-                                             manual_image(loc, name))
+            # {app:key} -> the app's own label, then the website's non-breaking spaces.
+            source = typography(r.app_labels(read(os.path.join(MANUAL, loc, f'{name}.md')), f'manual/{loc}/{name}.md', loc),
+                                loc)
+            heading, desc, body = md_to_html(source, manual_link(loc, name, names), manual_image(loc, name), loc in RTL)
             if not desc:
                 raise BuildError(f'manual/{loc}/{name}.md needs <!-- description: ... --> on its first line')
             pages.append((name, heading, desc, body))
@@ -858,8 +901,11 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                        + f'<nav class="manual-toc" aria-label="{r.plain("man.navLabel", loc)}">'
                        f'<h2>{r.html_text("man.contents", loc)}</h2><ol>{toc}</ol></nav>\n</article>')
             title = heading if name == 'index' else f'{heading} · {r.plain("man.suffix", loc)}'
-            title = html.escape(title, quote=True)
-            desc = html.escape(desc, quote=True)
+            title = html.escape(rtl_lead(title, loc), quote=True)
+            desc = html.escape(rtl_lead(desc, loc), quote=True)
+            draft = loc != MANUAL_SOURCE and name not in reviewed_manual[loc]
+            banner = (f'<div class="draft-banner" role="note"><div class="wrap"><p>{r.html_text("draftBanner", loc)}'
+                      f'</p></div></div>') if draft else ''
             alts = manual_alternates(site, name, langs_m) if site else []
             url = manual_url(site, loc, name) if site else None
             head = ''
@@ -880,7 +926,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                 'icons': icon_links(root),
                 'lang': loc, 'dir': 'rtl' if loc in RTL else 'ltr', 'root': root, 'title': title,
                 'description': desc, 'head_links': head.rstrip('\n'),
-                'nav': site_nav(loc, root, 'manual'), 'lang_links': ''.join(langs), 'draft_banner': '',
+                'nav': site_nav(loc, root, 'manual'), 'lang_links': ''.join(langs), 'draft_banner': banner,
                 'content': content,
                 'lang_current': f'<span lang="{loc}" dir="{"rtl" if loc in RTL else "ltr"}">{ENDONYMS[loc]}</span>',
                 'remember_script': REMEMBER_SCRIPT, 'manual_footer': manual_anchor(loc, root),
@@ -929,9 +975,14 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
               f' donation link {"set" if donate else "empty"})')
         print('Native review (web:<key> in translations/<lang>/reviewed.txt): ' +
               ', '.join(f'{loc} {status[loc]}' for loc in LOCALES))
+        if any(l != MANUAL_SOURCE for l in langs_m):
+            print('Manual native review (manual:<page> in reviewed.txt): ' + ', '.join(
+                f'{l} {len(reviewed_manual[l] & set(manual_pages(l)))}/{len(manual_pages(l))} checked'
+                for l in langs_m if l != MANUAL_SOURCE))
         if unused:
             print('Unused string keys: ' + ', '.join(unused))
-    return {'status': status, 'unused': unused, 'manual': {l: manual_pages(l) for l in langs_m}}
+    return {'status': status, 'unused': unused, 'manual': {l: manual_pages(l) for l in langs_m},
+            'manual_status': {l: sorted(reviewed_manual[l] & set(manual_pages(l))) for l in langs_m if l != MANUAL_SOURCE}}
 
 
 # ---------------------------------------------------------------- checks
@@ -1201,7 +1252,8 @@ def check_seo(out, files, site, page_langs=None):
             expect(b <= a + 1, f'{f}: heading h{a} is followed by h{b}')
         for img in h.imgs:
             expect('alt' in img, f'{f}: <img src="{img.get("src")}"> has no alt')
-        expect(os.path.getsize(os.path.join(out, f)) <= MAX_PAGE_BYTES, f'{f}: over {MAX_PAGE_BYTES} bytes')
+        limit = MAX_MANUAL_PAGE_BYTES if '/manual/' in f'/{f}' else MAX_PAGE_BYTES
+        expect(os.path.getsize(os.path.join(out, f)) <= limit, f'{f}: over {limit} bytes')
         for key in ('og:title', 'og:description', 'og:type', 'og:locale', 'twitter:card'):
             expect(len(h.metas(key)) == 1, f'{f}: needs one {key}')
         expect(h.metas('og:locale') == [OG_LOCALES[loc or 'en']], f'{f}: wrong og:locale')
@@ -1307,8 +1359,20 @@ def check_seo(out, files, site, page_langs=None):
         expect(png_size(og) == (1200, 630), f'assets/og-image.png is not a 1200x630 PNG ({png_size(og)})')
     def shot(d):
         return os.path.basename(d) == 'img' and os.path.basename(os.path.dirname(d)) == 'manual'
-    total = sum(os.path.getsize(os.path.join(d, n)) for d, _ds, ns in os.walk(out) if not shot(d) for n in ns)
+
+    def manual_lang(d):
+        """The language of a folder inside <lang>/manual/ (not its screenshots), else None."""
+        parts = os.path.relpath(d, out).split(os.sep)
+        return parts[0] if len(parts) >= 2 and parts[1] == 'manual' and not shot(d) else None
+    total = sum(os.path.getsize(os.path.join(d, n)) for d, _ds, ns in os.walk(out)
+                if not shot(d) and not manual_lang(d) for n in ns)
     expect(total <= MAX_SITE_BYTES, f'site is {total} bytes, over {MAX_SITE_BYTES}')
+    per_lang = {}
+    for d, _ds, ns in os.walk(out):
+        if manual_lang(d):
+            per_lang[manual_lang(d)] = per_lang.get(manual_lang(d), 0) + sum(os.path.getsize(os.path.join(d, n)) for n in ns)
+    for lang, size in per_lang.items():
+        expect(size <= MAX_MANUAL_HTML_BYTES, f'{lang}/manual: the pages are {size} bytes, over {MAX_MANUAL_HTML_BYTES}')
     shots = [os.path.join(d, n) for d, _ds, ns in os.walk(out) if shot(d) for n in ns]
     for p in shots:
         expect(p.endswith('.webp') and os.path.getsize(p) <= MAX_IMAGE_BYTES,

@@ -39,7 +39,13 @@ The manual's pictures (`manual/en/img/`) are drawn from the app on a computer, n
 `test/tool/manual_screenshots_test.dart` (an iPad, 820 x 1180, drawn at 2x), then saved as full-colour WebP at
 2x (`name-2x.webp`) and half that size (`name-1x.webp`), lossless or quality 85, whichever is smaller. A page
 shows one with `![what the picture shows](img/name-1x.webp)` on a line of its own; the build adds the 2x
-picture for sharp screens. Limits: 250 KB per file, 4 MB for all of them.
+picture for sharp screens. Limits: 250 KB per file, 4 MB for all of them. A translated manual without its own
+`img/` folder shows the English pictures (with its own alt text).
+
+In the manual's Markdown, `{app:key}` is the app's own label in the page's language (`{app:key|label}`: the part
+before the first ":"; `{app:key|name=Sam}` fills the string's `{name}`), and `[text](site:privacy)` links to a
+website page in the same language. A translated page is marked as a draft until `manual:<page>` is in
+`translations/<language>/reviewed.txt` (from the app repository's `content/ui/reviewed.tsv`).
 
 ## Licence
 

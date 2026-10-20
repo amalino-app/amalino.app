@@ -49,4 +49,4 @@ Features that would need an online service, like **Sync and sharing**, the **Boa
 
 Uninstalling the app deletes everything it stored on the device. Keep an exported backup if you want to restore later.
 
-The full privacy policy is linked in the app, in **About and licences** and at the end of setup. For the website's own privacy notice, see the privacy page linked at the bottom of every page.
+The full privacy policy is the website's [privacy page](site:privacy), which also covers the website itself. The app links to it in **About and licences** and at the end of setup.
