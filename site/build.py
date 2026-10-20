@@ -884,12 +884,13 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
             def href(n):
                 return here + ('index.html' if n == 'index' else f'{n}/index.html')
             steps = []
+            back, ahead = ('→', '←') if loc in RTL else ('←', '→')  # arrows point the way the page reads
             if i > 0:
-                steps.append(f'<a class="prev" href="{href(pages[i - 1][0])}" rel="prev">← {r.html_text("man.prev", loc)}: '
+                steps.append(f'<a class="prev" href="{href(pages[i - 1][0])}" rel="prev">{back} {r.html_text("man.prev", loc)}: '
                              f'{html.escape(pages[i - 1][1])}</a>')
             if i + 1 < len(pages):
                 steps.append(f'<a class="next" href="{href(pages[i + 1][0])}" rel="next">{r.html_text("man.next", loc)}: '
-                             f'{html.escape(pages[i + 1][1])} →</a>')
+                             f'{html.escape(pages[i + 1][1])} {ahead}</a>')
             here_mark = ' aria-current="page"'
             toc = ''.join(f'<li><a href="{href(n)}"{here_mark if n == name else ""}>{html.escape(h)}</a></li>'
                           for n, h, _d, _b in pages)
@@ -913,7 +914,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                 head = f'<link rel="canonical" href="{html.escape(url)}">\n' + ''.join(
                     f'<link rel="alternate" hreflang="{lang}" href="{html.escape(u)}">\n' for lang, u in alts)
                 manual_entries.append((url, alts))
-            head += share_meta(r, site, loc, None, title, desc, url=url, langs=[l for l, _u in alts if l != 'x-default'] or [loc])
+            head += share_meta(r, site, loc, None, title, desc, url=url, langs=[l for l in langs_m if name in manual_pages(l)])
             langs = []
             for other in LOCALES:
                 cur = ' aria-current="true"' if other == loc else ''

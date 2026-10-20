@@ -705,6 +705,8 @@ class Manual(unittest.TestCase):
         self.assertIn('<html lang="ar" dir="rtl">', page)
         self.assertIn('<bdi dir="ltr">Wi-Fi</bdi>', page)
         self.assertNotIn('<bdi dir="ltr">' + 'sharing', page, 'hrefs are never isolated')
+        self.assertIn('rel="prev">→ ', page, 'the step arrows point the way the page reads')
+        self.assertIn('rel="prev">← ', read(self.out, 'en', bs.manual_path('getting-started')))
 
     def test_markdown_right_to_left_and_site_links(self):
         md = '# عنوان\n\nافتح **Wi-Fi** على iOS 17 ثم [الصفحة](b.md) و`Settings → Apps`.\n'
