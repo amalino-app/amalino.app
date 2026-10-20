@@ -317,7 +317,7 @@ aiCloudConsent	When you use a cloud helper, the photo, topic or words you choose
 aiCloudConsentTitle	Allow cloud helpers?
 aiCloudSub	Better drafts for scenes, boards and translations. Needs sync and your consent.
 aiCloudTools	Use cloud helpers
-aiContext	Suggest a page by time and place
+aiContext	Suggest pages for the moment
 aiContextSub	Food at lunchtime, or any page at a time you choose. A card the child can ignore.
 aiHelpers	Suggestions
 aiHelpersSub	Help that suggests words. It never speaks for your child.
@@ -404,6 +404,7 @@ newWords	New words
 newWordsPerMonth	New words per month
 noSuggestions	No suggestions for this photo. Drag boxes to add talking spots yourself.
 noTopicPack	No ready page for this topic on the device. Try another word, or allow cloud helpers.
+noTopicPackLocal	No ready page for this topic on the device. Try another word.
 notApprovedYet	Not approved yet. Approve this device from a device already in the group.
 openBoardFormat	Share boards (Open Board Format)
 openBoardFormatSub	Move boards to and from other AAC apps
@@ -563,7 +564,7 @@ weeklySummary	Weekly summary
 writeWithCloud	Rewrite with the cloud helper (aggregates only)
 addMealRules	Add meal-time suggestions (Food page)
 addTimeRule	Suggest a page at a time of day
-contextBoards	Pages for times and places
+contextBoards	Pages for the moment
 tip.context	A suggestion is only a doorway: model the words on the page when it opens.
 grammarHelper	Word forms
 grammarHelperSub	Hold a word to choose dogs, went, bigger…

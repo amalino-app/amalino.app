@@ -112,7 +112,7 @@ How the board looks. Everything here is safe to try: nothing moves.
 Help that suggests words. It never speaks for your child, and the child always chooses. Each helper has its own switch, and all are off until you turn them on. They work on the device:
 
 - **Highlight likely next words**: gently outlines 2–3 buttons. Buttons never move. Learns only on this device.
-- **Pages for times and places**: suggests a page at a time of day, for example the Food page at lunchtime. It uses the time of day only, never your location or calendar. A card on the board offers the page; one tap opens it, and the child can ignore it. On its screen, turn on **Suggest a page by time and place**, then tap **Add meal-time suggestions (Food page)** or **Suggest a page at a time of day** to choose a page and a time.
+- **Pages for the moment**: suggests a page at a time of day, for example the Food page at lunchtime. It uses the time of day only, never your location or calendar. A card on the board offers the page; one tap opens it, and the child can ignore it. On its screen, turn on **Suggest pages for the moment**, then tap **Add meal-time suggestions (Food page)** or **Suggest a page at a time of day** to choose a page and a time.
 - **Listen to what I say**: while you switch the microphone on in the top bar, the device listens to what you say and highlights words that could answer. Speech is recognised on the device; audio is never saved or sent. It needs a one-time download of the speech recogniser.
 
 ### Lock and keep in the app

@@ -317,7 +317,7 @@ aiCloudConsent	Kai naudojate debesijos pagalbininką, jūsų pasirinkta nuotrauk
 aiCloudConsentTitle	Leisti debesijos pagalbininkus?
 aiCloudSub	Geresni scenų, lentų ir vertimų juodraščiai. Reikia sinchronizavimo ir jūsų sutikimo.
 aiCloudTools	Naudoti debesijos pagalbininkus
-aiContext	Siūlyti puslapį pagal laiką ir vietą
+aiContext	Siūlyti puslapius pagal laiką
 aiContextSub	Pietų metu – maistą arba bet kurį puslapį jūsų pasirinktu laiku. Kortelė, kurios vaikas gali nepaisyti.
 aiHelpers	Pasiūlymai
 aiHelpersSub	Pagalba, siūlanti žodžius. Ji niekada nekalba už jūsų vaiką.
@@ -404,6 +404,7 @@ newWords	Nauji žodžiai
 newWordsPerMonth	Nauji žodžiai per mėnesį
 noSuggestions	Šiai nuotraukai pasiūlymų nėra. Kalbančias vietas pridėkite patys, nubrėždami stačiakampius.
 noTopicPack	Šiame įrenginyje nėra paruošto puslapio šia tema. Pabandykite kitą žodį arba leiskite debesijos pagalbininkus.
+noTopicPackLocal	Šiame įrenginyje nėra paruošto puslapio šia tema. Pabandykite kitą žodį.
 notApprovedYet	Dar nepatvirtinta. Patvirtinkite šį įrenginį iš įrenginio, kuris jau yra grupėje.
 openBoardFormat	Dalytis lentomis (Open Board Format)
 openBoardFormatSub	Perkelkite lentas į kitas bendravimo paveikslėliais programėles ir iš jų
@@ -563,7 +564,7 @@ weeklySummary	Savaitės santrauka
 writeWithCloud	Perrašyti su debesijos pagalbininku (tik suvestiniai duomenys)
 addMealRules	Pridėti valgio laiko pasiūlymus (puslapis „Maistas“)
 addTimeRule	Siūlyti puslapį tam tikru paros laiku
-contextBoards	Puslapiai pagal laiką ir vietą
+contextBoards	Puslapiai pagal laiką
 tip.context	Pasiūlymas – tik durys: kai puslapis atsidaro, modeliuokite jo žodžius.
 grammarHelper	Žodžio formos
 grammarHelperSub	Palaikykite žodį nuspaudę ir pasirinkite formą: šunys, ėjo, didesnis…

@@ -32,7 +32,7 @@ Some things are downloaded once, when you ask for them, and then work offline. N
 ## Features that work on the device
 
 - **Listen to what I say** recognises speech on the device. Audio is never saved or sent.
-- **Pages for times and places** uses the time of day only. Amalino doesn't use your location or your calendar.
+- **Pages for the moment** uses the time of day only. Amalino doesn't use your location or your calendar.
 - **Suggest talking spots** looks at a scene's photo on the device. On Android it uses Google ML Kit: photos never leave the device, but ML Kit sends Google anonymous usage and performance information. The same applies to offline translation on Android. iPhone and iPad use Apple Vision, on the device.
 
 ## What could leave the device
