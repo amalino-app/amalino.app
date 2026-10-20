@@ -124,3 +124,4 @@ pr.webNoCookies	This website sets no cookies and uses no analytics or tracking s
 pr.webHosts	The website is hosted on GitHub Pages and reaches you through Cloudflare. To deliver and protect the pages, they process your device's internet (IP) address. See [[GitHub's privacy statement|github-privacy]] and [[Cloudflare's privacy policy|cloudflare-privacy]].
 pr.webStats	I only see the total number of visits in Cloudflare's statistics, never who visited.
 pr.webEmail	Emails to {email} reach me through Cloudflare Email Routing.
+link.inEnglish	(in English)
