@@ -19,7 +19,7 @@ readyBody	The app will create a full core vocabulary with folders, your favorite
 wordTypeColour	Word-type color
 libraryConsent	The library downloads boards that other families and therapists shared. Nothing about your child is sent. If you share a board, only the board itself and the title and description you write are uploaded, under the CC BY-SA 4.0 license.
 libraryAdd	Add to Favorites
-aiListenSub	While you switch the microphone on (top bar), this device listens to what you say and highlights words that could answer. Speech is recognized on this device; audio is never saved or sent.
+aiListenSub	When you turn on the microphone in the top bar, this device listens to what you say and highlights words the child could use to answer. Speech is recognized on this device; audio is never saved or sent.
 aiListenModel	Download the speech recognizer (~{mb} MB, once)
 aiListenModelReady	Speech recognizer installed (works offline)
 noFreeCell	There is no empty cell in Favorites or on the main board. Hide or remove a word there first: words never move to make room.

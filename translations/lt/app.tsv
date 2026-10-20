@@ -452,7 +452,7 @@ showThisCode	Parodykite šį kodą įrenginyje, kuris jau yra grupėje
 signIn	Prisijungti
 space	tarpas
 suggestFailed	Nepavyko pasiūlyti kalbančių vietų
-suggestHotspots	Pasiūlyti kalbančias vietas
+suggestHotspots	Siūlyti kalbančias vietas
 suggestionUse	Panaudoti pasiūlymai
 switchAny	Jungiklio siunčiamas klavišas
 switchHelp	„Bluetooth“ ir USB jungikliai veikia kaip klaviatūros. Susiekite jungiklį šio įrenginio nustatymuose, tada paspauskite jį čia, kad programėlė atpažintų jo klavišą.
@@ -1092,6 +1092,23 @@ searchNoResults	Pagal „{q}“ nieko nerasta.
 modelShort	Modeliuoti
 showToChild	Rodyti vaikui
 modelHiddenLabel	{word} (vaikui paslėpta)
+showWholeFolder	Rodyti visą aplanką
+showWholeFolderSub	„{folder}“ ir visi jame esantys žodžiai, taip pat aplankuose jo viduje
+hideFromChild	Paslėpti nuo vaiko
+hideWholeFolder	Paslėpti visą aplanką
+hideWholeFolderSub	Vaikas nematys „{folder}“. Žodžiai aplanke liks tokie, kokie yra.
+showAllInFolder	Rodyti visus šio aplanko žodžius
+showFolderAgain	Vėl rodyti aplanką
+showFolderAgainSub	„{folder}“: žodžiai bus rodomi ir paslėpti taip, kaip buvo prieš jums jį paslepiant
+keepOwnChanges.zero	
+keepOwnChanges.one	Palikti jūsų pakeitimus ({n} žodis)?
+keepOwnChanges.two	
+keepOwnChanges.few	Palikti jūsų pakeitimus ({n} žodžiai)?
+keepOwnChanges.many	
+keepOwnChanges.other	Palikti jūsų pakeitimus ({n} žodžių)?
+keepOwnChangesBody	Šiuos žodžius ir aplankus parodėte arba paslėpėte patys. Jei juos paliksite, naujas lygis pakeis tik kitus žodžius.
+keepOwnChangesKeep	Palikti
+keepOwnChangesReset	Viskas pagal lygį
 replanMovedToFavourites	Jūsų pridėtų mygtukų, kurie netilpo šioje lentoje: {n}. Dabar jie aplanke „Mėgstami“.
 replanParked	Jūsų pridėtų mygtukų, kuriems niekur neliko vietos: {n}. Jie išsaugoti ir sugrįš, kai lenta bus didesnė.
 privacyOsBackup.ios	Jei darote šio iPhone ar iPad atsarginę kopiją iCloud ar kompiuteryje, Amalino duomenys į ją įtraukiami.

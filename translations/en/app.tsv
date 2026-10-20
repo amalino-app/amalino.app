@@ -604,7 +604,7 @@ personalVoiceDenied	Personal Voice is not allowed. You can change this in Settin
 personalVoiceUnsupported	Personal Voice needs iOS 17 or newer on a supported device.
 personalVoiceAndroid	Android has no Personal Voice. To keep a family member's voice, record words in the button editor (Record): recordings play instead of the computer voice.
 aiListen	Listen to what I say
-aiListenSub	While you switch the microphone on (top bar), this device listens to what you say and highlights words that could answer. Speech is recognised on this device; audio is never saved or sent.
+aiListenSub	When you turn on the microphone in the top bar, this device listens to what you say and highlights words the child could use to answer. Speech is recognised on this device; audio is never saved or sent.
 aiListenModel	Download the speech recogniser (~{mb} MB, once)
 aiListenModelReady	Speech recogniser installed (works offline)
 aiListenModelRemoveAsk	Remove the speech recognition from this device? Partner listening stops until you download it again ({mb} MB).
@@ -1092,6 +1092,23 @@ searchNoResults	Nothing found for "{q}".
 modelShort	Model
 showToChild	Show to your child
 modelHiddenLabel	{word}, hidden from your child
+showWholeFolder	Show the whole folder
+showWholeFolderSub	{folder} and every word in it, also in the folders inside it
+hideFromChild	Hide from your child
+hideWholeFolder	Hide the whole folder
+hideWholeFolderSub	Your child won't see {folder}. The words inside stay as they are.
+showAllInFolder	Show all words in this folder
+showFolderAgain	Show the folder again
+showFolderAgainSub	{folder}, with its words shown and hidden as they were before you hid it
+keepOwnChanges.zero	
+keepOwnChanges.one	Keep your own change ({n} word)?
+keepOwnChanges.two	
+keepOwnChanges.few	
+keepOwnChanges.many	
+keepOwnChanges.other	Keep your own changes ({n} words)?
+keepOwnChangesBody	You showed or hid these words and folders yourself. If you keep them, the new level changes only the other words.
+keepOwnChangesKeep	Keep
+keepOwnChangesReset	Reset to the level
 replanMovedToFavourites	Buttons you added that didn't fit on this board: {n}. They're in Favourites now.
 replanParked	Buttons you added that had no room anywhere: {n}. They're kept and come back when the board is bigger.
 privacyOsBackup.ios	If you back up this iPhone or iPad to iCloud or a computer, Amalino's data is part of that backup.

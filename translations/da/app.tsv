@@ -451,8 +451,8 @@ sceneWordsAlways	Vis altid ordene
 showThisCode	Vis denne kode på en enhed, der allerede er i gruppen
 signIn	Log ind
 space	mellemrum
-suggestFailed	Kunne ikke foreslå områder
-suggestHotspots	Foreslå områder
+suggestFailed	Kunne ikke foreslå områder, der taler
+suggestHotspots	Foreslå områder, der taler
 suggestionUse	Brugte forslag
 switchAny	Kontaktens tast
 switchHelp	Bluetooth- og USB-kontakter fungerer som tastaturer. Par kontakten i enhedens indstillinger, og tryk på den her, så appen lærer dens tast.
@@ -1092,6 +1092,23 @@ searchNoResults	Intet fundet for »{q}«.
 modelShort	Modellér
 showToChild	Vis for dit barn
 modelHiddenLabel	{word}, skjult for dit barn
+showWholeFolder	Vis hele mappen
+showWholeFolderSub	{folder} og alle ordene i den, også i mapperne inde i den
+hideFromChild	Skjul for dit barn
+hideWholeFolder	Skjul hele mappen
+hideWholeFolderSub	{folder} bliver skjult for dit barn. Ordene i mappen bliver, som de er.
+showAllInFolder	Vis alle ord i denne mappe
+showFolderAgain	Vis mappen igen
+showFolderAgainSub	{folder}, med ordene vist og skjult, som de var, før du skjulte den
+keepOwnChanges.zero	
+keepOwnChanges.one	Behold din egen ændring ({n} ord)?
+keepOwnChanges.two	
+keepOwnChanges.few	
+keepOwnChanges.many	
+keepOwnChanges.other	Behold dine egne ændringer ({n} ord)?
+keepOwnChangesBody	Du har selv vist eller skjult disse ord og mapper. Hvis du beholder dem, ændrer det nye niveau kun de andre ord.
+keepOwnChangesKeep	Behold
+keepOwnChangesReset	Nulstil til niveauet
 replanMovedToFavourites	Knapper, du selv har tilføjet, og som ikke var plads til: {n}. De ligger nu i Favoritter.
 replanParked	Knapper, du selv har tilføjet, og som der ikke var plads til nogen steder: {n}. De bliver gemt og kommer igen, når tavlen bliver større.
 privacyOsBackup.ios	Hvis du tager backup af denne iPhone eller iPad til iCloud eller en computer, kommer Amalinos data med i den backup.

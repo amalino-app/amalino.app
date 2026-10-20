@@ -451,8 +451,8 @@ sceneWordsAlways	Palabras siempre visibles
 showThisCode	Enseña este código en un dispositivo del grupo
 signIn	Iniciar sesión
 space	espacio
-suggestFailed	No se pudieron sugerir zonas
-suggestHotspots	Sugerir zonas
+suggestFailed	No se pudieron sugerir zonas que hablan
+suggestHotspots	Sugerir zonas que hablan
 suggestionUse	Sugerencias usadas
 switchAny	Tecla del pulsador
 switchHelp	Los pulsadores Bluetooth y USB funcionan como teclados. Empareja el pulsador en los ajustes del dispositivo y púlsalo aquí para que la app reconozca su tecla.
@@ -603,11 +603,11 @@ personalVoiceReady	Voz personal permitida ({count} encontradas). Elígela en la 
 personalVoiceDenied	La voz personal no está permitida. Puedes cambiarlo en Ajustes > Accesibilidad > Voz personal (Permitir que las apps soliciten su uso).
 personalVoiceUnsupported	La voz personal necesita iOS 17 o posterior en un dispositivo compatible.
 personalVoiceAndroid	Android no tiene voz personal. Para conservar la voz de un familiar, graba palabras en el editor de botones (Grabar): las grabaciones suenan en lugar de la voz sintética.
-aiListen	Escuchar al adulto
+aiListen	Escuchar lo que digo
 aiListenSub	Mientras enciendes el micrófono (barra superior), el dispositivo escucha lo que dices y resalta palabras para responder. El habla se reconoce en este dispositivo; el audio nunca se guarda ni se envía.
 aiListenModel	Descargar el reconocimiento de voz (~{mb} MB, una vez)
 aiListenModelReady	Reconocimiento de voz instalado (funciona sin conexión)
-aiListenModelRemoveAsk	¿Quitar el reconocimiento de voz de este dispositivo? Escuchar al adulto no funcionará hasta que lo vuelvas a descargar ({mb} MB).
+aiListenModelRemoveAsk	¿Quitar el reconocimiento de voz de este dispositivo? «Escuchar lo que digo» no funcionará hasta que lo vuelvas a descargar ({mb} MB).
 listeningOn	Escuchando: toca para parar
 heardPartner	Oído: «{text}»
 access.gaze	Mirada (cámara)
@@ -1092,6 +1092,23 @@ searchNoResults	No se ha encontrado nada para «{q}».
 modelShort	Modelar
 showToChild	Mostrar a tu hijo o hija
 modelHiddenLabel	{word}, oculta para tu hijo o hija
+showWholeFolder	Mostrar toda la carpeta
+showWholeFolderSub	«{folder}» y todas sus palabras, también las de las carpetas que hay dentro
+hideFromChild	Ocultar a tu hijo o hija
+hideWholeFolder	Ocultar toda la carpeta
+hideWholeFolderSub	Tu hijo o hija no verá «{folder}». Las palabras de dentro se quedan como están.
+showAllInFolder	Mostrar todas las palabras de esta carpeta
+showFolderAgain	Volver a mostrar la carpeta
+showFolderAgainSub	«{folder}», con sus palabras mostradas y ocultas como estaban antes de que la ocultaras
+keepOwnChanges.zero	
+keepOwnChanges.one	¿Mantener tu cambio ({n} palabra)?
+keepOwnChanges.two	
+keepOwnChanges.few	
+keepOwnChanges.many	
+keepOwnChanges.other	¿Mantener tus cambios ({n} palabras)?
+keepOwnChangesBody	Estas palabras y carpetas las mostraste u ocultaste tú. Si las mantienes, el nuevo nivel cambia solo las demás palabras.
+keepOwnChangesKeep	Mantener
+keepOwnChangesReset	Todo según el nivel
 replanMovedToFavourites	Botones que añadiste y que no cabían en este tablero: {n}. Ahora están en Favoritos.
 replanParked	Botones que añadiste y que no cabían en ningún sitio: {n}. Se guardan y volverán cuando el tablero sea más grande.
 privacyOsBackup.ios	Si haces copias de seguridad de este iPhone o iPad en iCloud o en un ordenador, los datos de Amalino van incluidos en ellas.
