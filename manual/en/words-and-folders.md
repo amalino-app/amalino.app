@@ -38,11 +38,19 @@ Every word has its own place, and it keeps it. When a word is hidden, its place 
 
 A level only shows or hides words in folders. Words on the main board are shown one by one (below).
 
+If you've shown or hidden words in folders yourself, Amalino asks **Keep your own changes?** first. **Keep** changes only the other words; **Reset to the level** lets every word follow the new level.
+
+![Board layout on a tablet with the question "Keep your own changes (2 words)?", "You showed or hid these words and folders yourself. If you keep them, the new level changes only the other words.", Reset to the level and Keep](img/level-keep-1x.webp)
+
 ## Showing and hiding words
 
 Each word is either **shown** to the child or **hidden**. A hidden word's place looks empty to the child, and nothing else moves.
 
 To see and change them, open the grown-up settings and choose **Edit this board**. Hidden words appear in their places with a dark veil and a crossed-out eye. Tap one, and in its editor turn on **Shown to the child**, then tap **Done**. This works the same inside folders.
+
+In modelling mode, a folder page works the same way: hidden words show faded, and the eye in the modelling line shows all the words in that folder at once.
+
+![The Food folder in modelling mode on a tablet: the modelling line with Show me where, the eye that shows all words in the folder, and Done; hidden words such as hot dog and dinner shown faded; and the menu Show to your child, hot dog, after holding it](img/modelling-folder-1x.webp)
 
 > **Tip:** Show a new word only after you've modelled it many times. In modelling mode hidden words show faded in their places: tap them while you talk, and when your child is ready, hold one and choose **Show to your child**. See [Settings: Modelling mode](settings.md).
 

@@ -20,6 +20,8 @@ Each language has its own voice setting. Because every natural voice speaks all 
 
 The natural voices are one download of about 129 MB. Amalino tells you the size first. On mobile data it asks before downloading; choose **Wait for Wi-Fi** to download later. Until the download has finished, the device's own voice speaks.
 
+![The free voices in Settings → Speech and voices on a tablet: one download of about 129 MB, This device's own voice in use now, and the natural voices Ella, Mila and Nora, each with play and Download](img/voices-1x.webp)
+
 To free space, remove the natural voices from the device; the words use the device's voice until you download them again.
 
 ## How the voice sounds

@@ -46,6 +46,8 @@ Some buttons open a folder of related words, such as Food, Places or Feelings. A
 
 Inside a folder, the top bar shows a **back** arrow and a **home** button. Home always returns to the main board.
 
+![The Food folder on a tablet: back and home in the top bar, buttons for back, fruit, vegetables, snacks and sweets, kitchen and home, then food words from apple to bean](img/folder-1x.webp)
+
 ## Switching languages
 
 If the child uses more than one language, the top bar shows a button for each one (EN, DA, ES, РУС, УКР, عربي, LT). One tap switches the whole board. Every word stays in the same place in every language.

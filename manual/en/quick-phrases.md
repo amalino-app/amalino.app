@@ -22,9 +22,13 @@ A tap on a phrase says it straight away. It doesn't go into the message bar.
 
 Open the grown-up settings and choose **Quick phrases**. Under **On the board**, pick the **First phrase** and the **Second phrase** for the slots next to stop and help me. Choose the two the child needs most, for example "I need a break" and "I don't like it".
 
+![Quick phrases on a tablet: Show your phrases and More, the First phrase "I need a break" and Second phrase "I don't like it", and the 12 places of the phrase page with Add](img/quick-1x.webp)
+
 ## The More page
 
 **More** opens a page of up to 12 phrases, each in its own fixed place. A tap says the phrase and closes the page; **Close** goes back without saying anything.
+
+![The More page on a tablet: stop and help me in red, then I need a break, I don't like it, wait, please, I need the toilet and my name is Sam](img/more-1x.webp)
 
 In **Quick phrases**, under **Phrase page**, you can:
 

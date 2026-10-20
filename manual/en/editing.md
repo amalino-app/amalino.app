@@ -7,11 +7,15 @@ Every family's words are different. You can change any word, picture or voice, a
 
 At the top right of the board, **hold the lock for 3 seconds**, then answer the short sum (or enter your PIN) on the number keys that appear. The grown-up settings open. They lock again by themselves after 5 minutes, or straight away when you tap **Lock**.
 
+![The grown-up check over the board on a tablet: For grown-ups, the sum 16 + 3 = ?, number keys, OK and Cancel](img/gate-1x.webp)
+
 You can change the hold time, the PIN and the automatic lock under **Lock and keep in the app**. See [Settings](settings.md).
 
 ## Editing the board
 
 Choose **Edit this board**. The board shows a line at the top: "Editing: tap a cell to change it. Words never move by themselves." The top bar now has **Undo**, **Redo** and **Done**.
+
+![The board in edit mode on a tablet: the line "Editing: tap a cell to change it. Words never move by themselves.", Undo, Redo and Done in the top bar, and the hidden word "to" with a dark veil and a crossed-out eye](img/edit-mode-1x.webp)
 
 - Tap a button to edit it.
 - Tap an empty cell and choose **Add a word** or **Add a folder**.
@@ -42,12 +46,16 @@ When you edit an **existing** button, your changes apply as you make them; tap *
 
 ## Translating words
 
+![The top of the button editor for "want" on a tablet: the English word, and the empty Danish field with Translate at its end and the note "Optional. If empty, the button shows the word as written above."](img/editor-translate-1x.webp)
+
 **Translate** works on the device, without the internet, once a language is set up. Set it up once per language in **Settings → Languages**, under **Translate without the internet**:
 
 - **Android**: tap the language and agree to download Google's translation model, about 30 MB per language. No words from the app are sent.
 - **iPhone and iPad**: this needs iOS 26 or later. The languages come from Apple: open the device's **Settings → Apps → Translate → Downloaded Languages**, download the languages, then come back to Amalino.
 
 Each language shows whether it's ready. Where the device can't do it, it says **Not available on this device.**
+
+![Translate without the internet in Settings → Languages: what Translate does, and Danish marked "Ready on this device. Translate works without the internet when you edit a word."](img/offline-translate-1x.webp)
 
 ## Folders
 

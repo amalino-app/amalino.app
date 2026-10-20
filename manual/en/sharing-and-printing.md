@@ -22,6 +22,8 @@ If there's no copy outside the device, or the last one is more than a month old,
 
 ## Moving to a new device
 
+![History and backups on a tablet with the Backup password question: the password, Repeat password, Cancel and OK](img/export-1x.webp)
+
 1. On the old device: **Settings → History and backups → Export backup**, and choose a password.
 2. Send the file to the new device with AirDrop, Quick Share, email, a cloud drive or a USB cable.
 3. On the new device, install Amalino. On the first screen of setup, tap **I already use Amalino**, then **Restore a backup file**, and **Choose file**.
@@ -34,6 +36,8 @@ An automatic backup from another device can't be restored: it only opens on the 
 ## If Amalino can't open the saved boards
 
 The boards are locked with a key that never leaves the device. If that key is missing or doesn't match, for example after moving the app to a new device or restoring a system backup, Amalino shows **This device can't open the saved boards** when it starts. Nothing has been deleted: the old data is kept aside on the device.
+
+![The screen "This device can't open the saved boards" on a tablet: why it happens, that nothing has been deleted, and the buttons Restore from a backup file and Start fresh](img/recovery-1x.webp)
 
 - **Restore from a backup file**: choose a backup you exported with a password, and type the password.
 - **Start fresh**: go through setup again.
@@ -52,6 +56,8 @@ When you import a board, check that its words are in places the child already kn
 ## Printing
 
 **Print boards** makes a paper copy for bath time, the pool, a trip, or a broken device.
+
+![Print boards on a tablet: Paper size A4, Colour, Show words under pictures, Include folders, Cut-out cards, Laminate-friendly, and Print or save PDF](img/print-1x.webp)
 
 - **Paper size A4**
 - **Colour**

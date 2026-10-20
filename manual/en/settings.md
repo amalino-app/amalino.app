@@ -55,6 +55,8 @@ Use the numbers to choose what to model next, not to test the child.
 - **Symbol sets**: the included ARASAAC pictures, the older Mulberry pictures some boards still use, your own photos, and an optional search of all ARASAAC pictures (about 13,000), which downloads a picture when you choose it. **Use the new pictures on this child's boards** updates built-in words that still have their original picture; your own pictures and photos are kept. ARASAAC is free for non-commercial use.
 - **Print boards**: see [Sharing and printing](sharing-and-printing.md).
 
+![Languages on a tablet: English as the main language, Danish ticked, the other languages each marked Preview with "Words not yet checked by a native speaker", the line to tell us about a wrong word, and Main language](img/languages-1x.webp)
+
 ## Settings
 
 ### The child's name
@@ -118,6 +120,8 @@ Help that suggests words. It never speaks for your child, and the child always c
 - **Highlight likely next words**: gently outlines 2–3 buttons. Buttons never move. Learns only on this device.
 - **Pages for the moment**: suggests a page at a time of day, for example the Food page at lunchtime. It uses the time of day only, never your location or calendar. A card on the board offers the page; one tap opens it, and the child can ignore it. On its screen, turn on **Suggest pages for the moment**, then tap **Add meal-time suggestions (Food page)** or **Suggest a page at a time of day** to choose a page and a time.
 - **Listen to what I say**: while you switch the microphone on in the top bar, the device listens to what you say and highlights words that could answer. Speech is recognised on the device; audio is never saved or sent. It needs a one-time download of the speech recogniser.
+
+![Pages for the moment on a tablet: Suggest pages for the moment turned on, the Food page at breakfast 07:00–08:30, lunch 11:30–13:00 and dinner 17:30–19:00, and Suggest a page at a time of day](img/context-1x.webp)
 
 ### Lock and keep in the app
 

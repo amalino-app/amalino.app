@@ -7,6 +7,8 @@ Children who know some letters can type words that aren't on the board. The keyb
 
 Tap the **keyboard** button in the top bar. To go back to the pictures, tap the same button again (it now shows a grid) or the **close** key at the bottom left of the keyboard.
 
+![The keyboard on a tablet: "i want to p" in the message bar, the letter keys with 123, space, delete and Speak, and the phrase row below](img/keyboard-1x.webp)
+
 ## Typing
 
 - The word being typed appears in the **message bar**, so the child sees it grow.
