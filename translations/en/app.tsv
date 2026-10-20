@@ -705,7 +705,7 @@ learnMore	Learn more
 alreadyUse	I already use Amalino
 alreadyBody	For a second device, a new device or a reinstall.
 restoreBackup	Restore a backup file
-restoreHowTo	On the old device: Settings → History and backups → Export backup, and choose a password. Send the file to this device with AirDrop, Quick Share, email, a cloud drive or a USB cable. Then tap Choose file.
+restoreHowTo	On the old device: Grown-up tools → Data → History and backups → Export backup, and choose a password. Send the file to this device with AirDrop, Quick Share, email, a cloud drive or a USB cable. Then tap Choose file.
 chooseFile	Choose file
 joinFamily	Join a family on another device
 deviceKeyBackup	This is an automatic backup that only opens on the device that made it. On the old device, use Export backup with a password.

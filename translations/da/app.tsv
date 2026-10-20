@@ -705,7 +705,7 @@ learnMore	Læs mere
 alreadyUse	Jeg bruger allerede Amalino
 alreadyBody	Til en ekstra enhed, en ny enhed eller en geninstallation.
 restoreBackup	Gendan en sikkerhedskopi
-restoreHowTo	På den gamle enhed: Indstillinger → Historik og sikkerhedskopier → Eksportér sikkerhedskopi, og vælg en adgangskode. Send filen til denne enhed med AirDrop, Quick Share, e-mail, en skytjeneste eller et USB-kabel. Tryk så på Vælg fil.
+restoreHowTo	På den gamle enhed: Voksenværktøjer → Data → Historik og sikkerhedskopier → Eksportér sikkerhedskopi, og vælg en adgangskode. Send filen til denne enhed med AirDrop, Quick Share, e-mail, en skytjeneste eller et USB-kabel. Tryk så på Vælg fil.
 chooseFile	Vælg fil
 joinFamily	Tilslut dig en familiegruppe fra en anden enhed
 deviceKeyBackup	Det er en automatisk sikkerhedskopi, som kun kan åbnes på den enhed, der lavede den. Brug Eksportér sikkerhedskopi med adgangskode på den gamle enhed.

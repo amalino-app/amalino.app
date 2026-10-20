@@ -705,7 +705,7 @@ learnMore	Sužinoti daugiau
 alreadyUse	Jau naudoju Amalino
 alreadyBody	Antram ar naujam įrenginiui arba įdiegus iš naujo.
 restoreBackup	Atkurti iš atsarginės kopijos failo
-restoreHowTo	Senajame įrenginyje atidarykite Nustatymai → Istorija ir atsarginės kopijos → Eksportuoti atsarginę kopiją ir sugalvokite slaptažodį. Nusiųskite failą į šį įrenginį per AirDrop, Quick Share, el. paštu, per debesų saugyklą ar USB laidu. Tada bakstelėkite „Pasirinkti failą“.
+restoreHowTo	Senajame įrenginyje atidarykite Suaugusiųjų įrankiai → Duomenys → Istorija ir atsarginės kopijos → Eksportuoti atsarginę kopiją ir sugalvokite slaptažodį. Nusiųskite failą į šį įrenginį per AirDrop, Quick Share, el. paštu, per debesų saugyklą ar USB laidu. Tada bakstelėkite „Pasirinkti failą“.
 chooseFile	Pasirinkti failą
 joinFamily	Prisijungti prie šeimos kitame įrenginyje
 deviceKeyBackup	Tai automatinė atsarginė kopija, kuri atsidaro tik ją sukūrusiame įrenginyje. Senajame įrenginyje naudokite „Eksportuoti atsarginę kopiją“ su slaptažodžiu.
