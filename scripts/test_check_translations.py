@@ -48,6 +48,26 @@ class CheckTranslations(unittest.TestCase):
         self.assertIn("lt/app.tsv:3: d.few has ['{who}']", text)
         self.assertIn('lt/app.tsv:4: d.other is empty', text)
 
+    def test_vocab(self):
+        with tempfile.TemporaryDirectory() as d:
+            write(d, 'en', [('hi', 'Hello')])
+            write(d, 'en', [('t', 'Text')], 'website.tsv')
+            os.makedirs(os.path.join(d, 'da'))
+            with open(os.path.join(d, 'da', 'vocab.tsv'), 'w', encoding='utf-8') as f:
+                f.write('id\tenglish\ttext\tclass\n'
+                        'apple\tapple\tæble\tnoun\n'
+                        'apple\tapple\tæble\tnoun\n'
+                        'pear\tpear\t\tnoun\n'
+                        'it\tit\t—\tpronoun\n'
+                        'x\tx\t{n}\tnoun\n'
+                        'y\ty\ty\n')
+            text = '\n'.join(ct.check(d))
+        self.assertIn('da/vocab.tsv:3: apple appears twice', text)
+        self.assertIn('da/vocab.tsv:4: pear is empty', text)
+        self.assertIn('da/vocab.tsv:5: it is "—"', text)
+        self.assertIn('da/vocab.tsv:6: x has a {placeholder}', text)
+        self.assertIn('da/vocab.tsv:7: expected 4 cells, got 3', text)
+
 
 if __name__ == '__main__':
     unittest.main()

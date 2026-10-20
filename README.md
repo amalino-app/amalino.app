@@ -10,7 +10,8 @@ This repository holds everything about Amalino that anyone can read and improve:
 |---|---|
 | `site/` | The website, [amalino.app](https://amalino.app): templates, style and the build script |
 | `manual/` | The user manual, one folder per language (`manual/en/` first) |
-| `translations/` | The words of the app and the website, one folder per language |
+| `translations/` | The words of the app (screens and board words) and the website, one folder per language |
+| `weblate/` | A copy of `translations/` for [Hosted Weblate](docs/weblate.md), written by `scripts/weblate_sync.py` |
 
 The app itself is not in this repository.
 
@@ -31,7 +32,11 @@ Python 3.9 or newer, nothing to install:
 python3 site/build.py --site https://amalino.app --check   # builds site/dist/ and checks it
 python3 -m unittest discover -s site -p 'test_*.py'
 python3 scripts/check_translations.py
+python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
+
+After a change in `translations/` (or a merged Weblate pull request), `python3 scripts/weblate_sync.py` brings
+`weblate/` and `translations/` in step again ([docs/weblate.md](docs/weblate.md)).
 
 Open `site/dist/index.html` in a browser; links work from the file system too.
 

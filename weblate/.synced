@@ -1,0 +1,22 @@
+# Written by scripts/weblate_sync.py: the git blob of each Weblate file as it last wrote it (the base of the three-way comparison). Don't edit.
+weblate/app/ar.json	51257a3dbc6294543337d1a3d94d9bb5ee27428c
+weblate/app/da.json	878939704ed775a1dc830b3a46ec03d6eb07a03e
+weblate/app/en.json	c843002f0304a15dd5bfa8bd2305b2f388530377
+weblate/app/es.json	cb2ad4670a78522679c721453ae48fdfb94f3e9f
+weblate/app/lt.json	c765129a291d145067bbd0fefd8d7c7feefb57c3
+weblate/app/ru.json	06c241a2850d4741d72347075125e6c575c56e45
+weblate/app/uk.json	ef6f5f2d6d26c0c928aa9ab6d15d1c9274423bfc
+weblate/vocab/ar.po	5a62b7b5174e92c11a92cb2663fd3014776d670c
+weblate/vocab/da.po	bfcd3e4bfa4e4382ca1a275493ff73c1f5c9e899
+weblate/vocab/es.po	04c3856fc4c2764adbc43b7409fe3f0269d026c5
+weblate/vocab/lt.po	df2cf7410130b6091a39d31c7c067ba734dc3141
+weblate/vocab/ru.po	c3c393e436801b434ebee2d3a7d987df69c4ae4a
+weblate/vocab/uk.po	cadfa59554c2f0fef854f6608955b8a6f067ff2f
+weblate/vocab/vocab.pot	1c303fb1df8df791089e904fab6c0b651b00c86c
+weblate/website/ar.json	f3a1df861994423265d0aaa6ef93b80f5a82c969
+weblate/website/da.json	3d893963bb0cace866d192225e6e25cd78d293f4
+weblate/website/en.json	2fffcfa4f8e6dd33f94b21eab1693c49600f5ea5
+weblate/website/es.json	77267f884df95b3645a918683119c47b99170439
+weblate/website/lt.json	75be42009b89e6ea06afc89ed4f85fc9f793ee3f
+weblate/website/ru.json	ad79f24631983438f48e7a3dae967955992b16fe
+weblate/website/uk.json	ecda665a078364ada78ce41839ae5e3b9dda9905

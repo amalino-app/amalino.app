@@ -5,20 +5,31 @@ none of them needs programming.
 
 ## 1. Translations
 
-- **On Weblate (coming soon):** translate or correct the app and the website in a web form, with no files and no
-  git. Sign in, choose your language and suggest a better text. A reviewer for your language approves it.
+There are three kinds of text: the app's screens, the website, and the **board words**, the words a child taps
+and hears.
+
+- **On Weblate (being set up):** translate or correct all three in a web form, with no files and no git. Sign in at
+  [hosted.weblate.org](https://hosted.weblate.org), open the Amalino project, choose your language and suggest a
+  better text. Each board word shows its English word, its folder, its picture and, when it's too long for its
+  button, a note. The owner checks every change before it goes into the app. [How it is set up](docs/weblate.md).
 - **Here on GitHub:** each language has a folder in `translations/`: `app.tsv` is the app, `website.tsv` the
-  website. Each line is a key, a tab, and the text. Open the file, press the pencil (Edit), change only the text
-  after the tab, and propose the change. GitHub makes the pull request for you.
+  website, `vocab.tsv` the board words. In `app.tsv` and `website.tsv` each line is a key, a tab, and the text;
+  `vocab.tsv` is a table (GitHub shows it with a search box) where only the `text` column is yours to change
+  (Arabic: also `spoken`, the word with full tashkeel as the voice reads it). Open the file, press the pencil
+  (Edit), change only that text, and propose the change. GitHub makes the pull request for you. Don't edit the
+  `weblate/` folder: it is written from `translations/`.
 
 Please keep:
 - every `{placeholder}` exactly as it is in English (for example `{name}`, `{n}`), and `**bold**` and `{app:…}`
   in the website text;
-- the key on the left unchanged;
-- short words on buttons: children see them on small buttons.
+- the key or id on the left unchanged;
+- short words on buttons: children see them on small buttons. A board word is the word a child hears at home,
+  one or two words; a word marked "must shorten" doesn't fit its button, so a shorter word children use is very
+  welcome.
 
 Lines whose key ends in `.zero`, `.one`, `.two`, `.few`, `.many` or `.other` are plural forms; a language leaves
-the forms it doesn't use empty.
+the forms it doesn't use empty. A word that isn't in your language's `vocab.tsv` is hidden in that language on
+purpose (for example "the" in Russian): write to us if you think a child needs it.
 
 ## 2. The manual
 
@@ -37,7 +48,8 @@ should change. Spreadsheets are welcome too.
 ## What happens next
 
 Only the project owner merges changes. Automatic checks look at every pull request first (keys, placeholders,
-empty texts, the website build). A language's text reaches the app only after a native speaker has checked it,
+empty texts, the board words, the website build); the app's import checks the board words again, for example
+that no board gets two buttons with the same word. A language's text reaches the app only after a native speaker has checked it,
 and the app always ships with every language inside it: nothing is downloaded later.
 
 By contributing you agree that your text is shared under [CC BY-SA 4.0](LICENSE).
