@@ -1,4 +1,4 @@
-<!-- description: Install Amalino and go through the first setup: the child, languages, voice, touch, favourite things and the grown-up lock. -->
+<!-- description: Set up Amalino for the first time: the child, languages, voice, touch, favourite things and the grown-up lock. -->
 # Getting started
 
 Amalino runs on iPhone, iPad and Android phones and tablets. It is free, and it works without the internet once it's set up.
@@ -9,7 +9,7 @@ Setup takes about five minutes. Everything you enter stays on the device, and yo
 
 - Charge the device and turn the sound up.
 - If you can, have the child nearby for the touch step. It helps to see how they tap.
-- Be on Wi-Fi if you can: the natural voices are one download of about 129 MB.
+- Use Wi-Fi if you can: the natural voices are one download of about 129 MB.
 
 ## The setup steps
 
@@ -39,13 +39,13 @@ Every language uses the same button in the same place. The child can switch lang
 
 For now, every language except English has a **Preview** tag: not all its words have been checked by a native speaker yet. The note under the list says "Words may still change. Tell us about a wrong word." You can also correct any word yourself.
 
-In Russian, Ukrainian, Arabic, Spanish and Lithuanian, setup also asks **Which word forms should the app use for your child?** Choose **Boy forms** or **Girl forms**, so sentences about the child sound right (for example "устал / устала", "tired", in Russian).
+In Russian, Ukrainian, Arabic, Spanish and Lithuanian, setup also asks **Which word forms should the app use for your child?** Choose **Boy forms** or **Girl forms**, so that when the child talks about themselves, the words have the right endings (for example "устал / устала", "tired", in Russian).
 
 If your language isn't listed, tap **My language isn't listed**. You can still make boards: record each word with your own voice, and the board plays your recordings.
 
 ### Voice
 
-![The Choose a voice step on a tablet: the natural voice Ella, recommended and chosen, downloading at 40 %, and This device's own voice in use for now](img/setup-voice-1x.webp)
+![The Choose a voice step on a tablet: the natural voice Ella, recommended and chosen, downloading, 40% done, and This device's own voice in use for now](img/setup-voice-1x.webp)
 
 Choose how the child will sound in each language. Tap a voice to hear it.
 
@@ -60,7 +60,7 @@ You can change the voice at any time. See [Voices](voices.md).
 
 ![The How will Sam choose buttons? step on a tablet: Touching the screen, three answers about how the child touches the screen, and Try it now](img/setup-touch-1x.webp)
 
-Amalino is used by touching the screen. Other ways of choosing are shown as **Coming in a later version**.
+For now, the child uses Amalino by touching the screen. Other ways of choosing are marked "**Coming in a later version**".
 
 Then answer **How does your child touch the screen?**
 
@@ -103,7 +103,7 @@ Then tap **Create boards**.
 
 ## After setup
 
-The **All set!** page shows once more how to open the grown-up settings, and gives you a first tip to try today. It also has **Lock this device to the app** and a **Daily tip** switch.
+The **All set!** page shows once more how to open the grown-up settings, and gives you a first tip to try today. It also has **Lock this device to the app** (the same instructions as **Keep the child in the app** in the grown-up settings) and a **Daily tip** switch.
 
 Tap **Start talking**. The board opens, ready for the child.
 

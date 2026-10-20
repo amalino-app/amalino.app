@@ -3,7 +3,7 @@
 
 The board is the screen the child uses all day. Grown-up settings are locked away, so the child can explore it freely.
 
-![The child's board on a tablet: the top bar with Sam's name, the EN and DA buttons, the keyboard and the lock; the empty message bar with Delete, Forms and Clear; 36 coloured word buttons; and the phrase row with favourites, stop, help me, two phrases and More](img/board-1x.webp)
+![The child's board on a tablet: the top bar with Sam's name, the EN and DA buttons, the keyboard and the lock; the empty message bar with Delete, Forms and Clear; 36 coloured word buttons; and the phrase row with ★ Favourites, stop, help me, two phrases and More](img/board-1x.webp)
 
 ## The parts of the screen
 
@@ -28,7 +28,7 @@ You can change how this works in **Settings → Message bar**: for example, spea
 
 ![The word-forms menu over the board on a tablet: after "I want", the forms want, wants, wanting and wanted as big buttons](img/word-forms-1x.webp)
 
-Words change: "dog" and "dogs", "go" and "went", "big" and "bigger". The word-forms menu shows the other forms of a word as big buttons. A tap on a form puts it in the message and says it. The plain word is always first, so a form can be turned back.
+Words change: "dog" and "dogs", "go" and "went", "big" and "bigger". The word-forms menu shows the other forms of a word as big buttons. A tap on a form puts it in the message and says it. The plain word is always first, so the child can always go back to it.
 
 There are three ways to open it:
 
@@ -36,7 +36,7 @@ There are three ways to open it:
 - **Hold the message bar** to change the last word.
 - Tap **Forms** next to the message bar. It changes the last word, and is greyed out when that word has no other forms.
 
-If the child uses a **Hold time** (in **Settings → Touch and access**), holding a word only says it. Then **Forms** is the way to the word forms.
+If the child uses a **Hold time** (in the grown-up settings → **Settings** → **Touch and access**), holding a word just says it. To open word forms, tap **Forms** instead.
 
 The menu is on in every language. To turn it off, go to **Settings → Message bar → Word forms**.
 

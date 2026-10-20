@@ -24,12 +24,12 @@ If there's no copy outside the device, or the last one is more than a month old,
 
 ![History and backups on a tablet with the Backup password question: the password, Repeat password, Cancel and OK](img/export-1x.webp)
 
-1. On the old device: **Settings → History and backups → Export backup**, and choose a password.
+1. On the old device: open the grown-up settings, then **History and backups** (under **Data**) → **Export backup**, and choose a password.
 2. Send the file to the new device with AirDrop, Quick Share, email, a cloud drive or a USB cable.
 3. On the new device, install Amalino. On the first screen of setup, tap **I already use Amalino**, then **Restore a backup file**, and **Choose file**.
 4. Type the password.
 
-To restore on a device that's already set up, use **Restore from a file** in **History and backups**. All boards, recordings and logs on the device are replaced; Amalino backs up the current state first.
+To restore on a device that's already set up, use **Restore from a file** in **History and backups**. All boards, recordings and logs on the device are replaced; Amalino first makes a backup of what's on the device now.
 
 An automatic backup from another device can't be restored: it only opens on the device that made it. Use a backup exported with a password.
 
@@ -59,10 +59,10 @@ When you import a board, check that its words are in places the child already kn
 
 ![Print boards on a tablet: Paper size A4, Colour, Show words under pictures, Include folders, Cut-out cards, Laminate-friendly, and Print or save PDF](img/print-1x.webp)
 
-- **Paper size A4**
-- **Colour**
-- **Show words under pictures**
-- **Include folders**
+- **Paper size A4**: the pages are A4.
+- **Colour**: turn it off to print in black and white.
+- **Show words under pictures**: the word is printed under each picture.
+- **Include folders**: the folders' pages are printed too, not only the main board.
 - **Cut-out cards**: single pictures to cut out.
 - **Laminate-friendly**: the core page only, with strong borders and a wide margin.
 

@@ -1,11 +1,11 @@
 <!-- description: How Amalino organises words: core words in fixed places, folders, board sizes, vocabulary levels, and showing hidden words over time. -->
 # Words and folders
 
-Amalino starts with a full vocabulary in seven languages: about 2,500 words. Not all of them are shown at once. This page explains how the words are organised and how to show more as the child grows.
+Amalino comes with about 2,500 words in each of its seven languages. You don't show them all at once. This page explains how the words are organised and how to show more as the child grows.
 
 ## Core words and folders
 
-The **main board** holds the core words: small, everyday words like "I", "want", "more", "go", "not", "help" and "like". A few hundred core words make up most of what people say every day, so the child can say a lot with them.
+The **main board** holds the core words: small, everyday words like "I", "want", "more", "go", "not", "help" and "like". About 200 core words make up most of what people say every day, so the child can say a lot with them.
 
 **Folders** hold the rest: food, places, people, feelings, toys and more. A folder button has a folded corner and opens a page of related words.
 
@@ -20,7 +20,7 @@ The board size (**Grid size**) is how many buttons fit on one page:
 - **60**: smaller, more words on one page
 - **84**: small, for confident users
 
-Setup suggests a size from the child's age and touch. Each device offers only the sizes where every button stays at least 44 points across, a comfortable size to tap.
+Setup suggests a size from the child's age and touch. Each device offers only the sizes where every button stays at least 44 points across (about 7 mm, a comfortable size for a finger).
 
 Try to keep the same size. Changing it moves words to new places, and the child has to learn them again. Amalino asks you to confirm and makes a backup first. Grow the board by showing more words instead.
 
@@ -46,7 +46,7 @@ If you've shown or hidden words in folders yourself, Amalino asks **Keep your ow
 
 Each word is either **shown** to the child or **hidden**. A hidden word's place looks empty to the child, and nothing else moves.
 
-To see and change them, open the grown-up settings and choose **Edit this board**. Hidden words appear in their places with a dark veil and a crossed-out eye. Tap one, and in its editor turn on **Shown to the child**, then tap **Done**. This works the same inside folders.
+To see and change them, open the grown-up settings and choose **Edit this board**. Hidden words appear in their places, shaded dark and with a crossed-out eye. Tap one, and in its editor turn on **Shown to the child**, then tap **Done**. This works the same inside folders.
 
 In modelling mode, a folder page works the same way: hidden words show faded, and the eye in the modelling line shows all the words in that folder at once.
 

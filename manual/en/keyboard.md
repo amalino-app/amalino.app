@@ -15,11 +15,11 @@ Tap the **keyboard** button in the top bar. To go back to the pictures, tap the 
 - **Space** finishes the word.
 - **Backspace** deletes a letter. Hold it to keep deleting.
 - **Speak** says the whole message.
-- **123** opens the numbers and marks, including the language's own (¿ ¡ in Spanish, « » in Danish, Russian and Ukrainian, „ “ in Lithuanian, ؟ ، in Arabic). **ABC** goes back to the letters.
+- **123** opens numbers and punctuation, including each language's own marks (¿ ¡ in Spanish, « » in Danish, Russian and Ukrainian, „ “ in Lithuanian, ؟ ، in Arabic). **ABC** goes back to the letters.
 
 The message bar's **Delete** and **Clear** work as on the board.
 
-On a phone, touching a letter shows it larger above the finger, so the child can see which key they're on before lifting. This isn't shown when the board is set to activate on release with a hold time, because the key already darkens while it's held.
+On a phone, touching a letter shows it larger above the finger, so the child can see which key they're on before lifting. This doesn't happen when **Activate when the finger lifts** and a **Hold time** are on, because then the key already darkens while it's held.
 
 ## Word suggestions
 
@@ -33,7 +33,7 @@ They are made on the device; nothing is sent anywhere.
 
 Some families turn suggestions off while a child practises spelling: **Settings → Keyboard → Word suggestions**.
 
-If **Sentence from first letters** is on (in **Settings → Keyboard**), typing first letters like "iwgp" can offer "I want to go to the park" in a free slot. The child picks it or ignores it.
+If **Sentence from first letters** is on (in **Settings → Keyboard**), typing first letters like "iwgp" can offer "I want to go to the park" as an extra suggestion. The child picks it or ignores it.
 
 ## Letter order
 
@@ -46,7 +46,7 @@ If **Sentence from first letters** is on (in **Settings → Keyboard**), typing 
 
 On a phone, a language with many letters gives narrow keys. **Settings → Keyboard → Key size on this phone**:
 
-- **Automatic** (the default) follows the touch settings: if the child needs bigger buttons or taps are shaky, long rows of letters are split in two, keeping the letter order, so every key is at least 40 points wide.
+- **Automatic** (the default) follows the touch settings: if the child needs bigger buttons or taps are shaky, long rows of letters are split in two, keeping the letter order, so every key is at least 40 points (about 6 mm) wide.
 - **Standard** always keeps the usual rows.
 - **Larger keys** always splits long rows.
 
@@ -54,7 +54,7 @@ When a phone is turned sideways, the keys are already wide, so rows aren't split
 
 ## When the phone is turned sideways
 
-If the board is set to landscape on a phone, the keyboard needs the whole height. **Stop** and **help me** then move to the end of the suggestion row, in the same place every time. The full phrase row returns when you go back to the board.
+If the board is set to landscape on a phone, the keyboard needs the whole height. "**Stop**" and "**help me**" then move to the end of the suggestion row, in the same place every time. The full phrase row returns when you go back to the board.
 
 > **Tip:** Model typing too. Type a word slowly while you say it, then tap **Speak**.
 

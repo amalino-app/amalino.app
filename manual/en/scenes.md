@@ -1,7 +1,7 @@
-<!-- description: Make a scene in Amalino: take a photo, crop it, choose where its button goes, and draw areas that speak, with the word shown on tap. -->
+<!-- description: Make a scene in Amalino: take a photo, crop it, choose where its button goes, and draw talking spots, with the word shown on tap. -->
 # Scenes
 
-A **scene** is a photo with areas that speak: the playground with the swing and the slide, the kitchen table, grandma's garden. The child taps the swing and hears "swing". Scenes work well for young children and for talking about real places and moments.
+A **scene** is a photo with talking spots, areas that speak when the child taps them: the playground with the swing and the slide, the kitchen table, grandma's garden. The child taps the swing and hears "swing". Scenes work well for young children and for talking about real places and moments.
 
 ## Making a new scene
 
@@ -19,19 +19,19 @@ The scene then opens, ready for you to draw its areas. The grown-up settings sta
 Amalino never puts a new button anywhere on its own. **Where should it go?** shows the board:
 
 - Free cells are highlighted, and the first one is already chosen. Tap **Put it here**, or tap another free cell first.
-- A cell that holds a hidden word says so, for example "Hidden word: 'jump', appears at level 3", and can't be chosen: that word will appear there later.
+- A cell that holds a hidden word says so and can't be chosen: that word will appear there later. In a folder, for example, it can say "Hidden word: 'jump', appears at level 3".
 - One cell is marked **Kept free for ★ Favourites**.
 - **Put it in Favourites instead** puts the button in the Favourites folder.
 - If the board is full, Amalino says **This board is full.** Choose **Put it in Favourites instead** or **Choose another board**.
 
 **Back** returns to the name. If you leave without placing the button, Amalino asks **Discard this scene?** and deletes the photo only if you confirm.
 
-## Drawing areas that speak
+## Drawing talking spots
 
-In the app, an area that speaks is called a **talking spot**. When a scene has no areas yet, a card on the photo says what to do.
+A **talking spot** is an area of the photo that speaks when the child taps it. When a scene has no talking spots yet, a card on the photo says what to do.
 
 - **A box**: drag a box over the thing with one finger. Type the word (or record it), then tap **Save**.
-- **An odd shape**: tap **Draw a shape**, tap the corners around the thing one by one, then tap **Done**. A shape needs at least three corners.
+- **Any other shape**: tap **Draw a shape**, tap the corners around the thing one by one, then tap **Done**. A shape needs at least three corners.
 - **Change an area**: hold it until its editor opens. You can change the word, record your voice, or **Delete** it.
 - **Zoom**: pinch with two fingers to zoom the photo while you draw small areas. One finger always draws.
 
@@ -41,7 +41,7 @@ The buttons at the top of the scene editor:
 - **Show touch areas**: shows you how big each area is to touch, with the touch settings applied.
 - **Word on tap**: shows the word near the area while it's spoken (on by default).
 - **Words always shown**: shows every area's word all the time (off by default).
-- **Change crop**: crops the photo again. Areas that end up outside the crop are counted, and come back if you widen it.
+- **Change crop**: crops the photo again. Amalino tells you how many talking spots fall outside the new crop. They aren't deleted, and they come back if you make the crop bigger.
 
 On small screens these buttons wrap onto two or three rows.
 

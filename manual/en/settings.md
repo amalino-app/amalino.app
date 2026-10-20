@@ -1,9 +1,9 @@
 <!-- description: Every screen in Amalino's grown-up settings explained: modelling, words, voices, touch, display, board layout, keyboard, suggestions, lock and data. -->
 # Settings, screen by screen
 
-Hold the lock at the top of the board for 3 seconds and answer the sum on the number keys to open the grown-up settings. They're in four groups: **Using it together**, **Boards and words**, **Settings** and **Data**. This page goes through them in the order you see them.
+Hold the lock at the top of the board for 3 seconds and answer the sum on the number keys to open the grown-up settings. They're in four groups: **Using it together**, **Boards and words**, **Settings**, and **Data**. This page goes through them in the order you see them. In this manual, "Settings → …" means the **Settings** group inside the grown-up settings, not your device's Settings app.
 
-![The grown-up tools on a tablet: a modelling tip, Search settings, Finish setting up, the Using it together group with Modelling mode, Daily coaching, Progress and Goals, then Boards and words](img/settings-1x.webp)
+![The grown-up settings on a tablet: a modelling tip, Search settings, Finish setting up, the Using it together group with Modelling mode, Daily coaching, Progress and Goals, then Boards and words](img/settings-1x.webp)
 
 Most screens have a short tip, **Why this matters**.
 
@@ -19,11 +19,11 @@ Can't remember where something is? Tap **Search settings** at the top and type a
 
 **Edit** changes the board. **Model** is for talking with your child using the board: you tap words while you talk, to show how. Your taps speak and count as yours, never as the child's words.
 
-The quickest way in: while the grown-up settings are open, tap **Model** on the board's top bar (on a phone, the icon with the mortarboard). The **Modelling mode** entry in the menu does the same. A line at the top says "Modelling: you are showing, the child is watching". In that line, **Show me where** finds a word for you: type it, and Amalino shows the path to it, button by button.
+The quickest way in: while the grown-up settings are open, tap **Model** on the board's top bar (on a phone, the graduation-cap icon). The **Modelling mode** entry in the menu does the same. A line at the top says "Modelling: you are showing, the child is watching". In that line, **Show me where** finds a word for you: type it, and Amalino shows the path to it, button by button.
 
-- **Hidden words** appear faded, with a small crossed-out eye, in the places where they'll appear for the child. Tap them like any word, so your child hears and sees them long before they get them. The child still sees an empty space.
+- **Hidden words** appear faded, with a small crossed-out eye, in the places where they'll appear for the child. Tap them like any word, so your child hears and sees these words long before they appear on their own board. The child still sees an empty space.
 - **Show to your child**: hold a hidden word for a moment and choose **Show to your child** when you think they're ready. **Undo** puts it back.
-- **Hide, or a whole folder**: hold a word your child sees to get **Hide from your child**. Hold a folder button to show or hide the whole folder at once; a quick tap still opens it.
+- **Hide a word or a whole folder**: hold a word your child sees and choose **Hide from your child**. Hold a folder button to show or hide the whole folder at once; a quick tap still opens it.
 
 ![Holding the Food folder in modelling mode on a tablet: a menu at the bottom with Hide the whole folder, "Your child won't see food. The words inside stay as they are.", and Cancel](img/modelling-hold-1x.webp)
 
@@ -50,12 +50,12 @@ Use the numbers to choose what to model next, not to test the child.
 
 - **Edit this board**: see [Editing and moving buttons](editing.md). Showing and hiding words is done there too.
 - **Quick phrases**: see [Quick phrases and More](quick-phrases.md).
-- **Languages**: the main language and the other languages. Languages whose words are still being checked show a **Preview** tag, with a line on how to tell us about a wrong word. **English spelling** (UK or US) is for this device. **Translation review** lists words that still need review in each language, so you can check or correct them. **Translate without the internet** sets up offline translation for each of the child's other languages; see [Editing and moving buttons](editing.md).
+- **Languages**: the main language and the other languages. Languages whose words are still being checked show a **Preview** tag, with a line on how to report a wrong word. **English spelling** (UK or US) can be set separately on each device. **Translation review** lists words that still need review in each language, so you can check or correct them. **Translate without the internet** sets up offline translation for each of the child's other languages; see [Editing and moving buttons](editing.md).
 - **Make a topic page**: type a topic, like "birthday party", to get a ready page for it. It works on the device with about 20 everyday topics (birthday, doctor, park, bath time, bedtime, zoo, beach and more). You check the words before saving.
-- **Symbol sets**: the included ARASAAC pictures, the older Mulberry pictures some boards still use, your own photos, and an optional search of all ARASAAC pictures (about 13,000), which downloads a picture when you choose it. **Use the new pictures on this child's boards** updates built-in words that still have their original picture; your own pictures and photos are kept. ARASAAC is free for non-commercial use.
+- **Symbol sets**: the included ARASAAC pictures, the older Mulberry pictures some boards still use, your own photos, and an optional search of all ARASAAC pictures (about 13,000), which downloads a picture when you choose it. "**Use the new pictures on this child's boards**" swaps in the newer pictures for built-in words that still have their original picture. Your own pictures and photos are kept. ARASAAC is free for non-commercial use.
 - **Print boards**: see [Sharing and printing](sharing-and-printing.md).
 
-![Languages on a tablet: English as the main language, Danish ticked, the other languages each marked Preview with "Words not yet checked by a native speaker", the line to tell us about a wrong word, and Main language](img/languages-1x.webp)
+![Languages on a tablet: English as the main language, Danish ticked, the other languages each marked Preview with "Words not yet checked by a native speaker", the line to report a wrong word, and Main language](img/languages-1x.webp)
 
 ## Settings
 
@@ -105,7 +105,7 @@ How the board looks. Everything here is safe to try: nothing moves.
 ### Message bar
 
 - **Show the message bar**.
-- **Speak each word when tapped**: on by default. When off, words only go into the message until it's tapped.
+- **Speak each word when tapped** (on by default). When it's off, tapping a word only adds it to the message, and nothing is spoken until the message bar is tapped.
 - **Clear the message after speaking it**.
 - **Word forms**: hold a word to choose another form (dogs, went, bigger…). On in every language. See [The child's board](the-board.md).
 
@@ -119,7 +119,7 @@ Help that suggests words. It never speaks for your child, and the child always c
 
 - **Highlight likely next words**: gently outlines 2–3 buttons. Buttons never move. Learns only on this device.
 - **Pages for the moment**: suggests a page at a time of day, for example the Food page at lunchtime. It uses the time of day only, never your location or calendar. A card on the board offers the page; one tap opens it, and the child can ignore it. On its screen, turn on **Suggest pages for the moment**, then tap **Add meal-time suggestions (Food page)** or **Suggest a page at a time of day** to choose a page and a time.
-- **Listen to what I say**: while you switch the microphone on in the top bar, the device listens to what you say and highlights words that could answer. Speech is recognised on the device; audio is never saved or sent. It needs a one-time download of the speech recogniser.
+- **Listen to what I say**: when you turn on the microphone in the top bar, the device listens to what you say and highlights words the child could use to answer. Speech is recognised on the device; audio is never saved or sent. It needs a one-time download of the speech recogniser.
 
 ![Pages for the moment on a tablet: Suggest pages for the moment turned on, the Food page at breakfast 07:00–08:30, lunch 11:30–13:00 and dinner 17:30–19:00, and Suggest a page at a time of day](img/context-1x.webp)
 
@@ -135,7 +135,7 @@ Help that suggests words. It never speaks for your child, and the child always c
 - **History and backups**: undo any change, make a backup now, export a backup with a password, or restore one. See [Sharing and printing](sharing-and-printing.md).
 - **Share boards (Open Board Format)**: move boards to and from other AAC apps. See [Sharing and printing](sharing-and-printing.md).
 - **Children**: each child has their own boards and words. **Add a child** for a brother or sister on the same device.
-- **About and licences**: privacy, a link to the **Privacy policy**, the licences of the pictures and voices, and feedback. **Diagnostics** at the end shows technical details, such as how fast a tap turns into speech, if we ever ask you for them.
+- **About and licences**: privacy, a link to the **Privacy policy**, the licences of the pictures and voices, and feedback. **Diagnostics**, at the end, shows technical details such as how fast a tap turns into speech. I may ask you for these if something isn't working.
 
 ## Coming later
 

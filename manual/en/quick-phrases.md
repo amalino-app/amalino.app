@@ -14,13 +14,13 @@ From left to right:
 5. **Second family phrase**
 6. **More**: opens the page with all the phrases.
 
-Every button keeps its place, in every language and on every page. **Stop** and **help me** are always there and always red: they're the urgent phrases. The four phrase buttons are all the same width, so a long phrase never pushes anything aside; it wraps onto a second line instead.
+Every button keeps its place, in every language and on every page. "**Stop**" and "**help me**" are always there and always red: they're the urgent phrases. The four phrase buttons are all the same width, so a long phrase never pushes anything aside; it wraps onto a second line instead.
 
 A tap on a phrase says it straight away. It doesn't go into the message bar.
 
 ## Choosing the two family phrases
 
-Open the grown-up settings and choose **Quick phrases**. Under **On the board**, pick the **First phrase** and the **Second phrase** for the slots next to stop and help me. Choose the two the child needs most, for example "I need a break" and "I don't like it".
+Open the grown-up settings and choose **Quick phrases**. Under **On the board**, pick the **First phrase** and the **Second phrase** for the slots next to "stop" and "help me". Choose the two the child needs most, for example "I need a break" and "I don't like it".
 
 ![Quick phrases on a tablet: Show your phrases and More, the First phrase "I need a break" and Second phrase "I don't like it", and the 12 places of the phrase page with Add](img/quick-1x.webp)
 
@@ -50,7 +50,7 @@ On small phones, the ★ button may show the star without the word. It does the 
 
 ## Hiding the family phrases
 
-If the child is distracted by the row, turn off **Show your phrases and More** in **Quick phrases**. Your two phrases and **More** disappear, but **stop** and **help me** always stay on the board, in the same places: they're often the most important words a child has. **★ Favourites** stays too.
+If the child is distracted by the row, turn off **Show your phrases and More** in **Quick phrases**. Your two phrases and **More** disappear, but "**stop**" and "**help me**" always stay on the board, in the same places: they're often the most important words a child has. **★ Favourites** stays too.
 
 > **Tip:** Model "stop" and "help me" in calm moments too, not only when things go wrong.
 

@@ -7,7 +7,7 @@ The voice is the child's voice. Let the child hear a few and choose the one they
 
 - **Natural voices**: ten voices (Ella, Mila, Nora, Sofi, Ida, Leo, Theo, Adam, Omar and Ben) that sound the most human. Each of them speaks all seven of Amalino's languages. One download covers all of them, and they work offline afterwards.
 - **This device's own voice**: the voices that come with the phone or tablet. No download. Some may need the internet; Amalino says so under the voice.
-- **Personal Voice** (iPhone and iPad, iOS 17 or newer): a voice you made in the device's settings under **Accessibility → Personal Voice**. Amalino asks for permission to use it. Android has no Personal Voice: to keep a family member's voice, record words instead.
+- **Personal Voice** (iPhone and iPad, iOS 17 or later): a voice you made in the device's settings under **Accessibility → Personal Voice**. Amalino asks for permission to use it. Android has no Personal Voice: to keep a family member's voice, record words instead.
 - **Your recordings**: record any word in your own voice in the button editor. Recordings play instead of the app's voice. See [Editing and moving buttons](editing.md).
 
 Tap a voice to hear it, then tap **Use**.
@@ -27,7 +27,7 @@ To free space, remove the natural voices from the device; the words use the devi
 ## How the voice sounds
 
 - **Speaking speed**: slower or faster.
-- **Voice age (natural voices)**: **Adult**, **Older child** or **Young child**, with a **Strength** slider. It raises the pitch and changes the voice's character. It will sound like a small adult more than a real child; try what the child likes.
+- **Voice age (natural voices)**: **Adult**, **Older child** or **Young child**, with a **Strength** slider. It raises the pitch and changes the voice's character. It will sound more like a small adult than a real child, so see what the child likes.
 - **Pitch**: only for the device's own voices, so it appears only while one of them is speaking. Natural voices use **Voice age** instead.
 - **Volume**.
 - **Lower other sound when your child speaks**: music and other apps get quieter **While speaking** or **While Amalino is open**, so the words are easier to hear.
@@ -38,13 +38,13 @@ You'll find this under **Advanced** at the end of **Speech and voices**. To spea
 
 ## The child's name
 
-In the grown-up settings, choose the child's name (for example **Jev's name**):
+In the grown-up settings, choose the child's name (for example **Sam's name**):
 
 - write the name the way it's written in each language, or a short form;
 - hear how each voice says it;
 - if it sounds wrong, type in **Spoken as** how it sounds, for example "Shawn" for Sean.
 
-If a word is still wrong, record it in your own voice instead.
+If it still sounds wrong, record the name in your own voice instead.
 
 ## No voice for a language
 

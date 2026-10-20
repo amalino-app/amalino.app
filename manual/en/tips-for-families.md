@@ -8,7 +8,7 @@ Children learn to use a talking app the way they learn to talk: by seeing and he
 **Modelling** means tapping words on the device while you talk. You say "Let's go **out**", and tap **go** and **out**.
 
 - Model a word or two at a time; you don't have to tap every word you say.
-- Don't ask the child to copy you, and don't quiz them ("Show me *cup*"). Just use it.
+- There's no need to ask the child to copy you or to quiz them ("Show me *cup*"). Just use it yourself, and let them watch.
 - Tap **Model** on the top bar (with the grown-up settings open) so your taps aren't counted as the child's words. Hidden words show faded then, so you can model them before your child has them. It switches itself off two minutes after your last tap.
 
 ## Start small
@@ -19,7 +19,7 @@ Children learn to use a talking app the way they learn to talk: by seeing and he
 
 ## Wait
 
-After you model, pause for about ten seconds and look at the child expectantly. Give them time to answer, with the device, a sound, a gesture or a word. Every way of communicating counts.
+After you model, pause for about ten seconds and look at the child, as if you're waiting for their answer. Give them time to answer, with the device, a sound, a gesture or a word. Every way of communicating counts.
 
 ## Keep it with the child
 
@@ -27,11 +27,11 @@ The device is the child's voice. Keep it within reach all day: at meals, in the 
 
 ## Use every language
 
-Speak your home language with the child, and switch the board to it with one tap. Children whose device didn't work in their home language used it far less. Every word is in the same place in every language, so switching doesn't mean learning the board again.
+Speak your home language with the child, and switch the board to it with one tap. Children use their device much more when it speaks their home language. Every word is in the same place in every language, so switching doesn't mean learning the board again.
 
 ## Everyone, the same way
 
-Show grandparents, babysitters and friends how the child uses the app; a two-minute demonstration in person helps more than any leaflet. Agree who changes the board, and tell each other: surprises in where words are confuse the child.
+Show grandparents, babysitters and friends how the child uses the app; a two-minute demonstration in person helps more than any leaflet. Agree who changes the board, and tell each other when you do. If words suddenly move, the child can get confused.
 
 ## Common worries
 

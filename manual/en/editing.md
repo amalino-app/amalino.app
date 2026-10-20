@@ -15,14 +15,14 @@ You can change the hold time, the PIN and the automatic lock under **Lock and ke
 
 Choose **Edit this board**. The board shows a line at the top: "Editing: tap a cell to change it. Words never move by themselves." The top bar now has **Undo**, **Redo** and **Done**.
 
-![The board in edit mode on a tablet: the line "Editing: tap a cell to change it. Words never move by themselves.", Undo, Redo and Done in the top bar, and the hidden word "to" with a dark veil and a crossed-out eye](img/edit-mode-1x.webp)
+![The board in edit mode on a tablet: the line "Editing: tap a cell to change it. Words never move by themselves.", Undo, Redo and Done in the top bar, and the hidden word "to" shaded dark, with a crossed-out eye](img/edit-mode-1x.webp)
 
 - Tap a button to edit it.
 - Tap an empty cell and choose **Add a word** or **Add a folder**.
 - Open folders and edit their buttons the same way.
 - Tap **Done** when you've finished.
 
-Hidden words show in their places with a dark veil and a crossed-out eye, so you always see the whole board while editing.
+Hidden words show in their places, shaded dark and with a crossed-out eye, so you always see the whole board while editing.
 
 ## The button editor
 
@@ -35,12 +35,12 @@ Hidden words show in their places with a dark veil and a crossed-out eye, so you
 - **Picture**: **Choose picture** searches the built-in pictures, and **More symbol sets (online)** searches other free symbol sets on the internet; only your search words are sent. **Take photo** and **Choose photo** use your own. Photos work best for people, pets and the child's own things.
 - **Voice**: **Record voice** records the word in your own voice; **Listen** plays it back; **Remove recording** goes back to the app's voice.
 - **Spoken as**: if the voice says a word wrongly, type how it sounds, for example "Shawn" for Sean.
-- **Use my recording in sentences too**: normally your recording plays when the button is tapped by itself, and the app's voice says the word inside sentences. Turn this on for sounds, songs or words the voice can't say.
+- **Use my recording in sentences too**: normally, your recording plays only when the child taps that one button. Inside a sentence, the app's voice says the word. Turn this on for sounds, songs or words the voice can't say.
 - **Shown to the child**: on, the child sees and uses the word; off, its place looks empty to the child and nothing moves. See [Words and folders](words-and-folders.md).
 - **Button style**: the **Word-type colour**, **Colour as border only**, **Show the word**, **Label above the picture** and **Text size**. **Use this style for the whole page** applies it to every button on the page.
 - **Word type**: decides the button's colour (for example, actions are green and describing words blue).
 
-For a **new** word or folder, tap **Add** at the bottom to put it on the board. It stays off until the button has a name or a picture. The **✕** cancels: nothing is added, and a photo or recording you made for it is thrown away.
+For a **new** word or folder, tap **Add** at the bottom to put it on the board. **Add** stays greyed out until the button has a word or a picture. The **✕** cancels: nothing is added, and a photo or recording you made for it is thrown away.
 
 When you edit an **existing** button, your changes apply as you make them; tap **Done** (or the **✕**) to close.
 
@@ -48,14 +48,14 @@ When you edit an **existing** button, your changes apply as you make them; tap *
 
 ![The top of the button editor for "want" on a tablet: the English word, and the empty Danish field with Translate at its end and the note "Optional. If empty, the button shows the word as written above."](img/editor-translate-1x.webp)
 
-**Translate** works on the device, without the internet, once a language is set up. Set it up once per language in **Settings → Languages**, under **Translate without the internet**:
+**Translate** works on the device, without the internet, once a language is set up. Set it up once for each language: in the grown-up settings, open **Languages** (under **Boards and words**), then **Translate without the internet**:
 
 - **Android**: tap the language and agree to download Google's translation model, about 30 MB per language. No words from the app are sent.
 - **iPhone and iPad**: this needs iOS 26 or later. The languages come from Apple: open the device's **Settings → Apps → Translate → Downloaded Languages**, download the languages, then come back to Amalino.
 
 Each language shows whether it's ready. Where the device can't do it, it says **Not available on this device.**
 
-![Translate without the internet in Settings → Languages: what Translate does, and Danish marked "Ready on this device. Translate works without the internet when you edit a word."](img/offline-translate-1x.webp)
+![Translate without the internet in Languages: what Translate does, and Danish marked "Ready on this device. Translate works without the internet when you edit a word."](img/offline-translate-1x.webp)
 
 ## Folders
 
