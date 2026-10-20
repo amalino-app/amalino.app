@@ -93,12 +93,35 @@ bdi a, bdi { overflow-wrap: anywhere; }
 
 /* Header */
 .site-header { background: var(--surface); border-block-end: 1px solid var(--divider); }
-.header-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-block: 12px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.3rem; }
+/* Two rows in every language and at every width: the brand and the language menu on top, the menu below.
+   The menu's labels differ a lot in length (Russian is twice as long as English), so a one-row header
+   broke in some languages: the language button dropped to a row of its own. On small screens the menu
+   is one row that scrolls sideways instead of four rows of buttons. */
+.header-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand lang" "nav nav";
+  align-items: center; gap: 8px 16px; padding-block: 12px 8px;
+}
+.brand { grid-area: brand; justify-self: start; display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.3rem; }
 .brand img { border-radius: 10px; display: block; }
+.site-nav { grid-area: nav; min-width: 0; }
 .site-nav ul { display: flex; flex-wrap: wrap; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.site-nav li { flex: none; }
+@media (max-width: 40rem) {
+  .site-nav { margin-inline: -16px; }
+  .site-nav ul {
+    flex-wrap: nowrap; overflow-x: auto; padding-inline: 16px 32px; padding-block-end: 4px; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  }
+  [dir="rtl"] .site-nav ul {
+    -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to left, #000 calc(100% - 32px), transparent);
+  }
+  .site-nav ul::-webkit-scrollbar { display: none; }
+  .site-nav a { white-space: nowrap; }
+}
 /* The language menu: a native <details>, so it opens with the keyboard and without script. */
-.lang-menu { position: relative; }
+.lang-menu { grid-area: lang; justify-self: end; position: relative; }
 .lang-menu summary {
   display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 14px; border-radius: 999px;
   border: 1px solid var(--divider); cursor: pointer; list-style: none; color: var(--text);

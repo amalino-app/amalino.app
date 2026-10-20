@@ -409,6 +409,21 @@ class BuiltSite(unittest.TestCase):
                         self.assertEqual(bs.external_refs(read(root, f), site), [], os.path.join(root, f))
         self.assertNotIn('fonts.googleapis', read(bs.STYLE))
 
+    def test_header_keeps_the_language_menu_next_to_the_brand(self):
+        # Owner bug 2026-10-20: in Russian the long menu pushed the language button to a row of its own. The header
+        # is a grid in every language: brand and language menu on top, the menu below (one scrolling row on phones).
+        css = read(bs.STYLE)
+        self.assertIn('grid-template-areas: "brand lang" "nav nav"', css)
+        for rule in ('.brand { grid-area: brand;', '.site-nav { grid-area: nav;', '.lang-menu { grid-area: lang;'):
+            self.assertIn(rule, css)
+        mobile = css.split('@media (max-width: 40rem) {', 1)[1].split('\n}\n', 1)[0]
+        self.assertIn('flex-wrap: nowrap; overflow-x: auto;', mobile)
+        self.assertIn('[dir="rtl"] .site-nav ul', mobile)
+        for loc in bs.LOCALES:
+            page = read(self.without, loc, 'index.html')
+            header = page.split('<header class="site-header">', 1)[1].split('</header>', 1)[0]
+            self.assertRegex(header, r'(?s)class="brand".*class="site-nav".*class="lang-menu"', loc)
+
     def test_decision31_guard_catches_external_resources_but_not_links(self):
         found = bs.external_refs(read(FIXTURE))
         self.assertIn('https://fonts.googleapis.com/css2?family=Inter', found)
