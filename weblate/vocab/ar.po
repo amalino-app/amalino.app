@@ -8133,7 +8133,7 @@ msgstr "حيوانات البيت والمزرعة"
 #. Arabic with full tashkeel, as the voice reads it: the vowelled form of «حيوانات البيت والمزرعة» (English: pets and farm animals). Leave it as it is when unsure.
 msgctxt "spoken:folder.pets"
 msgid "حيوانات البيت والمزرعة"
-msgstr "see 2b"
+msgstr "حَيَوَانَاتُ الْبَيْتِ وَالْمَزْرَعَة"
 
 #. English: birds and insects · folder · where: animals · level 1
 #. Picture: https://static.arasaac.org/pictograms/7134/7134_300.png
