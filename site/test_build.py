@@ -626,12 +626,13 @@ class Manual(unittest.TestCase):
             bs.md_to_html('no heading\n', str)
 
     def test_markdown_screenshots(self):
-        md = '# T\n\nText.\n![The board, with "I want"](img/board-phone.png)\nMore.\n'
+        md = '# T\n\nText.\n![The board, with "I want"](img/board-1x.webp)\nMore.\n'
         body = bs.md_to_html(md, str, lambda src, alt: f'<IMG {src} | {alt}>')[2]
-        self.assertIn('<p>Text.</p>\n<IMG img/board-phone.png | The board, with "I want">\n<p>More.</p>', body)
+        self.assertIn('<p>Text.</p>\n<IMG img/board-1x.webp | The board, with "I want">\n<p>More.</p>', body)
         with self.assertRaises(bs.BuildError):
             bs.md_to_html(md, str)  # no image drawer: images are only for manual pages
-        self.assertNotIn('<IMG', bs.md_to_html('# T\n\n![](img/x.png)\n', str, lambda s, a: '<IMG>')[2], 'alt is required')
+        self.assertNotIn('<IMG', bs.md_to_html('# T\n\n![](img/x-1x.webp)\n', str, lambda s, a: '<IMG>')[2], 'alt is required')
+        self.assertNotIn('<IMG', bs.md_to_html('# T\n\n![A](img/x.png)\n', str, lambda s, a: '<IMG>')[2], 'WebP only')
 
     def test_manual_screenshots_are_built_with_size_and_alt(self):
         folder = os.path.join(bs.MANUAL, 'en')
@@ -641,10 +642,14 @@ class Manual(unittest.TestCase):
             name = n[:-3]
             for alt, src in re.findall(r'^!\[([^\]]+)\]\((img/[^)]+)\)$', read(folder, n), flags=re.M):
                 page = read(self.out, 'en', bs.manual_path(name))
-                w, h = bs.png_size(os.path.join(folder, src))
+                w, h = bs.webp_size(os.path.join(folder, src))
+                src2 = src.replace('-1x.webp', '-2x.webp')
+                self.assertEqual(bs.webp_size(os.path.join(folder, src2)), (2 * w, 2 * h), src2)
                 prefix = '' if name == 'index' else '../'
-                self.assertIn(f'<img src="{prefix}{src}" alt="{html.escape(alt, quote=True)}" width="{w}" height="{h}"', page)
-                self.assertTrue(os.path.isfile(os.path.join(self.out, 'en', 'manual', src)), src)
+                self.assertIn(f'<img src="{prefix}{src}" srcset="{prefix}{src} 1x, {prefix}{src2} 2x" '
+                              f'alt="{html.escape(alt, quote=True)}" width="{w}" height="{h}"', page)
+                for f in (src, src2):
+                    self.assertTrue(os.path.isfile(os.path.join(self.out, 'en', 'manual', f)), f)
 
     def test_manual_rejects_unknown_links(self):
         link = bs.manual_link('en', 'scenes', ['index', 'scenes', 'editing'])

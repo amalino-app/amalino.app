@@ -36,8 +36,10 @@ python3 scripts/check_translations.py
 Open `site/dist/index.html` in a browser; links work from the file system too.
 
 The manual's pictures (`manual/en/img/`) are drawn from the app on a computer, not a device: the app's
-`test/tool/manual_screenshots_test.dart`, then reduced to small PNGs. A page shows one with
-`![what the picture shows](img/name.png)` on a line of its own.
+`test/tool/manual_screenshots_test.dart` (an iPad, 820 x 1180, drawn at 2x), then saved as full-colour WebP at
+2x (`name-2x.webp`) and half that size (`name-1x.webp`), lossless or quality 85, whichever is smaller. A page
+shows one with `![what the picture shows](img/name-1x.webp)` on a line of its own; the build adds the 2x
+picture for sharp screens. Limits: 250 KB per file, 4 MB for all of them.
 
 ## Licence
 

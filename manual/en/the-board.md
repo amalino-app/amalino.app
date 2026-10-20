@@ -3,7 +3,7 @@
 
 The board is the screen the child uses all day. Grown-up settings are locked away, so the child can explore it freely.
 
-![The child's board on a tablet: the top bar with Sam's name, the EN and DA buttons, the keyboard and the lock; the empty message bar with Delete, Forms and Clear; 36 coloured word buttons; and the phrase row with favourites, stop, help me, two phrases and More](img/board-tablet.png)
+![The child's board on a tablet: the top bar with Sam's name, the EN and DA buttons, the keyboard and the lock; the empty message bar with Delete, Forms and Clear; 36 coloured word buttons; and the phrase row with favourites, stop, help me, two phrases and More](img/board-1x.webp)
 
 ## The parts of the screen
 
@@ -26,7 +26,7 @@ You can change how this works in **Settings → Message bar**: for example, spea
 
 ## Word forms
 
-![The word-forms menu over the board on a tablet: after "I want", the forms want, wants, wanting and wanted as big buttons](img/word-forms-tablet.png)
+![The word-forms menu over the board on a tablet: after "I want", the forms want, wants, wanting and wanted as big buttons](img/word-forms-1x.webp)
 
 Words change: "dog" and "dogs", "go" and "went", "big" and "bigger". The word-forms menu shows the other forms of a word as big buttons. A tap on a form puts it in the message and says it. The plain word is always first, so a form can be turned back.
 

@@ -85,11 +85,13 @@ PICKERS = (('', 'home.h1'), ('translate', 'nav.translate'))
 # Page weight (decision 31 keeps everything self-hosted; this keeps it small): per HTML page and the whole site.
 MAX_PAGE_BYTES = 40_000
 MAX_SITE_BYTES = 700_000  # 600 KB for six languages, raised with the seventh (Lithuanian)
-# The manual's screenshots (manual/<lang>/img/*.png, published at /<lang>/manual/img/) are counted on their own:
-# each one and all of them together. MAX_SITE_BYTES covers everything else.
-MAX_IMAGE_BYTES = 150_000
-MAX_MANUAL_IMAGE_BYTES = 3_000_000
-MANUAL_IMAGE = re.compile(r'^!\[([^\]]+)\]\((img/[a-z0-9\-]+\.png)\)$')
+# The manual's screenshots (manual/<lang>/img/NAME-1x.webp and NAME-2x.webp, published at /<lang>/manual/img/)
+# are counted on their own: each file and all of them together. MAX_SITE_BYTES covers everything else. They are
+# self-hosted like everything else (decision 31); full-colour WebP at 1x and 2x (owner 2026-10-20, sharp on
+# Retina screens) replaced the 128-colour PNGs and their 150 KB / 3 MB limits.
+MAX_IMAGE_BYTES = 250_000
+MAX_MANUAL_IMAGE_BYTES = 4_000_000
+MANUAL_IMAGE = re.compile(r'^!\[([^\]]+)\]\((img/[a-z0-9\-]+-1x\.webp)\)$')
 
 # The public repository of the website, manual and translations (owner decision 33, relaxed 2026-10-14). Pages
 # link to it with [[link text]] in a string; no other github.com link is allowed.
@@ -573,7 +575,7 @@ def slugify(text):
 
 def md_to_html(md, link, image=None):
     """A small Markdown subset for the manual: # headings, paragraphs, - and 1. lists, > notes, inline marks,
-    and a screenshot on a line of its own: ![alt text](img/name.png), drawn by image(src, alt) (alt is required).
+    and a screenshot on a line of its own: ![alt text](img/name-1x.webp), drawn by image(src, alt) (alt is required).
     HTML comments are dropped; the first one may be <!-- description: ... -->. Returns (h1 text, description,
     html)."""
     m = re.match(r'\s*<!--\s*description:\s*(.*?)\s*-->', md, flags=re.S)
@@ -649,17 +651,19 @@ def manual_pages(loc):
 
 
 def manual_image(loc, name):
-    """The screenshot drawer for a manual page: a figure with the image's own size, lazily loaded; '-phone'
-    pictures get the narrower phone frame. The file must be in manual/<loc>/img/."""
+    """The screenshot drawer for a manual page: a figure with the 1x picture's size, its 2x twin in srcset,
+    lazily loaded. Both NAME-1x.webp and NAME-2x.webp (twice the size) must be in manual/<loc>/img/."""
     def draw(src, alt):
-        path = os.path.join(MANUAL, loc, src)
-        size = png_size(path) if os.path.isfile(path) else None
+        src2 = src[:-len('-1x.webp')] + '-2x.webp'
+        size, size2 = (webp_size(os.path.join(MANUAL, loc, s)) for s in (src, src2))
         if not size:
-            raise BuildError(f'manual/{loc}/{name}.md: {src} is not a PNG in manual/{loc}/img/')
+            raise BuildError(f'manual/{loc}/{name}.md: {src} is not a WebP in manual/{loc}/img/')
+        if size2 != (size[0] * 2, size[1] * 2):
+            raise BuildError(f'manual/{loc}/{name}.md: {src2} must be a WebP twice the size of {src}')
         here = '' if name == 'index' else '../'
-        kind = 'shot phone' if src.endswith('-phone.png') else 'shot'
-        return (f'<figure class="{kind}"><img src="{here}{src}" alt="{html.escape(alt, quote=True)}" '
-                f'width="{size[0]}" height="{size[1]}" loading="lazy" decoding="async"></figure>')
+        return (f'<figure class="shot"><img src="{here}{src}" srcset="{here}{src} 1x, {here}{src2} 2x" '
+                f'alt="{html.escape(alt, quote=True)}" width="{size[0]}" height="{size[1]}" loading="lazy" '
+                f'decoding="async"></figure>')
     return draw
 
 
@@ -788,7 +792,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
         if os.path.isdir(shots):
             os.makedirs(os.path.join(out, loc, 'manual', 'img'), exist_ok=True)
             for n in sorted(os.listdir(shots)):
-                if n.endswith('.png'):
+                if n.endswith('.webp'):
                     shutil.copyfile(os.path.join(shots, n), os.path.join(out, loc, 'manual', 'img', n))
         pages = []
         for name in names:
@@ -1270,11 +1274,31 @@ def check_seo(out, files, site, page_langs=None):
     expect(total <= MAX_SITE_BYTES, f'site is {total} bytes, over {MAX_SITE_BYTES}')
     shots = [os.path.join(d, n) for d, _ds, ns in os.walk(out) if shot(d) for n in ns]
     for p in shots:
-        expect(p.endswith('.png') and os.path.getsize(p) <= MAX_IMAGE_BYTES,
-               f'{os.path.relpath(p, out)}: a manual image must be a PNG of at most {MAX_IMAGE_BYTES} bytes')
+        expect(p.endswith('.webp') and os.path.getsize(p) <= MAX_IMAGE_BYTES,
+               f'{os.path.relpath(p, out)}: a manual image must be a WebP of at most {MAX_IMAGE_BYTES} bytes')
     images = sum(os.path.getsize(p) for p in shots)
     expect(images <= MAX_MANUAL_IMAGE_BYTES, f'manual images are {images} bytes, over {MAX_MANUAL_IMAGE_BYTES}')
     return errors
+
+
+def webp_size(path):
+    """(width, height) of a WebP (lossy VP8, lossless VP8L or extended VP8X), or None when the file is missing
+    or not a WebP."""
+    if not os.path.isfile(path):
+        return None
+    with open(path, 'rb') as f:
+        head = f.read(30)
+    if len(head) < 30 or head[:4] != b'RIFF' or head[8:12] != b'WEBP':
+        return None
+    kind = head[12:16]
+    if kind == b'VP8X':
+        return int.from_bytes(head[24:27], 'little') + 1, int.from_bytes(head[27:30], 'little') + 1
+    if kind == b'VP8 ' and head[23:26] == b'\x9d\x01\x2a':
+        return int.from_bytes(head[26:28], 'little') & 0x3FFF, int.from_bytes(head[28:30], 'little') & 0x3FFF
+    if kind == b'VP8L' and head[20] == 0x2F:
+        bits = int.from_bytes(head[21:25], 'little')
+        return (bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1
+    return None
 
 
 def png_size(path):

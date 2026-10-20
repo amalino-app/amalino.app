@@ -3,7 +3,7 @@
 
 Hold the lock at the top of the board for 3 seconds and answer the sum on the number keys to open the grown-up settings. They're in four groups: **Using it together**, **Boards and words**, **Settings** and **Data**. This page goes through them in the order you see them.
 
-![The grown-up tools on a tablet: a modelling tip, Search settings, Finish setting up, the Using it together group with Modelling mode, Daily coaching, Progress and Goals, then Boards and words](img/settings-tablet.png)
+![The grown-up tools on a tablet: a modelling tip, Search settings, Finish setting up, the Using it together group with Modelling mode, Daily coaching, Progress and Goals, then Boards and words](img/settings-1x.webp)
 
 Most screens have a short tip, **Why this matters**.
 
@@ -15,7 +15,7 @@ Can't remember where something is? Tap **Search settings** at the top and type a
 
 ### Modelling mode
 
-![The board in modelling mode on a tablet: the line "Modelling: you are showing, the child is watching" with Show me where and Done, "I want" in the message bar, and the hidden word "to" shown faded](img/modelling-tablet.png)
+![The board in modelling mode on a tablet: the line "Modelling: you are showing, the child is watching" with Show me where and Done, "I want" in the message bar, and the hidden word "to" shown faded](img/modelling-1x.webp)
 
 **Edit** changes the board. **Model** is for talking with your child using the board: you tap words while you talk, to show how. Your taps speak and count as yours, never as the child's words.
 
@@ -25,7 +25,7 @@ The quickest way in: while the grown-up settings are open, tap **Model** on the 
 - **Show to your child**: hold a hidden word for a moment and choose **Show to your child** when you think they're ready. **Undo** puts it back.
 - **Hide, or a whole folder**: hold a word your child sees to get **Hide from your child**. Hold a folder button to show or hide the whole folder at once; a quick tap still opens it.
 
-![Holding the Food folder in modelling mode on a tablet: a menu at the bottom with Hide the whole folder, "Your child won't see food. The words inside stay as they are.", and Cancel](img/modelling-hold-tablet.png)
+![Holding the Food folder in modelling mode on a tablet: a menu at the bottom with Hide the whole folder, "Your child won't see food. The words inside stay as they are.", and Cancel](img/modelling-hold-1x.webp)
 
 - **It ends by itself** two minutes after your last tap, and whenever the grown-up lock closes, so your child is never left in modelling mode. To end it yourself, tap **Done** or **Model** again.
 

@@ -15,7 +15,7 @@ Setup takes about five minutes. Everything you enter stays on the device, and yo
 
 ### Welcome
 
-![The Welcome step on a tablet: the Amalino logo, the App language buttons (English chosen), the note "Will this stop my child from learning to talk?" and Start setup](img/setup-welcome-tablet.png)
+![The Welcome step on a tablet: the Amalino logo, the App language buttons (English chosen), the note "Will this stop my child from learning to talk?" and Start setup](img/setup-welcome-1x.webp)
 
 Choose the **App language**: the language of the grown-up screens. You'll choose the child's languages in a later step.
 
@@ -23,7 +23,7 @@ If the child already uses Amalino on another device, tap **I already use Amalino
 
 ### About the child
 
-![The About the child step on a tablet: the name Sam, the age range 3–5 chosen and the question How does Sam communicate today?](img/setup-child-tablet.png)
+![The About the child step on a tablet: the name Sam, the age range 3–5 chosen and the question How does Sam communicate today?](img/setup-child-1x.webp)
 
 - **How old is your child?** The age range suggests a starting board size, vocabulary level and look. Any age is fine; even toddlers can start.
 - **How does your child communicate today?** This helps choose the first words.
@@ -31,7 +31,7 @@ If the child already uses Amalino on another device, tap **I already use Amalino
 
 ### Languages
 
-![The Which languages? step on a tablet: the main language, with English chosen and the other six languages each marked Preview](img/setup-languages-tablet.png)
+![The Which languages? step on a tablet: the main language, with English chosen and the other six languages each marked Preview](img/setup-languages-1x.webp)
 
 Choose the **Main language**, the one the child will use most, and tick any other languages the child hears every day. Amalino has seven: English, Danish, Russian, Ukrainian, Arabic, Spanish and Lithuanian.
 
@@ -45,7 +45,7 @@ If your language isn't listed, tap **My language isn't listed**. You can still m
 
 ### Voice
 
-![The Choose a voice step on a tablet: the natural voice Ella, recommended and chosen, downloading at 40 %, and This device's own voice in use for now](img/setup-voice-tablet.png)
+![The Choose a voice step on a tablet: the natural voice Ella, recommended and chosen, downloading at 40 %, and This device's own voice in use for now](img/setup-voice-1x.webp)
 
 Choose how the child will sound in each language. Tap a voice to hear it.
 
@@ -58,7 +58,7 @@ You can change the voice at any time. See [Voices](voices.md).
 
 ### How the child chooses
 
-![The How will Sam choose buttons? step on a tablet: Touching the screen, three answers about how the child touches the screen, and Try it now](img/setup-touch-tablet.png)
+![The How will Sam choose buttons? step on a tablet: Touching the screen, three answers about how the child touches the screen, and Try it now](img/setup-touch-1x.webp)
 
 Amalino is used by touching the screen. Other ways of choosing are shown as **Coming in a later version**.
 
@@ -86,7 +86,7 @@ If you added a name, you can say how it's written in each language and hear how 
 
 ### Summary
 
-![The summary step on a tablet: a preview of the board Sam will see and the grid sizes 20, 36 and 60, with 36 chosen](img/setup-summary-tablet.png)
+![The summary step on a tablet: a preview of the board Sam will see and the grid sizes 20, 36 and 60, with 36 chosen](img/setup-summary-1x.webp)
 
 The last step shows all your answers. Tap **Change** next to any of them.
 

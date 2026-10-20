@@ -22,7 +22,7 @@ Hidden words show in their places with a dark veil and a crossed-out eye, so you
 
 ## The button editor
 
-![The button editor for "want" on a tablet: the English and Danish words, Word forms, picture and photo buttons, Record voice, Spoken as, Shown to the child and the button style](img/editor-tablet.png)
+![The button editor for "want" on a tablet: the English and Danish words, Word forms, picture and photo buttons, Record voice, Spoken as, Shown to the child and the button style](img/editor-1x.webp)
 
 - **Word**: the word on the button, in the board's current language.
 - **The child's other languages**: below it, one field for each of the child's other languages, for example **Word (Danish)**. They're optional: an empty field shows the word as written above.
