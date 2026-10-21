@@ -1,0 +1,58 @@
+name: Wrong or missing word
+description: A word on the board is wrong, misspelled, in the wrong place or missing, or its picture doesn't fit.
+title: "[Word] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you! This form is in English only, but you are welcome to answer in your own language. To correct a translated word yourself, you can also use [Weblate](https://hosted.weblate.org/engage/amalino/).
+
+        **Privacy:** everything here is public. Please don't include your child's name, photos, voice recordings, screenshots that show them, or a backup file.
+  - type: input
+    id: word
+    attributes:
+      label: Word
+      description: The word as it is on the button now (or the word that is missing).
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: "e.g. Danish, Russian, Ukrainian, Arabic, Spanish, Lithuanian, English (UK or US)"
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Board or folder
+      description: Where the word is, or where you looked for it.
+      placeholder: "e.g. main board, Food folder"
+    validations:
+      required: false
+  - type: textarea
+    id: should
+    attributes:
+      label: What should it be?
+      description: The right word or spelling, and why if it helps (for example, the word children really use).
+    validations:
+      required: true
+  - type: dropdown
+    id: picture
+    attributes:
+      label: Is the picture wrong too?
+      options:
+        - "No, only the word"
+        - "Yes, the picture doesn't fit"
+        - "Only the picture is wrong"
+        - "Not sure"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I haven't included my child's name, photos, recordings or a backup file.
+          required: true

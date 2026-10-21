@@ -1,0 +1,67 @@
+name: Something doesn't work
+description: The app or the website does something wrong, crashes or doesn't respond.
+title: "[Problem] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this. This form is in English only, but you are welcome to answer in your own language, or to email hello@amalino.app instead.
+
+        **Privacy:** everything here is public. Please don't include your child's name, photos, voice recordings, screenshots that show them, or a backup file.
+
+        Tip: in the app, **About and licences > Report a problem** opens an email with the app version and your device already filled in.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What went wrong? An error message, if there was one.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen
+      description: What did you do just before? If you can make it happen again, list the steps.
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: false
+  - type: input
+    id: device
+    attributes:
+      label: Device and system version
+      placeholder: "e.g. iPad (9th generation), iPadOS 18.1 / Samsung Galaxy Tab S7, Android 13"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: In the app, under About and licences > Version.
+      placeholder: "e.g. 1.0.0 (1)"
+    validations:
+      required: false
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: The app's language and the board's language(s).
+      placeholder: "e.g. app in Danish, board in Danish and English"
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I haven't included my child's name, photos, recordings or a backup file.
+          required: true

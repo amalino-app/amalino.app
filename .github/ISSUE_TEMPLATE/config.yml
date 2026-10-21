@@ -1,0 +1,9 @@
+# The "New issue" chooser (owner 2026-10-21): only the forms below and these links, no blank issues.
+blank_issues_enabled: false
+contact_links:
+  - name: Report by email instead
+    url: mailto:hello@amalino.app?subject=Problem%20with%20Amalino
+    about: No GitHub account, or you'd rather write in your own language? Email hello@amalino.app. Please don't send your child's name, photos, recordings or a backup file.
+  - name: Correct a translation on Weblate
+    url: https://hosted.weblate.org/engage/amalino/
+    about: Fix the app's screens, the board words or this website's texts directly in your browser (a free account is enough).
