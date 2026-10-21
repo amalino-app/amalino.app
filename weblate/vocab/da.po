@@ -5,6 +5,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: da\n"
+"PO-Revision-Date: 2026-10-21 08:47+0000\n"
+"Last-Translator: \"amalino.app\" <hello@amalino.app>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/amalino/board-words/da/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 #. English: it · pronoun · where: core · level 1 · home board (core)
 #. Picture: https://static.arasaac.org/pictograms/31670/31670_300.png

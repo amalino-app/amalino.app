@@ -17,6 +17,12 @@ APP = {
     'da': [('about', 'Om'), ('hello', 'Hej {name}'), ('days.one', '{n} dag'), ('days.few', ''), ('days.other', '{n} dage')],
     'ru': [('about', 'О'), ('hello', 'Привет, {name}'), ('days.one', '{n} день'), ('days.few', '{n} дня'), ('days.other', '{n} дня')],
 }
+# The header fields Weblate added to weblate/vocab/da.po in its first pull request (#1).
+WEBLATE_HEADER = ('"PO-Revision-Date: 2026-10-21 08:47+0000\\n"\n'
+                  '"Last-Translator: \\"amalino.app\\" <hello@amalino.app>\\n"\n'
+                  '"Language-Team: Danish <https://hosted.weblate.org/projects/amalino/board-words/da/>\\n"\n'
+                  '"Plural-Forms: nplurals=2; plural=n != 1;\\n"\n'
+                  '"X-Generator: Weblate 2026.11.dev0\\n"\n')
 VOCAB_HEAD = ['id', 'english', 'text', 'class', 'folder', 'level', 'core', 'picture', 'fit', 'checked', 'note']
 VOCAB = {
     'en': [['apple', 'apple', 'apple', 'noun', 'food', '1', 'no', 'https://static.arasaac.org/pictograms/2462/2462_300.png', '', '', '']],
@@ -58,6 +64,19 @@ class Formats(unittest.TestCase):
         units, fuzzy = ws.parse_po(text)
         self.assertEqual(units, {'apple': 'æblet', 'pear': 'pære'})
         self.assertEqual(fuzzy, {'apple'})
+
+    def test_po_header_keeps_weblate_fields_in_their_order(self):
+        u = ws.Units()
+        u.text['pear'] = 'pære'
+        u.meta['pear'] = {'english': 'pear'}
+        keep = ws.po_header(ws.to_po(u, 'da').replace('"Language: da\\n"\n', '"Language: dk\\n"\n' + WEBLATE_HEADER))
+        self.assertEqual([n for n, _ in keep], ['Content-Type', 'Content-Transfer-Encoding', 'Language', 'PO-Revision-Date',
+                                                'Last-Translator', 'Language-Team', 'Plural-Forms', 'X-Generator'])
+        self.assertEqual(dict(keep)['Last-Translator'], '"amalino.app" <hello@amalino.app>')
+        text = ws.to_po(u, 'da', keep=keep)
+        self.assertIn('"Language: da\\n"\n' + WEBLATE_HEADER, text)  # the script's own fields are its own again
+        self.assertEqual(ws.parse_po(text)[0], {'pear': 'pære'})
+        self.assertEqual(ws.po_header('msgctxt "a"\nmsgid "a"\nmsgstr "b"\n'), [])
 
     def test_nested_json_is_flattened(self):
         self.assertEqual(ws.parse_json('{"a": {"b": "x", "c_one": "y"}, "d.e": "z"}')[0], {'a.b': 'x', 'a.c_one': 'y', 'd.e': 'z'})
@@ -151,6 +170,43 @@ class Sync(unittest.TestCase):
         # The Weblate files follow translations/ again; nothing is pending.
         self.assertEqual(json.loads(read(self.path('weblate/app/da.json')))['hello'], 'Hej {name}')
         self.assertEqual(ws.pending(self.root), [])
+
+    def weblate_po(self, *replace):
+        """Writes weblate/vocab/da.po as Weblate commits it: its header fields added, and the given changes."""
+        po = read(self.path('weblate/vocab/da.po')).replace('"Language: da\\n"\n', '"Language: da\\n"\n' + WEBLATE_HEADER)
+        for old, new in replace:
+            po = po.replace(old, new)
+        with open(self.path('weblate/vocab/da.po'), 'w', encoding='utf-8') as f:
+            f.write(po)
+        return po
+
+    def test_a_header_only_change_is_not_a_change(self):
+        po = self.weblate_po()
+        rep = ws.sync(self.root, write=False)
+        self.assertEqual((rep.taken, rep.refused, rep.conflicts, rep.notes, rep.stale), ([], [], [], [], []))
+        rep = ws.sync(self.root)
+        self.assertEqual(rep.written, [])
+        self.assertEqual(read(self.path('weblate/vocab/da.po')), po)
+
+    def test_rewrite_keeps_weblates_header(self):
+        po = self.weblate_po(('msgstr "æble"', 'msgstr "æblet"'))
+        rep = ws.sync(self.root)
+        self.assertEqual([(r, u) for r, u, _o, _n in rep.taken], [('weblate/vocab/da.po', 'apple')])
+        po = po.replace('max-length:4', 'max-length:5')  # the word's current length: the entries are the script's
+        self.assertEqual(read(self.path('weblate/vocab/da.po')), po)
+        self.assertIn('apple\tapple\tæblet\tnoun', read(self.path('translations/da/vocab.tsv')))
+        self.commit()
+        # A change from translations/ rewrites the entries; Weblate's header stays as it is.
+        vocab = read(self.path('translations/da/vocab.tsv')).replace('\tæblet\t', '\tæbler\t')
+        with open(self.path('translations/da/vocab.tsv'), 'w', encoding='utf-8') as f:
+            f.write(vocab)
+        self.assertEqual(ws.sync(self.root, write=False).stale, ['weblate/vocab/da.po'])
+        ws.sync(self.root)
+        self.assertEqual(read(self.path('weblate/vocab/da.po')), po.replace('msgstr "æblet"', 'msgstr "æbler"'))
+        # Right after a sync, --check is clean and a second sync writes nothing.
+        rep = ws.sync(self.root, write=False)
+        self.assertEqual((rep.taken, rep.refused, rep.conflicts, rep.notes, rep.stale), ([], [], [], [], []))
+        self.assertEqual(ws.sync(self.root).written, [])
 
     def test_translations_changes_reach_weblate(self):
         with open(self.path('translations/da/website.tsv'), 'w', encoding='utf-8') as f:

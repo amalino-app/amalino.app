@@ -27,7 +27,9 @@ The sync compares each text three ways: the Weblate file now, the Weblate file a
 blob is in `weblate/.synced`), and what `translations/` gives now. Changed only in Weblate: it goes into
 `translations/` if it passes the checks. Changed only in `translations/` (a GitHub pull request, or a new export
 from the app): the Weblate file follows. Changed on both sides differently: `translations/` wins and the Weblate
-text is printed, so nothing is lost without a trace. Refused and printed: an empty text where English has one,
+text is printed, so nothing is lost without a trace. The sync owns the texts, not the PO header: the fields Weblate adds on every
+commit (`PO-Revision-Date`, `Last-Translator`, `Language-Team`, `Plural-Forms`, `X-Generator`) stay as Weblate
+wrote them, so a sync after a Weblate pull request leaves them alone. Refused and printed: an empty text where English has one,
 different `{placeholders}`, a board word "—" (hiding a word is the owner's decision), a text Weblate marks "needs
 editing", and a plural form the app has no row for that differs from the "other" form.
 
