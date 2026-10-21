@@ -504,7 +504,7 @@ calibrate	Калібрування руху голови
 calibrateHint	Стеж за зірочкою головою
 cameraUnavailable	Камера недоступна
 dwellTime	Час затримки для вибору
-openVoices	Відкриті голоси (завантажити один раз, потім офлайн)
+openVoices	Безкоштовні голоси (завантажити один раз, потім офлайн)
 openVoicesSub	Нейронні голоси, що працюють на цьому пристрої. Дитячих голосів поки мало — виберіть той, що подобається дитині.
 from	Від
 lessonPages	Сторінки, надіслані вам
@@ -1124,3 +1124,97 @@ startupFailedBody	Повністю закрийте застосунок і ві
 languagePreview	Пробна версія
 languagePreviewNote	Слова ще можуть змінитися. Повідомте нам про неправильне слово.
 languagePreviewNoteEmail	Слова ще можуть змінитися. Повідомте нам про неправильне слово: {email}.
+hist.accessMethod	Як дитина вибирає
+hist.addButton	Додавання кнопки
+hist.addContextRule	Додавання підказки сторінки
+hist.addGoal	Додавання цілі
+hist.addHotspot	Додавання точки
+hist.addQuickPhrase	Додавання фрази
+hist.addWord	Додавання слова
+hist.changePicture	Заміна картинки
+hist.changeSetting	Зміна налаштування
+hist.childName	Ім'я дитини
+hist.coaching	Щоденні поради
+hist.confirmTranslation	Підтвердження перекладу
+hist.coreLayout	Оновлення розташування слів на дошці
+hist.createBoard	Створення дошки
+hist.createProfile	Створення профілю
+hist.cropScene	Обрізання фото
+hist.deleteButton	Видалення кнопки
+hist.deleteHotspot	Видалення точки
+hist.deleteQuickPhrase	Видалення фрази
+hist.deleteRule	Видалення підказки сторінки
+hist.displaySettings	Налаштування екрана
+hist.earlyMode	Перші кроки
+hist.editBoard	Зміна дошки
+hist.editButton	Зміна кнопки
+hist.editHotspot	Зміна точки
+hist.editQuickPhrase	Зміна фрази
+hist.gazeCalibration	Калібрування погляду
+hist.goBackAfterWord	Повернення після слова
+hist.headCalibration	Калібрування руху голови
+hist.hideButtons	Приховування кнопок
+hist.keyboardSettings	Налаштування клавіатури
+hist.languages	Мови
+hist.lessonPage	Надіслана сторінка
+hist.linkFolder	Прив'язка папки
+hist.loadVocabulary	Завантаження слів
+hist.messageSettings	Налаштування рядка повідомлення
+hist.moveButton	Переміщення кнопки
+hist.moveQuickPhrase	Переміщення фрази
+hist.nameCheck	Перевірка вимови імені
+hist.nameChecked	Ім'я перевірено
+hist.phrasePage	Сторінка фраз
+hist.primaryLanguage	Основна мова
+hist.quickPhraseUrgent	Термінова фраза
+hist.quickRow	Фрази на дошці
+hist.recordWord	Запис слова
+hist.recInSentences	Запис у реченнях
+hist.rejectLessonPage	Відхилення надісланої сторінки
+hist.removeFavouritesFolder	Видалення папки «Улюблене»
+hist.renameButton	Перейменування кнопки
+hist.retireMergedWords	Заміна застарілих слів
+hist.revealButtons	Показ кнопок
+hist.saveRecording	Збереження запису
+hist.scanSettings	Налаштування сканування
+hist.sceneOutlines	Показувати рамки
+hist.sceneWordOnTap	Слово при натисканні
+hist.sceneWordsAlways	Слова показані завжди
+hist.setup	Налаштування
+hist.speechSettings	Мовлення і голоси
+hist.spokenAs	Вимовляється як
+hist.styleBoard	Кольори дошки
+hist.styleButton	Колір кнопки
+hist.suggestionSettings	Підказки
+hist.touchSettings	Налаштування дотиків
+hist.translateWord	Переклад слова
+hist.updateVocabulary	Оновлення слів
+hist.useNewPictures	Перехід на нові картинки
+hist.vocabLevel	Рівень словника
+hist.wordForms	Форми слів
+hist.undoOf	Відмінено: {action}
+hist.restoreTo	Повернення до кроку: {action}
+hist.replan.zero	
+hist.replan.one	Дошку перебудовано на {n} кнопку
+hist.replan.two	
+hist.replan.few	Дошку перебудовано на {n} кнопки
+hist.replan.many	Дошку перебудовано на {n} кнопок
+hist.replan.other	Дошку перебудовано на {n} кнопки
+ctxRule.breakfast	Сніданок
+ctxRule.lunch	Обід
+ctxRule.dinner	Вечеря
+backupReason.daily	Щоденна резервна копія
+backupReason.manual	Створена вами
+backupReason.beforeRestore	Створена перед відновленням
+backupReason.replan	Створена перед перебудовою дошки
+backupReason.other	Резервна копія
+backupLine	{reason} · {kb} КБ
+credit.appCode	Код застосунку
+credit.vocab	Словник і розташування слів
+credit.frequency	Частотні списки слів
+credit.wordForms	Форми слів (допомога з граматикою)
+credit.speechRecognition	Розпізнавання мовлення (завантаження за бажанням)
+credit.speechEngine	Мовленнєвий рушій
+credit.opus	Аудіокодек Opus
+credit.stretch	Обробка віку голосу
+kbAccent	Наголос на останній літері

@@ -1124,3 +1124,97 @@ startupFailedBody	Luk appen helt, og åbn den igen. Sker det igen, så genstart 
 languagePreview	Prøveversion
 languagePreviewNote	Ordene kan stadig blive ændret. Fortæl os om et forkert ord.
 languagePreviewNoteEmail	Ordene kan stadig blive ændret. Fortæl os om et forkert ord: {email}.
+hist.accessMethod	Sådan vælger barnet
+hist.addButton	Tilføj knap
+hist.addContextRule	Tilføj sideforslag
+hist.addGoal	Tilføj mål
+hist.addHotspot	Tilføj område
+hist.addQuickPhrase	Tilføj sætning
+hist.addWord	Tilføj ord
+hist.changePicture	Skift billede
+hist.changeSetting	Skift indstilling
+hist.childName	Barnets navn
+hist.coaching	Daglig vejledning
+hist.confirmTranslation	Bekræft oversættelse
+hist.coreLayout	Ny opstilling af tavlen
+hist.createBoard	Opret tavle
+hist.createProfile	Opret profil
+hist.cropScene	Beskær billede
+hist.deleteButton	Slet knap
+hist.deleteHotspot	Slet område
+hist.deleteQuickPhrase	Slet sætning
+hist.deleteRule	Slet sideforslag
+hist.displaySettings	Skærmindstillinger
+hist.earlyMode	Enkel start
+hist.editBoard	Redigér tavle
+hist.editButton	Redigér knap
+hist.editHotspot	Redigér område
+hist.editQuickPhrase	Redigér sætning
+hist.gazeCalibration	Kalibrering af blikstyring
+hist.goBackAfterWord	Gå tilbage efter et ord
+hist.headCalibration	Kalibrering af hovedstyring
+hist.hideButtons	Skjul knapper
+hist.keyboardSettings	Tastaturindstillinger
+hist.languages	Sprog
+hist.lessonPage	Delt side
+hist.linkFolder	Forbind mappe
+hist.loadVocabulary	Indlæs ord
+hist.messageSettings	Indstillinger for beskedlinjen
+hist.moveButton	Flyt knap
+hist.moveQuickPhrase	Flyt sætning
+hist.nameCheck	Tjek, hvordan navnet siges
+hist.nameChecked	Navnet er tjekket
+hist.phrasePage	Sætningsside
+hist.primaryLanguage	Hovedsprog
+hist.quickPhraseUrgent	Hastesætning
+hist.quickRow	Sætninger på tavlen
+hist.recordWord	Indtal ord
+hist.recInSentences	Optagelse i sætninger
+hist.rejectLessonPage	Afvis delt side
+hist.removeFavouritesFolder	Fjern mappen Favoritter
+hist.renameButton	Omdøb knap
+hist.retireMergedWords	Erstat udgåede ord
+hist.revealButtons	Vis knapper
+hist.saveRecording	Gem optagelse
+hist.scanSettings	Scanningsindstillinger
+hist.sceneOutlines	Vis rammer
+hist.sceneWordOnTap	Vis ordet ved tryk
+hist.sceneWordsAlways	Vis altid ordene
+hist.setup	Opsætning
+hist.speechSettings	Tale og stemmer
+hist.spokenAs	Udtales som
+hist.styleBoard	Tavlens farver
+hist.styleButton	Knappens farve
+hist.suggestionSettings	Forslag
+hist.touchSettings	Berøringsindstillinger
+hist.translateWord	Oversæt ord
+hist.updateVocabulary	Opdatér ord
+hist.useNewPictures	Brug nye billeder
+hist.vocabLevel	Ordforrådsniveau
+hist.wordForms	Ordformer
+hist.undoOf	Fortrudt: {action}
+hist.restoreTo	Gik tilbage til: {action}
+hist.replan.zero	
+hist.replan.one	Tavlen omordnet til {n} knap
+hist.replan.two	
+hist.replan.few	
+hist.replan.many	
+hist.replan.other	Tavlen omordnet til {n} knapper
+ctxRule.breakfast	Morgenmad
+ctxRule.lunch	Frokost
+ctxRule.dinner	Aftensmad
+backupReason.daily	Daglig sikkerhedskopi
+backupReason.manual	Lavet af dig
+backupReason.beforeRestore	Lavet før en gendannelse
+backupReason.replan	Lavet før tavlen blev omordnet
+backupReason.other	Sikkerhedskopi
+backupLine	{reason} · {kb} KB
+credit.appCode	Appens kode
+credit.vocab	Ordforråd og opstillinger
+credit.frequency	Lister over ordhyppighed
+credit.wordForms	Ordformer (grammatikhjælp)
+credit.speechRecognition	Talegenkendelse (valgfri download)
+credit.speechEngine	Talemotor
+credit.opus	Lydcodec Opus
+credit.stretch	Tilpasning af stemmens alder
+kbAccent	Accent på sidste bogstav

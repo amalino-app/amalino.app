@@ -504,7 +504,7 @@ calibrate	Калибровка движения головы
 calibrateHint	Следи за звёздочкой головой
 cameraUnavailable	Камера недоступна
 dwellTime	Время задержки для выбора
-openVoices	Открытые голоса (скачать один раз, потом офлайн)
+openVoices	Бесплатные голоса (скачать один раз, потом офлайн)
 openVoicesSub	Нейронные голоса, работающие на этом устройстве. Детских голосов пока мало — выберите тот, что нравится ребёнку.
 from	От
 lessonPages	Страницы, присланные вам
@@ -1124,3 +1124,97 @@ startupFailedBody	Полностью закройте приложение и о
 languagePreview	Пробная версия
 languagePreviewNote	Слова ещё могут измениться. Сообщите нам о неверном слове.
 languagePreviewNoteEmail	Слова ещё могут измениться. Сообщите нам о неверном слове: {email}.
+hist.accessMethod	Как ребёнок выбирает
+hist.addButton	Добавление кнопки
+hist.addContextRule	Добавление подсказки страницы
+hist.addGoal	Добавление цели
+hist.addHotspot	Добавление точки
+hist.addQuickPhrase	Добавление фразы
+hist.addWord	Добавление слова
+hist.changePicture	Замена картинки
+hist.changeSetting	Изменение настройки
+hist.childName	Имя ребёнка
+hist.coaching	Ежедневные советы
+hist.confirmTranslation	Подтверждение перевода
+hist.coreLayout	Обновление расположения слов на доске
+hist.createBoard	Создание доски
+hist.createProfile	Создание профиля
+hist.cropScene	Обрезка фото
+hist.deleteButton	Удаление кнопки
+hist.deleteHotspot	Удаление точки
+hist.deleteQuickPhrase	Удаление фразы
+hist.deleteRule	Удаление подсказки страницы
+hist.displaySettings	Настройки экрана
+hist.earlyMode	Первые шаги
+hist.editBoard	Изменение доски
+hist.editButton	Изменение кнопки
+hist.editHotspot	Изменение точки
+hist.editQuickPhrase	Изменение фразы
+hist.gazeCalibration	Калибровка взгляда
+hist.goBackAfterWord	Возврат после слова
+hist.headCalibration	Калибровка движения головы
+hist.hideButtons	Скрытие кнопок
+hist.keyboardSettings	Настройки клавиатуры
+hist.languages	Языки
+hist.lessonPage	Присланная страница
+hist.linkFolder	Привязка папки
+hist.loadVocabulary	Загрузка слов
+hist.messageSettings	Настройки строки сообщения
+hist.moveButton	Перемещение кнопки
+hist.moveQuickPhrase	Перемещение фразы
+hist.nameCheck	Проверка произношения имени
+hist.nameChecked	Имя проверено
+hist.phrasePage	Страница фраз
+hist.primaryLanguage	Основной язык
+hist.quickPhraseUrgent	Срочная фраза
+hist.quickRow	Фразы на доске
+hist.recordWord	Запись слова
+hist.recInSentences	Запись в предложениях
+hist.rejectLessonPage	Отклонение присланной страницы
+hist.removeFavouritesFolder	Удаление папки «Любимое»
+hist.renameButton	Переименование кнопки
+hist.retireMergedWords	Замена устаревших слов
+hist.revealButtons	Показ кнопок
+hist.saveRecording	Сохранение записи
+hist.scanSettings	Настройки сканирования
+hist.sceneOutlines	Показывать рамки
+hist.sceneWordOnTap	Слово при нажатии
+hist.sceneWordsAlways	Слова показаны всегда
+hist.setup	Настройка
+hist.speechSettings	Речь и голоса
+hist.spokenAs	Произносится как
+hist.styleBoard	Цвета доски
+hist.styleButton	Цвет кнопки
+hist.suggestionSettings	Подсказки
+hist.touchSettings	Настройки касаний
+hist.translateWord	Перевод слова
+hist.updateVocabulary	Обновление слов
+hist.useNewPictures	Переход на новые картинки
+hist.vocabLevel	Уровень словаря
+hist.wordForms	Формы слов
+hist.undoOf	Отменено: {action}
+hist.restoreTo	Возврат к шагу: {action}
+hist.replan.zero	
+hist.replan.one	Доска перестроена на {n} кнопку
+hist.replan.two	
+hist.replan.few	Доска перестроена на {n} кнопки
+hist.replan.many	Доска перестроена на {n} кнопок
+hist.replan.other	Доска перестроена на {n} кнопки
+ctxRule.breakfast	Завтрак
+ctxRule.lunch	Обед
+ctxRule.dinner	Ужин
+backupReason.daily	Ежедневная резервная копия
+backupReason.manual	Создана вами
+backupReason.beforeRestore	Создана перед восстановлением
+backupReason.replan	Создана перед перестройкой доски
+backupReason.other	Резервная копия
+backupLine	{reason} · {kb} КБ
+credit.appCode	Код приложения
+credit.vocab	Словарь и расположение слов
+credit.frequency	Частотные списки слов
+credit.wordForms	Формы слов (помощь с грамматикой)
+credit.speechRecognition	Распознавание речи (загружается по желанию)
+credit.speechEngine	Речевой движок
+credit.opus	Аудиокодек Opus
+credit.stretch	Обработка возраста голоса
+kbAccent	Ударение на последней букве

@@ -55,3 +55,6 @@ mobileDataAsk	This is a {mb} MB download and this device is on cellular data. Do
 deleteContextRuleAsk	Delete this rule? {board} won't be suggested by it anymore.
 tip.about	Show the app to the other adults in your child's life — grandparents, daycare, school. Two minutes in person help more than any flyer.
 boardOrientationSub	The board, the keyboard and scenes stay this way around. Grown-up screens still turn.
+hist.removeFavouritesFolder	Remove the Favorites folder
+hist.styleBoard	Board colors
+hist.styleButton	Button color
