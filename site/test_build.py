@@ -395,9 +395,11 @@ class BuiltSite(unittest.TestCase):
         for loc in ('da', 'ru', 'uk', 'ar', 'es', 'lt'):
             self.assertIn('draft-banner', read(self.without, loc, 'index.html'))
 
-    def test_privacy_page_is_a_draft_with_the_ml_kit_line(self):
+    def test_privacy_page_has_the_ml_kit_line_and_no_draft_notice(self):
+        # The legal review stays internal (owner 2026-10-21): no draft notice on the public page.
         html = read(self.without, 'en', 'privacy', 'index.html')
-        self.assertIn(self.strings['pr.draft']['en'], html)
+        self.assertNotIn('class="notice"', html)
+        self.assertNotIn('lawyer', html.lower())
         self.assertIn('ML Kit sends Google anonymous information about how the feature performs and is used', html)
         self.assertNotIn('For schools', html)
 
@@ -504,7 +506,6 @@ class BuiltSite(unittest.TestCase):
             for key in ('arasaacFull', 'moreSymbolSets', 'aiListen', 'aiContext', 'suggestHotspots', 'exportBackup'):
                 self.assertIn(app[key][loc], text, f'{loc} {key}')
             self.assertIn(app['naturalVoicesHeading'][loc], text, loc)
-            self.assertIn(bs.visible_text(self.strings['pr.draft'][loc]), text)
             self.assertNotIn('{app:', read(self.without, loc, 'privacy', 'index.html'))
         # No cookies (decision 31): no script sets one; the privacy page says so in words.
         page = read(self.without, 'en', 'privacy', 'index.html')

@@ -175,7 +175,7 @@ of every manual says so.
 | About 19 repo "(på engelsk)" | about.repo | done |
 | About 20-21 | | kept |
 | Privacy 1-3 | | kept |
-| Privacy 4 draft | pr.draft | done |
+| Privacy 4 draft | pr.draft | done; the notice removed again 2026-10-21 (owner: the legal review stays internal) |
 | Privacy 5 intro | pr.intro | done |
 | Privacy 6-7 | | kept |
 | Privacy 8 onDevice | pr.onDevice | done (+ EN: child's name, new order) |
