@@ -78,6 +78,17 @@ favouriteName	Как это называется?
 favourites	Любимое
 feedback	Отзывы
 feedbackAskCoordinator	Спросите у того, кто дал вам приложение, как отправить отзыв.
+reportProblem	Сообщить о проблеме
+reportProblemSub	Откроется письмо с версией и настройками приложения — и ничего о вашем ребёнке. Перед отправкой его можно прочитать и изменить целиком.
+reportSubject	Проблема с Amalino
+reportWhat	Что произошло?
+reportBefore	Что вы делали прямо перед этим?
+reportDetails	Технические сведения (ничего о вашем ребёнке):
+reportApp	Приложение
+reportSystem	Система
+reportDevice	Устройство
+reportBoardLanguages	Языки доски
+appVersion	Версия
 firstTip	Первый совет: сегодня во время перекуса показывайте «ещё» на устройстве каждый раз, когда говорите «ещё». Не нужно просить ребёнка повторять.
 fiveFavourites	5 любимых вещей
 fiveFavouritesSub	То, что ребёнок любит (пузыри, мультик, бабушка). Всё попадёт в папку «Любимое».
@@ -210,7 +221,6 @@ sectionBoards	Доски и слова
 sectionData	Данные
 sectionSettings	Настройки
 sectionTogether	Вместе с ребёнком
-sendFeedback	Отправить отзыв
 setPin	Задать PIN
 setPrimary	Основной язык
 showLabel	Показывать слово
@@ -1217,4 +1227,6 @@ credit.speechRecognition	Распознавание речи (загружает
 credit.speechEngine	Речевой движок
 credit.opus	Аудиокодек Opus
 credit.stretch	Обработка возраста голоса
-kbAccent	Ударение на последней букве
+kbAccent	Ударение на последней или следующей букве
+kbAccentNext	Ударение на следующей букве
+kbAccentOff	Без ударения

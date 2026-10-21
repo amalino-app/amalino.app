@@ -135,7 +135,7 @@ Help that suggests words. It never speaks for your child, and the child always c
 - **History and backups**: undo any change, make a backup now, export a backup with a password, or restore one. See [Sharing and printing](sharing-and-printing.md).
 - **Share boards (Open Board Format)**: move boards to and from other AAC apps. See [Sharing and printing](sharing-and-printing.md).
 - **Children**: each child has their own boards and words. **Add a child** for a brother or sister on the same device.
-- **About and licences**: privacy, a link to the **Privacy policy**, the licences of the pictures and voices, and feedback. **Diagnostics**, at the end, shows technical details such as how fast a tap turns into speech. I may ask you for these if something isn't working.
+- **About and licences**: privacy, a link to the **Privacy policy**, the licences of the pictures and voices, the app's **Version**, and **Report a problem**: it opens an email to me with the app version, your device and a few settings already filled in, and nothing about your child. You read and change it all before you send it. **Diagnostics**, at the end, shows technical details such as how fast a tap turns into speech. I may ask you for these if something isn't working.
 
 ## Coming later
 

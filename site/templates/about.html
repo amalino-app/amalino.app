@@ -25,6 +25,24 @@
   <h2>{{t:about.thanksTitle}}</h2>
   <p>{{t:about.thanks}}</p>
   <p>{{t:about.repo}}</p>
+  <section id="report" class="card report-card">
+    <h2>{{t:report.title}}</h2>
+    <p>{{t:report.intro}}</p>
+    {{#email}}<p>{{t:report.app}}</p>
+    <h3>{{t:report.emailTitle}}</h3>
+    <p>{{t:report.email}}</p>
+    <ol class="checklist">
+      <li>{{t:report.check1}}</li>
+      <li>{{t:report.check2}}</li>
+      <li>{{t:report.check3}}</li>
+      <li>{{t:report.check4}}</li>
+    </ol>
+    <p><a class="button" href="{{v:report_mailto}}">{{t:report.emailLink}}</a></p>{{/email}}
+    <h3>{{t:report.githubTitle}}</h3>
+    <p>{{t:report.github}}</p>
+    <p><a class="button" href="{{v:issues}}" hreflang="en" rel="noopener">{{t:report.githubLink}}</a></p>
+    <p class="report-privacy">{{t:report.privacy}}</p>
+  </section>
   {{#email}}<h2>{{t:about.contactTitle}}</h2>
   <p>{{t:about.contact}}</p>{{/email}}
 </article>

@@ -135,7 +135,7 @@ Ayudas que sugieren palabras. Nunca hablan por el niño, y es siempre el niño q
 - **{app:historyBackups}**: deshacer cualquier cambio, hacer una copia ahora, exportar una copia con contraseña o restaurar una. Lo explico en [Compartir e imprimir](sharing-and-printing.md).
 - **{app:openBoardFormat}**: pasar tableros a otras apps de CAA y traerlos desde ellas. Lo explico en [Compartir e imprimir](sharing-and-printing.md).
 - **{app:profiles}**: cada niño tiene sus propios tableros y palabras. **{app:addChild}**, para un hermano o una hermana en el mismo dispositivo.
-- **{app:about}**: la privacidad, un enlace a la **{app:privacyPolicy}**, las licencias de los pictogramas y de las voces, y los comentarios. **{app:diagnostics}**, al final, muestra datos técnicos, como el tiempo que tarda un toque en convertirse en habla. Puede que te los pida si algo no funciona.
+- **{app:about}**: la privacidad, un enlace a la **{app:privacyPolicy}**, las licencias de los pictogramas y de las voces, la **{app:appVersion}** de la app e **{app:reportProblem}**: abre un correo para mí con la versión de la app, tu dispositivo y algunos ajustes ya indicados, sin nada sobre tu hijo o hija. Lo lees y lo cambias todo antes de enviarlo. **{app:diagnostics}**, al final, muestra datos técnicos, como el tiempo que tarda un toque en convertirse en habla. Puede que te los pida si algo no funciona.
 
 ## Más adelante
 

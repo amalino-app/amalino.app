@@ -1,11 +1,11 @@
 # Written by scripts/weblate_sync.py: the git blob of each Weblate file as it last wrote it (the base of the three-way comparison). Don't edit.
-weblate/app/ar.json	b1fcfcfdbe328e8c91f9af8de49a66a03ee66676
-weblate/app/da.json	856570dc010c2811175c6f7e0fc5be25524e78a0
-weblate/app/en.json	83a3ab5dd22790d62631bf66dd0f5202c0804fc0
-weblate/app/es.json	033e1e64152d464aef6d9565ff281482f14d8932
-weblate/app/lt.json	96280bc9c5af0d2f2404378846a9b5eb9686e8b0
-weblate/app/ru.json	b31f1d6ed6ea49aeec6f95f25a699b795919fa3c
-weblate/app/uk.json	7beba47a4299f7d3f77cc59650abedd37b3494ae
+weblate/app/ar.json	1cabfde16eccc836d5eeb4a65b3b4976a4107fd2
+weblate/app/da.json	c1c24394fb00c474e7bc003b4ac0dadf353fa96e
+weblate/app/en.json	d0bd620588bbe43e1c217dbe36fad242b3b3847c
+weblate/app/es.json	200ceec32b98fe28e8e4630212025d8a116816ab
+weblate/app/lt.json	0b420713dbea24b781ece3a184179791f78a232f
+weblate/app/ru.json	4719e2bf86a8746d3bde9020bc99d3e9065aea68
+weblate/app/uk.json	990e98b35e21c2d9fe427c74f626a0ce81c8969f
 weblate/vocab/ar.po	a8cd1a1db28a56442b363641a58c954f2e08d9c0
 weblate/vocab/da.po	6afc5e419b89b16919a745e4aeec1ea7abe55ce9
 weblate/vocab/es.po	04c3856fc4c2764adbc43b7409fe3f0269d026c5
@@ -13,10 +13,10 @@ weblate/vocab/lt.po	df2cf7410130b6091a39d31c7c067ba734dc3141
 weblate/vocab/ru.po	c3c393e436801b434ebee2d3a7d987df69c4ae4a
 weblate/vocab/uk.po	cadfa59554c2f0fef854f6608955b8a6f067ff2f
 weblate/vocab/vocab.pot	1c303fb1df8df791089e904fab6c0b651b00c86c
-weblate/website/ar.json	cf91757ff1daf0087809d1da16755350bbc7056b
-weblate/website/da.json	6a541b403f0a6ca37cdea5597c55d27f4e91a7aa
-weblate/website/en.json	906c9ca82724e85ad36d0c5e8cbf8c1366d27b71
-weblate/website/es.json	0b0430ea2c09b4d61c72bb15fd5f20f5d1bf3bf8
-weblate/website/lt.json	567187f959bb0579d80aaaf177ec7a55656dc751
-weblate/website/ru.json	c0c0332f9e592b5bf81f1b00b61bd0fd168c82e0
-weblate/website/uk.json	759788a00a953dd61648d2b8ba700ece4a925e53
+weblate/website/ar.json	e0ef03481fb9150271d78c24db3277b8d6dc34df
+weblate/website/da.json	c9436cac846ce0d1f5f86c4ae8a20eecbc151493
+weblate/website/en.json	4fd4a72a7a09204ad1e075855c1588277624fb97
+weblate/website/es.json	b61258372375b72fb95537bc3ea82e280cfddcfd
+weblate/website/lt.json	e3c7435ff3df013d5c41af561262d47ce555d1fb
+weblate/website/ru.json	fbd1493d9e87d7261ee9375e62e75acbde4f58ce
+weblate/website/uk.json	6951f2a065a9901e2382cbabe2f384eb9909b020

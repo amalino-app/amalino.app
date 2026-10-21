@@ -78,6 +78,17 @@ favouriteName	¿Cómo se llama?
 favourites	Favoritos
 feedback	Comentarios
 feedbackAskCoordinator	Pregunta a quien te dio la app cómo enviar comentarios.
+reportProblem	Informar de un problema
+reportProblemSub	Abre un correo con la versión y los ajustes de la app, sin nada sobre tu hijo o hija. Puedes leerlo y cambiarlo todo antes de enviarlo.
+reportSubject	Problema con Amalino
+reportWhat	¿Qué ha pasado?
+reportBefore	¿Qué hiciste justo antes?
+reportDetails	Datos técnicos (nada sobre tu hijo o hija):
+reportApp	App
+reportSystem	Sistema
+reportDevice	Dispositivo
+reportBoardLanguages	Idiomas del tablero
+appVersion	Versión
 firstTip	Primer consejo: hoy en la merienda, toca «más» en el dispositivo cada vez que digas «más». No hace falta pedirle que te imite.
 fiveFavourites	5 cosas favoritas
 fiveFavouritesSub	Cosas que le encantan (pompas, unos dibujos, la abuela). Van a una carpeta de Favoritos.
@@ -210,7 +221,6 @@ sectionBoards	Tableros y palabras
 sectionData	Datos
 sectionSettings	Ajustes
 sectionTogether	Usarlo juntos
-sendFeedback	Enviar comentarios
 setPin	Poner un PIN
 setPrimary	Idioma principal
 showLabel	Mostrar la palabra
@@ -1217,4 +1227,6 @@ credit.speechRecognition	Reconocimiento de voz (descarga opcional)
 credit.speechEngine	Motor de voz
 credit.opus	Códec de audio Opus
 credit.stretch	Ajuste de la edad de la voz
-kbAccent	Tilde en la última letra
+kbAccent	Tilde en la última o la siguiente letra
+kbAccentNext	Tilde en la siguiente letra
+kbAccentOff	Sin tilde

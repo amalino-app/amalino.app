@@ -135,7 +135,7 @@ Hjælp, der foreslår ord. Den taler aldrig for dit barn, og det er altid barnet
 - **{app:historyBackups}**: Fortryd en hvilken som helst ændring, lav en sikkerhedskopi nu, eksportér en sikkerhedskopi med adgangskode, eller gendan en. Læs mere under [Deling og udskrift](sharing-and-printing.md).
 - **{app:openBoardFormat}**: Flyt tavler til og fra andre ASK-apps. Læs mere under [Deling og udskrift](sharing-and-printing.md).
 - **{app:profiles}**: Hvert barn har sine egne tavler og ord. Med **{app:addChild}** kan du tilføje en bror eller søster på samme enhed.
-- **{app:about}**: privatliv, et link til **{app:privacyPolicy}**, licenserne for billederne og stemmerne og feedback. **{app:diagnostics}** nederst viser tekniske detaljer, for eksempel hvor hurtigt et tryk bliver til tale. Jeg beder dig måske om dem, hvis noget ikke virker.
+- **{app:about}**: privatliv, et link til **{app:privacyPolicy}**, licenserne for billederne og stemmerne, appens **{app:appVersion}** og **{app:reportProblem}**: Det åbner en e-mail til mig, hvor appens version, din enhed og nogle få indstillinger allerede er udfyldt – men intet om dit barn. Du læser og retter det hele, før du sender den. **{app:diagnostics}** nederst viser tekniske detaljer, for eksempel hvor hurtigt et tryk bliver til tale. Jeg beder dig måske om dem, hvis noget ikke virker.
 
 ## Kommer senere
 

@@ -78,6 +78,17 @@ favouriteName	ما اسمه؟
 favourites	المفضلة
 feedback	الملاحظات
 feedbackAskCoordinator	اسأل الشخص الذي أعطاك التطبيق عن طريقة إرسال الملاحظات.
+reportProblem	الإبلاغ عن مشكلة
+reportProblemSub	يفتح رسالة بريد إلكتروني فيها إصدار التطبيق وإعداداته، دون أي شيء عن طفلك. يمكنك قراءتها وتعديلها كلها قبل إرسالها.
+reportSubject	مشكلة في Amalino
+reportWhat	ماذا حدث؟
+reportBefore	ماذا فعلت قبل ذلك مباشرة؟
+reportDetails	تفاصيل تقنية (لا شيء فيها عن طفلك):
+reportApp	التطبيق
+reportSystem	النظام
+reportDevice	الجهاز
+reportBoardLanguages	لغات اللوحة
+appVersion	الإصدار
 firstTip	النصيحة الأولى: اليوم، أثناء وجبة خفيفة، أشِر إلى «المزيد» على الجهاز كلما قلت «المزيد». لا داعي لأن تطلب من الطفل تقليدك.
 fiveFavourites	5 أشياء مفضلة
 fiveFavouritesSub	أشياء يحبها الطفل (فقاعات، رسوم متحركة، الجدة). توضع في مجلد المفضلة.
@@ -210,7 +221,6 @@ sectionBoards	اللوحات والكلمات
 sectionData	البيانات
 sectionSettings	الإعدادات
 sectionTogether	الاستخدام معًا
-sendFeedback	إرسال ملاحظات
 setPin	تعيين رقم سري
 setPrimary	اللغة الرئيسية
 showLabel	إظهار الكلمة
@@ -1217,4 +1227,6 @@ credit.speechRecognition	التعرّف على الكلام (تنزيل اختي
 credit.speechEngine	محرّك الكلام
 credit.opus	برنامج ترميز الصوت Opus
 credit.stretch	معالجة عمر الصوت
-kbAccent	علامة على الحرف الأخير
+kbAccent	علامة على الحرف الأخير أو التالي
+kbAccentNext	علامة على الحرف التالي
+kbAccentOff	بلا علامة

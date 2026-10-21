@@ -78,6 +78,17 @@ favouriteName	Hvad hedder det?
 favourites	Favoritter
 feedback	Feedback
 feedbackAskCoordinator	Spørg den, der gav dig appen, hvordan du sender feedback.
+reportProblem	Rapportér et problem
+reportProblemSub	Åbner en e-mail med appens version og indstillinger – men intet om dit barn. Du kan læse og rette det hele, før du sender den.
+reportSubject	Problem med Amalino
+reportWhat	Hvad skete der?
+reportBefore	Hvad gjorde du lige inden?
+reportDetails	Tekniske oplysninger (intet om dit barn):
+reportApp	App
+reportSystem	System
+reportDevice	Enhed
+reportBoardLanguages	Tavlens sprog
+appVersion	Version
 firstTip	Første tip: Når I spiser mellemmåltid i dag, så peg på »mere« på enheden, hver gang du siger »mere«. Barnet behøver ikke at gøre det efter.
 fiveFavourites	5 yndlingsting
 fiveFavouritesSub	Ting barnet elsker (sæbebobler, en tegnefilm, mormor). De kommer i en Favoritter-mappe.
@@ -210,7 +221,6 @@ sectionBoards	Tavler og ord
 sectionData	Data
 sectionSettings	Indstillinger
 sectionTogether	Brug den sammen
-sendFeedback	Send feedback
 setPin	Vælg en pinkode
 setPrimary	Hovedsprog
 showLabel	Vis ordet
@@ -1217,4 +1227,6 @@ credit.speechRecognition	Talegenkendelse (valgfri download)
 credit.speechEngine	Talemotor
 credit.opus	Lydcodec Opus
 credit.stretch	Tilpasning af stemmens alder
-kbAccent	Accent på sidste bogstav
+kbAccent	Accent på sidste eller næste bogstav
+kbAccentNext	Accent på næste bogstav
+kbAccentOff	Ingen accent

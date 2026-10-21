@@ -34,7 +34,7 @@ translations/<lang>/reviewed.txt for the website, manual:<page> lines for the ma
 translated manual page that isn't listed there shows the draft banner.
 
 Template syntax: {{t:key}} text (HTML-escaped; **bold**; {email} becomes a mailto link isolated as
-LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value ({{v:donate}}, {{v:weblate}}), {{link:page}} a relative
+LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value ({{v:donate}}, {{v:weblate}}, {{v:issues}}, {{v:report_mailto}}), {{link:page}} a relative
 link to a page in the same language. In strings, {app:key} is the app's own label from
 translations/<lang>/app.tsv ({app:key|label}: the part before the first ":"). The manual's Markdown
 (manual/<lang>/*.md) uses the same {app:key} for every button, menu and setting it names, so a translated manual
@@ -49,6 +49,7 @@ import re
 import shutil
 import subprocess
 import sys
+import urllib.parse
 from html.parser import HTMLParser
 
 SRC = os.path.dirname(os.path.abspath(__file__))
@@ -116,6 +117,11 @@ OUTSIDE_LINKS = {
 # the "Help translate" page links to it with {{v:weblate}}. A plain link, followed only when clicked: no widget,
 # badge, image or script from Weblate (decision 31).
 WEBLATE_URL = 'https://hosted.weblate.org/engage/amalino/'
+# "Report a problem" (About, owner 2026-10-21): GitHub's chooser for the repository's issue forms
+# (.github/ISSUE_TEMPLATE/, English only). The one outside link to the repository besides REPO_URL itself; the email
+# route is a mailto: with a subject and a short checklist in the page's language ({{v:report_mailto}}).
+ISSUES_URL = REPO_URL + '/issues/new/choose'
+REPORT_CHECKS = ('report.check1', 'report.check2', 'report.check3', 'report.check4')
 # The user manual: manual/<lang>/index.md and the pages its contents list links to, published at /<lang>/manual/.
 # A language without a manual folder links to the English manual.
 MANUAL = os.path.join(ROOT, 'manual')
@@ -360,6 +366,21 @@ class Renderer:
             raise BuildError(f'{key} has {{email}} and cannot be used as plain text')
         return html.escape(s, quote=True)
 
+    def report_mailto(self, loc):
+        """mailto: the project email with a subject (the app's own, reportSubject) and the checklist as the body,
+        each question followed by room for the answer, in the page's language. Spaces as %20, lines as CRLF
+        (RFC 6068)."""
+        if not self.email:
+            raise BuildError('report_mailto needs the email; put it inside {{#email}}...{{/email}}')
+        subject = self.app['reportSubject'][loc].strip()
+        lines = []
+        for key in REPORT_CHECKS:
+            text = re.sub(r'\[\[([^\]|]+?)(?:\|[a-z\-]+)?\]\]', r'\1', self.text(key, loc)).replace('**', '')
+            lines += [re.sub('[\u00a0\u202f]', ' ', text), '', '']  # plain spaces in an email
+        body = '\r\n'.join(lines).rstrip('\r\n') + '\r\n\r\n'
+        q = urllib.parse.quote
+        return f'mailto:{self.email}?subject={q(subject, safe="")}&body={q(body, safe="")}'
+
     def sections(self, tpl):
         flags = {'email': bool(self.email), 'site': bool(self.site), 'donate': bool(self.donate)}
 
@@ -383,6 +404,10 @@ class Renderer:
                 return (root if root is not None else rel_root(page)) + f'{loc}/{page_path(name)}'
             if name == 'weblate' and name not in values:
                 return html.escape(WEBLATE_URL, quote=True)
+            if name == 'issues' and name not in values:
+                return html.escape(ISSUES_URL, quote=True)
+            if name == 'report_mailto' and name not in values:
+                return html.escape(self.report_mailto(loc), quote=True)
             if name == 'donate' and name not in values:
                 return html.escape(self.donate, quote=True)
             if name not in values:
@@ -1204,7 +1229,7 @@ def check(out, strings, email, site='', donate=''):
         for ref in re.findall(r'(?:href|src)="([^"]+)"', page):
             if re.match(r'^(https?:|mailto:|#)', ref):
                 continue
-            target = os.path.normpath(os.path.join(os.path.dirname(path), ref))
+            target = os.path.normpath(os.path.join(os.path.dirname(path), ref.split('#')[0]))
             expect(target.startswith(os.path.abspath(out)) and os.path.isfile(target), f'{f}: broken link {ref}')
 
     for root, _dirs, names in os.walk(out):
@@ -1228,6 +1253,16 @@ def check(out, strings, email, site='', donate=''):
         for key in ('tr.improveTitle', 'tr.improve2', 'tr.addTitle', 'tr.add1', 'tr.addHonest'):
             expect(visible_text(Renderer(strings, email or 'x@y', '').html_text(key, loc)) in tr_text,
                    f'{loc}/translate: missing {key}')
+        # "Report a problem" (owner 2026-10-21): every language's About page has the section with the GitHub
+        # issue forms, the mailto with a subject and the checklist when the email is set, and every page's footer
+        # links to it.
+        about = read(os.path.join(out, loc, page_path('about')))
+        expect('id="report"' in about and f'href="{ISSUES_URL}"' in about, f'{loc}/about: "Report a problem" missing')
+        expect(not email or f'href="mailto:{html.escape(email)}?subject=' in about,
+               f'{loc}/about: the report email link missing')
+        for p in PAGES:
+            expect('<p class="footer-report"><a href="' in read(os.path.join(out, loc, page_path(p))),
+                   f'{loc}/{page_path(p)}: footer link to "Report a problem" missing')
         if email:
             for p in ('translate', 'privacy', 'about'):
                 expect(f'mailto:{email}' in read(os.path.join(out, loc, page_path(p))),

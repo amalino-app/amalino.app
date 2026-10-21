@@ -135,7 +135,7 @@ Pagalba, kuri siūlo žodžius. Ji niekada nekalba už vaiką, o rinktis visada 
 - **{app:historyBackups}**: atšaukite bet kurį pakeitimą, sukurkite atsarginę kopiją dabar, eksportuokite ją su slaptažodžiu arba atkurkite. Žr. [Dalijimasis ir spausdinimas](sharing-and-printing.md).
 - **{app:openBoardFormat}**: lentų perkėlimas į kitas AAK programėles ir iš jų. Žr. [Dalijimasis ir spausdinimas](sharing-and-printing.md).
 - **{app:profiles}**: kiekvienas vaikas turi savo lentas ir žodžius. Mygtukas **{app:addChild}** skirtas broliui ar sesei tame pačiame įrenginyje.
-- **{app:about}**: privatumas, nuoroda **{app:privacyPolicy}**, paveikslėlių ir balsų licencijos ir atsiliepimai. Pačioje pabaigoje esanti skiltis **{app:diagnostics}** rodo techninę informaciją, pavyzdžiui, kaip greitai bakstelėjimas virsta kalba. Jei kas nors neveiks, galiu jūsų jos paprašyti.
+- **{app:about}**: privatumas, nuoroda **{app:privacyPolicy}**, paveikslėlių ir balsų licencijos, programėlės **{app:appVersion}** ir **{app:reportProblem}**: atidaromas el. laiškas man, kuriame jau nurodyta programėlės versija, jūsų įrenginys ir keli nustatymai, bet nieko apie jūsų vaiką. Prieš siųsdami viską perskaitote ir galite pakeisti. Pačioje pabaigoje esanti skiltis **{app:diagnostics}** rodo techninę informaciją, pavyzdžiui, kaip greitai bakstelėjimas virsta kalba. Jei kas nors neveiks, galiu jūsų jos paprašyti.
 
 ## Bus vėliau
 

@@ -7,6 +7,7 @@ import re
 import sys
 import tempfile
 import unittest
+import urllib.parse
 from contextlib import redirect_stdout
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -108,6 +109,41 @@ class BuiltSite(unittest.TestCase):
                     self.assertIn(bs.visible_text(self.strings[key][loc]), text, f'{loc} {key}')
                 self.assertEqual(len(re.findall(r'<ol class="steps">', html)), 2)
             self.assertIn(EMAIL, read(self.with_email, loc, 'translate', 'index.html'))
+
+    def test_report_a_problem_in_every_language(self):
+        # Owner 2026-10-21: About has "Report a problem" in every language: the mailto (subject and checklist in the
+        # page's language) when the email is set, the GitHub issue forms always, the privacy note; the footer of
+        # every page links to it.
+        app = bs.load_app_strings()
+        for loc in bs.LOCALES:
+            r = bs.Renderer(self.strings, EMAIL, '')
+            for out in (self.with_email, self.without):
+                html = read(out, loc, 'about', 'index.html')
+                self.assertIn('<section id="report"', html, loc)
+                self.assertIn(f'<a class="button" href="{bs.ISSUES_URL}" hreflang="en" rel="noopener">', html, loc)
+                text = bs.visible_text(html)
+                for key in ('report.title', 'report.github', 'report.githubLink', 'report.privacy'):
+                    self.assertIn(bs.visible_text(r.html_text(key, loc)), text, f'{loc} {key}')
+                for page in bs.PAGES:
+                    self.assertIn('<p class="footer-report"><a href="', read(out, loc, bs.page_path(page)), f'{loc} {page}')
+            self.assertNotIn('mailto:', read(self.without, loc, 'about', 'index.html'))
+            html = read(self.with_email, loc, 'about', 'index.html')
+            m = re.search(r'<a class="button" href="(mailto:[^"]+)">', html)
+            self.assertTrue(m, loc)
+            url = m.group(1).replace('&amp;', '&')
+            addr, _q, query = url[len('mailto:'):].partition('?')
+            self.assertEqual(addr, EMAIL)
+            self.assertNotIn('+', query, 'spaces as %20')
+            q = urllib.parse.parse_qs(query)
+            self.assertEqual(q['subject'], [app['reportSubject'][loc].strip()], loc)
+            body = q['body'][0]
+            self.assertIn('\r\n', body)
+            for key in bs.REPORT_CHECKS:
+                self.assertIn(re.sub('[\u00a0\u202f]', ' ', r.text(key, loc).replace('**', '')), body, f'{loc} {key}')
+            self.assertNotIn('{app:', body)
+            self.assertIn(app['about'][loc].strip(), body, loc)
+        # The only GitHub links: the repository and its issue chooser.
+        self.assertTrue(bs.ISSUES_URL.startswith(bs.REPO_URL + '/'))
 
     def test_translate_page_links_to_weblate(self):
         # A plain link in every language, followed only when clicked: nothing is loaded from Weblate.
