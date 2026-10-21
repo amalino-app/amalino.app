@@ -16,6 +16,7 @@ Tryk på **tastaturknappen** i den øverste bjælke. Vil du tilbage til billeder
 - **Slettetasten** sletter et bogstav. Hold den nede for at blive ved med at slette.
 - **{app:kbSpeak}** siger hele beskeden.
 - **123** åbner tal og tegnsætning, også de tegn, der hører til hvert sprog (¿ ¡ på spansk, » « på dansk, « » på russisk og ukrainsk, „ “ på litauisk, ؟ ، på arabisk). På dansk står » først, fordi vi citerer »sådan her«, og det lige anførselstegn " findes på alle sprog. **ABC** går tilbage til bogstaverne.
+- På det spanske tastatur sætter tasten **´** efter ñ accent på det bogstav, der lige er skrevet: á é í ó ú. Tryk igen for at fjerne accenten; på u giver den ú og derefter ü (pingüino).
 
 Beskedlinjens **{app:barDelete}** og **{app:barClear}** virker som på tavlen.
 

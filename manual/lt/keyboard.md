@@ -16,6 +16,7 @@ Viršutinėje juostoje bakstelėkite **klaviatūros** mygtuką. Norėdami grįž
 - **Trynimo klavišas** ištrina raidę. Palaikius jį nuspaustą, trinama toliau.
 - Mygtukas **{app:kbSpeak}** ištaria visą sakinį.
 - **123** atidaro skaičius ir skyrybos ženklus, tarp jų ir kiekvienos kalbos savitus ženklus (ispanų ¿ ¡, danų » «, rusų ir ukrainiečių « », lietuvių „ “, arabų ؟ ،). **ABC** grąžina prie raidžių.
+- Ispanų klaviatūroje klavišas **´** po ñ uždeda kirtį ką tik parašytai raidei: á é í ó ú. Paspaudus dar kartą, ženklas dingsta, o ant u pirma gaunama ú, paskui ü (pingüino).
 
 Sakinio juostos mygtukai **{app:barDelete}** ir **{app:barClear}** veikia taip pat kaip lentoje.
 

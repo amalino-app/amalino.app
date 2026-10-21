@@ -16,6 +16,7 @@ Tap the **keyboard** button in the top bar. To go back to the pictures, tap the 
 - **Backspace** deletes a letter. Hold it to keep deleting.
 - **Speak** says the whole message.
 - **123** opens numbers and punctuation, including each language's own marks (¿ ¡ in Spanish, » « in Danish, « » in Russian and Ukrainian, „ “ in Lithuanian, ؟ ، in Arabic). **ABC** goes back to the letters.
+- On the Spanish keyboard, the **´** key after ñ puts the accent on the letter just typed: á é í ó ú. Press it again to take the accent off; on u it gives ú, then ü (pingüino).
 
 The message bar's **Delete** and **Clear** work as on the board.
 
