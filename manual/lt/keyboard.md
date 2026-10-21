@@ -16,7 +16,8 @@ Viršutinėje juostoje bakstelėkite **klaviatūros** mygtuką. Norėdami grįž
 - **Trynimo klavišas** ištrina raidę. Palaikius jį nuspaustą, trinama toliau.
 - Mygtukas **{app:kbSpeak}** ištaria visą sakinį.
 - **123** atidaro skaičius ir skyrybos ženklus, tarp jų ir kiekvienos kalbos savitus ženklus (ispanų ¿ ¡, danų » «, rusų ir ukrainiečių « », lietuvių „ “, arabų ؟ ،). **ABC** grąžina prie raidžių.
-- Ispanų klaviatūroje klavišas **´** po ñ uždeda kirtį ką tik parašytai raidei: á é í ó ú. Paspaudus dar kartą, ženklas dingsta, o ant u pirma gaunama ú, paskui ü (pingüino).
+- Klavišas **´** uždeda kirtį abiem būdais: galima parašyti raidę ir paspausti ´ arba pirma paspausti ´, o tada parašyti raidę. Ispanų klaviatūroje jis yra po ñ ir duoda á é í ó ú; paspaudus dar kartą, ženklas dingsta, o ant u pirma gaunama ú, paskui ü (pingüino). Danų klaviatūroje jis yra puslapyje **123** ir duoda é, kaip žodžiuose idé, café ir én.
+- Jei ´ paspaudžiamas prieš raidę (žodžio pradžioje arba po priebalsio), klavišas patamsėja, o sakinio juostoje laukia šviesus ´: kirtį gauna kitas balsis. Bet kuris kitas klavišas, dar vienas ´ paspaudimas arba **trynimo klavišas** jį atšaukia. Danų klaviatūroje raidės sugrįžta pačios.
 
 Sakinio juostos mygtukai **{app:barDelete}** ir **{app:barClear}** veikia taip pat kaip lentoje.
 
@@ -29,6 +30,8 @@ Virš klavišų esančioje eilutėje vaikui rašant siūlomi žodžiai. Bakstel�
 - vaiko lentose esančių žodžių,
 - to, ką vaikas jau rašė anksčiau, jei įjungtas nustatymas **{app:kbLearn.anon}**,
 - tos kalbos žodžių sąrašo.
+
+Ispanų ir danų kalbomis žodį galima rašyti be šių ženklų: parašius cancion, pasiūloma canción, o parašius ide – idé.
 
 Jie sudaromi įrenginyje; niekas niekur nesiunčiama.
 

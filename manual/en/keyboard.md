@@ -16,7 +16,8 @@ Tap the **keyboard** button in the top bar. To go back to the pictures, tap the 
 - **Backspace** deletes a letter. Hold it to keep deleting.
 - **Speak** says the whole message.
 - **123** opens numbers and punctuation, including each language's own marks (¿ ¡ in Spanish, » « in Danish, « » in Russian and Ukrainian, „ “ in Lithuanian, ؟ ، in Arabic). **ABC** goes back to the letters.
-- On the Spanish keyboard, the **´** key after ñ puts the accent on the letter just typed: á é í ó ú. Press it again to take the accent off; on u it gives ú, then ü (pingüino).
+- The **´** key adds an accent, in either order: type the letter and then ´, or ´ and then the letter. On the Spanish keyboard it sits after ñ and gives á é í ó ú; press it again to take the accent off, and on u it gives ú, then ü (pingüino). On the Danish keyboard it is on the **123** page and gives é, as in idé, café and én.
+- Pressed before the letter (at the start of a word or after a consonant), the key turns dark and a light ´ waits in the message bar: the next vowel takes the accent. Any other key, ´ again or Backspace cancels it. On the Danish keyboard the letters come back by themselves.
 
 The message bar's **Delete** and **Clear** work as on the board.
 
@@ -29,6 +30,8 @@ A row above the keys suggests words as the child types. A tap adds the word and 
 - the words on the child's boards,
 - what the child has typed before, if **Learn from what your child types** is on,
 - a word list for the language.
+
+In Spanish and Danish the child doesn't have to type the accents: cancion brings up canción, and ide brings up idé. Space keeps the word as it was typed.
 
 They are made on the device; nothing is sent anywhere.
 

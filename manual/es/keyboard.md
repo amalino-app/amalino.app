@@ -16,7 +16,8 @@ Toca el botón del **teclado** en la barra superior. Para volver a los pictogram
 - La tecla de **retroceso** borra una letra. Si la mantienes pulsada, sigue borrando.
 - **{app:kbSpeak}** pronuncia el mensaje entero.
 - **123** abre los números y los signos de puntuación, también los propios de cada idioma (¿ ¡ en español, » « en danés, « » en ruso y ucraniano, „ “ en lituano, ؟ ، en árabe). **ABC** vuelve a las letras.
-- La tecla **´**, después de la ñ, pone la tilde en la letra que acabas de escribir: á é í ó ú. Si la pulsas otra vez, la quita; con la u da ú y luego ü (pingüino).
+- La tecla **´**, después de la ñ, pone la tilde y funciona en los dos órdenes: escribe la letra y pulsa ´, o pulsa ´ y escribe después la letra. Justo después de una vocal, la tilde va sobre esa vocal: á é í ó ú. Si la pulsas otra vez, la quita; con la u da ú y luego ü (pingüino). En el teclado danés, la misma tecla está en la página **123** y da é (idé, café).
+- Si se pulsa ´ antes de la letra (al empezar una palabra o después de una consonante), la tecla se queda oscura y en la barra de mensaje espera una ´ clara: la siguiente vocal lleva la tilde. Cualquier otra tecla, la propia ´ o la tecla de retroceso la anulan.
 
 Los botones **{app:barDelete}** y **{app:barClear}** de la barra de mensaje funcionan igual que en el tablero.
 
@@ -29,6 +30,8 @@ Una fila encima de las teclas sugiere palabras a medida que el niño escribe. Al
 - las palabras de los tableros del niño,
 - lo que el niño ha escrito antes, si está activado **{app:kbLearn.anon}**,
 - una lista de palabras del idioma.
+
+No hace falta escribir las tildes: con «cancion» aparece «canción» y con «tambien», «también». Si la frase empieza con ¿, al escribir «que», «como» o «donde» la primera sugerencia es «qué», «cómo» o «dónde». La barra espaciadora deja la palabra tal como está escrita.
 
 Se generan en el dispositivo; no se envía nada a ningún sitio.
 

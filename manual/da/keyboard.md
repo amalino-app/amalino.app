@@ -16,7 +16,8 @@ Tryk på **tastaturknappen** i den øverste bjælke. Vil du tilbage til billeder
 - **Slettetasten** sletter et bogstav. Hold den nede for at blive ved med at slette.
 - **{app:kbSpeak}** siger hele beskeden.
 - **123** åbner tal og tegnsætning, også de tegn, der hører til hvert sprog (¿ ¡ på spansk, » « på dansk, « » på russisk og ukrainsk, „ “ på litauisk, ؟ ، på arabisk). På dansk står » først, fordi vi citerer »sådan her«, og det lige anførselstegn " findes på alle sprog. **ABC** går tilbage til bogstaverne.
-- På det spanske tastatur sætter tasten **´** efter ñ accent på det bogstav, der lige er skrevet: á é í ó ú. Tryk igen for at fjerne accenten; på u giver den ú og derefter ü (pingüino).
+- Tasten **´** sætter accent, og den virker i begge rækkefølger: Skriv bogstavet og tryk så på ´, eller tryk først på ´ og skriv så bogstavet. På det danske tastatur ligger den på **123**-siden og giver é, som i idé, café og én. Tryk igen for at fjerne accenten. På det spanske tastatur står den efter ñ og giver á é í ó ú; på u giver den ú og derefter ü (pingüino).
+- Trykker barnet på ´ før bogstavet (først i et ord eller efter en konsonant), bliver tasten mørk, og et lyst ´ venter i beskedlinjen. Det næste e får accenten (på spansk den næste vokal). Alle andre taster, ´ igen eller slettetasten fjerner den. Tastaturet skifter selv tilbage til bogstaverne, så barnet kan skrive e med det samme.
 
 Beskedlinjens **{app:barDelete}** og **{app:barClear}** virker som på tavlen.
 
@@ -29,6 +30,8 @@ En række over tasterne foreslår ord, mens barnet skriver. Et tryk tilføjer or
 - ordene på barnets tavler,
 - det, barnet har skrevet før, hvis **{app:kbLearn.anon}** er slået til,
 - en ordliste for sproget.
+
+Barnet behøver ikke selv at sætte accenten: Skriver det »ide«, »cafe«, »alle« eller »entre«, står »idé«, »café«, »allé« og »entré« først i rækken. Mellemrum beholder ordet, som det er skrevet.
 
 Forslagene bliver lavet på enheden; der sendes intet nogen steder hen.
 
