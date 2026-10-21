@@ -79,7 +79,11 @@ tr.improve1	Jeg sender dig et regneark til gennemlæsning på dit sprog. I hver 
 tr.improve2	Er rækken rigtig, så skriv »yes« i kolonnen »OK?«. Er den ikke, så skriv et bedre ord eller en bedre sætning i kolonnen »Correction«. Er du i tvivl, så lad feltet stå tomt. (Kolonnerne har engelske navne i regnearket.)
 tr.improve3	Send regnearket tilbage. Så lægger jeg dine rettelser ind i appen og markerer teksten som tjekket.
 tr.improveNote	Du behøver ikke at klare det hele på én gang. Opsætningsskærmene og de første ord er vigtigst, så dem starter vi med. Til nogle sprog er der et par ekstra spørgsmål, for eksempel om forskellige endelser, alt efter om man taler til en dreng eller en pige.
-tr.improveGithub	Bruger du GitHub? Så kan du også [[rette en oversættelse dér]]: Hvert sprog har sin egen fil, og jeg tjekker hver ændring, før den kommer med i appen. En enkel webformular til oversættere er også på vej.
+tr.weblateTitle	Eller ret teksterne online på Weblate
+tr.weblate	Weblate er en hjemmeside, hvor du kan rette Amalinos tekster direkte i din browser: appens skærme, ordene på de knapper, barnet trykker på, og denne hjemmeside. Det eneste, du skal bruge, er en gratis konto. Jeg tjekker hvert eneste forslag, før det kommer med i appen.
+tr.weblateLink	Oversæt på Weblate
+tr.weblateNote	Vil du hellere bruge regnearket? Det fungerer lige så godt, og fremgangsmåden ovenfor er den samme.
+tr.improveGithub	Bruger du GitHub? Så kan du også [[rette en oversættelse dér]]: Hvert sprog har sin egen fil, og jeg tjekker hver ændring, før den kommer med i appen.
 tr.addTitle	Tilføj dit sprog
 tr.addIntro	Er dit sprog ikke i Amalino endnu, kan du hjælpe med at få det med.
 tr.add1	Jeg sender dig et regneark til oversættelse: appens engelske tekst med en tom kolonne til dine ord. Opsætningsskærmene og et barns første ord kommer først.

@@ -109,6 +109,17 @@ class BuiltSite(unittest.TestCase):
                 self.assertEqual(len(re.findall(r'<ol class="steps">', html)), 2)
             self.assertIn(EMAIL, read(self.with_email, loc, 'translate', 'index.html'))
 
+    def test_translate_page_links_to_weblate(self):
+        # A plain link in every language, followed only when clicked: nothing is loaded from Weblate.
+        for loc in bs.LOCALES:
+            html = read(self.without, loc, 'translate', 'index.html')
+            self.assertIn(f'<a class="button" href="{bs.WEBLATE_URL}" rel="noopener">', html, loc)
+            self.assertEqual(html.count('weblate.org'), 1, loc)
+            self.assertEqual(bs.external_refs(html, None), [], loc)
+            text = bs.visible_text(html)
+            for key in ('tr.weblateTitle', 'tr.weblate', 'tr.weblateLink', 'tr.weblateNote'):
+                self.assertIn(bs.visible_text(self.strings[key][loc]), text, f'{loc} {key}')
+
     def test_t106_translate_page_for_every_app_language(self):
         for loc in bs.LOCALES:
             self.assertTrue(os.path.isfile(os.path.join(self.without, loc, 'translate', 'index.html')))

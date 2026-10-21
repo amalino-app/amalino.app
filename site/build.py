@@ -34,7 +34,7 @@ translations/<lang>/reviewed.txt for the website, manual:<page> lines for the ma
 translated manual page that isn't listed there shows the draft banner.
 
 Template syntax: {{t:key}} text (HTML-escaped; **bold**; {email} becomes a mailto link isolated as
-LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value, {{link:page}} a relative
+LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value ({{v:donate}}, {{v:weblate}}), {{link:page}} a relative
 link to a page in the same language. In strings, {app:key} is the app's own label from
 translations/<lang>/app.tsv ({app:key|label}: the part before the first ":"). The manual's Markdown
 (manual/<lang>/*.md) uses the same {app:key} for every button, menu and setting it names, so a translated manual
@@ -112,6 +112,10 @@ OUTSIDE_LINKS = {
     'github-privacy': 'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement',
     'cloudflare-privacy': 'https://www.cloudflare.com/privacypolicy/',
 }
+# Hosted Weblate, where volunteers correct the app's screens, the board words and the website (docs/weblate.md):
+# the "Help translate" page links to it with {{v:weblate}}. A plain link, followed only when clicked: no widget,
+# badge, image or script from Weblate (decision 31).
+WEBLATE_URL = 'https://hosted.weblate.org/engage/amalino/'
 # The user manual: manual/<lang>/index.md and the pages its contents list links to, published at /<lang>/manual/.
 # A language without a manual folder links to the English manual.
 MANUAL = os.path.join(ROOT, 'manual')
@@ -377,6 +381,8 @@ class Renderer:
                 if name not in PAGES:
                     raise BuildError(f'unknown page {name!r}')
                 return (root if root is not None else rel_root(page)) + f'{loc}/{page_path(name)}'
+            if name == 'weblate' and name not in values:
+                return html.escape(WEBLATE_URL, quote=True)
             if name == 'donate' and name not in values:
                 return html.escape(self.donate, quote=True)
             if name not in values:
@@ -1156,7 +1162,8 @@ def check(out, strings, email, site='', donate=''):
         for ref in re.findall(r'href="([^"]*github\.com[^"]*)"', page):
             expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values(), f'{f}: GitHub link {ref} (only {REPO_URL})')
         for ref in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"', page):
-            expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values() or (site and ref.startswith(site + '/'))
+            expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values() or ref == WEBLATE_URL
+                   or (site and ref.startswith(site + '/'))
                    or (donate and ref == html.escape(donate, quote=True)),
                    f'{f}: link to another site {ref} (add it to OUTSIDE_LINKS if it belongs)')
         if loc:

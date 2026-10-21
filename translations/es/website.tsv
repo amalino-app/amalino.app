@@ -79,7 +79,11 @@ tr.improve1	Te envío una hoja de revisión para tu idioma (con los encabezados 
 tr.improve2	Si una fila está bien, escribe «yes» en la columna «OK?». Si no, escribe una palabra o frase mejor en la columna «Correction». Si tienes dudas, déjala en blanco.
 tr.improve3	Devuélveme la hoja. Yo paso tus correcciones a la app y marco el texto como revisado.
 tr.improveNote	No hace falta hacerlo todo de una vez. Lo más importante son las pantallas de configuración y las primeras palabras, así que van al principio. En algunos idiomas (el español es uno de ellos) hay unas pocas preguntas más; por ejemplo, sobre las terminaciones de las palabras según hable un niño o una niña («cansado» o «cansada»).
-tr.improveGithub	¿Usas GitHub? Entonces también puedes [[corregir una traducción allí]]: cada idioma tiene su propio archivo, y reviso cada cambio antes de incluirlo en la app. Pronto habrá también un formulario web sencillo para quienes traducen.
+tr.weblateTitle	O corrígelo en línea, en Weblate
+tr.weblate	Weblate es una web donde puedes corregir los textos de Amalino desde el navegador: las pantallas de la app, las palabras de los botones que toca el niño o la niña, y esta misma web. Solo necesitas una cuenta gratuita. Reviso cada sugerencia antes de incluirla en la app.
+tr.weblateLink	Traducir en Weblate
+tr.weblateNote	¿Prefieres la hoja de cálculo? Funciona igual de bien, y los pasos de arriba siguen siendo los mismos.
+tr.improveGithub	¿Usas GitHub? Entonces también puedes [[corregir una traducción allí]]: cada idioma tiene su propio archivo, y reviso cada cambio antes de incluirlo en la app.
 tr.addTitle	Añade tu idioma
 tr.addIntro	Si tu idioma aún no está en Amalino, puedes ayudar a que llegue.
 tr.add1	Te envío una hoja de traducción con los textos de la app en inglés y una columna vacía para tus palabras. Primero van las pantallas de configuración y las primeras palabras de un niño.

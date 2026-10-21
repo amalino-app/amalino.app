@@ -79,7 +79,11 @@ tr.improve1	Atsiųsiu jums lentelę su jūsų kalbos vertimu. Kiekvienoje eilut�
 tr.improve2	Jei eilutė teisinga, stulpelyje „OK?“ įrašykite „yes“. Jei ne, stulpelyje „Correction“ (pataisymas) įrašykite geresnį žodį ar sakinį. Jei abejojate, langelį palikite tuščią.
 tr.improve3	Grąžinkite lentelę man. Jūsų pataisymus perkelsiu į programėlę ir tekstą pažymėsiu kaip patikrintą.
 tr.improveNote	Nebūtina visko padaryti iš karto. Svarbiausi – pradinės sąrankos ekranai ir pirmieji žodžiai, todėl jie lentelėje pateikti pirmiausia. Kai kurioms kalboms prireikia kelių papildomų klausimų, pavyzdžiui, apie žodžių galūnes berniukams ir mergaitėms.
-tr.improveGithub	Naudojatės GitHub? Tada vertimą galite [[pataisyti ir ten]]: kiekviena kalba turi savo failą, o kiekvieną pakeitimą pirmiausia patikrinu ir tik tada perkeliu į programėlę. Netrukus atsiras ir paprasta internetinė forma vertėjams.
+tr.weblateTitle	Arba taisykite internete, Weblate svetainėje
+tr.weblate	Weblate – svetainė, kurioje Amalino tekstus galite taisyti tiesiog naršyklėje: programėlės ekranus, žodžius ant mygtukų, kuriuos bakstelėja vaikas, ir šią svetainę. Užtenka nemokamos paskyros. Kiekvieną pasiūlymą pirmiausia patikrinu ir tik tada perkeliu į programėlę.
+tr.weblateLink	Versti Weblate svetainėje
+tr.weblateNote	Patogiau dirbti su lentele? Taip irgi puiku – viskas vyksta taip, kaip aprašyta aukščiau.
+tr.improveGithub	Naudojatės GitHub? Tada vertimą galite [[pataisyti ir ten]]: kiekviena kalba turi savo failą, o kiekvieną pakeitimą pirmiausia patikrinu ir tik tada perkeliu į programėlę.
 tr.addTitle	Pridėkite savo kalbą
 tr.addIntro	Jei Amalino dar nėra jūsų kalbos, galite padėti ją pridėti.
 tr.add1	Atsiųsiu jums vertimo lentelę: programėlės tekstą anglų kalba ir tuščią stulpelį jūsų vertimui. Pirmiausia – pradinės sąrankos ekranai ir pirmieji vaiko žodžiai.

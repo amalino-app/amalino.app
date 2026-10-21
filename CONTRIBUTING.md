@@ -8,16 +8,20 @@ none of them needs programming.
 There are three kinds of text: the app's screens, the website, and the **board words**, the words a child taps
 and hears.
 
-- **On Weblate (being set up):** translate or correct all three in a web form, with no files and no git. Sign in at
-  [hosted.weblate.org](https://hosted.weblate.org), open the Amalino project, choose your language and suggest a
-  better text. Each board word shows its English word, its folder, its picture and, when it's too long for its
-  button, a note. The owner checks every change before it goes into the app. [How it is set up](docs/weblate.md).
+- **On Weblate:** [Translate on Weblate](https://hosted.weblate.org/engage/amalino/). Weblate is a website where
+  you correct all three in your browser, with no files and no git; a free account is enough. Choose your language
+  and suggest a better text. Each board word shows its English word, its folder, its picture and, when it's too
+  long for its button, a note. The owner checks every suggestion before it goes into the app.
+  [How it is set up](docs/weblate.md).
 - **Here on GitHub:** each language has a folder in `translations/`: `app.tsv` is the app, `website.tsv` the
   website, `vocab.tsv` the board words. In `app.tsv` and `website.tsv` each line is a key, a tab, and the text;
   `vocab.tsv` is a table (GitHub shows it with a search box) where only the `text` column is yours to change
   (Arabic: also `spoken`, the word with full tashkeel as the voice reads it). Open the file, press the pencil
   (Edit), change only that text, and propose the change. GitHub makes the pull request for you. Don't edit the
   `weblate/` folder: it is written from `translations/`.
+- **With a spreadsheet:** if you'd rather not use either, the [Help translate](https://amalino.app/en/translate/)
+  page explains how to check your language in a spreadsheet and send it back by e-mail. That stays open to
+  everyone.
 
 Please keep:
 - every `{placeholder}` exactly as it is in English (for example `{name}`, `{n}`), and `**bold**` and `{app:…}`
