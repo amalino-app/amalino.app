@@ -100,15 +100,19 @@ the repository; the others use the same repository through `weblate://amalino/ap
 
 ## What the owner does once
 
-1. **Sign up** at [hosted.weblate.org](https://hosted.weblate.org) with the GitHub account that owns
+Status 2026-10-21: steps 1–4 and 6 are done. The three components exist and the round trip works: Weblate pull
+request #1 (a Danish board word) was merged, synced into `translations/` and taken into the app. Step 5 is waiting
+for Weblate's approval of the Libre plan; step 8 follows it.
+
+1. ✓ **Sign up** at [hosted.weblate.org](https://hosted.weblate.org) with the GitHub account that owns
    `amalino-app`.
-2. **Install the Hosted Weblate GitHub app** (Weblate: your profile → Account → connect GitHub, or the "GitHub"
+2. ✓ **Install the Hosted Weblate GitHub app** (Weblate: your profile → Account → connect GitHub, or the "GitHub"
    option when adding a component) for the `amalino-app` organisation, with access to `amalino.app` only. The app
    clones the repository, receives push notifications, pushes the translation branch and opens the pull requests,
    so no deploy key or extra collaborator is needed. (The fallback without the app: invite the GitHub user
    `weblate`, e-mail hosted@weblate.org, and use the SSH address `git@github.com:amalino-app/amalino.app.git`.)
-3. **Push `main`** with `weblate/` and `weblate/.synced` in it (`python3 scripts/weblate_sync.py` writes them).
-4. **Create the project** ("Add new translation project"): name Amalino, slug `amalino`, website
+3. ✓ **Push `main`** with `weblate/` and `weblate/.synced` in it (`python3 scripts/weblate_sync.py` writes them).
+4. ✓ **Create the project** ("Add new translation project"): name Amalino, slug `amalino`, website
    `https://amalino.app`, licence "Creative Commons Attribution Share Alike 4.0", contributor agreement: *By
    contributing you agree that your text is shared under CC BY-SA 4.0.*
 5. **Choose the Libre plan** (gratis for public libre projects, the same limits as the 160k-strings plan; this
@@ -120,10 +124,14 @@ the repository; the others use the same repository through `weblate://amalino/ap
    the Libre plan to projects under a libre licence; the translations are CC BY-SA, but the app's code is closed.
    If Weblate declines for that reason, the GitHub and spreadsheet paths keep working (CONTRIBUTING.md), and a
    paid plan or a self-hosted Weblate use the same setup.
-6. **Create the three components** with the table above (`app` first), then check one plural string in Russian
-   and Arabic, and one board word's description (English, folder, picture link).
+6. ✓ **Create the three components** with the table above (`app` first), then check one plural string in Russian
+   and Arabic, and one board word's description (English, folder, picture link). Created and tested on
+   2026-10-21 with pull request #1.
 7. **Teams:** give each language a reviewer when a native speaker volunteers ("Users" → Reviewers per language);
    everyone else makes suggestions or translations, which come to `main` only through pull requests.
+8. **Link the website** once the Libre plan is approved: the "Help translate" page and CONTRIBUTING.md get a plain
+   "Translate on Weblate" link to `https://hosted.weblate.org/engage/amalino/` (a link only: no Weblate widget,
+   badge or script, so the site still loads nothing from another host).
 
 ## What the owner does for each Weblate pull request
 
