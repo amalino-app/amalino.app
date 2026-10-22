@@ -127,6 +127,12 @@ logModelTapsSub	Counts how often adults model; never mixed into the child's word
 makeFolder	Make it open a folder
 messageBar	Message bar
 micPermission	Allow the microphone to record words.
+micListenTitle	Use the microphone?
+micListenWhy	Listen to what I say needs the microphone to hear what you say to the child and light up the words they could answer with. Speech is recognised on this device only; sound is never saved or sent anywhere. Next, your device asks you to allow the microphone.
+micListenDeniedTitle	The microphone isn't allowed
+micListenStaysOff	Listen to what I say stays off. To use it, allow the microphone, then turn it on here again.
+micSettingsAndroid	Open Settings > Apps > Amalino > Permissions > Microphone and allow it.
+micSettingsIos	Open the Settings app > Amalino and turn on Microphone.
 modellingMode	Modelling mode
 modellingModeHow	Tap words while you talk, to show {name} how.
 modellingModeHow.anon	Tap words while you talk, to show your child how.
@@ -950,7 +956,11 @@ nameRecheckWaiting.m	{voice} is downloading. You can check how he says {name}'s 
 nameRecheckWaiting.n	{voice} is downloading. You can check how it says {name}'s name when it's ready.
 voiceChosen	Chosen
 naturalVoicesDownloading	Downloading natural voices · {p}%
+naturalVoicesInstalling	Installing natural voices…
 voiceWaitingForWifi	Waiting for Wi-Fi
+voiceLoadingForNow	{voice} is loading ({p}%). The device voice speaks for now.
+voiceAlmostReadyForNow	{voice} is almost ready… The device voice speaks for now.
+voiceWifiForNow	{voice} downloads on Wi-Fi. The device voice speaks for now.
 voiceReadyLine	Ready
 saveNameTitle	Save changes to {name}'s name?
 discard	Discard

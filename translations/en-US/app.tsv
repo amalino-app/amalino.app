@@ -20,6 +20,7 @@ wordTypeColour	Word-type color
 libraryConsent	The library downloads boards that other families and therapists shared. Nothing about your child is sent. If you share a board, only the board itself and the title and description you write are uploaded, under the CC BY-SA 4.0 license.
 libraryAdd	Add to Favorites
 aiListenSub	When you turn on the microphone in the top bar, this device listens to what you say and highlights words the child could use to answer. Speech is recognized on this device; audio is never saved or sent.
+micListenWhy	Listen to what I say needs the microphone to hear what you say to the child and light up the words they could answer with. Speech is recognized on this device only; sound is never saved or sent anywhere. Next, your device asks you to allow the microphone.
 aiListenModel	Download the speech recognizer (~{mb} MB, once)
 aiListenModelReady	Speech recognizer installed (works offline)
 noFreeCell	There is no empty cell in Favorites or on the main board. Hide or remove a word there first: words never move to make room.

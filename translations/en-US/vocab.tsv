@@ -3,6 +3,7 @@ folder.snacks	snacks and sweets	snacks and candy	folder	food	1	no	https://static
 cookie	biscuit	cookie	noun	food	1	no	https://static.arasaac.org/pictograms/8312/8312_300.png
 omelet	omelette	omelet	noun	food	3	no	https://static.arasaac.org/pictograms/4966/4966_300.png
 shopping_cart	trolley	shopping cart	noun	food	3	no	https://static.arasaac.org/pictograms/5948/5948_300.png
+starter	starter	appetizer	noun	food	3	no	https://static.arasaac.org/pictograms/7219/7219_300.png
 soda	fizzy drink	soda	noun	drink	2	no	https://static.arasaac.org/pictograms/4732/4732_300.png
 supermarket	shop	store	noun	drink	2	no	https://static.arasaac.org/pictograms/3389/3389_300.png
 mom	mum	mom	noun	people	1	no	https://static.arasaac.org/pictograms/2458/2458_300.png
@@ -11,6 +12,7 @@ soccer_player	footballer	soccer player	noun	people	3	no	https://static.arasaac.o
 shop	shop	store	noun	places	1	no	https://static.arasaac.org/pictograms/9117/9117_300.png
 garden	garden	yard	noun	places	1	no	https://static.arasaac.org/pictograms/2434/2434_300.png
 kindergarten	nursery	kindergarten	noun	places	2	no	https://static.arasaac.org/pictograms/39661/39661_300.png
+outside_lift	outside lift	outdoor elevator	noun	places	2	no	https://static.arasaac.org/pictograms/29901/29901_300.png
 neighborhood	neighbourhood	neighborhood	noun	places	3	no	https://static.arasaac.org/pictograms/6241/6241_300.png
 football_field	football pitch	soccer field	noun	places	3	no	https://static.arasaac.org/pictograms/3073/3073_300.png
 theater	theatre	theater	noun	places	3	no	https://static.arasaac.org/pictograms/10284/10284_300.png
@@ -26,10 +28,12 @@ zipper	zip	zipper	noun	clothes	2	no	https://static.arasaac.org/pictograms/2723/2
 sweater	jumper	sweater	noun	clothes	2	no	https://static.arasaac.org/pictograms/2436/2436_300.png
 sneaker	trainer	sneaker	noun	clothes	3	no	https://static.arasaac.org/pictograms/8332/8332_300.png
 dressing_gown	dressing gown	robe	noun	clothes	3	no	https://static.arasaac.org/pictograms/36499/36499_300.png
+clothes_peg	clothes peg	clothespin	noun	clothes	3	no	https://static.arasaac.org/pictograms/8466/8466_300.png
 folder.colours	colours	colors	folder	school	1	no	https://static.arasaac.org/pictograms/5968/5968_300.png
 recess	playtime	recess	noun	school	1	no	https://static.arasaac.org/pictograms/27339/27339_300.png
 eraser	board rubber	eraser	noun	school	2	no	https://static.arasaac.org/pictograms/16341/16341_300.png
 holidays	holidays	vacation	noun	school	2	no	https://static.arasaac.org/pictograms/3166/3166_300.png
+drawing_pin	drawing pin	thumbtack	noun	school	2	no	https://static.arasaac.org/pictograms/8304/8304_300.png
 pencil_eraser	rubber	pencil eraser	noun	school	2	no	https://static.arasaac.org/pictograms/2409/2409_300.png
 wastebasket	bin	trash	noun	school	2	no	https://static.arasaac.org/pictograms/2861/2861_300.png
 math_class	maths class	math class	noun	school	3	no	https://static.arasaac.org/pictograms/36373/36373_300.png
@@ -41,6 +45,7 @@ doughnut	doughnut	donut	noun	food/snacks	2	no	https://static.arasaac.org/pictogr
 sweet_shop	sweet shop	candy store	noun	food/snacks	3	no	https://static.arasaac.org/pictograms/4882/4882_300.png
 potato_chip	crisps	chips	noun	food/snacks	3	no	https://static.arasaac.org/pictograms/8653/8653_300.png
 cotton_candy	candyfloss	cotton candy	noun	food/snacks	3	no	https://static.arasaac.org/pictograms/11174/11174_300.png
+kitchen_paper	kitchen paper	paper towel	noun	food/kitchen	2	no	https://static.arasaac.org/pictograms/6166/6166_300.png
 garbage_can	bin	trash can	noun	food/kitchen	2	no	https://static.arasaac.org/pictograms/2724/2724_300.png
 mommy	mummy	mommy	noun	people/family	1	no	https://static.arasaac.org/pictograms/2458/2458_300.png
 mailman	postman	mailman	noun	people/jobs	2	no	https://static.arasaac.org/pictograms/2690/2690_300.png
@@ -52,9 +57,12 @@ sidewalk	pavement	sidewalk	noun	places/transport	2	no	https://static.arasaac.org
 fire_truck	fire engine	fire truck	noun	places/transport	2	no	https://static.arasaac.org/pictograms/4925/4925_300.png
 car_park	car park	parking lot	noun	places/transport	2	no	https://static.arasaac.org/pictograms/6283/6283_300.png
 garbage_truck	bin lorry	garbage truck	noun	places/transport	2	no	https://static.arasaac.org/pictograms/8523/8523_300.png
+tube	tube	subway	noun	places/transport	2	no	https://static.arasaac.org/pictograms/2472/2472_300.png
 tire	tyre	tire	noun	places/transport	3	no	https://static.arasaac.org/pictograms/37072/37072_300.png
 traveler	traveller	traveler	noun	places/transport	3	no	https://static.arasaac.org/pictograms/6628/6628_300.png
+lift	lift	elevator	noun	places/house	2	no	https://static.arasaac.org/pictograms/2260/2260_300.png
 closet	wardrobe	closet	noun	places/house	2	no	https://static.arasaac.org/pictograms/2258/2258_300.png
+flat	flat	apartment	noun	places/house	2	no	https://static.arasaac.org/pictograms/8491/8491_300.png
 tap	tap	faucet	noun	places/house	3	no	https://static.arasaac.org/pictograms/2414/2414_300.png
 crib	cot	crib	noun	places/house	3	no	https://static.arasaac.org/pictograms/5980/5980_300.png
 fall_tree	autumn tree	fall tree	noun	places/nature	2	no	https://static.arasaac.org/pictograms/5063/5063_300.png
@@ -67,6 +75,8 @@ soccer_ball	football	soccer ball	noun	activities/sports	3	no	https://static.aras
 sweatpants	joggers	sweatpants	noun	activities/sports	3	no	https://static.arasaac.org/pictograms/36423/36423_300.png
 pacifier	dummy	pacifier	noun	body/health	2	no	https://static.arasaac.org/pictograms/4599/4599_300.png
 dirty_diaper	dirty nappy	dirty diaper	noun	body/health	2	no	https://static.arasaac.org/pictograms/35847/35847_300.png
+hair_slide	hair slide	barrette	noun	clothes/accessories	2	no	https://static.arasaac.org/pictograms/3360/3360_300.png
+braces	braces	suspenders	noun	clothes/accessories	3	no	https://static.arasaac.org/pictograms/16901/16901_300.png
 color	colour	color	noun	school/colours	2	no	https://static.arasaac.org/pictograms/5968/5968_300.png
 gray	grey	gray	descriptor	school/colours	2	no	https://static.arasaac.org/pictograms/3340/3340_300.png
 center	centre	center	noun	school/numbers	3	no	https://static.arasaac.org/pictograms/5424/5424_300.png

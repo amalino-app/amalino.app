@@ -1,11 +1,11 @@
 # Written by scripts/weblate_sync.py: the git blob of each Weblate file as it last wrote it (the base of the three-way comparison). Don't edit.
-weblate/app/ar.json	1cabfde16eccc836d5eeb4a65b3b4976a4107fd2
-weblate/app/da.json	c1c24394fb00c474e7bc003b4ac0dadf353fa96e
-weblate/app/en.json	d0bd620588bbe43e1c217dbe36fad242b3b3847c
-weblate/app/es.json	200ceec32b98fe28e8e4630212025d8a116816ab
-weblate/app/lt.json	0b420713dbea24b781ece3a184179791f78a232f
-weblate/app/ru.json	4719e2bf86a8746d3bde9020bc99d3e9065aea68
-weblate/app/uk.json	990e98b35e21c2d9fe427c74f626a0ce81c8969f
+weblate/app/ar.json	578a346847b05a8fa41e550837ce7a32f260e6df
+weblate/app/da.json	b233b28665ad48905716d33a34aa09327def2c1f
+weblate/app/en.json	25ee9ae3f94e459a219b981901269637896628ec
+weblate/app/es.json	e7b2b177b0ecf53f2af4b6a16441624a489c6eb9
+weblate/app/lt.json	14da1f770787773e8acfe193958a2888a43c9df6
+weblate/app/ru.json	1aea092d42f28efde56570540fa736cee0b8b60b
+weblate/app/uk.json	f5ca49437bacfe03fa0cc541a9a34837c84b5fff
 weblate/vocab/ar.po	a8cd1a1db28a56442b363641a58c954f2e08d9c0
 weblate/vocab/da.po	6afc5e419b89b16919a745e4aeec1ea7abe55ce9
 weblate/vocab/es.po	04c3856fc4c2764adbc43b7409fe3f0269d026c5

@@ -127,6 +127,12 @@ logModelTapsSub	Tæller, hvor ofte voksne modellerer; blandes aldrig med barnets
 makeFolder	Lad den åbne en mappe
 messageBar	Beskedlinje
 micPermission	Giv adgang til mikrofonen for at optage ord.
+micListenTitle	Brug mikrofonen?
+micListenWhy	Lyt med bruger mikrofonen til at høre, hvad du siger til barnet, og fremhæve de ord, barnet kan svare med. Talen genkendes kun på denne enhed; lyd gemmes og sendes aldrig nogen steder hen. Bagefter beder enheden dig om at give adgang til mikrofonen.
+micListenDeniedTitle	Mikrofonen er ikke tilladt
+micListenStaysOff	Lyt med forbliver slået fra. Vil du bruge det, så giv adgang til mikrofonen og slå det til her igen.
+micSettingsAndroid	Åbn Indstillinger > Apps > Amalino > Tilladelser > Mikrofon, og giv adgang.
+micSettingsIos	Åbn Indstillinger > Amalino, og slå Mikrofon til.
 modellingMode	Modelleringstilstand
 modellingModeHow	Tryk på ord, mens du taler, for at vise {name} hvordan.
 modellingModeHow.anon	Tryk på ord, mens du taler, for at vise dit barn hvordan.
@@ -950,7 +956,11 @@ nameRecheckWaiting.m	{voice} hentes. Du kan høre, hvordan han siger {name}s nav
 nameRecheckWaiting.n	{voice} hentes. Du kan høre, hvordan stemmen siger {name}s navn, når den er klar.
 voiceChosen	Valgt
 naturalVoicesDownloading	Henter naturlige stemmer · {p} %
+naturalVoicesInstalling	Installerer naturlige stemmer …
 voiceWaitingForWifi	Venter på Wi-Fi
+voiceLoadingForNow	{voice} hentes ({p} %). Indtil videre taler enhedens stemme.
+voiceAlmostReadyForNow	{voice} er næsten klar … Indtil videre taler enhedens stemme.
+voiceWifiForNow	{voice} hentes, når enheden er på Wi-Fi. Indtil videre taler enhedens stemme.
 voiceReadyLine	Klar
 saveNameTitle	Gem ændringerne af {name}s navn?
 discard	Kassér

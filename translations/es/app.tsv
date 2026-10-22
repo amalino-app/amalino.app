@@ -127,6 +127,12 @@ logModelTapsSub	Cuenta cuánto modelan los adultos; nunca se mezcla con las pala
 makeFolder	Hacer que abra una carpeta
 messageBar	Barra de mensaje
 micPermission	Permite el micrófono para grabar palabras.
+micListenTitle	¿Usar el micrófono?
+micListenWhy	«Escuchar lo que digo» usa el micrófono para oír lo que le dices al niño y resaltar las palabras con las que podría responder. El habla se reconoce solo en este dispositivo; el sonido nunca se guarda ni se envía a ningún sitio. Después, el dispositivo te pedirá permiso para usar el micrófono.
+micListenDeniedTitle	El micrófono no está permitido
+micListenStaysOff	«Escuchar lo que digo» seguirá desactivado. Para usarlo, permite el micrófono y vuelve a activarlo aquí.
+micSettingsAndroid	Abre Ajustes > Aplicaciones > Amalino > Permisos > Micrófono y permite el acceso.
+micSettingsIos	Abre Ajustes > Amalino y activa Micrófono.
 modellingMode	Modo modelado
 modellingModeHow	Toca palabras mientras hablas, para enseñarle a {name} cómo se hace.
 modellingModeHow.anon	Toca palabras mientras hablas, para enseñarle a tu hijo o hija cómo se hace.
@@ -950,7 +956,11 @@ nameRecheckWaiting.m	{voice} se está descargando. Cuando esté listo, podrás e
 nameRecheckWaiting.n	{voice} se está descargando. Cuando esté lista, podrás escuchar cómo dice esta voz el nombre de {name}.
 voiceChosen	Elegida
 naturalVoicesDownloading	Descargando voces naturales · {p} %
+naturalVoicesInstalling	Instalando voces naturales…
 voiceWaitingForWifi	Esperando al wifi
+voiceLoadingForNow	La voz de {voice} se está descargando ({p} %). Mientras tanto, habla la voz del dispositivo.
+voiceAlmostReadyForNow	La voz de {voice} está casi lista… Mientras tanto, habla la voz del dispositivo.
+voiceWifiForNow	La voz de {voice} se descargará cuando haya wifi. Mientras tanto, habla la voz del dispositivo.
 voiceReadyLine	Lista
 saveNameTitle	¿Guardar los cambios en el nombre de {name}?
 discard	Descartar
