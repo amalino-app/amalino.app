@@ -34,7 +34,8 @@ translations/<lang>/reviewed.txt for the website, manual:<page> lines for the ma
 translated manual page that isn't listed there shows the draft banner.
 
 Template syntax: {{t:key}} text (HTML-escaped; **bold**; {email} becomes a mailto link isolated as
-LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value ({{v:donate}}, {{v:weblate}}, {{v:issues}}, {{v:report_mailto}}), {{link:page}} a relative
+LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value ({{v:donate}}, {{v:weblate}}, {{v:issues}}, {{v:report_mailto}},
+{{v:testers_group}}, {{v:testers_optin}}), {{link:page}} a relative
 link to a page in the same language. In strings, {app:key} is the app's own label from
 translations/<lang>/app.tsv ({app:key|label}: the part before the first ":"). The manual's Markdown
 (manual/<lang>/*.md) uses the same {app:key} for every button, menu and setting it names, so a translated manual
@@ -122,6 +123,12 @@ WEBLATE_URL = 'https://hosted.weblate.org/engage/amalino/'
 # route is a mailto: with a subject and a short checklist in the page's language ({{v:report_mailto}}).
 ISSUES_URL = REPO_URL + '/issues/new/choose'
 REPORT_CHECKS = ('report.check1', 'report.check2', 'report.check3', 'report.check4')
+# "Help test Amalino on Android" (home page, owner 2026-10-23): Google Play's closed test needs at least 12 testers
+# opted in for 14 days before production. Testers join the Google Group with the Google account of their Android
+# device, then opt in on Google Play's test page. Plain links, followed only when clicked ({{v:testers_group}},
+# {{v:testers_optin}}); the only links to Google's sites.
+TESTERS_GROUP_URL = 'https://groups.google.com/g/amalino-testers'
+TESTERS_OPTIN_URL = 'https://play.google.com/apps/testing/app.amalino'
 # The user manual: manual/<lang>/index.md and the pages its contents list links to, published at /<lang>/manual/.
 # A language without a manual folder links to the English manual.
 MANUAL = os.path.join(ROOT, 'manual')
@@ -406,6 +413,10 @@ class Renderer:
                 return html.escape(WEBLATE_URL, quote=True)
             if name == 'issues' and name not in values:
                 return html.escape(ISSUES_URL, quote=True)
+            if name == 'testers_group' and name not in values:
+                return html.escape(TESTERS_GROUP_URL, quote=True)
+            if name == 'testers_optin' and name not in values:
+                return html.escape(TESTERS_OPTIN_URL, quote=True)
             if name == 'report_mailto' and name not in values:
                 return html.escape(self.report_mailto(loc), quote=True)
             if name == 'donate' and name not in values:
@@ -1188,6 +1199,7 @@ def check(out, strings, email, site='', donate=''):
             expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values(), f'{f}: GitHub link {ref} (only {REPO_URL})')
         for ref in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"', page):
             expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values() or ref == WEBLATE_URL
+                   or ref in (TESTERS_GROUP_URL, TESTERS_OPTIN_URL)
                    or (site and ref.startswith(site + '/'))
                    or (donate and ref == html.escape(donate, quote=True)),
                    f'{f}: link to another site {ref} (add it to OUTSIDE_LINKS if it belongs)')
@@ -1257,6 +1269,12 @@ def check(out, strings, email, site='', donate=''):
         # issue forms, the mailto with a subject and the checklist when the email is set, and every page's footer
         # links to it.
         about = read(os.path.join(out, loc, page_path('about')))
+        # "Help test Amalino on Android" (owner 2026-10-23): every language's home page has the section with the
+        # testers' group, Google Play's opt-in page and the way to "Report a problem".
+        home = read(os.path.join(out, loc, page_path('home')))
+        expect('id="test-android"' in home and f'href="{TESTERS_GROUP_URL}"' in home
+               and f'href="{TESTERS_OPTIN_URL}"' in home and '#report"' in home,
+               f'{loc}: "Help test Amalino on Android" missing on the home page')
         expect('id="report"' in about and f'href="{ISSUES_URL}"' in about, f'{loc}/about: "Report a problem" missing')
         expect(not email or f'href="mailto:{html.escape(email)}?subject=' in about,
                f'{loc}/about: the report email link missing')

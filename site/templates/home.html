@@ -14,6 +14,17 @@
     <p>{{t:home.status}}</p>
     {{#email}}<p>{{t:home.statusEmail}}</p>{{/email}}
   </section>
+  <section id="test-android" class="card test-android">
+    <h2>{{t:test.title}}</h2>
+    <p>{{t:test.intro}}</p>
+    <ol class="steps">
+      <li>{{t:test.step1}}<br><a class="button" href="{{v:testers_group}}" rel="noopener">{{t:test.step1Link}}</a></li>
+      <li>{{t:test.step2}}<br><a class="button" href="{{v:testers_optin}}" rel="noopener">{{t:test.step2Link}}</a></li>
+      <li>{{t:test.step3}}</li>
+    </ol>
+    <p class="muted">{{t:test.note}}</p>
+    <p>{{t:test.feedback}} <a href="{{link:about}}#report">{{t:report.title}}</a></p>
+  </section>
   <section>
     <h2>{{t:home.featuresTitle}}</h2>
     <ul class="features">

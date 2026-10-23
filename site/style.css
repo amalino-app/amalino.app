@@ -225,6 +225,7 @@ bdi a, bdi { overflow-wrap: anywhere; }
   width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
   background: var(--primary); color: var(--on-primary); font-weight: 700; line-height: 1;
 }
+.test-android .steps .button { margin-block-start: 8px; }
 .contact { font-weight: 600; }
 .thanks { font-weight: 600; margin-block-start: 32px; }
 

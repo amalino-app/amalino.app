@@ -27,6 +27,15 @@ home.lead	Amalino er en app til telefoner og tablets. Barnet trykker på billede
 home.story	Jeg laver Amalino, fordi nogle børn har masser på hjerte, men ingen nem måde at sige det på. Amalino er gratis og virker uden internet: Når barnet trykker på et billede, siger appen ordet – på de sprog, I bruger derhjemme. Det burde ikke være et privilegium at have en stemme.
 home.status	Amalino kan ikke hentes i App Store eller Google Play endnu. Lige nu tester jeg den på rigtige telefoner og tablets, og snart får de første familier lov at prøve den.
 home.statusEmail	Vil du have besked, når den er klar? Skriv til mig på {email}.
+test.title	Hjælp med at teste Amalino på Android
+test.intro	Før Amalino kan komme på Google Play, kræver Google, at nogle testere har den på en Android-telefon eller -tablet i 14 dage. Du behøver ikke have et barn, der bruger den. Alle med en Android-enhed kan hjælpe, og det tager kun et par minutter.
+test.step1	Meld dig ind i testergruppen med den samme Google-konto, som du bruger på din Android-enhed.
+test.step1Link	Meld dig ind i testergruppen
+test.step2	Åbn testsiden på din Android-enhed, og tryk på »Bliv tester«.
+test.step2Link	Åbn testsiden
+test.step3	Installer Amalino fra Google Play. Åbn den et par gange i løbet af de næste to uger, og lad den blive på enheden i 14 dage.
+test.note	Gruppen sender ingen mails, og medlemmerne kan ikke se hinanden.
+test.feedback	Er der noget, der ikke virker, eller har du en idé? Skriv til mig her:
 home.featuresTitle	Det særlige ved Amalino
 home.f1.title	Hvert ord har sin faste plads
 home.f1.body	De ord, barnet har mest brug for, står altid samme sted, så hånden lærer vejen – ligesom din egen hånd finder rundt på et tastatur. Begynd med få, store knapper, og vis flere ord, efterhånden som barnet udvikler sig. Ingenting flytter sig.

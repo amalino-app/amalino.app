@@ -110,6 +110,29 @@ class BuiltSite(unittest.TestCase):
                 self.assertEqual(len(re.findall(r'<ol class="steps">', html)), 2)
             self.assertIn(EMAIL, read(self.with_email, loc, 'translate', 'index.html'))
 
+    def test_help_test_on_android_in_every_language(self):
+        # Owner 2026-10-23: the home page asks for Android testers in every language: the testers' group and Google
+        # Play's opt-in page as plain links (one place in build.py), the three steps, and a link to "Report a problem".
+        for loc in bs.LOCALES:
+            r = bs.Renderer(self.strings, EMAIL, '')
+            for out in (self.with_email, self.without):
+                html = read(out, loc, 'index.html')
+                self.assertIn('<section id="test-android"', html, loc)
+                self.assertIn(f'<a class="button" href="{bs.TESTERS_GROUP_URL}" rel="noopener">', html, loc)
+                self.assertIn(f'<a class="button" href="{bs.TESTERS_OPTIN_URL}" rel="noopener">', html, loc)
+                self.assertIn('href="../{}/about/index.html#report"'.format(loc), html, loc)
+                text = bs.visible_text(html)
+                for key in ('test.title', 'test.intro', 'test.step1', 'test.step2', 'test.step3', 'test.note',
+                            'test.step1Link', 'test.step2Link', 'test.feedback'):
+                    self.assertIn(bs.visible_text(r.html_text(key, loc)), text, f'{loc} {key}')
+                # The section sits right after the status card.
+                self.assertLess(html.index('class="card status"'), html.index('id="test-android"'), loc)
+        # The two URLs live once, in build.py, not in the translations.
+        for loc in bs.LOCALES:
+            for key, texts in self.strings.items():
+                self.assertNotIn('groups.google.com', texts[loc], key)
+                self.assertNotIn('play.google.com', texts[loc], key)
+
     def test_report_a_problem_in_every_language(self):
         # Owner 2026-10-21: About has "Report a problem" in every language: the mailto (subject and checklist in the
         # page's language) when the email is set, the GitHub issue forms always, the privacy note; the footer of
