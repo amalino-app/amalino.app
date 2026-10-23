@@ -127,7 +127,7 @@ REPORT_CHECKS = ('report.check1', 'report.check2', 'report.check3', 'report.chec
 # opted in for 14 days before production. Testers join the Google Group with the Google account of their Android
 # device, then opt in on Google Play's test page. Plain links, followed only when clicked ({{v:testers_group}},
 # {{v:testers_optin}}); the only links to Google's sites.
-TESTERS_GROUP_URL = 'https://groups.google.com/g/amalino-testers'
+TESTERS_GROUP_URL = 'https://groups.google.com/g/amalino-testers/about'
 TESTERS_OPTIN_URL = 'https://play.google.com/apps/testing/app.amalino'
 # The user manual: manual/<lang>/index.md and the pages its contents list links to, published at /<lang>/manual/.
 # A language without a manual folder links to the English manual.
