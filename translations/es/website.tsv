@@ -24,17 +24,25 @@ home.title	Amalino: app de CAA gratis con pictogramas para niños
 home.meta	App gratis de comunicación aumentativa y alternativa (CAA) para niños que aún no hablan: tocan un pictograma y oyen la palabra. En español y 6 idiomas más.
 home.h1	Palabras para niños y niñas que no hablan, o que todavía no hablan
 home.lead	Amalino es una app para teléfonos y tabletas. Basta con tocar un pictograma para que el dispositivo diga la palabra en voz alta, en el idioma de la familia.
+home.shotAlt	Amalino en una tableta: el tablero del niño, con la barra de mensaje arriba, 36 botones de colores con pictogramas de palabras cotidianas y, abajo, las frases «para» y «ayúdame»
 home.story	Estoy creando Amalino porque hay niños que tienen mucho que decir y no tienen una forma fácil de decirlo. Es gratis, funciona sin internet y habla por ellos cuando tocan un pictograma, en los idiomas que se hablan en tu casa. Tener voz no debería ser un privilegio.
 home.status	Amalino aún no está en las tiendas de aplicaciones. Ahora mismo lo estoy probando en teléfonos y tabletas de verdad, y pronto lo probarán las primeras familias.
 home.statusEmail	¿Quieres que te avise cuando esté listo? Escríbeme a {email}.
 test.title	Ayuda a probar Amalino en Android
-test.intro	Antes de que Amalino pueda publicarse en Google Play, Google exige que haya personas que lo tengan instalado en un teléfono o una tableta Android durante 14 días. No hace falta tener un niño que lo use: cualquiera con un dispositivo Android puede ayudar, y solo lleva unos minutos.
+test.lead	Puede ayudar cualquier persona con un teléfono o una tableta Android. No hace falta experiencia en CAA ni tener un niño o una niña que use la app.
+test.intro	Antes de que Amalino pueda publicarse en Google Play, Google exige que haya personas que lo tengan instalado en un teléfono o una tableta Android durante 14 días. Empezar solo lleva unos minutos.
 test.step1	Únete al grupo de pruebas con la misma cuenta de Google que usas en tu dispositivo Android.
 test.step1Link	Unirme al grupo
 test.step2	En tu dispositivo Android, abre la página de pruebas y toca «Convertirse en verificador».
 test.step2Link	Abrir la página de pruebas
 test.step3	Instala Amalino desde Google Play. Ábrelo unas cuantas veces durante las dos semanas siguientes y mantenlo instalado 14 días.
-test.note	El grupo no envía correos y sus miembros no pueden verse entre sí.
+test.shotFolderAlt	La carpeta Comida en Amalino: carpetas más pequeñas, como fruta y verduras, y después palabras de comida, de «manzana» a «alubia»
+test.shotKeyboardAlt	El teclado de Amalino: se está escribiendo «yo quiero j» en la barra de mensaje, encima de las teclas de letras y la tecla {app:kbSpeak}
+test.afterTitle	Qué pasa después de unirte
+test.after1	El grupo no envía correos ni boletines. Los demás miembros no pueden verte: solo yo, el desarrollador, veo tu nombre y tu dirección de correo.
+test.after2	Google Play muestra la dirección del grupo para enviar comentarios. Lo que mandes ahí solo me llega a mí, nunca al resto de participantes.
+test.after3	Puedes dejarlo cuando quieras: abandona el programa desde la página de pruebas o sal del grupo.
+test.after4	La app en sí no recoge nada sobre el niño: sin cuenta, sin anuncios y sin rastreo.
 test.feedback	¿Algo no funciona o tienes una idea? Cuéntamelo aquí:
 home.featuresTitle	Qué tiene de especial
 home.f1.title	Cada palabra en su sitio

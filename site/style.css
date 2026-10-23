@@ -164,6 +164,17 @@ bdi a, bdi { overflow-wrap: anywhere; }
   background: var(--selected); color: var(--on-selected); font-weight: 700;
 }
 .lead { font-size: 1.2em; }
+/* The app in the hero: the child's board in the page's language, under the text on small screens. */
+.hero-grid { display: grid; gap: 8px 48px; align-items: center; }
+.hero-shot { margin: 24px 0 0; justify-self: center; width: min(100%, 18rem); }
+.hero-shot img {
+  display: block; width: 100%; height: auto; border-radius: 14px; background: #FFFFFF;
+  border: 1px solid var(--hero-muted); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 48rem) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr) 20rem; }
+  .hero-shot { width: 20rem; margin-block-start: 32px; }
+}
 
 .card { background: var(--card); border-radius: var(--radius); padding: 20px 24px; margin-block: 24px; }
 .card > :last-child { margin-block-end: 0; }
@@ -226,6 +237,22 @@ bdi a, bdi { overflow-wrap: anywhere; }
   background: var(--primary); color: var(--on-primary); font-weight: 700; line-height: 1;
 }
 .test-android .steps .button { margin-block-start: 8px; }
+.test-lead { font-weight: 700; font-size: 1.1em; }
+/* The app beside the steps on wide screens, below them on small ones: a folder and the keyboard, side by side. */
+.test-body { display: grid; gap: 8px 32px; margin-block-end: 1em; }
+.test-body .steps { margin: 0; }
+.test-shots { display: flex; gap: 12px; align-items: flex-start; justify-content: center; }
+.test-shots img {
+  display: block; flex: 1 1 0; min-width: 0; max-width: 10rem; height: auto;
+  border: 1px solid var(--border); border-radius: 10px; background: #FFFFFF;
+}
+@media (min-width: 48rem) {
+  .test-body { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
+  .test-shots { width: 21rem; }
+}
+.test-android h3 { margin-block: 1.2em 0.4em; }
+.test-after { padding-inline-start: 1.2em; }
+.test-after li { margin-block-end: 0.4em; }
 .contact { font-weight: 600; }
 .thanks { font-weight: 600; margin-block-start: 32px; }
 

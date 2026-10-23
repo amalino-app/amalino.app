@@ -122,11 +122,55 @@ class BuiltSite(unittest.TestCase):
                 self.assertIn(f'<a class="button" href="{bs.TESTERS_OPTIN_URL}" rel="noopener">', html, loc)
                 self.assertIn('href="../{}/about/index.html#report"'.format(loc), html, loc)
                 text = bs.visible_text(html)
-                for key in ('test.title', 'test.intro', 'test.step1', 'test.step2', 'test.step3', 'test.note',
-                            'test.step1Link', 'test.step2Link', 'test.feedback'):
+                for key in ('test.title', 'test.lead', 'test.intro', 'test.step1', 'test.step2', 'test.step3',
+                            'test.step1Link', 'test.step2Link', 'test.feedback', 'test.afterTitle',
+                            'test.after1', 'test.after2', 'test.after3', 'test.after4'):
                     self.assertIn(bs.visible_text(r.html_text(key, loc)), text, f'{loc} {key}')
                 # The section sits right after the status card.
                 self.assertLess(html.index('class="card status"'), html.index('id="test-android"'), loc)
+                # Owner 2026-10-23: the lead line says anyone can help (bold, before the steps), and four short
+                # notes on what happens after joining follow the steps.
+                section = html[html.index('id="test-android"'):]
+                section = section[:section.index('</section>')]
+                self.assertIn(f'<p class="test-lead">{r.html_text("test.lead", loc)}</p>', section, loc)
+                self.assertLess(section.index('test-lead'), section.index('<ol class="steps">'), loc)
+                self.assertEqual(section.count('<li>', section.index('<ul class="test-after">')), 4, loc)
+                self.assertNotIn('test.note', self.strings)
+                # A folder and the keyboard in the page's language, lazily loaded, after the steps (below them
+                # on a phone), with the localized alt text.
+                shots = section[section.index('<div class="test-shots">'):]
+                self.assertGreater(section.index('<div class="test-shots">'), section.index('</ol>'), loc)
+                for name, key in (('folder', 'test.shotFolderAlt'), ('keyboard', 'test.shotKeyboardAlt')):
+                    self.assertIn(f'<img src="manual/img/{name}-1x.webp" srcset="manual/img/{name}-1x.webp 820w, '
+                                  f'manual/img/{name}-2x.webp 1640w"', shots, loc)
+                    self.assertIn(f'alt="{r.plain(key, loc)}"', shots, f'{loc} {key}')
+                    self.assertIn('loading="lazy"', shots, loc)
+                self.assertNotIn('play.google.com/', ''.join(re.findall(r'<img [^>]+>', section)), loc)
+
+    def test_home_hero_shows_the_app_in_every_language(self):
+        # Owner 2026-10-23: the hero shows the child's board, the manual's screenshot in the page's language
+        # (published once, at /<lang>/manual/img/), with its size, 1x and 2x, a localized alt, loaded at once.
+        alts = set()
+        for loc in bs.LOCALES:
+            r = bs.Renderer(self.strings, EMAIL, '')
+            for out in (self.with_email, self.without):
+                html = read(out, loc, 'index.html')
+                hero = html[html.index('<section class="hero">'):]
+                hero = hero[:hero.index('</section>')]
+                alt = r.plain('home.shotAlt', loc)
+                self.assertIn('<figure class="hero-shot"><img src="manual/img/board-1x.webp" '
+                              'srcset="manual/img/board-1x.webp 820w, manual/img/board-2x.webp 1640w" ', hero, loc)
+                self.assertIn(f'alt="{alt}" width="820" height="1180" loading="eager" fetchpriority="high"', hero, loc)
+                for n in ('board-1x.webp', 'board-2x.webp'):
+                    self.assertTrue(os.path.isfile(os.path.join(out, loc, 'manual', 'img', n)), f'{loc} {n}')
+                    # the very picture of the page's language, not a copy of the English one
+                    with open(os.path.join(out, loc, 'manual', 'img', n), 'rb') as a, \
+                            open(os.path.join(bs.MANUAL, loc, 'img', n), 'rb') as b:
+                        self.assertEqual(a.read(), b.read(), f'{loc} {n}')
+            alts.add(alt)
+        self.assertEqual(len(alts), len(bs.LOCALES))  # translated in every language
+        # No picture is copied for the home page: the only images outside the manual are the site's own assets.
+        self.assertEqual(sorted(n for n in os.listdir(os.path.join(self.without, 'en')) if n.endswith('.webp')), [])
         # The two URLs live once, in build.py, not in the translations.
         for loc in bs.LOCALES:
             for key, texts in self.strings.items():

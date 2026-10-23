@@ -24,17 +24,25 @@ home.title	Amalino: a free talking app (AAC) for children
 home.meta	A free AAC app for children who don't speak yet: tap a picture, hear the word. In English, Danish, Russian, Ukrainian, Arabic, Spanish and Lithuanian.
 home.h1	Words for children who don't speak, or don't speak yet
 home.lead	Amalino is an app for phones and tablets. A child taps pictures, and the device says the words out loud, in the family's own language.
+home.shotAlt	Amalino on a tablet: the child's board, with the message bar at the top, 36 coloured picture buttons for everyday words, and the phrases stop and help me at the bottom
 home.story	I'm making Amalino because some children have a lot to say and no easy way to say it. It's free, it works without the internet, and it speaks for them when they tap pictures, in the languages your family uses at home. Having a voice shouldn't be a privilege.
 home.status	Amalino isn't in the app stores yet. I'm testing it on real phones and tablets now, and the first families will try it soon.
 home.statusEmail	Would you like to hear when it's ready? Write to me at {email}.
 test.title	Help test Amalino on Android
-test.intro	Before Amalino can be published on Google Play, Google asks for testers who keep it on an Android phone or tablet for 14 days. You don't need a child who uses it: anyone with an Android device can help, and it only takes a few minutes.
+test.lead	Anyone with an Android phone or tablet can help. You don't need any experience with AAC, or a child who uses it.
+test.intro	Before Amalino can be published on Google Play, Google asks for testers who keep it on an Android phone or tablet for 14 days. Getting started only takes a few minutes.
 test.step1	Join the testers' group with the same Google account you use on your Android device.
 test.step1Link	Join the testers' group
 test.step2	On your Android device, open the test page and tap "Become a tester".
 test.step2Link	Open the test page
 test.step3	Install Amalino from Google Play. Open it a few times over the next two weeks, and keep it installed for 14 days.
-test.note	The group sends no emails, and its members can't see each other.
+test.shotFolderAlt	The Food folder in Amalino: smaller folders such as fruit and vegetables, then food words from apple to bean
+test.shotKeyboardAlt	Amalino's keyboard: "i want to p" being typed in the message bar, above the letter keys and the {app:kbSpeak} key
+test.afterTitle	What happens after you join
+test.after1	The group sends no emails and no newsletters. Other members can't see you: only I, the developer, see your name and email address.
+test.after2	Google Play shows the group's address for feedback. Anything you send there reaches only me, never the other testers.
+test.after3	You can stop at any time: tap "Leave the program" on the test page, or leave the group.
+test.after4	The app itself collects nothing about the child: no account, no ads, no tracking.
 test.feedback	Found a problem, or have an idea? Tell me here:
 home.featuresTitle	What makes it different
 home.f1.title	Words stay in their place

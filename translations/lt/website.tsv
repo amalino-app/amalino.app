@@ -24,17 +24,25 @@ home.title	Amalino: nemokama alternatyvioji komunikacija (AAK) vaikams
 home.meta	Nemokama alternatyviosios komunikacijos (AAK) programėlė dar nekalbantiems vaikams: bakstelėjus paveikslėlį, žodis pasigirsta jūsų šeimos kalba.
 home.h1	Žodžiai vaikams, kurie nekalba – ar dar nekalba
 home.lead	Amalino – programėlė telefonams ir planšetėms. Vaikas bakstelėja paveikslėlį, o telefonas ar planšetė garsiai ištaria žodį – ta kalba, kuria kalbate namuose.
+home.shotAlt	Amalino planšetėje: vaiko lenta – viršuje sakinio juosta, 36 spalvoti paveikslėlių mygtukai su kasdieniais žodžiais, o apačioje frazės „stop“ ir „padėk man“
 home.story	Kuriu Amalino, nes kai kurie vaikai turi daug ką pasakyti, tik jiems sunku tai išsakyti. Programėlė nemokama, veikia ir be interneto, o vaikui bakstelėjus paveikslėlius prabyla už jį – tomis kalbomis, kuriomis kalbatės namuose. Turėti savo balsą – ne privilegija.
 home.status	Amalino programėlių parduotuvėse dar nėra. Šiuo metu ją išbandau įvairiuose telefonuose ir planšetėse, o netrukus ją išmėgins ir pirmosios šeimos.
 home.statusEmail	Norite sužinoti, kada ją bus galima atsisiųsti? Parašykite man adresu {email}.
 test.title	Padėkite išbandyti Amalino Android įrenginiuose
-test.intro	Kad Amalino galėtų pasirodyti Google Play, Google reikalauja, kad testuotojai 14 dienų laikytų programėlę įdiegtą savo Android telefone ar planšetėje. Nebūtina turėti vaiko, kuris ja naudojasi: padėti gali kiekvienas, turintis Android įrenginį, o tai užtruks vos kelias minutes.
+test.lead	Padėti gali kiekvienas, turintis Android telefoną ar planšetę. Nereikia nei AAK patirties, nei vaiko, kuris ja naudojasi.
+test.intro	Kad Amalino galėtų pasirodyti Google Play, Google reikalauja, kad testuotojai 14 dienų laikytų programėlę įdiegtą savo Android telefone ar planšetėje. Pradėti užtruks vos kelias minutes.
 test.step1	Prisijunkite prie testuotojų grupės su ta pačia Google paskyra, kurią naudojate savo Android įrenginyje.
 test.step1Link	Prisijungti prie grupės
 test.step2	Savo Android įrenginyje atverkite testavimo puslapį ir bakstelėkite „Tapti testuotoju“.
 test.step2Link	Atverti testavimo puslapį
 test.step3	Įdiekite Amalino iš Google Play. Per artimiausias dvi savaites kelis kartus ją atverkite ir neištrinkite 14 dienų.
-test.note	Grupė nesiunčia jokių laiškų, o jos nariai vienas kito nemato.
+test.shotFolderAlt	Aplankas „Maistas“ programėlėje Amalino: mažesni aplankai, pavyzdžiui, „vaisiai“ ir „daržovės“, toliau maisto žodžiai nuo obuolio iki pupelių
+test.shotKeyboardAlt	Amalino klaviatūra: sakinio juostoje rašoma „aš noriu v“, žemiau – raidžių klavišai ir „{app:kbSpeak}“
+test.afterTitle	Kas bus, kai prisijungsite
+test.after1	Grupė nesiunčia jokių laiškų ar naujienlaiškių. Kiti nariai jūsų nemato – jūsų vardą ir el. pašto adresą matau tik aš, programėlės kūrėjas.
+test.after2	Google Play rodo grupės adresą atsiliepimams. Ką ten parašysite, gausiu tik aš – kiti testuotojai to nematys.
+test.after3	Pasitraukti galite bet kada: testavimo puslapyje išeikite iš testavimo programos arba palikite grupę.
+test.after4	Pati programėlė apie vaiką nerenka jokių duomenų: jokios paskyros, reklamų ar sekimo.
 test.feedback	Pastebėjote klaidą ar turite idėją? Parašykite man:
 home.featuresTitle	Kuo Amalino kitokia
 home.f1.title	Žodžiai visada savo vietoje

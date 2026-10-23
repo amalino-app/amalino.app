@@ -129,6 +129,15 @@ REPORT_CHECKS = ('report.check1', 'report.check2', 'report.check3', 'report.chec
 # {{v:testers_optin}}); the only links to Google's sites.
 TESTERS_GROUP_URL = 'https://groups.google.com/g/amalino-testers/about'
 TESTERS_OPTIN_URL = 'https://play.google.com/apps/testing/app.amalino'
+# The app on the home page (owner 2026-10-23): real screenshots in the page's language, the manual's own
+# (manual/<lang>/img/NAME-1x.webp and -2x.webp, already published at /<lang>/manual/img/, so nothing is copied).
+# (name, alt text key, CSS sizes): the board in the hero, loaded at once; a folder and the keyboard next to the
+# Android testers' steps, loaded lazily.
+HOME_SHOTS = {
+    'hero_shot': (('board', 'home.shotAlt'),),
+    'test_shots': (('folder', 'test.shotFolderAlt'), ('keyboard', 'test.shotKeyboardAlt')),
+}
+HOME_SHOT_SIZES = {'hero_shot': '(min-width: 48rem) 20rem, 18rem', 'test_shots': '(min-width: 48rem) 10rem, 44vw'}
 # The user manual: manual/<lang>/index.md and the pages its contents list links to, published at /<lang>/manual/.
 # A language without a manual folder links to the English manual.
 MANUAL = os.path.join(ROOT, 'manual')
@@ -778,6 +787,29 @@ def manual_image(loc, name):
     return draw
 
 
+def home_shots(r, loc, langs_m):
+    """The home page's screenshots ({{v:hero_shot}}, {{v:test_shots}}): the manual's pictures in `loc`, or the
+    source language's when `loc` has no manual or no such picture. Width and height of the 1x picture, both files
+    in srcset by width (a 2x screen at 20rem still takes the 1x, which is 820 pixels wide), the hero eager with high
+    priority, the others lazy."""
+    values = {}
+    for slot, shots in HOME_SHOTS.items():
+        imgs = []
+        for name, alt_key in shots:
+            src, src2 = f'img/{name}-1x.webp', f'img/{name}-2x.webp'
+            own = loc if loc in langs_m and os.path.isfile(os.path.join(MANUAL, loc, src)) else MANUAL_SOURCE
+            size, size2 = (webp_size(os.path.join(MANUAL, own, s)) for s in (src, src2))
+            if not size or size2 != (size[0] * 2, size[1] * 2):
+                raise BuildError(f'home page: manual/{own}/{src} and {src2} (twice the size) are needed')
+            here = 'manual/' if own == loc else f'../{own}/manual/'
+            load = ('loading="eager" fetchpriority="high"' if slot == 'hero_shot' else 'loading="lazy"')
+            imgs.append(f'<img src="{here}{src}" srcset="{here}{src} {size[0]}w, {here}{src2} {size2[0]}w" '
+                        f'sizes="{HOME_SHOT_SIZES[slot]}" alt="{r.plain(alt_key, loc)}" width="{size[0]}" '
+                        f'height="{size[1]}" {load} decoding="async">')
+        values[slot] = ''.join(imgs)
+    return values
+
+
 def manual_langs():
     return [loc for loc in LOCALES if manual_pages(loc)]
 
@@ -884,7 +916,8 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                 d = 'rtl' if other in RTL else 'ltr'
                 langs.append(f'<li><a href="{root}{other}/{page_path(page)}" lang="{other}" hreflang="{other}" '
                              f'dir="{d}" data-lang="{other}"{cur}>{ENDONYMS[other]}</a></li>')
-            content = r.render(read(os.path.join(TEMPLATES, tpl_name)), loc, {}, page)
+            content = r.render(read(os.path.join(TEMPLATES, tpl_name)), loc,
+                               home_shots(r, loc, langs_m) if page == 'home' else {}, page)
             title, desc = rtl_lead(r.plain(title_key, loc), loc), rtl_lead(r.plain(desc_key, loc), loc)
             head = head_links(site, loc, page) + share_meta(r, site, loc, page, title, desc)
             if page == 'home':
@@ -1275,6 +1308,14 @@ def check(out, strings, email, site='', donate=''):
         expect('id="test-android"' in home and f'href="{TESTERS_GROUP_URL}"' in home
                and f'href="{TESTERS_OPTIN_URL}"' in home and '#report"' in home,
                f'{loc}: "Help test Amalino on Android" missing on the home page')
+        # The app's screenshots on the home page (owner 2026-10-23): the board in the hero, a folder and the
+        # keyboard by the testers' steps; every picture they name is published.
+        expect(home.count('<img src="') >= 1 + sum(len(v) for v in HOME_SHOTS.values()),
+               f'{loc}: the app\'s screenshots missing on the home page')
+        for ref in re.findall(r'<img src="([^"]+)" srcset="[^"]+? ([^" ]+-2x\.webp) ', home):
+            for one in ref:
+                expect(os.path.isfile(os.path.normpath(os.path.join(out, loc, one))),
+                       f'{loc}/index.html: {one} is not published')
         expect('id="report"' in about and f'href="{ISSUES_URL}"' in about, f'{loc}/about: "Report a problem" missing')
         expect(not email or f'href="mailto:{html.escape(email)}?subject=' in about,
                f'{loc}/about: the report email link missing')
