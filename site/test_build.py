@@ -54,7 +54,8 @@ class BuiltSite(unittest.TestCase):
                 if f.endswith('.html'):
                     rel = os.path.relpath(os.path.join(root, f), self.with_email)
                     loc = rel.split(os.sep)[0]
-                    page = 'privacy' if os.sep + 'privacy' + os.sep in os.sep + rel else None
+                    parts = rel.split(os.sep)
+                    page = parts[1] if len(parts) == 3 and parts[1] in ('privacy', 'recommend') else None
                     self.assertEqual(bs.forbidden_found(read(root, f), loc if loc in bs.LOCALES else 'mixed', page), [], rel)
 
     def test_t101_guard_catches_a_forbidden_term_in_a_built_page(self):
@@ -126,8 +127,9 @@ class BuiltSite(unittest.TestCase):
                             'test.step1Link', 'test.step2Link', 'test.feedback', 'test.afterTitle',
                             'test.after1', 'test.after2', 'test.after3', 'test.after4'):
                     self.assertIn(bs.visible_text(r.html_text(key, loc)), text, f'{loc} {key}')
-                # The section sits right after the status card.
-                self.assertLess(html.index('class="card status"'), html.index('id="test-android"'), loc)
+                # Owner 2026-11-05: the section comes after what the app does (the features and the myth section).
+                self.assertLess(html.index('class="features"'), html.index('id="test-android"'), loc)
+                self.assertLess(html.index('class="myth"'), html.index('id="test-android"'), loc)
                 # Owner 2026-10-23: the lead line says anyone can help (bold, before the steps), and four short
                 # notes on what happens after joining follow the steps.
                 section = html[html.index('id="test-android"'):]
@@ -178,20 +180,26 @@ class BuiltSite(unittest.TestCase):
                 self.assertNotIn('play.google.com', texts[loc], key)
 
     def test_on_the_app_store_in_every_language(self):
-        # Owner 2026-11-05: the home page's status card says Amalino is on the App Store for iPhone and iPad, with a
-        # button to it (APP_STORE_URL, one place in build.py), and for Android links to the testers' section.
+        # Owner 2026-11-05: the hero says Amalino is on the App Store, with Apple's own badge in the page's language
+        # (self-hosted, 48 px high, the localized "Download on the App Store" as alt) linked to APP_STORE_URL, and a
+        # one-line "On Android? Help test it" to the testers' section. The old status card is gone.
         for loc in bs.LOCALES:
             r = bs.Renderer(self.strings, EMAIL, '')
             for out, email in ((self.with_email, EMAIL), (self.without, '')):
                 html = read(out, loc, 'index.html')
-                card = re.search(r'<section class="card status">(.*?)</section>', html, flags=re.S).group(1)
-                self.assertIn(f'<a class="button" href="{bs.APP_STORE_URL}" rel="noopener">', card, loc)
-                self.assertIn('<a href="#test-android">', card, loc)
-                self.assertIn('id="test-android"', html, loc)
-                text = bs.visible_text(card)
-                for key in ('home.ios', 'home.iosLink', 'home.android', 'home.androidLink'):
+                hero = re.search(r'<section class="hero">(.*?)</section>', html, flags=re.S).group(1)
+                get = hero[hero.index('<div class="get-app">'):]
+                self.assertIn(f'<a class="store-badge" href="{bs.APP_STORE_URL}" rel="noopener"><img src="../assets/badges/'
+                              f'{bs.APP_STORE_BADGE[loc]}" alt="{r.plain("home.iosLink", loc)}" width="144" height="48">'
+                              '</a>', get, loc)
+                self.assertIn('<a class="more-link" href="#test-android">', get, loc)
+                self.assertNotIn('class="card status"', html, loc)
+                self.assertNotIn(f'<a class="button" href="{bs.APP_STORE_URL}"', html, loc)
+                text = bs.visible_text(get)
+                for key in ('home.ios', 'home.android', 'home.androidLink'):
                     self.assertIn(bs.visible_text(r.html_text(key, loc)), text, f'{loc} {key}')
-                self.assertEqual('mailto:' in card, bool(email), loc)
+                self.assertEqual(f'mailto:{EMAIL}' in bs.main_part(html), bool(email), loc)
+                self.assertTrue(os.path.isfile(os.path.join(out, 'assets', 'badges', bs.APP_STORE_BADGE[loc])), loc)
                 # The manual's contents page says the same, with the App Store link and the way to the testers.
                 manual = read(out, loc, 'manual', 'index.html')
                 self.assertIn(f'<a href="{bs.APP_STORE_URL}">', manual, loc)
@@ -237,12 +245,13 @@ class BuiltSite(unittest.TestCase):
             with open(about, 'w', encoding='utf-8') as f:
                 f.write(page)
             home = os.path.join(out, 'lt', 'index.html')
+            page = read(home).replace(f'href="{bs.APP_STORE_URL}"', 'href="https://example.org/"')
             with open(home, 'w', encoding='utf-8') as f:
-                f.write(read(home).replace(f'href="{bs.APP_STORE_URL}"', 'href="https://example.org/"'))
+                f.write(page)
             errors = bs.check(out, self.strings, '', '')
             self.assertTrue(any('still says the app isn' in e and e.startswith('da/about') for e in errors), errors)
             self.assertTrue(any('apple-itunes-app' in e and e.startswith('da/about') for e in errors), errors)
-            self.assertTrue(any(e.startswith('lt: the App Store button') for e in errors), errors)
+            self.assertTrue(any(e.startswith('lt: the App Store badge') for e in errors), errors)
 
     def test_report_a_problem_in_every_language(self):
         # Owner 2026-10-21: About has "Report a problem" in every language: the mailto (subject and checklist in the
@@ -576,6 +585,183 @@ class BuiltSite(unittest.TestCase):
         for loc in ('da', 'ru', 'uk', 'ar', 'es', 'lt'):
             self.assertIn('draft-banner', read(self.without, loc, 'index.html'))
 
+    def test_draft_banner_is_a_small_note_at_the_bottom(self):
+        # Owner 2026-11-05: the draft note moved from the top of the page to the top of the footer, after the page's
+        # own text, still visible and with the same words (website and manual pages alike).
+        r = bs.Renderer(self.strings, EMAIL, '')
+        for loc in ('da', 'ar', 'lt'):
+            for parts in (('index.html',), ('recommend', 'index.html'), ('manual', 'index.html')):
+                page = read(self.without, loc, *parts)
+                self.assertNotIn('draft-banner', page.split('</main>')[0], (loc, parts))
+                foot = page.split('<footer class="site-footer">', 1)[1]
+                self.assertTrue(foot.lstrip().startswith('<div class="draft-banner" role="note">'), (loc, parts))
+                self.assertIn(r.html_text('draftBanner', loc), foot, loc)
+        # The check refuses a draft note above the page's text.
+        import shutil
+        with tempfile.TemporaryDirectory() as tmp:
+            out = os.path.join(tmp, 'site')
+            shutil.copytree(self.without, out)
+            path = os.path.join(out, 'es', 'privacy', 'index.html')
+            page = read(path).replace('<main id="main">', '<div class="draft-banner" role="note"></div><main id="main">')
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(page)
+            self.assertTrue(any(e.startswith('es/privacy') and 'bottom of the page' in e
+                                for e in bs.check(out, self.strings, '', '')))
+
+    def test_free_promise_in_the_hero_is_a_label_not_a_button(self):
+        # Owner 2026-11-05: "Always free for children and families." looked like a button: now plain bold text with
+        # a check mark (decorative, hidden from screen readers), no pill.
+        for loc in bs.LOCALES:
+            hero = read(self.without, loc, 'index.html').split('<section class="hero">', 1)[1].split('</section>', 1)[0]
+            self.assertRegex(hero, r'<p class="promise"><svg class="check" [^>]*aria-hidden="true"', loc)
+            self.assertIn(f'<span>{bs.Renderer(self.strings, EMAIL, "").html_text("free", loc)}</span>', hero, loc)
+            self.assertNotIn('promise-badge', hero)
+        css = read(bs.STYLE)
+        self.assertNotIn('promise-badge', css)
+        self.assertNotIn('border-radius', css.split('.promise {', 1)[1].split('}', 1)[0])
+
+    def test_privacy_page_says_github_pages_hosts_and_there_are_no_statistics(self):
+        # Owner 2026-11-05: GitHub Pages serves the site; Cloudflare only runs the DNS and forwards email; there are
+        # no visitor statistics.
+        en = bs.visible_text(read(self.with_email, 'en', 'privacy', 'index.html'))
+        self.assertIn("The website is hosted on GitHub Pages, which processes your device's internet (IP) address to "
+                      "deliver the pages. Cloudflare only runs the domain's DNS and forwards email.", en)
+        self.assertIn('I have no visitor statistics.', en)
+        for loc in bs.LOCALES:
+            self.assertIn('DNS', self.strings['pr.webHosts'][loc], loc)
+            self.assertNotIn('Cloudflare', self.strings['pr.webStats'][loc], loc)
+            self.assertNotIn('protect', self.strings['pr.webHosts']['en'])
+            text = bs.visible_text(read(self.with_email, loc, 'privacy', 'index.html'))
+            self.assertIn(bs.visible_text(bs.Renderer(self.strings, EMAIL, '').html_text('pr.webStats', loc)), text, loc)
+
+    def test_app_store_badges_are_apples_own_plain_svgs(self):
+        # Owner 2026-11-05: Apple's black badge in each language Apple has (Ukrainian falls back to English),
+        # self-hosted and unmodified: plain SVG, no script, no outside reference, at least 40 px high on the page.
+        import xml.etree.ElementTree as ET
+        self.assertEqual(bs.APP_STORE_BADGE['uk'], 'app-store-en.svg')
+        self.assertGreaterEqual(bs.BADGE_HEIGHT, 40)
+        self.assertEqual(sorted(os.listdir(bs.BADGES)), sorted(set(bs.APP_STORE_BADGE.values())))
+        for name in set(bs.APP_STORE_BADGE.values()):
+            raw = read(bs.BADGES, name)
+            root = ET.fromstring(raw)
+            self.assertEqual(root.tag, '{http://www.w3.org/2000/svg}svg', name)
+            tags = {el.tag.split('}')[-1] for el in root.iter()}
+            self.assertLessEqual(tags, {'svg', 'g', 'path', 'title'}, name)
+            for el in root.iter():
+                for k, v in el.attrib.items():
+                    self.assertFalse(k.lower().startswith('on'), name)
+                    self.assertNotIn('javascript', v.lower(), name)
+            self.assertNotRegex(raw, r'(?i)<script|xlink:href|<!entity|https?://(?!www\.w3\.org/2000/svg)', name)
+            self.assertIn('Download_on_the_App_Store_Badge', raw, name)
+            w, h = float(root.get('width')), float(root.get('height'))
+            self.assertAlmostEqual(w / h * bs.BADGE_HEIGHT, bs.BADGE_WIDTH, delta=1, msg=name)
+
+    def test_footer_small_print_on_every_page(self):
+        # Owner 2026-11-05: every page's footer (website, recommend, manual, the pickers and 404) has the ARASAAC
+        # credit, "Pictograms" in the page's language, linking arasaac.org and the licence, and Apple's trademark
+        # line; the language pages also link the recommend page.
+        for out in (self.with_email, self.without):
+            pages = [os.path.join(root, n) for root, _d, names in os.walk(out) for n in names if n.endswith('.html')]
+            for path in pages:
+                page = read(path)
+                foot = page.split('<footer class="site-footer">', 1)[1]
+                self.assertIn(f'<a href="{bs.ARASAAC_URL}" rel="noopener">Sergio Palao / ARASAAC (arasaac.org)</a>, '
+                              f'<a href="{bs.CC_BY_NC_SA_URL}" rel="license noopener">CC BY-NC-SA 4.0</a>', foot, path)
+                self.assertIn('<p class="footer-apple">', foot, path)
+                loc = os.path.relpath(path, out).split(os.sep)[0]
+                if loc in bs.LOCALES:
+                    r = bs.Renderer(self.strings, EMAIL, '')
+                    self.assertIn(f'<p class="footer-arasaac">{r.html_text("footer.pictograms", loc)} ', foot, path)
+                    self.assertIn(r.html_text('footer.appleTm', loc), foot, path)
+                    self.assertIn('<p class="footer-recommend"><a href="', foot, path)
+                    self.assertIn('/recommend/index.html">', foot.split('<p class="footer-recommend">', 1)[1][:200], path)
+                else:
+                    self.assertIn('App Store is a service mark of Apple Inc.', foot, path)
+        self.assertIn('ARASAAC', bs.visible_text(read(self.with_email, '404.html')))
+        for loc in bs.LOCALES:
+            self.assertTrue(self.strings['footer.appleTm'][loc].count('Apple Inc.') == 2, loc)
+
+    def test_forbidden_words_are_allowed_on_the_recommend_page_only(self):
+        # Owner 2026-11-05: the recommend page speaks to teachers, therapists and organisations, so it may name them;
+        # every other page keeps the rule, and access methods and "open source" stay forbidden everywhere.
+        page = '<html lang="{}"><body><main><p>{}</p></main></body></html>'
+        for loc, word in (('en', 'teachers and speech therapists'), ('da', 'lærere og talepædagoger'),
+                          ('ru', 'учителя и логопеды'), ('uk', 'вчителі й логопеди'), ('ar', 'معلم أو أخصائي'),
+                          ('es', 'docentes y logopedas'), ('lt', 'mokytojai ir logopedai')):
+            html = page.format(loc, word)
+            self.assertEqual(bs.forbidden_found(html, loc, 'recommend'), [], loc)
+            for other in ('about', 'home', 'privacy', None):
+                self.assertTrue(bs.forbidden_found(html, loc, other), (loc, other))
+        self.assertTrue(bs.forbidden_found(page.format('en', 'eye gaze and switch access'), 'en', 'recommend'))
+        self.assertTrue(bs.forbidden_found(page.format('en', 'open source'), 'en', 'recommend'))
+        self.assertTrue(bs.forbidden_found(page.format('da', 'øjenstyring'), 'da', 'recommend'))
+        # The built recommend pages do name them (so the exception is needed) and pass; the guard still runs there.
+        for loc in bs.LOCALES:
+            html = read(self.without, loc, 'recommend', 'index.html')
+            self.assertTrue(bs.forbidden_found(html, loc, None), loc)
+            self.assertEqual(bs.forbidden_found(html, loc, 'recommend'), [], loc)
+        # The check catches a profession on another page.
+        import shutil
+        with tempfile.TemporaryDirectory() as tmp:
+            out = os.path.join(tmp, 'site')
+            shutil.copytree(self.without, out)
+            path = os.path.join(out, 'en', 'about', 'index.html')
+            with_word = read(path).replace('</main>', '<p>Ask your teacher.</p></main>')
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(with_word)
+            self.assertIn('en/about/index.html: forbidden term "teacher"', bs.check(out, self.strings, '', ''))
+
+    def test_recommend_page_in_every_language(self):
+        # Owner 2026-11-05: "Recommending Amalino to families", /<lang>/recommend/, linked from the footer and About
+        # but not the header menu: who it's for, the facts, the App Store badge and the Android testers' link, the
+        # screenshots, two texts to copy (the home page's address after each with a site URL), the manual, privacy
+        # and "Report a problem".
+        r = bs.Renderer(self.strings, EMAIL, '')
+        for loc in bs.LOCALES:
+            for out, email in ((self.with_email, EMAIL), (self.without, '')):
+                html = read(out, loc, 'recommend', 'index.html')
+                main = bs.main_part(html)
+                text = bs.visible_text(main)
+                for key in ('rec.h1', 'rec.intro', 'rec.who', 'rec.what1', 'rec.what2', 'rec.what3', 'rec.what4',
+                            'rec.what5', 'rec.what6', 'rec.what7', 'rec.what8', 'pr.notBody', 'rec.android',
+                            'rec.short', 'rec.long', 'rec.manual', 'rec.privacy', 'rec.report'):
+                    self.assertIn(bs.visible_text(r.html_text(key, loc)), text, f'{loc} {key}')
+                self.assertIn(f'<a class="store-badge" href="{bs.APP_STORE_URL}" rel="noopener"><img src="../../assets/'
+                              f'badges/{bs.APP_STORE_BADGE[loc]}"', main, loc)
+                self.assertIn(f'href="../../{loc}/index.html#test-android"', main, loc)
+                self.assertIn(f'href="../../{loc}/about/index.html#report"', main, loc)
+                self.assertIn(f'href="../../{loc}/privacy/index.html"', main, loc)
+                self.assertIn(f'href="../../{loc}/manual/index.html"', main, loc)
+                for name in ('board', 'folder', 'keyboard'):
+                    self.assertIn(f'<img src="../manual/img/{name}-1x.webp"', main, loc)
+                self.assertEqual(main.count('loading="lazy"'), 3, loc)
+                for block in ('share-short', 'share-long'):
+                    self.assertIn(f'<div class="share-text" id="{block}">', main, loc)
+                    self.assertIn(f'data-copy="{block}" data-done="{r.plain("rec.copied", loc)}" aria-live="polite" '
+                                  'hidden>', main, loc)
+                self.assertEqual(main.count(f'<bdi dir="ltr">https://example.org/{loc}/</bdi>'),
+                                 2 if out == self.with_email else 0, loc)
+                self.assertIn('navigator.clipboard', html)
+                self.assertEqual(f'mailto:{EMAIL}' in main, bool(email), loc)
+                nav = html.split('<nav class="site-nav"', 1)[1].split('</nav>', 1)[0]
+                self.assertNotIn('recommend', nav, loc)
+                about = read(out, loc, 'about', 'index.html')
+                self.assertIn(f'<a href="../../{loc}/recommend/index.html">{r.html_text("footer.recommend", loc)}</a>',
+                              bs.main_part(about), loc)
+        # The texts to share: about 50 and about 150 words in English; no price promises or clinical claims.
+        self.assertTrue(40 <= len(self.strings['rec.short']['en'].split()) <= 60)
+        self.assertTrue(130 <= len(self.strings['rec.long']['en'].split()) <= 170)
+        for key in [k for k in self.strings if k.startswith('rec.')]:
+            for word in ('clinical', 'evidence', 'proven', 'price', 'cost', 'forever'):
+                self.assertNotIn(word, self.strings[key]['en'].lower(), key)
+        # In the sitemap and the hreflang cluster like the other pages (x-default: the English page).
+        sitemap = read(self.with_email, 'sitemap.xml')
+        for loc in bs.LOCALES:
+            self.assertIn(f'<loc>https://example.org/{loc}/recommend/</loc>', sitemap)
+            head = read(self.with_email, loc, 'recommend', 'index.html').split('</head>')[0]
+            self.assertIn('<link rel="alternate" hreflang="x-default" href="https://example.org/en/recommend/">', head)
+            self.assertIn(f'<link rel="canonical" href="https://example.org/{loc}/recommend/">', head)
+
     def test_privacy_page_has_the_ml_kit_line_and_no_draft_notice(self):
         # The legal review stays internal (owner 2026-10-21): no draft notice on the public page.
         html = read(self.without, 'en', 'privacy', 'index.html')
@@ -594,14 +780,24 @@ class BuiltSite(unittest.TestCase):
 
     def test_header_keeps_the_language_menu_next_to_the_brand(self):
         # Owner bug 2026-10-20: in Russian the long menu pushed the language button to a row of its own. The header
-        # is a grid in every language: brand and language menu on top, the menu below (one scrolling row on phones).
+        # is a grid in every language: brand and language menu on top, the menu below; from 60rem the three share
+        # one row (owner review 2026-11-05: at 1280 px the menu sat under the logo). On phones the menu wraps instead
+        # of scrolling sideways, so "Help translate" and "Privacy" stay in view.
         css = read(bs.STYLE)
         self.assertIn('grid-template-areas: "brand lang" "nav nav"', css)
         for rule in ('.brand { grid-area: brand;', '.site-nav { grid-area: nav;', '.lang-menu { grid-area: lang;'):
             self.assertIn(rule, css)
+        wide = css.split('@media (min-width: 60rem) {', 1)[1].split('\n}\n', 1)[0]
+        self.assertIn('grid-template-areas: "brand nav lang"', wide)
         mobile = css.split('@media (max-width: 40rem) {', 1)[1].split('\n}\n', 1)[0]
-        self.assertIn('flex-wrap: nowrap; overflow-x: auto;', mobile)
-        self.assertIn('[dir="rtl"] .site-nav ul', mobile)
+        self.assertNotIn('nowrap; overflow-x', mobile)
+        self.assertIn('flex-wrap: wrap', css.split('.site-nav ul {', 1)[1].split('}', 1)[0])
+        # The feature grid is 2 x 2 from tablets up (it broke 3 + 1 at 1280 px), and the testers' screenshots
+        # shrink with the card on a phone instead of overflowing it.
+        self.assertNotIn('auto-fit', css.split('.features {', 1)[1].split('}', 1)[0])
+        self.assertIn('.features { grid-template-columns: repeat(2, minmax(0, 1fr)); }', css)
+        self.assertIn('.test-body { display: grid; grid-template-columns: minmax(0, 1fr);', css)
+        self.assertIn('flex: 1 1 0; min-width: 0; max-width: 10rem; height: auto;', css)
         for loc in bs.LOCALES:
             page = read(self.without, loc, 'index.html')
             header = page.split('<header class="site-header">', 1)[1].split('</header>', 1)[0]

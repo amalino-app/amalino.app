@@ -7,10 +7,12 @@
 
 Sources: translations/<lang>/website.tsv (key, text; English is the source), site/templates/*.html,
 site/style.css, site/amalino.svg and site/og-image.png (1200x630).
-Output (default site/dist/): {lang}/index.html, {lang}/about/, {lang}/translate/, {lang}/privacy/
+Output (default site/dist/): {lang}/index.html, {lang}/about/, {lang}/translate/, {lang}/privacy/ and
+{lang}/recommend/ (for people who tell families about Amalino; linked from the footer and About, not the menu)
 for the seven app languages, plus a root index.html and translate/index.html that send the visitor to their
 language (the browser's languages, or the one they chose before; a few lines of inline script, no cookies)
-and list the languages for browsers without script, assets/ (style, logo, share image) and, with a site
+and list the languages for browsers without script, assets/ (style, logo, share image, Apple's App Store badges
+in assets/badges/) and, with a site
 URL, sitemap.xml, robots.txt and the CNAME file GitHub Pages reads. Every page has a language menu in its
 header. Links are relative and name index.html, so the build also works from file://.
 
@@ -27,7 +29,8 @@ on home and about, email text appears only when set, the translate page has both
 relative link resolves, and nothing is loaded from another host (owner decision 31: no web fonts, scripts,
 styles or images from elsewhere; only <a href> links may leave the site). It also checks the SEO basics: a unique <title> and meta description per page and language, one h1 with
 headings in order, alt on every image, page weight, Open Graph/Twitter tags, the SoftwareApplication JSON-LD on
-home, the App Store button and the Android testers' link on home, Safari's smart app banner (apple-itunes-app)
+home, the App Store badge and the Android testers' link at the top of home, the recommend page's facts and share texts,
+the Apple trademark and ARASAAC lines in every footer, the draft note at the bottom of the page, Safari's smart app banner (apple-itunes-app)
 on every page and no page still saying the app isn't in the stores, and with a site URL the canonical and hreflang links (7 languages + x-default, reciprocal), og:url/og:image,
 sitemap.xml and robots.txt; without one, nothing absolute in a <head> and no sitemap or robots.txt.
 It prints the per-language native-review status (web:<key> lines in
@@ -36,7 +39,8 @@ translated manual page that isn't listed there shows the draft banner.
 
 Template syntax: {{t:key}} text (HTML-escaped; **bold**; {email} becomes a mailto link isolated as
 LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value ({{v:donate}}, {{v:weblate}}, {{v:issues}}, {{v:report_mailto}},
-{{v:testers_group}}, {{v:testers_optin}}, {{v:app_store}}), {{link:page}} a relative
+{{v:testers_group}}, {{v:testers_optin}}, {{v:app_store}}, {{v:arasaac}}, {{v:cc_by_nc_sa}}; on home and recommend
+{{v:app_store_badge}}), {{link:page}} a relative
 link to a page in the same language. In strings, {app:key} is the app's own label from
 translations/<lang>/app.tsv ({app:key|label}: the part before the first ":"). The manual's Markdown
 (manual/<lang>/*.md) uses the same {app:key} for every button, menu and setting it names, so a translated manual
@@ -83,7 +87,11 @@ PAGES = {
     'about': ('about.html', 'about', 'nav.about', 'about.title', 'about.meta'),
     'translate': ('translate.html', 'translate', 'nav.translate', 'tr.title', 'tr.meta'),
     'privacy': ('privacy.html', 'privacy', 'nav.privacy', 'pr.title', 'pr.meta'),
+    'recommend': ('recommend.html', 'recommend', 'footer.recommend', 'rec.title', 'rec.meta'),
 }
+# The pages in the header menu. "Recommending Amalino to families" (owner 2026-11-05) is for the people around a
+# family, so it is linked from the footer and About instead.
+NAV_PAGES = ('home', 'about', 'translate', 'privacy')
 
 # The two static language pickers: (folder, label key per language). They are the x-default of the home
 # and translate pages; about and privacy have no picker, so their x-default is the English page.
@@ -91,7 +99,9 @@ PICKERS = (('', 'home.h1'), ('translate', 'nav.translate'))
 
 # Page weight (decision 31 keeps everything self-hosted; this keeps it small): per HTML page and the whole site.
 MAX_PAGE_BYTES = 40_000
-MAX_SITE_BYTES = 700_000  # 600 KB for six languages, raised with the seventh (Lithuanian)
+# 600 KB for six languages, 700 KB with the seventh (Lithuanian), 900 KB with the recommend page (seven pages of
+# about 15 to 25 KB) and Apple's App Store badges (six SVGs of about 10 KB), owner 2026-11-05.
+MAX_SITE_BYTES = 900_000
 # The manual's HTML pages are counted on their own, per language (they are long text pages; MAX_SITE_BYTES covers
 # the website and the shared assets). A manual page may be longer than a website page: Cyrillic and Arabic take two
 # bytes a letter, and the longest page (Settings) is about 23 KB in English.
@@ -136,6 +146,20 @@ TESTERS_OPTIN_URL = 'https://play.google.com/apps/testing/app.amalino'
 # the build doesn't depend on the listing being live).
 APP_STORE_URL = 'https://apps.apple.com/app/id6825486891'
 APP_STORE_ID = re.fullmatch(r'https://apps\.apple\.com/app/id(\d+)', APP_STORE_URL).group(1)
+# Apple's official "Download on the App Store" badge (owner 2026-11-05), self-hosted and unmodified: the black badge,
+# which Apple names the preferred one (its grey border is made for dark backgrounds too, so it serves the green hero
+# and dark mode alike). From Apple's marketing tools (toolbox.marketingtools.apple.com, locales en-us, da-dk, ru-ru,
+# es-es, lt-lt, ar-ar); there is no Ukrainian badge, so Ukrainian pages show the English one. site/badges/ is copied
+# to assets/badges/. Shown 48 px high (Apple: at least 40 px on screen), with a quarter of its height clear around it.
+BADGES = os.path.join(SRC, 'badges')
+APP_STORE_BADGE = {'en': 'app-store-en.svg', 'da': 'app-store-da.svg', 'ru': 'app-store-ru.svg', 'uk': 'app-store-en.svg',
+                   'ar': 'app-store-ar.svg', 'es': 'app-store-es.svg', 'lt': 'app-store-lt.svg'}
+BADGE_HEIGHT = 48
+BADGE_WIDTH = 144  # the badge is 119.66 x 40
+# The ARASAAC credit in every footer (owner 2026-11-05), next to Apple's trademark line: the pictograms' author and
+# licence, as About credits them in full. Plain links, followed only when clicked.
+ARASAAC_URL = 'https://arasaac.org/'
+CC_BY_NC_SA_URL = 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
 # What every page said before the app was on the App Store (the home page's status and the manual's contents
 # page); the check makes sure no page says it any more. Lower case, matched on the visible text.
 NOT_IN_STORES = {
@@ -155,7 +179,11 @@ HOME_SHOTS = {
     'hero_shot': (('board', 'home.shotAlt'),),
     'test_shots': (('folder', 'test.shotFolderAlt'), ('keyboard', 'test.shotKeyboardAlt')),
 }
-HOME_SHOT_SIZES = {'hero_shot': '(min-width: 48rem) 20rem, 18rem', 'test_shots': '(min-width: 48rem) 10rem, 44vw'}
+# The recommend page shows the same three pictures together, lazily (owner 2026-11-05).
+RECOMMEND_SHOTS = {'rec_shots': (('board', 'home.shotAlt'), ('folder', 'test.shotFolderAlt'),
+                                 ('keyboard', 'test.shotKeyboardAlt'))}
+HOME_SHOT_SIZES = {'hero_shot': '(min-width: 48rem) 20rem, 18rem', 'test_shots': '(min-width: 48rem) 10rem, 40vw',
+                   'rec_shots': '(min-width: 48rem) 13rem, 30vw'}
 # The user manual: manual/<lang>/index.md and the pages its contents list links to, published at /<lang>/manual/.
 # A language without a manual folder links to the English manual.
 MANUAL = os.path.join(ROOT, 'manual')
@@ -168,40 +196,50 @@ CODE_ON_GITHUB = (r'(?:\bcode|\bkode|код|código|الكود|الشيفرة|\b
 # INTEGRATION-019). Case-insensitive regular expressions matched on the visible text (tags stripped,
 # plus <title>, meta description and alt text). Access methods are matched as phrases, so "switch on"
 # or "switch languages" pass; organisations as word stems. ALL applies to every language.
+# PEOPLE_AND_PLACES are the professions and organisations of each language; FORBIDDEN adds them to its lists below.
+PEOPLE_AND_PLACES = {
+    'en': [r'school', r'teacher', r'therap', r'specialist', r'organi[sz]ation', r'clinic', r'institution', r'kindergarten'],
+    'da': [r'skole', r'lærere', r'læreren', r'lærerne', r'terapeut', r'terapi', r'specialist', r'fagfolk', r'fagperson',
+           r'organisation', r'klinik', r'institution', r'pædagog', r'børnehave'],
+    'ru': [r'школ', r'учител', r'педагог', r'терапи', r'терапевт', r'специалист', r'логопед', r'организац', r'клиник',
+           r'учрежден', r'детск\w* сад'],
+    'uk': [r'школ', r'вчител', r'учител', r'педагог', r'терапі', r'терапевт', r'фахів', r'спеціаліст', r'логопед',
+           r'організаці', r'клінік', r'дитяч\w* садок'],
+    'ar': [r'مدرس', r'معلم', r'مدارس', r'معالج', r'أخصائي', r'اختصاصي', r'منظمة', r'منظمات', r'مؤسسة', r'مؤسسات', r'عيادة',
+           r'روضة'],
+    'es': [r'escuela', r'colegio', r'maestr', r'profesor', r'docente', r'terapeut', r'terapia', r'especialista', r'logoped',
+           r'organizaci', r'clínica', r'institución', r'guardería'],
+    'lt': [r'mokykl', r'mokytoj', r'pedagog', r'terapi', r'terapeut', r'specialist', r'logoped', r'organizacij', r'klinik',
+           r'įstaig', r'darželi'],
+}
 FORBIDDEN = {
     # GitHub may be named and linked (decision 33, relaxed 2026-10-14: the website, manual and translations are
     # there); the app's code is never presented as being on GitHub or open.
     'ALL': [r'open[\s-]?source', r'source code', CODE_ON_GITHUB],
-    'en': [r'school', r'teacher', r'therap', r'specialist', r'organi[sz]ation', r'clinic', r'institution', r'kindergarten',
-           r'switch access', r'switch scanning', r'switch control', r'accessibility switch', r'external switch',
+    'en': [r'switch access', r'switch scanning', r'switch control', r'accessibility switch', r'external switch',
            r'head movement', r'head tracking', r'head mouse', r'eye gaze', r'eye[\s-]tracking', r'eye tracker',
            r'external pointer', r'pointer'],
-    'da': [r'skole', r'lærere', r'læreren', r'lærerne', r'terapeut', r'terapi', r'specialist', r'fagfolk', r'fagperson', r'organisation', r'klinik',
-           r'institution', r'pædagog', r'børnehave',
-           r'kontaktstyring', r'kontaktbetjening', r'kontakt-?scanning', r'scanning', r'hovedbevægelse',
+    'da': [r'kontaktstyring', r'kontaktbetjening', r'kontakt-?scanning', r'scanning', r'hovedbevægelse',
            r'hovedstyring', r'øjenstyring', r'blikstyring', r'øjenbevægelse', r'pointer', r'musemarkør',
            r'åben kildekode', r'kildekode'],
-    'ru': [r'школ', r'учител', r'педагог', r'терапи', r'терапевт', r'специалист', r'логопед', r'организац', r'клиник',
-           r'учрежден', r'детск\w* сад',
-           r'переключател', r'сканировани', r'движени\w* голов', r'взгляд', r'отслеживани\w* глаз',
+    'ru': [r'переключател', r'сканировани', r'движени\w* голов', r'взгляд', r'отслеживани\w* глаз',
            r'указател', r'открыт\w* (исходн\w* )?код', r'исходн\w* код'],
-    'uk': [r'школ', r'вчител', r'учител', r'педагог', r'терапі', r'терапевт', r'фахів', r'спеціаліст', r'логопед', r'організаці',
-           r'клінік', r'дитяч\w* садок',
-           r'перемикач', r'сканування', r'рух\w* голов', r'погляд', r'відстежен\w* оч', r'вказівник',
+    'uk': [r'перемикач', r'сканування', r'рух\w* голов', r'погляд', r'відстежен\w* оч', r'вказівник',
            r'відкрит\w* (вихідн\w* )?код', r'вихідн\w* код'],
-    'ar': [r'مدرس', r'معلم', r'مدارس', r'معالج', r'أخصائي', r'اختصاصي', r'منظمة', r'منظمات', r'مؤسسة', r'مؤسسات', r'عيادة', r'روضة',
-           r'مفتاح التبديل', r'مفاتيح التبديل', r'المفاتيح الخارجية', r'حركة الرأس', r'حركات الرأس', r'تتبع العين',
+    'ar': [r'مفتاح التبديل', r'مفاتيح التبديل', r'المفاتيح الخارجية', r'حركة الرأس', r'حركات الرأس', r'تتبع العين',
            r'تتبع النظر', r'نظرة العين', r'بالنظر', r'المؤشر الخارجي', r'مؤشر خارجي',
            r'مفتوح المصدر', r'المصدر المفتوح', r'الشيفرة المصدرية', r'الكود المصدري'],
-    'es': [r'escuela', r'colegio', r'maestr', r'profesor', r'docente', r'terapeut', r'terapia', r'especialista', r'logoped',
-           r'organizaci', r'clínica', r'institución', r'guardería',
-           r'pulsador', r'barrido', r'conmutador', r'movimiento\w* de (la )?cabeza', r'mirada',
+    'es': [r'pulsador', r'barrido', r'conmutador', r'movimiento\w* de (la )?cabeza', r'mirada',
            r'seguimiento ocular', r'puntero', r'código abierto', r'código fuente'],
-    'lt': [r'mokykl', r'mokytoj', r'pedagog', r'terapi', r'terapeut', r'specialist', r'logoped', r'organizacij', r'klinik',
-           r'įstaig', r'darželi',
-           r'jungikl', r'skenavim', r'galvos judes', r'galvos valdym', r'akių sekim', r'žvilgsn', r'žymekl',
+    'lt': [r'jungikl', r'skenavim', r'galvos judes', r'galvos valdym', r'akių sekim', r'žvilgsn', r'žymekl',
            r'atvir\w* (pradin\w* )?kod', r'pradin\w* kod', r'išeities kod'],
 }
+for _lg, _terms in PEOPLE_AND_PLACES.items():
+    FORBIDDEN[_lg] = _terms + FORBIDDEN[_lg]
+# The one exception (owner 2026-11-05): "Recommending Amalino to families" speaks to the people around a family, so it
+# may name professions and organisations. Everything else on FORBIDDEN (access methods, open source) still applies
+# there, and every other page keeps the whole list.
+PAGE_ALLOWED = {'recommend': PEOPLE_AND_PLACES}
 
 
 # The privacy page names GitHub (github.com) as the host the voice files download from (owner decisions 30 and 33),
@@ -446,6 +484,10 @@ class Renderer:
                 return html.escape(TESTERS_OPTIN_URL, quote=True)
             if name == 'app_store' and name not in values:
                 return html.escape(APP_STORE_URL, quote=True)
+            if name == 'arasaac' and name not in values:
+                return html.escape(ARASAAC_URL, quote=True)
+            if name == 'cc_by_nc_sa' and name not in values:
+                return html.escape(CC_BY_NC_SA_URL, quote=True)
             if name == 'report_mailto' and name not in values:
                 return html.escape(self.report_mailto(loc), quote=True)
             if name == 'donate' and name not in values:
@@ -622,7 +664,21 @@ def not_found_page(site):
             '  <img class="picker-logo" src="/assets/amalino.svg" alt="" width="88" height="88">\n'
             '  <h1>This page doesn\'t exist</h1>\n'
             '  <p class="choose">Choose a language to go to Amalino\'s home page:</p>\n'
-            f'  <ul class="picker-list">{items}</ul>\n</main>\n</body>\n</html>\n')
+            f'  <ul class="picker-list">{items}</ul>\n</main>\n{legal_footer(LEGAL_EN)}\n</body>\n</html>\n')
+
+
+# The 404 page and the pickers are in English: their footer lines (the pages' own come from the translations).
+LEGAL_EN = ('Pictograms:', 'Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other '
+            'countries. App Store is a service mark of Apple Inc.')
+
+
+def legal_footer(texts):
+    """The footer's small print on pages without a translation: the ARASAAC credit and Apple's trademark line."""
+    label, apple = (html.escape(t, quote=False) for t in texts)
+    return ('<footer class="site-footer"><div class="wrap footer-legal">'
+            f'<p class="footer-arasaac">{label} <a href="{ARASAAC_URL}" rel="noopener">Sergio Palao / ARASAAC (arasaac.org)</a>, '
+            f'<a href="{CC_BY_NC_SA_URL}" rel="license noopener">CC BY-NC-SA 4.0</a></p>'
+            f'<p class="footer-apple">{apple}</p></div></footer>')
 
 
 def lastmod():
@@ -670,6 +726,20 @@ def redirect_script(root, target):
 REMEMBER_SCRIPT = ('<script>document.addEventListener("click",function(e){var a=e.target.closest&&'
                    'e.target.closest("a[data-lang]");if(a)try{localStorage.setItem("' + LANG_KEY + '",'
                    'a.getAttribute("data-lang"))}catch(x){}});</script>')
+
+
+# The recommend page's "Copy text" buttons: hidden without script or a clipboard, so the text is still there to select.
+COPY_SCRIPT = ('<script>document.querySelectorAll("button[data-copy]").forEach(function(b){if(!navigator.clipboard)return;'
+               'b.hidden=false;b.addEventListener("click",function(){var t=document.getElementById(b.getAttribute("data-copy"))'
+               '.innerText.trim();navigator.clipboard.writeText(t).then(function(){b.textContent=b.getAttribute("data-done")})})})'
+               '</script>')
+
+
+def share_link(site, loc):
+    """The home page's address at the end of each text to share on the recommend page (only with a site URL)."""
+    if not site:
+        return ''
+    return f'<p><bdi dir="ltr">{html.escape(site_url(site, loc, "home"))}</bdi></p>'
 
 
 # ---------------------------------------------------------------- the manual
@@ -808,13 +878,14 @@ def manual_image(loc, name):
     return draw
 
 
-def home_shots(r, loc, langs_m):
+def home_shots(r, loc, langs_m, slots=None, up=''):
     """The home page's screenshots ({{v:hero_shot}}, {{v:test_shots}}): the manual's pictures in `loc`, or the
     source language's when `loc` has no manual or no such picture. Width and height of the 1x picture, both files
     in srcset by width (a 2x screen at 20rem still takes the 1x, which is 820 pixels wide), the hero eager with high
-    priority, the others lazy."""
+    priority, the others lazy. `slots` (default HOME_SHOTS) and `up` (the way back to the language folder, '../'
+    from the recommend page) serve the recommend page's {{v:rec_shots}}."""
     values = {}
-    for slot, shots in HOME_SHOTS.items():
+    for slot, shots in (slots or HOME_SHOTS).items():
         imgs = []
         for name, alt_key in shots:
             src, src2 = f'img/{name}-1x.webp', f'img/{name}-2x.webp'
@@ -822,13 +893,21 @@ def home_shots(r, loc, langs_m):
             size, size2 = (webp_size(os.path.join(MANUAL, own, s)) for s in (src, src2))
             if not size or size2 != (size[0] * 2, size[1] * 2):
                 raise BuildError(f'home page: manual/{own}/{src} and {src2} (twice the size) are needed')
-            here = 'manual/' if own == loc else f'../{own}/manual/'
+            here = up + ('manual/' if own == loc else f'../{own}/manual/')
             load = ('loading="eager" fetchpriority="high"' if slot == 'hero_shot' else 'loading="lazy"')
             imgs.append(f'<img src="{here}{src}" srcset="{here}{src} {size[0]}w, {here}{src2} {size2[0]}w" '
                         f'sizes="{HOME_SHOT_SIZES[slot]}" alt="{r.plain(alt_key, loc)}" width="{size[0]}" '
                         f'height="{size[1]}" {load} decoding="async">')
         values[slot] = ''.join(imgs)
     return values
+
+
+def app_store_badge(r, loc, root):
+    """Apple's badge in the page's language (APP_STORE_BADGE), linked to the App Store, with the button's words as
+    its alt text ({{v:app_store_badge}})."""
+    return (f'<a class="store-badge" href="{html.escape(APP_STORE_URL, quote=True)}" rel="noopener">'
+            f'<img src="{root}assets/badges/{APP_STORE_BADGE[loc]}" alt="{r.plain("home.iosLink", loc)}" '
+            f'width="{BADGE_WIDTH}" height="{BADGE_HEIGHT}"></a>')
 
 
 def manual_langs():
@@ -896,6 +975,9 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     for name in ICON_FILES:
         shutil.copyfile(os.path.join(ICONS, name), os.path.join(out, 'assets', name))
     shutil.copyfile(os.path.join(ICONS, 'favicon.ico'), os.path.join(out, 'favicon.ico'))
+    os.makedirs(os.path.join(out, 'assets', 'badges'))
+    for name in sorted(set(APP_STORE_BADGE.values())):
+        shutil.copyfile(os.path.join(BADGES, name), os.path.join(out, 'assets', 'badges', name))
     write(os.path.join(out, 'site.webmanifest'), web_manifest())
 
     langs_m = manual_langs()
@@ -917,7 +999,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
     def site_nav(loc, root, current=None):
         """The header menu; `current` is a page id or 'manual'."""
         items = []
-        for p in PAGES:
+        for p in NAV_PAGES:
             cur = ' aria-current="page"' if p == current else ''
             items.append(f'<li><a href="{root}{loc}/{page_path(p)}"{cur}>{r.html_text(PAGES[p][2], loc)}</a></li>')
             if p == 'about' and langs_m:
@@ -940,8 +1022,15 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
                 d = 'rtl' if other in RTL else 'ltr'
                 langs.append(f'<li><a href="{root}{other}/{page_path(page)}" lang="{other}" hreflang="{other}" '
                              f'dir="{d}" data-lang="{other}"{cur}>{ENDONYMS[other]}</a></li>')
-            content = r.render(read(os.path.join(TEMPLATES, tpl_name)), loc,
-                               home_shots(r, loc, langs_m) if page == 'home' else {}, page)
+            content_values = {}
+            if page == 'home':
+                content_values = dict(home_shots(r, loc, langs_m), app_store_badge=app_store_badge(r, loc, root))
+            elif page == 'recommend':
+                content_values = dict(home_shots(r, loc, langs_m, RECOMMEND_SHOTS, '../'),
+                                      app_store_badge=app_store_badge(r, loc, root),
+                                      manual_link=manual_anchor(loc, root), copy_script=COPY_SCRIPT,
+                                      share_link=share_link(site, loc))
+            content = r.render(read(os.path.join(TEMPLATES, tpl_name)), loc, content_values, page)
             title, desc = rtl_lead(r.plain(title_key, loc), loc), rtl_lead(r.plain(desc_key, loc), loc)
             head = head_links(site, loc, page) + share_meta(r, site, loc, page, title, desc)
             if page == 'home':
@@ -1054,6 +1143,7 @@ def build(out, email='', site='', strings=None, quiet=False, donate=''):
             'root': root, 'title': title, 'description': desc,
             'head_links': links.rstrip('\n'), 'heading': 'Amalino' if not sub else r.plain('tr.h1', 'en'),
             'choose': choose, 'items': ''.join(items), 'redirect': redirect_script(root, target),
+            'legal': legal_footer(LEGAL_EN),
         }
         write(os.path.join(out, target), r.render(picker, 'en', values))
 
@@ -1188,7 +1278,8 @@ def page_lang(page_html):
 
 def forbidden_found(page_html, lang=None, page=None):
     """Forbidden phrases in a page: those of ALL, English, and the page's own language. Only a privacy page
-    (page='privacy') keeps the voice file host line of ALLOWED_PRIVACY out of the check."""
+    (page='privacy') keeps the voice file host line of ALLOWED_PRIVACY out of the check, and only the recommend page
+    (page='recommend') may name the professions and organisations of PAGE_ALLOWED."""
     text = visible_text(page_html).lower()
     lang = lang or page_lang(page_html)
     langs = ['ALL', 'en'] + ([lang] if lang in FORBIDDEN and lang != 'en' else [])
@@ -1196,9 +1287,12 @@ def forbidden_found(page_html, lang=None, page=None):
         langs = list(FORBIDDEN)
     if page == 'privacy' and lang in ALLOWED_PRIVACY:
         text = text.replace(ALLOWED_PRIVACY[lang], ' ')
+    allowed = PAGE_ALLOWED.get(page, {})
     found = []
     for lg in langs:
         for pat in FORBIDDEN[lg]:
+            if pat in allowed.get(lg, ()):
+                continue
             m = re.search(pat, text, flags=re.I)
             if m:
                 found.append(m.group(0))
@@ -1256,12 +1350,23 @@ def check(out, strings, email, site='', donate=''):
             expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values(), f'{f}: GitHub link {ref} (only {REPO_URL})')
         for ref in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"', page):
             expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values() or ref == WEBLATE_URL
-                   or ref in (TESTERS_GROUP_URL, TESTERS_OPTIN_URL, APP_STORE_URL)
+                   or ref in (TESTERS_GROUP_URL, TESTERS_OPTIN_URL, APP_STORE_URL, ARASAAC_URL, CC_BY_NC_SA_URL)
                    or (site and ref.startswith(site + '/'))
                    or (donate and ref == html.escape(donate, quote=True)),
                    f'{f}: link to another site {ref} (add it to OUTSIDE_LINKS if it belongs)')
+        # The small print in every footer (owner 2026-11-05): the ARASAAC credit with its licence, and Apple's
+        # trademark line.
+        foot = page.split('<footer class="site-footer">')[-1] if '<footer class="site-footer">' in page else ''
+        expect(f'<a href="{ARASAAC_URL}" rel="noopener">Sergio Palao / ARASAAC (arasaac.org)</a>' in foot
+               and f'<a href="{CC_BY_NC_SA_URL}" rel="license noopener">CC BY-NC-SA 4.0</a>' in foot,
+               f'{f}: the ARASAAC line is missing in the footer')
+        expect('<p class="footer-apple">' in foot and 'App Store' in visible_text(foot.split('<p class="footer-apple">')[-1]),
+               f'{f}: Apple\'s trademark line is missing in the footer')
+        # The draft note sits at the bottom (owner 2026-11-05): after the page's own text, never above it.
+        expect('draft-banner' not in page.split('</main>')[0], f'{f}: the draft note must be at the bottom of the page')
         if loc:
             expect(f'<p class="footer-repo"><a href="{REPO_URL}"' in page, f'{f}: footer link to the repository missing')
+            expect('<p class="footer-recommend"><a href="' in page, f'{f}: footer link to the recommend page missing')
             if langs_m:
                 expect('<p class="footer-manual"><a href="' in page, f'{f}: footer link to the manual missing')
         for leftover in ('{{', '{email}', '**', '{app:', '[[', ']]', '\x00'):
@@ -1339,12 +1444,25 @@ def check(out, strings, email, site='', donate=''):
         expect('id="test-android"' in home and f'href="{TESTERS_GROUP_URL}"' in home
                and f'href="{TESTERS_OPTIN_URL}"' in home and '#report"' in home,
                f'{loc}: "Help test Amalino on Android" missing on the home page')
-        # On the App Store (owner 2026-11-05): the status card has the App Store button and, for Android, the way to
-        # the testers' section.
-        card = re.search(r'<section class="card status">(.*?)</section>', home, flags=re.S)
-        expect(card and f'<a class="button" href="{APP_STORE_URL}" rel="noopener">' in card.group(1)
-               and 'href="#test-android"' in card.group(1),
-               f'{loc}: the App Store button or the Android testing link missing on the home page')
+        # On the App Store (owner 2026-11-05): the hero has Apple's badge in the page's language, linked to the App
+        # Store, and for Android the way to the testers' section, which comes after the features.
+        hero = re.search(r'<section class="hero">(.*?)</section>', home, flags=re.S)
+        badge = (f'<a class="store-badge" href="{APP_STORE_URL}" rel="noopener"><img src="../assets/badges/'
+                 f'{APP_STORE_BADGE[loc]}" alt="')
+        expect(hero and badge in hero.group(1) and 'href="#test-android"' in hero.group(1),
+               f'{loc}: the App Store badge or the Android testing link missing on the home page')
+        expect(home.find('class="features"') < home.find('id="test-android"'),
+               f'{loc}: "Help test Amalino on Android" must come after the features')
+        # Recommending Amalino to families (owner 2026-11-05): the facts, the badge, the testers' link, both texts to
+        # share and the ways to the manual and "Report a problem".
+        rec = read(os.path.join(out, loc, page_path('recommend')))
+        for want, what in ((badge.replace('../', '../../'), 'the App Store badge'),
+                           ('index.html#test-android"', 'the Android testing link'),
+                           ('id="share-short"', 'the short text'), ('id="share-long"', 'the longer text'),
+                           ('about/index.html#report"', 'the report link'), ('/manual/index.html"', 'the manual link')):
+            expect(want in rec, f'{loc}/recommend: {what} missing')
+        about_page = read(os.path.join(out, loc, page_path('about')))
+        expect(f'/{loc}/recommend/index.html"' in about_page, f'{loc}/about: link to the recommend page missing')
         # The app's screenshots on the home page (owner 2026-10-23): the board in the hero, a folder and the
         # keyboard by the testers' steps; every picture they name is published.
         expect(home.count('<img src="') >= 1 + sum(len(v) for v in HOME_SHOTS.values()),

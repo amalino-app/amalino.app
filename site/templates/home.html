@@ -3,7 +3,12 @@
     <div class="hero-text">
       <h1>{{t:home.h1}}</h1>
       <p class="lead">{{t:home.lead}}</p>
-      <p class="promise-badge">{{t:free}}</p>
+      <p class="promise"><svg class="check" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>{{t:free}}</span></p>
+      <div class="get-app">
+        <p class="store-ios">{{t:home.ios}}</p>
+        <p class="store-badge-row">{{v:app_store_badge}}</p>
+        <p class="store-android">{{t:home.android}} <a class="more-link" href="#test-android">{{t:home.androidLink}}</a></p>
+      </div>
     </div>
     <figure class="hero-shot">{{v:hero_shot}}</figure>
   </div>
@@ -13,11 +18,21 @@
     <p>{{t:home.story}}</p>
     <p class="more"><a href="{{link:about}}">{{t:about.h1}}</a></p>
   </section>
-  <section class="card status">
-    <p class="store-ios">{{t:home.ios}}</p>
-    <p><a class="button" href="{{v:app_store}}" rel="noopener">{{t:home.iosLink}}</a></p>
-    <p>{{t:home.android}} <a href="#test-android">{{t:home.androidLink}}</a></p>
-    {{#email}}<p class="muted">{{t:home.storeEmail}}</p>{{/email}}
+  <section>
+    <h2>{{t:home.featuresTitle}}</h2>
+    <ul class="features">
+      <li><h3>{{t:home.f1.title}}</h3><p>{{t:home.f1.body}}</p></li>
+      <li><h3>{{t:home.f2.title}}</h3><p>{{t:home.f2.body}}</p></li>
+      <li><h3>{{t:home.f3.title}}</h3><p>{{t:home.f3.body}}</p></li>
+      <li><h3>{{t:home.f4.title}}</h3><p>{{t:home.f4.body}}</p></li>
+    </ul>
+    <p class="muted">{{t:home.platforms}}</p>
+    <p class="muted">{{t:home.preview}}{{#email}} {{t:home.previewEmail}}{{/email}}</p>
+  </section>
+  <section class="myth">
+    <h2>{{t:home.mythTitle}}</h2>
+    <p>{{t:home.mythBody}}</p>
+    {{#email}}<p class="store-email">{{t:home.storeEmail}}</p>{{/email}}
   </section>
   <section id="test-android" class="card test-android">
     <h2>{{t:test.title}}</h2>
@@ -39,21 +54,6 @@
       <li>{{t:test.after4}}</li>
     </ul>
     <p>{{t:test.feedback}} <a href="{{link:about}}#report">{{t:report.title}}</a></p>
-  </section>
-  <section>
-    <h2>{{t:home.featuresTitle}}</h2>
-    <ul class="features">
-      <li><h3>{{t:home.f1.title}}</h3><p>{{t:home.f1.body}}</p></li>
-      <li><h3>{{t:home.f2.title}}</h3><p>{{t:home.f2.body}}</p></li>
-      <li><h3>{{t:home.f3.title}}</h3><p>{{t:home.f3.body}}</p></li>
-      <li><h3>{{t:home.f4.title}}</h3><p>{{t:home.f4.body}}</p></li>
-    </ul>
-    <p class="muted">{{t:home.platforms}}</p>
-    <p class="muted">{{t:home.preview}}{{#email}} {{t:home.previewEmail}}{{/email}}</p>
-  </section>
-  <section class="myth">
-    <h2>{{t:home.mythTitle}}</h2>
-    <p>{{t:home.mythBody}}</p>
   </section>
   <section class="card help">
     <h2>{{t:home.helpTitle}}</h2>

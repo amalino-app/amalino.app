@@ -24,22 +24,27 @@
     </details>
   </div>
 </header>
-{{v:draft_banner}}
 <main id="main">
 {{v:content}}
 </main>
 <footer class="site-footer">
+  {{v:draft_banner}}
   <div class="wrap">
     <p class="footer-promise">{{t:free}}</p>
     {{#email}}<p>{{t:footer.contact}}</p>{{/email}}
     <p class="footer-manual">{{v:manual_footer}}</p>
     <p class="footer-report"><a href="{{link:about}}#report">{{t:footer.report}}</a></p>
+    <p class="footer-recommend"><a href="{{link:recommend}}">{{t:footer.recommend}}</a></p>
     <p class="footer-repo">{{t:footer.repo}}</p>
     {{#donate}}<p class="footer-support"><a href="{{v:donate}}" rel="noopener">{{t:footer.support}}</a></p>{{/donate}}
     <nav class="langs" aria-label="{{a:lang.label}}">
       <p class="langs-title">{{t:lang.label}}</p>
       <ul>{{v:lang_links}}</ul>
     </nav>
+    <div class="footer-legal">
+      <p class="footer-arasaac">{{t:footer.pictograms}} <bdi dir="ltr"><a href="{{v:arasaac}}" rel="noopener">Sergio Palao / ARASAAC (arasaac.org)</a>, <a href="{{v:cc_by_nc_sa}}" rel="license noopener">CC BY-NC-SA 4.0</a></bdi></p>
+      <p class="footer-apple">{{t:footer.appleTm}}</p>
+    </div>
   </div>
 </footer>
 {{v:remember_script}}

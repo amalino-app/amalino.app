@@ -95,10 +95,11 @@ bdi a, bdi { overflow-wrap: anywhere; }
 
 /* Header */
 .site-header { background: var(--surface); border-block-end: 1px solid var(--divider); }
-/* Two rows in every language and at every width: the brand and the language menu on top, the menu below.
-   The menu's labels differ a lot in length (Russian is twice as long as English), so a one-row header
-   broke in some languages: the language button dropped to a row of its own. On small screens the menu
-   is one row that scrolls sideways instead of four rows of buttons. */
+/* A grid in every language: the brand and the language menu on top, the menu below. The menu's labels differ a
+   lot in length (Russian is twice as long as English), and a flex row broke in some languages: the language button
+   dropped to a row of its own. On wide screens (60rem) the three share one row, with the menu between them; it may
+   wrap inside its own column but never pushes the language button away. On phones the menu wraps onto a second
+   line, so every item stays in view (a sideways-scrolling row hid "Help translate" and "Privacy"). */
 .header-row {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand lang" "nav nav";
   align-items: center; gap: 8px 16px; padding-block: 12px 8px;
@@ -109,18 +110,13 @@ bdi a, bdi { overflow-wrap: anywhere; }
 .site-nav ul { display: flex; flex-wrap: wrap; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .site-nav li { flex: none; }
 @media (max-width: 40rem) {
-  .site-nav { margin-inline: -16px; }
-  .site-nav ul {
-    flex-wrap: nowrap; overflow-x: auto; padding-inline: 16px 32px; padding-block-end: 4px; scrollbar-width: none;
-    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
-    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
-  }
-  [dir="rtl"] .site-nav ul {
-    -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 32px), transparent);
-    mask-image: linear-gradient(to left, #000 calc(100% - 32px), transparent);
-  }
-  .site-nav ul::-webkit-scrollbar { display: none; }
-  .site-nav a { white-space: nowrap; }
+  .site-nav ul { gap: 2px 0; margin-inline: -10px; }
+  .site-nav a { padding-inline: 10px; white-space: nowrap; }
+}
+@media (min-width: 60rem) {
+  .header-row { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "brand nav lang"; padding-block: 12px; gap: 8px 16px; }
+  .site-nav ul { justify-content: flex-end; gap: 0; }
+  .site-nav a { padding-inline: 11px; }
 }
 /* The language menu: a native <details>, so it opens with the keyboard and without script. */
 .lang-menu { grid-area: lang; justify-self: end; position: relative; }
@@ -145,9 +141,12 @@ bdi a, bdi { overflow-wrap: anywhere; }
 .site-nav a:hover { background: var(--card); }
 .site-nav a[aria-current="page"] { background: var(--selected); color: var(--on-selected); font-weight: 600; }
 
-/* Draft notes */
-.draft-banner { background: var(--draft-bg); color: var(--draft); font-size: 1rem; }
-.draft-banner p { margin: 0; padding-block: 10px; }
+/* Draft notes: a small note at the top of the footer (the page's own text comes first). */
+.draft-banner { font-size: 0.95rem; margin-block-end: 16px; }
+.draft-banner p {
+  margin: 0; padding: 8px 14px; border-radius: 10px; background: var(--draft-bg); color: var(--draft);
+  border-inline-start: 4px solid var(--border);
+}
 .draft-banner p::before { content: "✎ "; }
 .notice {
   background: var(--warning-bg); color: var(--warning); padding: 12px 16px; border-radius: 12px;
@@ -159,10 +158,20 @@ bdi a, bdi { overflow-wrap: anywhere; }
 .hero h1 { color: var(--hero-text); max-width: 22ch; }
 :lang(ar) .hero h1 { max-width: 26ch; }
 .hero .lead { color: var(--hero-text); max-width: var(--measure); }
-.promise-badge {
-  display: inline-block; margin: 8px 0 0; padding: 8px 18px; border-radius: 999px;
-  background: var(--selected); color: var(--on-selected); font-weight: 700;
-}
+/* The free promise: a plain line with a check mark, not a button. */
+.promise { display: flex; align-items: center; gap: 10px; margin: 8px 0 0; font-weight: 700; color: var(--hero-text); }
+.promise .check { flex: none; width: 28px; height: 28px; padding: 3px; border-radius: 50%; background: var(--hero-muted); color: var(--hero-bg); }
+/* Getting the app, in the hero: Apple's badge (unmodified, 48 px high, a quarter of its height clear around it). */
+.get-app { margin-block-start: 24px; padding-block-start: 20px; border-block-start: 1px solid rgba(255, 255, 255, 0.25); }
+.get-app p { margin-block-end: 0; }
+.get-app .store-ios { color: var(--hero-text); }
+.store-badge-row { margin-block: 12px; }
+.store-badge { display: inline-block; padding: 0; line-height: 0; border-radius: 9px; }
+.store-badge img { display: block; height: 48px; width: auto; }
+.get-app .store-android { color: var(--hero-muted); }
+.hero a { color: var(--hero-text); }
+.more-link::after { content: " →"; }
+[dir="rtl"] .more-link::after { content: " ←"; }
 .lead { font-size: 1.2em; }
 /* The app in the hero: the child's board in the page's language, under the text on small screens. */
 .hero-grid { display: grid; gap: 8px 48px; align-items: center; }
@@ -179,13 +188,13 @@ bdi a, bdi { overflow-wrap: anywhere; }
 .card { background: var(--card); border-radius: var(--radius); padding: 20px 24px; margin-block: 24px; }
 .card > :last-child { margin-block-end: 0; }
 .card h2 { margin-block-start: 0; }
-.status { margin-block-start: 32px; }
-.status .store-ios { font-size: 1.15em; font-weight: 600; }
 
 .features {
   list-style: none; padding: 0; margin: 0 0 16px;
-  display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr);
 }
+/* Two by two from tablets up (auto-fit made 3 + 1 on wide screens). */
+@media (min-width: 40rem) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .features li {
   background: var(--surface); border: 1px solid var(--divider); border-radius: var(--radius); padding: 20px;
   border-block-start: 6px solid var(--primary);
@@ -203,7 +212,9 @@ bdi a, bdi { overflow-wrap: anywhere; }
 .button {
   display: inline-block; background: var(--primary); color: var(--on-primary); text-decoration: none;
   padding: 12px 22px; border-radius: 999px; font-weight: 600; min-height: 48px;
+  border: 0; font: inherit; font-weight: 600; line-height: 1.5; cursor: pointer;
 }
+.button[hidden] { display: none; }
 .button:hover { filter: brightness(1.1); }
 
 /* Text pages */
@@ -240,7 +251,7 @@ bdi a, bdi { overflow-wrap: anywhere; }
 .test-android .steps .button { margin-block-start: 8px; }
 .test-lead { font-weight: 700; font-size: 1.1em; }
 /* The app beside the steps on wide screens, below them on small ones: a folder and the keyboard, side by side. */
-.test-body { display: grid; gap: 8px 32px; margin-block-end: 1em; }
+.test-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px 32px; margin-block-end: 1em; }
 .test-body .steps { margin: 0; }
 .test-shots { display: flex; gap: 12px; align-items: flex-start; justify-content: center; }
 .test-shots img {
@@ -248,8 +259,7 @@ bdi a, bdi { overflow-wrap: anywhere; }
   border: 1px solid var(--border); border-radius: 10px; background: #FFFFFF;
 }
 @media (min-width: 48rem) {
-  .test-body { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
-  .test-shots { width: 21rem; }
+  .test-body { grid-template-columns: minmax(0, 1fr) 21rem; align-items: start; }
 }
 .test-android h3 { margin-block: 1.2em 0.4em; }
 .test-after { padding-inline-start: 1.2em; }
@@ -260,10 +270,32 @@ bdi a, bdi { overflow-wrap: anywhere; }
 /* Footer */
 .site-footer { border-block-start: 1px solid var(--divider); background: var(--surface); margin-block-start: 48px; padding-block: 24px 32px; font-size: 1rem; }
 .footer-promise { font-weight: 700; color: var(--primary); }
+/* The footer's links on one line (wrapping as needed) instead of a column of single links. */
+.footer-manual, .footer-report, .footer-recommend, .footer-repo, .footer-support { display: inline-block; margin-block: 0 12px; margin-inline-end: 24px; }
+.langs { margin-block-start: 8px; }
 .langs-title { color: var(--muted); margin-block-end: 6px; }
 .langs ul { display: flex; flex-wrap: wrap; gap: 4px 6px; list-style: none; padding: 0; margin: 0; }
 .langs a { display: inline-block; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--divider); text-decoration: none; min-height: 44px; line-height: 30px; }
 .langs a[aria-current="true"] { background: var(--selected); color: var(--on-selected); border-color: var(--selected); font-weight: 600; }
+/* The small print: the ARASAAC credit and Apple's trademark line. */
+.footer-legal { margin-block-start: 24px; padding-block-start: 16px; border-block-start: 1px solid var(--divider); color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+.footer-legal p { margin-block-end: 6px; }
+.footer-legal a { color: var(--muted); }
+.footer-arasaac a[rel~="license"] { white-space: nowrap; }
+.picker .site-footer { margin-block-start: 0; }
+
+/* Recommending Amalino to families */
+.get-app-card .store-badge-row { margin-block: 12px 16px; }
+/* Three side by side at every width; they shrink with the page instead of stacking. */
+.rec-shots { display: flex; gap: 12px; justify-content: center; align-items: flex-start; margin-block: 8px 24px; }
+.rec-shots img {
+  display: block; flex: 1 1 0; min-width: 0; max-width: 13rem; height: auto;
+  border: 1px solid var(--border); border-radius: 12px; background: #FFFFFF;
+}
+.share-text {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-block-end: 12px;
+}
+.share-text p:last-child { margin-block-end: 0; }
 
 /* Language pickers (/ and /translate/) */
 .picker main { padding-block: 48px; text-align: center; }

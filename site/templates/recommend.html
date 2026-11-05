@@ -1,0 +1,42 @@
+<article class="wrap prose recommend">
+  <h1>{{t:rec.h1}}</h1>
+  <p class="lead">{{t:rec.intro}}</p>
+  <h2>{{t:rec.whoTitle}}</h2>
+  <p>{{t:rec.who}}</p>
+  <h2>{{t:rec.whatTitle}}</h2>
+  <ul class="facts">
+    <li>{{t:rec.what1}}</li>
+    <li>{{t:rec.what2}}</li>
+    <li>{{t:rec.what3}}</li>
+    <li>{{t:rec.what4}}</li>
+    <li>{{t:rec.what5}}</li>
+    <li>{{t:rec.what6}}</li>
+    <li>{{t:rec.what7}}</li>
+    <li>{{t:rec.what8}}</li>
+  </ul>
+  <p>{{t:pr.notBody}}</p>
+  <section class="card get-app-card">
+    <h2>{{t:rec.getTitle}}</h2>
+    <p>{{t:home.ios}}</p>
+    <p class="store-badge-row">{{v:app_store_badge}}</p>
+    <p>{{t:rec.android}} <a href="{{link:home}}#test-android">{{t:test.title}}</a></p>
+  </section>
+  <h2>{{t:rec.shotsTitle}}</h2>
+  <div class="rec-shots">{{v:rec_shots}}</div>
+  <h2>{{t:rec.shareTitle}}</h2>
+  <p>{{t:rec.shareIntro}}</p>
+  <h3>{{t:rec.shortTitle}}</h3>
+  <div class="share-text" id="share-short"><p>{{t:rec.short}}</p>{{v:share_link}}</div>
+  <p><button type="button" class="button copy" data-copy="share-short" data-done="{{a:rec.copied}}" aria-live="polite" hidden>{{t:rec.copy}}</button></p>
+  <h3>{{t:rec.longTitle}}</h3>
+  <div class="share-text" id="share-long"><p>{{t:rec.long}}</p>{{v:share_link}}</div>
+  <p><button type="button" class="button copy" data-copy="share-long" data-done="{{a:rec.copied}}" aria-live="polite" hidden>{{t:rec.copy}}</button></p>
+  <h2>{{t:rec.moreTitle}}</h2>
+  <ul class="facts">
+    <li>{{t:rec.manual}} {{v:manual_link}}</li>
+    <li>{{t:rec.privacy}} <a href="{{link:privacy}}">{{t:nav.privacy}}</a></li>
+    <li>{{t:rec.report}} <a href="{{link:about}}#report">{{t:report.title}}</a></li>
+    {{#email}}<li>{{t:home.storeEmail}}</li>{{/email}}
+  </ul>
+</article>
+{{v:copy_script}}
