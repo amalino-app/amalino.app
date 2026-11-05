@@ -14,8 +14,10 @@
     <p class="more"><a href="{{link:about}}">{{t:about.h1}}</a></p>
   </section>
   <section class="card status">
-    <p>{{t:home.status}}</p>
-    {{#email}}<p>{{t:home.statusEmail}}</p>{{/email}}
+    <p class="store-ios">{{t:home.ios}}</p>
+    <p><a class="button" href="{{v:app_store}}" rel="noopener">{{t:home.iosLink}}</a></p>
+    <p>{{t:home.android}} <a href="#test-android">{{t:home.androidLink}}</a></p>
+    {{#email}}<p class="muted">{{t:home.storeEmail}}</p>{{/email}}
   </section>
   <section id="test-android" class="card test-android">
     <h2>{{t:test.title}}</h2>

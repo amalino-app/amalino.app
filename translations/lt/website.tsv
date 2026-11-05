@@ -26,8 +26,11 @@ home.h1	Žodžiai vaikams, kurie nekalba – ar dar nekalba
 home.lead	Amalino – programėlė telefonams ir planšetėms. Vaikas bakstelėja paveikslėlį, o telefonas ar planšetė garsiai ištaria žodį – ta kalba, kuria kalbate namuose.
 home.shotAlt	Amalino planšetėje: vaiko lenta – viršuje sakinio juosta, 36 spalvoti paveikslėlių mygtukai su kasdieniais žodžiais, o apačioje frazės „stop“ ir „padėk man“
 home.story	Kuriu Amalino, nes kai kurie vaikai turi daug ką pasakyti, tik jiems sunku tai išsakyti. Programėlė nemokama, veikia ir be interneto, o vaikui bakstelėjus paveikslėlius prabyla už jį – tomis kalbomis, kuriomis kalbatės namuose. Turėti savo balsą – ne privilegija.
-home.status	Amalino programėlių parduotuvėse dar nėra. Šiuo metu ją išbandau įvairiuose telefonuose ir planšetėse, o netrukus ją išmėgins ir pirmosios šeimos.
-home.statusEmail	Norite sužinoti, kada ją bus galima atsisiųsti? Parašykite man adresu {email}.
+home.ios	Amalino jau galima nemokamai atsisiųsti iš App Store į iPhone ir iPad.
+home.iosLink	Atsisiųskite iš App Store
+home.android	Android įrenginiams Amalino netrukus atsiras Google Play. Šiuo metu ji išbandoma.
+home.androidLink	Padėkite ją išbandyti
+home.storeEmail	Turite klausimų apie Amalino? Parašykite man adresu {email}.
 test.title	Padėkite išbandyti Amalino Android įrenginiuose
 test.lead	Padėti gali kiekvienas, turintis Android telefoną ar planšetę. Nereikia nei AAK patirties, nei vaiko, kuris ja naudojasi.
 test.intro	Kad Amalino galėtų pasirodyti Google Play, Google reikalauja, kad testuotojai 14 dienų laikytų programėlę įdiegtą savo Android telefone ar planšetėje. Pradėti užtruks vos kelias minutes.

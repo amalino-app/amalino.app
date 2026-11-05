@@ -3,7 +3,7 @@
 
 Amalino es una app gratuita que habla por los niños y niñas que no pueden apoyarse solo en el habla. El niño toca pictogramas y palabras, y el dispositivo los dice en voz alta. Este manual es para la familia y para todas las demás personas que hablan con el niño.
 
-Amalino aún no está en las tiendas de aplicaciones. Este manual describe la versión de prueba.
+Amalino ya está en el [App Store](link:app-store) para iPhone y iPad. La versión para Android se está probando ahora en Google Play: [ayuda a probarla](site:home#test-android).
 
 No hace falta leerlo entero de una vez. Empieza por **Primeros pasos** y vuelve cuando quieras cambiar algo.
 

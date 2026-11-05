@@ -3,7 +3,7 @@
 
 Amalino er en gratis app, der taler for børn, som ikke kan klare sig med talen alene. Barnet trykker på billeder og ord, og enheden siger dem højt. Vejledningen er til familien og til alle andre, der taler med barnet.
 
-Amalino kan ikke hentes i App Store eller Google Play endnu. Vejledningen beskriver testversionen.
+Amalino ligger i [App Store](link:app-store) til iPhone og iPad. Til Android bliver den testet på Google Play lige nu – [hjælp med at teste den](site:home#test-android).
 
 Du behøver ikke at læse det hele på én gang. Begynd med **Kom godt i gang**, og vend tilbage, når du vil ændre noget.
 

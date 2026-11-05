@@ -26,8 +26,11 @@ home.h1	Palabras para niños y niñas que no hablan, o que todavía no hablan
 home.lead	Amalino es una app para teléfonos y tabletas. Basta con tocar un pictograma para que el dispositivo diga la palabra en voz alta, en el idioma de la familia.
 home.shotAlt	Amalino en una tableta: el tablero del niño, con la barra de mensaje arriba, 36 botones de colores con pictogramas de palabras cotidianas y, abajo, las frases «para» y «ayúdame»
 home.story	Estoy creando Amalino porque hay niños que tienen mucho que decir y no tienen una forma fácil de decirlo. Es gratis, funciona sin internet y habla por ellos cuando tocan un pictograma, en los idiomas que se hablan en tu casa. Tener voz no debería ser un privilegio.
-home.status	Amalino aún no está en las tiendas de aplicaciones. Ahora mismo lo estoy probando en teléfonos y tabletas de verdad, y pronto lo probarán las primeras familias.
-home.statusEmail	¿Quieres que te avise cuando esté listo? Escríbeme a {email}.
+home.ios	Amalino ya está en el App Store para iPhone y iPad, y es gratis.
+home.iosLink	Descargar en el App Store
+home.android	En Android llegará pronto a Google Play: ahora mismo se está probando.
+home.androidLink	Ayuda a probarlo
+home.storeEmail	¿Tienes alguna pregunta sobre Amalino? Escríbeme a {email}.
 test.title	Ayuda a probar Amalino en Android
 test.lead	Puede ayudar cualquier persona con un teléfono o una tableta Android. No hace falta experiencia en CAA ni tener un niño o una niña que use la app.
 test.intro	Antes de que Amalino pueda publicarse en Google Play, Google exige que haya personas que lo tengan instalado en un teléfono o una tableta Android durante 14 días. Empezar solo lleva unos minutos.

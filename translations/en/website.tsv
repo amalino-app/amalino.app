@@ -26,8 +26,11 @@ home.h1	Words for children who don't speak, or don't speak yet
 home.lead	Amalino is an app for phones and tablets. A child taps pictures, and the device says the words out loud, in the family's own language.
 home.shotAlt	Amalino on a tablet: the child's board, with the message bar at the top, 36 coloured picture buttons for everyday words, and the phrases stop and help me at the bottom
 home.story	I'm making Amalino because some children have a lot to say and no easy way to say it. It's free, it works without the internet, and it speaks for them when they tap pictures, in the languages your family uses at home. Having a voice shouldn't be a privilege.
-home.status	Amalino isn't in the app stores yet. I'm testing it on real phones and tablets now, and the first families will try it soon.
-home.statusEmail	Would you like to hear when it's ready? Write to me at {email}.
+home.ios	Amalino is on the App Store for iPhone and iPad, and it's free.
+home.iosLink	Download on the App Store
+home.android	On Android, Amalino is coming to Google Play soon. It's being tested right now.
+home.androidLink	Help test it
+home.storeEmail	Questions about Amalino? Write to me at {email}.
 test.title	Help test Amalino on Android
 test.lead	Anyone with an Android phone or tablet can help. You don't need any experience with AAC, or a child who uses it.
 test.intro	Before Amalino can be published on Google Play, Google asks for testers who keep it on an Android phone or tablet for 14 days. Getting started only takes a few minutes.

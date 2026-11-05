@@ -177,6 +177,73 @@ class BuiltSite(unittest.TestCase):
                 self.assertNotIn('groups.google.com', texts[loc], key)
                 self.assertNotIn('play.google.com', texts[loc], key)
 
+    def test_on_the_app_store_in_every_language(self):
+        # Owner 2026-11-05: the home page's status card says Amalino is on the App Store for iPhone and iPad, with a
+        # button to it (APP_STORE_URL, one place in build.py), and for Android links to the testers' section.
+        for loc in bs.LOCALES:
+            r = bs.Renderer(self.strings, EMAIL, '')
+            for out, email in ((self.with_email, EMAIL), (self.without, '')):
+                html = read(out, loc, 'index.html')
+                card = re.search(r'<section class="card status">(.*?)</section>', html, flags=re.S).group(1)
+                self.assertIn(f'<a class="button" href="{bs.APP_STORE_URL}" rel="noopener">', card, loc)
+                self.assertIn('<a href="#test-android">', card, loc)
+                self.assertIn('id="test-android"', html, loc)
+                text = bs.visible_text(card)
+                for key in ('home.ios', 'home.iosLink', 'home.android', 'home.androidLink'):
+                    self.assertIn(bs.visible_text(r.html_text(key, loc)), text, f'{loc} {key}')
+                self.assertEqual('mailto:' in card, bool(email), loc)
+                # The manual's contents page says the same, with the App Store link and the way to the testers.
+                manual = read(out, loc, 'manual', 'index.html')
+                self.assertIn(f'<a href="{bs.APP_STORE_URL}">', manual, loc)
+                self.assertIn(f'href="../../{loc}/index.html#test-android"', manual, loc)
+        # The old status is gone: no key, and no page in any language still says the app isn't in the stores.
+        for key in ('home.status', 'home.statusEmail'):
+            self.assertNotIn(key, self.strings)
+        for out in (self.with_email, self.without):
+            for root, _dirs, names in os.walk(out):
+                for n in names:
+                    if n.endswith('.html'):
+                        shown = bs.visible_text(read(root, n)).lower()
+                        for loc, phrases in bs.NOT_IN_STORES.items():
+                            for old in phrases:
+                                self.assertNotIn(old, shown, (os.path.join(root, n), loc))
+        # The link lives once, in build.py: not in the translations or the manual's Markdown.
+        for key, texts in self.strings.items():
+            for loc in bs.LOCALES:
+                self.assertNotIn('apps.apple.com', texts[loc], key)
+        for loc in bs.manual_langs():
+            for name in bs.manual_pages(loc):
+                self.assertNotIn('apps.apple.com', read(bs.MANUAL, loc, f'{name}.md'), (loc, name))
+
+    def test_smart_app_banner_on_every_page(self):
+        # Safari's smart app banner (owner 2026-11-05): <meta name="apple-itunes-app"> with the App Store id on every
+        # page, the pickers, the manual and the 404 page included.
+        meta = f'<meta name="apple-itunes-app" content="app-id={bs.APP_STORE_ID}">'
+        self.assertEqual(bs.APP_STORE_ID, '6825486891')
+        for out in (self.with_email, self.without):
+            pages = [os.path.join(root, n) for root, _d, names in os.walk(out) for n in names if n.endswith('.html')]
+            self.assertTrue(pages)
+            for path in pages:
+                self.assertEqual(read(path).count(meta), 1, path)
+
+    def test_check_catches_the_old_status_and_a_missing_banner(self):
+        import shutil
+        with tempfile.TemporaryDirectory() as tmp:
+            out = os.path.join(tmp, 'site')
+            shutil.copytree(self.without, out)
+            about = os.path.join(out, 'da', 'about', 'index.html')
+            page = read(about).replace('</main>', '<p>Amalino kan ikke hentes i App Store eller Google Play endnu.</p></main>')
+            page = page.replace(f'<meta name="apple-itunes-app" content="app-id={bs.APP_STORE_ID}">', '')
+            with open(about, 'w', encoding='utf-8') as f:
+                f.write(page)
+            home = os.path.join(out, 'lt', 'index.html')
+            with open(home, 'w', encoding='utf-8') as f:
+                f.write(read(home).replace(f'href="{bs.APP_STORE_URL}"', 'href="https://example.org/"'))
+            errors = bs.check(out, self.strings, '', '')
+            self.assertTrue(any('still says the app isn' in e and e.startswith('da/about') for e in errors), errors)
+            self.assertTrue(any('apple-itunes-app' in e and e.startswith('da/about') for e in errors), errors)
+            self.assertTrue(any(e.startswith('lt: the App Store button') for e in errors), errors)
+
     def test_report_a_problem_in_every_language(self):
         # Owner 2026-10-21: About has "Report a problem" in every language: the mailto (subject and checklist in the
         # page's language) when the email is set, the GitHub issue forms always, the privacy note; the footer of

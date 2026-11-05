@@ -3,7 +3,7 @@
 
 Amalino – nemokama programėlė, kuri kalba už vaikus, negalinčius pasikliauti kalbėjimu. Vaikas bakstelėja paveikslėlius ir žodžius, o įrenginys juos garsiai ištaria. Šis vadovas skirtas šeimai ir visiems, kurie su vaiku bendrauja.
 
-Programėlių parduotuvėse Amalino dar nėra. Vadove aprašyta bandomoji versija.
+Amalino iPhone ir iPad įrenginiams galima atsisiųsti iš [App Store](link:app-store). Android versija šiuo metu išbandoma Google Play – [padėkite ją išbandyti](site:home#test-android).
 
 Viso vadovo iš karto skaityti nereikia. Pradėkite nuo skyriaus „Pirmieji žingsniai“, o prie kitų grįžkite, kai norėsite ką nors pakeisti.
 

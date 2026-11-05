@@ -27,7 +27,8 @@ on home and about, email text appears only when set, the translate page has both
 relative link resolves, and nothing is loaded from another host (owner decision 31: no web fonts, scripts,
 styles or images from elsewhere; only <a href> links may leave the site). It also checks the SEO basics: a unique <title> and meta description per page and language, one h1 with
 headings in order, alt on every image, page weight, Open Graph/Twitter tags, the SoftwareApplication JSON-LD on
-home, and with a site URL the canonical and hreflang links (7 languages + x-default, reciprocal), og:url/og:image,
+home, the App Store button and the Android testers' link on home, Safari's smart app banner (apple-itunes-app)
+on every page and no page still saying the app isn't in the stores, and with a site URL the canonical and hreflang links (7 languages + x-default, reciprocal), og:url/og:image,
 sitemap.xml and robots.txt; without one, nothing absolute in a <head> and no sitemap or robots.txt.
 It prints the per-language native-review status (web:<key> lines in
 translations/<lang>/reviewed.txt for the website, manual:<page> lines for the manual) without blocking; a
@@ -35,7 +36,7 @@ translated manual page that isn't listed there shows the draft banner.
 
 Template syntax: {{t:key}} text (HTML-escaped; **bold**; {email} becomes a mailto link isolated as
 LTR), {{a:key}} plain text for attributes, {{v:name}} a builder value ({{v:donate}}, {{v:weblate}}, {{v:issues}}, {{v:report_mailto}},
-{{v:testers_group}}, {{v:testers_optin}}), {{link:page}} a relative
+{{v:testers_group}}, {{v:testers_optin}}, {{v:app_store}}), {{link:page}} a relative
 link to a page in the same language. In strings, {app:key} is the app's own label from
 translations/<lang>/app.tsv ({app:key|label}: the part before the first ":"). The manual's Markdown
 (manual/<lang>/*.md) uses the same {app:key} for every button, menu and setting it names, so a translated manual
@@ -129,6 +130,23 @@ REPORT_CHECKS = ('report.check1', 'report.check2', 'report.check3', 'report.chec
 # {{v:testers_optin}}); the only links to Google's sites.
 TESTERS_GROUP_URL = 'https://groups.google.com/g/amalino-testers/about'
 TESTERS_OPTIN_URL = 'https://play.google.com/apps/testing/app.amalino'
+# Amalino on the App Store (iPhone and iPad, owner 2026-11-05). The one place for the link: the home page's status
+# card ({{v:app_store}}), the manual's [text](link:app-store) and, by its id, Safari's smart app banner
+# (<meta name="apple-itunes-app">) on every page. A plain link, followed only when clicked (nothing fetches it, so
+# the build doesn't depend on the listing being live).
+APP_STORE_URL = 'https://apps.apple.com/app/id6825486891'
+APP_STORE_ID = re.fullmatch(r'https://apps\.apple\.com/app/id(\d+)', APP_STORE_URL).group(1)
+# What every page said before the app was on the App Store (the home page's status and the manual's contents
+# page); the check makes sure no page says it any more. Lower case, matched on the visible text.
+NOT_IN_STORES = {
+    'en': ("isn't in the app stores yet", 'describes the test version'),
+    'da': ('kan ikke hentes i app store eller google play endnu', 'beskriver testversionen'),
+    'ru': ('пока нет в app store и google play', 'пока нет в магазинах приложений', 'описана тестовая версия'),
+    'uk': ('ще немає в app store і google play', 'ще немає в магазинах застосунків', 'описує тестову версію'),
+    'ar': ('لم يصل amalino إلى متاجر التطبيقات بعد', 'يصف النسخة التجريبية'),
+    'es': ('aún no está en las tiendas de aplicaciones', 'describe la versión de prueba'),
+    'lt': ('programėlių parduotuvėse dar nėra', 'aprašyta bandomoji versija'),
+}
 # The app on the home page (owner 2026-10-23): real screenshots in the page's language, the manual's own
 # (manual/<lang>/img/NAME-1x.webp and -2x.webp, already published at /<lang>/manual/img/, so nothing is copied).
 # (name, alt text key, CSS sizes): the board in the hero, loaded at once; a folder and the keyboard next to the
@@ -426,6 +444,8 @@ class Renderer:
                 return html.escape(TESTERS_GROUP_URL, quote=True)
             if name == 'testers_optin' and name not in values:
                 return html.escape(TESTERS_OPTIN_URL, quote=True)
+            if name == 'app_store' and name not in values:
+                return html.escape(APP_STORE_URL, quote=True)
             if name == 'report_mailto' and name not in values:
                 return html.escape(self.report_mailto(loc), quote=True)
             if name == 'donate' and name not in values:
@@ -574,7 +594,8 @@ def icon_links(root):
             f'<link rel="apple-touch-icon" href="{root}assets/apple-touch-icon.png">\n'
             f'<link rel="manifest" href="{root}site.webmanifest">\n'
             f'<meta name="theme-color" content="{THEME_COLORS[0]}" media="(prefers-color-scheme: light)">\n'
-            f'<meta name="theme-color" content="{THEME_COLORS[1]}" media="(prefers-color-scheme: dark)">')
+            f'<meta name="theme-color" content="{THEME_COLORS[1]}" media="(prefers-color-scheme: dark)">\n'
+            f'<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">')
 
 
 def web_manifest():
@@ -840,16 +861,19 @@ def manual_link(loc, name, names):
                 raise BuildError(f'manual/{loc}/{name}.md: link to {href}, which is not in the contents')
             target = 'index.html' if m.group(1) == 'index' else f'{m.group(1)}/index.html'
             return (up + target if name != 'index' or m.group(1) != 'index' else 'index.html') + (m.group(2) or '')
-        site_page = re.fullmatch(r'site:([a-z]+)', href)
-        if site_page:  # a website page in the same language: [the privacy page](site:privacy)
+        if href == 'link:app-store':  # Amalino on the App Store (APP_STORE_URL)
+            return APP_STORE_URL
+        site_page = re.fullmatch(r'site:([a-z]+)(#[a-z0-9\-]+)?', href)
+        if site_page:  # a website page in the same language: [the privacy page](site:privacy), site:home#test-android
             if site_page.group(1) not in PAGES:
                 raise BuildError(f'manual/{loc}/{name}.md: link {href!r} (known: {", ".join("site:" + p for p in PAGES)})')
-            return ('../../' if name == 'index' else '../../../') + f'{loc}/{page_path(site_page.group(1))}'
+            return (('../../' if name == 'index' else '../../../') + f'{loc}/{page_path(site_page.group(1))}'
+                    + (site_page.group(2) or ''))
         if href.startswith('#') or re.match(r'^(https://|mailto:)', href):
             return href
         if href.startswith('../../') and not href.startswith('../../../'):
             return f'{REPO_URL}/blob/main/{href[6:]}'
-        raise BuildError(f'manual/{loc}/{name}.md: link {href!r} (use another page\'s .md, site:PAGE, ../../FILE or https://)')
+        raise BuildError(f'manual/{loc}/{name}.md: link {href!r} (use another page\'s .md, site:PAGE, link:app-store, ../../FILE or https://)')
     return link
 
 
@@ -1232,7 +1256,7 @@ def check(out, strings, email, site='', donate=''):
             expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values(), f'{f}: GitHub link {ref} (only {REPO_URL})')
         for ref in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"', page):
             expect(ref.startswith(REPO_URL) or ref in OUTSIDE_LINKS.values() or ref == WEBLATE_URL
-                   or ref in (TESTERS_GROUP_URL, TESTERS_OPTIN_URL)
+                   or ref in (TESTERS_GROUP_URL, TESTERS_OPTIN_URL, APP_STORE_URL)
                    or (site and ref.startswith(site + '/'))
                    or (donate and ref == html.escape(donate, quote=True)),
                    f'{f}: link to another site {ref} (add it to OUTSIDE_LINKS if it belongs)')
@@ -1242,6 +1266,13 @@ def check(out, strings, email, site='', donate=''):
                 expect('<p class="footer-manual"><a href="' in page, f'{f}: footer link to the manual missing')
         for leftover in ('{{', '{email}', '**', '{app:', '[[', ']]', '\x00'):
             expect(leftover not in page, f'{f}: leftover {leftover!r}')
+        # Amalino is on the App Store (owner 2026-11-05): Safari's smart app banner on every page, and no page still
+        # says the app isn't in the stores (in any language: the pickers list them all).
+        expect(page.count(f'<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">') == 1,
+               f'{f}: needs the apple-itunes-app meta (app-id={APP_STORE_ID})')
+        shown = visible_text(page).lower()
+        for old in (o for lg in ([loc] if loc else LOCALES) for o in NOT_IN_STORES[lg]):
+            expect(old not in shown, f'{f}: still says the app isn\'t in the stores ("{old}")')
         # Owner decision 31: no cookies. The language choice is in localStorage only. (The privacy page may say so.)
         scripts = ' '.join(re.findall(r'<script\b[^>]*>(.*?)</script>', page, flags=re.S)).lower()
         expect('cookie' not in scripts, f'{f}: a script uses cookies')
@@ -1308,6 +1339,12 @@ def check(out, strings, email, site='', donate=''):
         expect('id="test-android"' in home and f'href="{TESTERS_GROUP_URL}"' in home
                and f'href="{TESTERS_OPTIN_URL}"' in home and '#report"' in home,
                f'{loc}: "Help test Amalino on Android" missing on the home page')
+        # On the App Store (owner 2026-11-05): the status card has the App Store button and, for Android, the way to
+        # the testers' section.
+        card = re.search(r'<section class="card status">(.*?)</section>', home, flags=re.S)
+        expect(card and f'<a class="button" href="{APP_STORE_URL}" rel="noopener">' in card.group(1)
+               and 'href="#test-android"' in card.group(1),
+               f'{loc}: the App Store button or the Android testing link missing on the home page')
         # The app's screenshots on the home page (owner 2026-10-23): the board in the hero, a folder and the
         # keyboard by the testers' steps; every picture they name is published.
         expect(home.count('<img src="') >= 1 + sum(len(v) for v in HOME_SHOTS.values()),

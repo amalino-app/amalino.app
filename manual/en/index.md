@@ -3,7 +3,7 @@
 
 Amalino is a free app that speaks for children who can't rely on speech. The child taps pictures and words, and the device says them out loud. This manual is for the family and for everyone else who talks with the child.
 
-Amalino isn't in the app stores yet. This manual describes the test version.
+Amalino is on the [App Store](link:app-store) for iPhone and iPad. On Android, it's being tested on Google Play right now: [help test it](site:home#test-android).
 
 You don't need to read it all at once. Start with **Getting started**, then come back when you want to change something.
 
