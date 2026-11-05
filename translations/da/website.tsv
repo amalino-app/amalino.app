@@ -39,7 +39,7 @@ test.step1Link	Meld dig ind i testergruppen
 test.step2	Åbn testsiden på din Android-enhed, og tryk på »Bliv tester«.
 test.step2Link	Åbn testsiden
 test.step3	Installer Amalino fra Google Play. Åbn den et par gange i løbet af de næste to uger, og lad den blive på enheden i 14 dage.
-test.shotFolderAlt	Mappen mad i Amalino: mindre mapper som frugt og grøntsager og derefter madord fra æble til bønne
+test.shotFormsAlt	Menuen med ordformer over tavlen på en tablet: efter »jeg vil have« vises formerne vil have og ville have som store knapper
 test.shotKeyboardAlt	Amalinos tastatur: »jeg vil s« bliver skrevet i beskedlinjen over bogstavtasterne og tasten »{app:kbSpeak}«
 test.afterTitle	Når du har meldt dig ind
 test.after1	Gruppen sender ingen mails og ingen nyhedsbreve. De andre medlemmer kan ikke se dig – kun jeg, der udvikler appen, kan se dit navn og din mailadresse.

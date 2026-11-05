@@ -39,7 +39,7 @@ test.step1Link	Unirme al grupo
 test.step2	En tu dispositivo Android, abre la página de pruebas y toca «Convertirse en verificador».
 test.step2Link	Abrir la página de pruebas
 test.step3	Instala Amalino desde Google Play. Ábrelo unas cuantas veces durante las dos semanas siguientes y mantenlo instalado 14 días.
-test.shotFolderAlt	La carpeta Comida en Amalino: carpetas más pequeñas, como fruta y verduras, y después palabras de comida, de «manzana» a «alubia»
+test.shotFormsAlt	El menú de formas de las palabras sobre el tablero, en una tableta: después de «yo quiero», las formas quiero, quise, quieres, quiere, queremos, quieren, quiso, queriendo y querer como botones grandes
 test.shotKeyboardAlt	El teclado de Amalino: se está escribiendo «yo quiero j» en la barra de mensaje, encima de las teclas de letras y la tecla {app:kbSpeak}
 test.afterTitle	Qué pasa después de unirte
 test.after1	El grupo no envía correos ni boletines. Los demás miembros no pueden verte: solo yo, el desarrollador, veo tu nombre y tu dirección de correo.

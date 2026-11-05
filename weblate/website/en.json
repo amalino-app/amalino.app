@@ -37,7 +37,7 @@
   "test.step2": "On your Android device, open the test page and tap \"Become a tester\".",
   "test.step2Link": "Open the test page",
   "test.step3": "Install Amalino from Google Play. Open it a few times over the next two weeks, and keep it installed for 14 days.",
-  "test.shotFolderAlt": "The Food folder in Amalino: smaller folders such as fruit and vegetables, then food words from apple to bean",
+  "test.shotFormsAlt": "The word-forms menu over the board on a tablet: after \"I want\", the forms want, wants, wanting and wanted as big buttons",
   "test.shotKeyboardAlt": "Amalino's keyboard: \"i want to p\" being typed in the message bar, above the letter keys and the {app:kbSpeak} key",
   "test.afterTitle": "What happens after you join",
   "test.after1": "The group sends no emails and no newsletters. Other members can't see you: only I, the developer, see your name and email address.",

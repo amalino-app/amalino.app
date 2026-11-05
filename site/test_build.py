@@ -138,11 +138,11 @@ class BuiltSite(unittest.TestCase):
                 self.assertLess(section.index('test-lead'), section.index('<ol class="steps">'), loc)
                 self.assertEqual(section.count('<li>', section.index('<ul class="test-after">')), 4, loc)
                 self.assertNotIn('test.note', self.strings)
-                # A folder and the keyboard in the page's language, lazily loaded, after the steps (below them
+                # The word-forms menu and the keyboard in the page's language, lazily loaded, after the steps (below them
                 # on a phone), with the localized alt text.
                 shots = section[section.index('<div class="test-shots">'):]
                 self.assertGreater(section.index('<div class="test-shots">'), section.index('</ol>'), loc)
-                for name, key in (('folder', 'test.shotFolderAlt'), ('keyboard', 'test.shotKeyboardAlt')):
+                for name, key in (('word-forms', 'test.shotFormsAlt'), ('keyboard', 'test.shotKeyboardAlt')):
                     self.assertIn(f'<img src="manual/img/{name}-1x.webp" srcset="manual/img/{name}-1x.webp 820w, '
                                   f'manual/img/{name}-2x.webp 1640w"', shots, loc)
                     self.assertIn(f'alt="{r.plain(key, loc)}"', shots, f'{loc} {key}')
@@ -732,7 +732,7 @@ class BuiltSite(unittest.TestCase):
                 self.assertIn(f'href="../../{loc}/about/index.html#report"', main, loc)
                 self.assertIn(f'href="../../{loc}/privacy/index.html"', main, loc)
                 self.assertIn(f'href="../../{loc}/manual/index.html"', main, loc)
-                for name in ('board', 'folder', 'keyboard'):
+                for name in ('board', 'word-forms', 'keyboard'):
                     self.assertIn(f'<img src="../manual/img/{name}-1x.webp"', main, loc)
                 self.assertEqual(main.count('loading="lazy"'), 3, loc)
                 for block in ('share-short', 'share-long'):

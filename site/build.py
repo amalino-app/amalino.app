@@ -173,14 +173,14 @@ NOT_IN_STORES = {
 }
 # The app on the home page (owner 2026-10-23): real screenshots in the page's language, the manual's own
 # (manual/<lang>/img/NAME-1x.webp and -2x.webp, already published at /<lang>/manual/img/, so nothing is copied).
-# (name, alt text key, CSS sizes): the board in the hero, loaded at once; a folder and the keyboard next to the
+# (name, alt text key, CSS sizes): the board in the hero, loaded at once; the word-forms menu and the keyboard next to the
 # Android testers' steps, loaded lazily.
 HOME_SHOTS = {
     'hero_shot': (('board', 'home.shotAlt'),),
-    'test_shots': (('folder', 'test.shotFolderAlt'), ('keyboard', 'test.shotKeyboardAlt')),
+    'test_shots': (('word-forms', 'test.shotFormsAlt'), ('keyboard', 'test.shotKeyboardAlt')),
 }
 # The recommend page shows the same three pictures together, lazily (owner 2026-11-05).
-RECOMMEND_SHOTS = {'rec_shots': (('board', 'home.shotAlt'), ('folder', 'test.shotFolderAlt'),
+RECOMMEND_SHOTS = {'rec_shots': (('board', 'home.shotAlt'), ('word-forms', 'test.shotFormsAlt'),
                                  ('keyboard', 'test.shotKeyboardAlt'))}
 HOME_SHOT_SIZES = {'hero_shot': '(min-width: 48rem) 20rem, 18rem', 'test_shots': '(min-width: 48rem) 10rem, 40vw',
                    'rec_shots': '(min-width: 48rem) 13rem, 30vw'}
